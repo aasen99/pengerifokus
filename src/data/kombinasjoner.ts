@@ -35,8 +35,8 @@ export const kombinasjoner: Kombinasjon[] = [
     status: "published",
     title: "Bonusoppsett for reise",
     description:
-      "Samle flypoeng, hotellpoeng og valutafordeler for å reise billigere og smartere.",
-    items: ["EuroBonus", "Strawberry", "Reisekredittkort"],
+      "Samle poeng via Spenn og EuroBonus, og bruk reisekort for valuta og forsikring.",
+    items: ["EuroBonus", "Spenn", "Reisekredittkort"],
     createdAt: "2025-01-25",
     updatedAt: "2025-01-25",
   },

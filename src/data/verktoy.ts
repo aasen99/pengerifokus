@@ -19,13 +19,24 @@ export const verktoy: Verktoy[] = [
   {
     id: "verktoy-2",
     slug: "rentekalkulator",
-    status: "coming-soon",
+    status: "published",
     name: "Rentekalkulator",
     description:
       "Beregn hvor mye lånet ditt koster over tid – og hva du sparer ved ekstra innbetalinger.",
     category: "Gjeld",
     createdAt: "2025-01-05",
-    updatedAt: "2025-01-05",
+    updatedAt: "2026-06-11",
+  },
+  {
+    id: "verktoy-6",
+    slug: "sparekalkulator",
+    status: "published",
+    name: "Sparekalkulator",
+    description:
+      "Se hvor mye sparingen vokser – og sammenlign hva som skjer med ekstra månedlig sparing.",
+    category: "Sparing",
+    createdAt: "2026-06-11",
+    updatedAt: "2026-06-11",
   },
   {
     id: "verktoy-3",

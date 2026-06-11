@@ -24,21 +24,21 @@ export default function VerktoyPage() {
       />
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {tools.map((tool) => (
-          <ContentCard
-            key={tool.id}
-            title={tool.name}
-            description={tool.description}
-            meta={tool.category}
-            badge={
-              tool.status === "coming-soon" ? "Kommer snart" : undefined
-            }
-            actionLabel={
-              tool.status === "coming-soon" ? "Kommer snart" : "Åpne verktøy"
-            }
-            disabled={tool.status === "coming-soon"}
-          />
-        ))}
+        {tools.map((tool) => {
+          const isComingSoon = tool.status === "coming-soon";
+          return (
+            <ContentCard
+              key={tool.id}
+              title={tool.name}
+              description={tool.description}
+              meta={tool.category}
+              badge={isComingSoon ? "Kommer snart" : undefined}
+              actionLabel={isComingSoon ? "Kommer snart" : "Åpne verktøy"}
+              disabled={isComingSoon}
+              href={isComingSoon ? undefined : `/verktoy/${tool.slug}`}
+            />
+          );
+        })}
       </div>
     </div>
   );

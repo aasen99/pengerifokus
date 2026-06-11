@@ -31,15 +31,15 @@ export const fordeler: Fordel[] = [
   },
   {
     id: "fordel-3",
-    slug: "strawberry",
+    slug: "spenn",
     status: "published",
-    name: "Strawberry",
+    name: "Spenn",
     description:
-      "Hotellkjedens lojalitetsprogram med poeng på overnatting og fordeler for medlemmer.",
+      "Felles lojalitetsprogram for Strawberry, Norwegian og Rema 1000. Samle poeng på hotell, fly og dagligvarer.",
     type: "Lojalitetsprogram",
-    useCase: "Hotell og reise",
+    useCase: "Reise, hotell og dagligvarer",
     createdAt: "2025-01-12",
-    updatedAt: "2025-01-12",
+    updatedAt: "2026-06-11",
   },
   {
     id: "fordel-4",

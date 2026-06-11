@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Tag } from "./Tag";
 
 interface ContentCardProps {
@@ -8,6 +9,7 @@ interface ContentCardProps {
   badge?: string;
   actionLabel?: string;
   disabled?: boolean;
+  href?: string;
 }
 
 export function ContentCard({
@@ -18,9 +20,13 @@ export function ContentCard({
   badge,
   actionLabel = "Les mer",
   disabled = false,
+  href,
 }: ContentCardProps) {
-  return (
-    <article className="group flex h-full flex-col rounded-2xl border border-stone-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+  const className =
+    "group flex h-full flex-col rounded-2xl border border-stone-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md";
+
+  const content = (
+    <>
       <div className="mb-3 flex flex-wrap items-center gap-2">
         {meta && <Tag>{meta}</Tag>}
         {badge && <Tag variant="accent">{badge}</Tag>}
@@ -49,6 +55,16 @@ export function ContentCard({
           </span>
         )}
       </div>
-    </article>
+    </>
   );
+
+  if (href && !disabled) {
+    return (
+      <Link href={href} className={className}>
+        {content}
+      </Link>
+    );
+  }
+
+  return <article className={className}>{content}</article>;
 }
