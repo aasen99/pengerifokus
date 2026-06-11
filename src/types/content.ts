@@ -45,6 +45,8 @@ export interface OrdbokEntry extends BaseContent {
   term: string;
   definition: string;
   category: string;
+  /** CMS: Synonymer og søkeord for ordboksøk */
+  tags?: string[];
 }
 
 export interface Kombinasjon extends BaseContent {
