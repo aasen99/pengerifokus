@@ -1,0 +1,70 @@
+import type { Guide } from "@/types/content";
+
+/**
+ * CMS/ADMIN: Erstatt denne statiske listen med data fra database/API.
+ * Admin kan opprette, redigere og sette status (published/draft) på guider.
+ */
+export const guider: Guide[] = [
+  {
+    id: "guide-1",
+    slug: "bygg-bufferkonto",
+    status: "published",
+    featured: true,
+    title: "Bygg bufferkonto",
+    description:
+      "Lær hvordan du bygger en nødfond som tåler uforutsette utgifter uten å måtte ta opp lån.",
+    category: "Sparing",
+    tags: ["buffer", "nødfond", "grunnmur"],
+    createdAt: "2025-01-15",
+    updatedAt: "2025-01-15",
+  },
+  {
+    id: "guide-2",
+    slug: "kom-i-gang-med-fond",
+    status: "published",
+    featured: true,
+    title: "Kom i gang med fond",
+    description:
+      "En enkel introduksjon til fondssparing – fra første krone til langsiktig vekst.",
+    category: "Investering",
+    tags: ["fond", "aksjesparing", "langsiktig"],
+    createdAt: "2025-01-20",
+    updatedAt: "2025-01-20",
+  },
+  {
+    id: "guide-3",
+    slug: "velg-riktig-kredittkort",
+    status: "published",
+    title: "Velg riktig kredittkort",
+    description:
+      "Sammenlign kort basert på bonus, gebyrer og bruksmønster – ikke bare rente.",
+    category: "Kredittkort",
+    tags: ["kredittkort", "bonus", "cashback"],
+    createdAt: "2025-02-01",
+    updatedAt: "2025-02-01",
+  },
+  {
+    id: "guide-4",
+    slug: "kutt-faste-kostnader",
+    status: "published",
+    title: "Kutt faste kostnader",
+    description:
+      "Gå systematisk gjennom abonnementer og faste utgifter for å frigjøre penger hver måned.",
+    category: "Budsjett",
+    tags: ["budsjett", "abonnement", "sparing"],
+    createdAt: "2025-02-10",
+    updatedAt: "2025-02-10",
+  },
+  {
+    id: "guide-5",
+    slug: "betal-ned-dyr-gjeld",
+    status: "published",
+    title: "Betal ned dyr gjeld",
+    description:
+      "Prioriter gjeld med høy rente og lag en plan som faktisk fungerer i hverdagen.",
+    category: "Gjeld",
+    tags: ["gjeld", "rente", "nedbetaling"],
+    createdAt: "2025-02-15",
+    updatedAt: "2025-02-15",
+  },
+];
