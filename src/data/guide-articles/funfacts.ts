@@ -27,16 +27,6 @@ export const funfacts: GuideArticleContent = {
       tip: "Gjør gode valg lettvinte: automatisk sparing på lønningsdag slår viljestyrke hver gang.",
     },
     {
-      heading: "Norge-spesifikt",
-      bullets: [
-        "BSU gir skattefradrag på inntil 27 500 kr per år – en av få ordninger der staten faktisk betaler deg for å spare",
-        "Mange nordmenn har flere medlemskap med rabatter (OBOS, NAF, Trumf, Coop) – men bruker ikke alle",
-        "Norge har høy kortbruk: kontantfritt gjør det enklere å bruke penger uten å «kjenne» dem forsvinne",
-        "Studielån i Norge har historisk hatt gunstige vilkår – men reglene endres, så «alle vet» er ikke alltid sant lenger",
-      ],
-      tip: "Sjekk om du allerede har rabatt gjennom medlemskap før du handler. Mange betaler full pris uten å vite det.",
-    },
-    {
       heading: "Litt historie og kultur",
       bullets: [
         "Før bankkort var vanlig, var lønningspose bokstavelig talt en pose med kontanter",
