@@ -3,6 +3,8 @@
 import { useMemo, useState } from "react";
 import { formatCurrency } from "@/lib/calculators/loan";
 import {
+  breakIntoBills,
+  billsFromBreakdown,
   calculateTavle,
   createTavleLine,
   EMPTY_TAVLE_LINES,
@@ -90,6 +92,135 @@ function CategoryEditor({
   );
 }
 
+function MoneyBill({
+  value,
+  variant = "default",
+  rotation = 0,
+}: {
+  value: 500 | 1000;
+  variant?: "default" | "income" | "remainder" | "deficit";
+  rotation?: number;
+}) {
+  const isThousand = value === 1000;
+
+  const palette = {
+    default: isThousand
+      ? "border-purple-300 bg-gradient-to-br from-purple-50 via-purple-100 to-purple-200 text-purple-900 shadow-purple-200/50"
+      : "border-sky-300 bg-gradient-to-br from-sky-50 via-sky-100 to-sky-200 text-sky-900 shadow-sky-200/50",
+    income: isThousand
+      ? "border-emerald-400 bg-gradient-to-br from-emerald-50 via-emerald-100 to-emerald-200 text-emerald-900 shadow-emerald-200/50"
+      : "border-teal-400 bg-gradient-to-br from-teal-50 via-teal-100 to-teal-200 text-teal-900 shadow-teal-200/50",
+    remainder: isThousand
+      ? "border-lime-400 bg-gradient-to-br from-lime-50 via-lime-100 to-lime-200 text-lime-900 shadow-lime-200/50"
+      : "border-green-400 bg-gradient-to-br from-green-50 via-green-100 to-green-200 text-green-900 shadow-green-200/50",
+    deficit:
+      "border-red-400 bg-gradient-to-br from-red-50 via-red-100 to-red-200 text-red-900 shadow-red-200/50",
+  };
+
+  return (
+    <div
+      className={`relative flex h-9 w-16 shrink-0 flex-col items-center justify-center rounded-sm border shadow-sm sm:h-11 sm:w-[4.75rem] ${palette[variant]}`}
+      style={{ transform: `rotate(${rotation}deg)` }}
+      title={`${value} kr`}
+      aria-hidden="true"
+    >
+      <span className="text-[8px] font-semibold uppercase tracking-wide opacity-70">
+        kr
+      </span>
+      <span className="text-xs font-bold leading-none sm:text-sm">{value}</span>
+    </div>
+  );
+}
+
+function BillVisualizer({
+  amount,
+  variant = "default",
+  maxVisible = 24,
+}: {
+  amount: number;
+  variant?: "default" | "income" | "remainder" | "deficit";
+  maxVisible?: number;
+}) {
+  const breakdown = breakIntoBills(amount);
+  const bills = billsFromBreakdown(breakdown);
+  const visible = bills.slice(0, maxVisible);
+  const hidden = bills.length - visible.length;
+
+  if (amount <= 0 && breakdown.remainder === 0) {
+    return null;
+  }
+
+  return (
+    <div className="space-y-1">
+      <div className="flex flex-wrap gap-1.5">
+        {visible.map((value, index) => (
+          <MoneyBill
+            key={`${value}-${index}`}
+            value={value}
+            variant={variant}
+            rotation={(index % 7) - 3}
+          />
+        ))}
+        {hidden > 0 && (
+          <span className="self-center rounded-full bg-stone-200 px-2.5 py-1 text-xs font-medium text-stone-600">
+            +{hidden} lapper
+          </span>
+        )}
+      </div>
+      {breakdown.remainder > 0 && (
+        <p className="text-xs text-stone-500">+ {breakdown.remainder} kr</p>
+      )}
+    </div>
+  );
+}
+
+function BoardBillSection({
+  label,
+  amount,
+  share,
+  tone,
+  billVariant = "default",
+}: {
+  label: string;
+  amount: number;
+  share: number;
+  tone: TavleCategory | "income" | "remainder" | "deficit";
+  billVariant?: "default" | "income" | "remainder" | "deficit";
+}) {
+  const labelColors: Record<string, string> = {
+    income: "bg-emerald-600",
+    fixed: "bg-red-500",
+    variable: "bg-amber-500",
+    debt: "bg-rose-500",
+    savings: "bg-emerald-500",
+    remainder: "bg-lime-600",
+    deficit: "bg-red-600",
+  };
+
+  return (
+    <div className="rounded-lg border border-stone-200 bg-white/90 p-3 shadow-sm">
+      <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
+        <span
+          className={`rounded-md px-2 py-0.5 text-xs font-bold uppercase tracking-wide text-white ${labelColors[tone]}`}
+        >
+          {label}
+        </span>
+        <span className="text-sm font-semibold text-stone-800">
+          {formatCurrency(amount)}
+          {share > 0 && tone !== "income" && tone !== "remainder" && tone !== "deficit" && (
+            <span className="ml-1 font-normal text-stone-500">
+              ({Math.round(share)} %)
+            </span>
+          )}
+        </span>
+      </div>
+      <BillVisualizer amount={amount} variant={billVariant} />
+    </div>
+  );
+}
+
+type BoardView = "bars" | "bills";
+
 function BoardBar({
   label,
   amount,
@@ -129,8 +260,182 @@ function BoardBar({
   );
 }
 
+function BoardSummaryFooter({
+  summary,
+}: {
+  summary: NonNullable<ReturnType<typeof calculateTavle>>;
+}) {
+  return (
+    <>
+      <div className="mt-6 border-t border-stone-600 pt-5">
+        <div className="flex items-baseline justify-between gap-3">
+          <span className="text-sm text-stone-300">Totalt ut</span>
+          <span className="font-semibold text-white">
+            {formatCurrency(summary.totalOut)}
+          </span>
+        </div>
+      </div>
+
+      <div
+        className={`mt-4 rounded-xl border p-5 ${
+          summary.isDeficit
+            ? "border-red-500/40 bg-red-950/40"
+            : summary.remainder > 0
+              ? "border-emerald-500/40 bg-emerald-950/40"
+              : "border-stone-600 bg-stone-900/60"
+        }`}
+      >
+        <p className="text-xs uppercase tracking-wider text-stone-400">
+          {summary.isDeficit
+            ? "Underskudd"
+            : summary.remainder > 0
+              ? "Overskudd"
+              : "Balanse"}
+        </p>
+        <p
+          className={`mt-1 text-2xl font-bold ${
+            summary.isDeficit
+              ? "text-red-300"
+              : summary.remainder > 0
+                ? "text-emerald-300"
+                : "text-white"
+          }`}
+        >
+          {formatCurrency(summary.remainder)}
+        </p>
+        <p className="mt-2 text-sm text-stone-400">
+          {summary.isDeficit
+            ? "Du bruker mer enn du får inn. Se på variable utgifter og gjeld først."
+            : summary.remainder > 0
+              ? "Penger igjen – vurder om de skal til buffer, nedbetaling eller forbruk."
+              : "Inntekt og utgifter går opp – bra utgangspunkt for å finjustere."}
+        </p>
+      </div>
+    </>
+  );
+}
+
+function BarsBoard({
+  summary,
+  hasAnyLines,
+}: {
+  summary: NonNullable<ReturnType<typeof calculateTavle>>;
+  hasAnyLines: boolean;
+}) {
+  return (
+    <>
+      <div className="mt-4 rounded-xl border border-stone-600 bg-stone-900/60 p-5">
+        <p className="text-xs uppercase tracking-wider text-stone-400">
+          Inntekt per måned
+        </p>
+        <p className="mt-1 text-3xl font-bold text-white">
+          {formatCurrency(summary.income)}
+        </p>
+      </div>
+
+      {hasAnyLines ? (
+        <div className="mt-5 space-y-4">
+          {TAVLE_CATEGORIES.map((category) =>
+            summary.categoryTotals[category.id] > 0 ? (
+              <BoardBar
+                key={category.id}
+                label={category.boardLabel}
+                amount={summary.categoryTotals[category.id]}
+                share={summary.shareOfIncome[category.id]}
+                tone={category.id}
+              />
+            ) : null,
+          )}
+        </div>
+      ) : (
+        <p className="mt-5 text-sm text-stone-400">
+          Legg til utgifter for å fylle tavlen.
+        </p>
+      )}
+
+      <BoardSummaryFooter summary={summary} />
+    </>
+  );
+}
+
+function BillsBoard({
+  summary,
+  hasAnyLines,
+}: {
+  summary: NonNullable<ReturnType<typeof calculateTavle>>;
+  hasAnyLines: boolean;
+}) {
+  return (
+    <>
+      <div className="mt-3 flex flex-wrap items-center gap-3 text-xs text-stone-400">
+        <span className="flex items-center gap-1.5">
+          <MoneyBill value={1000} rotation={-2} />
+          <span>= 1 000 kr</span>
+        </span>
+        <span className="flex items-center gap-1.5">
+          <MoneyBill value={500} rotation={2} />
+          <span>= 500 kr</span>
+        </span>
+      </div>
+
+      <div className="mt-4 space-y-3 rounded-xl border-2 border-dashed border-stone-400 bg-stone-100 p-4">
+        <BoardBillSection
+          label="Inntekt"
+          amount={summary.income}
+          share={100}
+          tone="income"
+          billVariant="income"
+        />
+
+        {hasAnyLines ? (
+          <>
+            {TAVLE_CATEGORIES.map((category) =>
+              summary.categoryTotals[category.id] > 0 ? (
+                <BoardBillSection
+                  key={category.id}
+                  label={category.boardLabel}
+                  amount={summary.categoryTotals[category.id]}
+                  share={summary.shareOfIncome[category.id]}
+                  tone={category.id}
+                />
+              ) : null,
+            )}
+
+            {summary.remainder > 0 && (
+              <BoardBillSection
+                label="Igjen"
+                amount={summary.remainder}
+                share={0}
+                tone="remainder"
+                billVariant="remainder"
+              />
+            )}
+
+            {summary.isDeficit && (
+              <BoardBillSection
+                label="Mangler"
+                amount={Math.abs(summary.remainder)}
+                share={0}
+                tone="deficit"
+                billVariant="deficit"
+              />
+            )}
+          </>
+        ) : (
+          <p className="py-6 text-center text-sm text-stone-500">
+            Legg til utgifter – da dukker 1000- og 500-lappene opp her.
+          </p>
+        )}
+      </div>
+
+      <BoardSummaryFooter summary={summary} />
+    </>
+  );
+}
+
 export function LuksusfelleTavle() {
   const [income, setIncome] = useState(formatIntegerInput(35_000));
+  const [boardView, setBoardView] = useState<BoardView>("bars");
   const [linesByCategory, setLinesByCategory] =
     useState<Record<TavleCategory, TavleLine[]>>(EMPTY_TAVLE_LINES);
 
@@ -222,86 +527,50 @@ export function LuksusfelleTavle() {
 
         <div className="space-y-4 xl:sticky xl:top-8 xl:self-start">
           <section className="overflow-hidden rounded-2xl border border-stone-700 bg-stone-800 p-6 shadow-lg">
-            <p className="text-xs font-semibold uppercase tracking-widest text-stone-400">
-              Pengetavle
-            </p>
-
-            <div className="mt-4 rounded-xl border border-stone-600 bg-stone-900/60 p-5">
-              <p className="text-xs uppercase tracking-wider text-stone-400">
-                Inntekt per måned
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <p className="text-xs font-semibold uppercase tracking-widest text-stone-400">
+                Pengetavle
               </p>
-              <p className="mt-1 text-3xl font-bold text-white">
-                {summary ? formatCurrency(summary.income) : "–"}
-              </p>
-            </div>
-
-            {summary && hasAnyLines ? (
-              <div className="mt-5 space-y-4">
-                {TAVLE_CATEGORIES.map((category) =>
-                  summary.categoryTotals[category.id] > 0 ? (
-                    <BoardBar
-                      key={category.id}
-                      label={category.boardLabel}
-                      amount={summary.categoryTotals[category.id]}
-                      share={summary.shareOfIncome[category.id]}
-                      tone={category.id}
-                    />
-                  ) : null,
-                )}
-              </div>
-            ) : (
-              <p className="mt-5 text-sm text-stone-400">
-                Legg til utgifter for å fylle tavlen.
-              </p>
-            )}
-
-            {summary && (
-              <>
-                <div className="mt-6 border-t border-stone-600 pt-5">
-                  <div className="flex items-baseline justify-between gap-3">
-                    <span className="text-sm text-stone-300">Totalt ut</span>
-                    <span className="font-semibold text-white">
-                      {formatCurrency(summary.totalOut)}
-                    </span>
-                  </div>
-                </div>
-
-                <div
-                  className={`mt-4 rounded-xl border p-5 ${
-                    summary.isDeficit
-                      ? "border-red-500/40 bg-red-950/40"
-                      : summary.remainder > 0
-                        ? "border-emerald-500/40 bg-emerald-950/40"
-                        : "border-stone-600 bg-stone-900/60"
+              <div
+                className="flex rounded-lg border border-stone-600 bg-stone-900/60 p-0.5"
+                role="group"
+                aria-label="Velg visning"
+              >
+                <button
+                  type="button"
+                  onClick={() => setBoardView("bars")}
+                  className={`rounded-md px-3 py-1.5 text-xs font-medium transition-colors ${
+                    boardView === "bars"
+                      ? "bg-stone-100 text-stone-900"
+                      : "text-stone-400 hover:text-stone-200"
                   }`}
                 >
-                  <p className="text-xs uppercase tracking-wider text-stone-400">
-                    {summary.isDeficit
-                      ? "Underskudd"
-                      : summary.remainder > 0
-                        ? "Overskudd"
-                        : "Balanse"}
-                  </p>
-                  <p
-                    className={`mt-1 text-2xl font-bold ${
-                      summary.isDeficit
-                        ? "text-red-300"
-                        : summary.remainder > 0
-                          ? "text-emerald-300"
-                          : "text-white"
-                    }`}
-                  >
-                    {formatCurrency(summary.remainder)}
-                  </p>
-                  <p className="mt-2 text-sm text-stone-400">
-                    {summary.isDeficit
-                      ? "Du bruker mer enn du får inn. Se på variable utgifter og gjeld først."
-                      : summary.remainder > 0
-                        ? "Penger igjen – vurder om de skal til buffer, nedbetaling eller forbruk."
-                        : "Inntekt og utgifter går opp – bra utgangspunkt for å finjustere."}
-                  </p>
-                </div>
-              </>
+                  Oversikt
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setBoardView("bills")}
+                  className={`rounded-md px-3 py-1.5 text-xs font-medium transition-colors ${
+                    boardView === "bills"
+                      ? "bg-stone-100 text-stone-900"
+                      : "text-stone-400 hover:text-stone-200"
+                  }`}
+                >
+                  Lapper
+                </button>
+              </div>
+            </div>
+
+            {summary ? (
+              boardView === "bars" ? (
+                <BarsBoard summary={summary} hasAnyLines={hasAnyLines} />
+              ) : (
+                <BillsBoard summary={summary} hasAnyLines={hasAnyLines} />
+              )
+            ) : (
+              <p className="mt-5 text-sm text-stone-400">
+                Fyll inn inntekt for å starte tavlen.
+              </p>
             )}
           </section>
 
