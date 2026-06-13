@@ -51,14 +51,14 @@ export const verktoy: Verktoy[] = [
   },
   {
     id: "verktoy-4",
-    slug: "budsjettverktoy",
-    status: "coming-soon",
-    name: "Budsjettverktøy",
+    slug: "luksusfelle-tavle",
+    status: "published",
+    name: "Luksusfellen-tavle",
     description:
-      "Enkel oversikt over inntekter og utgifter for å få kontroll på økonomien.",
+      "Lag din egen pengetavle – inntekt, utgifter, gjeld og sparing samlet med overskudd eller underskudd.",
     category: "Budsjett",
     createdAt: "2025-01-10",
-    updatedAt: "2025-01-10",
+    updatedAt: "2026-06-11",
   },
   {
     id: "verktoy-5",

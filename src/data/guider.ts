@@ -67,4 +67,16 @@ export const guider: Guide[] = [
     createdAt: "2025-02-15",
     updatedAt: "2025-02-15",
   },
+  {
+    id: "guide-6",
+    slug: "funfacts",
+    status: "published",
+    title: "Funfacts",
+    description:
+      "Morsomme og overraskende fakta om penger – fra rentes rente til norske særtrekk.",
+    category: "Innsikt",
+    tags: ["funfacts", "sparing", "psykologi"],
+    createdAt: "2026-06-11",
+    updatedAt: "2026-06-11",
+  },
 ];

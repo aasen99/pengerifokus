@@ -3,6 +3,7 @@ import { byggBufferkonto } from "./bygg-bufferkonto";
 import { komIGangMedFond } from "./kom-i-gang-med-fond";
 import { kuttFasteKostnader } from "./kutt-faste-kostnader";
 import { betalNedDyrGjeld } from "./betal-ned-dyr-gjeld";
+import { funfacts } from "./funfacts";
 
 /**
  * CMS/ADMIN: Fullstendige guider lagres her inntil CMS er på plass.
@@ -13,6 +14,7 @@ const guideArticles: Record<string, GuideArticleContent> = {
   "kom-i-gang-med-fond": komIGangMedFond,
   "kutt-faste-kostnader": kuttFasteKostnader,
   "betal-ned-dyr-gjeld": betalNedDyrGjeld,
+  funfacts: funfacts,
 };
 
 export function getGuideArticle(slug: string): GuideArticleContent | undefined {

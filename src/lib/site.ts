@@ -56,6 +56,11 @@ export const publicRoutes = [
   { path: "/verktoy/rentekalkulator", priority: 0.8, changeFrequency: "monthly" as const },
   { path: "/verktoy/sparekalkulator", priority: 0.8, changeFrequency: "monthly" as const },
   { path: "/verktoy/bsu-kalkulator", priority: 0.8, changeFrequency: "monthly" as const },
+  {
+    path: "/verktoy/luksusfelle-tavle",
+    priority: 0.8,
+    changeFrequency: "monthly" as const,
+  },
   { path: "/ordbok", priority: 0.9, changeFrequency: "weekly" as const },
   { path: "/kombinasjoner", priority: 0.9, changeFrequency: "weekly" as const },
 ];
