@@ -11,6 +11,7 @@ import {
   filterTilbud,
   getFordelName,
   getTilbudCategories,
+  groupTilbudByPartner,
 } from "@/lib/tilbud";
 import { calculatorInputClassName } from "@/components/verktoy/calculator-ui";
 
@@ -54,6 +55,11 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
   const filtered = useMemo(
     () => filterTilbud(tilbud, query, fordelSlug, category),
     [tilbud, query, fordelSlug, category],
+  );
+
+  const grouped = useMemo(
+    () => groupTilbudByPartner(filtered),
+    [filtered],
   );
 
   const hasFilters =
@@ -165,37 +171,59 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
       </div>
 
       <p className="text-sm text-stone-600">
-        {filtered.length} {filtered.length === 1 ? "tilbud" : "tilbud"}
+        {grouped.length} {grouped.length === 1 ? "partner" : "partnere"}
         {hasFilters ? " funnet" : ""}
+        {grouped.length < filtered.length && (
+          <span className="text-stone-500">
+            {" "}
+            ({filtered.length} tilbud totalt)
+          </span>
+        )}
       </p>
 
-      {filtered.length > 0 ? (
+      {grouped.length > 0 ? (
         <div className="grid gap-4 sm:grid-cols-2">
-          {filtered.map((entry) => (
+          {grouped.map((group) => (
             <article
-              key={entry.id}
+              key={group.key}
               className="flex h-full flex-col rounded-2xl border border-stone-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
             >
               <div className="mb-3 flex flex-wrap items-center gap-2">
-                <Tag variant="accent">{entry.offerLabel}</Tag>
-                <Tag>{entry.category}</Tag>
-                <Link href={`/fordeler?program=${entry.fordelSlug}`}>
-                  <Tag variant="muted">{getFordelName(entry.fordelSlug)}</Tag>
-                </Link>
+                {group.offers.map((offer) => (
+                  <Link
+                    key={offer.tilbudId}
+                    href={`/fordeler?program=${offer.fordelSlug}`}
+                  >
+                    <Tag variant="accent">
+                      {getFordelName(offer.fordelSlug)} · {offer.offerLabel}
+                    </Tag>
+                  </Link>
+                ))}
+                {group.categories.map((cat) => (
+                  <Tag key={cat}>{cat}</Tag>
+                ))}
               </div>
 
               <h2 className="text-lg font-semibold text-stone-900">
-                {entry.title}
+                {group.partner}
               </h2>
-              <p className="mt-1 text-sm font-medium text-stone-700">
-                {entry.partner}
-              </p>
-              <p className="mt-2 flex-1 text-sm leading-relaxed text-stone-600">
-                {entry.description}
-              </p>
 
-              {entry.terms && (
-                <p className="mt-3 text-xs text-stone-500">{entry.terms}</p>
+              {group.offers.length === 1 ? (
+                <>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-stone-600">
+                    {group.offers[0].description}
+                  </p>
+                  {group.offers[0].terms && (
+                    <p className="mt-3 text-xs text-stone-500">
+                      {group.offers[0].terms}
+                    </p>
+                  )}
+                </>
+              ) : (
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-stone-600">
+                  Tilgjengelig via {group.offers.length} medlemskap – sammenlign
+                  rabatt og vilkår hos partner.
+                </p>
               )}
             </article>
           ))}
