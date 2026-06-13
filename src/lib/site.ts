@@ -27,6 +27,8 @@ export function getGoogleAnalyticsId(): string | undefined {
   return process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? googleAnalyticsId;
 }
 
+import { getGuideArticleSlugs } from "@/data/guide-articles";
+
 /** CMS/DEPLOY: Sett NEXT_PUBLIC_SITE_URL i produksjon (f.eks. https://pengerifokus.no) */
 export function getSiteUrl(): string {
   if (process.env.NEXT_PUBLIC_SITE_URL) {
@@ -38,13 +40,22 @@ export function getSiteUrl(): string {
   return "http://localhost:3000";
 }
 
+const guideArticleRoutes = getGuideArticleSlugs().map((slug) => ({
+  path: `/guider/${slug}`,
+  priority: 0.85,
+  changeFrequency: "monthly" as const,
+}));
+
 export const publicRoutes = [
   { path: "/", priority: 1, changeFrequency: "weekly" as const },
   { path: "/guider", priority: 0.9, changeFrequency: "weekly" as const },
+  ...guideArticleRoutes,
   { path: "/fordeler", priority: 0.9, changeFrequency: "weekly" as const },
+  { path: "/tilbud", priority: 0.9, changeFrequency: "daily" as const },
   { path: "/verktoy", priority: 0.9, changeFrequency: "weekly" as const },
   { path: "/verktoy/rentekalkulator", priority: 0.8, changeFrequency: "monthly" as const },
   { path: "/verktoy/sparekalkulator", priority: 0.8, changeFrequency: "monthly" as const },
+  { path: "/verktoy/bsu-kalkulator", priority: 0.8, changeFrequency: "monthly" as const },
   { path: "/ordbok", priority: 0.9, changeFrequency: "weekly" as const },
   { path: "/kombinasjoner", priority: 0.9, changeFrequency: "weekly" as const },
 ];

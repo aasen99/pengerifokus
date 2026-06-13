@@ -22,6 +22,12 @@ export function Footer() {
               Fordeler
             </Link>
             <Link
+              href="/tilbud"
+              className="text-stone-600 hover:text-orange-600"
+            >
+              Tilbud
+            </Link>
+            <Link
               href="/verktoy"
               className="text-stone-600 hover:text-orange-600"
             >

@@ -61,4 +61,21 @@ export type ContentType =
   | "fordel"
   | "verktoy"
   | "ordbok"
-  | "kombinasjon";
+  | "kombinasjon"
+  | "tilbud";
+
+/** Konkret medlemstilbud koblet til et fordelsprogram */
+export interface Tilbud extends BaseContent {
+  title: string;
+  description: string;
+  /** Kort fordelsbeskrivelse, f.eks. «15 % rabatt» */
+  offerLabel: string;
+  /** Hvor tilbudet gjelder – butikk, kjede eller tjeneste */
+  partner: string;
+  /** Slug fra fordeler – kobler tilbake til medlemsprogram */
+  fordelSlug: string;
+  category: string;
+  /** Korte vilkår eller begrensninger */
+  terms?: string;
+}
+

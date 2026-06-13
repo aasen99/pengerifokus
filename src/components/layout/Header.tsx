@@ -8,6 +8,7 @@ const navItems = [
   { href: "/", label: "Start" },
   { href: "/guider", label: "Guider" },
   { href: "/fordeler", label: "Fordeler" },
+  { href: "/tilbud", label: "Tilbud" },
   { href: "/verktoy", label: "Verktøy" },
   { href: "/ordbok", label: "Ordbok" },
   { href: "/kombinasjoner", label: "Kombinasjoner" },

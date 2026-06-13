@@ -63,12 +63,12 @@ export const verktoy: Verktoy[] = [
   {
     id: "verktoy-5",
     slug: "bsu-kalkulator",
-    status: "coming-soon",
+    status: "published",
     name: "BSU-kalkulator",
     description:
       "Regn ut skattefordelen og se hvor mye du kan spare med BSU-sparing.",
     category: "Sparing",
     createdAt: "2025-01-12",
-    updatedAt: "2025-01-12",
+    updatedAt: "2026-06-11",
   },
 ];
