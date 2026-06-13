@@ -12,6 +12,9 @@ import {
   getFordelName,
   getTilbudCategories,
   groupTilbudByPartner,
+  sortGruppertTilbud,
+  TILBUD_SORT_OPTIONS,
+  type TilbudSortOption,
 } from "@/lib/tilbud";
 import { calculatorInputClassName } from "@/components/verktoy/calculator-ui";
 
@@ -44,6 +47,7 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
   const [query, setQuery] = useState("");
   const [fordelSlug, setFordelSlug] = useState<string | null>(null);
   const [category, setCategory] = useState<string | null>(null);
+  const [sort, setSort] = useState<TilbudSortOption>("name-asc");
 
   useEffect(() => {
     const program = searchParams.get("program");
@@ -58,8 +62,8 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
   );
 
   const grouped = useMemo(
-    () => groupTilbudByPartner(filtered),
-    [filtered],
+    () => sortGruppertTilbud(groupTilbudByPartner(filtered), sort),
+    [filtered, sort],
   );
 
   const hasFilters =
@@ -170,16 +174,36 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
         </div>
       </div>
 
-      <p className="text-sm text-stone-600">
-        {grouped.length} {grouped.length === 1 ? "partner" : "partnere"}
-        {hasFilters ? " funnet" : ""}
-        {grouped.length < filtered.length && (
-          <span className="text-stone-500">
-            {" "}
-            ({filtered.length} tilbud totalt)
-          </span>
-        )}
-      </p>
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <p className="text-sm text-stone-600">
+          {grouped.length} {grouped.length === 1 ? "partner" : "partnere"}
+          {hasFilters ? " funnet" : ""}
+          {grouped.length < filtered.length && (
+            <span className="text-stone-500">
+              {" "}
+              ({filtered.length} tilbud totalt)
+            </span>
+          )}
+        </p>
+
+        <div className="flex items-center gap-2">
+          <label htmlFor="tilbud-sort" className="text-sm text-stone-600">
+            Sorter etter
+          </label>
+          <select
+            id="tilbud-sort"
+            value={sort}
+            onChange={(e) => setSort(e.target.value as TilbudSortOption)}
+            className={`${calculatorInputClassName} w-auto min-w-[11rem] py-2 pr-8`}
+          >
+            {TILBUD_SORT_OPTIONS.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
+        </div>
+      </div>
 
       {grouped.length > 0 ? (
         <div className="grid gap-4 sm:grid-cols-2">

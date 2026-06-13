@@ -68,7 +68,64 @@ export function groupTilbudByPartner(entries: Tilbud[]): GruppertTilbud[] {
     });
   }
 
-  return groups.sort((a, b) => a.partner.localeCompare(b.partner, "nb"));
+  return groups;
+}
+
+export type TilbudSortOption =
+  | "name-asc"
+  | "rate-desc"
+  | "programs-desc"
+  | "category-asc";
+
+export const TILBUD_SORT_OPTIONS: { value: TilbudSortOption; label: string }[] = [
+  { value: "name-asc", label: "Navn A–Å" },
+  { value: "rate-desc", label: "Høyest rabatt" },
+  { value: "programs-desc", label: "Flest medlemskap" },
+  { value: "category-asc", label: "Kategori" },
+];
+
+/** Trekker ut høyeste tall fra offerLabel, f.eks. «15–20 %» → 20 */
+export function parseOfferRate(offerLabel: string): number | null {
+  const matches = offerLabel.match(/\d+[,.]?\d*/g);
+  if (!matches?.length) return null;
+
+  return Math.max(...matches.map((match) => parseFloat(match.replace(",", "."))));
+}
+
+function getGroupBestRate(group: GruppertTilbud): number {
+  const rates = group.offers
+    .map((offer) => parseOfferRate(offer.offerLabel))
+    .filter((rate): rate is number => rate !== null);
+
+  return rates.length ? Math.max(...rates) : -1;
+}
+
+export function sortGruppertTilbud(
+  groups: GruppertTilbud[],
+  sort: TilbudSortOption,
+): GruppertTilbud[] {
+  const sorted = [...groups];
+
+  switch (sort) {
+    case "rate-desc":
+      return sorted.sort((a, b) => {
+        const diff = getGroupBestRate(b) - getGroupBestRate(a);
+        return diff !== 0 ? diff : a.partner.localeCompare(b.partner, "nb");
+      });
+    case "programs-desc":
+      return sorted.sort((a, b) => {
+        const diff = b.offers.length - a.offers.length;
+        return diff !== 0 ? diff : a.partner.localeCompare(b.partner, "nb");
+      });
+    case "category-asc":
+      return sorted.sort((a, b) => {
+        const diff = (a.categories[0] ?? "").localeCompare(b.categories[0] ?? "", "nb");
+        return diff !== 0 ? diff : a.partner.localeCompare(b.partner, "nb");
+      });
+    case "name-asc":
+    default:
+      return sorted.sort((a, b) => a.partner.localeCompare(b.partner, "nb"));
+  }
 }
 
 export function filterTilbud(
