@@ -2,12 +2,15 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { ContentCard } from "@/components/ui/ContentCard";
 import { getFordeler } from "@/lib/content";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Fordeler",
   description:
-    "Oversikt over bonusprogrammer, cashback, medlemsfordeler og smarte medlemskap.",
-};
+    "Oversikt over bonusprogrammer, cashback, medlemsfordeler og smarte medlemskap i Norge – Trumf, Spenn, EuroBonus og mer.",
+  path: "/fordeler",
+  keywords: ["bonusprogram", "cashback", "trumf", "spenn", "eurobonus", "medlemsfordeler"],
+});
 
 /**
  * CMS/ADMIN: Fordelsprogrammer administreres via getFordeler().

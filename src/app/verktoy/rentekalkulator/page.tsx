@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Rentekalkulator } from "@/components/verktoy/Rentekalkulator";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Rentekalkulator",
   description:
-    "Beregn månedlig terminbeløp, total rentekostnad og hva du sparer med ekstra innbetalinger.",
-};
+    "Gratis rentekalkulator – beregn månedlig terminbeløp, total rentekostnad og se hva du sparer med ekstra innbetalinger på lånet.",
+  path: "/verktoy/rentekalkulator",
+  keywords: ["rentekalkulator", "lånekalkulator", "annuitetslån", "ekstra innbetaling", "boliglån"],
+});
 
 export default function RentekalkulatorPage() {
   return (

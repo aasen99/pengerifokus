@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Sparekalkulator } from "@/components/verktoy/Sparekalkulator";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Sparekalkulator",
   description:
-    "Se hvor mye sparingen din vokser – og sammenlign hva som skjer med ekstra månedlig sparing.",
-};
+    "Gratis sparekalkulator – se hvor mye sparingen din vokser og sammenlign effekten av ekstra månedlig sparing over tid.",
+  path: "/verktoy/sparekalkulator",
+  keywords: ["sparekalkulator", "sparing", "avkastning", "rentes rente", "fond sparing"],
+});
 
 export default function SparekalkulatorPage() {
   return (

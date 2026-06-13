@@ -1,7 +1,21 @@
+import type { Metadata } from "next";
 import { Hero } from "@/components/home/Hero";
 import { MainEntries } from "@/components/home/MainEntries";
 import { KombinasjonerPreview } from "@/components/home/KombinasjonerPreview";
 import { Button } from "@/components/ui/Button";
+import { createPageMetadata } from "@/lib/seo";
+import { siteConfig } from "@/lib/site";
+
+export const metadata: Metadata = createPageMetadata({
+  description: siteConfig.description,
+  path: "/",
+  keywords: [
+    "penger i fokus",
+    "økonomiguider",
+    "personlig økonomi norge",
+    "spare tips",
+  ],
+});
 
 export default function HomePage() {
   return (

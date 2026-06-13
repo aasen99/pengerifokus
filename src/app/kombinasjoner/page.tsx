@@ -2,12 +2,15 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { Tag } from "@/components/ui/Tag";
 import { getKombinasjoner } from "@/lib/content";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Kombinasjoner",
   description:
-    "Se hvordan produkter, kort og fordeler kan settes sammen for maksimal effekt.",
-};
+    "Anbefalte økonomiske oppsett som kombinerer kort, fordeler og sparing for maksimal effekt i hverdagen og på reise.",
+  path: "/kombinasjoner",
+  keywords: ["økonomioppsett", "bonus kombinasjon", "sparing strategi", "reise bonus"],
+});
 
 /**
  * CMS/ADMIN: Kombinasjoner er kjernefunksjonen – admin kan opprette anbefalte oppsett

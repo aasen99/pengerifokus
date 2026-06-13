@@ -2,12 +2,15 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { OrdbokList } from "@/components/ordbok/OrdbokList";
 import { getOrdbok } from "@/lib/content";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Ordbok",
   description:
-    "Enkel økonomiordbok med forklaringer på begreper som effektiv rente, ASK, inflasjon og mer.",
-};
+    "Norsk økonomiordbok med forklaringer på begreper som effektiv rente, ASK, inflasjon, BSU, ETF og refinansiering.",
+  path: "/ordbok",
+  keywords: ["økonomiordbok", "finansbegreper", "effektiv rente", "ASK", "inflasjon"],
+});
 
 /**
  * CMS/ADMIN: Ordbokbegreper administreres via getOrdbok().

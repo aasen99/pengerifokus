@@ -2,12 +2,15 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { ContentCard } from "@/components/ui/ContentCard";
 import { getGuides } from "@/lib/content";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Guider",
   description:
-    "Praktiske økonomiguider for sparing, investering, gjeld og hverdagsøkonomi.",
-};
+    "Praktiske økonomiguider for sparing, investering, gjeld og hverdagsøkonomi. Steg-for-steg hjelp uten bankjargong.",
+  path: "/guider",
+  keywords: ["økonomiguider", "sparing guide", "fond", "bufferkonto", "gjeld"],
+});
 
 /**
  * CMS/ADMIN: Denne siden henter guider via getGuides().

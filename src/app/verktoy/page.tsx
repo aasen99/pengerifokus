@@ -2,12 +2,15 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { ContentCard } from "@/components/ui/ContentCard";
 import { getVerktoy } from "@/lib/content";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Verktøy",
   description:
-    "Kalkulatorer og praktiske verktøy for personlig økonomi – budsjett, rente, BSU og mer.",
-};
+    "Gratis kalkulatorer og verktøy for personlig økonomi – rentekalkulator, sparekalkulator, budsjett og mer.",
+  path: "/verktoy",
+  keywords: ["økonomiverktøy", "kalkulator", "rente", "sparing", "budsjett"],
+});
 
 /**
  * CMS/ADMIN: Verktøy kan kobles til faktiske kalkulator-komponenter.
