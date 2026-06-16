@@ -61,6 +61,18 @@ export const verktoy: Verktoy[] = [
     updatedAt: "2026-06-11",
   },
   {
+    id: "verktoy-9",
+    slug: "okonomisk-rontgen",
+    status: "published",
+    featured: true,
+    name: "Økonomisk røntgen",
+    description:
+      "10 spørsmål som gir deg en økonomisk score fra 0 til 100 – med delresultater og tre konkrete prioriteringer.",
+    category: "Økonomi",
+    createdAt: "2026-06-11",
+    updatedAt: "2026-06-11",
+  },
+  {
     id: "verktoy-3",
     slug: "nedbetalingskalkulator",
     status: "coming-soon",
