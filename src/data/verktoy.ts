@@ -8,13 +8,13 @@ export const verktoy: Verktoy[] = [
   {
     id: "verktoy-1",
     slug: "tid-er-penger",
-    status: "coming-soon",
+    status: "published",
     name: "Tid er penger-kalkulator",
     description:
       "Se hva du faktisk tjener per time når du regner med reisetid, skatt og faste kostnader.",
     category: "Lønn",
     createdAt: "2025-01-05",
-    updatedAt: "2025-01-05",
+    updatedAt: "2026-06-11",
   },
   {
     id: "verktoy-2",
@@ -34,6 +34,28 @@ export const verktoy: Verktoy[] = [
     name: "Sparekalkulator",
     description:
       "Se hvor mye sparingen vokser – og sammenlign hva som skjer med ekstra månedlig sparing.",
+    category: "Sparing",
+    createdAt: "2026-06-11",
+    updatedAt: "2026-06-11",
+  },
+  {
+    id: "verktoy-8",
+    slug: "dopenge-kalkulator",
+    status: "published",
+    name: "Dopengekalkulator",
+    description:
+      "Hvor mye tjener du på do på jobben? Regn ut dopenge basert på lønn og arbeidstid.",
+    category: "Lønn",
+    createdAt: "2026-06-11",
+    updatedAt: "2026-06-11",
+  },
+  {
+    id: "verktoy-7",
+    slug: "regel-72",
+    status: "published",
+    name: "Regel 72",
+    description:
+      "Hvor lang tid tar det å doble pengene? Del 72 på avkastningen og få et raskt svar.",
     category: "Sparing",
     createdAt: "2026-06-11",
     updatedAt: "2026-06-11",

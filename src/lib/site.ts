@@ -61,6 +61,21 @@ export const publicRoutes = [
     priority: 0.8,
     changeFrequency: "monthly" as const,
   },
+  {
+    path: "/verktoy/tid-er-penger",
+    priority: 0.8,
+    changeFrequency: "monthly" as const,
+  },
+  {
+    path: "/verktoy/regel-72",
+    priority: 0.8,
+    changeFrequency: "monthly" as const,
+  },
+  {
+    path: "/verktoy/dopenge-kalkulator",
+    priority: 0.8,
+    changeFrequency: "monthly" as const,
+  },
   { path: "/ordbok", priority: 0.9, changeFrequency: "weekly" as const },
   { path: "/kombinasjoner", priority: 0.9, changeFrequency: "weekly" as const },
 ];
