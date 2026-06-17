@@ -7,9 +7,17 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Ordbok",
   description:
-    "Norsk økonomiordbok med forklaringer på begreper som effektiv rente, ASK, inflasjon, BSU, ETF og refinansiering.",
+    "Norsk økonomiordbok med forklaringer på begreper som realrente, nettoformue, BSU, inflasjon, egenkapital og annuitetslån.",
   path: "/ordbok",
-  keywords: ["økonomiordbok", "finansbegreper", "effektiv rente", "ASK", "inflasjon"],
+  keywords: [
+    "økonomiordbok",
+    "finansbegreper",
+    "realrente",
+    "nettoformue",
+    "egenkapital",
+    "inflasjon",
+    "annuitetslån",
+  ],
 });
 
 /**
