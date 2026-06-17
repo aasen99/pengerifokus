@@ -61,6 +61,18 @@ export const verktoy: Verktoy[] = [
     updatedAt: "2026-06-11",
   },
   {
+    id: "verktoy-11",
+    slug: "lanets-reelle-verdi",
+    status: "published",
+    featured: true,
+    name: "Lånets reelle verdi",
+    description:
+      "Se hvordan inflasjon reduserer gjeldens reelle verdi – og valgfritt effekten av å øke innbetalingen med lønnsveksten.",
+    category: "Gjeld",
+    createdAt: "2026-06-11",
+    updatedAt: "2026-06-11",
+  },
+  {
     id: "verktoy-10",
     slug: "eie-leie-kalkulator",
     status: "published",
