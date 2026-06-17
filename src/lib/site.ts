@@ -81,6 +81,11 @@ export const publicRoutes = [
     priority: 0.85,
     changeFrequency: "monthly" as const,
   },
+  {
+    path: "/verktoy/eie-leie-kalkulator",
+    priority: 0.85,
+    changeFrequency: "monthly" as const,
+  },
   { path: "/ordbok", priority: 0.9, changeFrequency: "weekly" as const },
   { path: "/kombinasjoner", priority: 0.9, changeFrequency: "weekly" as const },
 ];

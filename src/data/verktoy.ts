@@ -61,6 +61,18 @@ export const verktoy: Verktoy[] = [
     updatedAt: "2026-06-11",
   },
   {
+    id: "verktoy-10",
+    slug: "eie-leie-kalkulator",
+    status: "published",
+    featured: true,
+    name: "Eie vs. leie-kalkulator",
+    description:
+      "Sammenlign kjøp og leie over tid – med nettoformue, break-even og månedlig beregning.",
+    category: "Bolig",
+    createdAt: "2026-06-11",
+    updatedAt: "2026-06-11",
+  },
+  {
     id: "verktoy-9",
     slug: "okonomisk-rontgen",
     status: "published",
