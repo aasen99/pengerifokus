@@ -10,11 +10,9 @@ import {
   SCENARIO_PRESETS,
   WIZARD_STEPS,
 } from "@/data/eie-leie";
-import { formatIntegerInput } from "@/lib/format/number";
-import {
-  FormattedNumberInput,
-  parseIntegerInput,
-} from "@/components/ui/FormattedNumberInput";
+import { decimalsRoughlyEqual } from "@/lib/format/decimal";
+import { DecimalNumberInput } from "@/components/ui/DecimalNumberInput";
+import { IntegerNumberInput } from "@/components/ui/IntegerNumberInput";
 import {
   CalculatorField,
   calculatorInputClassName,
@@ -31,22 +29,6 @@ import { formatCurrency } from "@/lib/calculators/loan";
 import type { EieLeieInput, EieLeieMode, ScenarioPreset } from "@/types/eie-leie";
 import { EieLeieResultView } from "@/components/verktoy/eie-leie/EieLeieResultView";
 import { InfoTip } from "@/components/verktoy/eie-leie/InfoTip";
-
-function decimalInputProps(
-  value: number,
-  onChange: (value: number) => void,
-) {
-  return {
-    type: "text" as const,
-    inputMode: "decimal" as const,
-    value: String(value).replace(".", ","),
-    onChange: (event: React.ChangeEvent<HTMLInputElement>) => {
-      const parsed = Number(event.target.value.replace(",", ".").replace(/\s/g, ""));
-      if (Number.isFinite(parsed)) onChange(parsed);
-    },
-    className: calculatorInputClassName,
-  };
-}
 
 function integerField(
   label: string,
@@ -69,13 +51,30 @@ function integerField(
       }
       hint={hint}
     >
-      <FormattedNumberInput
-        value={formatIntegerInput(value)}
-        onChange={(raw) => {
-          const parsed = parseIntegerInput(raw);
-          if (Number.isFinite(parsed) && parsed >= 0) onChange(parsed);
-          if (raw === "") onChange(0);
-        }}
+      <IntegerNumberInput
+        value={value}
+        onChange={onChange}
+        className={calculatorInputClassName}
+      />
+    </CalculatorField>
+  );
+}
+
+function decimalField(
+  label: React.ReactNode,
+  value: number,
+  onChange: (value: number) => void,
+  hint?: string,
+  min?: number,
+  max?: number,
+) {
+  return (
+    <CalculatorField label={label} hint={hint}>
+      <DecimalNumberInput
+        value={value}
+        onChange={onChange}
+        min={min}
+        max={max}
         className={calculatorInputClassName}
       />
     </CalculatorField>
@@ -101,7 +100,7 @@ function PresetButtons({
           type="button"
           onClick={() => onSelect(preset.value)}
           className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${
-            current === preset.value
+            decimalsRoughlyEqual(current, preset.value)
               ? "bg-orange-100 text-orange-800"
               : "bg-stone-100 text-stone-700 hover:bg-stone-200"
           }`}
@@ -119,6 +118,8 @@ export function EieLeieKalkulator() {
   const [step, setStep] = useState(0);
   const [input, setInput] = useState<EieLeieInput>(createDefaultEieLeieInput);
   const [showResult, setShowResult] = useState(false);
+  const [selectedScenario, setSelectedScenario] =
+    useState<ScenarioPreset | null>("normal");
 
   const update = (patch: Partial<EieLeieInput>) => {
     setInput((current) => {
@@ -136,6 +137,7 @@ export function EieLeieKalkulator() {
 
   const applyScenario = (preset: ScenarioPreset) => {
     const values = SCENARIO_PRESETS[preset];
+    setSelectedScenario(preset);
     update({
       propertyGrowthPercent: values.propertyGrowthPercent,
       nominalRatePercent: values.nominalRatePercent,
@@ -176,6 +178,7 @@ export function EieLeieKalkulator() {
     setMode("simple");
     setStep(0);
     setShowResult(false);
+    setSelectedScenario("normal");
   };
 
   if (showResult && result) {
@@ -262,13 +265,29 @@ export function EieLeieKalkulator() {
                       key={preset}
                       type="button"
                       onClick={() => applyScenario(preset)}
-                      className="rounded-lg border border-stone-200 bg-stone-50 px-4 py-2 text-sm font-medium text-stone-800 transition-colors hover:border-orange-200 hover:bg-orange-50"
+                      className={`rounded-lg border px-4 py-2 text-sm font-medium transition-colors ${
+                        selectedScenario === preset
+                          ? "border-orange-300 bg-orange-100 text-orange-900"
+                          : "border-stone-200 bg-stone-50 text-stone-800 hover:border-orange-200 hover:bg-orange-50"
+                      }`}
                     >
                       {SCENARIO_PRESETS[preset].label}
                     </button>
                   ),
                 )}
               </div>
+              {selectedScenario && (
+                <div className="mt-4 rounded-xl border border-stone-100 bg-stone-50 px-4 py-3 text-sm text-stone-700">
+                  <p className="font-medium text-stone-900">
+                    Valgt scenario: {SCENARIO_PRESETS[selectedScenario].label}
+                  </p>
+                  <p className="mt-1">
+                    Boligprisvekst {input.propertyGrowthPercent} % · Rente{" "}
+                    {input.nominalRatePercent} % · Investeringsavkastning{" "}
+                    {input.investmentReturnPercent} %
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         )}
@@ -355,18 +374,20 @@ export function EieLeieKalkulator() {
         {step === 2 && (
           <div className="space-y-5">
             <h2 className="text-lg font-semibold text-stone-900">Boliglån</h2>
-            <CalculatorField label="Nominell rente" hint="Årlig rente i prosent">
-              <input {...decimalInputProps(input.nominalRatePercent, (value) => update({ nominalRatePercent: value }))} />
-            </CalculatorField>
+            {decimalField(
+              "Nominell rente",
+              input.nominalRatePercent,
+              (value) => update({ nominalRatePercent: value }),
+              "Årlig rente i prosent",
+              0,
+              25,
+            )}
             <CalculatorField label="Nedbetalingstid" hint="Antall år">
-              <FormattedNumberInput
-                value={formatIntegerInput(input.loanTermYears)}
-                onChange={(raw) => {
-                  const parsed = parseIntegerInput(raw);
-                  if (Number.isFinite(parsed) && parsed > 0) {
-                    update({ loanTermYears: parsed });
-                  }
-                }}
+              <IntegerNumberInput
+                value={input.loanTermYears}
+                onChange={(value) => update({ loanTermYears: value })}
+                min={1}
+                max={40}
                 className={calculatorInputClassName}
               />
             </CalculatorField>
@@ -391,14 +412,10 @@ export function EieLeieKalkulator() {
                   label="Rentefri eller avdragsfri periode"
                   hint="Antall måneder i starten"
                 >
-                  <FormattedNumberInput
-                    value={formatIntegerInput(input.interestOnlyMonths)}
-                    onChange={(raw) => {
-                      const parsed = parseIntegerInput(raw);
-                      if (Number.isFinite(parsed) && parsed >= 0) {
-                        update({ interestOnlyMonths: parsed });
-                      }
-                    }}
+                  <IntegerNumberInput
+                    value={input.interestOnlyMonths}
+                    onChange={(value) => update({ interestOnlyMonths: value })}
+                    min={0}
                     className={calculatorInputClassName}
                   />
                 </CalculatorField>
@@ -490,22 +507,15 @@ export function EieLeieKalkulator() {
                   </select>
                 </CalculatorField>
                 {input.maintenanceMode === "percent" ? (
-                  <CalculatorField
-                    label={
-                      <span className="inline-flex items-center">
-                        Vedlikehold per år
-                        <InfoTip text={EIE_LEIE_TOOLTIPS.maintenance} />
-                      </span>
-                    }
-                    hint="Standard 1 % av boligverdien"
-                  >
-                    <input
-                      {...decimalInputProps(
-                        input.maintenancePercentAnnual,
-                        (value) => update({ maintenancePercentAnnual: value }),
-                      )}
-                    />
-                  </CalculatorField>
+                  decimalField(
+                    <span className="inline-flex items-center">
+                      Vedlikehold per år
+                      <InfoTip text={EIE_LEIE_TOOLTIPS.maintenance} />
+                    </span>,
+                    input.maintenancePercentAnnual,
+                    (value) => update({ maintenancePercentAnnual: value }),
+                    "Standard 1 % av boligverdien",
+                  )
                 ) : (
                   integerField(
                     "Vedlikehold per måned",
@@ -527,10 +537,10 @@ export function EieLeieKalkulator() {
               }
               hint="Årlig vekst i prosent"
             >
-              <input
-                {...decimalInputProps(input.propertyGrowthPercent, (value) =>
-                  update({ propertyGrowthPercent: value }),
-                )}
+              <DecimalNumberInput
+                value={input.propertyGrowthPercent}
+                onChange={(value) => update({ propertyGrowthPercent: value })}
+                className={calculatorInputClassName}
               />
               <PresetButtons
                 presets={GROWTH_PRESETS}
@@ -539,23 +549,17 @@ export function EieLeieKalkulator() {
               />
             </CalculatorField>
 
-            {mode === "advanced" && (
-              <CalculatorField
-                label={
-                  <span className="inline-flex items-center">
-                    Salgskostnader
-                    <InfoTip text={EIE_LEIE_TOOLTIPS.saleCosts} />
-                  </span>
-                }
-                hint="Prosent av salgsprisen ved slutten av perioden"
-              >
-                <input
-                  {...decimalInputProps(input.saleCostPercent, (value) =>
-                    update({ saleCostPercent: value, saleCostMode: "percent" }),
-                  )}
-                />
-              </CalculatorField>
-            )}
+            {mode === "advanced" &&
+              decimalField(
+                <span className="inline-flex items-center">
+                  Salgskostnader
+                  <InfoTip text={EIE_LEIE_TOOLTIPS.saleCosts} />
+                </span>,
+                input.saleCostPercent,
+                (value) =>
+                  update({ saleCostPercent: value, saleCostMode: "percent" }),
+                "Prosent av salgsprisen ved slutten av perioden",
+              )}
           </div>
         )}
 
@@ -570,33 +574,24 @@ export function EieLeieKalkulator() {
 
             {mode === "advanced" && (
               <>
-                <CalculatorField
-                  label="Årlig husleieøkning"
-                  hint="Forventet økning i prosent per år"
-                >
-                  <input
-                    {...decimalInputProps(
-                      input.annualRentIncreasePercent,
-                      (value) => update({ annualRentIncreasePercent: value }),
-                    )}
-                  />
-                </CalculatorField>
+                {decimalField(
+                  "Årlig husleieøkning",
+                  input.annualRentIncreasePercent,
+                  (value) => update({ annualRentIncreasePercent: value }),
+                  "Forventet økning i prosent per år",
+                )}
                 {integerField(
                   "Depositum",
                   input.depositAmount,
                   (value) => update({ depositAmount: value }),
                   "Pengene er bundet, men ikke en ren kostnad",
                 )}
-                <CalculatorField
-                  label="Avkastning på depositum"
-                  hint="Årlig rente i prosent"
-                >
-                  <input
-                    {...decimalInputProps(input.depositReturnPercent, (value) =>
-                      update({ depositReturnPercent: value }),
-                    )}
-                  />
-                </CalculatorField>
+                {decimalField(
+                  "Avkastning på depositum",
+                  input.depositReturnPercent,
+                  (value) => update({ depositReturnPercent: value }),
+                  "Årlig rente i prosent",
+                )}
               </>
             )}
           </div>
@@ -627,10 +622,10 @@ export function EieLeieKalkulator() {
               }
               hint="Ikke garantert – brukes for sammenligning"
             >
-              <input
-                {...decimalInputProps(input.investmentReturnPercent, (value) =>
-                  update({ investmentReturnPercent: value }),
-                )}
+              <DecimalNumberInput
+                value={input.investmentReturnPercent}
+                onChange={(value) => update({ investmentReturnPercent: value })}
+                className={calculatorInputClassName}
               />
               <PresetButtons
                 presets={INVESTMENT_PRESETS}
@@ -639,18 +634,13 @@ export function EieLeieKalkulator() {
               />
             </CalculatorField>
 
-            {mode === "advanced" && (
-              <CalculatorField
-                label="Årlig kostnad på investering"
-                hint="F.eks. fondskostnad i prosent"
-              >
-                <input
-                  {...decimalInputProps(input.investmentCostPercent, (value) =>
-                    update({ investmentCostPercent: value }),
-                  )}
-                />
-              </CalculatorField>
-            )}
+            {mode === "advanced" &&
+              decimalField(
+                "Årlig kostnad på investering",
+                input.investmentCostPercent,
+                (value) => update({ investmentCostPercent: value }),
+                "F.eks. fondskostnad i prosent",
+              )}
 
             <div className="rounded-xl border border-stone-100 bg-stone-50 px-4 py-3 text-xs text-stone-600">
               <p className="font-medium text-stone-800">Forutsetninger i enkel modus</p>

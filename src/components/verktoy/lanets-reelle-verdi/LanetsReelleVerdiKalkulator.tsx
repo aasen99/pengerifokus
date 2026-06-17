@@ -11,11 +11,8 @@ import {
   LRV_TOOLTIPS,
   SALARY_GROWTH_SHARE_OPTIONS,
 } from "@/data/lanets-reelle-verdi";
-import { formatIntegerInput } from "@/lib/format/number";
-import {
-  FormattedNumberInput,
-  parseIntegerInput,
-} from "@/components/ui/FormattedNumberInput";
+import { DecimalNumberInput } from "@/components/ui/DecimalNumberInput";
+import { IntegerNumberInput } from "@/components/ui/IntegerNumberInput";
 import {
   CalculatorField,
   calculatorInputClassName,
@@ -37,28 +34,43 @@ function clamp(value: number, min: number, max: number): number {
   return Math.min(max, Math.max(min, value));
 }
 
+function sanitizeInflationInput(
+  input: InflationLoanInputs,
+): InflationLoanInputs {
+  return {
+    ...input,
+    currentDebt: clamp(input.currentDebt || 0, 1_000, 100_000_000),
+    years: clamp(Math.round(input.years || 1), 1, 40),
+    inflationRate: clamp(input.inflationRate ?? 0, 0, 15),
+    nominalInterestRate: clamp(input.nominalInterestRate ?? 0, 0, 25),
+  };
+}
+
+function sanitizeSalaryInput(
+  input: SalaryGrowthLoanInputs,
+): SalaryGrowthLoanInputs {
+  return {
+    ...input,
+    repaymentYears: clamp(Math.round(input.repaymentYears || 1), 1, 40),
+    salaryGrowthRate: clamp(input.salaryGrowthRate ?? 0, 0, 15),
+  };
+}
+
 function decimalField(
   label: React.ReactNode,
   value: number,
   onChange: (value: number) => void,
   hint?: string,
-  min = 0,
-  max = 100,
+  min?: number,
+  max?: number,
 ) {
   return (
     <CalculatorField label={label} hint={hint}>
-      <input
-        type="text"
-        inputMode="decimal"
-        value={String(value).replace(".", ",")}
-        onChange={(event) => {
-          const parsed = Number(
-            event.target.value.replace(",", ".").replace(/\s/g, ""),
-          );
-          if (Number.isFinite(parsed)) {
-            onChange(clamp(parsed, min, max));
-          }
-        }}
+      <DecimalNumberInput
+        value={value}
+        onChange={onChange}
+        min={min}
+        max={max}
         className={calculatorInputClassName}
       />
     </CalculatorField>
@@ -75,38 +87,29 @@ export function LanetsReelleVerdiKalkulator() {
   const [copied, setCopied] = useState(false);
 
   const inflationResult = useMemo(
-    () => calculateInflationLoanResult(inflationInput),
+    () => calculateInflationLoanResult(sanitizeInflationInput(inflationInput)),
     [inflationInput],
   );
 
   const salaryComparison = useMemo(() => {
     if (!salaryEnabled) return null;
 
+    const sanitizedInflation = sanitizeInflationInput(inflationInput);
+    const sanitizedSalary = sanitizeSalaryInput(salaryInput);
+
     return compareLoanStrategies({
-      ...salaryInput,
-      currentDebt: inflationInput.currentDebt,
-      nominalInterestRate: inflationInput.nominalInterestRate,
+      ...sanitizedSalary,
+      currentDebt: sanitizedInflation.currentDebt,
+      nominalInterestRate: sanitizedInflation.nominalInterestRate,
     });
   }, [salaryEnabled, salaryInput, inflationInput]);
 
   const updateInflation = (patch: Partial<InflationLoanInputs>) => {
-    setInflationInput((current) => {
-      const next = { ...current, ...patch };
-      next.currentDebt = clamp(next.currentDebt, 1_000, 100_000_000);
-      next.years = clamp(Math.round(next.years), 1, 40);
-      next.inflationRate = clamp(next.inflationRate, 0, 15);
-      next.nominalInterestRate = clamp(next.nominalInterestRate, 0, 25);
-      return next;
-    });
+    setInflationInput((current) => ({ ...current, ...patch }));
   };
 
   const updateSalary = (patch: Partial<SalaryGrowthLoanInputs>) => {
-    setSalaryInput((current) => {
-      const next = { ...current, ...patch };
-      next.repaymentYears = clamp(Math.round(next.repaymentYears), 1, 40);
-      next.salaryGrowthRate = clamp(next.salaryGrowthRate, 0, 15);
-      return next;
-    });
+    setSalaryInput((current) => ({ ...current, ...patch }));
   };
 
   const handleReset = () => {
@@ -155,14 +158,10 @@ export function LanetsReelleVerdiKalkulator() {
             label="Dagens restgjeld"
             hint="Minimum 1 000 kr"
           >
-            <FormattedNumberInput
-              value={formatIntegerInput(inflationInput.currentDebt)}
-              onChange={(raw) => {
-                const parsed = parseIntegerInput(raw);
-                if (Number.isFinite(parsed)) {
-                  updateInflation({ currentDebt: parsed });
-                }
-              }}
+            <IntegerNumberInput
+              value={inflationInput.currentDebt}
+              onChange={(value) => updateInflation({ currentDebt: value })}
+              min={1_000}
               className={calculatorInputClassName}
             />
           </CalculatorField>
@@ -321,14 +320,11 @@ export function LanetsReelleVerdiKalkulator() {
                 label="Gjenstående nedbetalingstid"
                 hint="1–40 år – brukes til ordinært terminbeløp"
               >
-                <FormattedNumberInput
-                  value={formatIntegerInput(salaryInput.repaymentYears)}
-                  onChange={(raw) => {
-                    const parsed = parseIntegerInput(raw);
-                    if (Number.isFinite(parsed) && parsed > 0) {
-                      updateSalary({ repaymentYears: parsed });
-                    }
-                  }}
+                <IntegerNumberInput
+                  value={salaryInput.repaymentYears}
+                  onChange={(value) => updateSalary({ repaymentYears: value })}
+                  min={1}
+                  max={40}
                   className={calculatorInputClassName}
                 />
               </CalculatorField>
