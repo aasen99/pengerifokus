@@ -115,7 +115,7 @@ export function TidErPengerKalkulator() {
       <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
         <h2 className="text-lg font-semibold text-stone-900">Din situasjon</h2>
         <p className="mt-1 text-sm text-stone-600">
-          Regn med det du faktisk sitter igjen med – og tiden jobben tar utover
+          Regn med det du faktisk sitter igjen med, og tiden jobben tar utover
           arbeidstiden.
         </p>
 
@@ -189,7 +189,7 @@ export function TidErPengerKalkulator() {
 
           <CalculatorField
             label="Jobbutgifter per måned"
-            hint="Pendling, parkering, lunsj, klær – det jobben koster deg"
+            hint="Pendling, parkering, lunsj, klær, det jobben koster deg"
           >
             <FormattedNumberInput
               value={monthlyWorkCosts}
@@ -361,7 +361,7 @@ export function TidErPengerKalkulator() {
         )}
 
         <p className="text-xs leading-relaxed text-stone-500">
-          Beregningen er veiledende. Skatt estimert grovt ved brutto – bruk netto
+          Beregningen er veiledende. Skatt estimert grovt ved brutto, bruk netto
           lønn for mest nøyaktig resultat. Jobbutgifter og reisetid varierer
           mye fra person til person.
         </p>

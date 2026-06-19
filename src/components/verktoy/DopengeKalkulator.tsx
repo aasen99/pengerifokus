@@ -46,7 +46,7 @@ export function DopengeKalkulator() {
       <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
         <h2 className="text-lg font-semibold text-stone-900">Jobben din</h2>
         <p className="mt-1 text-sm text-stone-600">
-          Vi regner timelønn ut fra det du faktisk får utbetalt – og hvor lang tid
+          Vi regner timelønn ut fra det du faktisk får utbetalt, og hvor lang tid
           du tilbringer på do i arbeidstiden.
         </p>
 
@@ -76,7 +76,7 @@ export function DopengeKalkulator() {
 
           <CalculatorField
             label="Minutter på do per arbeidsdag"
-            hint="Vær ærlig – ingen dømmer"
+            hint="Vær ærlig, ingen dømmer"
           >
             <input
               type="text"
@@ -125,7 +125,7 @@ export function DopengeKalkulator() {
                 Din dopenge
               </h2>
               <p className="mt-1 text-sm text-stone-600">
-                Betalt tid på do – per år.
+                Betalt tid på do, per år.
               </p>
               <p className="mt-4 text-4xl font-bold text-stone-900">
                 {formatCurrency(result.perYear)}
@@ -189,7 +189,7 @@ export function DopengeKalkulator() {
             <div className="rounded-xl border border-orange-200 bg-orange-50 px-4 py-3 text-sm text-stone-700">
               <span className="font-semibold text-orange-800">Tips: </span>
               Inkluderer du pendling i timelønnen blir do-pausen mindre
-              lønnsom – sjekk{" "}
+              lønnsom, sjekk{" "}
               <Link
                 href="/verktoy/tid-er-penger"
                 className="font-medium text-orange-700 hover:text-orange-800"
@@ -206,7 +206,7 @@ export function DopengeKalkulator() {
         )}
 
         <p className="text-xs leading-relaxed text-stone-500">
-          Dopenger er selvfølgelig en humoristisk måte å se på timelønn på –
+          Dopenger er selvfølgelig en humoristisk måte å se på timelønn på.
           du får betalt for arbeidstid uansett. Beregningen er veiledende og
           forutsetter at do-besøk skjer i betalt arbeidstid.
         </p>

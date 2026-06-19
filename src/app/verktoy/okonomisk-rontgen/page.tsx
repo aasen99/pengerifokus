@@ -6,7 +6,7 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Økonomisk røntgen",
   description:
-    "Ta en rask økonomisjekk med 10 spørsmål. Få score fra 0 til 100, delresultater og tre konkrete prioriteringer – uten innlogging.",
+    "Ta en rask økonomisjekk med 10 spørsmål. Få score fra 0 til 100, delresultater og tre konkrete prioriteringer, uten innlogging.",
   path: "/verktoy/okonomisk-rontgen",
   keywords: [
     "økonomisk røntgen",

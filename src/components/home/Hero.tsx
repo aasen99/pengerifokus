@@ -14,19 +14,19 @@ export function Hero() {
           Penger i Fokus hjelper deg å forstå, spare og bruke penger smartere.
         </h1>
         <p className="mt-6 text-lg leading-relaxed text-stone-300">
-          Praktiske guider, fordeler og verktøy – samlet på ett sted. Ingen
-          jargong, bare det du trenger for å ta bedre valg.
+          Praktiske guider, fordelsprogrammer, tilbud og verktøy, samlet på ett
+          sted. Ingen jargong, bare det du trenger for å ta bedre valg.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <Button href="/guider" variant="secondary">
             Utforsk guidene
           </Button>
           <Button
-            href="/kombinasjoner"
+            href="/tilbud"
             variant="outline"
             className="border-white/30 bg-white/10 text-white hover:border-white/50 hover:bg-white/20 hover:text-white"
           >
-            Se kombinasjoner
+            Se tilbud
           </Button>
         </div>
       </div>

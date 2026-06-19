@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import {
   createDefaultEieLeieInput,
+  EIE_LEIE_CASH_FLOW_NOTE,
   EIE_LEIE_INTRO_NOTE,
   EIE_LEIE_TOOLTIPS,
   GROWTH_PRESETS,
@@ -601,15 +602,16 @@ export function EieLeieKalkulator() {
           <div className="space-y-5">
             <h2 className="text-lg font-semibold text-stone-900">Investering</h2>
             <div className="rounded-xl bg-stone-50 px-4 py-3 text-sm text-stone-700">
-              <p>
+              <p className="font-medium text-stone-900">Slik investeres det</p>
+              <p className="mt-2">{EIE_LEIE_CASH_FLOW_NOTE}</p>
+              <p className="mt-3">
                 Tilgjengelig startbeløp for investering ved leie:{" "}
                 <strong className="text-stone-900">
                   {formatCurrency(startInvestment)}
                 </strong>
               </p>
               <p className="mt-1 text-xs text-stone-500">
-                Egenkapital + kjøpskostnader − depositum. Månedlig forskjell
-                investeres når leie er billigere enn eie.
+                Egenkapital + kjøpskostnader − depositum.
               </p>
             </div>
 
@@ -620,7 +622,7 @@ export function EieLeieKalkulator() {
                   <InfoTip text={EIE_LEIE_TOOLTIPS.alternativeReturn} />
                 </span>
               }
-              hint="Ikke garantert – brukes for sammenligning"
+              hint="Ikke garantert: brukes for sammenligning"
             >
               <DecimalNumberInput
                 value={input.investmentReturnPercent}

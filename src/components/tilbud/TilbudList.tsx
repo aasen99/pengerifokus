@@ -3,6 +3,10 @@
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
+import {
+  FORDELSPROGRAMMER_TITLE,
+  TILBUD_TITLE,
+} from "@/data/content-labels";
 import type { Tilbud } from "@/types/content";
 import type { Fordel } from "@/types/content";
 import { Tag } from "@/components/ui/Tag";
@@ -107,7 +111,7 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
 
         <div className="mt-4">
           <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-stone-500">
-            Medlemskap / program
+            Fordelsprogram
           </p>
           <div className="flex flex-wrap gap-2">
             <button
@@ -214,14 +218,24 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
             >
               <div className="mb-3 flex flex-wrap items-center gap-2">
                 {group.offers.map((offer) => (
-                  <Link
+                  <button
                     key={offer.tilbudId}
-                    href={`/fordeler?program=${offer.fordelSlug}`}
+                    type="button"
+                    onClick={() =>
+                      setFordelSlug(
+                        offer.fordelSlug === fordelSlug ? null : offer.fordelSlug,
+                      )
+                    }
+                    className="text-left"
                   >
-                    <Tag variant="accent">
+                    <Tag
+                      variant={
+                        fordelSlug === offer.fordelSlug ? "accent" : "default"
+                      }
+                    >
                       {getFordelName(offer.fordelSlug)} · {offer.offerLabel}
                     </Tag>
-                  </Link>
+                  </button>
                 ))}
                 {group.categories.map((cat) => (
                   <Tag key={cat}>{cat}</Tag>
@@ -245,7 +259,7 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
                 </>
               ) : (
                 <p className="mt-2 flex-1 text-sm leading-relaxed text-stone-600">
-                  Tilgjengelig via {group.offers.length} medlemskap – sammenlign
+                  Tilgjengelig via {group.offers.length} medlemskap. Sammenlign
                   rabatt og vilkår hos partner.
                 </p>
               )}
@@ -275,6 +289,14 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
       )}
 
       <TilbudDisclaimer />
+
+      <p className="text-sm text-stone-500">
+        Vil du lese mer om fordelsprogrammene bak tilbudene?{" "}
+        <Link href="/fordeler" className="font-medium text-orange-600 hover:text-orange-700">
+          Se {FORDELSPROGRAMMER_TITLE.toLowerCase()}
+        </Link>
+        .
+      </p>
     </div>
   );
 }

@@ -6,7 +6,7 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Rentekalkulator",
   description:
-    "Gratis rentekalkulator – beregn månedlig terminbeløp, total rentekostnad og se hva du sparer med ekstra innbetalinger på lånet.",
+    "Gratis rentekalkulator: beregn månedlig terminbeløp, total rentekostnad og se hva du sparer med ekstra innbetalinger på lånet.",
   path: "/verktoy/rentekalkulator",
   keywords: ["rentekalkulator", "lånekalkulator", "annuitetslån", "ekstra innbetaling", "boliglån"],
 });
@@ -26,7 +26,7 @@ export default function RentekalkulatorPage() {
           Rentekalkulator
         </h1>
         <p className="mt-3 max-w-2xl text-lg text-stone-600">
-          Se hva lånet ditt koster over tid – og hvor mye du kan spare ved å
+          Se hva lånet ditt koster over tid, og hvor mye du kan spare ved å
           betale inn ekstra hver måned.
         </p>
       </header>

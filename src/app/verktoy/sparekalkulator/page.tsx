@@ -6,7 +6,7 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Sparekalkulator",
   description:
-    "Gratis sparekalkulator – se hvor mye sparingen din vokser og sammenlign effekten av ekstra månedlig sparing over tid.",
+    "Gratis sparekalkulator. Se hvor mye sparingen din vokser og sammenlign effekten av ekstra månedlig sparing over tid.",
   path: "/verktoy/sparekalkulator",
   keywords: ["sparekalkulator", "sparing", "avkastning", "rentes rente", "fond sparing"],
 });
@@ -26,8 +26,8 @@ export default function SparekalkulatorPage() {
           Sparekalkulator
         </h1>
         <p className="mt-3 max-w-2xl text-lg text-stone-600">
-          Sammenlign vanlig sparing med å legge til litt ekstra hver måned –
-          f.eks. 200 kr – og se forskjellen over tid.
+          Sammenlign vanlig sparing med å legge til litt ekstra hver måned,
+          for eksempel 200 kr, og se forskjellen over tid.
         </p>
       </header>
 

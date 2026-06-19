@@ -20,7 +20,7 @@ export default function GuiderPage() {
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
       <PageHeader
         title="Guider"
-        description="Praktiske veiledninger som hjelper deg å ta bedre valg med pengene dine – fra bufferkonto til fond og gjeld."
+        description="Praktiske veiledninger som hjelper deg å ta bedre valg med pengene dine, fra bufferkonto til fond og gjeld."
       />
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

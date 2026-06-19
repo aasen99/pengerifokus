@@ -1,4 +1,4 @@
-/** BSU-regler brukt i kalkulatoren – verifiser mot gjeldende regelverk */
+/** BSU-regler brukt i kalkulatoren: verifiser mot gjeldende regelverk */
 export const BSU_MAX_ANNUAL_DEPOSIT = 27_500;
 export const BSU_TAX_DEDUCTION_RATE = 0.1;
 export const BSU_MAX_ANNUAL_TAX_BENEFIT = 2_750;

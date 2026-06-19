@@ -1,4 +1,9 @@
 import Link from "next/link";
+import { CookiePreferencesLink } from "@/components/layout/CookiePreferencesLink";
+import {
+  FORDELSPROGRAMMER_TITLE,
+  TILBUD_TITLE,
+} from "@/data/content-labels";
 
 export function Footer() {
   return (
@@ -19,13 +24,13 @@ export function Footer() {
               href="/fordeler"
               className="text-stone-600 hover:text-orange-600"
             >
-              Fordeler
+              {FORDELSPROGRAMMER_TITLE}
             </Link>
             <Link
               href="/tilbud"
               className="text-stone-600 hover:text-orange-600"
             >
-              Tilbud
+              {TILBUD_TITLE}
             </Link>
             <Link
               href="/verktoy"
@@ -33,12 +38,7 @@ export function Footer() {
             >
               Verktøy
             </Link>
-            <Link
-              href="/kombinasjoner"
-              className="text-stone-600 hover:text-orange-600"
-            >
-              Kombinasjoner
-            </Link>
+            <CookiePreferencesLink />
           </nav>
         </div>
         <p className="mt-8 text-xs text-stone-500">

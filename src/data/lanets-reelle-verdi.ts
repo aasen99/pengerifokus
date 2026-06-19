@@ -16,7 +16,7 @@ export const LRV_TOOLTIPS = {
   realValue:
     "Hva det nominelle beløpet tilsvarer målt i dagens kjøpekraft, gitt valgt inflasjon.",
   realInterest:
-    "Den effektive renten etter at inflasjon er tatt med – beregnet med Fisher-ligningen.",
+    "Den effektive renten etter at inflasjon er tatt med: beregnet med Fisher-ligningen.",
   salaryGrowth:
     "Forventet årlig økning i lønnen. Brukes kun til å øke låneinnbetalingen i tilleggsfunksjonen.",
   salaryShare:

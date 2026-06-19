@@ -53,7 +53,7 @@ export function BsuKalkulator() {
       <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
         <h2 className="text-lg font-semibold text-stone-900">BSU-detaljer</h2>
         <p className="mt-1 text-sm text-stone-600">
-          Boligsparing for ungdom – maks {formatIntegerInput(BSU_MAX_ANNUAL_DEPOSIT)} kr
+          Boligsparing for ungdom, maks {formatIntegerInput(BSU_MAX_ANNUAL_DEPOSIT)} kr
           innskudd per år gir opptil {formatIntegerInput(BSU_MAX_ANNUAL_TAX_BENEFIT)} kr i
           skattefradrag.
         </p>

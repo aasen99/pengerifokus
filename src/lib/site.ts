@@ -3,7 +3,7 @@ export const siteConfig = {
   name: "Penger i Fokus",
   tagline: "Forstå, spare og bruke penger smartere.",
   description:
-    "Praktiske guider, fordeler, verktøy og ordbok for personlig økonomi i Norge. Lær å spare, investere og bruke penger smartere – uten bankjargong.",
+    "Praktiske guider, fordelsprogrammer, tilbud, verktøy og ordbok for personlig økonomi i Norge. Lær å spare, investere og bruke penger smartere, uten bankjargong.",
   locale: "nb_NO",
   language: "no",
   keywords: [
@@ -28,6 +28,7 @@ export function getGoogleAnalyticsId(): string | undefined {
 }
 
 import { getGuideArticleSlugs } from "@/data/guide-articles";
+import { getFordeler } from "@/lib/content";
 
 /** CMS/DEPLOY: Sett NEXT_PUBLIC_SITE_URL i produksjon (f.eks. https://pengerifokus.no) */
 export function getSiteUrl(): string {
@@ -46,11 +47,18 @@ const guideArticleRoutes = getGuideArticleSlugs().map((slug) => ({
   changeFrequency: "monthly" as const,
 }));
 
+const fordelRoutes = getFordeler().map((fordel) => ({
+  path: `/fordeler/${fordel.slug}`,
+  priority: 0.8,
+  changeFrequency: "monthly" as const,
+}));
+
 export const publicRoutes = [
   { path: "/", priority: 1, changeFrequency: "weekly" as const },
   { path: "/guider", priority: 0.9, changeFrequency: "weekly" as const },
   ...guideArticleRoutes,
   { path: "/fordeler", priority: 0.9, changeFrequency: "weekly" as const },
+  ...fordelRoutes,
   { path: "/tilbud", priority: 0.9, changeFrequency: "daily" as const },
   { path: "/verktoy", priority: 0.9, changeFrequency: "weekly" as const },
   { path: "/verktoy/rentekalkulator", priority: 0.8, changeFrequency: "monthly" as const },
@@ -92,5 +100,4 @@ export const publicRoutes = [
     changeFrequency: "monthly" as const,
   },
   { path: "/ordbok", priority: 0.9, changeFrequency: "weekly" as const },
-  { path: "/kombinasjoner", priority: 0.9, changeFrequency: "weekly" as const },
 ];

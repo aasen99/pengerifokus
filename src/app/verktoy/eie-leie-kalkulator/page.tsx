@@ -6,7 +6,7 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Eie vs. leie-kalkulator",
   description:
-    "Sammenlign kostnadene og forventet formuesutvikling ved å kjøpe bolig mot å leie og investere pengene du sparer.",
+    "Sammenlign nettoformue ved å kjøpe bolig mot å leie, med månedlig investering av differansen begge veier.",
   path: "/verktoy/eie-leie-kalkulator",
   keywords: [
     "eie eller leie",
@@ -33,8 +33,9 @@ export default function EieLeieKalkulatorPage() {
           Lønner det seg å eie eller leie bolig?
         </h1>
         <p className="mt-3 max-w-3xl text-lg text-stone-600">
-          Sammenlign kostnadene og den forventede formuesutviklingen ved å kjøpe
-          bolig mot å leie og investere pengene du sparer.
+          Sammenlign nettoformue ved å kjøpe bolig mot å leie. Kalkulatoren
+          investerer månedlig differanse begge veier, slik at sammenligningen
+          holder kontantstrømmen lik.
         </p>
       </header>
 

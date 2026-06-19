@@ -36,7 +36,7 @@ export function TilbudDisclaimer({ variant = "footer" }: TilbudDisclaimerProps) 
     <p className="text-xs leading-relaxed text-stone-500">
       Tilbudslisten er basert på {sources}, sist oppdatert {lastUpdated}.
       Rabatter og vilkår kan endres eller avsluttes når som helst. Penger i
-      Fokus er ikke ansvarlig for feil eller utdatert informasjon – verifiser
+      Fokus er ikke ansvarlig for feil eller utdatert informasjon. Verifiser
       alltid hos partner før kjøp.
     </p>
   );

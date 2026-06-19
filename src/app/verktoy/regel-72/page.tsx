@@ -6,7 +6,7 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Regel 72",
   description:
-    "Hvor lang tid tar det å doble pengene dine? Gratis kalkulator med regel 72 – enkel tomelfingerregel for rentes rente.",
+    "Hvor lang tid tar det å doble pengene dine? Gratis kalkulator med regel 72: enkel tomelfingerregel for rentes rente.",
   path: "/verktoy/regel-72",
   keywords: ["regel 72", "rentes rente", "doble pengene", "avkastning", "sparing"],
 });
@@ -26,7 +26,7 @@ export default function Regel72Page() {
           Regel 72
         </h1>
         <p className="mt-3 max-w-2xl text-lg text-stone-600">
-          Del 72 på avkastningen i prosent – da får du grovt antall år det tar
+          Del 72 på avkastningen i prosent. Da får du grovt antall år det tar
           å doble pengene dine.
         </p>
       </header>

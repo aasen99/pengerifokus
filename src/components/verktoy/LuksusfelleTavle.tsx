@@ -307,8 +307,8 @@ function BoardSummaryFooter({
           {summary.isDeficit
             ? "Du bruker mer enn du får inn. Se på variable utgifter og gjeld først."
             : summary.remainder > 0
-              ? "Penger igjen – vurder om de skal til buffer, nedbetaling eller forbruk."
-              : "Inntekt og utgifter går opp – bra utgangspunkt for å finjustere."}
+              ? "Penger igjen: vurder om de skal til buffer, nedbetaling eller forbruk."
+              : "Inntekt og utgifter går opp: bra utgangspunkt for å finjustere."}
         </p>
       </div>
     </>
@@ -423,7 +423,7 @@ function BillsBoard({
           </>
         ) : (
           <p className="py-6 text-center text-sm text-stone-500">
-            Legg til utgifter – da dukker 1000- og 500-lappene opp her.
+            Legg til utgifter. Da dukker 1000- og 500-lappene opp her.
           </p>
         )}
       </div>
@@ -583,14 +583,14 @@ export function LuksusfelleTavle() {
                   <span className="font-medium">
                     {Math.round(summary.shareOfIncome.fixed)} %
                   </span>{" "}
-                  – mål rundt 50 %
+                 , mål rundt 50 %
                 </li>
                 <li>
                   Ønsker (variable):{" "}
                   <span className="font-medium">
                     {Math.round(summary.shareOfIncome.variable)} %
                   </span>{" "}
-                  – mål rundt 30 %
+                 , mål rundt 30 %
                 </li>
                 <li>
                   Sparing + gjeld:{" "}
@@ -600,18 +600,18 @@ export function LuksusfelleTavle() {
                     )}{" "}
                     %
                   </span>{" "}
-                  – mål rundt 20 %
+                 , mål rundt 20 %
                 </li>
               </ul>
               <p className="mt-3 text-xs text-stone-600">
-                I Norge tar bolig ofte mer enn 50 % – juster etter din situasjon.
+                I Norge tar bolig ofte mer enn 50 %, juster etter din situasjon.
               </p>
             </div>
           )}
 
           <p className="text-xs leading-relaxed text-stone-500">
             Verktøyet er veiledende og erstatter ikke profesjonell rådgivning.
-            Tallene lagres ikke – skriv gjerne ned eller ta skjermbilde av tavlen.
+            Tallene lagres ikke: skriv gjerne ned eller ta skjermbilde av tavlen.
           </p>
         </div>
       </div>

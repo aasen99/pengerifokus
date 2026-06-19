@@ -4,24 +4,24 @@ export const byggBufferkonto: GuideArticleContent = {
   slug: "bygg-bufferkonto",
   readTimeMinutes: 6,
   intro:
-    "En bufferkonto er økonomiens airbag. Den gjør at uforutsette regninger ikke blir til dyr gjeld – og gir deg ro i hverdagen.",
+    "En bufferkonto er økonomiens airbag. Den gjør at uforutsette regninger ikke blir til dyr gjeld, og gir deg ro i hverdagen.",
   sections: [
     {
       heading: "Hva er en bufferkonto?",
       paragraphs: [
         "Bufferkontoen er penger du setter til side for det du ikke planlegger: bil som ryker, tannlege, plutselig jobbtap eller en ødelagt vaskemaskin.",
-        "Pengene bør være lett tilgjengelige på en vanlig sparekonto – ikke låst i fond eller BSU. Poenget er at du skal kunne bruke dem raskt uten å måtte selge investeringer eller ta opp forbrukslån.",
+        "Pengene bør være lett tilgjengelige på en vanlig sparekonto, ikke låst i fond eller BSU. Poenget er at du skal kunne bruke dem raskt uten å måtte selge investeringer eller ta opp forbrukslån.",
       ],
     },
     {
       heading: "Hvor mye bør du ha?",
       bullets: [
-        "Minimum: 1 måneds normale utgifter – bedre enn ingenting",
+        "Minimum er én måneds normale utgifter, bedre enn ingenting",
         "Anbefalt: 3 måneders utgifter for de fleste",
         "Tryggere: 6 måneder hvis du har uforutsigbar inntekt eller familie",
         "Egen bolig med lån: vurder nærmere 3–6 måneder",
       ],
-      tip: "Regn ut månedlige utgifter, ikke bare inntekt. Leie, mat, strøm, forsikring og lån teller – streaming og takeaway kan du kutte i nød.",
+      tip: "Regn ut månedlige utgifter, ikke bare inntekt. Leie, mat, strøm, forsikring og lån teller. Streaming og takeaway kan du kutte i nød.",
     },
     {
       heading: "Slik bygger du den steg for steg",
@@ -30,7 +30,7 @@ export const byggBufferkonto: GuideArticleContent = {
       ],
       bullets: [
         "1. Finn månedlige utgifter (se på kontoutskrift eller budsjett)",
-        "2. Sett et mål – f.eks. 3 × utgifter",
+        "2. Sett et mål, f.eks. 3 × utgifter",
         "3. Åpne en egen sparekonto (gjør det synlig at pengene har et formål)",
         "4. Sett opp fast trekk på lønningsdag",
         "5. Fyll på igjen etter at du har måttet bruke bufferen",
@@ -39,16 +39,16 @@ export const byggBufferkonto: GuideArticleContent = {
     {
       heading: "Hvor skal pengene ligge?",
       paragraphs: [
-        "Bufferen hører hjemme på en sparekonto med god rente og ingen binding. Du skal ikke jage høy avkastning her – trygghet og tilgjengelighet er viktigst.",
+        "Bufferen hører hjemme på en sparekonto med god rente og ingen binding. Du skal ikke jage høy avkastning her: trygghet og tilgjengelighet er viktigst.",
         "Ikke bland buffer med daglig bruk. Mange oppretter en egen konto med navn som «Buffer» eller «Nødfond» for å unngå å bruke pengene på hverdagskjøp.",
       ],
     },
     {
       heading: "Vanlige feil",
       bullets: [
-        "Bruke bufferen til ferie eller TV – da er det ikke en buffer",
-        "Investere bufferen i aksjer – risikerer å måtte selge med tap når du trenger pengene",
-        "Vente med å starte til du «har råd» – selv 500 kr i måneden hjelper",
+        "Bruke bufferen til ferie eller TV. Da er det ikke en buffer",
+        "Investere bufferen i aksjer: risikerer å måtte selge med tap når du trenger pengene",
+        "Vente med å starte til du «har råd», selv 500 kr i måneden hjelper",
         "Glemme å fylle på etter bruk",
       ],
     },

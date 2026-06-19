@@ -71,7 +71,7 @@ export function Sparekalkulator() {
 
           <CalculatorField
             label="Forventet årlig avkastning"
-            hint="I prosent – f.eks. 7 for fond"
+            hint="I prosent, f.eks. 7 for fond"
           >
             <input
               type="text"

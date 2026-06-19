@@ -7,7 +7,7 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Verktøy",
   description:
-    "Gratis kalkulatorer og verktøy for personlig økonomi – rentekalkulator, sparekalkulator, budsjett og mer.",
+    "Gratis kalkulatorer og verktøy for personlig økonomi: rentekalkulator, sparekalkulator, budsjett og mer.",
   path: "/verktoy",
   keywords: ["økonomiverktøy", "kalkulator", "rente", "sparing", "budsjett"],
 });
@@ -23,7 +23,7 @@ export default function VerktoyPage() {
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
       <PageHeader
         title="Verktøy"
-        description="Kalkulatorer og verktøy som hjelper deg å regne, planlegge og sammenligne – uten regneark."
+        description="Kalkulatorer og verktøy som hjelper deg å regne, planlegge og sammenligne, uten regneark."
       />
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

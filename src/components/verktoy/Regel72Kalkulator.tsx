@@ -230,7 +230,7 @@ export function Regel72Kalkulator() {
 
         <p className="text-xs leading-relaxed text-stone-500">
           Regel 72 er en tomelfingerregel og passer best mellom ca. 4–15 %
-          avkastning. Faktisk avkastning varierer – særlig i fond og aksjer.
+          avkastning. Faktisk avkastning varierer: særlig i fond og aksjer.
         </p>
       </section>
     </div>

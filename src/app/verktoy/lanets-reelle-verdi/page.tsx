@@ -6,7 +6,7 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Lånets reelle verdi",
   description:
-    "Se hvordan inflasjon reduserer den reelle verdien av gjeld over tid – og valgfritt effekten av å øke innbetalingen med lønnsveksten.",
+    "Se hvordan inflasjon reduserer den reelle verdien av gjeld over tid, og valgfritt effekten av å øke innbetalingen med lønnsveksten.",
   path: "/verktoy/lanets-reelle-verdi",
   keywords: [
     "lånets reelle verdi",

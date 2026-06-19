@@ -10,14 +10,12 @@ import { guider } from "@/data/guider";
 import { fordeler } from "@/data/fordeler";
 import { verktoy } from "@/data/verktoy";
 import { ordbok } from "@/data/ordbok";
-import { kombinasjoner } from "@/data/kombinasjoner";
 import { tilbud } from "@/data/tilbud";
 import type {
   Guide,
   Fordel,
   Verktoy,
   OrdbokEntry,
-  Kombinasjon,
   Tilbud,
   PublishStatus,
 } from "@/types/content";
@@ -26,7 +24,7 @@ function isPublished<T extends { status: PublishStatus }>(item: T): boolean {
   return item.status === "published";
 }
 
-/** CMS: Admin ser alle – besøkende ser kun published */
+/** CMS: Admin ser alle, besøkende ser kun published */
 export function getGuides(): Guide[] {
   return guider.filter(isPublished);
 }
@@ -43,20 +41,16 @@ export function getFordeler(): Fordel[] {
   return fordeler.filter(isPublished);
 }
 
+export function getFordelBySlug(slug: string): Fordel | undefined {
+  return getFordeler().find((fordel) => fordel.slug === slug);
+}
+
 export function getVerktoy(): Verktoy[] {
   return verktoy;
 }
 
 export function getOrdbok(): OrdbokEntry[] {
   return ordbok.filter(isPublished);
-}
-
-export function getKombinasjoner(): Kombinasjon[] {
-  return kombinasjoner.filter(isPublished);
-}
-
-export function getFeaturedKombinasjoner(): Kombinasjon[] {
-  return getKombinasjoner().filter((k) => k.featured);
 }
 
 export function getTilbud(): Tilbud[] {

@@ -6,7 +6,7 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Dopengekalkulator",
   description:
-    "Hvor mye tjener du på å sitte på do på jobben? Regn ut dopenge per dag, måned og år – basert på nettolønn og arbeidstid.",
+    "Hvor mye tjener du på å sitte på do på jobben? Regn ut dopenge per dag, måned og år, basert på nettolønn og arbeidstid.",
   path: "/verktoy/dopenge-kalkulator",
   keywords: [
     "dopenge",
@@ -34,7 +34,7 @@ export default function DopengeKalkulatorPage() {
         </h1>
         <p className="mt-3 max-w-2xl text-lg text-stone-600">
           Hva får du egentlig betalt for å sitte på do på jobben? Fyll inn lønn
-          og en ærlig do-estimat – så ser du dopenge per dag, måned og år.
+          og en ærlig do-estimat, så ser du dopenge per dag, måned og år.
         </p>
       </header>
 

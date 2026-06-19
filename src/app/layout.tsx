@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { CookieConsent } from "@/components/layout/CookieConsent";
 import { WebsiteJsonLd } from "@/components/seo/WebsiteJsonLd";
-import { GoogleAnalytics } from "@/components/seo/GoogleAnalytics";
 import { getSiteUrl, siteConfig } from "@/lib/site";
 import "./globals.css";
 
@@ -59,7 +59,7 @@ export default function RootLayout({
   return (
     <html lang={siteConfig.language} className={`${inter.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col">
-        <GoogleAnalytics />
+        <CookieConsent />
         <WebsiteJsonLd />
         <Header />
         <main className="flex-1">{children}</main>

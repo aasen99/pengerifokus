@@ -4,14 +4,18 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
+import {
+  FORDELSPROGRAMMER_TITLE,
+  TILBUD_TITLE,
+} from "@/data/content-labels";
+
 const navItems = [
   { href: "/", label: "Start" },
   { href: "/guider", label: "Guider" },
-  { href: "/fordeler", label: "Fordeler" },
-  { href: "/tilbud", label: "Tilbud" },
+  { href: "/fordeler", label: FORDELSPROGRAMMER_TITLE },
+  { href: "/tilbud", label: TILBUD_TITLE },
   { href: "/verktoy", label: "Verktøy" },
   { href: "/ordbok", label: "Ordbok" },
-  { href: "/kombinasjoner", label: "Kombinasjoner" },
 ];
 
 export function Header() {

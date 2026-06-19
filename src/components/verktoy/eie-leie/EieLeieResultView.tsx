@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { EIE_LEIE_DISCLAIMER, SCENARIO_PRESETS } from "@/data/eie-leie";
+import { EIE_LEIE_DISCLAIMER, EIE_LEIE_CASH_FLOW_NOTE, SCENARIO_PRESETS } from "@/data/eie-leie";
 import { formatCurrency } from "@/lib/calculators/loan";
 import {
   calculateEieLeie,
@@ -125,6 +125,11 @@ export function EieLeieResultView({
         )}
       </div>
 
+      <div className="rounded-2xl border border-stone-200 bg-stone-50 px-5 py-4 text-sm leading-relaxed text-stone-700">
+        <p className="font-medium text-stone-900">Slik sammenligner vi</p>
+        <p className="mt-2">{EIE_LEIE_CASH_FLOW_NOTE}</p>
+      </div>
+
       <div className="grid gap-6 lg:grid-cols-2">
         <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
           <h3 className="text-lg font-semibold text-stone-900">Eie</h3>
@@ -159,6 +164,12 @@ export function EieLeieResultView({
                 result.owner.totalPurchaseCosts + result.owner.totalSaleCosts,
               )}
             />
+            {result.owner.ownerInvestmentValue > 0 && (
+              <ResultRow
+                label="Sideinvesteringer (når leie var dyrere)"
+                value={formatCurrency(result.owner.ownerInvestmentValue)}
+              />
+            )}
             <ResultRow
               label="Nettoformue"
               value={formatCurrency(result.owner.netWorth)}
@@ -179,7 +190,7 @@ export function EieLeieResultView({
               value={formatCurrency(result.renter.startInvestment)}
             />
             <ResultRow
-              label="Månedlige investeringer"
+              label="Månedlige investeringer (når eie var dyrere)"
               value={formatCurrency(result.renter.totalMonthlyInvestments)}
             />
             <ResultRow
@@ -214,7 +225,7 @@ export function EieLeieResultView({
       <div className="grid gap-6 lg:grid-cols-2">
         <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
           <h3 className="text-lg font-semibold text-stone-900">
-            Kostnadsfordeling – eie
+            Kostnadsfordeling, eie
           </h3>
           <div className="mt-4 space-y-3">
             {[
@@ -263,13 +274,13 @@ export function EieLeieResultView({
             })}
           </div>
           <p className="mt-4 text-xs text-stone-500">
-            Avdrag er ikke med her – det bygger egenkapital, ikke ren kostnad.
+            Avdrag er ikke med her. Det bygger egenkapital, ikke ren kostnad.
           </p>
         </section>
 
         <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
           <h3 className="text-lg font-semibold text-stone-900">
-            Kostnadsfordeling – leie
+            Kostnadsfordeling, leie
           </h3>
           <div className="mt-4">
             <ResultRow

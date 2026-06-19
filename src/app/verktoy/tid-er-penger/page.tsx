@@ -6,7 +6,7 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Tid er penger-kalkulator",
   description:
-    "Regn ut hva du faktisk tjener per time – med reisetid, jobbutgifter og skatt. Se forskjellen mellom lønn på papiret og reell timelønn.",
+    "Regn ut hva du faktisk tjener per time, med reisetid, jobbutgifter og skatt. Se forskjellen mellom lønn på papiret og reell timelønn.",
   path: "/verktoy/tid-er-penger",
   keywords: [
     "tid er penger",
@@ -32,7 +32,7 @@ export default function TidErPengerPage() {
           Tid er penger-kalkulator
         </h1>
         <p className="mt-3 max-w-2xl text-lg text-stone-600">
-          Lønn delt på arbeidstid høres bra ut – men hva tjener du egentlig per
+          Lønn delt på arbeidstid høres bra ut, men hva tjener du egentlig per
           time når du regner med pendling og det jobben koster deg?
         </p>
       </header>

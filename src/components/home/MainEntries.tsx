@@ -1,4 +1,10 @@
 import Link from "next/link";
+import {
+  FORDELSPROGRAMMER_INTRO,
+  FORDELSPROGRAMMER_TITLE,
+  TILBUD_INTRO,
+  TILBUD_TITLE,
+} from "@/data/content-labels";
 
 const entries = [
   {
@@ -11,11 +17,19 @@ const entries = [
   },
   {
     href: "/fordeler",
-    title: "Fordeler",
-    description:
-      "Bonusprogrammer, cashback og medlemsfordeler som gir mer for pengene.",
+    title: FORDELSPROGRAMMER_TITLE,
+    description: FORDELSPROGRAMMER_INTRO,
+    cta: "fordelsprogrammer",
     icon: "🎁",
     color: "hover:border-orange-300 hover:bg-orange-50/50",
+  },
+  {
+    href: "/tilbud",
+    title: TILBUD_TITLE,
+    description: TILBUD_INTRO,
+    cta: "tilbud",
+    icon: "🏷️",
+    color: "hover:border-orange-200 hover:bg-orange-50/30",
   },
   {
     href: "/verktoy",
@@ -29,7 +43,7 @@ const entries = [
     href: "/ordbok",
     title: "Ordbok",
     description:
-      "Forklaringer på økonomiske begreper – uten bankjargong og fine ord.",
+      "Forklaringer på økonomiske begreper, uten bankjargong og fine ord.",
     icon: "📖",
     color: "hover:border-orange-200 hover:bg-orange-50/30",
   },
@@ -60,7 +74,7 @@ export function MainEntries() {
               </h3>
               <p className="mt-1 text-sm text-stone-600">{entry.description}</p>
               <span className="mt-3 inline-block text-sm font-semibold text-orange-600">
-                Gå til {entry.title.toLowerCase()} →
+                Gå til {entry.cta ?? entry.title.toLowerCase()} →
               </span>
             </div>
           </Link>

@@ -6,19 +6,22 @@ export const EIE_LEIE_DISCLAIMER =
 export const EIE_LEIE_INTRO_NOTE =
   "Kalkulatoren gir et estimat basert på forutsetningene du legger inn. Den kan ikke forutsi boligpriser, renter eller investeringsavkastning.";
 
+export const EIE_LEIE_CASH_FLOW_NOTE =
+  "Kalkulatoren sammenligner lik kontantstrøm måned for måned. Eier betaler terminbeløp, felleskostnader og vedlikehold. Leieren betaler husleie. Hvis eie koster mer enn leie, investerer leieren differansen. Hvis husleien er høyere, investerer eieren overskuddet. Avdrag er en utgift for eieren den måneden, men bygger egenkapital i boligen og investeres ikke på nytt.";
+
 export const DOCUMENT_FEE_RATE = 0.025;
 
 export const EIE_LEIE_TOOLTIPS = {
   alternativeReturn:
     "Avkastningen du forventer hvis pengene investeres i fond eller annet spareprodukt i stedet for å ligge i bolig.",
   netWorth:
-    "Det du sitter igjen med når gjeld og salgskostnader er trukket fra – pluss eventuelle investeringer.",
+    "Det du sitter igjen med når gjeld og salgskostnader er trukket fra: pluss eventuelle investeringer.",
   propertyGrowth:
     "Forventet årlig prisvekst på boligen. Historisk har det variert mye mellom regioner og perioder.",
   documentFee:
     "Statlig avgift ved kjøp av selveierbolig (2,5 % av kjøpesum). Borettslag har normalt ikke dokumentavgift.",
   maintenance:
-    "Løpende kostnader til oppussing, reparasjoner og utskiftning over tid – ofte 0,5–2 % av verdien per år.",
+    "Løpende kostnader til oppussing, reparasjoner og utskiftning over tid, ofte 0,5–2 % av verdien per år.",
   saleCosts:
     "Megler, markedsføring og andre kostnader ved salg. Trekkes fra boligverdien ved slutten av perioden.",
   sharedDebt:

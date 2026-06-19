@@ -22,7 +22,7 @@ export const verktoy: Verktoy[] = [
     status: "published",
     name: "Rentekalkulator",
     description:
-      "Beregn hvor mye lånet ditt koster over tid – og hva du sparer ved ekstra innbetalinger.",
+      "Beregn hvor mye lånet ditt koster over tid, og hva du sparer ved ekstra innbetalinger.",
     category: "Gjeld",
     createdAt: "2025-01-05",
     updatedAt: "2026-06-11",
@@ -33,7 +33,7 @@ export const verktoy: Verktoy[] = [
     status: "published",
     name: "Sparekalkulator",
     description:
-      "Se hvor mye sparingen vokser – og sammenlign hva som skjer med ekstra månedlig sparing.",
+      "Se hvor mye sparingen vokser, og sammenlign hva som skjer med ekstra månedlig sparing.",
     category: "Sparing",
     createdAt: "2026-06-11",
     updatedAt: "2026-06-11",
@@ -67,7 +67,7 @@ export const verktoy: Verktoy[] = [
     featured: true,
     name: "Lånets reelle verdi",
     description:
-      "Se hvordan inflasjon reduserer gjeldens reelle verdi – og valgfritt effekten av å øke innbetalingen med lønnsveksten.",
+      "Se hvordan inflasjon reduserer gjeldens reelle verdi, og valgfritt effekten av å øke innbetalingen med lønnsveksten.",
     category: "Gjeld",
     createdAt: "2026-06-11",
     updatedAt: "2026-06-11",
@@ -79,7 +79,7 @@ export const verktoy: Verktoy[] = [
     featured: true,
     name: "Eie vs. leie-kalkulator",
     description:
-      "Sammenlign kjøp og leie over tid – med nettoformue, break-even og månedlig beregning.",
+      "Sammenlign kjøp og leie over tid, med nettoformue, break-even og månedlig beregning.",
     category: "Bolig",
     createdAt: "2026-06-11",
     updatedAt: "2026-06-11",
@@ -91,7 +91,7 @@ export const verktoy: Verktoy[] = [
     featured: true,
     name: "Økonomisk røntgen",
     description:
-      "10 spørsmål som gir deg en økonomisk score fra 0 til 100 – med delresultater og tre konkrete prioriteringer.",
+      "10 spørsmål som gir deg en økonomisk score fra 0 til 100, med delresultater og tre konkrete prioriteringer.",
     category: "Økonomi",
     createdAt: "2026-06-11",
     updatedAt: "2026-06-11",
@@ -113,7 +113,7 @@ export const verktoy: Verktoy[] = [
     status: "published",
     name: "Luksusfellen-tavle",
     description:
-      "Lag din egen pengetavle – inntekt, utgifter, gjeld og sparing samlet med overskudd eller underskudd.",
+      "Lag din egen pengetavle: inntekt, utgifter, gjeld og sparing samlet med overskudd eller underskudd.",
     category: "Budsjett",
     createdAt: "2025-01-10",
     updatedAt: "2026-06-11",

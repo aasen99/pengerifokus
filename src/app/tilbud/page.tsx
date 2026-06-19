@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Suspense } from "react";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { TilbudList } from "@/components/tilbud/TilbudList";
+import { TILBUD_INTRO, TILBUD_TITLE } from "@/data/content-labels";
 import { getFordeler, getTilbud } from "@/lib/content";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Tilbud",
+  title: TILBUD_TITLE,
   description:
-    "Medlemsrabatter og Trumf-bonus samlet – OBOS-partnere og Trumf netthandel.",
+    "Medlemsrabatter og bonuser du kan bruke nå, søkbart og filtrerbart etter fordelsprogram.",
   path: "/tilbud",
   keywords: [
     "OBOS rabatt",
@@ -28,20 +28,7 @@ export default function TilbudPage() {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
-      <PageHeader
-        title="Tilbud"
-        description="Medlemsrabatter og Trumf-bonus – konkrete tilbud koblet til fordelsprogrammene dine."
-      />
-
-      <p className="-mt-6 mb-8 text-sm text-stone-600">
-        Lurer du på hvilke programmer som finnes?{" "}
-        <Link
-          href="/fordeler"
-          className="font-medium text-orange-600 hover:text-orange-700"
-        >
-          Se oversikt over fordeler →
-        </Link>
-      </p>
+      <PageHeader title={TILBUD_TITLE} description={TILBUD_INTRO} />
 
       <Suspense
         fallback={

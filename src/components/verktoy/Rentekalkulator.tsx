@@ -81,7 +81,7 @@ export function Rentekalkulator() {
 
           <CalculatorField
             label="Ekstra månedlig innbetaling"
-            hint="Valgfritt – i tillegg til ordinær termin"
+            hint="Valgfritt: i tillegg til ordinær termin"
           >
             <FormattedNumberInput
               value={extra}

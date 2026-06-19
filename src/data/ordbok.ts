@@ -10,7 +10,7 @@ export const ordbok: OrdbokEntry[] = [
     status: "published",
     term: "Effektiv rente",
     definition:
-      "Den totale årlige kostnaden for et lån, inkludert gebyrer og andre kostnader – ikke bare nominell rente.",
+      "Den totale årlige kostnaden for et lån, inkludert gebyrer og andre kostnader, ikke bare nominell rente.",
     category: "Lån",
     tags: ["lånekostnad", "gebyrer"],
     createdAt: "2025-01-01",
@@ -22,7 +22,7 @@ export const ordbok: OrdbokEntry[] = [
     status: "published",
     term: "ASK",
     definition:
-      "Aksjesparekonto – en skattegunstig sparekonto for aksjer og fond, med begrensninger på uttak.",
+      "Aksjesparekonto: en skattegunstig sparekonto for aksjer og fond, med begrensninger på uttak.",
     category: "Investering",
     tags: ["aksjesparekonto", "skatt"],
     createdAt: "2025-01-01",
@@ -118,7 +118,7 @@ export const ordbok: OrdbokEntry[] = [
     status: "published",
     term: "BSU",
     definition:
-      "Boligsparing for ungdom – en spareordning med skattefradrag for deg under 34 år som skal kjøpe bolig.",
+      "Boligsparing for ungdom: en spareordning med skattefradrag for deg under 34 år som skal kjøpe bolig.",
     category: "Sparing",
     tags: ["boligsparing", "skattefradrag"],
     createdAt: "2025-01-09",
@@ -142,7 +142,7 @@ export const ordbok: OrdbokEntry[] = [
     status: "published",
     term: "ETF",
     definition:
-      "Exchange Traded Fund – et fond som handles på børs som en aksje, og ofte følger en indeks.",
+      "Exchange Traded Fund: et fond som handles på børs som en aksje, og ofte følger en indeks.",
     category: "Investering",
     tags: ["fond", "indeks", "børs"],
     createdAt: "2025-01-11",
@@ -214,7 +214,7 @@ export const ordbok: OrdbokEntry[] = [
     status: "published",
     term: "Cashback",
     definition:
-      "Pengene tilbake – en prosent av kjøpet du får refundert, ofte via kredittkort eller netthandel.",
+      "Pengene tilbake: en prosent av kjøpet du får refundert, ofte via kredittkort eller netthandel.",
     category: "Fordeler",
     tags: ["bonus", "kredittkort", "rabatt"],
     createdAt: "2025-01-17",
@@ -226,7 +226,7 @@ export const ordbok: OrdbokEntry[] = [
     status: "published",
     term: "Portefølje",
     definition:
-      "Hele samlingen av investeringene dine – for eksempel fond, aksjer og obligasjoner.",
+      "Hele samlingen av investeringene dine, for eksempel fond, aksjer og obligasjoner.",
     category: "Investering",
     tags: ["aksjer", "fond", "spredning"],
     createdAt: "2025-01-18",
@@ -262,7 +262,7 @@ export const ordbok: OrdbokEntry[] = [
     status: "published",
     term: "IPS",
     definition:
-      "Individuell pensjonssparing – en ordning der du sparer til pensjon med skattefordel, ofte via fond.",
+      "Individuell pensjonssparing: en ordning der du sparer til pensjon med skattefordel, ofte via fond.",
     category: "Sparing",
     tags: ["pensjon", "skattefradrag"],
     createdAt: "2025-01-21",
@@ -286,7 +286,7 @@ export const ordbok: OrdbokEntry[] = [
     status: "published",
     term: "Faste kostnader",
     definition:
-      "Utgifter som kommer hver måned med omtrent samme beløp – som husleie, strøm, forsikring og abonnementer.",
+      "Utgifter som kommer hver måned med omtrent samme beløp: som husleie, strøm, forsikring og abonnementer.",
     category: "Budsjett",
     tags: ["utgifter", "abonnement", "husholdning"],
     createdAt: "2025-01-23",
@@ -310,7 +310,7 @@ export const ordbok: OrdbokEntry[] = [
     status: "published",
     term: "Nettoformue",
     definition:
-      "Det du eier minus det du skylder. Bolig, sparing og investeringer teller positivt – gjeld trekkes fra.",
+      "Det du eier minus det du skylder. Bolig, sparing og investeringer teller positivt: gjeld trekkes fra.",
     category: "Økonomi",
     tags: ["formue", "gjeld", "eiendeler"],
     createdAt: "2026-06-11",
@@ -358,7 +358,7 @@ export const ordbok: OrdbokEntry[] = [
     status: "published",
     term: "Felleskostnader",
     definition:
-      "Månedlige kostnader i borettslag eller sameie – for eksempel drift, vedlikehold, forsikring og avdrag på fellesgjeld.",
+      "Månedlige kostnader i borettslag eller sameie, for eksempel drift, vedlikehold, forsikring og avdrag på fellesgjeld.",
     category: "Bolig",
     tags: ["borettslag", "leilighet", "faste kostnader"],
     createdAt: "2026-06-11",
@@ -382,7 +382,7 @@ export const ordbok: OrdbokEntry[] = [
     status: "published",
     term: "Avdrag",
     definition:
-      "Den delen av lånebetalingen som går til å nedbetale selve gjelden – ikke renter eller gebyrer.",
+      "Den delen av lånebetalingen som går til å nedbetale selve gjelden, ikke renter eller gebyrer.",
     category: "Lån",
     tags: ["nedbetaling", "hovedstol", "terminbeløp"],
     createdAt: "2026-06-11",
@@ -430,7 +430,7 @@ export const ordbok: OrdbokEntry[] = [
     status: "published",
     term: "Forbruksgjeld",
     definition:
-      "Lån uten sikkerhet i bolig eller annen eiendel – som kredittkort, forbrukslån og delbetaling. Ofte høyere rente enn boliglån.",
+      "Lån uten sikkerhet i bolig eller annen eiendel: som kredittkort, forbrukslån og delbetaling. Ofte høyere rente enn boliglån.",
     category: "Gjeld",
     tags: ["kredittkort", "renter", "nedbetaling"],
     createdAt: "2026-06-11",
@@ -454,7 +454,7 @@ export const ordbok: OrdbokEntry[] = [
     status: "published",
     term: "Alternativkostnad",
     definition:
-      "Det du gir avkall på når du velger én løsning fremfor en annen – for eksempel avkastningen pengene kunne fått i fond i stedet for i bolig.",
+      "Det du gir avkall på når du velger én løsning fremfor en annen, for eksempel avkastningen pengene kunne fått i fond i stedet for i bolig.",
     category: "Økonomi",
     tags: ["valg", "investering", "bolig"],
     createdAt: "2026-06-11",
@@ -466,7 +466,7 @@ export const ordbok: OrdbokEntry[] = [
     status: "published",
     term: "Disponibel inntekt",
     definition:
-      "Pengene du har igjen etter skatt og offentlige avgifter – det du faktisk kan bruke, spare eller investere.",
+      "Pengene du har igjen etter skatt og offentlige avgifter, det du faktisk kan bruke, spare eller investere.",
     category: "Budsjett",
     tags: ["inntekt", "skatt", "husholdning"],
     createdAt: "2026-06-11",
@@ -526,7 +526,7 @@ export const ordbok: OrdbokEntry[] = [
     status: "published",
     term: "Terminbeløp",
     definition:
-      "Det faste beløpet du betaler på lånet hver måned ved et annuitetslån – en blanding av renter og avdrag.",
+      "Det faste beløpet du betaler på lånet hver måned ved et annuitetslån: en blanding av renter og avdrag.",
     category: "Lån",
     tags: ["annuitet", "månedlig", "boliglån"],
     createdAt: "2026-06-11",
@@ -550,7 +550,7 @@ export const ordbok: OrdbokEntry[] = [
     status: "published",
     term: "Kontantstrøm",
     definition:
-      "Pengene som faktisk går inn og ut av lommeboken din i en periode – uavhengig av om noe regnes som sparing eller investering.",
+      "Pengene som faktisk går inn og ut av lommeboken din i en periode: uavhengig av om noe regnes som sparing eller investering.",
     category: "Budsjett",
     tags: ["utgifter", "inntekt", "hverdag"],
     createdAt: "2026-06-11",

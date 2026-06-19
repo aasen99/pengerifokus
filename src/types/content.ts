@@ -49,19 +49,11 @@ export interface OrdbokEntry extends BaseContent {
   tags?: string[];
 }
 
-export interface Kombinasjon extends BaseContent {
-  title: string;
-  description: string;
-  /** Produkter/fordeler som inngår i kombinasjonen */
-  items: string[];
-}
-
 export type ContentType =
   | "guide"
   | "fordel"
   | "verktoy"
   | "ordbok"
-  | "kombinasjon"
   | "tilbud";
 
 /** Konkret medlemstilbud koblet til et fordelsprogram */
@@ -70,9 +62,9 @@ export interface Tilbud extends BaseContent {
   description: string;
   /** Kort fordelsbeskrivelse, f.eks. «15 % rabatt» */
   offerLabel: string;
-  /** Hvor tilbudet gjelder – butikk, kjede eller tjeneste */
+  /** Hvor tilbudet gjelder, butikk, kjede eller tjeneste */
   partner: string;
-  /** Slug fra fordeler – kobler tilbake til medlemsprogram */
+  /** Slug fra fordeler, kobler tilbake til medlemsprogram */
   fordelSlug: string;
   category: string;
   /** Korte vilkår eller begrensninger */

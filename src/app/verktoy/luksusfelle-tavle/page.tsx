@@ -6,7 +6,7 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Luksusfellen-tavle",
   description:
-    "Lag din egen pengetavle – se inntekt, faste og variable utgifter, gjeld og sparing på ett sted. Inspirert av Luksusfellen.",
+    "Lag din egen pengetavle. Se inntekt, faste og variable utgifter, gjeld og sparing på ett sted. Inspirert av Luksusfellen.",
   path: "/verktoy/luksusfelle-tavle",
   keywords: [
     "luksusfellen tavle",
@@ -32,7 +32,7 @@ export default function LuksusfelleTavlePage() {
           Luksusfellen-tavle
         </h1>
         <p className="mt-3 max-w-2xl text-lg text-stone-600">
-          Fyll inn tallene dine og få oversikt – akkurat som på pengetavlen i
+          Fyll inn tallene dine og få oversikt, akkurat som på pengetavlen i
           Luksusfellen, men digitalt og klart på minutter.
         </p>
       </header>

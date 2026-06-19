@@ -25,7 +25,7 @@ export const guider: Guide[] = [
     featured: true,
     title: "Kom i gang med fond",
     description:
-      "En enkel introduksjon til fondssparing – fra første krone til langsiktig vekst.",
+      "En enkel introduksjon til fondssparing, fra første krone til langsiktig vekst.",
     category: "Investering",
     tags: ["fond", "aksjesparing", "langsiktig"],
     createdAt: "2025-01-20",
@@ -37,7 +37,7 @@ export const guider: Guide[] = [
     status: "published",
     title: "Velg riktig kredittkort",
     description:
-      "Sammenlign kort basert på bonus, gebyrer og bruksmønster – ikke bare rente.",
+      "Sammenlign kort basert på bonus, gebyrer og bruksmønster, ikke bare rente.",
     category: "Kredittkort",
     tags: ["kredittkort", "bonus", "cashback"],
     createdAt: "2025-02-01",
@@ -74,7 +74,7 @@ export const guider: Guide[] = [
     featured: true,
     title: "Forstå økonomisk helse",
     description:
-      "Hva er økonomisk helse – og hvordan kan en rask sjekk vise hvor robust privatøkonomien din er?",
+      "Hva er økonomisk helse, og hvordan kan en rask sjekk vise hvor robust privatøkonomien din er?",
     category: "Økonomi",
     tags: ["økonomisk helse", "buffer", "gjeld", "sparing"],
     createdAt: "2026-06-11",
@@ -87,7 +87,7 @@ export const guider: Guide[] = [
     featured: true,
     title: "Eie eller leie bolig?",
     description:
-      "Når lønner det seg å kjøpe – og hva bør du tenke på utover månedlig husleie og terminbeløp?",
+      "Når lønner det seg å kjøpe, og hva bør du tenke på utover månedlig husleie og terminbeløp?",
     category: "Bolig",
     tags: ["eie", "leie", "boligkjøp", "egenkapital"],
     createdAt: "2026-06-11",
@@ -99,7 +99,7 @@ export const guider: Guide[] = [
     status: "published",
     title: "Inflasjon og gjeld",
     description:
-      "Hvorfor kan lån føles lettere over tid – og hvordan kan lønnsvekst brukes til raskere nedbetaling?",
+      "Hvorfor kan lån føles lettere over tid, og hvordan kan lønnsvekst brukes til raskere nedbetaling?",
     category: "Gjeld",
     tags: ["inflasjon", "realrente", "boliglån", "lønnsvekst"],
     createdAt: "2026-06-11",
@@ -111,7 +111,7 @@ export const guider: Guide[] = [
     status: "published",
     title: "Funfacts",
     description:
-      "Morsomme og overraskende fakta om penger – fra rentes rente til norske særtrekk.",
+      "Morsomme og overraskende fakta om penger, fra rentes rente til norske særtrekk.",
     category: "Innsikt",
     tags: ["funfacts", "sparing", "psykologi"],
     createdAt: "2026-06-11",

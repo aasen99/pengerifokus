@@ -95,7 +95,7 @@ export function GuideArticle({ guide, article }: GuideArticleProps) {
 
       <p className="mt-10 text-xs leading-relaxed text-stone-500">
         Innholdet er veiledende og erstatter ikke individuell økonomisk rådgivning.
-        Regler og produkter kan endres – sjekk alltid med bank eller Skatteetaten
+        Regler og produkter kan endres: sjekk alltid med bank eller Skatteetaten
         for oppdatert informasjon.
       </p>
     </article>

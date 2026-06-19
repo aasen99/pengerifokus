@@ -318,7 +318,7 @@ export function LanetsReelleVerdiKalkulator() {
             <div className="grid gap-5 sm:grid-cols-2">
               <CalculatorField
                 label="Gjenstående nedbetalingstid"
-                hint="1–40 år – brukes til ordinært terminbeløp"
+                hint="1–40 år, brukes til ordinært terminbeløp"
               >
                 <IntegerNumberInput
                   value={salaryInput.repaymentYears}
@@ -336,7 +336,7 @@ export function LanetsReelleVerdiKalkulator() {
                 </>,
                 salaryInput.salaryGrowthRate,
                 (value) => updateSalary({ salaryGrowthRate: value }),
-                "0–15 % – brukes ikke som inflasjon",
+                "0–15 %, brukes ikke som inflasjon",
                 0,
                 15,
               )}
