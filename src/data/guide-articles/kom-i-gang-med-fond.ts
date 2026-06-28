@@ -70,6 +70,6 @@ export const komIGangMedFond: GuideArticleContent = {
   relatedLinks: [
     { label: "Sparekalkulator", href: "/verktoy/sparekalkulator" },
     { label: "Bygg bufferkonto", href: "/guider/bygg-bufferkonto" },
-    { label: "Les om ASK i ordboken", href: "/ordbok" },
+    { label: "Les om ASK i ordboken", href: "/ordbok/ask" },
   ],
 };

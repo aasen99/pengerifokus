@@ -64,6 +64,6 @@ export const forstaaOkonomiskHelse: GuideArticleContent = {
     { label: "Økonomisk røntgen", href: "/verktoy/okonomisk-rontgen" },
     { label: "Bygg bufferkonto", href: "/guider/bygg-bufferkonto" },
     { label: "Betal ned dyr gjeld", href: "/guider/betal-ned-dyr-gjeld" },
-    { label: "Bufferkonto i ordboken", href: "/ordbok" },
+    { label: "Bufferkonto i ordboken", href: "/ordbok/bufferkonto" },
   ],
 };

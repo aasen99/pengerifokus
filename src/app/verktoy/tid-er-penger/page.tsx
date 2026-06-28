@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { TidErPengerKalkulator } from "@/components/verktoy/TidErPengerKalkulator";
+import { ToolRelatedGuides } from "@/components/verktoy/ToolRelatedGuides";
+import { ToolPageSeo } from "@/components/seo/ToolPageSeo";
 import { createPageMetadata } from "@/lib/seo";
+
+const toolDescription =
+  "Regn ut hva du faktisk tjener per time, med reisetid, jobbutgifter og skatt. Se forskjellen mellom lønn på papiret og reell timelønn.";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Tid er penger-kalkulator",
-  description:
-    "Regn ut hva du faktisk tjener per time, med reisetid, jobbutgifter og skatt. Se forskjellen mellom lønn på papiret og reell timelønn.",
+  description: toolDescription,
   path: "/verktoy/tid-er-penger",
   keywords: [
     "tid er penger",
@@ -20,6 +24,11 @@ export const metadata: Metadata = createPageMetadata({
 export default function TidErPengerPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
+      <ToolPageSeo
+        name="Tid er penger-kalkulator"
+        description={toolDescription}
+        path="/verktoy/tid-er-penger"
+      />
       <Link
         href="/verktoy"
         className="text-sm font-medium text-orange-600 hover:text-orange-700"
@@ -38,6 +47,12 @@ export default function TidErPengerPage() {
       </header>
 
       <TidErPengerKalkulator />
+
+      <ToolRelatedGuides
+        guides={[
+          { label: "Kutt faste kostnader", href: "/guider/kutt-faste-kostnader" },
+        ]}
+      />
     </div>
   );
 }

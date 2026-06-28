@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { EieLeieKalkulator } from "@/components/verktoy/eie-leie/EieLeieKalkulator";
+import { ToolRelatedGuides } from "@/components/verktoy/ToolRelatedGuides";
+import { ToolPageSeo } from "@/components/seo/ToolPageSeo";
 import { createPageMetadata } from "@/lib/seo";
+
+const toolDescription =
+  "Sammenlign nettoformue ved å kjøpe bolig mot å leie, med månedlig investering av differansen begge veier.";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Eie vs. leie-kalkulator",
-  description:
-    "Sammenlign nettoformue ved å kjøpe bolig mot å leie, med månedlig investering av differansen begge veier.",
+  description: toolDescription,
   path: "/verktoy/eie-leie-kalkulator",
   keywords: [
     "eie eller leie",
@@ -21,6 +25,11 @@ export const metadata: Metadata = createPageMetadata({
 export default function EieLeieKalkulatorPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
+      <ToolPageSeo
+        name="Eie vs. leie-kalkulator"
+        description={toolDescription}
+        path="/verktoy/eie-leie-kalkulator"
+      />
       <Link
         href="/verktoy"
         className="text-sm font-medium text-orange-600 hover:text-orange-700"
@@ -40,6 +49,13 @@ export default function EieLeieKalkulatorPage() {
       </header>
 
       <EieLeieKalkulator />
+
+      <ToolRelatedGuides
+        guides={[
+          { label: "Eie eller leie bolig", href: "/guider/eie-eller-leie-bolig" },
+          { label: "Nettoformue i ordboken", href: "/ordbok/nettoformue" },
+        ]}
+      />
     </div>
   );
 }

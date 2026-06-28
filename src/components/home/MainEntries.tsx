@@ -16,6 +16,15 @@ const entries = [
     color: "hover:border-stone-300 hover:bg-stone-50/80",
   },
   {
+    href: "/formuesbyggere",
+    title: "Formuesbyggerne",
+    description:
+      "Profiler av kjente formuesbyggere, hvordan de startet, og hva vi kan lære av eierskap.",
+    cta: "formuesbyggerne",
+    icon: "🏗️",
+    color: "hover:border-orange-300 hover:bg-orange-50/50",
+  },
+  {
     href: "/fordeler",
     title: FORDELSPROGRAMMER_TITLE,
     description: FORDELSPROGRAMMER_INTRO,

@@ -4,6 +4,7 @@ import {
   FORDELSPROGRAMMER_TITLE,
   TILBUD_TITLE,
 } from "@/data/content-labels";
+import { FORMUESBYGGERE_TITLE } from "@/data/formuesbyggere-labels";
 
 export function Footer() {
   return (
@@ -19,6 +20,12 @@ export function Footer() {
           <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
             <Link href="/guider" className="text-stone-600 hover:text-orange-600">
               Guider
+            </Link>
+            <Link
+              href="/formuesbyggere"
+              className="text-stone-600 hover:text-orange-600"
+            >
+              {FORMUESBYGGERE_TITLE}
             </Link>
             <Link
               href="/fordeler"
@@ -37,6 +44,12 @@ export function Footer() {
               className="text-stone-600 hover:text-orange-600"
             >
               Verktøy
+            </Link>
+            <Link
+              href="/ordbok"
+              className="text-stone-600 hover:text-orange-600"
+            >
+              Ordbok
             </Link>
             <CookiePreferencesLink />
           </nav>

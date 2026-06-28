@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { LuksusfelleTavle } from "@/components/verktoy/LuksusfelleTavle";
+import { ToolRelatedGuides } from "@/components/verktoy/ToolRelatedGuides";
+import { ToolPageSeo } from "@/components/seo/ToolPageSeo";
 import { createPageMetadata } from "@/lib/seo";
+
+const toolDescription =
+  "Lag din egen pengetavle. Se inntekt, faste og variable utgifter, gjeld og sparing på ett sted. Inspirert av Luksusfellen.";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Luksusfellen-tavle",
-  description:
-    "Lag din egen pengetavle. Se inntekt, faste og variable utgifter, gjeld og sparing på ett sted. Inspirert av Luksusfellen.",
+  description: toolDescription,
   path: "/verktoy/luksusfelle-tavle",
   keywords: [
     "luksusfellen tavle",
@@ -20,6 +24,11 @@ export const metadata: Metadata = createPageMetadata({
 export default function LuksusfelleTavlePage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
+      <ToolPageSeo
+        name="Luksusfellen-tavle"
+        description={toolDescription}
+        path="/verktoy/luksusfelle-tavle"
+      />
       <Link
         href="/verktoy"
         className="text-sm font-medium text-orange-600 hover:text-orange-700"
@@ -38,6 +47,13 @@ export default function LuksusfelleTavlePage() {
       </header>
 
       <LuksusfelleTavle />
+
+      <ToolRelatedGuides
+        guides={[
+          { label: "Kutt faste kostnader", href: "/guider/kutt-faste-kostnader" },
+          { label: "Faste kostnader i ordboken", href: "/ordbok/fast-kostnad" },
+        ]}
+      />
     </div>
   );
 }

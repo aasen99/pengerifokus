@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Rentekalkulator } from "@/components/verktoy/Rentekalkulator";
+import { ToolRelatedGuides } from "@/components/verktoy/ToolRelatedGuides";
+import { ToolPageSeo } from "@/components/seo/ToolPageSeo";
 import { createPageMetadata } from "@/lib/seo";
+
+const toolDescription =
+  "Gratis rentekalkulator: beregn månedlig terminbeløp, total rentekostnad og se hva du sparer med ekstra innbetalinger på lånet.";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Rentekalkulator",
-  description:
-    "Gratis rentekalkulator: beregn månedlig terminbeløp, total rentekostnad og se hva du sparer med ekstra innbetalinger på lånet.",
+  description: toolDescription,
   path: "/verktoy/rentekalkulator",
   keywords: ["rentekalkulator", "lånekalkulator", "annuitetslån", "ekstra innbetaling", "boliglån"],
 });
@@ -14,6 +18,11 @@ export const metadata: Metadata = createPageMetadata({
 export default function RentekalkulatorPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
+      <ToolPageSeo
+        name="Rentekalkulator"
+        description={toolDescription}
+        path="/verktoy/rentekalkulator"
+      />
       <Link
         href="/verktoy"
         className="text-sm font-medium text-orange-600 hover:text-orange-700"
@@ -32,6 +41,13 @@ export default function RentekalkulatorPage() {
       </header>
 
       <Rentekalkulator />
+
+      <ToolRelatedGuides
+        guides={[
+          { label: "Betal ned dyr gjeld", href: "/guider/betal-ned-dyr-gjeld" },
+          { label: "Effektiv rente i ordboken", href: "/ordbok/effektiv-rente" },
+        ]}
+      />
     </div>
   );
 }

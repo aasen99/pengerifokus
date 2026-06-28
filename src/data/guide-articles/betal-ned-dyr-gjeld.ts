@@ -117,6 +117,6 @@ export const betalNedDyrGjeld: GuideArticleContent = {
     { label: "Rentekalkulator", href: "/verktoy/rentekalkulator" },
     { label: "Kutt faste kostnader", href: "/guider/kutt-faste-kostnader" },
     { label: "Bygg bufferkonto", href: "/guider/bygg-bufferkonto" },
-    { label: "Les om effektiv rente i ordboken", href: "/ordbok" },
+    { label: "Les om effektiv rente i ordboken", href: "/ordbok/effektiv-rente" },
   ],
 };

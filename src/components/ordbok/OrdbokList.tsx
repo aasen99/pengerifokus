@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { OrdbokEntry } from "@/types/content";
 import { Tag } from "@/components/ui/Tag";
@@ -113,9 +114,10 @@ export function OrdbokList({ entries }: OrdbokListProps) {
       {filtered.length > 0 ? (
         <div className="grid gap-4 sm:grid-cols-2">
           {filtered.map((entry) => (
-            <article
+            <Link
               key={entry.id}
-              className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+              href={`/ordbok/${entry.slug}`}
+              className="group rounded-2xl border border-stone-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
             >
               <div className="mb-2 flex flex-wrap gap-2">
                 <Tag>{entry.category}</Tag>
@@ -125,13 +127,16 @@ export function OrdbokList({ entries }: OrdbokListProps) {
                   </Tag>
                 ))}
               </div>
-              <h2 className="text-lg font-semibold text-stone-900">
+              <h2 className="text-lg font-semibold text-stone-900 group-hover:text-orange-700">
                 {entry.term}
               </h2>
               <p className="mt-2 text-sm leading-relaxed text-stone-600">
                 {entry.definition}
               </p>
-            </article>
+              <span className="mt-4 inline-block text-sm font-semibold text-orange-600 group-hover:text-orange-700">
+                Les mer →
+              </span>
+            </Link>
           ))}
         </div>
       ) : (

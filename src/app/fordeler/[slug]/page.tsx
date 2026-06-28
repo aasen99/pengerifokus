@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { FordelDetail } from "@/components/fordeler/FordelDetail";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { FORDELSPROGRAMMER_TITLE } from "@/data/content-labels";
 import { getFordelBySlug, getFordeler, getTilbudByFordel } from "@/lib/content";
 import { createPageMetadata } from "@/lib/seo";
+import { getBreadcrumbJsonLd } from "@/lib/structured-data";
 
 interface FordelPageProps {
   params: Promise<{ slug: string }>;
@@ -35,9 +38,16 @@ export default async function FordelPage({ params }: FordelPageProps) {
   if (!fordel) notFound();
 
   const tilbud = getTilbudByFordel(fordel.slug);
+  const path = `/fordeler/${fordel.slug}`;
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-12">
+      <JsonLd
+        data={getBreadcrumbJsonLd([
+          { name: FORDELSPROGRAMMER_TITLE, path: "/fordeler" },
+          { name: fordel.name, path },
+        ])}
+      />
       <FordelDetail fordel={fordel} tilbud={tilbud} />
     </div>
   );

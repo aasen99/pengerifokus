@@ -6,7 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return publicRoutes.map((route) => ({
     url: `${siteUrl}${route.path === "/" ? "" : route.path}`,
-    lastModified: new Date(),
+    lastModified: route.lastModified ? new Date(route.lastModified) : new Date(),
     changeFrequency: route.changeFrequency,
     priority: route.priority,
   }));

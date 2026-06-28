@@ -31,7 +31,7 @@ export default function OrdbokPage() {
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
       <PageHeader
         title="Ordbok"
-        description="Forklaringer på økonomiske begreper: kort, tydelig og uten unødvendig jargong."
+        description="Forklaringer på økonomiske begreper, kort og tydelig. Hvert begrep har egen side du kan lenke til og dele."
       />
 
       <OrdbokList entries={entries} />

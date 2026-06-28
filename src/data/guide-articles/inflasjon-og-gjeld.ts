@@ -75,6 +75,6 @@ export const inflasjonOgGjeld: GuideArticleContent = {
     { label: "Lånets reelle verdi", href: "/verktoy/lanets-reelle-verdi" },
     { label: "Rentekalkulator", href: "/verktoy/rentekalkulator" },
     { label: "Betal ned dyr gjeld", href: "/guider/betal-ned-dyr-gjeld" },
-    { label: "Realrente i ordboken", href: "/ordbok" },
+    { label: "Realrente i ordboken", href: "/ordbok/realrente" },
   ],
 };

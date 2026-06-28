@@ -8,10 +8,12 @@ import {
   FORDELSPROGRAMMER_TITLE,
   TILBUD_TITLE,
 } from "@/data/content-labels";
+import { FORMUESBYGGERE_TITLE } from "@/data/formuesbyggere-labels";
 
 const navItems = [
   { href: "/", label: "Start" },
   { href: "/guider", label: "Guider" },
+  { href: "/formuesbyggere", label: FORMUESBYGGERE_TITLE },
   { href: "/fordeler", label: FORDELSPROGRAMMER_TITLE },
   { href: "/tilbud", label: TILBUD_TITLE },
   { href: "/verktoy", label: "Verktøy" },

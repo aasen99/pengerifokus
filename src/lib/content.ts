@@ -8,6 +8,7 @@
 
 import { guider } from "@/data/guider";
 import { fordeler } from "@/data/fordeler";
+import { formuesbyggere } from "@/data/formuesbyggere";
 import { verktoy } from "@/data/verktoy";
 import { ordbok } from "@/data/ordbok";
 import { tilbud } from "@/data/tilbud";
@@ -19,6 +20,7 @@ import type {
   Tilbud,
   PublishStatus,
 } from "@/types/content";
+import type { Formuesbygger } from "@/types/formuesbygger";
 
 function isPublished<T extends { status: PublishStatus }>(item: T): boolean {
   return item.status === "published";
@@ -51,6 +53,22 @@ export function getVerktoy(): Verktoy[] {
 
 export function getOrdbok(): OrdbokEntry[] {
   return ordbok.filter(isPublished);
+}
+
+export function getOrdbokBySlug(slug: string): OrdbokEntry | undefined {
+  return getOrdbok().find((entry) => entry.slug === slug);
+}
+
+export function getFormuesbyggere(): Formuesbygger[] {
+  return formuesbyggere.filter(isPublished);
+}
+
+export function getFormuesbyggerBySlug(slug: string): Formuesbygger | undefined {
+  return getFormuesbyggere().find((entry) => entry.slug === slug);
+}
+
+export function getFeaturedFormuesbyggere(): Formuesbygger[] {
+  return getFormuesbyggere().filter((entry) => entry.featured);
 }
 
 export function getTilbud(): Tilbud[] {

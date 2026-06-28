@@ -54,7 +54,8 @@ export type ContentType =
   | "fordel"
   | "verktoy"
   | "ordbok"
-  | "tilbud";
+  | "tilbud"
+  | "formuesbygger";
 
 /** Konkret medlemstilbud koblet til et fordelsprogram */
 export interface Tilbud extends BaseContent {

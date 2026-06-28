@@ -62,7 +62,6 @@ export const byggBufferkonto: GuideArticleContent = {
   ],
   relatedLinks: [
     { label: "Sparekalkulator", href: "/verktoy/sparekalkulator" },
-    { label: "Bygg bufferkonto", href: "/guider/bygg-bufferkonto" },
     { label: "BSU-kalkulator", href: "/verktoy/bsu-kalkulator" },
   ],
 };
