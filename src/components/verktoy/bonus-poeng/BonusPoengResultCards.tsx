@@ -8,6 +8,7 @@ import {
   REDEMPTION_TYPE_LABELS,
 } from "@/lib/calculators/bonus-poeng";
 import type { BonusCalculatorResult } from "@/types/bonus-poeng";
+import { BonusPoengComparisonBar } from "@/components/verktoy/bonus-poeng/BonusPoengComparisonBar";
 
 function ResultCard({
   label,
@@ -50,13 +51,45 @@ function gainVariant(amount: number): "positive" | "negative" | "default" {
 
 export function BonusPoengResultCards({
   result,
+  targetValuePerPoint,
 }: {
   result: BonusCalculatorResult;
+  targetValuePerPoint: number;
 }) {
   const { earning, redemption } = result;
 
   return (
     <div className="space-y-6">
+      {redemption && (
+        <>
+          <div
+            className={`rounded-2xl border p-6 sm:p-8 ${
+              redemption.recommendation === "use_points"
+                ? "border-emerald-200 bg-emerald-50"
+                : redemption.recommendation === "consider_saving"
+                  ? "border-amber-200 bg-amber-50"
+                  : "border-stone-200 bg-stone-50"
+            }`}
+          >
+            <p className="text-xs font-semibold uppercase tracking-wider text-stone-500">
+              Anbefaling
+            </p>
+            <p className="mt-2 text-2xl font-bold text-stone-900 sm:text-3xl">
+              {RECOMMENDATION_LABELS[redemption.recommendation]}
+            </p>
+            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-stone-700 sm:text-base">
+              {RECOMMENDATION_SUMMARY[redemption.recommendation]}
+            </p>
+          </div>
+
+          <BonusPoengComparisonBar
+            costPerPoint={earning.costPerPoint}
+            redemptionValuePerPoint={redemption.redemptionValuePerPoint}
+            targetValuePerPoint={targetValuePerPoint}
+          />
+        </>
+      )}
+
       <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
         <ResultCard
           label="Kost per poeng"
@@ -76,64 +109,47 @@ export function BonusPoengResultCards({
       </div>
 
       {redemption && (
-        <>
-          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-            <ResultCard
-              label="Verdi per poeng ved innløsning"
-              value={formatPointValue(redemption.redemptionValuePerPoint)}
-              sub={`${formatPointValue(redemption.redemptionValuePer1000Points)} per 1 000 poeng`}
-              variant="accent"
-            />
-            <ResultCard
-              label="Kontant spart"
-              value={formatCurrency(redemption.cashSaved)}
-              sub="Kontantpris minus avgifter og egenandel"
-            />
-            <ResultCard
-              label="Netto vs. kostpris"
-              value={formatCurrency(redemption.gainVsCost)}
-              sub="Gevinst eller tap mot det poengene kostet å tjene"
-              variant={gainVariant(redemption.gainVsCost)}
-            />
-          </div>
-
-          <div
-            className={`rounded-2xl border p-6 ${
-              redemption.recommendation === "use_points"
-                ? "border-emerald-200 bg-emerald-50"
-                : redemption.recommendation === "consider_saving"
-                  ? "border-amber-200 bg-amber-50"
-                  : "border-stone-200 bg-stone-50"
-            }`}
-          >
-            <p className="text-xs font-semibold uppercase tracking-wider text-stone-500">
-              Anbefaling
-            </p>
-            <p className="mt-2 text-xl font-bold text-stone-900">
-              {RECOMMENDATION_LABELS[redemption.recommendation]}
-            </p>
-            <p className="mt-2 text-sm leading-relaxed text-stone-700">
-              {RECOMMENDATION_SUMMARY[redemption.recommendation]}
-            </p>
-            <p className="mt-3 text-sm text-stone-600">
-              Mot målverdi: netto{" "}
-              <span
-                className={
-                  redemption.gainVsTarget >= 0
-                    ? "font-semibold text-emerald-700"
-                    : "font-semibold text-red-700"
-                }
-              >
-                {formatCurrency(redemption.gainVsTarget)}
-              </span>
-            </p>
-          </div>
-        </>
+        <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+          <ResultCard
+            label="Verdi per poeng ved innløsning"
+            value={formatPointValue(redemption.redemptionValuePerPoint)}
+            sub={`${formatPointValue(redemption.redemptionValuePer1000Points)} per 1 000 poeng`}
+            variant="accent"
+          />
+          <ResultCard
+            label="Kontant spart"
+            value={formatCurrency(redemption.cashSaved)}
+            sub="Kontantpris minus avgifter og egenandel"
+          />
+          <ResultCard
+            label="Netto vs. kostpris"
+            value={formatCurrency(redemption.gainVsCost)}
+            sub="Gevinst eller tap mot det poengene kostet å tjene"
+            variant={gainVariant(redemption.gainVsCost)}
+          />
+        </div>
       )}
 
-      <div className="rounded-2xl border border-stone-200 bg-white p-5 shadow-sm">
-        <h3 className="font-semibold text-stone-900">Detaljer fra del 1</h3>
-        <dl className="mt-4 space-y-2 text-sm">
+      {redemption && (
+        <p className="text-sm text-stone-600">
+          Mot målverdi: netto{" "}
+          <span
+            className={
+              redemption.gainVsTarget >= 0
+                ? "font-semibold text-emerald-700"
+                : "font-semibold text-red-700"
+            }
+          >
+            {formatCurrency(redemption.gainVsTarget)}
+          </span>
+        </p>
+      )}
+
+      <details className="rounded-2xl border border-stone-200 bg-white shadow-sm">
+        <summary className="cursor-pointer px-5 py-4 text-sm font-semibold text-stone-900">
+          Vis detaljert kostnadsoppdeling
+        </summary>
+        <dl className="space-y-2 border-t border-stone-100 px-5 py-4 text-sm">
           <div className="flex justify-between gap-4">
             <dt className="text-stone-600">Løpende kortkostnader</dt>
             <dd className="font-medium text-stone-900">
@@ -159,14 +175,21 @@ export function BonusPoengResultCards({
             </dd>
           </div>
         </dl>
-      </div>
+      </details>
     </div>
   );
 }
 
-export function BonusPoengConcepts() {
+export function BonusPoengConcepts({ defaultOpen = true }: { defaultOpen?: boolean }) {
   return (
-    <div className="mt-10 space-y-6">
+    <details
+      className="mt-6 rounded-2xl border border-stone-200 bg-stone-50"
+      open={defaultOpen || undefined}
+    >
+      <summary className="cursor-pointer px-6 py-4 text-sm font-semibold text-stone-900">
+        Les mer om kostpris, innløsning og eksempler
+      </summary>
+      <div className="space-y-6 border-t border-stone-200 px-6 py-6">
       <section className="rounded-2xl border border-stone-200 bg-stone-50 p-6">
         <h2 className="text-lg font-semibold text-stone-900">
           Forskjellen på kostpris, innløsningsverdi og målverdi
@@ -246,7 +269,8 @@ export function BonusPoengConcepts() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </details>
   );
 }
 

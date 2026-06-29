@@ -44,10 +44,9 @@ export default function BonuskalkulatorPage() {
           Bonuskalkulator
         </h1>
         <p className="mt-3 max-w-3xl text-lg text-stone-600">
-          Finn ut hva bonuspoeng faktisk har kostet å opptjene, og om en
-          konkret innløsning slår å betale kontant. Kalkulatoren tar hensyn til
-          gebyrer, kortkostnader og alternativkostnad når du velger poeng fremfor
-          cashback eller Trumf.
+          Gå gjennom tre enkle steg: hva poengene kostet å tjene, hva innløsningen
+          er verdt, og om du bør bruke poeng eller betale kontant. Start gjerne med
+          et eksempel under.
         </p>
       </header>
 

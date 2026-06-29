@@ -1,6 +1,13 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import {
+  BONUS_SCENARIO_PRESETS,
+  BONUS_TOOLTIPS,
+  BONUS_WIZARD_STEPS,
+  DEFAULT_BONUS_VALUES,
+  type BonusPresetValues,
+} from "@/data/bonus-poeng";
 import { DecimalNumberInput } from "@/components/ui/DecimalNumberInput";
 import {
   FormattedNumberInput,
@@ -11,316 +18,473 @@ import {
   BonusPoengResultCards,
   REDEMPTION_TYPE_LABELS,
 } from "@/components/verktoy/bonus-poeng/BonusPoengResultCards";
+import { BonusPoengStepNav } from "@/components/verktoy/bonus-poeng/BonusPoengStepNav";
+import { CollapsibleSection } from "@/components/verktoy/bonus-poeng/CollapsibleSection";
+import { InfoTip } from "@/components/verktoy/eie-leie/InfoTip";
 import {
   CalculatorField,
   calculatorInputClassName,
 } from "@/components/verktoy/calculator-ui";
-import { calculateBonusPoints } from "@/lib/calculators/bonus-poeng";
+import { calculateBonusPoints, formatPointValue } from "@/lib/calculators/bonus-poeng";
 import { formatIntegerInput } from "@/lib/format/number";
 import type { RedemptionType } from "@/types/bonus-poeng";
 
+function toFormString(value: number): string {
+  return formatIntegerInput(value);
+}
+
+function createInitialForm(): BonusPresetValues {
+  return { ...DEFAULT_BONUS_VALUES };
+}
+
 export function BonusPoengKalkulator() {
-  const [pointsEarned, setPointsEarned] = useState(formatIntegerInput(10000));
-  const [campaignBonusPoints, setCampaignBonusPoints] = useState(
-    formatIntegerInput(0),
-  );
-  const [periodMonths, setPeriodMonths] = useState(formatIntegerInput(12));
-  const [monthlyCardCost, setMonthlyCardCost] = useState(formatIntegerInput(0));
-  const [annualFeeMonthly, setAnnualFeeMonthly] = useState(
-    formatIntegerInput(0),
-  );
-  const [paymentFeePercent, setPaymentFeePercent] = useState(2.5);
-  const [feeBearingAmount, setFeeBearingAmount] = useState(
-    formatIntegerInput(0),
-  );
-  const [fixedTransactionFees, setFixedTransactionFees] = useState(
-    formatIntegerInput(0),
-  );
-  const [opportunityCostCashback, setOpportunityCostCashback] = useState(
-    formatIntegerInput(0),
-  );
-  const [otherCosts, setOtherCosts] = useState(formatIntegerInput(0));
-  const [cardBenefits, setCardBenefits] = useState(formatIntegerInput(0));
-  const [redemptionType, setRedemptionType] = useState<RedemptionType>("hotell");
-  const [cashPrice, setCashPrice] = useState(formatIntegerInput(1200));
-  const [pointsRequired, setPointsRequired] = useState(formatIntegerInput(18000));
-  const [redemptionFees, setRedemptionFees] = useState(formatIntegerInput(0));
-  const [cashCoPay, setCashCoPay] = useState(formatIntegerInput(0));
-  const [targetValuePerPoint, setTargetValuePerPoint] = useState(0.1);
+  const [step, setStep] = useState(0);
+  const [form, setForm] = useState<BonusPresetValues>(createInitialForm);
+
+  const updateForm = <K extends keyof BonusPresetValues>(
+    key: K,
+    value: BonusPresetValues[K],
+  ) => {
+    setForm((current) => ({ ...current, [key]: value }));
+  };
+
+  const applyPreset = (presetIndex: number) => {
+    const preset = BONUS_SCENARIO_PRESETS[presetIndex];
+    setForm((current) => ({ ...current, ...preset.values }));
+    const stepIndex = BONUS_WIZARD_STEPS.findIndex(
+      (wizardStep) => wizardStep.id === preset.step,
+    );
+    if (stepIndex >= 0) setStep(stepIndex);
+  };
 
   const result = useMemo(() => {
     const earningInput = {
-      pointsEarned: parseIntegerInput(pointsEarned) || 0,
-      campaignBonusPoints: parseIntegerInput(campaignBonusPoints) || 0,
-      periodMonths: parseIntegerInput(periodMonths) || 0,
-      monthlyCardCost: parseIntegerInput(monthlyCardCost) || 0,
-      annualFeeMonthly: parseIntegerInput(annualFeeMonthly) || 0,
-      paymentFeePercent: paymentFeePercent,
-      feeBearingAmount: parseIntegerInput(feeBearingAmount) || 0,
-      fixedTransactionFees: parseIntegerInput(fixedTransactionFees) || 0,
-      opportunityCostCashback: parseIntegerInput(opportunityCostCashback) || 0,
-      otherCosts: parseIntegerInput(otherCosts) || 0,
-      cardBenefits: parseIntegerInput(cardBenefits) || 0,
+      pointsEarned: form.pointsEarned,
+      campaignBonusPoints: form.campaignBonusPoints,
+      periodMonths: form.periodMonths,
+      monthlyCardCost: form.monthlyCardCost,
+      annualFeeMonthly: form.annualFeeYearly / 12,
+      paymentFeePercent: form.paymentFeePercent,
+      feeBearingAmount: form.feeBearingAmount,
+      fixedTransactionFees: form.fixedTransactionFees,
+      opportunityCostCashback: form.opportunityCostCashback,
+      otherCosts: form.otherCosts,
+      cardBenefits: form.cardBenefits,
     };
 
-    const parsedPointsRequired = parseIntegerInput(pointsRequired) || 0;
-    const parsedCashPrice = parseIntegerInput(cashPrice) || 0;
-
     const redemptionInput =
-      parsedPointsRequired > 0 && parsedCashPrice >= 0
+      form.pointsRequired > 0 && form.cashPrice >= 0
         ? {
-            redemptionType,
-            cashPrice: parsedCashPrice,
-            pointsRequired: parsedPointsRequired,
-            redemptionFees: parseIntegerInput(redemptionFees) || 0,
-            cashCoPay: parseIntegerInput(cashCoPay) || 0,
-            targetValuePerPoint,
+            redemptionType: form.redemptionType,
+            cashPrice: form.cashPrice,
+            pointsRequired: form.pointsRequired,
+            redemptionFees: form.redemptionFees,
+            cashCoPay: form.cashCoPay,
+            targetValuePerPoint: form.targetValuePerPoint,
           }
         : null;
 
     return calculateBonusPoints(earningInput, redemptionInput);
-  }, [
-    pointsEarned,
-    campaignBonusPoints,
-    periodMonths,
-    monthlyCardCost,
-    annualFeeMonthly,
-    paymentFeePercent,
-    feeBearingAmount,
-    fixedTransactionFees,
-    opportunityCostCashback,
-    otherCosts,
-    cardBenefits,
-    redemptionType,
-    cashPrice,
-    pointsRequired,
-    redemptionFees,
-    cashCoPay,
-    targetValuePerPoint,
-  ]);
+  }, [form]);
+
+  const canProceedFromEarn = form.pointsEarned + form.campaignBonusPoints > 0;
+  const canProceedFromRedeem =
+    form.pointsRequired > 0 && form.cashPrice >= 0 && canProceedFromEarn;
+  const maxReachableStep = !canProceedFromEarn ? 0 : canProceedFromRedeem ? 2 : 1;
+
+  const liveCostHint =
+    result?.earning.costPerPoint !== undefined
+      ? formatPointValue(result.earning.costPerPoint)
+      : null;
 
   return (
-    <div className="space-y-8">
-      {result && <BonusPoengResultCards result={result} />}
+    <div className="space-y-6">
+      <div className="rounded-2xl border border-stone-200 bg-stone-50 p-4 sm:p-5">
+        <p className="text-sm font-medium text-stone-900">Hurtigstart med eksempel</p>
+        <p className="mt-1 text-xs text-stone-500">
+          Fyll inn typiske tall, deretter juster etter din egen situasjon.
+        </p>
+        <div className="mt-3 flex flex-wrap gap-2">
+          {BONUS_SCENARIO_PRESETS.map((preset, index) => (
+            <button
+              key={preset.label}
+              type="button"
+              onClick={() => applyPreset(index)}
+              className="rounded-xl border border-stone-200 bg-white px-3 py-2 text-left transition-colors hover:border-orange-300 hover:bg-orange-50"
+            >
+              <span className="block text-sm font-semibold text-stone-900">
+                {preset.label}
+              </span>
+              <span className="mt-0.5 block text-xs text-stone-500">
+                {preset.description}
+              </span>
+            </button>
+          ))}
+        </div>
+      </div>
 
-      <div className="grid gap-8 lg:grid-cols-2">
+      <BonusPoengStepNav
+        currentStep={step}
+        onStepChange={setStep}
+        maxReachableStep={maxReachableStep}
+      />
+
+      {step === 0 && (
         <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
           <h2 className="text-lg font-semibold text-stone-900">
-            Del 1: Kostnad for å tjene poeng
+            Steg 1: Hva har poengene kostet?
           </h2>
           <p className="mt-1 text-sm text-stone-600">
-            Regn ut hva poengene faktisk har kostet, inkludert gebyrer og
-            alternativkostnad.
+            Start med poeng og alternativkostnad. Resten kan du legge til om du
+            vil være mer presis.
           </p>
 
           <div className="mt-6 space-y-5">
             <CalculatorField
-              label="Antall bonuspoeng tjent"
-              hint="Poeng fra vanlig opptjening, uten kampanjebonus"
+              label={
+                <span className="inline-flex items-center">
+                  Antall bonuspoeng tjent
+                  <InfoTip text={BONUS_TOOLTIPS.pointsEarned} />
+                </span>
+              }
             >
               <FormattedNumberInput
-                value={pointsEarned}
-                onChange={setPointsEarned}
+                value={toFormString(form.pointsEarned)}
+                onChange={(value) =>
+                  updateForm("pointsEarned", parseIntegerInput(value) || 0)
+                }
                 className={calculatorInputClassName}
               />
             </CalculatorField>
 
             <CalculatorField
-              label="Kampanjebonuspoeng"
-              hint="Ekstra poeng som ikke øker kostnaden"
-            >
-              <FormattedNumberInput
-                value={campaignBonusPoints}
-                onChange={setCampaignBonusPoints}
-                className={calculatorInputClassName}
-              />
-            </CalculatorField>
-
-            <CalculatorField
-              label="Antall måneder"
-              hint="Perioden de månedlige kostnadene gjelder for"
-            >
-              <FormattedNumberInput
-                value={periodMonths}
-                onChange={setPeriodMonths}
-                className={calculatorInputClassName}
-              />
-            </CalculatorField>
-
-            <CalculatorField
-              label="Månedlig kortkostnad"
-              hint="Faste månedlige kostnader knyttet til kortet"
-            >
-              <FormattedNumberInput
-                value={monthlyCardCost}
-                onChange={setMonthlyCardCost}
-                className={calculatorInputClassName}
-              />
-            </CalculatorField>
-
-            <CalculatorField
-              label="Årsavgift som månedskostnad"
-              hint="Årsavgift delt på 12, eller annen fast månedlig kortavgift"
-            >
-              <FormattedNumberInput
-                value={annualFeeMonthly}
-                onChange={setAnnualFeeMonthly}
-                className={calculatorInputClassName}
-              />
-            </CalculatorField>
-
-            <CalculatorField
-              label="Betalingsgebyr"
-              hint="Prosentgebyr ved gebyrbelagt betaling"
-            >
-              <DecimalNumberInput
-                value={paymentFeePercent}
-                onChange={setPaymentFeePercent}
-                className={calculatorInputClassName}
-              />
-            </CalculatorField>
-
-            <CalculatorField
-              label="Beløp via gebyrbelagt betaling"
-              hint="Hvor mye du betalte gjennom tjenesten som tar gebyr"
-            >
-              <FormattedNumberInput
-                value={feeBearingAmount}
-                onChange={setFeeBearingAmount}
-                className={calculatorInputClassName}
-              />
-            </CalculatorField>
-
-            <CalculatorField label="Faste transaksjonsgebyrer">
-              <FormattedNumberInput
-                value={fixedTransactionFees}
-                onChange={setFixedTransactionFees}
-                className={calculatorInputClassName}
-              />
-            </CalculatorField>
-
-            <CalculatorField
-              label="Cashback / Trumf du gir opp"
+              label={
+                <span className="inline-flex items-center">
+                  Cashback / Trumf du gir opp
+                  <InfoTip text={BONUS_TOOLTIPS.opportunityCostCashback} />
+                </span>
+              }
               hint="Kontantverdi du kunne fått i stedet for poeng"
             >
               <FormattedNumberInput
-                value={opportunityCostCashback}
-                onChange={setOpportunityCostCashback}
+                value={toFormString(form.opportunityCostCashback)}
+                onChange={(value) =>
+                  updateForm(
+                    "opportunityCostCashback",
+                    parseIntegerInput(value) || 0,
+                  )
+                }
                 className={calculatorInputClassName}
               />
             </CalculatorField>
 
-            <CalculatorField label="Andre kostnader">
-              <FormattedNumberInput
-                value={otherCosts}
-                onChange={setOtherCosts}
-                className={calculatorInputClassName}
-              />
-            </CalculatorField>
+            {liveCostHint && (
+              <div className="rounded-xl border border-orange-200 bg-orange-50 px-4 py-3 text-sm text-stone-700">
+                Foreløpig kostpris:{" "}
+                <strong className="text-orange-800">{liveCostHint}</strong> per
+                poeng
+              </div>
+            )}
 
-            <CalculatorField
-              label="Inkluderte kortfordeler"
-              hint="Reiseforsikring, lounge eller annet i kroner som trekkes fra"
+            <CollapsibleSection
+              title="Kortkostnader og gebyrer"
+              description="Årsavgift, betalingsgebyr og faste kostnader"
             >
-              <FormattedNumberInput
-                value={cardBenefits}
-                onChange={setCardBenefits}
-                className={calculatorInputClassName}
-              />
-            </CalculatorField>
+              <CalculatorField
+                label="Antall måneder"
+                hint="Perioden de månedlige kostnadene gjelder for"
+              >
+                <FormattedNumberInput
+                  value={toFormString(form.periodMonths)}
+                  onChange={(value) =>
+                    updateForm("periodMonths", parseIntegerInput(value) || 0)
+                  }
+                  className={calculatorInputClassName}
+                />
+              </CalculatorField>
+
+              <CalculatorField label="Månedlig kortkostnad">
+                <FormattedNumberInput
+                  value={toFormString(form.monthlyCardCost)}
+                  onChange={(value) =>
+                    updateForm("monthlyCardCost", parseIntegerInput(value) || 0)
+                  }
+                  className={calculatorInputClassName}
+                />
+              </CalculatorField>
+
+              <CalculatorField
+                label="Årsavgift på kortet"
+                hint="Vi deler automatisk på 12 måneder"
+              >
+                <FormattedNumberInput
+                  value={toFormString(form.annualFeeYearly)}
+                  onChange={(value) =>
+                    updateForm("annualFeeYearly", parseIntegerInput(value) || 0)
+                  }
+                  className={calculatorInputClassName}
+                />
+              </CalculatorField>
+
+              <CalculatorField
+                label="Betalingsgebyr (%)"
+                hint="Prosent ved gebyrbelagt betaling"
+              >
+                <DecimalNumberInput
+                  value={form.paymentFeePercent}
+                  onChange={(value) => updateForm("paymentFeePercent", value)}
+                  min={0}
+                  className={calculatorInputClassName}
+                />
+              </CalculatorField>
+
+              <CalculatorField label="Beløp via gebyrbelagt betaling">
+                <FormattedNumberInput
+                  value={toFormString(form.feeBearingAmount)}
+                  onChange={(value) =>
+                    updateForm("feeBearingAmount", parseIntegerInput(value) || 0)
+                  }
+                  className={calculatorInputClassName}
+                />
+              </CalculatorField>
+
+              <CalculatorField label="Faste transaksjonsgebyrer">
+                <FormattedNumberInput
+                  value={toFormString(form.fixedTransactionFees)}
+                  onChange={(value) =>
+                    updateForm(
+                      "fixedTransactionFees",
+                      parseIntegerInput(value) || 0,
+                    )
+                  }
+                  className={calculatorInputClassName}
+                />
+              </CalculatorField>
+            </CollapsibleSection>
+
+            <CollapsibleSection
+              title="Ekstra justeringer"
+              description="Kampanje, fordeler og andre kostnader"
+            >
+              <CalculatorField
+                label="Kampanjebonuspoeng"
+                hint="Ekstra poeng som ikke øker kostnaden"
+              >
+                <FormattedNumberInput
+                  value={toFormString(form.campaignBonusPoints)}
+                  onChange={(value) =>
+                    updateForm(
+                      "campaignBonusPoints",
+                      parseIntegerInput(value) || 0,
+                    )
+                  }
+                  className={calculatorInputClassName}
+                />
+              </CalculatorField>
+
+              <CalculatorField label="Andre kostnader">
+                <FormattedNumberInput
+                  value={toFormString(form.otherCosts)}
+                  onChange={(value) =>
+                    updateForm("otherCosts", parseIntegerInput(value) || 0)
+                  }
+                  className={calculatorInputClassName}
+                />
+              </CalculatorField>
+
+              <CalculatorField
+                label="Inkluderte kortfordeler"
+                hint="Reiseforsikring, lounge m.m. i kroner som trekkes fra"
+              >
+                <FormattedNumberInput
+                  value={toFormString(form.cardBenefits)}
+                  onChange={(value) =>
+                    updateForm("cardBenefits", parseIntegerInput(value) || 0)
+                  }
+                  className={calculatorInputClassName}
+                />
+              </CalculatorField>
+            </CollapsibleSection>
+          </div>
+
+          <div className="mt-8 flex justify-end">
+            <button
+              type="button"
+              disabled={!canProceedFromEarn}
+              onClick={() => setStep(1)}
+              className="rounded-xl bg-orange-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-orange-700 disabled:cursor-not-allowed disabled:bg-stone-300"
+            >
+              Neste: Innløsning →
+            </button>
           </div>
         </section>
+      )}
 
+      {step === 1 && (
         <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
           <h2 className="text-lg font-semibold text-stone-900">
-            Del 2: Verdi ved å bruke poeng
+            Steg 2: Hva er dealen verdt?
           </h2>
           <p className="mt-1 text-sm text-stone-600">
-            Sammenlign innløsningen med kostprisen og målverdien din.
+            Legg inn prisen du faktisk ville betalt kontant, og hva innløsningen
+            koster i poeng og avgifter.
           </p>
 
           <div className="mt-6 space-y-5">
             <CalculatorField label="Type innløsning">
-              <select
-                value={redemptionType}
-                onChange={(e) =>
-                  setRedemptionType(e.target.value as RedemptionType)
-                }
-                className={calculatorInputClassName}
-              >
+              <div className="flex flex-wrap gap-2">
                 {(Object.keys(REDEMPTION_TYPE_LABELS) as RedemptionType[]).map(
                   (key) => (
-                    <option key={key} value={key}>
+                    <button
+                      key={key}
+                      type="button"
+                      onClick={() => updateForm("redemptionType", key)}
+                      className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                        form.redemptionType === key
+                          ? "bg-orange-600 text-white"
+                          : "bg-stone-100 text-stone-700 hover:bg-stone-200"
+                      }`}
+                    >
                       {REDEMPTION_TYPE_LABELS[key]}
-                    </option>
+                    </button>
                   ),
                 )}
-              </select>
+              </div>
             </CalculatorField>
 
             <CalculatorField
-              label="Kontantpris"
-              hint="Prisen du faktisk ville betalt kontant, ikke listepris du uansett ikke ville brukt"
+              label={
+                <span className="inline-flex items-center">
+                  Kontantpris
+                  <InfoTip text={BONUS_TOOLTIPS.cashPrice} />
+                </span>
+              }
+              hint="Det du faktisk ville betalt, ikke listepris"
             >
               <FormattedNumberInput
-                value={cashPrice}
-                onChange={setCashPrice}
+                value={toFormString(form.cashPrice)}
+                onChange={(value) =>
+                  updateForm("cashPrice", parseIntegerInput(value) || 0)
+                }
                 className={calculatorInputClassName}
               />
             </CalculatorField>
 
             <CalculatorField label="Antall poeng som kreves">
               <FormattedNumberInput
-                value={pointsRequired}
-                onChange={setPointsRequired}
+                value={toFormString(form.pointsRequired)}
+                onChange={(value) =>
+                  updateForm("pointsRequired", parseIntegerInput(value) || 0)
+                }
                 className={calculatorInputClassName}
               />
             </CalculatorField>
 
             <CalculatorField
               label="Avgifter ved poengbruk"
-              hint="Skatter, resort fees, bookinggebyr og lignende"
+              hint="Skatter, resort fees, bookinggebyr"
             >
               <FormattedNumberInput
-                value={redemptionFees}
-                onChange={setRedemptionFees}
+                value={toFormString(form.redemptionFees)}
+                onChange={(value) =>
+                  updateForm("redemptionFees", parseIntegerInput(value) || 0)
+                }
                 className={calculatorInputClassName}
               />
             </CalculatorField>
 
-            <CalculatorField
-              label="Kontant egenandel"
-              hint="Beløp du må betale i tillegg til poeng"
+            <CollapsibleSection
+              title="Avanserte innstillinger"
+              description="Egenandel og målverdi per poeng"
             >
-              <FormattedNumberInput
-                value={cashCoPay}
-                onChange={setCashCoPay}
-                className={calculatorInputClassName}
-              />
-            </CalculatorField>
+              <CalculatorField
+                label="Kontant egenandel"
+                hint="Beløp du må betale i tillegg til poeng"
+              >
+                <FormattedNumberInput
+                  value={toFormString(form.cashCoPay)}
+                  onChange={(value) =>
+                    updateForm("cashCoPay", parseIntegerInput(value) || 0)
+                  }
+                  className={calculatorInputClassName}
+                />
+              </CalculatorField>
 
-            <CalculatorField
-              label="Din målverdi per poeng"
-              hint="I kroner, f.eks. 0,10 for 10 øre per poeng"
+              <CalculatorField
+                label={
+                  <span className="inline-flex items-center">
+                    Din målverdi per poeng
+                    <InfoTip text={BONUS_TOOLTIPS.targetValuePerPoint} />
+                  </span>
+                }
+                hint="F.eks. 0,10 for 10 øre"
+              >
+                <DecimalNumberInput
+                  value={form.targetValuePerPoint}
+                  onChange={(value) => updateForm("targetValuePerPoint", value)}
+                  min={0}
+                  className={calculatorInputClassName}
+                />
+              </CalculatorField>
+            </CollapsibleSection>
+          </div>
+
+          <div className="mt-8 flex flex-wrap justify-between gap-3">
+            <button
+              type="button"
+              onClick={() => setStep(0)}
+              className="rounded-xl border border-stone-200 bg-white px-5 py-2.5 text-sm font-semibold text-stone-700 transition-colors hover:bg-stone-50"
             >
-              <DecimalNumberInput
-                value={targetValuePerPoint}
-                onChange={setTargetValuePerPoint}
-                min={0}
-                className={calculatorInputClassName}
-              />
-            </CalculatorField>
+              ← Tilbake
+            </button>
+            <button
+              type="button"
+              disabled={!canProceedFromRedeem}
+              onClick={() => setStep(2)}
+              className="rounded-xl bg-orange-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-orange-700 disabled:cursor-not-allowed disabled:bg-stone-300"
+            >
+              Se resultat →
+            </button>
           </div>
         </section>
-      </div>
-
-      {!result && (
-        <div className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 px-6 py-8 text-center text-sm text-stone-600">
-          Fyll inn minst ett opptjent poeng for å se resultat.
-        </div>
       )}
 
-      <BonusPoengConcepts />
+      {step === 2 && (
+        <section className="space-y-6">
+          {result ? (
+            <BonusPoengResultCards
+              result={result}
+              targetValuePerPoint={form.targetValuePerPoint}
+            />
+          ) : (
+            <div className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 px-6 py-8 text-center text-sm text-stone-600">
+              Fyll inn opptjening og innløsning for å se resultat.
+            </div>
+          )}
+
+          <div className="flex flex-wrap justify-between gap-3">
+            <button
+              type="button"
+              onClick={() => setStep(1)}
+              className="rounded-xl border border-stone-200 bg-white px-5 py-2.5 text-sm font-semibold text-stone-700 transition-colors hover:bg-stone-50"
+            >
+              ← Endre innløsning
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                setForm(createInitialForm());
+                setStep(0);
+              }}
+              className="rounded-xl border border-stone-200 bg-white px-5 py-2.5 text-sm font-semibold text-stone-700 transition-colors hover:bg-stone-50"
+            >
+              Start på nytt
+            </button>
+          </div>
+        </section>
+      )}
+
+      <BonusPoengConcepts defaultOpen={false} />
     </div>
   );
 }

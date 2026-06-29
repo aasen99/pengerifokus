@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+import { FeaturedTools } from "@/components/home/FeaturedTools";
 import { Hero } from "@/components/home/Hero";
+import { HomeStats } from "@/components/home/HomeStats";
 import { MainEntries } from "@/components/home/MainEntries";
+import { QuickPaths } from "@/components/home/QuickPaths";
 import { Button } from "@/components/ui/Button";
 import { createPageMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
@@ -12,7 +15,11 @@ export const metadata: Metadata = createPageMetadata({
     "penger i fokus",
     "økonomiguider",
     "personlig økonomi norge",
-    "spare tips",
+    "sparekalkulator",
+    "eie eller leie",
+    "bonuspoeng",
+    "økonomisk røntgen",
+    "ordbok økonomi",
   ],
 });
 
@@ -21,14 +28,23 @@ export default function HomePage() {
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
       <Hero />
 
+      <div className="mt-10">
+        <HomeStats />
+      </div>
+
       <div className="mt-16 space-y-16">
+        <QuickPaths />
+
+        <FeaturedTools />
+
         <section>
           <h2 className="text-2xl font-bold text-stone-900">Hva er dette?</h2>
           <p className="mt-3 max-w-3xl text-lg leading-relaxed text-stone-600">
             Penger i Fokus er en kunnskaps- og verktøyportal for personlig
-            økonomi. Vi hjelper deg å forstå begrepene, lære om
-            fordelsprogrammer, finne konkrete tilbud, og bruke kalkulatorer,
-            uten å måtte lese gjennom en hel bankavdeling med fine ord.
+            økonomi i Norge. Vi hjelper deg å forstå begrepene i ordboken, lære
+            gjennom guider, sammenligne valg med kalkulatorer, finne tilbud og
+            fordelsprogrammer, og se hvordan andre har bygget formue over tid.
+            Alt uten å måtte lese gjennom en hel bankavdeling med fine ord.
           </p>
         </section>
 
@@ -43,11 +59,19 @@ export default function HomePage() {
               Klar til å komme i gang?
             </h2>
             <p className="mx-auto mt-3 max-w-lg text-lg text-stone-300">
-              Start med en praktisk guide og bygg økonomien din steg for steg.
+              Start med en rask økonomisk sjekk, eller dykk rett inn i
+              kalkulatorer og guider.
             </p>
-            <div className="mt-8">
-              <Button href="/guider" variant="secondary">
-                Start her
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+              <Button href="/verktoy/okonomisk-rontgen" variant="secondary">
+                Ta økonomisk røntgen
+              </Button>
+              <Button
+                href="/verktoy/bonuskalkulator"
+                variant="outline"
+                className="border-white/30 bg-white/10 text-white hover:border-white/50 hover:bg-white/20 hover:text-white"
+              >
+                Bonuskalkulator
               </Button>
             </div>
           </div>

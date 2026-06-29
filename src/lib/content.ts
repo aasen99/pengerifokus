@@ -51,6 +51,18 @@ export function getVerktoy(): Verktoy[] {
   return verktoy;
 }
 
+export function getPublishedVerktoy(): Verktoy[] {
+  return verktoy.filter((tool) => tool.status === "published");
+}
+
+export function getFeaturedVerktoy(): Verktoy[] {
+  return getPublishedVerktoy().filter((tool) => tool.featured);
+}
+
+export function getVerktoyBySlug(slug: string): Verktoy | undefined {
+  return verktoy.find((tool) => tool.slug === slug);
+}
+
 export function getOrdbok(): OrdbokEntry[] {
   return ordbok.filter(isPublished);
 }
