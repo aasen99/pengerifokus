@@ -12,11 +12,6 @@ export const formuesbyggerQuotes: Record<string, FormuesbyggerQuote[]> = {
         "https://www.obforum.com/lederskap/petter-stordalen-7-tips-bedre-business",
       sourceLabel: "Oslo Business Forum",
     },
-    {
-      text: "Jeg vil gjerne kunne se barna i øynene i fremtiden. De skal kunne si at pappa gjorde noe mer enn å bygge hoteller, at han tok ansvar for samfunnet.",
-      sourceUrl: "https://no.wikiquote.org/wiki/Petter_Stordalen",
-      sourceLabel: "Wikiquote",
-    },
   ],
   "torstein-hagen": [
     {
@@ -55,10 +50,8 @@ export const formuesbyggerQuotes: Record<string, FormuesbyggerQuote[]> = {
       text: "Rule No. 1: Never lose money. Rule No. 2: Never forget rule No. 1.",
       translation:
         "Regel nummer én: Aldri tape penger. Regel nummer to: Aldri glem regel nummer én.",
-      sourceUrl:
-        "https://en.wikiquote.org/wiki/Warren_Buffett",
-      sourceLabel: "Wikiquote",
-      note: "Ofte gjengitt i Buffett-sammenheng",
+      sourceUrl: "https://www.youtube.com/watch?v=T6HHwOoq9M4",
+      sourceLabel: "PBS, Adam Smith's Money World, 1985",
     },
     {
       text: "Someone is sitting in the shade today because someone planted a tree a long time ago.",
@@ -69,20 +62,20 @@ export const formuesbyggerQuotes: Record<string, FormuesbyggerQuote[]> = {
       sourceLabel: "Berkshire Hathaway, 1991",
     },
     {
-      text: "The stock market is a device for transferring money from the impatient to the patient.",
+      text: "The stock market serves as a relocation center at which money is moved from the active to the patient.",
       translation:
-        "Aksjemarkedet er et apparat for å overføre penger fra de utålmodige til de tålmodige.",
+        "Aksjemarkedet fungerer som et omplasseringssted der penger flyttes fra de aktive til de tålmodige.",
       sourceUrl:
-        "https://en.wikiquote.org/wiki/Warren_Buffett",
-      sourceLabel: "Wikiquote",
-      note: "Tilskrevet Buffett; ofte knyttet til Benjamin Graham",
+        "https://www.berkshirehathaway.com/letters/1991.html",
+      sourceLabel: "Berkshire Hathaway, 1991",
     },
     {
       text: "Risk comes from not knowing what you're doing.",
       translation: "Risiko kommer fra ikke å vite hva du gjør.",
       sourceUrl:
-        "https://en.wikiquote.org/wiki/Warren_Buffett",
-      sourceLabel: "Wikiquote",
+        "https://books.google.com/books?id=Hayx0w8S1tcC&pg=PA94",
+      sourceLabel:
+        "The Warren Buffett Way (Robert Hagstrom, 1994) — fra foredrag ved Columbia University, 1993",
     },
   ],
   "elon-musk": [
@@ -94,30 +87,21 @@ export const formuesbyggerQuotes: Record<string, FormuesbyggerQuote[]> = {
         "https://www.cbsnews.com/news/elon-musk-at-spacex-hq-60-minutes-2014-03-30/",
       sourceLabel: "CBS News, 2014",
     },
-    {
-      text: "Persistence is very important. You should not give up unless you are forced to give up.",
-      translation:
-        "Utholdenhet er veldig viktig. Du bør ikke gi opp med mindre du er tvunget til det.",
-      sourceUrl:
-        "https://en.wikiquote.org/wiki/Elon_Musk",
-      sourceLabel: "Wikiquote",
-    },
   ],
   "jeff-bezos": [
     {
       text: "Your margin is my opportunity.",
       translation: "Din margin er min mulighet.",
       sourceUrl:
-        "https://en.wikiquote.org/wiki/Jeff_Bezos",
-      sourceLabel: "Wikiquote",
-      note: "Bezos om konkurransen i handel",
+        "https://fortune.com/2012/11/16/amazons-jeff-bezos-the-ultimate-disrupter/",
+      sourceLabel: "Fortune, 2012",
     },
     {
       text: "We are stubborn on vision. We are flexible on details.",
       translation: "Vi er sta på visjon, fleksible på detaljer.",
       sourceUrl:
-        "https://en.wikiquote.org/wiki/Jeff_Bezos",
-      sourceLabel: "Wikiquote",
+        "https://www.geekwire.com/2011/amazons-bezos-innovation/",
+      sourceLabel: "GeekWire, Amazon shareholder meeting, 2011",
     },
   ],
   "bill-gates": [
@@ -126,17 +110,16 @@ export const formuesbyggerQuotes: Record<string, FormuesbyggerQuote[]> = {
       translation:
         "Vi overvurderer alltid endringen de neste to årene og undervurderer endringen de neste ti.",
       sourceUrl:
-        "https://en.wikiquote.org/wiki/Bill_Gates",
-      sourceLabel: "Wikiquote",
-      note: "Fra The Road Ahead (1996)",
+        "https://www.penguinrandomhouse.com/books/17414/the-road-ahead-by-bill-gates-and-nathan-myhrvold-and-peter-rinearson/",
+      sourceLabel: "The Road Ahead (1996)",
     },
     {
       text: "Your most unhappy customers are your greatest source of learning.",
       translation:
         "Dine mest misfornøyde kunder er din største læringskilde.",
       sourceUrl:
-        "https://en.wikiquote.org/wiki/Bill_Gates",
-      sourceLabel: "Wikiquote",
+        "https://www.penguinrandomhouse.com/books/180871/business-the-speed-of-thought-by-bill-gates/",
+      sourceLabel: "Business @ the Speed of Thought (1999)",
     },
   ],
   "mark-zuckerberg": [
@@ -144,26 +127,15 @@ export const formuesbyggerQuotes: Record<string, FormuesbyggerQuote[]> = {
       text: "The biggest risk is not taking any risk.",
       translation: "Den største risikoen er å ikke ta noen risiko.",
       sourceUrl:
-        "https://en.wikiquote.org/wiki/Mark_Zuckerberg",
-      sourceLabel: "Wikiquote",
+        "https://www.youtube.com/watch?v=ngX92fP0XUk",
+      sourceLabel: "Y Combinator, How to Build the Future, 2016",
     },
     {
       text: "Move fast and break things.",
       translation: "Beveg deg raskt og bryt ting.",
       sourceUrl:
-        "https://en.wikiquote.org/wiki/Mark_Zuckerberg",
-      sourceLabel: "Wikiquote",
-      note: "Tidlig Facebook-mantra om tempo i vekst",
-    },
-  ],
-  "larry-ellison": [
-    {
-      text: "When you innovate, you've got to be prepared for people telling you that you are nuts.",
-      translation:
-        "Når du innoverer, må du være forberedt på at folk sier at du er gal.",
-      sourceUrl:
-        "https://en.wikiquote.org/wiki/Larry_Ellison",
-      sourceLabel: "Wikiquote",
+        "https://www.sec.gov/Archives/edgar/data/1326801/000119312512034517/d287954ds1.htm",
+      sourceLabel: "Facebook S-1 (SEC), 2012",
     },
   ],
   "michael-jordan": [
@@ -172,25 +144,26 @@ export const formuesbyggerQuotes: Record<string, FormuesbyggerQuote[]> = {
       translation:
         "Jeg har bommet på over 9 000 skudd i karrieren. Jeg har tapt nesten 300 kamper. Jeg har feilet om og om igjen i livet. Det er derfor jeg lykkes.",
       sourceUrl:
-        "https://en.wikiquote.org/wiki/Michael_Jordan",
-      sourceLabel: "Wikiquote",
-      note: "Nike «Failure»-kampanje",
+        "https://www.paleycenter.org/collection/item?item=AT%3A49338.013",
+      sourceLabel: "Nike «Failure»-reklame, 1997",
     },
     {
-      text: "Limits, like fears, are often just an illusion.",
-      translation: "Begrensninger, som frykt, er ofte bare en illusjon.",
+      text: "Never say never. Because limits, like fears, are often just an illusion.",
+      translation:
+        "Aldri si aldri. For begrensninger, som frykt, er ofte bare en illusjon.",
       sourceUrl:
-        "https://en.wikiquote.org/wiki/Michael_Jordan",
-      sourceLabel: "Wikiquote",
+        "https://speakola.com/sports/michael-jordan-hall-of-fame-induction-2009",
+      sourceLabel: "Naismith Memorial Basketball Hall of Fame, 2009",
     },
   ],
   "cristiano-ronaldo": [
     {
-      text: "Talent without working hard is nothing.",
-      translation: "Talent uten hardt arbeid er ingenting.",
+      text: "Talent without hard work is useless. Nothing falls from the sky.",
+      translation:
+        "Talent uten hardt arbeid er ubrukelig. Ingenting faller fra himmelen.",
       sourceUrl:
-        "https://en.wikiquote.org/wiki/Cristiano_Ronaldo",
-      sourceLabel: "Wikiquote",
+        "https://www.francefootball.fr/news/Cristiano-ronaldo-en-interview-exclusive-pour-france-football-il-faut-etre-intelligent-pour-durer/1074235",
+      sourceLabel: "France Football, 2019",
     },
   ],
   "oprah-winfrey": [
@@ -199,18 +172,8 @@ export const formuesbyggerQuotes: Record<string, FormuesbyggerQuote[]> = {
       translation:
         "Jo mer du lovpriser og feirer livet ditt, jo mer er det å feire.",
       sourceUrl:
-        "https://en.wikiquote.org/wiki/Oprah_Winfrey",
-      sourceLabel: "Wikiquote",
-    },
-  ],
-  "taylor-swift": [
-    {
-      text: "If somebody tells you that you can't do something, do it twice and take pictures.",
-      translation:
-        "Hvis noen forteller deg at du ikke kan gjøre noe, gjør det to ganger og ta bilde.",
-      sourceUrl:
-        "https://en.wikiquote.org/wiki/Taylor_Swift",
-      sourceLabel: "Wikiquote",
+        "https://us.macmillan.com/books/9781250353160/whatiknowforsure/",
+      sourceLabel: "What I Know for Sure (2014)",
     },
   ],
   "jay-z": [
@@ -218,9 +181,8 @@ export const formuesbyggerQuotes: Record<string, FormuesbyggerQuote[]> = {
       text: "I'm not a businessman, I'm a business, man.",
       translation: "Jeg er ikke en forretningsmann. Jeg er en business, mann.",
       sourceUrl:
-        "https://en.wikiquote.org/wiki/Jay-Z",
-      sourceLabel: "Wikiquote",
-      note: "Fra «Diamonds from Sierra Leone (Remix)»",
+        "https://genius.com/Kanye-west-diamonds-from-sierra-leone-remix-lyrics",
+      sourceLabel: "Diamonds from Sierra Leone (Remix), 2005",
     },
   ],
 };
