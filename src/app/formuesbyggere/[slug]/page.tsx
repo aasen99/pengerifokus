@@ -12,6 +12,7 @@ import {
 import { getFormuesbyggerBySlug } from "@/lib/content";
 import { createPageMetadata } from "@/lib/seo";
 import { getArticleJsonLd, getBreadcrumbJsonLd } from "@/lib/structured-data";
+import { formatWealthEstimate } from "@/lib/wealth-estimate";
 
 interface FormuesbyggerPageProps {
   params: Promise<{ slug: string }>;
@@ -32,7 +33,7 @@ export async function generateMetadata({
 
   return createPageMetadata({
     title: article.seoAngle,
-    description: `${article.intro} ${profile.wealthContext}`,
+    description: `${article.intro} Omtrentlig formue: ${formatWealthEstimate(profile.wealthEstimate)}. ${profile.wealthContext}`,
     path: `/formuesbyggere/${slug}`,
     keywords: [
       profile.name,

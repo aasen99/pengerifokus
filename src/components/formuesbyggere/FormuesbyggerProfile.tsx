@@ -1,7 +1,6 @@
 import Link from "next/link";
 import {
   BUILD_TYPE_LABELS,
-  FORMUE_DISCLAIMER,
   FORMUESBYGGERE_TITLE,
   INDUSTRY_LABELS,
   REGION_LABELS,
@@ -9,6 +8,7 @@ import {
 import type { Formuesbygger } from "@/types/formuesbygger";
 import type { FormuesbyggerArticle } from "@/types/formuesbygger";
 import { Tag } from "@/components/ui/Tag";
+import { WealthEstimateCard } from "@/components/formuesbyggere/WealthEstimateCard";
 
 interface FormuesbyggerProfileProps {
   profile: Formuesbygger;
@@ -42,13 +42,11 @@ export function FormuesbyggerProfile({
           {article.intro}
         </p>
         <p className="mt-3 text-sm text-stone-500">
-          {article.readTimeMinutes} min lesetid · {profile.wealthContext}
+          {article.readTimeMinutes} min lesetid
         </p>
       </header>
 
-      <div className="mt-8 rounded-2xl border border-stone-200 bg-stone-50 px-5 py-4 text-sm leading-relaxed text-stone-600">
-        {FORMUE_DISCLAIMER}
-      </div>
+      <WealthEstimateCard profile={profile} />
 
       <div className="mt-10 space-y-10">
         {article.sections.map((section) => (
@@ -86,6 +84,31 @@ export function FormuesbyggerProfile({
           </section>
         ))}
       </div>
+
+      {article.quotes && article.quotes.length > 0 && (
+        <section className="mt-12">
+          <h2 className="text-xl font-semibold text-stone-900">
+            Kjente sitater
+          </h2>
+          <div className="mt-5 space-y-5">
+            {article.quotes.map((quote) => (
+              <blockquote
+                key={quote.text}
+                className="rounded-2xl border border-stone-200 bg-white px-5 py-4 shadow-sm"
+              >
+                <p className="text-base leading-relaxed text-stone-700">
+                  «{quote.text}»
+                </p>
+                {quote.note && (
+                  <footer className="mt-2 text-sm text-stone-500">
+                    {quote.note}
+                  </footer>
+                )}
+              </blockquote>
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className="mt-12 rounded-2xl border border-orange-200 bg-orange-50 p-6">
         <h2 className="text-lg font-semibold text-stone-900">

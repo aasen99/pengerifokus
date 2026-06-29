@@ -20,6 +20,17 @@ export type FormuesbyggerBuildType =
   | "merkevare"
   | "idrett-underholdning";
 
+export type WealthEstimateCurrency = "NOK" | "USD";
+
+export interface WealthEstimate {
+  /** Tall eller intervall uten enhet, f.eks. "12–15" eller "130" */
+  amount: string;
+  unit: "mrd" | "mill";
+  currency: WealthEstimateCurrency;
+  /** År eller periode anslaget gjelder */
+  asOf?: string;
+}
+
 export interface Formuesbygger extends BaseContent {
   name: string;
   region: FormuesbyggerRegion;
@@ -27,8 +38,15 @@ export interface Formuesbygger extends BaseContent {
   buildType: FormuesbyggerBuildType;
   /** Kort beskrivelse til kortvisning */
   tagline: string;
-  /** Omtrentlig formueskilder, uten eksakte tall */
+  /** Omtrentlig formueanslag å vise i UI */
+  wealthEstimate: WealthEstimate;
+  /** Hva formuen hovedsakelig er knyttet til */
   wealthContext: string;
+}
+
+export interface FormuesbyggerQuote {
+  text: string;
+  note?: string;
 }
 
 export interface FormuesbyggerArticleSection {
@@ -45,6 +63,7 @@ export interface FormuesbyggerArticle {
   seoAngle: string;
   intro: string;
   sections: FormuesbyggerArticleSection[];
+  quotes?: FormuesbyggerQuote[];
   lessons: string[];
   relatedLinks?: { label: string; href: string }[];
 }

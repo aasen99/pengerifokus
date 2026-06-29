@@ -4,6 +4,7 @@ import type {
   FormuesbyggerRegion,
 } from "@/types/formuesbygger";
 import type { Formuesbygger } from "@/types/formuesbygger";
+import { formatWealthEstimate } from "@/lib/wealth-estimate";
 
 export function filterFormuesbyggere(
   entries: Formuesbygger[],
@@ -25,6 +26,7 @@ export function filterFormuesbyggere(
       entry.name,
       entry.tagline,
       entry.wealthContext,
+      formatWealthEstimate(entry.wealthEstimate),
       entry.industry,
       entry.buildType,
       entry.region,

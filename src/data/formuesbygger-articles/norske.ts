@@ -3,7 +3,6 @@ import { buildFormuesbyggerArticle } from "./helpers";
 export const norskeFormuesbyggerArtikler = {
   "kjell-inge-rokke": buildFormuesbyggerArticle({
     slug: "kjell-inge-rokke",
-    readTimeMinutes: 8,
     seoAngle: "Hvordan bygde Kjell Inge Røkke formuen sin?",
     intro:
       "Kjell Inge Røkke er en av Norges mest kjente industrigründere. Historien hans handler mindre om én smart handel og mer om å ta risiko, bygge selskaper og holde eierskap over tid.",
@@ -63,7 +62,6 @@ export const norskeFormuesbyggerArtikler = {
   }),
   "john-fredriksen": buildFormuesbyggerArticle({
     slug: "john-fredriksen",
-    readTimeMinutes: 8,
     seoAngle: "Hvordan ble John Fredriksen rik?",
     intro:
       "John Fredriksen bygde en global formue i shipping og offshore. Historien viser hvordan én bransje, kombinert med timing og risikovilje, kan skape enormt eierskap.",
@@ -111,7 +109,6 @@ export const norskeFormuesbyggerArtikler = {
   }),
   "stein-erik-hagen": buildFormuesbyggerArticle({
     slug: "stein-erik-hagen",
-    readTimeMinutes: 7,
     seoAngle: "Hva kan vi lære av Stein Erik Hagen?",
     intro:
       "Stein Erik Hagen er kjent som grunnlegger av Orkla og som investor med bred portefølje. Historien hans viser hvordan industriell gründerdrift kan utvikles til langsiktig eierskap.",
@@ -152,7 +149,6 @@ export const norskeFormuesbyggerArtikler = {
   }),
   "petter-stordalen": buildFormuesbyggerArticle({
     slug: "petter-stordalen",
-    readTimeMinutes: 8,
     seoAngle: "Hvordan ble Petter Stordalen rik?",
     intro:
       "Petter Stordalen er hotellgründeren som bygde Nordic Choice og et stort eiendomsportefølje. Historien hans er et klassisk eksempel på gründer som vokser gjennom drift, gjeld og eierskap i eiendom.",
@@ -201,7 +197,6 @@ export const norskeFormuesbyggerArtikler = {
   }),
   "olav-thon": buildFormuesbyggerArticle({
     slug: "olav-thon",
-    readTimeMinutes: 7,
     seoAngle: "Hvordan bygde Olav Thon formuen sin?",
     intro:
       "Olav Thon er en av Norges mest kjente eiendomsinvestorer. Han bygde formue over flere tiår gjennom handel og eiendom, med fokus på langsiktig eierskap.",
@@ -242,7 +237,6 @@ export const norskeFormuesbyggerArtikler = {
   }),
   "johan-h-andresen": buildFormuesbyggerArticle({
     slug: "johan-h-andresen",
-    readTimeMinutes: 7,
     seoAngle: "Hva kan vi lære av Johan H. Andresen?",
     intro:
       "Johan H. Andresen representerer en annen type formuesbygging: arv videreutviklet gjennom profesjonell forvaltning via Ferd. Mindre synlig, mer langsiktig.",
@@ -288,7 +282,6 @@ export const norskeFormuesbyggerArtikler = {
   }),
   "gustav-magnar-witzoe": buildFormuesbyggerArticle({
     slug: "gustav-magnar-witzoe",
-    readTimeMinutes: 7,
     seoAngle: "Hva betyr arv for unge formuesbyggere?",
     intro:
       "Gustav Magnar Witzøe ble kjent som en av verdens yngste milliardærer etter arv i lakseindustrien. Historien reiser spørsmål om arv, ansvar og hva som skjer når stor formue overføres tidlig.",
@@ -331,7 +324,6 @@ export const norskeFormuesbyggerArtikler = {
   }),
   "odd-reitan": buildFormuesbyggerArticle({
     slug: "odd-reitan",
-    readTimeMinutes: 7,
     seoAngle: "Hvordan bygde Odd Reitan handelsimperiet?",
     intro:
       "Odd Reitan startet med én kiosk og bygde Reitan-gruppen til en av Nordens største dagligvare- og servicenetverk. Klassisk gründerhistorie med fokus på drift og skalering.",
@@ -372,7 +364,6 @@ export const norskeFormuesbyggerArtikler = {
   }),
   "reitan-familien": buildFormuesbyggerArticle({
     slug: "reitan-familien",
-    readTimeMinutes: 7,
     seoAngle: "Hvordan bygde Reitan-familien formue?",
     intro:
       "Reitan-familien står bak Rema 1000, Narvesen og en av Nordens største handelsgrupper. Historien handler om familieeierskap, dagligvare og generasjonsovergang.",
@@ -413,7 +404,6 @@ export const norskeFormuesbyggerArtikler = {
   }),
   "varner-familien": buildFormuesbyggerArticle({
     slug: "varner-familien",
-    readTimeMinutes: 7,
     seoAngle: "Hvordan bygde Varner-familien klesimperiet?",
     intro:
       "Varner-familien står bak Cubus, Dressmann, Bik Bok og flere kjente kleskjeder. De bygde formue på detaljhandel og eierskap i Norden.",

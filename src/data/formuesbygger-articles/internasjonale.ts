@@ -3,7 +3,6 @@ import { buildFormuesbyggerArticle } from "./helpers";
 export const internasjonaleFormuesbyggerArtikler = {
   "warren-buffett": buildFormuesbyggerArticle({
     slug: "warren-buffett",
-    readTimeMinutes: 8,
     seoAngle: "Hva kan vi lære av Warren Buffett?",
     intro:
       "Warren Buffett er kanskje verdens mest kjente investor. Han bygde formue ved å kjøpe gode selskaper til fornuftige priser og holde dem i tiår, ikke ved å jage raske gevinster.",
@@ -64,7 +63,6 @@ export const internasjonaleFormuesbyggerArtikler = {
   }),
   "elon-musk": buildFormuesbyggerArticle({
     slug: "elon-musk",
-    readTimeMinutes: 7,
     seoAngle: "Hvordan ble Elon Musk rik?",
     intro:
       "Elon Musk bygde formue gjennom gründerskap i teknologi og industri, med ekstreme svingninger i verdien. Historien viser både kraften i eierskap og risikoen ved konsentrasjon.",
@@ -111,7 +109,6 @@ export const internasjonaleFormuesbyggerArtikler = {
   }),
   "jeff-bezos": buildFormuesbyggerArticle({
     slug: "jeff-bezos",
-    readTimeMinutes: 7,
     seoAngle: "Hvordan bygde Jeff Bezos Amazon?",
     intro:
       "Jeff Bezos startet Amazon som nettbokhandel og bygde det til et av verdens største selskaper. Formuen kom fra å eie en stor andel av et selskap som vokste i tiår.",
@@ -152,7 +149,6 @@ export const internasjonaleFormuesbyggerArtikler = {
   }),
   "bill-gates": buildFormuesbyggerArticle({
     slug: "bill-gates",
-    readTimeMinutes: 7,
     seoAngle: "Hva kan vi lære av Bill Gates?",
     intro:
       "Bill Gates bygde Microsoft og ble en av verdens rikeste. Senere har han brukt stor del av formuen på filantropi gjennom Bill & Melinda Gates Foundation.",
@@ -193,7 +189,6 @@ export const internasjonaleFormuesbyggerArtikler = {
   }),
   "mark-zuckerberg": buildFormuesbyggerArticle({
     slug: "mark-zuckerberg",
-    readTimeMinutes: 7,
     seoAngle: "Hvordan ble Mark Zuckerberg rik?",
     intro:
       "Mark Zuckerberg grunnla Facebook som student og bygde Meta til et av verdens største teknologiselskaper. Formuen er nesten utelukkende knyttet til eierskap i Meta.",
@@ -234,7 +229,6 @@ export const internasjonaleFormuesbyggerArtikler = {
   }),
   "bernard-arnault": buildFormuesbyggerArticle({
     slug: "bernard-arnault",
-    readTimeMinutes: 7,
     seoAngle: "Hvordan bygde Bernard Arnault luksusimperiet?",
     intro:
       "Bernard Arnault leder LVMH, verdens største luksuskonsern. Han bygde formue ved å kjøpe og samle premium-merker som Louis Vuitton, Dior og Hennessy.",
@@ -274,7 +268,6 @@ export const internasjonaleFormuesbyggerArtikler = {
   }),
   "larry-ellison": buildFormuesbyggerArticle({
     slug: "larry-ellison",
-    readTimeMinutes: 7,
     seoAngle: "Hvordan ble Larry Ellison rik?",
     intro:
       "Larry Ellison grunnla Oracle og bygde formue på databasesoftware til bedrifter. Senere har han investert bredt, inkludert helse og teknologi.",
@@ -314,7 +307,6 @@ export const internasjonaleFormuesbyggerArtikler = {
   }),
   "michael-bloomberg": buildFormuesbyggerArticle({
     slug: "michael-bloomberg",
-    readTimeMinutes: 7,
     seoAngle: "Hva kan vi lære av Michael Bloomberg?",
     intro:
       "Michael Bloomberg bygde Bloomberg LP, en leverandør av finansdata og nyheter til profesjonelle investorer. Han kombinerte teknologi, journalistikk og abonnement.",
@@ -354,7 +346,6 @@ export const internasjonaleFormuesbyggerArtikler = {
   }),
   "amancio-ortega": buildFormuesbyggerArticle({
     slug: "amancio-ortega",
-    readTimeMinutes: 7,
     seoAngle: "Hvordan bygde Amancio Ortega Zara?",
     intro:
       "Amancio Ortega grunnla Inditex og Zara, og revolusjonerte klesbransjen med rask mote og effektiv logistikk. Han er en av verdens rikeste, med lav profil.",
@@ -394,7 +385,6 @@ export const internasjonaleFormuesbyggerArtikler = {
   }),
   "jensen-huang": buildFormuesbyggerArticle({
     slug: "jensen-huang",
-    readTimeMinutes: 7,
     seoAngle: "Hvordan ble Jensen Huang rik på AI?",
     intro:
       "Jensen Huang er medgründer og CEO av NVIDIA. Selskapet ble sentralt i AI-boomen fordi grafikkprosessorer ble brukt til å trene kunstig intelligens.",
@@ -435,7 +425,6 @@ export const internasjonaleFormuesbyggerArtikler = {
   }),
   "oprah-winfrey": buildFormuesbyggerArticle({
     slug: "oprah-winfrey",
-    readTimeMinutes: 7,
     seoAngle: "Hvordan bygde Oprah Winfrey formue?",
     intro:
       "Oprah Winfrey bygde formue på TV, produksjon og personlig merkevare. Hun viste at underholdning og media kan skape eierskap, ikke bare berømmelse.",
@@ -475,7 +464,6 @@ export const internasjonaleFormuesbyggerArtikler = {
   }),
   "jay-z": buildFormuesbyggerArticle({
     slug: "jay-z",
-    readTimeMinutes: 7,
     seoAngle: "Hvordan ble Jay-Z milliardær?",
     intro:
       "Jay-Z gikk fra rapper til gründer og investor. Formuen kom fra musikkrettigheter, Roc Nation, drikkevaremerker og bred investeringsportefølje.",
@@ -516,7 +504,6 @@ export const internasjonaleFormuesbyggerArtikler = {
   }),
   "taylor-swift": buildFormuesbyggerArticle({
     slug: "taylor-swift",
-    readTimeMinutes: 8,
     seoAngle: "Hvordan bygde Taylor Swift formue på musikk?",
     intro:
       "Taylor Swift er et eksempel på hvordan en artist kan bygge formue gjennom eierskap til musikken, turnéer og merkevare, ikke bare strømming.",
@@ -566,7 +553,6 @@ export const internasjonaleFormuesbyggerArtikler = {
   }),
   "cristiano-ronaldo": buildFormuesbyggerArticle({
     slug: "cristiano-ronaldo",
-    readTimeMinutes: 7,
     seoAngle: "Hvordan tjener Cristiano Ronaldo mer enn fotballlønn?",
     intro:
       "Cristiano Ronaldo er blant verdens best betalte idrettsutøvere, men stor del av formuen kommer fra sponsorater, merkevare og forretninger utenfor banen.",
@@ -606,7 +592,6 @@ export const internasjonaleFormuesbyggerArtikler = {
   }),
   "michael-jordan": buildFormuesbyggerArticle({
     slug: "michael-jordan",
-    readTimeMinutes: 8,
     seoAngle: "Hvorfor tjente Michael Jordan mer på Nike enn på basketball?",
     intro:
       "Michael Jordan er det klassiske eksempelet på at idrettsstjerner kan bli rikere på merkevare enn på lønn. Jordan Brand hos Nike genererer fortsatt inntekt.",

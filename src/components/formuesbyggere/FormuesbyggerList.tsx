@@ -17,6 +17,7 @@ import type {
   FormuesbyggerRegion,
 } from "@/types/formuesbygger";
 import { Tag } from "@/components/ui/Tag";
+import { WealthEstimateCard } from "@/components/formuesbyggere/WealthEstimateCard";
 import { calculatorInputClassName } from "@/components/verktoy/calculator-ui";
 
 interface FormuesbyggerListProps {
@@ -184,7 +185,8 @@ export function FormuesbyggerList({ entries }: FormuesbyggerListProps) {
                 <p className="mt-2 flex-1 text-sm leading-relaxed text-stone-600">
                   {entry.tagline}
                 </p>
-                <p className="mt-3 text-xs text-stone-500">{entry.wealthContext}</p>
+                <WealthEstimateCard profile={entry} compact />
+                <p className="mt-1 text-xs text-stone-500">{entry.wealthContext}</p>
                 {hasArticle && (
                   <span className="mt-4 inline-block text-sm font-semibold text-orange-600 group-hover:text-orange-700">
                     Les profil →
