@@ -35,6 +35,7 @@ export interface FormuesbyggerArticleSection {
   heading: string;
   paragraphs?: string[];
   bullets?: string[];
+  tip?: string;
 }
 
 export interface FormuesbyggerArticle {

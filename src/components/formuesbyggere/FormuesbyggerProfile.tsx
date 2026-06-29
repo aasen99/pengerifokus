@@ -77,6 +77,12 @@ export function FormuesbyggerProfile({
                 ))}
               </ul>
             )}
+            {section.tip && (
+              <div className="mt-4 rounded-xl border border-orange-200 bg-orange-50 px-4 py-3 text-sm text-stone-700">
+                <span className="font-semibold text-orange-800">Å huske: </span>
+                {section.tip}
+              </div>
+            )}
           </section>
         ))}
       </div>
