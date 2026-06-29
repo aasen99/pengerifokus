@@ -97,6 +97,18 @@ export const verktoy: Verktoy[] = [
     updatedAt: "2026-06-11",
   },
   {
+    id: "verktoy-12",
+    slug: "bonuskalkulator",
+    status: "published",
+    featured: true,
+    name: "Bonuskalkulator",
+    description:
+      "Regn ut kostnad per bonuspoeng og om hotell-, fly- eller annen innløsning slår å betale kontant.",
+    category: "Fordeler",
+    createdAt: "2026-06-11",
+    updatedAt: "2026-06-11",
+  },
+  {
     id: "verktoy-3",
     slug: "nedbetalingskalkulator",
     status: "coming-soon",
