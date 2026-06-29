@@ -9,10 +9,18 @@ export const FORMUESBYGGERE_INTRO =
   "Korte profiler av kjente formuesbyggere. Hvordan de startet, hva de eier, og hva vi kan lære av reisen deres.";
 
 export const FORMUE_DISCLAIMER =
-  "Formueanslagene er omtrentlige og basert på offentlige kilder som Forbes, Kapital og lignende medier. Verdien svinger ofte med aksjekurser og eiendomspriser, og skal ikke behandles som fasit.";
+  "Formueanslagene er omtrentlige markedsverdier, ikke skattemessig ligningsformue. Norske profiler følger i hovedsak Kapital 400 (publiseres årlig). Internasjonale profiler følger Forbes Billionaires List. Tallene svinger med aksjekurser og eiendomspriser, og skal ikke behandles som fasit.";
 
 export const FORMUE_ESTIMATE_SOURCE =
-  "Kilder: Forbes Billionaires List, Kapital, Finansavisen og tilsvarende medieestimater.";
+  "Norske profiler: Kapital 400. Internasjonale: Forbes Billionaires List og tilsvarende medieestimater.";
+
+export const KAPITAL_400_SOURCE = "Kapital 400";
+export const KAPITAL_400_URL =
+  "https://www.finansavisen.no/kapital-index/norges-400-rikeste";
+
+export const FORBES_BILLIONAIRES_SOURCE = "Forbes Billionaires List";
+export const FORBES_BILLIONAIRES_URL =
+  "https://www.forbes.com/billionaires/";
 
 export const REGION_LABELS: Record<FormuesbyggerRegion, string> = {
   norsk: "Norge",

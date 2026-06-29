@@ -111,6 +111,7 @@ export const publicRoutes: PublicRoute[] = [
   { path: "/verktoy", priority: 0.9, changeFrequency: "weekly" },
   ...verktoyRoutes,
   { path: "/ordbok", priority: 0.9, changeFrequency: "weekly" },
+  { path: "/ordbok/sitater", priority: 0.85, changeFrequency: "monthly" },
   ...ordbokRoutes,
   { path: "/formuesbyggere", priority: 0.85, changeFrequency: "weekly" },
   ...formuesbyggerRoutes,

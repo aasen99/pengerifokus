@@ -23,12 +23,15 @@ export type FormuesbyggerBuildType =
 export type WealthEstimateCurrency = "NOK" | "USD";
 
 export interface WealthEstimate {
-  /** Tall eller intervall uten enhet, f.eks. "12–15" eller "130" */
+  /** Tall eller intervall uten enhet, f.eks. «12–15» eller «130» */
   amount: string;
   unit: "mrd" | "mill";
   currency: WealthEstimateCurrency;
   /** År eller periode anslaget gjelder */
   asOf?: string;
+  /** F.eks. «Kapital 400» */
+  source?: string;
+  sourceUrl?: string;
 }
 
 export interface Formuesbygger extends BaseContent {
@@ -45,7 +48,15 @@ export interface Formuesbygger extends BaseContent {
 }
 
 export interface FormuesbyggerQuote {
+  /** Originalsitat. Engelske sitater skrives på engelsk. */
   text: string;
+  /** Norsk oversettelse når text er på engelsk */
+  translation?: string;
+  /** Lenke til kilde (påkrevd for publisering) */
+  sourceUrl: string;
+  /** Kort tekst for kildelenken, f.eks. «Berkshire Hathaway, 2004» */
+  sourceLabel: string;
+  /** Valgfri kontekst */
   note?: string;
 }
 

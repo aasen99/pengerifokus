@@ -1,280 +1,226 @@
 import type { FormuesbyggerQuote } from "@/types/formuesbygger";
 
+/**
+ * Kun sitater med dokumentert kilde (sourceUrl + sourceLabel).
+ * Engelske sitater har norsk oversettelse i translation.
+ */
 export const formuesbyggerQuotes: Record<string, FormuesbyggerQuote[]> = {
-  "kjell-inge-rokke": [
-    {
-      text: "Jeg har aldri tatt en eneste krone fra noen. Alt jeg har, har jeg jobbet for.",
-    },
-    {
-      text: "Å være gründer handler om å ta risiko når andre ikke tør.",
-    },
-  ],
-  "john-fredriksen": [
-    {
-      text: "Shipping er en syklisk bransje. Du må overleve nedgangene for å vinne oppgangene.",
-    },
-    {
-      text: "Timing er alt, men du må ha skipene når markedet snur.",
-    },
-  ],
-  "stein-erik-hagen": [
-    {
-      text: "Det er lettere å tjene penger enn å beholde dem.",
-    },
-    {
-      text: "Investering handler om å forstå verdien, ikke bare prisen.",
-    },
-  ],
   "petter-stordalen": [
     {
-      text: "Livet er for kort til å være miserabel.",
+      text: "Livet er for kort til å ta til takke med dårlige sjefer, dårlige miljøer, dårlige kulturer og angre på alle de mulighetene du takket nei til.",
+      sourceUrl:
+        "https://www.obforum.com/lederskap/petter-stordalen-7-tips-bedre-business",
+      sourceLabel: "Oslo Business Forum",
     },
     {
-      text: "Penger er et verktøy, ikke et mål.",
-    },
-    {
-      text: "Hotellbransjen handler om mennesker, ikke bare murstein.",
-    },
-  ],
-  "olav-thon": [
-    {
-      text: "Jeg har alltid likt å handle. Eiendom var en naturlig forlengelse av det.",
-    },
-    {
-      text: "Å spare og reinvestere er viktigere enn å bruke.",
+      text: "Jeg vil gjerne kunne se barna i øynene i fremtiden. De skal kunne si at pappa gjorde noe mer enn å bygge hoteller, at han tok ansvar for samfunnet.",
+      sourceUrl: "https://no.wikiquote.org/wiki/Petter_Stordalen",
+      sourceLabel: "Wikiquote",
     },
   ],
-  "johan-h-andresen": [
+  "torstein-hagen": [
     {
-      text: "Langsiktighet er en fordel familieeide selskaper har fremfor mange børsnoterte.",
-    },
-  ],
-  "gustav-magnar-witzoe": [
-    {
-      text: "Med stor formue følger ansvar, ikke bare muligheter.",
+      text: "It's no fun being number two. You have to be number one to succeed.",
+      translation:
+        "Det er ikke moro å være nummer to. Du må være nummer én for å lykkes.",
+      sourceUrl:
+        "https://www.forbes.com/sites/christopherhelman/2012/10/08/viking-cruises-torstein-hagen-is-the-anti-carnival/",
+      sourceLabel: "Forbes, 2012",
     },
   ],
   "odd-reitan": [
     {
       text: "Lave priser og god service vinner på lang sikt.",
-    },
-    {
-      text: "Kultur og verdier i et selskap er ikke pynt. Det er forretningsmodellen.",
-    },
-  ],
-  "reitan-familien": [
-    {
-      text: "Vi bygger for neste generasjon, ikke for neste kvartal.",
-    },
-  ],
-  "varner-familien": [
-    {
-      text: "I handel vinner de som kontrollerer kjeden fra design til butikk.",
-    },
-  ],
-  "torstein-hagen": [
-    {
-      text: "Det er ikke moro å være nr. 2. Du må være nr. 1 for å lykkes.",
-    },
-    {
-      text: "Cruise handler om opplevelser, ikke bare transport.",
-    },
-  ],
-  "christen-sveaas": [
-    {
-      text: "Langsiktig eierskap er den beste måten å bygge verdier på.",
-    },
-    {
-      text: "Industri og kunst kan begge være langsiktige investeringer.",
-    },
-  ],
-  "bjorn-rune-gjelsten": [
-    {
-      text: "Du må diversifisere når du har bygget noe i én bransje.",
-    },
-  ],
-  "ivar-erik-tollefsen": [
-    {
-      text: "Eiendom handler om beliggenhet, timing og tålmodighet.",
-    },
-    {
-      text: "Kjøp når andre er redde, hvis du har råd til å vente.",
-    },
-  ],
-  "arne-blystad": [
-    {
-      text: "I shipping må du overleve de dårlige årene for å nyte de gode.",
-    },
-  ],
-  "helene-sundt": [
-    {
-      text: "Arv er et ansvar å forvalte, ikke bare en fordel.",
-    },
-    {
-      text: "Langsiktig avkastning slår kortsiktig jaging av markedet.",
-    },
-  ],
-  "nicolai-tangen": [
-    {
-      text: "Disiplin og prosess er viktigere enn å jage den siste trenden.",
-    },
-    {
-      text: "God forvaltning handler om å unngå store feil, ikke bare å slå markedet.",
-    },
-  ],
-  "trond-mohn": [
-    {
-      text: "Det er en glede å kunne gi tilbake til samfunnet man er en del av.",
-    },
-    {
-      text: "Industri bygges over generasjoner, ikke på ett kvartal.",
+      sourceUrl: "https://www.reitangruppen.no/om-oss/var-historie",
+      sourceLabel: "Reitan Gruppen",
     },
   ],
   "warren-buffett": [
     {
-      text: "Vær fryktløs når andre er grådige, og grådig når andre er fryktløse.",
+      text: "Be fearful when others are greedy and greedy when others are fearful.",
+      translation:
+        "Vær fryktløs når andre er grådige, og grådig når andre er fryktløse.",
+      sourceUrl:
+        "https://www.berkshirehathaway.com/letters/2004ltr.pdf",
+      sourceLabel: "Berkshire Hathaway, 2004",
     },
     {
-      text: "Pris er det du betaler. Verdi er det du får.",
+      text: "Price is what you pay. Value is what you get.",
+      translation: "Pris er det du betaler. Verdi er det du får.",
+      sourceUrl:
+        "https://www.berkshirehathaway.com/letters/2008ltr.pdf",
+      sourceLabel: "Berkshire Hathaway, 2008",
     },
     {
-      text: "Aksjemarkedet er et apparat for å overføre penger fra de utålmodige til de tålmodige.",
+      text: "Rule No. 1: Never lose money. Rule No. 2: Never forget rule No. 1.",
+      translation:
+        "Regel nummer én: Aldri tape penger. Regel nummer to: Aldri glem regel nummer én.",
+      sourceUrl:
+        "https://en.wikiquote.org/wiki/Warren_Buffett",
+      sourceLabel: "Wikiquote",
+      note: "Ofte gjengitt i Buffett-sammenheng",
     },
     {
-      text: "Regel nummer én: Aldri tape penger. Regel nummer to: Aldri glem regel nummer én.",
+      text: "Someone is sitting in the shade today because someone planted a tree a long time ago.",
+      translation:
+        "Noen sitter i skyggen i dag fordi noen plantet et tre for lenge siden.",
+      sourceUrl:
+        "https://www.berkshirehathaway.com/letters/1991ltr.pdf",
+      sourceLabel: "Berkshire Hathaway, 1991",
     },
     {
-      text: "Det er langt bedre å kjøpe en fantastisk bedrift til en rimelig pris enn en rimelig bedrift til en fantastisk pris.",
+      text: "The stock market is a device for transferring money from the impatient to the patient.",
+      translation:
+        "Aksjemarkedet er et apparat for å overføre penger fra de utålmodige til de tålmodige.",
+      sourceUrl:
+        "https://en.wikiquote.org/wiki/Warren_Buffett",
+      sourceLabel: "Wikiquote",
+      note: "Tilskrevet Buffett; ofte knyttet til Benjamin Graham",
     },
     {
-      text: "Noen sitter i skyggen i dag fordi noen plantet et tre for lenge siden.",
-    },
-    {
-      text: "Risiko kommer fra ikke å vite hva du gjør.",
-    },
-    {
-      text: "Det tar 20 år å bygge et omdømme og fem minutter å ødelge det.",
+      text: "Risk comes from not knowing what you're doing.",
+      translation: "Risiko kommer fra ikke å vite hva du gjør.",
+      sourceUrl:
+        "https://en.wikiquote.org/wiki/Warren_Buffett",
+      sourceLabel: "Wikiquote",
     },
   ],
   "elon-musk": [
     {
-      text: "Når noe er viktig nok, gjør du det selv om oddsen er mot deg.",
+      text: "When something is important enough, you do it even if the odds are not in your favor.",
+      translation:
+        "Når noe er viktig nok, gjør du det selv om oddsen er mot deg.",
+      sourceUrl:
+        "https://www.cbsnews.com/news/elon-musk-at-spacex-hq-60-minutes-2014-03-30/",
+      sourceLabel: "CBS News, 2014",
     },
     {
-      text: "Feil er en pris du betaler for innovasjon.",
-    },
-    {
-      text: "Persistens er veldig viktig. Du bør ikke gi opp med mindre du er tvunget til det.",
+      text: "Persistence is very important. You should not give up unless you are forced to give up.",
+      translation:
+        "Utholdenhet er veldig viktig. Du bør ikke gi opp med mindre du er tvunget til det.",
+      sourceUrl:
+        "https://en.wikiquote.org/wiki/Elon_Musk",
+      sourceLabel: "Wikiquote",
     },
   ],
   "jeff-bezos": [
     {
-      text: "Din margin er min mulighet.",
+      text: "Your margin is my opportunity.",
+      translation: "Din margin er min mulighet.",
+      sourceUrl:
+        "https://en.wikiquote.org/wiki/Jeff_Bezos",
+      sourceLabel: "Wikiquote",
       note: "Bezos om konkurransen i handel",
     },
     {
-      text: "Vi er sta på visjon, fleksible på detaljer.",
-    },
-    {
-      text: "Hvis du bygger et godt omdømme, kan folk gi deg rom til å prøve ting.",
+      text: "We are stubborn on vision. We are flexible on details.",
+      translation: "Vi er sta på visjon, fleksible på detaljer.",
+      sourceUrl:
+        "https://en.wikiquote.org/wiki/Jeff_Bezos",
+      sourceLabel: "Wikiquote",
     },
   ],
   "bill-gates": [
     {
-      text: "De fleste overvurderer hva de kan gjøre på ett år, og undervurderer hva de kan gjøre på ti år.",
+      text: "We always overestimate the change that will occur in the next two years and underestimate the change that will occur in the next ten.",
+      translation:
+        "Vi overvurderer alltid endringen de neste to årene og undervurderer endringen de neste ti.",
+      sourceUrl:
+        "https://en.wikiquote.org/wiki/Bill_Gates",
+      sourceLabel: "Wikiquote",
+      note: "Fra The Road Ahead (1996)",
     },
     {
-      text: "Din mest utilfredse kunde er din største læringskilde.",
+      text: "Your most unhappy customers are your greatest source of learning.",
+      translation:
+        "Dine mest misfornøyde kunder er din største læringskilde.",
+      sourceUrl:
+        "https://en.wikiquote.org/wiki/Bill_Gates",
+      sourceLabel: "Wikiquote",
     },
   ],
   "mark-zuckerberg": [
     {
-      text: "Den største risikoen er å ikke ta noen risiko.",
+      text: "The biggest risk is not taking any risk.",
+      translation: "Den største risikoen er å ikke ta noen risiko.",
+      sourceUrl:
+        "https://en.wikiquote.org/wiki/Mark_Zuckerberg",
+      sourceLabel: "Wikiquote",
     },
     {
-      text: "Beveg deg raskt og bryt ting.",
+      text: "Move fast and break things.",
+      translation: "Beveg deg raskt og bryt ting.",
+      sourceUrl:
+        "https://en.wikiquote.org/wiki/Mark_Zuckerberg",
+      sourceLabel: "Wikiquote",
       note: "Tidlig Facebook-mantra om tempo i vekst",
-    },
-  ],
-  "bernard-arnault": [
-    {
-      text: "Luksus handler om drøm, kvalitet og tid. Det selger seg ikke på rabatt alene.",
     },
   ],
   "larry-ellison": [
     {
-      text: "Konkurranse er det som får oss til å bli bedre.",
-    },
-    {
-      text: "Software spiser verden, men databaser spiser software.",
-      note: "Ellison om Oracle sin posisjon",
-    },
-  ],
-  "michael-bloomberg": [
-    {
-      text: "I en informasjonsøkonomi er de som har de beste dataene, de som vinner.",
-    },
-    {
-      text: "Ikke vær redd for å feile. Vær redd for ikke å prøve.",
-    },
-  ],
-  "amancio-ortega": [
-    {
-      text: "Hastighet fra idé til butikk er vår største fordel.",
-    },
-  ],
-  "jensen-huang": [
-    {
-      text: "Ingen sier det blir lett. Men det som er verdt å gjøre, er sjelden lett.",
-    },
-    {
-      text: "Se alltid etter hvor databehandlingen flytter seg neste gang.",
-    },
-  ],
-  "oprah-winfrey": [
-    {
-      text: "Jo mer du lovpriser og feirer livet ditt, jo mer det er å feire.",
-    },
-    {
-      text: "Gjør det du må for å eie historien din.",
-      note: "Om å kontrollere eget innhold og merkevare",
-    },
-  ],
-  "jay-z": [
-    {
-      text: "Jeg er ikke en forretningsmann. Jeg er en business, mann.",
-      note: "Om å bygge merkevare som forretning",
-    },
-    {
-      text: "Eierskap endrer alt. Eier du masteren, eier du fremtiden.",
-    },
-  ],
-  "taylor-swift": [
-    {
-      text: "Hvis noen forteller deg at du ikke kan gjøre noe, gjør det to ganger og ta bilde.",
-    },
-    {
-      text: "Eierskap til arbeidet ditt er ikke egoisme. Det er overlevelse i bransjen.",
-      note: "Om rettigheter til egen musikk",
-    },
-  ],
-  "cristiano-ronaldo": [
-    {
-      text: "Talent uten arbeid er ingenting.",
-    },
-    {
-      text: "Jeg vet at folk snakker om talent. Jeg ser på dedikasjon.",
+      text: "When you innovate, you've got to be prepared for people telling you that you are nuts.",
+      translation:
+        "Når du innoverer, må du være forberedt på at folk sier at du er gal.",
+      sourceUrl:
+        "https://en.wikiquote.org/wiki/Larry_Ellison",
+      sourceLabel: "Wikiquote",
     },
   ],
   "michael-jordan": [
     {
-      text: "Jeg har feilet mange ganger i livet mitt. Det er derfor jeg lykkes.",
+      text: "I've missed more than 9,000 shots in my career. I've lost almost 300 games. I've failed over and over and over again in my life. And that is why I succeed.",
+      translation:
+        "Jeg har bommet på over 9 000 skudd i karrieren. Jeg har tapt nesten 300 kamper. Jeg har feilet om og om igjen i livet. Det er derfor jeg lykkes.",
+      sourceUrl:
+        "https://en.wikiquote.org/wiki/Michael_Jordan",
+      sourceLabel: "Wikiquote",
+      note: "Nike «Failure»-kampanje",
     },
     {
-      text: "Du kan ikke akseptere å tape, med mindre alle på laget gjør det.",
+      text: "Limits, like fears, are often just an illusion.",
+      translation: "Begrensninger, som frykt, er ofte bare en illusjon.",
+      sourceUrl:
+        "https://en.wikiquote.org/wiki/Michael_Jordan",
+      sourceLabel: "Wikiquote",
     },
+  ],
+  "cristiano-ronaldo": [
     {
-      text: "Begrensninger finnes bare i sinnet ditt.",
+      text: "Talent without working hard is nothing.",
+      translation: "Talent uten hardt arbeid er ingenting.",
+      sourceUrl:
+        "https://en.wikiquote.org/wiki/Cristiano_Ronaldo",
+      sourceLabel: "Wikiquote",
+    },
+  ],
+  "oprah-winfrey": [
+    {
+      text: "The more you praise and celebrate your life, the more there is in life to celebrate.",
+      translation:
+        "Jo mer du lovpriser og feirer livet ditt, jo mer er det å feire.",
+      sourceUrl:
+        "https://en.wikiquote.org/wiki/Oprah_Winfrey",
+      sourceLabel: "Wikiquote",
+    },
+  ],
+  "taylor-swift": [
+    {
+      text: "If somebody tells you that you can't do something, do it twice and take pictures.",
+      translation:
+        "Hvis noen forteller deg at du ikke kan gjøre noe, gjør det to ganger og ta bilde.",
+      sourceUrl:
+        "https://en.wikiquote.org/wiki/Taylor_Swift",
+      sourceLabel: "Wikiquote",
+    },
+  ],
+  "jay-z": [
+    {
+      text: "I'm not a businessman, I'm a business, man.",
+      translation: "Jeg er ikke en forretningsmann. Jeg er en business, mann.",
+      sourceUrl:
+        "https://en.wikiquote.org/wiki/Jay-Z",
+      sourceLabel: "Wikiquote",
+      note: "Fra «Diamonds from Sierra Leone (Remix)»",
     },
   ],
 };

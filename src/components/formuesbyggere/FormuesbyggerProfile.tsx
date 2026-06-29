@@ -8,7 +8,9 @@ import {
 import type { Formuesbygger } from "@/types/formuesbygger";
 import type { FormuesbyggerArticle } from "@/types/formuesbygger";
 import { Tag } from "@/components/ui/Tag";
+import { QuoteDisplay } from "@/components/sitater/QuoteDisplay";
 import { WealthEstimateCard } from "@/components/formuesbyggere/WealthEstimateCard";
+import { getSourcedQuotes } from "@/lib/sitater";
 
 interface FormuesbyggerProfileProps {
   profile: Formuesbygger;
@@ -19,6 +21,8 @@ export function FormuesbyggerProfile({
   profile,
   article,
 }: FormuesbyggerProfileProps) {
+  const quotes = getSourcedQuotes(article.quotes);
+
   return (
     <article>
       <Link
@@ -85,26 +89,22 @@ export function FormuesbyggerProfile({
         ))}
       </div>
 
-      {article.quotes && article.quotes.length > 0 && (
+      {quotes && quotes.length > 0 && (
         <section className="mt-12">
-          <h2 className="text-xl font-semibold text-stone-900">
-            Kjente sitater
-          </h2>
+          <div className="flex flex-wrap items-end justify-between gap-3">
+            <h2 className="text-xl font-semibold text-stone-900">
+              Kjente sitater
+            </h2>
+            <Link
+              href="/ordbok/sitater"
+              className="text-sm font-medium text-orange-600 hover:text-orange-700"
+            >
+              Alle sitater →
+            </Link>
+          </div>
           <div className="mt-5 space-y-5">
-            {article.quotes.map((quote) => (
-              <blockquote
-                key={quote.text}
-                className="rounded-2xl border border-stone-200 bg-white px-5 py-4 shadow-sm"
-              >
-                <p className="text-base leading-relaxed text-stone-700">
-                  «{quote.text}»
-                </p>
-                {quote.note && (
-                  <footer className="mt-2 text-sm text-stone-500">
-                    {quote.note}
-                  </footer>
-                )}
-              </blockquote>
+            {quotes.map((quote) => (
+              <QuoteDisplay key={quote.text} quote={quote} />
             ))}
           </div>
         </section>

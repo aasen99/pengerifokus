@@ -4,7 +4,7 @@ import type {
   FormuesbyggerArticleSection,
   FormuesbyggerQuote,
 } from "@/types/formuesbygger";
-import { formuesbyggerQuotes } from "./quotes";
+import { getFormuesbyggerQuotesForSlug } from "@/lib/sitater";
 
 interface BuildArticleOptions {
   slug: string;
@@ -32,6 +32,7 @@ function collectArticleTexts(
 
   for (const quote of article.quotes ?? []) {
     texts.push(quote.text);
+    if (quote.translation) texts.push(quote.translation);
     if (quote.note) texts.push(quote.note);
   }
 
@@ -57,7 +58,7 @@ export function buildFormuesbyggerArticle(
   ];
 
   const quotes =
-    options.quotes ?? formuesbyggerQuotes[options.slug] ?? undefined;
+    options.quotes ?? getFormuesbyggerQuotesForSlug(options.slug);
 
   const articleWithoutReadTime = {
     slug: options.slug,

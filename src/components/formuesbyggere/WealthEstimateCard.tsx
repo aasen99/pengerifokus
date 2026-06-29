@@ -14,7 +14,9 @@ export function WealthEstimateCard({
   profile,
   compact = false,
 }: WealthEstimateCardProps) {
-  const formatted = formatWealthEstimate(profile.wealthEstimate);
+  const { wealthEstimate } = profile;
+  const formatted = formatWealthEstimate(wealthEstimate);
+  const sourceLabel = wealthEstimate.source;
 
   if (compact) {
     return (
@@ -30,6 +32,23 @@ export function WealthEstimateCard({
       <p className="mt-1 text-2xl font-bold tracking-tight text-stone-900">
         {formatted}
       </p>
+      {sourceLabel && (
+        <p className="mt-2 text-xs text-stone-500">
+          Kilde:{" "}
+          {wealthEstimate.sourceUrl ? (
+            <a
+              href={wealthEstimate.sourceUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-orange-700 hover:text-orange-800"
+            >
+              {sourceLabel}
+            </a>
+          ) : (
+            sourceLabel
+          )}
+        </p>
+      )}
       <p className="mt-2 text-sm leading-relaxed text-stone-600">
         {profile.wealthContext}
       </p>
