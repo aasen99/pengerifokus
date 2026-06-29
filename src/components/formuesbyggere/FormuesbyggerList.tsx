@@ -9,7 +9,12 @@ import {
   REGION_LABELS,
 } from "@/data/formuesbyggere-labels";
 import { hasFormuesbyggerArticle } from "@/data/formuesbygger-articles";
-import { filterFormuesbyggere, sortFormuesbyggere } from "@/lib/formuesbyggere";
+import {
+  filterFormuesbyggere,
+  FORMUESBYGGER_SORT_OPTIONS,
+  sortFormuesbyggere,
+  type FormuesbyggerSortOption,
+} from "@/lib/formuesbyggere";
 import type {
   Formuesbygger,
   FormuesbyggerBuildType,
@@ -55,13 +60,15 @@ export function FormuesbyggerList({ entries }: FormuesbyggerListProps) {
   const [buildType, setBuildType] = useState<FormuesbyggerBuildType | null>(
     null,
   );
+  const [sort, setSort] = useState<FormuesbyggerSortOption>("wealth-desc");
 
   const filtered = useMemo(
     () =>
       sortFormuesbyggere(
         filterFormuesbyggere(entries, query, region, industry, buildType),
+        sort,
       ),
-    [entries, query, region, industry, buildType],
+    [entries, query, region, industry, buildType, sort],
   );
 
   const hasFilters =
@@ -160,11 +167,31 @@ export function FormuesbyggerList({ entries }: FormuesbyggerListProps) {
         </div>
       </div>
 
-      <p className="text-sm text-stone-600">
-        {filtered.length}{" "}
-        {filtered.length === 1 ? "profil" : "profiler"}
-        {hasFilters ? " funnet" : " i oversikten"}
-      </p>
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <p className="text-sm text-stone-600">
+          {filtered.length}{" "}
+          {filtered.length === 1 ? "profil" : "profiler"}
+          {hasFilters ? " funnet" : " i oversikten"}
+        </p>
+
+        <div className="flex items-center gap-2">
+          <label htmlFor="formuesbygger-sort" className="text-sm text-stone-600">
+            Sorter etter
+          </label>
+          <select
+            id="formuesbygger-sort"
+            value={sort}
+            onChange={(e) => setSort(e.target.value as FormuesbyggerSortOption)}
+            className={`${calculatorInputClassName} w-auto min-w-[12rem] py-2 pr-8`}
+          >
+            {FORMUESBYGGER_SORT_OPTIONS.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
+        </div>
+      </div>
 
       {filtered.length > 0 ? (
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

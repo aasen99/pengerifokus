@@ -72,6 +72,64 @@ export const formuesbyggerQuotes: Record<string, FormuesbyggerQuote[]> = {
       text: "I handel vinner de som kontrollerer kjeden fra design til butikk.",
     },
   ],
+  "torstein-hagen": [
+    {
+      text: "Det er ikke moro å være nr. 2. Du må være nr. 1 for å lykkes.",
+    },
+    {
+      text: "Cruise handler om opplevelser, ikke bare transport.",
+    },
+  ],
+  "christen-sveaas": [
+    {
+      text: "Langsiktig eierskap er den beste måten å bygge verdier på.",
+    },
+    {
+      text: "Industri og kunst kan begge være langsiktige investeringer.",
+    },
+  ],
+  "bjorn-rune-gjelsten": [
+    {
+      text: "Du må diversifisere når du har bygget noe i én bransje.",
+    },
+  ],
+  "ivar-erik-tollefsen": [
+    {
+      text: "Eiendom handler om beliggenhet, timing og tålmodighet.",
+    },
+    {
+      text: "Kjøp når andre er redde, hvis du har råd til å vente.",
+    },
+  ],
+  "arne-blystad": [
+    {
+      text: "I shipping må du overleve de dårlige årene for å nyte de gode.",
+    },
+  ],
+  "helene-sundt": [
+    {
+      text: "Arv er et ansvar å forvalte, ikke bare en fordel.",
+    },
+    {
+      text: "Langsiktig avkastning slår kortsiktig jaging av markedet.",
+    },
+  ],
+  "nicolai-tangen": [
+    {
+      text: "Disiplin og prosess er viktigere enn å jage den siste trenden.",
+    },
+    {
+      text: "God forvaltning handler om å unngå store feil, ikke bare å slå markedet.",
+    },
+  ],
+  "trond-mohn": [
+    {
+      text: "Det er en glede å kunne gi tilbake til samfunnet man er en del av.",
+    },
+    {
+      text: "Industri bygges over generasjoner, ikke på ett kvartal.",
+    },
+  ],
   "warren-buffett": [
     {
       text: "Vær fryktløs når andre er grådige, og grådig når andre er fryktløse.",
