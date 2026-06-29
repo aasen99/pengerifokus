@@ -8,7 +8,7 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Sitater",
   description:
-    "Sitater om penger, investering og formue fra formuesbyggerne – med kilde og lenke til profilen.",
+    "Sitater og mottoer om penger, investering og formue fra formuesbyggerne – med kilde og lenke til profilen.",
   path: "/ordbok/sitater",
   keywords: [
     "økonomisitater",
@@ -25,7 +25,7 @@ export default function SitaterPage() {
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
       <PageHeader
         title="Sitater"
-        description="Visdom og sitater fra formuesbyggerne vi skriver om. Hvert sitat har kilde – engelske sitater vises på originalspråk med norsk oversettelse."
+        description="Sitater og mottoer fra formuesbyggerne vi skriver om. Hvert funn har kilde – engelske sitater vises på originalspråk med norsk oversettelse."
       />
 
       <p className="mb-8 text-sm text-stone-600">
@@ -33,7 +33,7 @@ export default function SitaterPage() {
         <Link href="/ordbok" className="font-medium text-orange-600 hover:text-orange-700">
           ordboken
         </Link>
-        . Kun sitater med dokumentert kilde vises her.
+        . Kun sitater og mottoer med dokumentert kilde vises her.
       </p>
 
       <SitatList entries={entries} />

@@ -1,5 +1,6 @@
 import type { Formuesbygger } from "@/types/formuesbygger";
 import { forbesEstimate, kapitalEstimate } from "@/lib/wealth-estimate";
+import { formuesbyggerLifecycle } from "@/data/formuesbygger-lifecycle";
 
 /**
  * CMS/ADMIN: Metadata for formuesbygger-profiler.
@@ -7,7 +8,7 @@ import { forbesEstimate, kapitalEstimate } from "@/lib/wealth-estimate";
  *
  * Norske formueanslag: Kapital 400 (2025), med mindre annet er angitt.
  */
-export const formuesbyggere: Formuesbygger[] = [
+const baseFormuesbyggere: Formuesbygger[] = [
   {
     id: "fb-n1",
     slug: "kjell-inge-rokke",
@@ -482,3 +483,10 @@ export const formuesbyggere: Formuesbygger[] = [
     updatedAt: "2026-06-11",
   },
 ];
+
+export const formuesbyggere: Formuesbygger[] = baseFormuesbyggere.map(
+  (profile) => ({
+    ...profile,
+    ...formuesbyggerLifecycle[profile.slug],
+  }),
+);

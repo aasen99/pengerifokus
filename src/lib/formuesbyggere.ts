@@ -10,6 +10,10 @@ import type {
 } from "@/types/formuesbygger";
 import type { Formuesbygger } from "@/types/formuesbygger";
 import { formatWealthEstimate, getWealthSortValue } from "@/lib/wealth-estimate";
+import {
+  formatLifecycleCompact,
+  formatLifecycleFull,
+} from "@/lib/formuesbygger-lifecycle";
 
 export type FormuesbyggerSortOption =
   | "wealth-desc"
@@ -62,6 +66,8 @@ export function filterFormuesbyggere(
       entry.industry,
       entry.buildType,
       entry.region,
+      formatLifecycleFull(entry) ?? "",
+      formatLifecycleCompact(entry) ?? "",
     ]
       .join(" ")
       .toLowerCase();

@@ -1,18 +1,12 @@
 import type { FormuesbyggerQuote } from "@/types/formuesbygger";
+import { norskeFormuesbyggerQuotes } from "@/data/formuesbygger-articles/quotes-norske";
 
 /**
  * Kun sitater med dokumentert kilde (sourceUrl + sourceLabel).
  * Engelske sitater har norsk oversettelse i translation.
  */
 export const formuesbyggerQuotes: Record<string, FormuesbyggerQuote[]> = {
-  "petter-stordalen": [
-    {
-      text: "Livet er for kort til å ta til takke med dårlige sjefer, dårlige miljøer, dårlige kulturer og angre på alle de mulighetene du takket nei til.",
-      sourceUrl:
-        "https://www.obforum.com/lederskap/petter-stordalen-7-tips-bedre-business",
-      sourceLabel: "Oslo Business Forum",
-    },
-  ],
+  ...norskeFormuesbyggerQuotes,
   "torstein-hagen": [
     {
       text: "It's no fun being number two. You have to be number one to succeed.",
@@ -21,13 +15,6 @@ export const formuesbyggerQuotes: Record<string, FormuesbyggerQuote[]> = {
       sourceUrl:
         "https://www.forbes.com/sites/christopherhelman/2012/10/08/viking-cruises-torstein-hagen-is-the-anti-carnival/",
       sourceLabel: "Forbes, 2012",
-    },
-  ],
-  "odd-reitan": [
-    {
-      text: "Lave priser og god service vinner på lang sikt.",
-      sourceUrl: "https://www.reitangruppen.no/om-oss/var-historie",
-      sourceLabel: "Reitan Gruppen",
     },
   ],
   "warren-buffett": [

@@ -23,6 +23,7 @@ import type {
 } from "@/types/formuesbygger";
 import { Tag } from "@/components/ui/Tag";
 import { WealthEstimateCard } from "@/components/formuesbyggere/WealthEstimateCard";
+import { FormuesbyggerLifecycle } from "@/components/formuesbyggere/FormuesbyggerLifecycle";
 import { calculatorInputClassName } from "@/components/verktoy/calculator-ui";
 
 interface FormuesbyggerListProps {
@@ -209,6 +210,11 @@ export function FormuesbyggerList({ entries }: FormuesbyggerListProps) {
                 <h2 className="text-lg font-semibold text-stone-900 group-hover:text-orange-700">
                   {entry.name}
                 </h2>
+                <FormuesbyggerLifecycle
+                  profile={entry}
+                  variant="compact"
+                  className="mt-1"
+                />
                 <p className="mt-2 flex-1 text-sm leading-relaxed text-stone-600">
                   {entry.tagline}
                 </p>

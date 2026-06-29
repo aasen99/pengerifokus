@@ -39,6 +39,10 @@ export interface Formuesbygger extends BaseContent {
   region: FormuesbyggerRegion;
   industry: FormuesbyggerIndustry;
   buildType: FormuesbyggerBuildType;
+  /** ISO-dato (YYYY-MM-DD) */
+  birthDate?: string;
+  /** ISO-dato når personen er avdød */
+  deathDate?: string;
   /** Kort beskrivelse til kortvisning */
   tagline: string;
   /** Omtrentlig formueanslag å vise i UI */
@@ -46,6 +50,16 @@ export interface Formuesbygger extends BaseContent {
   /** Hva formuen hovedsakelig er knyttet til */
   wealthContext: string;
 }
+
+export type FormuesbyggerQuoteCategory = "sitat" | "motto";
+
+export type FormuesbyggerQuoteSourceQuality = "original" | "media" | "secondary";
+
+export type FormuesbyggerQuotePublishRecommendation =
+  | "publiser"
+  | "publiser-som-motto"
+  | "vurder"
+  | "unnga";
 
 export interface FormuesbyggerQuote {
   /** Originalsitat. Engelske sitater skrives på engelsk. */
@@ -56,6 +70,14 @@ export interface FormuesbyggerQuote {
   sourceUrl: string;
   /** Kort tekst for kildelenken, f.eks. «Berkshire Hathaway, 2004» */
   sourceLabel: string;
+  /** Valgfri sekundær kildelenke */
+  additionalSourceUrl?: string;
+  /** Vis «Motto/prinsipp» i stedet for «Sitat» */
+  category?: FormuesbyggerQuoteCategory;
+  /** Brukes til å fremheve kilde når den ikke er original */
+  sourceQuality?: FormuesbyggerQuoteSourceQuality;
+  /** Filtreres i UI – kun publiser og publiser-som-motto vises */
+  publishRecommendation?: FormuesbyggerQuotePublishRecommendation;
   /** Valgfri kontekst */
   note?: string;
 }

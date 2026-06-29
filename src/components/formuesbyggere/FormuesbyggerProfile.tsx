@@ -10,7 +10,8 @@ import type { FormuesbyggerArticle } from "@/types/formuesbygger";
 import { Tag } from "@/components/ui/Tag";
 import { QuoteDisplay } from "@/components/sitater/QuoteDisplay";
 import { WealthEstimateCard } from "@/components/formuesbyggere/WealthEstimateCard";
-import { getSourcedQuotes } from "@/lib/sitater";
+import { FormuesbyggerLifecycle } from "@/components/formuesbyggere/FormuesbyggerLifecycle";
+import { getProfileQuotes } from "@/lib/sitater";
 
 interface FormuesbyggerProfileProps {
   profile: Formuesbygger;
@@ -21,7 +22,7 @@ export function FormuesbyggerProfile({
   profile,
   article,
 }: FormuesbyggerProfileProps) {
-  const quotes = getSourcedQuotes(article.quotes);
+  const quotes = getProfileQuotes(article.quotes);
 
   return (
     <article>
@@ -42,6 +43,7 @@ export function FormuesbyggerProfile({
         <h1 className="mt-2 text-3xl font-bold tracking-tight text-stone-900 sm:text-4xl">
           {profile.name}
         </h1>
+        <FormuesbyggerLifecycle profile={profile} className="mt-2" />
         <p className="mt-4 max-w-2xl text-lg leading-relaxed text-stone-600">
           {article.intro}
         </p>
@@ -93,7 +95,7 @@ export function FormuesbyggerProfile({
         <section className="mt-12">
           <div className="flex flex-wrap items-end justify-between gap-3">
             <h2 className="text-xl font-semibold text-stone-900">
-              Kjente sitater
+              Sitater og mottoer
             </h2>
             <Link
               href="/ordbok/sitater"
