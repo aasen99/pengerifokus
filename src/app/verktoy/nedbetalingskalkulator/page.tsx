@@ -1,27 +1,34 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Rentekalkulator } from "@/components/verktoy/Rentekalkulator";
+import { Nedbetalingskalkulator } from "@/components/verktoy/Nedbetalingskalkulator";
 import { ToolRelatedGuides } from "@/components/verktoy/ToolRelatedGuides";
 import { ToolPageSeo } from "@/components/seo/ToolPageSeo";
 import { createPageMetadata } from "@/lib/seo";
 
 const toolDescription =
-  "Gratis rentekalkulator for ett lån: beregn månedlig terminbeløp, total rentekostnad, og se hva du sparer med ekstra eller engangsinnbetaling.";
+  "Gratis nedbetalingskalkulator: sammenlign lavine og snøball når du har flere lån, og se tid og renter spart med ekstra innbetaling.";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Rentekalkulator",
+  title: "Nedbetalingskalkulator",
   description: toolDescription,
-  path: "/verktoy/rentekalkulator",
-  keywords: ["rentekalkulator", "lånekalkulator", "annuitetslån", "ekstra innbetaling", "boliglån"],
+  path: "/verktoy/nedbetalingskalkulator",
+  keywords: [
+    "nedbetalingskalkulator",
+    "snøballmetoden",
+    "lavinemetoden",
+    "betal ned gjeld",
+    "flere lån",
+    "kredittkort",
+  ],
 });
 
-export default function RentekalkulatorPage() {
+export default function NedbetalingskalkulatorPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
       <ToolPageSeo
-        name="Rentekalkulator"
+        name="Nedbetalingskalkulator"
         description={toolDescription}
-        path="/verktoy/rentekalkulator"
+        path="/verktoy/nedbetalingskalkulator"
       />
       <Link
         href="/verktoy"
@@ -32,35 +39,37 @@ export default function RentekalkulatorPage() {
 
       <header className="mt-4 mb-10">
         <h1 className="text-3xl font-bold tracking-tight text-stone-900 sm:text-4xl">
-          Rentekalkulator
+          Nedbetalingskalkulator
         </h1>
         <p className="mt-3 max-w-2xl text-lg text-stone-600">
-          For ett annuitetslån: se hva lånet koster over tid, og hvor mye du
-          sparer med ekstra innbetaling per måned eller engangsinnbetaling.
+          Har du flere lån? Se hvor raskt du blir gjeldsfri med lavine- eller
+          snøball-metoden, og hva du sparer i renter med ekstra innbetaling hver
+          måned.
         </p>
       </header>
 
-      <Rentekalkulator />
+      <Nedbetalingskalkulator />
 
       <section className="mt-8 rounded-2xl border border-stone-200 bg-stone-50 p-5 text-sm text-stone-700">
-        <p className="font-medium text-stone-900">Flere lån samtidig?</p>
+        <p className="font-medium text-stone-900">Ett enkelt lån?</p>
         <p className="mt-1">
-          For kredittkort, forbrukslån og studielån i én plan, bruk{" "}
+          For boliglån og annuitetslån med terminbeløp og engangsinnbetaling,
+          bruk{" "}
           <Link
-            href="/verktoy/nedbetalingskalkulator"
+            href="/verktoy/rentekalkulator"
             className="font-medium text-orange-600 hover:text-orange-700"
           >
-            nedbetalingskalkulatoren
-          </Link>{" "}
-          (lavine vs. snøball).
+            rentekalkulatoren
+          </Link>
+          .
         </p>
       </section>
 
       <ToolRelatedGuides
         guides={[
           { label: "Betal ned dyr gjeld", href: "/guider/betal-ned-dyr-gjeld" },
-          { label: "Nedbetalingskalkulator (flere lån)", href: "/verktoy/nedbetalingskalkulator" },
-          { label: "Effektiv rente i ordboken", href: "/ordbok/effektiv-rente" },
+          { label: "Rentekalkulator (ett lån)", href: "/verktoy/rentekalkulator" },
+          { label: "Lånets reelle verdi", href: "/verktoy/lanets-reelle-verdi" },
         ]}
       />
     </div>

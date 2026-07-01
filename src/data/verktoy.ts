@@ -22,10 +22,22 @@ export const verktoy: Verktoy[] = [
     status: "published",
     name: "Rentekalkulator",
     description:
-      "Beregn hvor mye lånet ditt koster over tid, og hva du sparer ved ekstra innbetalinger.",
+      "Ett lån (annuitet): beregn terminbeløp, rentekostnad, og hva du sparer med ekstra eller engangsinnbetaling.",
     category: "Gjeld",
     createdAt: "2025-01-05",
-    updatedAt: "2026-06-11",
+    updatedAt: "2026-07-01",
+  },
+  {
+    id: "verktoy-3",
+    slug: "nedbetalingskalkulator",
+    status: "published",
+    featured: true,
+    name: "Nedbetalingskalkulator",
+    description:
+      "Flere lån: sammenlign lavine og snøball, og se tid og renter spart med ekstra innbetaling.",
+    category: "Gjeld",
+    createdAt: "2025-01-08",
+    updatedAt: "2026-07-01",
   },
   {
     id: "verktoy-6",
@@ -107,17 +119,6 @@ export const verktoy: Verktoy[] = [
     category: "Fordeler",
     createdAt: "2026-06-11",
     updatedAt: "2026-06-11",
-  },
-  {
-    id: "verktoy-3",
-    slug: "nedbetalingskalkulator",
-    status: "coming-soon",
-    name: "Nedbetalingskalkulator",
-    description:
-      "Planlegg nedbetaling av gjeld med snøball- eller lavine-metoden.",
-    category: "Gjeld",
-    createdAt: "2025-01-08",
-    updatedAt: "2025-01-08",
   },
   {
     id: "verktoy-4",

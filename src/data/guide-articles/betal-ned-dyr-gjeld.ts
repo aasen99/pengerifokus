@@ -68,7 +68,7 @@ export const betalNedDyrGjeld: GuideArticleContent = {
         "Vurder å selge ting du ikke bruker og betal direkte på lån",
       ],
       paragraphs: [
-        "Selv 500–1 000 kr ekstra i måneden på dyreste lån kan forkorte nedbetalingstiden betydelig. Bruk rentekalkulatoren for å se effekten av ekstra innbetalinger.",
+        "Selv 500–1 000 kr ekstra i måneden på dyreste lån kan forkorte nedbetalingstiden betydelig. Bruk nedbetalingskalkulatoren for flere lån, eller rentekalkulatoren for ett enkelt lån.",
       ],
     },
     {
@@ -114,6 +114,7 @@ export const betalNedDyrGjeld: GuideArticleContent = {
     },
   ],
   relatedLinks: [
+    { label: "Nedbetalingskalkulator", href: "/verktoy/nedbetalingskalkulator" },
     { label: "Rentekalkulator", href: "/verktoy/rentekalkulator" },
     { label: "Kutt faste kostnader", href: "/guider/kutt-faste-kostnader" },
     { label: "Bygg bufferkonto", href: "/guider/bygg-bufferkonto" },
