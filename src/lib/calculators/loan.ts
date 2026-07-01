@@ -3,6 +3,7 @@ export interface LoanInput {
   annualRatePercent: number;
   termYears: number;
   extraMonthlyPayment?: number;
+  lumpSumPayment?: number;
 }
 
 export interface LoanSummary {
@@ -15,8 +16,14 @@ export interface LoanSummary {
 export interface LoanComparison {
   standard: LoanSummary;
   withExtra: LoanSummary | null;
+  withLumpSum: LoanSummary | null;
+  withExtraAndLumpSum: LoanSummary | null;
   monthsSaved: number;
   interestSaved: number;
+  lumpSumMonthsSaved: number;
+  lumpSumInterestSaved: number;
+  combinedMonthsSaved: number;
+  combinedInterestSaved: number;
 }
 
 /** Månedlig terminbeløp for annuitetslån */
@@ -66,6 +73,12 @@ export function simulateLoan(
   };
 }
 
+function applyLumpSum(principal: number, lumpSumPayment?: number): number {
+  const lump = lumpSumPayment ?? 0;
+  if (lump <= 0) return principal;
+  return Math.max(0, principal - lump);
+}
+
 export function compareLoanScenarios(input: LoanInput): LoanComparison {
   const termMonths = Math.round(input.termYears * 12);
   const monthlyPayment = calculateMonthlyPayment(
@@ -81,27 +94,44 @@ export function compareLoanScenarios(input: LoanInput): LoanComparison {
   );
 
   const extra = input.extraMonthlyPayment ?? 0;
-  if (extra <= 0) {
-    return {
-      standard,
-      withExtra: null,
-      monthsSaved: 0,
-      interestSaved: 0,
-    };
-  }
+  const lumpSum = input.lumpSumPayment ?? 0;
 
-  const withExtra = simulateLoan(
-    input.principal,
-    input.annualRatePercent,
-    monthlyPayment,
-    extra,
-  );
+  const withExtra =
+    extra > 0
+      ? simulateLoan(input.principal, input.annualRatePercent, monthlyPayment, extra)
+      : null;
+
+  const principalAfterLumpSum = applyLumpSum(input.principal, lumpSum);
+  const withLumpSum =
+    lumpSum > 0
+      ? simulateLoan(principalAfterLumpSum, input.annualRatePercent, monthlyPayment)
+      : null;
+
+  const withExtraAndLumpSum =
+    extra > 0 && lumpSum > 0
+      ? simulateLoan(
+          principalAfterLumpSum,
+          input.annualRatePercent,
+          monthlyPayment,
+          extra,
+        )
+      : null;
 
   return {
     standard,
     withExtra,
-    monthsSaved: standard.termMonths - withExtra.termMonths,
-    interestSaved: standard.totalInterest - withExtra.totalInterest,
+    withLumpSum,
+    withExtraAndLumpSum,
+    monthsSaved: withExtra ? standard.termMonths - withExtra.termMonths : 0,
+    interestSaved: withExtra ? standard.totalInterest - withExtra.totalInterest : 0,
+    lumpSumMonthsSaved: withLumpSum ? standard.termMonths - withLumpSum.termMonths : 0,
+    lumpSumInterestSaved: withLumpSum ? standard.totalInterest - withLumpSum.totalInterest : 0,
+    combinedMonthsSaved: withExtraAndLumpSum
+      ? standard.termMonths - withExtraAndLumpSum.termMonths
+      : 0,
+    combinedInterestSaved: withExtraAndLumpSum
+      ? standard.totalInterest - withExtraAndLumpSum.totalInterest
+      : 0,
   };
 }
 

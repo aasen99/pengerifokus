@@ -21,6 +21,7 @@ export function Rentekalkulator() {
   const [rate, setRate] = useState("5,5");
   const [years, setYears] = useState("25");
   const [extra, setExtra] = useState(formatIntegerInput(0));
+  const [lumpSum, setLumpSum] = useState(formatIntegerInput(0));
 
   const result = useMemo(() => {
     const parsed = {
@@ -28,6 +29,7 @@ export function Rentekalkulator() {
       annualRatePercent: Number(rate.replace(",", ".")),
       termYears: Number(years.replace(/\s/g, "")),
       extraMonthlyPayment: parseIntegerInput(extra),
+      lumpSumPayment: parseIntegerInput(lumpSum),
     };
 
     if (
@@ -42,7 +44,7 @@ export function Rentekalkulator() {
     }
 
     return compareLoanScenarios(parsed);
-  }, [principal, rate, years, extra]);
+  }, [principal, rate, years, extra, lumpSum]);
 
   return (
     <div className="grid gap-8 lg:grid-cols-2">
@@ -86,6 +88,17 @@ export function Rentekalkulator() {
             <FormattedNumberInput
               value={extra}
               onChange={setExtra}
+              className={calculatorInputClassName}
+            />
+          </CalculatorField>
+
+          <CalculatorField
+            label="Engangsinnbetaling"
+            hint="Valgfritt: nedbetaling som kommer i tillegg (f.eks. sparepenger, bonus, arv)"
+          >
+            <FormattedNumberInput
+              value={lumpSum}
+              onChange={setLumpSum}
               className={calculatorInputClassName}
             />
           </CalculatorField>
@@ -155,6 +168,74 @@ export function Rentekalkulator() {
                     <dt className="text-sm text-stone-600">Totalt tilbakebetalt</dt>
                     <dd className="font-semibold text-stone-900">
                       {formatCurrency(result.withExtra.totalPaid)}
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            )}
+
+            {result.withLumpSum && (
+              <div className="rounded-2xl border border-orange-200 bg-orange-50 p-6">
+                <h2 className="text-lg font-semibold text-stone-900">
+                  Med engangsinnbetaling
+                </h2>
+                <dl className="mt-5 space-y-4">
+                  <div className="flex items-baseline justify-between gap-4">
+                    <dt className="text-sm text-stone-600">Ny nedbetalingstid</dt>
+                    <dd className="font-semibold text-stone-900">
+                      {formatYearsAndMonths(result.withLumpSum.termMonths)}
+                    </dd>
+                  </div>
+                  <div className="flex items-baseline justify-between gap-4">
+                    <dt className="text-sm text-stone-600">Du sparer i renter</dt>
+                    <dd className="text-lg font-semibold text-orange-700">
+                      {formatCurrency(result.lumpSumInterestSaved)}
+                    </dd>
+                  </div>
+                  <div className="flex items-baseline justify-between gap-4">
+                    <dt className="text-sm text-stone-600">Tid spart</dt>
+                    <dd className="font-semibold text-orange-700">
+                      {formatYearsAndMonths(result.lumpSumMonthsSaved)}
+                    </dd>
+                  </div>
+                  <div className="flex items-baseline justify-between gap-4">
+                    <dt className="text-sm text-stone-600">Totalt tilbakebetalt</dt>
+                    <dd className="font-semibold text-stone-900">
+                      {formatCurrency(result.withLumpSum.totalPaid)}
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+            )}
+
+            {result.withExtraAndLumpSum && (
+              <div className="rounded-2xl border border-orange-200 bg-orange-50 p-6">
+                <h2 className="text-lg font-semibold text-stone-900">
+                  Ekstra per måned + engangsinnbetaling
+                </h2>
+                <dl className="mt-5 space-y-4">
+                  <div className="flex items-baseline justify-between gap-4">
+                    <dt className="text-sm text-stone-600">Ny nedbetalingstid</dt>
+                    <dd className="font-semibold text-stone-900">
+                      {formatYearsAndMonths(result.withExtraAndLumpSum.termMonths)}
+                    </dd>
+                  </div>
+                  <div className="flex items-baseline justify-between gap-4">
+                    <dt className="text-sm text-stone-600">Du sparer i renter</dt>
+                    <dd className="text-lg font-semibold text-orange-700">
+                      {formatCurrency(result.combinedInterestSaved)}
+                    </dd>
+                  </div>
+                  <div className="flex items-baseline justify-between gap-4">
+                    <dt className="text-sm text-stone-600">Tid spart</dt>
+                    <dd className="font-semibold text-orange-700">
+                      {formatYearsAndMonths(result.combinedMonthsSaved)}
+                    </dd>
+                  </div>
+                  <div className="flex items-baseline justify-between gap-4">
+                    <dt className="text-sm text-stone-600">Totalt tilbakebetalt</dt>
+                    <dd className="font-semibold text-stone-900">
+                      {formatCurrency(result.withExtraAndLumpSum.totalPaid)}
                     </dd>
                   </div>
                 </dl>
