@@ -86,11 +86,11 @@ export const fordeler: Fordel[] = [
     status: "published",
     name: "EuroBonus",
     description:
-      "SAS sitt bonusprogram for flyreiser. Samle poeng og bruk dem på billetter og oppgraderinger.",
+      "Oversikt over SAS EuroBonus: bonuspoeng, nivåer, SkyTeam-opptjening, Trumf-overføring og når poeng faktisk lønner seg.",
     type: "Flybonus",
     useCase: "Flyreiser og reise",
     createdAt: "2025-01-12",
-    updatedAt: "2025-01-12",
+    updatedAt: "2026-07-02",
   },
   {
     id: "fordel-5",
@@ -98,11 +98,11 @@ export const fordeler: Fordel[] = [
     status: "published",
     name: "Revolut",
     description:
-      "Digital bank med valutaveksling, cashback og reisefordeler avhengig av abonnement.",
+      "Oversikt over Revolut: planer, valutaveksling, RevPoints, reiseforsikring og når betalt abonnement lønner seg.",
     type: "Fintech",
     useCase: "Reise, valuta og dagligbank",
     createdAt: "2025-01-15",
-    updatedAt: "2025-01-15",
+    updatedAt: "2026-07-02",
   },
   {
     id: "fordel-6",
@@ -110,10 +110,10 @@ export const fordeler: Fordel[] = [
     status: "published",
     name: "Kredittkortfordeler",
     description:
-      "Oversikt over bonus, reiseforsikring og andre fordeler knyttet til kredittkort.",
+      "Oversikt over kredittkortfordeler: bonus, forsikring, gebyrer og når kortet faktisk lønner seg.",
     type: "Kredittkort",
     useCase: "Hverdagskjøp, reise og forsikring",
     createdAt: "2025-01-18",
-    updatedAt: "2025-01-18",
+    updatedAt: "2026-07-02",
   },
 ];
