@@ -25,6 +25,7 @@ export const metadata: Metadata = createPageMetadata({
     "trumf pay",
     "spenn",
     "eurobonus",
+    "bankfordeler",
     "medlemsfordeler",
   ],
 });

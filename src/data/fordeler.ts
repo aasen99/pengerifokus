@@ -105,6 +105,18 @@ export const fordeler: Fordel[] = [
     updatedAt: "2026-07-02",
   },
   {
+    id: "fordel-10",
+    slug: "bankfordeler",
+    status: "published",
+    name: "Bankfordeler",
+    description:
+      "Oversikt over bankenes kundeprogrammer: DNB Ung, Pluss, SAGA, Nordea Premium og fagforeningsavtaler.",
+    type: "Bank",
+    useCase: "Lønnskonto, kort og kundeprogram",
+    createdAt: "2026-07-02",
+    updatedAt: "2026-07-02",
+  },
+  {
     id: "fordel-6",
     slug: "kredittkortfordeler",
     status: "published",

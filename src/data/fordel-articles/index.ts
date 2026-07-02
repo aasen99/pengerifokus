@@ -1,4 +1,5 @@
 import type { FordelArticleContent } from "@/types/fordel-article";
+import { bankfordeler } from "./bankfordeler";
 import { coop } from "./coop";
 import { eurobonus } from "./eurobonus";
 import { klarna } from "./klarna";
@@ -13,6 +14,7 @@ import { trumf } from "./trumf";
  * CMS/ADMIN: Fullstendige fordelsartikler lagres her inntil CMS er på plass.
  */
 const fordelArticles: Record<string, FordelArticleContent> = {
+  bankfordeler,
   coop,
   eurobonus,
   klarna,

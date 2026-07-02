@@ -150,6 +150,10 @@ export const revolut: FordelArticleContent = {
     },
   ],
   relatedLinks: [
+    {
+      label: "Kredittkort eller debetkort?",
+      href: "/guider/kredittkort-eller-debetkort",
+    },
     { label: "Kredittkortfordeler", href: "/fordeler/kredittkortfordeler" },
     { label: "Velg riktig kredittkort", href: "/guider/velg-riktig-kredittkort" },
     { label: "Klarna cashback", href: "/fordeler/klarna" },

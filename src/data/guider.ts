@@ -32,16 +32,40 @@ export const guider: Guide[] = [
     updatedAt: "2025-01-20",
   },
   {
+    id: "guide-11",
+    slug: "bankenes-fordelsprogrammer",
+    status: "published",
+    title: "Bankenes fordelsprogrammer",
+    description:
+      "Bankfordeler er lojalitetsprogrammer – ikke veldedighet. Slik vurderer du DNB, Nordea og fagforeningsavtaler.",
+    category: "Bank",
+    tags: ["bank", "dnb", "nordea", "premium", "fagforening"],
+    createdAt: "2026-07-02",
+    updatedAt: "2026-07-02",
+  },
+  {
+    id: "guide-10",
+    slug: "kredittkort-eller-debetkort",
+    status: "published",
+    title: "Kredittkort får konkurranse fra betalte debetkort",
+    description:
+      "Trenger du egentlig kredittkort? Slik sammenligner du betalte debetkort og premium-kredittkort på reise, bonus og pris.",
+    category: "Kredittkort",
+    tags: ["kredittkort", "debetkort", "revolut", "klarna", "reiseforsikring"],
+    createdAt: "2026-07-02",
+    updatedAt: "2026-07-02",
+  },
+  {
     id: "guide-3",
     slug: "velg-riktig-kredittkort",
     status: "published",
     title: "Velg riktig kredittkort",
     description:
-      "Sammenlign kort basert på bonus, gebyrer og bruksmønster, ikke bare rente.",
+      "Enkel bruker eller bonusjeger? Slik velger du kort etter forbruk, mål og om du betaler hele fakturaen.",
     category: "Kredittkort",
-    tags: ["kredittkort", "bonus", "cashback"],
+    tags: ["kredittkort", "bonus", "cashback", "trumf", "eurobonus"],
     createdAt: "2025-02-01",
-    updatedAt: "2025-02-01",
+    updatedAt: "2026-07-02",
   },
   {
     id: "guide-4",

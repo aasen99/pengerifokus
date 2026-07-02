@@ -155,7 +155,12 @@ export const kredittkortfordeler: FordelArticleContent = {
     },
   ],
   relatedLinks: [
+    {
+      label: "Kredittkort eller debetkort?",
+      href: "/guider/kredittkort-eller-debetkort",
+    },
     { label: "Velg riktig kredittkort", href: "/guider/velg-riktig-kredittkort" },
+    { label: "Bankfordeler", href: "/fordeler/bankfordeler" },
     { label: "Bonuskalkulator", href: "/verktoy/bonuskalkulator" },
     { label: "Trumf Kredittkort", href: "/fordeler/trumf" },
     { label: "Coop Mastercard", href: "/fordeler/coop" },
