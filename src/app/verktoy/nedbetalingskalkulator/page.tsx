@@ -6,7 +6,7 @@ import { ToolPageSeo } from "@/components/seo/ToolPageSeo";
 import { createPageMetadata } from "@/lib/seo";
 
 const toolDescription =
-  "Gratis nedbetalingskalkulator: sammenlign lavine og snøball når du har flere lån, og se tid og renter spart med ekstra innbetaling.";
+  "Gratis nedbetalingskalkulator: angi totalt månedsbudsjett for lån, sammenlign lavine og snøball, og se tid og renter spart.";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Nedbetalingskalkulator",
@@ -42,9 +42,8 @@ export default function NedbetalingskalkulatorPage() {
           Nedbetalingskalkulator
         </h1>
         <p className="mt-3 max-w-2xl text-lg text-stone-600">
-          Har du flere lån? Se hvor raskt du blir gjeldsfri med lavine- eller
-          snøball-metoden, og hva du sparer i renter med ekstra innbetaling hver
-          måned.
+          Har du flere lån? Angi hvor mye du totalt kan bruke på lån hver måned,
+          sammenlign lavine og snøball, og se hva du sparer i renter og tid.
         </p>
       </header>
 

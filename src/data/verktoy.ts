@@ -34,7 +34,7 @@ export const verktoy: Verktoy[] = [
     featured: true,
     name: "Nedbetalingskalkulator",
     description:
-      "Flere lån: sammenlign lavine og snøball, og se tid og renter spart med ekstra innbetaling.",
+      "Flere lån: angi månedsbudsjett, sammenlign lavine og snøball, og se tid og renter spart.",
     category: "Gjeld",
     createdAt: "2025-01-08",
     updatedAt: "2026-07-01",

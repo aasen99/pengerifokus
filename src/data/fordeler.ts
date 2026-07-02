@@ -11,11 +11,11 @@ export const fordeler: Fordel[] = [
     featured: true,
     name: "Trumf",
     description:
-      "Bonusprogram fra dagligvarekjeder. Samle poeng på mat og få rabatt på neste handel.",
+      "Oversikt over Trumf-bonus, Trumf Pay, Trippel-Trumf, uttak til bankkonto og fordeler hos dagligvarekjeder og partnere.",
     type: "Bonusprogram",
     useCase: "Dagligvarer og hverdagskjøp",
     createdAt: "2025-01-10",
-    updatedAt: "2025-01-10",
+    updatedAt: "2026-07-02",
   },
   {
     id: "fordel-2",

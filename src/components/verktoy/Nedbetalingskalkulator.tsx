@@ -12,7 +12,9 @@ import {
 import {
   compareDebtPayoffPlans,
   DEFAULT_DEBTS,
+  DEFAULT_MONTHLY_LOAN_BUDGET,
   formatStrategyLabel,
+  getMinimumPaymentsTotal,
   type DebtLine,
   type DebtPayoffSummary,
 } from "@/lib/calculators/nedbetalingsplan";
@@ -66,9 +68,11 @@ function StrategyResultCard({
 
       {!summary.debtFree ? (
         <p className="mt-4 text-sm text-stone-700">
-          {summary.hasGrowingDebt
-            ? "Minimumsbeløpet dekker ikke renten på minst ett lån. Gjelden vil vokse – øk innbetalingen eller refinansier."
-            : "Kunne ikke beregne full nedbetaling innen 50 år. Sjekk tallene eller øk ekstra innbetaling."}
+          {summary.hasInsufficientBudget
+            ? "Månedsbudsjettet er lavere enn summen av minimumsbeløp. Øk budsjettet eller senk minimum på ett av lånene."
+            : summary.hasGrowingDebt
+              ? "Minimumsbeløpet dekker ikke renten på minst ett lån. Gjelden vil vokse – øk budsjettet eller refinansier."
+              : "Kunne ikke beregne full nedbetaling innen 50 år. Sjekk tallene eller øk månedsbudsjettet."}
         </p>
       ) : (
         <dl className="mt-5 space-y-4">
@@ -122,18 +126,25 @@ function StrategyResultCard({
 
 export function Nedbetalingskalkulator() {
   const [debts, setDebts] = useState<DebtLine[]>(DEFAULT_DEBTS);
-  const [extra, setExtra] = useState(formatIntegerInput(2_000));
+  const [monthlyBudget, setMonthlyBudget] = useState(
+    formatIntegerInput(DEFAULT_MONTHLY_LOAN_BUDGET),
+  );
+
+  const minimumTotal = useMemo(
+    () => getMinimumPaymentsTotal(parseDebts(debts) ?? []),
+    [debts],
+  );
 
   const result = useMemo(() => {
     const parsedDebts = parseDebts(debts);
-    const extraMonthly = parseIntegerInput(extra);
+    const budget = parseIntegerInput(monthlyBudget);
 
-    if (!parsedDebts || !Number.isFinite(extraMonthly) || extraMonthly < 0) {
+    if (!parsedDebts || !Number.isFinite(budget) || budget < 0) {
       return null;
     }
 
-    return compareDebtPayoffPlans(parsedDebts, extraMonthly);
-  }, [debts, extra]);
+    return compareDebtPayoffPlans(parsedDebts, budget);
+  }, [debts, monthlyBudget]);
 
   const updateDebt = (id: string, patch: Partial<DebtLine>) => {
     setDebts((current) =>
@@ -165,8 +176,9 @@ export function Nedbetalingskalkulator() {
       <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
         <h2 className="text-lg font-semibold text-stone-900">Dine lån</h2>
         <p className="mt-1 text-sm text-stone-600">
-          Legg inn alle gjeldsposter. Betal minimum på alt, og legg ekstra på ett
-          lån om gangen etter lavine- eller snøball-metoden.
+          Legg inn alle gjeldsposter. Angi hvor mye du totalt kan bruke på lån
+          hver måned – minimumsbeløp trekkes først, resten går til ett lån om
+          gangen etter lavine- eller snøball-metoden.
         </p>
 
         <div className="mt-6 space-y-5">
@@ -252,15 +264,24 @@ export function Nedbetalingskalkulator() {
           </button>
 
           <CalculatorField
-            label="Ekstra per måned"
-            hint="I tillegg til alle minimumsbeløp – går til ett valgt lån"
+            label="Totalt til lån per måned"
+            hint="Summen du faktisk bruker på alle lån – minimum trekkes først, resten går til ett valgt lån"
           >
             <FormattedNumberInput
-              value={extra}
-              onChange={setExtra}
+              value={monthlyBudget}
+              onChange={setMonthlyBudget}
               className={calculatorInputClassName}
             />
           </CalculatorField>
+
+          {minimumTotal > 0 && (
+            <p className="text-xs text-stone-500">
+              Sum minimumsbeløp nå: {formatCurrency(minimumTotal)}.{" "}
+              {parseIntegerInput(monthlyBudget) >= minimumTotal
+                ? `Resten (${formatCurrency(parseIntegerInput(monthlyBudget) - minimumTotal)}) går til nedbetaling etter valgt metode.`
+                : "Budsjettet er lavere enn minimum – gjelden vil ikke krympe som forventet."}
+            </p>
+          )}
         </div>
 
         <p className="mt-5 text-xs leading-relaxed text-stone-500">
@@ -326,7 +347,7 @@ export function Nedbetalingskalkulator() {
                         result.snowball.totalInterestPaid -
                           result.avalanche.totalInterestPaid,
                       )}{" "}
-                      mer i renter enn snøball med samme ekstra beløp.
+                      mer i renter enn snøball med samme månedsbudsjett.
                     </>
                   ) : (
                     <>
