@@ -9,10 +9,10 @@ import { klarnaTilbud } from "@/data/tilbud-klarna";
  * Oppdateres når tilbud verifiseres eller endres hos partner.
  */
 export const tilbudListMeta = {
-  lastUpdated: "2026-06-11",
+  lastUpdated: "2026-07-02",
   sources: [
     "OBOS medlemsfordeler",
-    "Trumf netthandel",
+    "offisielle Trumf Netthandel-sider",
     "Coop medlemsfordeler",
     "NAF medlemsfordeler",
     "Klarna cashback",

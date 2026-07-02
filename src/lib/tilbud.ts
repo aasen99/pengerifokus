@@ -18,6 +18,8 @@ export interface TilbudProgramOffer {
   description: string;
   category: string;
   terms?: string;
+  sourceUrl?: string;
+  warning?: string;
 }
 
 export interface GruppertTilbud {
@@ -61,6 +63,8 @@ export function groupTilbudByPartner(entries: Tilbud[]): GruppertTilbud[] {
         description: entry.description,
         category: entry.category,
         terms: entry.terms,
+        sourceUrl: entry.sourceUrl,
+        warning: entry.warning,
       })),
       categories: [...new Set(sorted.map((entry) => entry.category))].sort((a, b) =>
         a.localeCompare(b, "nb"),
@@ -151,6 +155,7 @@ export function filterTilbud(
       entry.partner,
       entry.category,
       entry.terms ?? "",
+      entry.warning ?? "",
       fordelName,
     ]
       .join(" ")

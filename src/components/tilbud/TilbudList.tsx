@@ -73,13 +73,19 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
   const hasFilters =
     query.trim().length > 0 || fordelSlug !== null || category !== null;
 
+  const showTrumfNetthandelNote =
+    fordelSlug === "trumf" || fordelSlug === null;
+
   const fordelerMedTilbud = fordeler.filter((f) =>
     tilbud.some((t) => t.fordelSlug === f.slug),
   );
 
   return (
     <div className="space-y-6">
-      <TilbudDisclaimer variant="banner" />
+      <TilbudDisclaimer
+        variant="banner"
+        showTrumfNetthandelNote={showTrumfNetthandelNote}
+      />
 
       <div className="rounded-2xl border border-stone-200 bg-white p-4 shadow-sm sm:p-5">
         <label htmlFor="tilbud-search" className="sr-only">
@@ -251,17 +257,63 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
                   <p className="mt-2 flex-1 text-sm leading-relaxed text-stone-600">
                     {group.offers[0].description}
                   </p>
+                  {group.offers[0].warning && (
+                    <p className="mt-3 rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-xs leading-relaxed text-amber-900">
+                      {group.offers[0].warning}
+                    </p>
+                  )}
                   {group.offers[0].terms && (
-                    <p className="mt-3 text-xs text-stone-500">
+                    <p className="mt-3 text-xs leading-relaxed text-stone-500">
                       {group.offers[0].terms}
                     </p>
                   )}
+                  {group.offers[0].sourceUrl && (
+                    <a
+                      href={group.offers[0].sourceUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-3 inline-block text-xs font-medium text-orange-600 hover:text-orange-700"
+                    >
+                      Kilde hos Trumf Netthandel ↗
+                    </a>
+                  )}
                 </>
               ) : (
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-stone-600">
-                  Tilgjengelig via {group.offers.length} medlemskap. Sammenlign
-                  rabatt og vilkår hos partner.
-                </p>
+                <ul className="mt-2 flex-1 space-y-4">
+                  {group.offers.map((offer) => (
+                    <li
+                      key={offer.tilbudId}
+                      className="border-t border-stone-100 pt-4 first:border-t-0 first:pt-0"
+                    >
+                      <p className="text-sm font-medium text-stone-900">
+                        {getFordelName(offer.fordelSlug)} · {offer.offerLabel}
+                      </p>
+                      <p className="mt-1 text-sm leading-relaxed text-stone-600">
+                        {offer.description}
+                      </p>
+                      {offer.warning && (
+                        <p className="mt-2 rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-xs leading-relaxed text-amber-900">
+                          {offer.warning}
+                        </p>
+                      )}
+                      {offer.terms && (
+                        <p className="mt-2 text-xs leading-relaxed text-stone-500">
+                          {offer.terms}
+                        </p>
+                      )}
+                      {offer.sourceUrl && (
+                        <a
+                          href={offer.sourceUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-2 inline-block text-xs font-medium text-orange-600 hover:text-orange-700"
+                        >
+                          Kilde hos Trumf Netthandel ↗
+                        </a>
+                      )}
+                    </li>
+                  ))}
+                </ul>
               )}
             </article>
           ))}

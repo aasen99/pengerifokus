@@ -70,5 +70,9 @@ export interface Tilbud extends BaseContent {
   category: string;
   /** Korte vilkår eller begrensninger */
   terms?: string;
+  /** Offisiell kildelenke hos partner eller fordelsprogram */
+  sourceUrl?: string;
+  /** Ekstra merknad, f.eks. sammenlign totalpris eller verifiser sats */
+  warning?: string;
 }
 
