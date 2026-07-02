@@ -7,6 +7,7 @@ import { funfacts } from "./funfacts";
 import { forstaaOkonomiskHelse } from "./forstaa-okonomisk-helse";
 import { eieEllerLeieBolig } from "./eie-eller-leie-bolig";
 import { inflasjonOgGjeld } from "./inflasjon-og-gjeld";
+import { velgRiktigKredittkort } from "./velg-riktig-kredittkort";
 
 /**
  * CMS/ADMIN: Fullstendige guider lagres her inntil CMS er på plass.
@@ -21,6 +22,7 @@ const guideArticles: Record<string, GuideArticleContent> = {
   "forstaa-okonomisk-helse": forstaaOkonomiskHelse,
   "eie-eller-leie-bolig": eieEllerLeieBolig,
   "inflasjon-og-gjeld": inflasjonOgGjeld,
+  "velg-riktig-kredittkort": velgRiktigKredittkort,
 };
 
 export function getGuideArticle(slug: string): GuideArticleContent | undefined {

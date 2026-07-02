@@ -1,4 +1,22 @@
 import type { OrdbokEntry } from "@/types/content";
+import { normalizeTilbudSearchText } from "@/lib/tilbud";
+
+function matchesOrdbokQuery(entry: OrdbokEntry, query: string): boolean {
+  const searchable = normalizeTilbudSearchText(
+    [
+      entry.term,
+      entry.definition,
+      entry.category,
+      ...(entry.tags ?? []),
+    ].join(" "),
+  );
+
+  const tokens = normalizeTilbudSearchText(query)
+    .split(/\s+/)
+    .filter(Boolean);
+
+  return tokens.every((token) => searchable.includes(token));
+}
 
 /** CMS/ADMIN: Søk og filtrering kan senere flyttes til server/database */
 export function filterOrdbok(
@@ -6,22 +24,13 @@ export function filterOrdbok(
   query: string,
   category: string | null,
 ): OrdbokEntry[] {
-  const normalizedQuery = query.trim().toLowerCase();
+  const normalizedQuery = query.trim();
 
   return entries.filter((entry) => {
     if (category && entry.category !== category) return false;
     if (!normalizedQuery) return true;
 
-    const searchable = [
-      entry.term,
-      entry.definition,
-      entry.category,
-      ...(entry.tags ?? []),
-    ]
-      .join(" ")
-      .toLowerCase();
-
-    return searchable.includes(normalizedQuery);
+    return matchesOrdbokQuery(entry, normalizedQuery);
   });
 }
 

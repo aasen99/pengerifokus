@@ -36,11 +36,11 @@ export const fordeler: Fordel[] = [
     featured: true,
     name: "OBOS",
     description:
-      "Boligorganisasjon med medlemsfordeler på hotell, forsikring, byggevarer og mer.",
+      "Oversikt over OBOS-medlemskap: pris, forkjøpsrett, OBOS-appen og medlemsrabatter på reise, forsikring, byggevarer og kultur.",
     type: "Medlemsfordel",
     useCase: "Bolig, reise og hverdagsrabatter",
     createdAt: "2026-06-11",
-    updatedAt: "2026-06-11",
+    updatedAt: "2026-07-02",
   },
   {
     id: "fordel-8",
@@ -49,11 +49,11 @@ export const fordeler: Fordel[] = [
     featured: true,
     name: "NAF",
     description:
-      "Motorenes medlemsorganisasjon med rabatter på bil, reise, hotell og hverdagstjenester.",
+      "Oversikt over NAF-medlemskap: veihjelp, nøkkelforsikring, pris og rabatter på bil, reise, hotell og hverdagstjenester.",
     type: "Medlemsfordel",
     useCase: "Bil, reise og medlemsrabatter",
     createdAt: "2026-06-11",
-    updatedAt: "2026-06-11",
+    updatedAt: "2026-07-02",
   },
   {
     id: "fordel-9",
@@ -62,11 +62,11 @@ export const fordeler: Fordel[] = [
     featured: true,
     name: "Klarna",
     description:
-      "Cashback når du handler via Klarna hos hundrevis av nettbutikker og tjenester.",
+      "Slik fungerer Klarna cashback: opptjening i appen, Krav om Klarna-saldo, utbetalingstid og vanlige fallgruver.",
     type: "Cashback",
     useCase: "Netthandel",
     createdAt: "2026-06-11",
-    updatedAt: "2026-06-11",
+    updatedAt: "2026-07-02",
   },
   {
     id: "fordel-3",

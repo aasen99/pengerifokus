@@ -9,6 +9,20 @@ const paths = [
     icon: "🩺",
   },
   {
+    href: "/tilbud",
+    title: "Finn medlemsrabatter",
+    description:
+      "Søkbare tilbud fra Trumf, OBOS, Klarna, NAF og Coop – filtrer etter program.",
+    icon: "🏷️",
+  },
+  {
+    href: "/guider",
+    title: "Les guider",
+    description:
+      "Fra bufferkonto og gjeld til bolig og kredittkort – steg for steg.",
+    icon: "📚",
+  },
+  {
     href: "/verktoy",
     title: "Regn på store valg",
     description:
@@ -19,15 +33,15 @@ const paths = [
     href: "/ordbok",
     title: "Slå opp begreper",
     description:
-      "Fra ASK og effektiv rente til inflasjon, forklart uten bankjargong.",
+      "Fra ASK og effektiv rente til lavinemetode og bonuspoeng.",
     icon: "📖",
   },
   {
-    href: "/formuesbyggere",
-    title: "Lær av andre",
+    href: "/fordeler",
+    title: "Fordelsprogrammer",
     description:
-      "Hvordan kjente formuesbyggere startet, og hva vi kan lære av eierskap.",
-    icon: "🏗️",
+      "Trumf, Coop, Spenn og mer – hva de gir og når de passer deg.",
+    icon: "🎁",
   },
 ];
 
@@ -37,26 +51,26 @@ export function QuickPaths() {
       <h2 className="text-2xl font-bold text-stone-900">Hvor vil du starte?</h2>
       <p className="mt-2 max-w-2xl text-stone-600">
         Velg det som passer situasjonen din nå. Du kan alltid hoppe videre til
-        guider, tilbud eller flere verktøy senere.
+        flere verktøy, tilbud eller profiler senere.
       </p>
 
-      <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {paths.map((path) => (
           <Link
             key={path.href}
             href={path.href}
-            className="group flex flex-col rounded-2xl border border-stone-200 bg-white p-5 shadow-sm transition-all hover:border-orange-200 hover:bg-orange-50/30"
+            className="group rounded-2xl border border-stone-200 bg-white p-5 shadow-sm transition-all hover:border-orange-200 hover:shadow-md"
           >
             <span className="text-2xl" aria-hidden="true">
               {path.icon}
             </span>
-            <h3 className="mt-3 font-semibold text-stone-900 group-hover:text-orange-700">
+            <h3 className="mt-3 text-lg font-semibold text-stone-900 group-hover:text-orange-700">
               {path.title}
             </h3>
-            <p className="mt-2 flex-1 text-sm leading-relaxed text-stone-600">
+            <p className="mt-2 text-sm leading-relaxed text-stone-600">
               {path.description}
             </p>
-            <span className="mt-4 text-sm font-semibold text-orange-600">
+            <span className="mt-4 inline-block text-sm font-semibold text-orange-600 group-hover:text-orange-700">
               Gå dit →
             </span>
           </Link>

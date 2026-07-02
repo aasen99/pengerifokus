@@ -157,6 +157,7 @@ export const spenn: FordelArticleContent = {
     },
   ],
   relatedLinks: [
+    { label: "Bonuskalkulator", href: "/verktoy/bonuskalkulator" },
     { label: "EuroBonus – SAS sitt bonusprogram", href: "/fordeler/eurobonus" },
     { label: "Trumf – bonus hos NorgesGruppen", href: "/fordeler/trumf" },
     { label: "Fordelsprogrammer – oversikt", href: "/fordeler" },

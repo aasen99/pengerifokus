@@ -4,9 +4,10 @@ const statLabels: { key: keyof ReturnType<typeof getHomeStats>; label: string }[
   [
     { key: "tools", label: "kalkulatorer" },
     { key: "guides", label: "guider" },
-    { key: "ordbok", label: "ordbok-artikler" },
-    { key: "formuesbyggere", label: "profiler" },
+    { key: "fordeler", label: "fordelsprogrammer" },
     { key: "tilbud", label: "tilbud" },
+    { key: "ordbok", label: "ordbok" },
+    { key: "formuesbyggere", label: "profiler" },
   ];
 
 export function HomeStats() {
@@ -15,7 +16,7 @@ export function HomeStats() {
   return (
     <section
       aria-label="Oversikt over innhold"
-      className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5"
+      className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6"
     >
       {statLabels.map(({ key, label }) => (
         <div

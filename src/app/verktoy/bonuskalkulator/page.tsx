@@ -54,9 +54,12 @@ export default function BonuskalkulatorPage() {
 
       <ToolRelatedGuides
         guides={[
-          { label: "Trumf fordelsprogram", href: "/fordeler/trumf" },
-          { label: "Kutt faste kostnader", href: "/guider/kutt-faste-kostnader" },
-          { label: "Fordelsprogrammer", href: "/fordeler" },
+          { label: "Velg riktig kredittkort", href: "/guider/velg-riktig-kredittkort" },
+          { label: "Bonuspoeng (ordbok)", href: "/ordbok/bonuspoeng" },
+          { label: "Trumf", href: "/fordeler/trumf" },
+          { label: "Spenn", href: "/fordeler/spenn" },
+          { label: "Kredittkortfordeler", href: "/fordeler/kredittkortfordeler" },
+          { label: "Se tilbud", href: "/tilbud" },
         ]}
       />
     </div>

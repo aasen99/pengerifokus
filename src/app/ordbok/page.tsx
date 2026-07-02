@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Suspense } from "react";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { OrdbokList } from "@/components/ordbok/OrdbokList";
 import { getOrdbok } from "@/lib/content";
@@ -50,7 +51,15 @@ export default function OrdbokPage() {
         </Link>
       </div>
 
-      <OrdbokList entries={entries} />
+      <Suspense
+        fallback={
+          <div className="rounded-2xl border border-stone-200 bg-white p-6 text-sm text-stone-600">
+            Laster ordbok...
+          </div>
+        }
+      >
+        <OrdbokList entries={entries} />
+      </Suspense>
     </div>
   );
 }

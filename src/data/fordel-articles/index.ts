@@ -1,5 +1,8 @@
 import type { FordelArticleContent } from "@/types/fordel-article";
 import { coop } from "./coop";
+import { klarna } from "./klarna";
+import { naf } from "./naf";
+import { obos } from "./obos";
 import { spenn } from "./spenn";
 import { trumf } from "./trumf";
 
@@ -8,6 +11,9 @@ import { trumf } from "./trumf";
  */
 const fordelArticles: Record<string, FordelArticleContent> = {
   coop,
+  klarna,
+  naf,
+  obos,
   spenn,
   trumf,
 };

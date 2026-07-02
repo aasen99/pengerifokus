@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import type { OrdbokEntry } from "@/types/content";
 import { Tag } from "@/components/ui/Tag";
 import {
@@ -35,8 +36,30 @@ function SearchIcon() {
 }
 
 export function OrdbokList({ entries }: OrdbokListProps) {
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState<string | null>(null);
+
+  const updateQueryInUrl = useCallback(
+    (nextQuery: string) => {
+      const params = new URLSearchParams(searchParams.toString());
+      const trimmed = nextQuery.trim();
+
+      if (trimmed) params.set("q", trimmed);
+      else params.delete("q");
+
+      const qs = params.toString();
+      router.replace(qs ? `${pathname}?${qs}` : pathname, { scroll: false });
+    },
+    [pathname, router, searchParams],
+  );
+
+  useEffect(() => {
+    setQuery(searchParams.get("q") ?? "");
+  }, [searchParams]);
 
   const categories = useMemo(() => getOrdbokCategories(entries), [entries]);
 
@@ -61,14 +84,20 @@ export function OrdbokList({ entries }: OrdbokListProps) {
             id="ordbok-search"
             type="search"
             value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Søk etter begrep, forklaring eller emne..."
+            onChange={(e) => {
+              setQuery(e.target.value);
+              updateQueryInUrl(e.target.value);
+            }}
+            placeholder="Søk begrep, forklaring eller emne…"
             className={`${calculatorInputClassName} pl-10 pr-10`}
           />
           {query && (
             <button
               type="button"
-              onClick={() => setQuery("")}
+              onClick={() => {
+                setQuery("");
+                updateQueryInUrl("");
+              }}
               className="absolute inset-y-0 right-3 text-sm font-medium text-stone-500 hover:text-stone-800"
               aria-label="Tøm søk"
             >
@@ -76,6 +105,10 @@ export function OrdbokList({ entries }: OrdbokListProps) {
             </button>
           )}
         </div>
+        <p className="mt-2 text-xs text-stone-500">
+          Tips: du kan søke på flere ord, f.eks. «effektiv rente» eller «bonus
+          trumf».
+        </p>
 
         <div className="mt-4 flex flex-wrap gap-2">
           <button
@@ -151,6 +184,7 @@ export function OrdbokList({ entries }: OrdbokListProps) {
               onClick={() => {
                 setQuery("");
                 setCategory(null);
+                updateQueryInUrl("");
               }}
               className="mt-4 text-sm font-semibold text-orange-600 hover:text-orange-700"
             >

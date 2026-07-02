@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { FeaturedGuides } from "@/components/home/FeaturedGuides";
 import { FeaturedTools } from "@/components/home/FeaturedTools";
 import { Hero } from "@/components/home/Hero";
 import { HomeStats } from "@/components/home/HomeStats";
@@ -34,6 +35,8 @@ export default function HomePage() {
 
       <div className="mt-16 space-y-16">
         <QuickPaths />
+
+        <FeaturedGuides />
 
         <FeaturedTools />
 

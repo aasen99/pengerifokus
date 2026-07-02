@@ -14,7 +14,7 @@ export function ToolRelatedGuides({ guides }: ToolRelatedGuidesProps) {
 
   return (
     <section className="mt-12 rounded-2xl border border-stone-200 bg-stone-50 p-6">
-      <h2 className="text-lg font-semibold text-stone-900">Relaterte guider</h2>
+      <h2 className="text-lg font-semibold text-stone-900">Les også</h2>
       <ul className="mt-3 space-y-2">
         {guides.map((guide) => (
           <li key={guide.href}>
