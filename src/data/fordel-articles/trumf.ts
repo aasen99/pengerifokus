@@ -7,9 +7,10 @@ export const trumf: FordelArticleContent = {
   intro:
     "Trumf er bonusprogrammet til NorgesGruppen der du samler Trumf-bonus på dagligvarer, hos utvalgte partnere og via Trumf Netthandel. Her får du oversikt over standardbonus, Trumf Pay, Trippel-Trumf, uttak til bankkonto, kjedespesifikke fordeler og Trumf Kredittkort.",
   lastVerified: "2. juli 2026",
+  lastModifiedIso: "2026-07-02",
   seoTitle: "Trumf-bonus: satser, uttak, Trumf Pay og fordeler",
   seoDescription:
-    "Få oversikt over Trumf-bonus, standard bonus, Trumf Pay, Trippel-Trumf, uttak til bankkonto, KIWI PLUSS, MENY MER, partnerfordeler og Trumf Kredittkort.",
+    "Oversikt over Trumf-bonus: 1 % standard, Trippel-Trumf, Trumf Pay, uttak til bank, KIWI PLUSS, MENY MER og Trumf Kredittkort.",
   seoKeywords: [
     "Trumf",
     "Trumf-bonus",
@@ -97,7 +98,7 @@ export const trumf: FordelArticleContent = {
         "KIWI PLUSS: 1 % Trumf-bonus på dagligvarer, 15 % på all fersk frukt og grønt, 50 % på bleier, bind, tamponger og truseinnlegg. På Trippel-Trumf-torsdag oppgir KIWI 17 % på frukt og grønt og 3 % på andre dagligvarer",
         "MENY MER: Trumf-bonus, personlige tilbud, rabattkuponger, bursdagsgave og ekstra fordeler. Konkrete satser og velkomstfordeler bør sjekkes hos MENY før du legger til grunn for beslutninger",
         "SPAR/EUROSPAR: 1 % Trumf-bonus, 3 % på utvalgte Trippel-Trumf-torsdager, 1 % ekstra med Trumf Pay og 1 % ekstra med Trumf Kredittkort. SPAR oppgir også gratiskuponger og 51 % avslag på alle Libero-bleier for Trumf-medlemmer",
-        "Joker GLAD: Jokers eget fordelsopplegg. Tidligere kilder har oppgitt 6 % Trumf-bonus på dagligvarer hos Joker på mandager, men dette bør verifiseres hos Joker før publisering i egne beslutninger",
+        "Joker GLAD: Jokers eget fordelsopplegg. Tidligere kilder har oppgitt 6 % Trumf-bonus på dagligvarer hos Joker på mandager, men satsen bør verifiseres hos Joker før du handler",
         "Nærbutikken: Inngår i Trumf og støtter Trumf Pay, men det ble ikke funnet et eget ekstra medlemsprogram i denne gjennomgangen",
         "Gigaboks: Inngår i Trumf med eget fordelsopplegg kalt Gigaboks Jippi. Standardbonus og konkrete Jippi-fordeler bør sjekkes hos Trumf og Gigaboks",
       ],
@@ -157,6 +158,38 @@ export const trumf: FordelArticleContent = {
         "Personlige tilbud og kuponger kan bygge på kjøpshistorikk og persondata. Les Trumfs personvernerklæring for detaljer",
         "Satser hos MENY MER, Joker GLAD, Gigaboks, SAS EuroBonus og drivstoffpartnere bør dobbeltsjekkes hos utsteder",
       ],
+    },
+  ],
+  faq: [
+    {
+      question: "Hvor mye Trumf-bonus får jeg normalt?",
+      answer:
+        "Standard grunnbonus er 1 % Trumf-bonus hos dagligvarekjeder tilknyttet Trumf, som KIWI, MENY og SPAR. På utvalgte Trippel-Trumf-dager kan du få 3 %, og med Trumf Pay kan du få ekstra bonus opp til 4 % på slike dager.",
+    },
+    {
+      question: "Kan jeg ta ut Trumf-bonus til bankkonto?",
+      answer:
+        "Ja. Bankoverføring er gebyrfri med minstebeløp 10 kr. Normal utbetalingstid er 2–4 virkedager, og du trenger registrert bankkonto hos Trumf.",
+    },
+    {
+      question: "Hva er Trippel-Trumf?",
+      answer:
+        "Trippel-Trumf er utvalgte dager der du får 3 % Trumf-bonus: 1 % grunnbonus pluss 2 % ekstra Trippel-Trumf-bonus. Hvilke dager som gjelder, varierer og bør sjekkes hos Trumf.",
+    },
+    {
+      question: "Gir Trumf-saldoen rente?",
+      answer:
+        "Trumf oppgir ikke rente på Trumf-saldoen på sine åpne informasjonssider. Bonusen ser derfor ikke ut til å gi avkastning mens den ligger på kontoen.",
+    },
+    {
+      question: "Hva gir Trumf Pay i ekstra bonus?",
+      answer:
+        "Trumf Pay gir 1 % ekstra Trumf-bonus. Ved vanlig handel blir det totalt 2 % (1 % grunnbonus + 1 % Trumf Pay). På Trippel-Trumf-dager med Trumf Pay oppgir Trumf totalt 4 %.",
+    },
+    {
+      question: "Gjelder Trumf-bonus på alle varer?",
+      answer:
+        "Nei, ikke nødvendigvis. Enkelte varetyper og tjenester gir ikke bonus. Eksempler hos KIWI er pant, spill, gavekort og post i butikk. Sjekk unntak hos den enkelte kjeden.",
     },
   ],
   sources: [

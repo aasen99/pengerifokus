@@ -62,6 +62,23 @@ export function getArticleJsonLd({
   };
 }
 
+export function getFaqPageJsonLd(
+  items: { question: string; answer: string }[],
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+}
+
 export function getDefinedTermJsonLd({
   term,
   definition,

@@ -15,3 +15,7 @@ export function getFordelArticle(slug: string): FordelArticleContent | undefined
 export function hasFordelArticle(slug: string): boolean {
   return slug in fordelArticles;
 }
+
+export function getFordelArticleSlugs(): string[] {
+  return Object.keys(fordelArticles);
+}

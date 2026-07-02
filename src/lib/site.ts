@@ -1,3 +1,4 @@
+import { getFordelArticleSlugs } from "@/data/fordel-articles";
 import { getGuideArticleSlugs } from "@/data/guide-articles";
 import { getFormuesbyggerSlugs } from "@/data/formuesbygger-articles";
 import { fordeler } from "@/data/fordeler";
@@ -66,12 +67,14 @@ const guideArticleRoutes: PublicRoute[] = getGuideArticleSlugs().map((slug) => (
   changeFrequency: "monthly",
 }));
 
+const fordelArticleSlugs = new Set(getFordelArticleSlugs());
+
 const fordelRoutes: PublicRoute[] = fordeler
   .filter((fordel) => fordel.status === "published")
   .map((fordel) => ({
     path: `/fordeler/${fordel.slug}`,
-    priority: 0.8,
-    changeFrequency: "monthly",
+    priority: fordelArticleSlugs.has(fordel.slug) ? 0.85 : 0.8,
+    changeFrequency: "monthly" as const,
     lastModified: fordel.updatedAt,
   }));
 

@@ -10,6 +10,11 @@ export interface FordelArticleSource {
   url: string;
 }
 
+export interface FordelArticleFaqItem {
+  question: string;
+  answer: string;
+}
+
 /** CMS/ADMIN: Full artikkelinnhold for fordelsprogrammer */
 export interface FordelArticleContent {
   slug: string;
@@ -17,10 +22,13 @@ export interface FordelArticleContent {
   readTimeMinutes: number;
   intro: string;
   lastVerified: string;
+  /** ISO-dato for structured data og sitemap, f.eks. 2026-07-02 */
+  lastModifiedIso: string;
   seoTitle: string;
   seoDescription: string;
   seoKeywords: string[];
   sections: FordelArticleSection[];
+  faq?: FordelArticleFaqItem[];
   sources: FordelArticleSource[];
   relatedLinks?: { label: string; href: string }[];
 }

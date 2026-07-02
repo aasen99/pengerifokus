@@ -7,7 +7,7 @@ import { FORDELSPROGRAMMER_TITLE } from "@/data/content-labels";
 import { getFordelArticle } from "@/data/fordel-articles";
 import { getFordelBySlug, getFordeler, getTilbudByFordel } from "@/lib/content";
 import { createPageMetadata } from "@/lib/seo";
-import { getArticleJsonLd, getBreadcrumbJsonLd } from "@/lib/structured-data";
+import { getArticleJsonLd, getBreadcrumbJsonLd, getFaqPageJsonLd } from "@/lib/structured-data";
 
 interface FordelPageProps {
   params: Promise<{ slug: string }>;
@@ -39,7 +39,7 @@ export async function generateMetadata({
     ],
     openGraphType: article ? "article" : "website",
     publishedTime: fordel.createdAt,
-    modifiedTime: fordel.updatedAt,
+    modifiedTime: article?.lastModifiedIso ?? fordel.updatedAt,
   });
 }
 
@@ -62,15 +62,20 @@ export default async function FordelPage({ params }: FordelPageProps) {
         ])}
       />
       {article && (
-        <JsonLd
-          data={getArticleJsonLd({
-            title: article.seoTitle,
-            description: article.seoDescription,
-            path,
-            datePublished: fordel.createdAt,
-            dateModified: fordel.updatedAt,
-          })}
-        />
+        <>
+          <JsonLd
+            data={getArticleJsonLd({
+              title: article.title,
+              description: article.seoDescription,
+              path,
+              datePublished: fordel.createdAt,
+              dateModified: article.lastModifiedIso,
+            })}
+          />
+          {article.faq && article.faq.length > 0 && (
+            <JsonLd data={getFaqPageJsonLd(article.faq)} />
+          )}
+        </>
       )}
       {article ? (
         <FordelArticle fordel={fordel} article={article} tilbud={tilbud} />

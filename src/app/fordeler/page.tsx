@@ -7,19 +7,22 @@ import {
   FORDELSPROGRAMMER_TITLE,
   TILBUD_TITLE,
 } from "@/data/content-labels";
+import { hasFordelArticle } from "@/data/fordel-articles";
 import { getFordeler, getTilbudByFordel } from "@/lib/content";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
   title: FORDELSPROGRAMMER_TITLE,
   description:
-    "Lær om fordelsprogrammer som Trumf, OBOS og Spenn: hva de er og når de passer.",
+    "Oversikt over Trumf, OBOS, Spenn og andre fordelsprogrammer. Les guider om bonus, uttak og når programmene passer deg.",
   path: "/fordeler",
   keywords: [
     "fordelsprogram",
     "bonusprogram",
     "cashback",
     "trumf",
+    "trumf-bonus",
+    "trumf pay",
     "spenn",
     "eurobonus",
     "medlemsfordeler",
@@ -39,6 +42,7 @@ export default function FordelerPage() {
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {fordeler.map((fordel) => {
           const tilbudCount = getTilbudByFordel(fordel.slug).length;
+          const hasArticle = hasFordelArticle(fordel.slug);
 
           return (
             <ContentCard
@@ -48,9 +52,10 @@ export default function FordelerPage() {
               meta={fordel.type}
               tags={[
                 fordel.useCase,
+                ...(hasArticle ? ["Full guide"] : []),
                 ...(tilbudCount > 0 ? [`${tilbudCount} tilbud samlet`] : []),
               ]}
-              actionLabel="Les om programmet"
+              actionLabel={hasArticle ? "Les guiden" : "Les om programmet"}
               href={`/fordeler/${fordel.slug}`}
             />
           );
