@@ -23,11 +23,11 @@ export const fordeler: Fordel[] = [
     status: "published",
     name: "Coop",
     description:
-      "Medlemsfordeler og utbytte i Coop-kjeden. Bonus avhenger av medlemskap og kjøp.",
+      "Oversikt over Coop Medlem, kjøpeutbytte, medlemskonto, samvirkelagssatser, Extra-fordeler og Coop Mastercard.",
     type: "Medlemsfordel",
     useCase: "Dagligvarer og medlemsrabatter",
     createdAt: "2025-01-10",
-    updatedAt: "2025-01-10",
+    updatedAt: "2026-07-02",
   },
   {
     id: "fordel-7",

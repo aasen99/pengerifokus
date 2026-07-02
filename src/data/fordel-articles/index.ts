@@ -1,10 +1,12 @@
 import type { FordelArticleContent } from "@/types/fordel-article";
+import { coop } from "./coop";
 import { trumf } from "./trumf";
 
 /**
  * CMS/ADMIN: Fullstendige fordelsartikler lagres her inntil CMS er på plass.
  */
 const fordelArticles: Record<string, FordelArticleContent> = {
+  coop,
   trumf,
 };
 
