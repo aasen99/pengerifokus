@@ -74,11 +74,11 @@ export const fordeler: Fordel[] = [
     status: "published",
     name: "Spenn",
     description:
-      "Felles lojalitetsprogram for Strawberry, Norwegian og Rema 1000. Samle poeng på hotell, fly og dagligvarer.",
+      "Felles poengvaluta hos Norwegian, Strawberry og REMA 1000. Slik tjener og bruker du Spenn – og hvorfor verdien varierer.",
     type: "Lojalitetsprogram",
     useCase: "Reise, hotell og dagligvarer",
     createdAt: "2025-01-12",
-    updatedAt: "2026-06-11",
+    updatedAt: "2026-07-02",
   },
   {
     id: "fordel-4",

@@ -1,5 +1,41 @@
 import type { Tilbud } from "@/types/content";
 import { getFordeler } from "@/lib/content";
+import { matchesTilbudCategoryGroup } from "@/lib/tilbud-categories";
+
+/** Normaliserer søketekst for treff uten hensyn til aksenter */
+export function normalizeTilbudSearchText(text: string): string {
+  return text
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/æ/g, "ae")
+    .replace(/ø/g, "o")
+    .replace(/å/g, "a");
+}
+
+function matchesTilbudQuery(entry: Tilbud, query: string): boolean {
+  const fordelName =
+    getFordeler().find((f) => f.slug === entry.fordelSlug)?.name ?? "";
+
+  const searchable = normalizeTilbudSearchText(
+    [
+      entry.title,
+      entry.description,
+      entry.offerLabel,
+      entry.partner,
+      entry.category,
+      entry.terms ?? "",
+      entry.warning ?? "",
+      fordelName,
+    ].join(" "),
+  );
+
+  const tokens = normalizeTilbudSearchText(query)
+    .split(/\s+/)
+    .filter(Boolean);
+
+  return tokens.every((token) => searchable.includes(token));
+}
 
 /** Normaliserer partnernavn for å finne like tilbud på tvers av programmer */
 export function normalizePartnerKey(partner: string): string {
@@ -136,38 +172,38 @@ export function filterTilbud(
   entries: Tilbud[],
   query: string,
   fordelSlug: string | null,
-  category: string | null,
+  categoryGroup: string | null,
 ): Tilbud[] {
-  const normalizedQuery = query.trim().toLowerCase();
+  const normalizedQuery = query.trim();
 
   return entries.filter((entry) => {
     if (fordelSlug && entry.fordelSlug !== fordelSlug) return false;
-    if (category && entry.category !== category) return false;
+    if (
+      categoryGroup &&
+      !matchesTilbudCategoryGroup(entry.category, categoryGroup)
+    ) {
+      return false;
+    }
     if (!normalizedQuery) return true;
 
-    const fordelName =
-      getFordeler().find((f) => f.slug === entry.fordelSlug)?.name ?? "";
-
-    const searchable = [
-      entry.title,
-      entry.description,
-      entry.offerLabel,
-      entry.partner,
-      entry.category,
-      entry.terms ?? "",
-      entry.warning ?? "",
-      fordelName,
-    ]
-      .join(" ")
-      .toLowerCase();
-
-    return searchable.includes(normalizedQuery);
+    return matchesTilbudQuery(entry, normalizedQuery);
   });
 }
 
 export function getTilbudCategories(entries: Tilbud[]): string[] {
   return [...new Set(entries.map((entry) => entry.category))].sort((a, b) =>
     a.localeCompare(b, "nb"),
+  );
+}
+
+/** Kategorier tilgjengelig etter program- og søkefilter (uten kategorifilter) */
+export function getVisibleTilbudCategories(
+  entries: Tilbud[],
+  query: string,
+  fordelSlug: string | null,
+): string[] {
+  return getTilbudCategories(
+    filterTilbud(entries, query, fordelSlug, null),
   );
 }
 

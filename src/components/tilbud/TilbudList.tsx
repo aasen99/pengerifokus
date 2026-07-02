@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
-import { useEffect, useMemo, useState } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import {
   FORDELSPROGRAMMER_TITLE,
   TILBUD_TITLE,
@@ -14,12 +14,13 @@ import { TilbudDisclaimer } from "@/components/tilbud/TilbudDisclaimer";
 import {
   filterTilbud,
   getFordelName,
-  getTilbudCategories,
+  getVisibleTilbudCategories,
   groupTilbudByPartner,
   sortGruppertTilbud,
   TILBUD_SORT_OPTIONS,
   type TilbudSortOption,
 } from "@/lib/tilbud";
+import { getTilbudCategoryGroupOptions } from "@/lib/tilbud-categories";
 import { calculatorInputClassName } from "@/components/verktoy/calculator-ui";
 
 interface TilbudListProps {
@@ -47,22 +48,69 @@ function SearchIcon() {
 }
 
 export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
+  const router = useRouter();
+  const pathname = usePathname();
   const searchParams = useSearchParams();
+
   const [query, setQuery] = useState("");
   const [fordelSlug, setFordelSlug] = useState<string | null>(null);
-  const [category, setCategory] = useState<string | null>(null);
-  const [sort, setSort] = useState<TilbudSortOption>("name-asc");
+  const [categoryGroup, setCategoryGroup] = useState<string | null>(null);
+  const [sort, setSort] = useState<TilbudSortOption>("rate-desc");
+
+  const updateUrl = useCallback(
+    (next: { program?: string | null; kategori?: string | null }) => {
+      const params = new URLSearchParams(searchParams.toString());
+
+      if (next.program !== undefined) {
+        if (next.program) params.set("program", next.program);
+        else params.delete("program");
+      }
+
+      if (next.kategori !== undefined) {
+        if (next.kategori) params.set("kategori", next.kategori);
+        else params.delete("kategori");
+      }
+
+      const qs = params.toString();
+      router.replace(qs ? `${pathname}?${qs}` : pathname, { scroll: false });
+    },
+    [pathname, router, searchParams],
+  );
 
   useEffect(() => {
     const program = searchParams.get("program");
-    if (program) setFordelSlug(program);
+    const kategori = searchParams.get("kategori");
+    setFordelSlug(program);
+    setCategoryGroup(kategori);
   }, [searchParams]);
 
-  const categories = useMemo(() => getTilbudCategories(tilbud), [tilbud]);
+  const fordelerMedTilbud = fordeler.filter((f) =>
+    tilbud.some((t) => t.fordelSlug === f.slug),
+  );
+
+  const visibleCategories = useMemo(
+    () => getVisibleTilbudCategories(tilbud, query, fordelSlug),
+    [tilbud, query, fordelSlug],
+  );
+
+  const categoryOptions = useMemo(
+    () => getTilbudCategoryGroupOptions(visibleCategories),
+    [visibleCategories],
+  );
+
+  useEffect(() => {
+    if (
+      categoryGroup &&
+      !categoryOptions.some((option) => option.group === categoryGroup)
+    ) {
+      setCategoryGroup(null);
+      updateUrl({ kategori: null });
+    }
+  }, [categoryGroup, categoryOptions, updateUrl]);
 
   const filtered = useMemo(
-    () => filterTilbud(tilbud, query, fordelSlug, category),
-    [tilbud, query, fordelSlug, category],
+    () => filterTilbud(tilbud, query, fordelSlug, categoryGroup),
+    [tilbud, query, fordelSlug, categoryGroup],
   );
 
   const grouped = useMemo(
@@ -71,14 +119,28 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
   );
 
   const hasFilters =
-    query.trim().length > 0 || fordelSlug !== null || category !== null;
+    query.trim().length > 0 || fordelSlug !== null || categoryGroup !== null;
 
   const showTrumfNetthandelNote =
     fordelSlug === "trumf" || fordelSlug === null;
 
-  const fordelerMedTilbud = fordeler.filter((f) =>
-    tilbud.some((t) => t.fordelSlug === f.slug),
-  );
+  const setProgramFilter = (slug: string | null) => {
+    const next = slug === fordelSlug ? null : slug;
+    setFordelSlug(next);
+    updateUrl({ program: next });
+  };
+
+  const setCategoryFilter = (group: string | null) => {
+    setCategoryGroup(group);
+    updateUrl({ kategori: group });
+  };
+
+  const resetFilters = () => {
+    setQuery("");
+    setFordelSlug(null);
+    setCategoryGroup(null);
+    updateUrl({ program: null, kategori: null });
+  };
 
   return (
     <div className="space-y-6">
@@ -100,7 +162,7 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
             type="search"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Søk etter tilbud, partner eller medlemskap..."
+            placeholder="Søk partner, kategori eller medlemskap…"
             className={`${calculatorInputClassName} pl-10 pr-10`}
           />
           {query && (
@@ -114,74 +176,103 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
             </button>
           )}
         </div>
+        <p className="mt-2 text-xs text-stone-500">
+          Tips: du kan søke på flere ord, f.eks. «trumf hotell» eller «obos reise».
+        </p>
 
-        <div className="mt-4">
-          <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-stone-500">
-            Fordelsprogram
-          </p>
-          <div className="flex flex-wrap gap-2">
-            <button
-              type="button"
-              onClick={() => setFordelSlug(null)}
-              className={`rounded-full px-3 py-1.5 text-sm font-medium transition-colors ${
-                fordelSlug === null
-                  ? "bg-stone-800 text-white"
-                  : "bg-stone-100 text-stone-700 hover:bg-stone-200"
-              }`}
+        <div className="mt-5 grid gap-4 sm:grid-cols-2">
+          <div>
+            <label
+              htmlFor="tilbud-program"
+              className="mb-2 block text-xs font-semibold uppercase tracking-wider text-stone-500"
             >
-              Alle
-            </button>
-            {fordelerMedTilbud.map((fordel) => (
-              <button
-                key={fordel.slug}
-                type="button"
-                onClick={() =>
-                  setFordelSlug(fordel.slug === fordelSlug ? null : fordel.slug)
-                }
-                className={`rounded-full px-3 py-1.5 text-sm font-medium transition-colors ${
-                  fordelSlug === fordel.slug
-                    ? "bg-orange-600 text-white"
-                    : "bg-stone-100 text-stone-700 hover:bg-stone-200"
-                }`}
-              >
-                {fordel.name}
-              </button>
-            ))}
+              Fordelsprogram
+            </label>
+            <select
+              id="tilbud-program"
+              value={fordelSlug ?? ""}
+              onChange={(e) => setProgramFilter(e.target.value || null)}
+              className={`${calculatorInputClassName} w-full py-2 pr-8`}
+            >
+              <option value="">Alle programmer</option>
+              {fordelerMedTilbud.map((fordel) => {
+                const count = tilbud.filter(
+                  (entry) => entry.fordelSlug === fordel.slug,
+                ).length;
+                return (
+                  <option key={fordel.slug} value={fordel.slug}>
+                    {fordel.name} ({count})
+                  </option>
+                );
+              })}
+            </select>
+          </div>
+
+          <div>
+            <label
+              htmlFor="tilbud-category"
+              className="mb-2 block text-xs font-semibold uppercase tracking-wider text-stone-500"
+            >
+              Kategori
+            </label>
+            <select
+              id="tilbud-category"
+              value={categoryGroup ?? ""}
+              onChange={(e) => setCategoryFilter(e.target.value || null)}
+              className={`${calculatorInputClassName} w-full py-2 pr-8`}
+              disabled={categoryOptions.length === 0}
+            >
+              <option value="">Alle kategorier</option>
+              {categoryOptions.map((option) => (
+                <option key={option.group} value={option.group}>
+                  {option.group} ({option.count})
+                </option>
+              ))}
+            </select>
           </div>
         </div>
 
-        <div className="mt-4">
-          <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-stone-500">
-            Kategori
-          </p>
-          <div className="flex flex-wrap gap-2">
+        {hasFilters && (
+          <div className="mt-4 flex flex-wrap items-center gap-2">
+            <span className="text-xs font-semibold uppercase tracking-wider text-stone-500">
+              Aktive filter
+            </span>
+            {query.trim() && (
+              <button
+                type="button"
+                onClick={() => setQuery("")}
+                className="rounded-full bg-stone-100 px-3 py-1 text-xs font-medium text-stone-700 hover:bg-stone-200"
+              >
+                Søk: {query.trim()} ✕
+              </button>
+            )}
+            {fordelSlug && (
+              <button
+                type="button"
+                onClick={() => setProgramFilter(fordelSlug)}
+                className="rounded-full bg-orange-100 px-3 py-1 text-xs font-medium text-orange-800 hover:bg-orange-200"
+              >
+                {getFordelName(fordelSlug)} ✕
+              </button>
+            )}
+            {categoryGroup && (
+              <button
+                type="button"
+                onClick={() => setCategoryFilter(categoryGroup)}
+                className="rounded-full bg-orange-100 px-3 py-1 text-xs font-medium text-orange-800 hover:bg-orange-200"
+              >
+                {categoryGroup} ✕
+              </button>
+            )}
             <button
               type="button"
-              onClick={() => setCategory(null)}
-              className={`rounded-full px-3 py-1.5 text-sm font-medium transition-colors ${
-                category === null
-                  ? "bg-stone-800 text-white"
-                  : "bg-stone-100 text-stone-700 hover:bg-stone-200"
-              }`}
+              onClick={resetFilters}
+              className="text-xs font-semibold text-orange-600 hover:text-orange-700"
             >
-              Alle
+              Nullstill alt
             </button>
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                type="button"
-                onClick={() => setCategory(cat === category ? null : cat)}
-                className={`rounded-full px-3 py-1.5 text-sm font-medium transition-colors ${
-                  category === cat
-                    ? "bg-orange-600 text-white"
-                    : "bg-stone-100 text-stone-700 hover:bg-stone-200"
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
           </div>
-        </div>
+        )}
       </div>
 
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
@@ -227,11 +318,7 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
                   <button
                     key={offer.tilbudId}
                     type="button"
-                    onClick={() =>
-                      setFordelSlug(
-                        offer.fordelSlug === fordelSlug ? null : offer.fordelSlug,
-                      )
-                    }
+                    onClick={() => setProgramFilter(offer.fordelSlug)}
                     className="text-left"
                   >
                     <Tag
@@ -244,7 +331,9 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
                   </button>
                 ))}
                 {group.categories.map((cat) => (
-                  <Tag key={cat}>{cat}</Tag>
+                  <Tag key={cat} variant="muted">
+                    {cat}
+                  </Tag>
                 ))}
               </div>
 
@@ -327,11 +416,7 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
           {hasFilters && (
             <button
               type="button"
-              onClick={() => {
-                setQuery("");
-                setFordelSlug(null);
-                setCategory(null);
-              }}
+              onClick={resetFilters}
               className="mt-4 text-sm font-semibold text-orange-600 hover:text-orange-700"
             >
               Nullstill filter
