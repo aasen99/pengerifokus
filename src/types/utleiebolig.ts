@@ -5,13 +5,16 @@ export interface UtleieboligInput {
   annualRatePercent: number;
   termYears: number;
   monthlyRent: number;
-  vacancyRatePercent: number;
+  vacancyMonthsPerYear: number;
   monthlyCommonCosts: number;
   monthlyInsurance: number;
   monthlyMaintenance: number;
   monthlyPropertyTax: number;
   monthlyManagementFee: number;
   taxRatePercent: number;
+  propertyGrowthPercent: number;
+  fundReturnPercent: number;
+  projectionYears: number;
 }
 
 export interface UtleieboligResult {
@@ -36,4 +39,30 @@ export interface UtleieboligResult {
   cashFlowAfterTaxMonthly: number;
   coversAllCosts: boolean;
   monthlyShortfall: number;
+}
+
+export interface UtleieboligYearSnapshot {
+  year: number;
+  propertyValue: number;
+  loanBalance: number;
+  cashReserve: number;
+  propertyNetWorth: number;
+  fundNetWorth: number;
+}
+
+export interface UtleieboligProjection {
+  propertyNetWorth: number;
+  propertyValue: number;
+  remainingLoan: number;
+  cashReserve: number;
+  fundNetWorth: number;
+  fundWithMonthlyFlows: number;
+  differenceVsFund: number;
+  differenceVsFundWithFlows: number;
+  totalSubsidiesPaid: number;
+  propertyGain: number;
+  fundGain: number;
+  propertyAnnualizedReturnPercent: number;
+  fundAnnualizedReturnPercent: number;
+  yearSnapshots: UtleieboligYearSnapshot[];
 }

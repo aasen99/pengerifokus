@@ -5,6 +5,7 @@ import { formatCurrency } from "@/lib/calculators/loan";
 import {
   BSU_MAX_ANNUAL_DEPOSIT,
   BSU_MAX_ANNUAL_TAX_BENEFIT,
+  BSU_TYPICAL_RATE_PREMIUM_OVER_REGULAR,
   calculateBsu,
 } from "@/lib/calculators/bsu";
 import { formatIntegerInput } from "@/lib/format/number";
@@ -55,7 +56,10 @@ export function BsuKalkulator() {
         <p className="mt-1 text-sm text-stone-600">
           Boligsparing for ungdom, maks {formatIntegerInput(BSU_MAX_ANNUAL_DEPOSIT)} kr
           innskudd per år gir opptil {formatIntegerInput(BSU_MAX_ANNUAL_TAX_BENEFIT)} kr i
-          skattefradrag.
+          skattefradrag. BSU-kontoer har typisk ca.{" "}
+          {BSU_TYPICAL_RATE_PREMIUM_OVER_REGULAR.toString().replace(".", ",")}{" "}
+          prosentpoeng høyere rente enn vanlige sparekontoer — med samme lave risiko
+          (innskudsgaranti).
         </p>
 
         <div className="mt-6 space-y-5">
@@ -88,7 +92,7 @@ export function BsuKalkulator() {
 
           <CalculatorField
             label="Forventet rente på BSU"
-            hint="Årlig rente i prosent"
+            hint={`Vanlig sparekonto sammenlignes med ca. ${BSU_TYPICAL_RATE_PREMIUM_OVER_REGULAR.toString().replace(".", ",")} % lavere rente`}
           >
             <input
               type="text"
@@ -153,14 +157,31 @@ export function BsuKalkulator() {
                 </div>
                 <div className="flex items-baseline justify-between gap-4">
                   <dt className="text-sm text-stone-600">
-                    Uten BSU (samme sparing)
+                    Vanlig sparekonto (
+                    {result.regularSavingsRatePercent.toFixed(1).replace(".", ",")} % rente)
                   </dt>
                   <dd className="font-semibold text-stone-900">
                     {formatCurrency(result.regularSavingsBalance)}
                   </dd>
                 </div>
+                <div className="flex items-baseline justify-between gap-4 border-t border-orange-200 pt-4">
+                  <dt className="text-sm text-stone-600">Fordel fra skattefradrag</dt>
+                  <dd className="font-semibold text-orange-700">
+                    +{formatCurrency(result.advantageFromTax)}
+                  </dd>
+                </div>
                 <div className="flex items-baseline justify-between gap-4">
-                  <dt className="text-sm text-stone-600">Du er foran med</dt>
+                  <dt className="text-sm text-stone-600">
+                    Fordel fra høyere rente (
+                    {BSU_TYPICAL_RATE_PREMIUM_OVER_REGULAR.toString().replace(".", ",")}{" "}
+                    % mer)
+                  </dt>
+                  <dd className="font-semibold text-orange-700">
+                    +{formatCurrency(result.advantageFromInterest)}
+                  </dd>
+                </div>
+                <div className="flex items-baseline justify-between gap-4 border-t border-orange-200 pt-4">
+                  <dt className="text-sm font-medium text-stone-700">Du er foran med</dt>
                   <dd className="text-lg font-semibold text-orange-700">
                     +{formatCurrency(result.advantageOverRegular)}
                   </dd>
@@ -176,8 +197,12 @@ export function BsuKalkulator() {
 
         <p className="text-xs leading-relaxed text-stone-500">
           Beregningen er veiledende. BSU gir 10 % skattefradrag på innskudd (opptil{" "}
-          {formatIntegerInput(BSU_MAX_ANNUAL_TAX_BENEFIT)} kr per år). Pengene må brukes
-          til bolig. Sjekk gjeldende regler hos Skatteetaten og banken din.
+          {formatIntegerInput(BSU_MAX_ANNUAL_TAX_BENEFIT)} kr per år). Sammenligningen med
+          vanlig sparekonto forutsetter ca.{" "}
+          {BSU_TYPICAL_RATE_PREMIUM_OVER_REGULAR.toString().replace(".", ",")}{" "}
+          prosentpoeng lavere rente — BSU har like lav risiko via innskudsgaranti. Pengene
+          må brukes til bolig. Sjekk gjeldende regler og satser hos Skatteetaten og banken
+          din.
         </p>
       </section>
     </div>

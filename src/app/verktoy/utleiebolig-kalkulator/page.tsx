@@ -42,8 +42,8 @@ export default function UtleieboligKalkulatorPage() {
           Utleiebolig-kalkulator
         </h1>
         <p className="mt-3 max-w-2xl text-lg text-stone-600">
-          Se om leieinntekten dekker lån og driftskostnader, og hva du tjener på
-          egenkapitalen du legger inn.
+          Se om leieinntekten dekker lån og driftskostnader, hva du tjener på
+          egenkapitalen — og få en vurdering med fordeler, ulemper og risiko.
         </p>
       </header>
 

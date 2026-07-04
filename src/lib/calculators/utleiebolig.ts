@@ -1,5 +1,10 @@
 import { calculateMonthlyPayment } from "@/lib/calculators/loan";
-import type { UtleieboligInput, UtleieboligResult } from "@/types/utleiebolig";
+import type {
+  UtleieboligInput,
+  UtleieboligProjection,
+  UtleieboligResult,
+  UtleieboligYearSnapshot,
+} from "@/types/utleiebolig";
 
 /** Estimerer første års rentekostnad på annuitetslån */
 function estimateFirstYearInterest(
@@ -32,7 +37,11 @@ export function calculateUtleiebolig(input: UtleieboligInput): UtleieboligResult
     termMonths,
   );
 
-  const vacancyFactor = 1 - input.vacancyRatePercent / 100;
+  const vacancyMonths = Math.min(
+    Math.max(input.vacancyMonthsPerYear, 0),
+    12,
+  );
+  const vacancyFactor = (12 - vacancyMonths) / 12;
   const effectiveMonthlyRent = input.monthlyRent * vacancyFactor;
   const monthlyOperatingCosts =
     input.monthlyCommonCosts +
@@ -102,5 +111,114 @@ export function calculateUtleiebolig(input: UtleieboligInput): UtleieboligResult
     cashFlowAfterTaxMonthly,
     coversAllCosts,
     monthlyShortfall,
+  };
+}
+
+function annualizedReturn(
+  initial: number,
+  final: number,
+  years: number,
+): number {
+  if (initial <= 0 || years <= 0) return 0;
+  if (final <= 0) return -100;
+  return (Math.pow(final / initial, 1 / years) - 1) * 100;
+}
+
+export function projectUtleieboligVsFond(
+  input: UtleieboligInput,
+  base: UtleieboligResult,
+): UtleieboligProjection {
+  const years = Math.max(1, Math.floor(input.projectionYears));
+  const months = years * 12;
+  const termMonths = Math.round(input.termYears * 12);
+  const monthlyLoanPayment = base.monthlyLoanPayment;
+  const monthlyLoanRate = input.annualRatePercent / 100 / 12;
+  const monthlyFundRate = input.fundReturnPercent / 100 / 12;
+  const annualPropertyGrowth = input.propertyGrowthPercent / 100;
+
+  const vacancyMonths = Math.min(
+    Math.max(input.vacancyMonthsPerYear, 0),
+    12,
+  );
+  const vacancyFactor = (12 - vacancyMonths) / 12;
+  const effectiveMonthlyRent = input.monthlyRent * vacancyFactor;
+  const monthlyOperatingCosts = base.monthlyOperatingCosts;
+  const taxRate = input.taxRatePercent / 100;
+
+  let propertyValue = input.purchasePrice;
+  let loanBalance = base.loanAmount;
+  let cashReserve = 0;
+  let totalSubsidiesPaid = 0;
+
+  let fundNetWorth = base.equityInvested;
+  let fundWithMonthlyFlows = base.equityInvested;
+
+  const yearSnapshots: UtleieboligYearSnapshot[] = [];
+
+  for (let month = 1; month <= months; month += 1) {
+    const interest = loanBalance * monthlyLoanRate;
+    let loanPayment = 0;
+
+    if (loanBalance > 0 && month <= termMonths) {
+      loanPayment = monthlyLoanPayment;
+      const principalPaid = Math.min(loanBalance, loanPayment - interest);
+      loanBalance = Math.max(0, loanBalance - principalPaid);
+    }
+
+    const cashBeforeTax =
+      effectiveMonthlyRent - monthlyOperatingCosts - loanPayment;
+    const estimatedTax =
+      Math.max(0, effectiveMonthlyRent - monthlyOperatingCosts - interest) *
+      taxRate;
+    const cashAfterTax = cashBeforeTax - estimatedTax;
+
+    cashReserve += cashAfterTax;
+    if (cashAfterTax < 0) {
+      totalSubsidiesPaid += Math.abs(cashAfterTax);
+    }
+
+    fundNetWorth *= 1 + monthlyFundRate;
+    fundWithMonthlyFlows =
+      fundWithMonthlyFlows * (1 + monthlyFundRate) + cashAfterTax;
+
+    if (month % 12 === 0) {
+      propertyValue *= 1 + annualPropertyGrowth;
+
+      yearSnapshots.push({
+        year: month / 12,
+        propertyValue,
+        loanBalance,
+        cashReserve,
+        propertyNetWorth: propertyValue - loanBalance + cashReserve,
+        fundNetWorth,
+      });
+    }
+  }
+
+  const propertyNetWorth = propertyValue - loanBalance + cashReserve;
+
+  return {
+    propertyNetWorth,
+    propertyValue,
+    remainingLoan: loanBalance,
+    cashReserve,
+    fundNetWorth,
+    fundWithMonthlyFlows,
+    differenceVsFund: propertyNetWorth - fundNetWorth,
+    differenceVsFundWithFlows: propertyNetWorth - fundWithMonthlyFlows,
+    totalSubsidiesPaid,
+    propertyGain: propertyNetWorth - base.equityInvested,
+    fundGain: fundNetWorth - base.equityInvested,
+    propertyAnnualizedReturnPercent: annualizedReturn(
+      base.equityInvested,
+      propertyNetWorth,
+      years,
+    ),
+    fundAnnualizedReturnPercent: annualizedReturn(
+      base.equityInvested,
+      fundNetWorth,
+      years,
+    ),
+    yearSnapshots,
   };
 }
