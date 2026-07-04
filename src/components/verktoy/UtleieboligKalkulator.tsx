@@ -427,11 +427,11 @@ export function UtleieboligKalkulator() {
         </section>
       </div>
 
-      <section className="space-y-4 lg:sticky lg:top-6 lg:self-start">
+      <section className="space-y-3 lg:sticky lg:top-6 lg:self-start">
         {result ? (
           <>
             <div
-              className={`rounded-2xl border p-6 ${
+              className={`rounded-xl border p-4 ${
                 result.coversAllCosts
                   ? "border-green-200 bg-green-50"
                   : showHybridCashFlowWarning
@@ -439,231 +439,202 @@ export function UtleieboligKalkulator() {
                     : "border-red-200 bg-red-50"
               }`}
             >
-              <h2 className="text-lg font-semibold text-stone-900">
+              <div className="flex items-baseline justify-between gap-3">
+                <h2 className="text-sm font-semibold text-stone-900">
+                  {result.coversAllCosts
+                    ? "Leien dekker lån og kostnader"
+                    : showHybridCashFlowWarning
+                      ? "Utleiedelen dekker ikke alt"
+                      : "Leien dekker ikke alt"}
+                </h2>
+                <p
+                  className={`text-xl font-bold ${
+                    result.monthlyCashFlow >= 0
+                      ? "text-green-800"
+                      : showHybridCashFlowWarning
+                        ? "text-blue-800"
+                        : "text-red-800"
+                  }`}
+                >
+                  {result.monthlyCashFlow >= 0 ? "+" : ""}
+                  {formatCurrency(result.monthlyCashFlow)}
+                  <span className="text-xs font-normal text-stone-500">/mnd</span>
+                </p>
+              </div>
+              <p className="mt-1 text-xs text-stone-600">
                 {result.coversAllCosts
-                  ? "Leien dekker lån og kostnader"
+                  ? "Positiv kontantstrøm før skatt."
                   : showHybridCashFlowWarning
-                    ? "Utleiedelen dekker ikke alt — men det er ikke hele bildet"
-                    : "Leien dekker ikke alle kostnader"}
-              </h2>
-              <p className="mt-2 text-sm text-stone-600">
-                {result.coversAllCosts
-                  ? "Du har positiv kontantstrøm før skatt."
-                  : showHybridCashFlowWarning
-                    ? "Som ren investering ser det svakt ut. Sjekk netto boligkostnad og sammenligning med alternativ leie under."
-                    : `Du må skyte inn ca. ${formatCurrency(result.monthlyShortfall)} per måned.`}
+                    ? "Sjekk netto boligkostnad og vurdering."
+                    : `Du må fylle på ca. ${formatCurrency(result.monthlyShortfall)}/mnd.`}
+                {" "}
+                Etter skatt:{" "}
+                <span className="font-medium text-stone-800">
+                  {result.cashFlowAfterTaxMonthly >= 0 ? "+" : ""}
+                  {formatCurrency(result.cashFlowAfterTaxMonthly)}/mnd
+                </span>
               </p>
-              <dl className="mt-5 space-y-4">
-                <div className="flex items-baseline justify-between gap-4">
-                  <dt className="text-sm text-stone-600">Månedlig kontantstrøm</dt>
-                  <dd
-                    className={`text-2xl font-bold ${
-                      result.monthlyCashFlow >= 0
-                        ? "text-green-800"
-                        : showHybridCashFlowWarning
-                          ? "text-blue-800"
-                          : "text-red-800"
-                    }`}
-                  >
-                    {result.monthlyCashFlow >= 0 ? "+" : ""}
-                    {formatCurrency(result.monthlyCashFlow)}
+            </div>
+
+            <div className="rounded-xl border border-stone-200 bg-white p-4 shadow-sm">
+              <h2 className="text-sm font-semibold text-stone-900">Nøkkeltall</h2>
+              <dl className="mt-2 grid gap-x-4 gap-y-1.5 text-xs sm:grid-cols-2">
+                <div className="flex justify-between gap-2 sm:block">
+                  <dt className="text-stone-500">Brutto leieavk.</dt>
+                  <dd className="font-medium text-stone-900">
+                    {formatPercent(result.grossYieldPercent)}
                   </dd>
                 </div>
-                <div className="flex items-baseline justify-between gap-4">
-                  <dt className="text-sm text-stone-600">Etter estimert skatt</dt>
-                  <dd className="font-semibold text-stone-900">
-                    {result.cashFlowAfterTaxMonthly >= 0 ? "+" : ""}
-                    {formatCurrency(result.cashFlowAfterTaxMonthly)}/mnd
+                <div className="flex justify-between gap-2 sm:block">
+                  <dt className="text-stone-500">Netto leieavk.</dt>
+                  <dd className="font-medium text-stone-900">
+                    {formatPercent(result.netYieldPercent)}
+                  </dd>
+                </div>
+                <div className="flex justify-between gap-2 sm:block">
+                  <dt className="text-stone-500">Kontantavkastning</dt>
+                  <dd className="font-semibold text-orange-700">
+                    {formatPercent(result.cashOnCashReturnPercent)}
+                  </dd>
+                </div>
+                <div className="flex justify-between gap-2 sm:block">
+                  <dt className="text-stone-500">Break-even leie</dt>
+                  <dd className="font-medium text-stone-900">
+                    {formatCurrency(result.breakEvenMonthlyRent)}
+                  </dd>
+                </div>
+                <div className="flex justify-between gap-2 sm:block">
+                  <dt className="text-stone-500">Lånebeløp</dt>
+                  <dd className="font-medium text-stone-900">
+                    {formatCurrency(result.loanAmount)}
+                  </dd>
+                </div>
+                <div className="flex justify-between gap-2 sm:block">
+                  <dt className="text-stone-500">Egenkapital inn</dt>
+                  <dd className="font-medium text-stone-900">
+                    {formatCurrency(result.equityInvested)}
                   </dd>
                 </div>
               </dl>
+
+              <div className="mt-3 border-t border-stone-100 pt-3">
+                <p className="text-xs font-medium text-stone-500">
+                  Månedlig fordeling
+                </p>
+                <dl className="mt-1.5 space-y-1 text-xs">
+                  <div className="flex justify-between gap-2">
+                    <dt className="text-stone-500">Leie (etter tomgang)</dt>
+                    <dd className="font-medium text-green-700">
+                      +{formatCurrency(result.effectiveMonthlyRent)}
+                    </dd>
+                  </div>
+                  <div className="flex justify-between gap-2">
+                    <dt className="text-stone-500">Drift + lån</dt>
+                    <dd className="font-medium text-stone-900">
+                      −
+                      {formatCurrency(
+                        result.monthlyOperatingCosts + result.monthlyLoanPayment,
+                      )}
+                    </dd>
+                  </div>
+                </dl>
+              </div>
             </div>
 
             {vurdering && <UtleieboligVurderingPanel vurdering={vurdering} />}
 
-            <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
-              <h2 className="text-lg font-semibold text-stone-900">Avkastning</h2>
-              <dl className="mt-5 space-y-4">
-                <div className="flex items-baseline justify-between gap-4">
-                  <dt className="text-sm text-stone-600">Brutto leieavkastning</dt>
-                  <dd className="font-semibold text-stone-900">
-                    {formatPercent(result.grossYieldPercent)}
-                  </dd>
-                </div>
-                <div className="flex items-baseline justify-between gap-4">
-                  <dt className="text-sm text-stone-600">Netto leieavkastning</dt>
-                  <dd className="font-semibold text-stone-900">
-                    {formatPercent(result.netYieldPercent)}
-                  </dd>
-                </div>
-                <div className="flex items-baseline justify-between gap-4">
-                  <dt className="text-sm text-stone-600">
-                    Kontantavkastning (på egenkapital)
-                  </dt>
-                  <dd className="text-lg font-semibold text-orange-700">
-                    {formatPercent(result.cashOnCashReturnPercent)}
-                  </dd>
-                </div>
-              </dl>
-            </div>
-
-            <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
-              <h2 className="text-lg font-semibold text-stone-900">
-                Månedlig fordeling
-              </h2>
-              <dl className="mt-5 space-y-4">
-                <div className="flex items-baseline justify-between gap-4">
-                  <dt className="text-sm text-stone-600">Leieinntekt (etter tomgang)</dt>
-                  <dd className="font-semibold text-green-700">
-                    +{formatCurrency(result.effectiveMonthlyRent)}
-                  </dd>
-                </div>
-                <div className="flex items-baseline justify-between gap-4">
-                  <dt className="text-sm text-stone-600">Driftskostnader</dt>
-                  <dd className="font-semibold text-stone-900">
-                    −{formatCurrency(result.monthlyOperatingCosts)}
-                  </dd>
-                </div>
-                <div className="flex items-baseline justify-between gap-4">
-                  <dt className="text-sm text-stone-600">Lånetermin</dt>
-                  <dd className="font-semibold text-stone-900">
-                    −{formatCurrency(result.monthlyLoanPayment)}
-                  </dd>
-                </div>
-              </dl>
-            </div>
-
-            <div className="rounded-2xl border border-orange-200 bg-orange-50 p-6">
-              <h2 className="text-lg font-semibold text-stone-900">Nøkkeltall</h2>
-              <dl className="mt-5 space-y-4">
-                <div className="flex items-baseline justify-between gap-4">
-                  <dt className="text-sm text-stone-600">Lånebeløp</dt>
-                  <dd className="font-semibold text-stone-900">
-                    {formatCurrency(result.loanAmount)}
-                  </dd>
-                </div>
-                <div className="flex items-baseline justify-between gap-4">
-                  <dt className="text-sm text-stone-600">Total egenkapital inn</dt>
-                  <dd className="font-semibold text-stone-900">
-                    {formatCurrency(result.equityInvested)}
-                  </dd>
-                </div>
-                <div className="flex items-baseline justify-between gap-4">
-                  <dt className="text-sm text-stone-600">
-                    Break-even leie (før tomgang)
-                  </dt>
-                  <dd className="font-semibold text-orange-700">
-                    {formatCurrency(result.breakEvenMonthlyRent)}/mnd
-                  </dd>
-                </div>
-                <div className="flex items-baseline justify-between gap-4">
-                  <dt className="text-sm text-stone-600">Årlig kontantstrøm</dt>
-                  <dd className="font-semibold text-stone-900">
-                    {result.annualCashFlow >= 0 ? "+" : ""}
-                    {formatCurrency(result.annualCashFlow)}
-                  </dd>
-                </div>
-              </dl>
-            </div>
-
             {projection && parsedInput && (
-              <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
-                <h2 className="text-lg font-semibold text-stone-900">
-                  Bolig vs. fond etter {parsedInput.projectionYears} år
-                </h2>
-                <p className="mt-1 text-sm text-stone-600">
-                  Bolig: verdi − gjeld + oppsamlet kontantstrøm. Fond: egenkapital
-                  med forventet avkastning.
-                </p>
-
-                <UtleieboligSammenligningChart
-                  snapshots={projection.yearSnapshots}
-                  projectionYears={parsedInput.projectionYears}
-                />
-
-                <dl className="mt-6 space-y-4">
-                  <div className="flex items-baseline justify-between gap-4">
-                    <dt className="text-sm text-stone-600">Nettoformue bolig</dt>
-                    <dd className="text-lg font-semibold text-orange-700">
-                      {formatCurrency(projection.propertyNetWorth)}
-                    </dd>
-                  </div>
-                  <div className="flex items-baseline justify-between gap-4 text-xs text-stone-500">
-                    <span>Herav boligverdi</span>
-                    <span>{formatCurrency(projection.propertyValue)}</span>
-                  </div>
-                  <div className="flex items-baseline justify-between gap-4 text-xs text-stone-500">
-                    <span>Gjenstående lån</span>
-                    <span>−{formatCurrency(projection.remainingLoan)}</span>
-                  </div>
-                  <div className="flex items-baseline justify-between gap-4 text-xs text-stone-500">
-                    <span>Oppsamlet kontantstrøm</span>
-                    <span>{formatCurrency(projection.cashReserve)}</span>
-                  </div>
-                  <div className="flex items-baseline justify-between gap-4 border-t border-stone-100 pt-4">
-                    <dt className="text-sm text-stone-600">
-                      Fond (kun egenkapital)
-                    </dt>
-                    <dd className="font-semibold text-stone-900">
-                      {formatCurrency(projection.fundNetWorth)}
-                    </dd>
-                  </div>
-                  <div className="flex items-baseline justify-between gap-4">
-                    <dt className="text-sm text-stone-600">
-                      Fond med samme kontantstrøm
-                    </dt>
-                    <dd className="font-semibold text-stone-900">
-                      {formatCurrency(projection.fundWithMonthlyFlows)}
-                    </dd>
-                  </div>
-                  <p className="text-xs text-stone-500">
-                    Alternativ 2: egenkapital i fond, pluss/minus samme månedlige
-                    kontantstrøm som boligen gir (overskudd inn, underskudd ut).
-                  </p>
-                  <div
-                    className={`flex items-baseline justify-between gap-4 rounded-xl p-4 ${
-                      projection.differenceVsFund >= 0
-                        ? "bg-green-50"
-                        : "bg-red-50"
-                    }`}
-                  >
-                    <dt className="text-sm font-medium text-stone-800">
-                      Bolig slår fond (kun egenkapital) med
-                    </dt>
-                    <dd
-                      className={`text-lg font-bold ${
-                        projection.differenceVsFund >= 0
-                          ? "text-green-800"
-                          : "text-red-800"
-                      }`}
+              <details className="group rounded-xl border border-stone-200 bg-white shadow-sm">
+                <summary className="cursor-pointer list-none p-4 [&::-webkit-details-marker]:hidden">
+                  <div className="flex items-center justify-between gap-3">
+                    <div>
+                      <h2 className="text-sm font-semibold text-stone-900">
+                        Bolig vs. fond ({parsedInput.projectionYears} år)
+                      </h2>
+                      <p className="mt-0.5 text-xs text-stone-500">
+                        Bolig{" "}
+                        <span className="font-medium text-orange-700">
+                          {formatCurrency(projection.propertyNetWorth)}
+                        </span>
+                        {" · "}
+                        Fond{" "}
+                        <span className="font-medium text-stone-700">
+                          {formatCurrency(projection.fundNetWorth)}
+                        </span>
+                        {" · "}
+                        <span
+                          className={
+                            projection.differenceVsFund >= 0
+                              ? "font-medium text-green-700"
+                              : "font-medium text-red-700"
+                          }
+                        >
+                          {projection.differenceVsFund >= 0 ? "+" : ""}
+                          {formatCurrency(projection.differenceVsFund)}
+                        </span>
+                      </p>
+                    </div>
+                    <span
+                      className="shrink-0 text-sm text-stone-400 transition-transform group-open:rotate-180"
+                      aria-hidden="true"
                     >
-                      {projection.differenceVsFund >= 0 ? "+" : ""}
-                      {formatCurrency(projection.differenceVsFund)}
-                    </dd>
+                      ▾
+                    </span>
                   </div>
-                  <div className="grid gap-3 sm:grid-cols-2">
-                    <div className="rounded-lg bg-stone-50 p-3">
-                      <dt className="text-xs text-stone-500">Bolig årlig avkastning</dt>
-                      <dd className="mt-1 font-semibold text-stone-900">
-                        {formatPercent(projection.propertyAnnualizedReturnPercent)}
+                </summary>
+
+                <div className="border-t border-stone-100 px-4 pb-4 pt-3">
+                  <UtleieboligSammenligningChart
+                    snapshots={projection.yearSnapshots}
+                    projectionYears={parsedInput.projectionYears}
+                  />
+
+                  <dl className="mt-4 space-y-2 text-xs">
+                    <div className="flex justify-between gap-2">
+                      <dt className="text-stone-500">Nettoformue bolig</dt>
+                      <dd className="font-semibold text-orange-700">
+                        {formatCurrency(projection.propertyNetWorth)}
                       </dd>
                     </div>
-                    <div className="rounded-lg bg-stone-50 p-3">
-                      <dt className="text-xs text-stone-500">Fond årlig avkastning</dt>
-                      <dd className="mt-1 font-semibold text-stone-900">
-                        {formatPercent(projection.fundAnnualizedReturnPercent)}
+                    <div className="flex justify-between gap-2 text-stone-500">
+                      <span>Boligverdi / lån / kontantstrøm</span>
+                      <span>
+                        {formatCurrency(projection.propertyValue)} / −
+                        {formatCurrency(projection.remainingLoan)} /{" "}
+                        {formatCurrency(projection.cashReserve)}
+                      </span>
+                    </div>
+                    <div className="flex justify-between gap-2">
+                      <dt className="text-stone-500">Fond (egenkapital)</dt>
+                      <dd className="font-medium text-stone-900">
+                        {formatCurrency(projection.fundNetWorth)}
                       </dd>
                     </div>
-                  </div>
-                  {projection.totalSubsidiesPaid > 0 && (
-                    <p className="text-xs text-stone-500">
-                      Du må fylle på ca.{" "}
-                      {formatCurrency(projection.totalSubsidiesPaid)} totalt over
-                      perioden for å holde boligen flytende.
-                    </p>
-                  )}
-                </dl>
-              </div>
+                    <div className="flex justify-between gap-2">
+                      <dt className="text-stone-500">Fond m/ kontantstrøm</dt>
+                      <dd className="font-medium text-stone-900">
+                        {formatCurrency(projection.fundWithMonthlyFlows)}
+                      </dd>
+                    </div>
+                    <div className="flex justify-between gap-2 rounded-lg bg-stone-50 px-2 py-1.5">
+                      <dt className="font-medium text-stone-700">
+                        Årlig avkastning bolig / fond
+                      </dt>
+                      <dd className="font-medium text-stone-900">
+                        {formatPercent(projection.propertyAnnualizedReturnPercent)}{" "}
+                        / {formatPercent(projection.fundAnnualizedReturnPercent)}
+                      </dd>
+                    </div>
+                    {projection.totalSubsidiesPaid > 0 && (
+                      <p className="text-stone-500">
+                        Fyll på ca.{" "}
+                        {formatCurrency(projection.totalSubsidiesPaid)} totalt i
+                        perioden.
+                      </p>
+                    )}
+                  </dl>
+                </div>
+              </details>
             )}
           </>
         ) : (

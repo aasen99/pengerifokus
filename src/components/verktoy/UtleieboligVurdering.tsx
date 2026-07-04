@@ -36,18 +36,26 @@ function BulletList({
   items,
   icon,
   iconClass,
+  compact = false,
 }: {
   items: string[];
   icon: string;
   iconClass: string;
+  compact?: boolean;
 }) {
   if (items.length === 0) return null;
 
   return (
-    <ul className="mt-3 space-y-2">
+    <ul className={compact ? "mt-2 space-y-1" : "mt-2 space-y-1.5"}>
       {items.map((item) => (
-        <li key={item} className="flex gap-2 text-sm leading-relaxed text-stone-700">
-          <span className={`mt-0.5 shrink-0 font-semibold ${iconClass}`} aria-hidden="true">
+        <li
+          key={item}
+          className="flex gap-1.5 text-xs leading-relaxed text-stone-700"
+        >
+          <span
+            className={`mt-0.5 shrink-0 font-semibold ${iconClass}`}
+            aria-hidden="true"
+          >
             {icon}
           </span>
           <span>{item}</span>
@@ -65,101 +73,131 @@ export function UtleieboligVurderingPanel({ vurdering }: Props) {
   const style = verdictStyles[vurdering.verdict];
 
   return (
-    <section className={`rounded-2xl border p-6 ${style.border} ${style.bg}`}>
-      <div className="flex flex-wrap items-center gap-2">
-        <h2 className="text-lg font-semibold text-stone-900">Vurdering</h2>
-        <span
-          className={`rounded-full px-2.5 py-0.5 text-xs font-semibold ${style.badge}`}
-        >
-          {vurdering.verdictLabel}
-        </span>
-        {vurdering.scenario === "owner-hybrid" && (
-          <span className="rounded-full bg-white/80 px-2.5 py-0.5 text-xs font-medium text-stone-600">
-            Egen bolig + utleie
-          </span>
-        )}
-      </div>
-
-      <p className="mt-3 text-sm leading-relaxed text-stone-700">
-        {vurdering.verdictSummary}
-      </p>
-
-      {vurdering.netHousingCostMonthly !== null && (
-        <dl className="mt-4 grid gap-3 rounded-xl border border-white/60 bg-white/50 p-4 sm:grid-cols-2">
-          <div>
-            <dt className="text-xs text-stone-500">Din netto boligkostnad</dt>
-            <dd className="mt-1 font-semibold text-stone-900">
-              {formatCurrency(vurdering.netHousingCostMonthly)}/mnd
-            </dd>
-            <p className="mt-0.5 text-xs text-stone-500">
-              Lån + kostnader − leieinntekt
+    <details
+      className={`group rounded-xl border ${style.border} ${style.bg}`}
+    >
+      <summary className="cursor-pointer list-none p-4 [&::-webkit-details-marker]:hidden">
+        <div className="flex items-start justify-between gap-3">
+          <div className="min-w-0 flex-1">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="text-sm font-semibold text-stone-900">
+                Vurdering
+              </span>
+              <span
+                className={`rounded-full px-2 py-0.5 text-xs font-semibold ${style.badge}`}
+              >
+                {vurdering.verdictLabel}
+              </span>
+              {vurdering.scenario === "owner-hybrid" && (
+                <span className="rounded-full bg-white/80 px-2 py-0.5 text-xs font-medium text-stone-600">
+                  Egen bolig + utleie
+                </span>
+              )}
+            </div>
+            <p className="mt-1 line-clamp-2 text-xs leading-relaxed text-stone-600">
+              {vurdering.verdictSummary}
             </p>
           </div>
-          {vurdering.housingSavingsMonthly !== null && (
+          <span
+            className="mt-0.5 shrink-0 text-sm text-stone-400 transition-transform group-open:rotate-180"
+            aria-hidden="true"
+          >
+            ▾
+          </span>
+        </div>
+      </summary>
+
+      <div className="space-y-4 border-t border-white/60 px-4 pb-4 pt-3">
+        <p className="text-xs leading-relaxed text-stone-700">
+          {vurdering.verdictSummary}
+        </p>
+
+        {vurdering.netHousingCostMonthly !== null && (
+          <dl className="grid gap-2 rounded-lg border border-white/60 bg-white/50 p-3 text-xs sm:grid-cols-2">
             <div>
-              <dt className="text-xs text-stone-500">Vs. alternativ leie</dt>
-              <dd
-                className={`mt-1 font-semibold ${
-                  vurdering.housingSavingsMonthly >= 0
-                    ? "text-green-800"
-                    : "text-red-800"
-                }`}
-              >
-                {vurdering.housingSavingsMonthly >= 0 ? "Sparer " : "Koster "}
-                {formatCurrency(Math.abs(vurdering.housingSavingsMonthly))}/mnd
+              <dt className="text-stone-500">Netto boligkostnad</dt>
+              <dd className="mt-0.5 font-semibold text-stone-900">
+                {formatCurrency(vurdering.netHousingCostMonthly)}/mnd
               </dd>
             </div>
-          )}
-        </dl>
-      )}
+            {vurdering.housingSavingsMonthly !== null && (
+              <div>
+                <dt className="text-stone-500">Vs. alternativ leie</dt>
+                <dd
+                  className={`mt-0.5 font-semibold ${
+                    vurdering.housingSavingsMonthly >= 0
+                      ? "text-green-800"
+                      : "text-red-800"
+                  }`}
+                >
+                  {vurdering.housingSavingsMonthly >= 0 ? "Sparer " : "Koster "}
+                  {formatCurrency(Math.abs(vurdering.housingSavingsMonthly))}
+                  /mnd
+                </dd>
+              </div>
+            )}
+          </dl>
+        )}
 
-      <div className="mt-6 grid gap-6 sm:grid-cols-2">
-        <div>
-          <h3 className="text-sm font-semibold text-green-800">Fordeler</h3>
-          <BulletList items={vurdering.pros} icon="+" iconClass="text-green-600" />
+        <div className="grid gap-4 sm:grid-cols-2">
+          <div>
+            <h3 className="text-xs font-semibold text-green-800">Fordeler</h3>
+            <BulletList
+              items={vurdering.pros}
+              icon="+"
+              iconClass="text-green-600"
+              compact
+            />
+          </div>
+          <div>
+            <h3 className="text-xs font-semibold text-red-800">Ulemper</h3>
+            <BulletList
+              items={vurdering.cons}
+              icon="−"
+              iconClass="text-red-500"
+              compact
+            />
+          </div>
         </div>
-        <div>
-          <h3 className="text-sm font-semibold text-red-800">Ulemper</h3>
-          <BulletList items={vurdering.cons} icon="−" iconClass="text-red-500" />
-        </div>
-      </div>
 
-      {vurdering.insights.length > 0 && (
-        <div className="mt-6 rounded-xl border border-stone-200 bg-white/70 p-4">
-          <h3 className="text-sm font-semibold text-stone-800">Observasjoner</h3>
-          <p className="mt-1 text-xs text-stone-500">
-            Tilbakemeldinger basert på tallene du la inn — endres når du justerer
-            input.
-          </p>
+        {vurdering.insights.length > 0 && (
+          <div className="rounded-lg border border-stone-200/80 bg-white/60 p-3">
+            <h3 className="text-xs font-semibold text-stone-800">
+              Observasjoner
+            </h3>
+            <BulletList
+              items={vurdering.insights}
+              icon="•"
+              iconClass="text-stone-500"
+              compact
+            />
+          </div>
+        )}
+
+        {vurdering.whenBadIsOk.length > 0 && (
+          <div className="rounded-lg border border-blue-200/80 bg-white/60 p-3">
+            <h3 className="text-xs font-semibold text-blue-900">
+              Når svakt case likevel kan være greit
+            </h3>
+            <BulletList
+              items={vurdering.whenBadIsOk}
+              icon="→"
+              iconClass="text-blue-600"
+              compact
+            />
+          </div>
+        )}
+
+        <div>
+          <h3 className="text-xs font-semibold text-stone-800">Risiko</h3>
           <BulletList
-            items={vurdering.insights}
-            icon="•"
-            iconClass="text-stone-500"
+            items={vurdering.risks}
+            icon="!"
+            iconClass="text-amber-600"
+            compact
           />
         </div>
-      )}
-
-      {vurdering.whenBadIsOk.length > 0 && (
-        <div className="mt-6 rounded-xl border border-blue-200 bg-white/70 p-4">
-          <h3 className="text-sm font-semibold text-blue-900">
-            Når et svakere case likevel kan være greit
-          </h3>
-          <p className="mt-1 text-xs text-stone-600">
-            Ikke alle røde tall betyr «nei». Her er situasjoner der svak
-            leieavkastning eller underskudd kan være forsvarlig:
-          </p>
-          <BulletList
-            items={vurdering.whenBadIsOk}
-            icon="→"
-            iconClass="text-blue-600"
-          />
-        </div>
-      )}
-
-      <div className="mt-6">
-        <h3 className="text-sm font-semibold text-stone-800">Risiko å ha i bakhodet</h3>
-        <BulletList items={vurdering.risks} icon="!" iconClass="text-amber-600" />
       </div>
-    </section>
+    </details>
   );
 }
