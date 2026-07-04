@@ -142,4 +142,15 @@ export const verktoy: Verktoy[] = [
     createdAt: "2025-01-12",
     updatedAt: "2026-06-11",
   },
+  {
+    id: "verktoy-13",
+    slug: "utleiebolig-kalkulator",
+    status: "published",
+    name: "Utleiebolig-kalkulator",
+    description:
+      "Regn ut kontantstrøm, leieavkastning og break-even leie for en utleiebolig.",
+    category: "Bolig",
+    createdAt: "2026-07-04",
+    updatedAt: "2026-07-04",
+  },
 ];
