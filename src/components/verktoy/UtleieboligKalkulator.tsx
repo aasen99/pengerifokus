@@ -290,7 +290,7 @@ export function UtleieboligKalkulator() {
                     Jeg bor i mer enn halvparten av boligen
                   </span>
                   <span className="mt-0.5 block text-xs text-stone-500">
-                    Hybel, etasje eller rom du leier ut — ikke ren utleiebolig.
+                    Hybel, etasje eller rom du leier ut. Ikke ren utleiebolig.
                     Vurderingen tilpasses deretter.
                   </span>
                 </span>
@@ -645,7 +645,7 @@ export function UtleieboligKalkulator() {
 
         <p className="text-xs leading-relaxed text-stone-500">
           Beregningen er veiledende. Skatteestimatet er forenklet. Langsiktig
-          sammenligning inkluderer forventet prisvekst, avdrag og kontantstrøm —
+          sammenligning inkluderer forventet prisvekst, avdrag og kontantstrøm,
           men ikke salgskostnader, formueskatt eller renteendringer. Fondssammenligning
           er forenklet og tar ikke høyde for skatt på fond. Sjekk tallene med bank
           og regnskapsfører før du investerer.

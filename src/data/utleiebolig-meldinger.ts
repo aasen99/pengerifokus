@@ -46,7 +46,6 @@ function fmtPct(value: number): string {
 }
 
 export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
-  // ── Sammendrag (8) ──────────────────────────────────────────────
   {
     id: "summary-elite",
     kategori: "summary",
@@ -81,7 +80,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
       c.breakEvenMarginPercent >= 0 &&
       !c.ownerOccupiedOverHalf,
     text: () =>
-      "Tallene går i pluss, men marginen er tynn. En renteoppgang, tomgang eller større reparasjon kan snu resultatet raskt.",
+      "Tallene går i pluss, men marginen er tynn. Tomgang eller større reparasjon kan snu resultatet raskt.",
   },
   {
     id: "summary-speculative",
@@ -92,7 +91,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
       c.result.grossYieldPercent < 4.5 &&
       !c.ownerOccupiedOverHalf,
     text: (c) =>
-      `Du legger inn ca. ${fmtKr(c.result.monthlyShortfall)} per måned. Dette ligner mer på en prisspekulasjon enn en leieinvestering — avkastningen må komme fra verdistigning.`,
+      `Du legger inn ca. ${fmtKr(c.result.monthlyShortfall)} per måned. Dette ligner mer på prisspekulasjon enn leieinvestering. Avkastningen må komme fra verdistigning.`,
   },
   {
     id: "summary-heavy-loss",
@@ -103,7 +102,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
       c.result.monthlyShortfall > 5_000 &&
       !c.ownerOccupiedOverHalf,
     text: (c) =>
-      `Stort månedlig underskudd på ${fmtKr(c.result.monthlyShortfall)}. Uten en tydelig plan for oppgradering, høyere leie eller sterk prisvekst er dette et høyrisiko-case.`,
+      `Stort månedlig underskudd på ${fmtKr(c.result.monthlyShortfall)}. Uten plan for oppgradering, høyere leie eller sterk prisvekst er dette et høyrisiko-case.`,
   },
   {
     id: "summary-hybrid-saves",
@@ -114,7 +113,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
       c.housingSavingsMonthly !== null &&
       c.housingSavingsMonthly > 1_000,
     text: (c) =>
-      `Utleiedelen ser svak ut isolert, men du sparer ${fmtKr(c.housingSavingsMonthly!)}/mnd mot å leie tilsvarende. Da handler det om boligkostnad — ikke ren leieavkastning.`,
+      `Utleiedelen ser svak ut isolert, men du sparer ${fmtKr(c.housingSavingsMonthly!)}/mnd mot å leie tilsvarende. Da handler det om boligkostnad, ikke ren leieavkastning.`,
   },
   {
     id: "summary-hybrid-cashflow-plus",
@@ -133,17 +132,16 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
       c.housingSavingsMonthly !== null &&
       c.housingSavingsMonthly < -2_000,
     text: () =>
-      "Du betaler mer for å bo enn alternativ leie, og utleieinntekten redder deg ikke. Sjekk om du betaler for noe du faktisk verdsetter — beliggenhet, plass, eierskap.",
+      "Du betaler mer for å bo enn alternativ leie, og utleieinntekten redder deg ikke. Sjekk om du betaler for beliggenhet, plass eller eierskap du faktisk verdsetter.",
   },
 
-  // ── Fordeler (12) ─────────────────────────────────────────────────
   {
     id: "pro-positive-cashflow",
     kategori: "pro",
     priority: 95,
     when: (c) => c.result.monthlyCashFlow > 0,
     text: (c) =>
-      `Positiv kontantstrøm på ${fmtKr(c.result.monthlyCashFlow)}/mnd før skatt — boligen bærer seg uten at du fyller på.`,
+      `Positiv kontantstrøm på ${fmtKr(c.result.monthlyCashFlow)}/mnd før skatt. Boligen bærer seg uten at du fyller på.`,
   },
   {
     id: "pro-positive-after-tax",
@@ -176,7 +174,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
     priority: 90,
     when: (c) => c.result.cashOnCashReturnPercent >= 7,
     text: (c) =>
-      `Kontantavkastning på ${fmtPct(c.result.cashOnCashReturnPercent)} av egenkapitalen slår det meste av trygg sparing — før verdistigning.`,
+      `Kontantavkastning på ${fmtPct(c.result.cashOnCashReturnPercent)} av egenkapitalen slår det meste av trygg sparing, før du regner med verdistigning.`,
   },
   {
     id: "pro-wide-margin",
@@ -184,7 +182,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
     priority: 82,
     when: (c) => c.breakEvenMarginPercent >= 18,
     text: (c) =>
-      `Break-even-leien er ${fmtKr(c.rentGapToBreakEven)} under markedsleie — du tåler tomgang og kostnadssprekk bedre.`,
+      `Break-even-leien er ${fmtKr(c.rentGapToBreakEven)} under markedsleie. Du tåler tomgang og kostnadssprekk bedre.`,
   },
   {
     id: "pro-rent-covers-loan-well",
@@ -192,7 +190,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
     priority: 78,
     when: (c) => c.rentCoversLoan && c.result.effectiveMonthlyRent >= c.result.monthlyLoanPayment * 1.25,
     text: () =>
-      "Leieinntekten dekker låneterminen med god margin — lånet er ikke den største bekymringen her.",
+      "Leieinntekten dekker låneterminen med god margin. Lånet er ikke den største bekymringen her.",
   },
   {
     id: "pro-low-ltv",
@@ -208,7 +206,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
     priority: 68,
     when: (c) => c.operatingCostShareOfRent < 35 && c.result.effectiveMonthlyRent > 0,
     text: (c) =>
-      `Driftskostnadene utgjør bare ${fmtPct(c.operatingCostShareOfRent)} av leieinntekten — effektiv drift.`,
+      `Driftskostnadene utgjør bare ${fmtPct(c.operatingCostShareOfRent)} av leieinntekten. Effektiv drift.`,
   },
   {
     id: "pro-equity-building",
@@ -216,7 +214,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
     priority: 50,
     when: (c) => c.result.loanAmount > 0,
     text: () =>
-      "Avdrag bygger formue over tid — en del av terminbeløpet er sparing, ikke kastet bort.",
+      "Avdrag bygger formue over tid. En del av terminbeløpet er sparing, ikke kastet bort.",
   },
   {
     id: "pro-hybrid-subsidy",
@@ -238,14 +236,13 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
       `Netto leieavkastning på ${fmtPct(c.result.netYieldPercent)} etter driftskostnader er solid.`,
   },
 
-  // ── Ulemper (12) ──────────────────────────────────────────────────
   {
     id: "con-negative-cashflow",
     kategori: "con",
     priority: 95,
     when: (c) => c.result.monthlyCashFlow < 0 && !c.ownerOccupiedOverHalf,
     text: (c) =>
-      `Negativ kontantstrøm på ${fmtKr(c.result.monthlyShortfall)}/mnd — du må fylle på fra lønn eller annen sparing.`,
+      `Negativ kontantstrøm på ${fmtKr(c.result.monthlyShortfall)}/mnd. Du må fylle på fra lønn eller annen sparing.`,
   },
   {
     id: "con-negative-after-tax",
@@ -255,7 +252,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
       c.result.cashFlowAfterTaxMonthly < 0 &&
       c.result.monthlyCashFlow >= 0,
     text: (c) =>
-      `Skatt spiser overskuddet — etter skatt går du ${fmtKr(Math.abs(c.result.cashFlowAfterTaxMonthly))}/mnd i minus.`,
+      `Skatt spiser overskuddet. Etter skatt går du ${fmtKr(Math.abs(c.result.cashFlowAfterTaxMonthly))}/mnd i minus.`,
   },
   {
     id: "con-break-even-above-rent",
@@ -263,7 +260,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
     priority: 92,
     when: (c) => c.breakEvenMarginPercent < 0,
     text: (c) =>
-      `Break-even-leien (${fmtKr(c.result.breakEvenMonthlyRent)}/mnd) er høyere enn markedsleie — matematikken går ikke opp uten endringer.`,
+      `Break-even-leien (${fmtKr(c.result.breakEvenMonthlyRent)}/mnd) er høyere enn markedsleie. Matematikken går ikke opp uten endringer.`,
   },
   {
     id: "con-thin-margin",
@@ -272,7 +269,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
     when: (c) =>
       c.breakEvenMarginPercent >= 0 && c.breakEvenMarginPercent < 8,
     text: () =>
-      "Svært liten buffer mellom faktisk leie og break-even — lite rom for overraskelser.",
+      "Svært liten buffer mellom faktisk leie og break-even. Lite rom for overraskelser.",
   },
   {
     id: "con-low-gross-yield",
@@ -280,7 +277,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
     priority: 85,
     when: (c) => c.result.grossYieldPercent > 0 && c.result.grossYieldPercent < 3.5,
     text: (c) =>
-      `Brutto leieavkastning på bare ${fmtPct(c.result.grossYieldPercent)} — mye må komme fra prisstigning, ikke leie.`,
+      `Brutto leieavkastning på bare ${fmtPct(c.result.grossYieldPercent)}. Mye må komme fra prisstigning, ikke leie.`,
   },
   {
     id: "con-mediocre-yield",
@@ -289,7 +286,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
     when: (c) =>
       c.result.grossYieldPercent >= 3.5 && c.result.grossYieldPercent < 4.2,
     text: () =>
-      "Leieavkastningen er middels — du konkurrerer ikke med gode fond eller andre investeringer på cash flow alene.",
+      "Leieavkastningen er middels. Du konkurrerer ikke med gode fond på kontantstrøm alene.",
   },
   {
     id: "con-high-ltv",
@@ -297,7 +294,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
     priority: 88,
     when: (c) => c.ltvPercent > 85,
     text: (c) =>
-      `Belåningsgrad på ${fmtPct(c.ltvPercent)} — lite egenkapitalbuffer ved prisfall eller refinansiering.`,
+      `Belåningsgrad på ${fmtPct(c.ltvPercent)}. Lite egenkapitalbuffer ved prisfall eller refinansiering.`,
   },
   {
     id: "con-stretched-ltv",
@@ -305,7 +302,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
     priority: 75,
     when: (c) => c.ltvPercent > 75 && c.ltvPercent <= 85,
     text: (c) =>
-      `Belåningsgrad på ${fmtPct(c.ltvPercent)} — du er utsatt for renteoppgang og strengere bankkrav.`,
+      `Belåningsgrad på ${fmtPct(c.ltvPercent)}. Du er utsatt for renteoppgang og strengere bankkrav.`,
   },
   {
     id: "con-rent-not-cover-loan",
@@ -313,7 +310,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
     priority: 90,
     when: (c) => !c.rentCoversLoan,
     text: () =>
-      "Leieinntekten dekker ikke engang låneterminen — du betaler boliglånet i stor grad selv.",
+      "Leieinntekten dekker ikke engang låneterminen. Du betaler boliglånet i stor grad selv.",
   },
   {
     id: "con-high-opex",
@@ -321,7 +318,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
     priority: 78,
     when: (c) => c.operatingCostShareOfRent > 50,
     text: (c) =>
-      `Driftskostnadene sluker ${fmtPct(c.operatingCostShareOfRent)} av leieinntekten — lite igjen til lån og overskudd.`,
+      `Driftskostnadene sluker ${fmtPct(c.operatingCostShareOfRent)} av leieinntekten. Lite igjen til lån og overskudd.`,
   },
   {
     id: "con-high-vacancy",
@@ -329,7 +326,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
     priority: 72,
     when: (c) => c.input.vacancyMonthsPerYear >= 1.2,
     text: (c) =>
-      `Du har lagt inn ${c.input.vacancyMonthsPerYear.toFixed(1).replace(".", ",")} måneder tomgang per år — det tyder på usikkert leiemarked eller sesongvariasjon.`,
+      `Du har lagt inn ${c.input.vacancyMonthsPerYear.toFixed(1).replace(".", ",")} måneder tomgang per år. Det tyder på usikkert leiemarked eller sesongvariasjon.`,
   },
   {
     id: "con-concentration",
@@ -337,17 +334,16 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
     priority: 45,
     when: () => true,
     text: (c) =>
-      `${fmtKr(c.result.equityInvested)} bundet i én eiendom — lite diversifisering og treg likviditet ved salg.`,
+      `${fmtKr(c.result.equityInvested)} bundet i én eiendom. Lite diversifisering og treg likviditet ved salg.`,
   },
 
-  // ── Risiko (10) ───────────────────────────────────────────────────
   {
     id: "risk-interest-sensitivity",
     kategori: "risk",
     priority: 90,
     when: (c) => c.input.annualRatePercent >= 6 || c.ltvPercent > 75,
     text: () =>
-      "Renteoppgang på 1–2 prosentpoeng kan øke terminbeløpet mer enn du kan heve leien på kort sikt.",
+      "Renteoppgang kan øke terminbeløpet raskere enn du kan heve leien.",
   },
   {
     id: "risk-vacancy",
@@ -355,7 +351,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
     priority: 85,
     when: (c) => c.breakEvenMarginPercent < 15,
     text: () =>
-      "Tomgang og leietakerbytte koster tid og penger — tynn margin tåler det dårlig.",
+      "Tomgang og leietakerbytte koster tid og penger. Tynn margin tåler det dårlig.",
   },
   {
     id: "risk-maintenance-clump",
@@ -363,7 +359,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
     priority: 80,
     when: (c) => c.maintenanceShareOfValue < 0.8,
     text: () =>
-      "Vedlikeholdsbudsjettet ser lavt ut — store reparasjoner kommer ofte i klumper og kan sprenge årsbudsjettet.",
+      "Vedlikeholdsbudsjettet ser lavt ut. Store reparasjoner kommer ofte i klumper og kan sprenge årsbudsjettet.",
   },
   {
     id: "risk-income-dependency",
@@ -371,7 +367,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
     priority: 92,
     when: (c) => c.result.monthlyCashFlow < 0,
     text: () =>
-      "Negativ kontantstrøm gjør deg avhengig av fast jobbinntekt — stress ved jobbtap, sykdom eller renteoppgang.",
+      "Negativ kontantstrøm gjør deg avhengig av fast jobbinntekt. Stress ved jobbtap eller sykdom.",
   },
   {
     id: "risk-regulatory",
@@ -395,7 +391,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
     priority: 75,
     when: (c) => c.ownerOccupiedOverHalf,
     text: () =>
-      "Leietaker i samme bolig — konflikter, støy og skader påvirker hverdagen din direkte.",
+      "Leietaker i samme bolig. Konflikter, støy og skader påvirker hverdagen din direkte.",
   },
   {
     id: "risk-hybrid-tax",
@@ -403,7 +399,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
     priority: 70,
     when: (c) => c.ownerOccupiedOverHalf,
     text: () =>
-      "Skattemessig fordeling mellom egen bruk og utleie krever riktig dokumentasjon — feil kan bli dyrt.",
+      "Skattemessig fordeling mellom egen bruk og utleie krever riktig dokumentasjon. Feil kan bli dyrt.",
   },
   {
     id: "risk-sell-with-tenant",
@@ -411,7 +407,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
     priority: 65,
     when: (c) => c.ownerOccupiedOverHalf || !c.result.coversAllCosts,
     text: () =>
-      "Bolig med leietaker eller svake tall kan være vanskeligere å selge — færre kjøpere og lavere bud.",
+      "Bolig med leietaker eller svake tall kan være vanskeligere å selge. Færre kjøpere og lavere bud.",
   },
   {
     id: "risk-high-rate-now",
@@ -419,23 +415,9 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
     priority: 78,
     when: (c) => c.input.annualRatePercent >= 6.5,
     text: (c) =>
-      `Rente på ${fmtPct(c.input.annualRatePercent)} er høy — lånekostnaden dominerer regnestykket.`,
+      `Rente på ${fmtPct(c.input.annualRatePercent)} er høy. Lånekostnaden dominerer regnestykket.`,
   },
 
-  // ── Observasjoner / innsikt (15) ────────────────────────────────────
-  {
-    id: "insight-rate-stress",
-    kategori: "insight",
-    priority: 88,
-    when: (c) => c.result.monthlyLoanPayment > 0,
-    text: (c) => {
-      const stressed = c.result.monthlyLoanPayment * 1.15;
-      const gap = c.result.effectiveMonthlyRent - c.result.monthlyOperatingCosts - stressed;
-      return gap < 0
-        ? `Ved 15 % høyere rente må du fylle på ca. ${fmtKr(Math.abs(gap))}/mnd.`
-        : `Selv med 15 % høyere rente holder tallene — du har buffer mot renteoppgang.`;
-    },
-  },
   {
     id: "insight-loan-share",
     kategori: "insight",
@@ -450,7 +432,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
     priority: 68,
     when: (c) => c.operatingCostShareOfRent > 0,
     text: (c) =>
-      `Driftskostnader utgjør ${fmtPct(c.operatingCostShareOfRent)} av leieinntekten — sjekk at vedlikehold er realistisk.`,
+      `Driftskostnader utgjør ${fmtPct(c.operatingCostShareOfRent)} av leieinntekten. Sjekk at vedlikehold er realistisk.`,
   },
   {
     id: "insight-rent-raise-needed",
@@ -469,7 +451,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
       c.result.grossYieldPercent >= 5.5 &&
       c.result.cashOnCashReturnPercent >= 6,
     text: () =>
-      "Dette ligner en «cash cow» — leien driver avkastningen mer enn prisstigning.",
+      "Leien driver avkastningen mer enn prisstigning. Et solid kontantstrøm-case.",
   },
   {
     id: "insight-appreciation-bet",
@@ -478,7 +460,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
     when: (c) =>
       !c.result.coversAllCosts && c.result.grossYieldPercent < 4,
     text: () =>
-      "Du satser i praksis på verdistigning — ikke leieinntekt. Vær ærlig med deg selv om det er strategien.",
+      "Du satser i praksis på verdistigning, ikke leieinntekt. Vær ærlig med deg selv om det er strategien.",
   },
   {
     id: "insight-fund-comparison",
@@ -487,7 +469,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
     when: (c) =>
       c.result.cashOnCashReturnPercent < 5 && c.result.cashOnCashReturnPercent > -10,
     text: (c) =>
-      `Kontantavkastning på ${fmtPct(c.result.cashOnCashReturnPercent)} konkurrerer med indeksfond over tid — med langt mindre arbeid og bredere risiko.`,
+      `Kontantavkastning på ${fmtPct(c.result.cashOnCashReturnPercent)} konkurrerer med indeksfond over tid, med mindre arbeid og bredere risiko.`,
   },
   {
     id: "insight-purchase-costs",
@@ -495,7 +477,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
     priority: 72,
     when: (c) => c.purchaseCostsShareOfEquity > 8,
     text: (c) =>
-      `Omkostninger ved kjøp utgjør ${fmtPct(c.purchaseCostsShareOfEquity)} av egenkapitalen — det tar tid å «tjene inn» disse.`,
+      `Omkostninger ved kjøp utgjør ${fmtPct(c.purchaseCostsShareOfEquity)} av egenkapitalen. Det tar tid å tjene inn disse.`,
   },
   {
     id: "insight-low-maintenance",
@@ -503,7 +485,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
     priority: 75,
     when: (c) => c.maintenanceShareOfValue < 0.7 && c.input.purchasePrice > 0,
     text: () =>
-      "Vedlikeholdsbudsjettet er under 1 % av boligverdien årlig — mange rådgivere anbefaler minst det over tid.",
+      "Vedlikeholdsbudsjettet er under 1 % av boligverdien årlig. Mange rådgivere anbefaler minst det over tid.",
   },
   {
     id: "insight-management-fee",
@@ -527,7 +509,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
     priority: 78,
     when: (c) => c.taxShareOfCashFlow > 25 && c.result.estimatedTaxAnnual > 0,
     text: (c) =>
-      `Estimert skatt utgjør ${fmtPct(c.taxShareOfCashFlow)} av kontantstrømmen før skatt — vurder fradrag og dokumentasjon nøye.`,
+      `Estimert skatt utgjør ${fmtPct(c.taxShareOfCashFlow)} av kontantstrømmen før skatt. Vurder fradrag og dokumentasjon nøye.`,
   },
   {
     id: "insight-small-shortfall",
@@ -539,7 +521,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
       c.result.monthlyShortfall <= 2_500 &&
       !c.ownerOccupiedOverHalf,
     text: (c) =>
-      `Lite underskudd på ${fmtKr(c.result.monthlyShortfall)}/mnd kan aksepteres hvis du forventer høyere leie, lavere rente eller prisvekst.`,
+      `Lite underskudd på ${fmtKr(c.result.monthlyShortfall)}/mnd kan aksepteres hvis du forventer høyere leie eller prisvekst.`,
   },
   {
     id: "insight-equity-cushion",
@@ -559,17 +541,16 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
       c.breakEvenMarginPercent >= 12 &&
       c.ltvPercent <= 75,
     text: () =>
-      "De fleste nøkkeltallene er grønne samtidig — det er uvanlig bra og bør fortsatt verifiseres mot lokalt leiemarked.",
+      "De fleste nøkkeltallene er grønne samtidig. Uvanlig bra, men verifiser mot lokalt leiemarked.",
   },
 
-  // ── Når svakt case likevel er greit (10) ────────────────────────────
   {
     id: "whenOk-hybrid-anyway",
     kategori: "whenOk",
     priority: 90,
     when: (c) => c.ownerOccupiedOverHalf,
     text: () =>
-      "Du trenger uansett et sted å bo — utleiedelen er et tillegg, ikke hele investeringscaset.",
+      "Du trenger uansett et sted å bo. Utleiedelen er et tillegg, ikke hele investeringscaset.",
   },
   {
     id: "whenOk-cheaper-than-rent",
@@ -578,7 +559,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
     when: (c) =>
       c.housingSavingsMonthly !== null && c.housingSavingsMonthly > 0,
     text: () =>
-      "Netto boligkostnad er lavere enn alternativ leie — da er du foran, selv om utleiedelen isolert ser svak ut.",
+      "Netto boligkostnad er lavere enn alternativ leie. Da er du foran, selv om utleiedelen isolert ser svak ut.",
   },
   {
     id: "whenOk-unused-space",
@@ -586,7 +567,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
     priority: 80,
     when: (c) => c.ownerOccupiedOverHalf,
     text: () =>
-      "Du leier ut areal du uansett ikke bruker — hybel, kjeller eller etasje som ellers stod tomt.",
+      "Du leier ut areal du uansett ikke bruker, som hybel, kjeller eller etasje som ellers stod tomt.",
   },
   {
     id: "whenOk-long-term-home",
@@ -594,7 +575,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
     priority: 75,
     when: (c) => c.ownerOccupiedOverHalf,
     text: () =>
-      "Du planlegger å bo der i mange år — kortsiktig svak leieavkastning betyr mindre.",
+      "Du planlegger å bo der i mange år. Kortsiktig svak leieavkastning betyr mindre.",
   },
   {
     id: "whenOk-small-shortfall-rental",
@@ -605,7 +586,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
       c.result.monthlyShortfall > 0 &&
       c.result.monthlyShortfall <= 3_000,
     text: () =>
-      "Lite månedlig underskudd kan være OK hvis du oppgraderer, øker leien, eller tror på prisvekst i strøket.",
+      "Lite månedlig underskudd kan være OK hvis du oppgraderer, øker leien eller tror på prisvekst i strøket.",
   },
   {
     id: "whenOk-value-add",
@@ -615,7 +596,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
       c.result.grossYieldPercent < 4.5 &&
       (c.input.monthlyMaintenance > 2_000 || c.result.monthlyShortfall > 0),
     text: () =>
-      "Planlagt oppussing eller bedre utnyttelse kan løfte leien mer enn kostnaden — da er dagens tall et utgangspunkt, ikke sluttresultat.",
+      "Planlagt oppussing eller bedre utnyttelse kan løfte leien mer enn kostnaden. Dagens tall er et utgangspunkt, ikke sluttresultat.",
   },
   {
     id: "whenOk-location-premium",
@@ -637,7 +618,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
       !c.result.coversAllCosts &&
       c.result.monthlyShortfall <= 4_000,
     text: () =>
-      "Med lav rente kan det lønne seg å tåle et lite underskudd midlertidig — særlig hvis du forventer leievekst.",
+      "Med lav rente kan det lønne seg å tåle et lite underskudd midlertidig, særlig hvis du forventer leievekst.",
   },
   {
     id: "whenOk-amortization",
@@ -648,7 +629,7 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
       c.result.monthlyCashFlow >= -4_000 &&
       c.ltvPercent < 80,
     text: () =>
-      "Avdrag bygger formue selv med svak kontantstrøm — du betaler deg rikere over tid, men binder likviditet.",
+      "Avdrag bygger formue selv med svak kontantstrøm. Du binder likviditet, men betaler deg rikere over tid.",
   },
   {
     id: "whenOk-secondary-unit",
@@ -659,6 +640,6 @@ export const UTLEIEBOLIG_MELDINGER: UtleieboligMelding[] = [
       c.result.effectiveMonthlyRent > 0 &&
       c.input.monthlyRent < c.input.purchasePrice * 0.004,
     text: () =>
-      "Sekundærbolig med lav yield kan fortsatt passe som feriebolig, fremtidig egenbolig eller langsiktig arv — ikke bare som ren leie.",
+      "Sekundærbolig med lav yield kan passe som feriebolig, fremtidig egenbolig eller langsiktig arv, ikke bare som ren leie.",
   },
 ];

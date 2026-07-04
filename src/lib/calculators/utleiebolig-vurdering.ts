@@ -142,7 +142,7 @@ function deriveVerdict(ctx: UtleieboligVurderingContext): {
     }
     return {
       verdict: "acceptable",
-      verdictLabel: "Hybrid — annen logikk enn ren utleie",
+      verdictLabel: "Hybrid: annen logikk enn ren utleie",
     };
   }
 
