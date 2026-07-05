@@ -21,9 +21,9 @@ export function HomeStats() {
       {statLabels.map(({ key, label }) => (
         <div
           key={key}
-          className="rounded-2xl border border-stone-200 bg-white px-4 py-4 text-center shadow-sm"
+          className="rounded-xl border border-stone-200 bg-white px-3 py-3 text-center shadow-sm"
         >
-          <p className="text-2xl font-bold text-stone-900">{stats[key]}</p>
+          <p className="text-xl font-bold text-stone-900">{stats[key]}</p>
           <p className="mt-1 text-xs font-medium text-stone-500">{label}</p>
         </div>
       ))}

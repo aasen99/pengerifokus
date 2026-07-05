@@ -26,14 +26,14 @@ export const metadata: Metadata = createPageMetadata({
 
 export default function HomePage() {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
+    <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 sm:py-8">
       <Hero />
 
-      <div className="mt-10">
+      <div className="mt-8">
         <HomeStats />
       </div>
 
-      <div className="mt-16 space-y-16">
+      <div className="mt-10 space-y-12">
         <QuickPaths />
 
         <FeaturedGuides />
@@ -53,19 +53,19 @@ export default function HomePage() {
 
         <MainEntries />
 
-        <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900 px-6 py-14 text-center text-white sm:px-10">
-          <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-stone-600/20 blur-3xl" />
-          <div className="absolute -bottom-16 -left-16 h-48 w-48 rounded-full bg-orange-500/25 blur-3xl" />
+        <section className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900 px-5 py-8 text-center text-white sm:px-8">
+          <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-stone-600/20 blur-3xl" />
+          <div className="absolute -bottom-12 -left-12 h-36 w-36 rounded-full bg-orange-500/25 blur-3xl" />
 
           <div className="relative">
-            <h2 className="text-2xl font-bold sm:text-3xl">
+            <h2 className="text-xl font-bold sm:text-2xl">
               Klar til å komme i gang?
             </h2>
-            <p className="mx-auto mt-3 max-w-lg text-lg text-stone-300">
+            <p className="mx-auto mt-2 max-w-lg text-sm text-stone-300 sm:text-base">
               Start med en rask økonomisk sjekk, eller dykk rett inn i
               kalkulatorer og guider.
             </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <div className="mt-5 flex flex-wrap justify-center gap-2">
               <Button href="/verktoy/okonomisk-rontgen" variant="secondary">
                 Ta økonomisk røntgen
               </Button>
