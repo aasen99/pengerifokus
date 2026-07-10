@@ -14,7 +14,6 @@ import { TilbudDisclaimer } from "@/components/tilbud/TilbudDisclaimer";
 import {
   filterTilbud,
   getFordelName,
-  getVisibleTilbudCategories,
   groupTilbudByPartner,
   sortGruppertTilbud,
   TILBUD_SORT_OPTIONS,
@@ -88,14 +87,14 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
     tilbud.some((t) => t.fordelSlug === f.slug),
   );
 
-  const visibleCategories = useMemo(
-    () => getVisibleTilbudCategories(tilbud, query, fordelSlug),
+  const visibleForCategoryFilter = useMemo(
+    () => filterTilbud(tilbud, query, fordelSlug, null),
     [tilbud, query, fordelSlug],
   );
 
   const categoryOptions = useMemo(
-    () => getTilbudCategoryGroupOptions(visibleCategories),
-    [visibleCategories],
+    () => getTilbudCategoryGroupOptions(visibleForCategoryFilter),
+    [visibleForCategoryFilter],
   );
 
   useEffect(() => {

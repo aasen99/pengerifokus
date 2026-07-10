@@ -54,12 +54,12 @@ export interface TilbudCategoryGroupOption {
 }
 
 export function getTilbudCategoryGroupOptions(
-  categories: string[],
+  entries: Array<{ category: string }>,
 ): TilbudCategoryGroupOption[] {
   const counts = new Map<TilbudCategoryGroup, number>();
 
-  for (const category of categories) {
-    const group = getTilbudCategoryGroup(category);
+  for (const entry of entries) {
+    const group = getTilbudCategoryGroup(entry.category);
     if (!group) continue;
     counts.set(group, (counts.get(group) ?? 0) + 1);
   }

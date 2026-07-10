@@ -201,23 +201,6 @@ export function filterTilbud(
   });
 }
 
-export function getTilbudCategories(entries: Tilbud[]): string[] {
-  return [...new Set(entries.map((entry) => entry.category))].sort((a, b) =>
-    a.localeCompare(b, "nb"),
-  );
-}
-
-/** Kategorier tilgjengelig etter program- og søkefilter (uten kategorifilter) */
-export function getVisibleTilbudCategories(
-  entries: Tilbud[],
-  query: string,
-  fordelSlug: string | null,
-): string[] {
-  return getTilbudCategories(
-    filterTilbud(entries, query, fordelSlug, null),
-  );
-}
-
 export function getFordelName(slug: string): string {
   return getFordeler().find((f) => f.slug === slug)?.name ?? slug;
 }
