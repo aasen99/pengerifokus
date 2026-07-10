@@ -1,4 +1,5 @@
 import type { FordelArticleContent } from "@/types/fordel-article";
+import { calculateFordelArticleReadTime } from "@/lib/read-time";
 import { bankfordeler } from "./bankfordeler";
 import { coop } from "./coop";
 import { eurobonus } from "./eurobonus";
@@ -10,20 +11,29 @@ import { revolut } from "./revolut";
 import { spenn } from "./spenn";
 import { trumf } from "./trumf";
 
+function withReadTime(
+  article: Omit<FordelArticleContent, "readTimeMinutes">,
+): FordelArticleContent {
+  return {
+    ...article,
+    readTimeMinutes: calculateFordelArticleReadTime(article),
+  };
+}
+
 /**
  * CMS/ADMIN: Fullstendige fordelsartikler lagres her inntil CMS er på plass.
  */
 const fordelArticles: Record<string, FordelArticleContent> = {
-  bankfordeler,
-  coop,
-  eurobonus,
-  klarna,
-  kredittkortfordeler,
-  naf,
-  obos,
-  revolut,
-  spenn,
-  trumf,
+  bankfordeler: withReadTime(bankfordeler),
+  coop: withReadTime(coop),
+  eurobonus: withReadTime(eurobonus),
+  klarna: withReadTime(klarna),
+  kredittkortfordeler: withReadTime(kredittkortfordeler),
+  naf: withReadTime(naf),
+  obos: withReadTime(obos),
+  revolut: withReadTime(revolut),
+  spenn: withReadTime(spenn),
+  trumf: withReadTime(trumf),
 };
 
 export function getFordelArticle(slug: string): FordelArticleContent | undefined {

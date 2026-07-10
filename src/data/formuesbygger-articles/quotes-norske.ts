@@ -131,7 +131,7 @@ export const norskeFormuesbyggerQuotes: Record<string, FormuesbyggerQuote[]> =
         publishRecommendation: "publiser",
       },
       {
-        text: "Kom deg ut, – rett rundt hjørnet, eller på andre siden av kloden, finnes det en person eller en opplevelse som kan skape innsikt, verdiskapning og glede.",
+        text: "Kom deg ut, rett rundt hjørnet, eller på andre siden av kloden, finnes det en person eller en opplevelse som kan skape innsikt, verdiskapning og glede.",
         sourceUrl: "https://ferd.no/ferd-konsern/vi-er-for-lite-ute-blant-folk/",
         sourceLabel: "Ferd, 2024",
         sourceQuality: "original",

@@ -2,7 +2,6 @@ import type { GuideArticleContent } from "@/types/guide-article";
 
 export const komIGangMedFond: GuideArticleContent = {
   slug: "kom-i-gang-med-fond",
-  readTimeMinutes: 7,
   intro:
     "Fondssparing trenger ikke være komplisert. Her er en enkel innføring for deg som vil komme i gang, uten å måtte bli ekspert første dag.",
   sections: [

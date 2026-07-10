@@ -43,7 +43,7 @@ export default function UtleieboligKalkulatorPage() {
         </h1>
         <p className="mt-3 max-w-2xl text-lg text-stone-600">
           Se om leieinntekten dekker lån og driftskostnader, hva du tjener på
-          egenkapitalen — og få en vurdering med fordeler, ulemper og risiko.
+          egenkapitalen, og få en vurdering med fordeler, ulemper og risiko.
         </p>
       </header>
 
@@ -61,7 +61,7 @@ export default function UtleieboligKalkulatorPage() {
             </Link>
             <span className="text-stone-600">
               {" "}
-              — sammenlign kjøp til eget bruk mot å leie
+              (sammenlign kjøp til eget bruk mot å leie)
             </span>
           </li>
           <li>
@@ -71,7 +71,7 @@ export default function UtleieboligKalkulatorPage() {
             >
               Rentekalkulator
             </Link>
-            <span className="text-stone-600"> — detaljert låneberegning</span>
+            <span className="text-stone-600"> (detaljert låneberegning)</span>
           </li>
           <li>
             <Link
@@ -80,7 +80,7 @@ export default function UtleieboligKalkulatorPage() {
             >
               BSU-kalkulator
             </Link>
-            <span className="text-stone-600"> — sparing til egen bolig</span>
+            <span className="text-stone-600"> (sparing til egen bolig)</span>
           </li>
         </ul>
       </section>

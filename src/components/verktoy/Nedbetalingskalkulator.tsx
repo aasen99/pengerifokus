@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
@@ -71,7 +71,7 @@ function StrategyResultCard({
           {summary.hasInsufficientBudget
             ? "Månedsbudsjettet er lavere enn summen av minimumsbeløp. Øk budsjettet eller senk minimum på ett av lånene."
             : summary.hasGrowingDebt
-              ? "Minimumsbeløpet dekker ikke renten på minst ett lån. Gjelden vil vokse – øk budsjettet eller refinansier."
+              ? "Minimumsbeløpet dekker ikke renten på minst ett lån. Gjelden vil vokse, øk budsjettet eller refinansier."
               : "Kunne ikke beregne full nedbetaling innen 50 år. Sjekk tallene eller øk månedsbudsjettet."}
         </p>
       ) : (
@@ -113,7 +113,7 @@ function StrategyResultCard({
           <ol className="mt-2 space-y-1 text-sm text-stone-700">
             {summary.payoffOrder.map((item, index) => (
               <li key={`${item.name}-${item.monthPaidOff}`}>
-                {index + 1}. {item.name} – måned {item.monthPaidOff} (
+                {index + 1}. {item.name}, måned {item.monthPaidOff} (
                 {formatYearsAndMonths(item.monthPaidOff)})
               </li>
             ))}
@@ -177,7 +177,7 @@ export function Nedbetalingskalkulator() {
         <h2 className="text-lg font-semibold text-stone-900">Dine lån</h2>
         <p className="mt-1 text-sm text-stone-600">
           Legg inn alle gjeldsposter. Angi hvor mye du totalt kan bruke på lån
-          hver måned – minimumsbeløp trekkes først, resten går til ett lån om
+          hver måned, minimumsbeløp trekkes først, resten går til ett lån om
           gangen etter lavine- eller snøball-metoden.
         </p>
 
@@ -265,7 +265,7 @@ export function Nedbetalingskalkulator() {
 
           <CalculatorField
             label="Totalt til lån per måned"
-            hint="Summen du faktisk bruker på alle lån – minimum trekkes først, resten går til ett valgt lån"
+            hint="Summen du faktisk bruker på alle lån, minimum trekkes først, resten går til ett valgt lån"
           >
             <FormattedNumberInput
               value={monthlyBudget}
@@ -279,7 +279,7 @@ export function Nedbetalingskalkulator() {
               Sum minimumsbeløp nå: {formatCurrency(minimumTotal)}.{" "}
               {parseIntegerInput(monthlyBudget) >= minimumTotal
                 ? `Resten (${formatCurrency(parseIntegerInput(monthlyBudget) - minimumTotal)}) går til nedbetaling etter valgt metode.`
-                : "Budsjettet er lavere enn minimum – gjelden vil ikke krympe som forventet."}
+                : "Budsjettet er lavere enn minimum, gjelden vil ikke krympe som forventet."}
             </p>
           )}
         </div>

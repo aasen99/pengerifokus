@@ -1,11 +1,11 @@
-import type { Tilbud } from "@/types/content";
+﻿import type { Tilbud } from "@/types/content";
 
 const trumfNetthandelBase =
   "Kjøp via Trumf Netthandel. Start med tom handlekurv, unngå andre rabattkoder med mindre Trumf godkjenner dem, og fullfør kjøpet i samme økt. Krever Trumf-medlemskap.";
 
 const trumfCheckedAt = "2026-07-02";
 
-/** Trumf netthandel – Trumf-bonus ved kjøp via Trumf sin netthandel. */
+/** Trumf netthandel, Trumf-bonus ved kjøp via Trumf sin netthandel. */
 export const trumfTilbud: Tilbud[] = [
   {
     id: "tilbud-trumf-1",

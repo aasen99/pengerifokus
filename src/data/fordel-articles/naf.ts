@@ -3,7 +3,6 @@ import type { FordelArticleContent } from "@/types/fordel-article";
 export const naf: FordelArticleContent = {
   slug: "naf",
   title: "NAF-medlemskap og medlemsfordeler",
-  readTimeMinutes: 11,
   intro:
     "NAF er motorenes medlemsorganisasjon med veihjelp, juridisk rådgivning og rabatter på alt fra dekk og verksted til reise og hotell. Her får du oversikt over medlemskapstyper, pris, hva veihjelpspakken inkluderer, og hvilke partnerfordeler som typisk gir mest verdi.",
   lastVerified: "2. juli 2026",
@@ -28,14 +27,14 @@ export const naf: FordelArticleContent = {
       heading: "Hva er NAF-medlemskap?",
       paragraphs: [
         "NAF er en medlemsorganisasjon for bilister og andre som vil ha trygghet på veien og rabatter på bilrelaterte tjenester. Medlemskapet gir tilgang til veihjelp, rådgivning og et nettverk av partnerrabatter.",
-        "NAF skiller mellom medlemskap med og uten veihjelpspakke. Veihjelpen er personlig – du får hjelp uansett hvilken bil du kjører eller er passasjer i, forutsatt at medlemskapet er gyldig.",
+        "NAF skiller mellom medlemskap med og uten veihjelpspakke. Veihjelpen er personlig, du får hjelp uansett hvilken bil du kjører eller er passasjer i, forutsatt at medlemskapet er gyldig.",
       ],
     },
     {
       heading: "Pris og medlemskapstyper",
       paragraphs: [
         "NAF oppgir at ordinært medlemskap med veihjelp koster 1 585 kr per år. Medlemskap uten veihjelpspakke koster 720 kr. Det finnes også egne priser for MC, NAF Ung og medlemskap for flere personer i samme husstand.",
-        "Veihjelpspakken inkluderer blant annet nøkkelforsikring og egenandelsforsikring for leiebil – fordeler du ikke får med det rimeligste medlemskapet uten veihjelp.",
+        "Veihjelpspakken inkluderer blant annet nøkkelforsikring og egenandelsforsikring for leiebil, fordeler du ikke får med det rimeligste medlemskapet uten veihjelp.",
       ],
       tip: "For de fleste bilister er veihjelpspakken hovedgrunnen til medlemskapet. Partnerrabattene er et pluss oppå.",
     },
@@ -46,8 +45,8 @@ export const naf: FordelArticleContent = {
       ],
       bullets: [
         "Veihjelp uansett hvilken bil du kjører eller er passasjer i",
-        "Nøkkelforsikring – inntil 7 500 kr for ny nøkkel (egenandel 1 000 kr, én skade per år)",
-        "Egenandelsforsikring leiebil – dekker egenandel opp til 25 000 kr (én skade per år)",
+        "Nøkkelforsikring, inntil 7 500 kr for ny nøkkel (egenandel 1 000 kr, én skade per år)",
+        "Egenandelsforsikring leiebil, dekker egenandel opp til 25 000 kr (én skade per år)",
         "Juridisk og bilteknisk rådgivning",
         "Rabatt på service, reparasjon og EU-kontroll på NAF-senter",
       ],
@@ -55,15 +54,15 @@ export const naf: FordelArticleContent = {
     {
       heading: "Medlemsfordeler utover veihjelp",
       paragraphs: [
-        "NAF oppgir over 60 medlemsfordeler. Mange er bilrelaterte, men det finnes også rabatter på reise, hotell, mobil og helse – ofte overlappende med andre medlemsprogrammer som OBOS.",
+        "NAF oppgir over 60 medlemsfordeler. Mange er bilrelaterte, men det finnes også rabatter på reise, hotell, mobil og helse, ofte overlappende med andre medlemsprogrammer som OBOS.",
       ],
       bullets: [
-        "Bil – BestDrive (dekk og dekkhotell), NAF-senter, Noddi, leiebil",
-        "Reise – Strawberry, Citybox, De Historiske, Go Nordic Cruiseline",
-        "Mobil – Talkmore med rabatt på enkelt- og familieabonnement",
-        "Helse – Brilleland med rabatt på briller og synsundersøkelse",
-        "Camping – NAF Camp med rabatt på plass og hytter",
-        "Forsikring – opptil 24 % rabatt på bilforsikring hos Gjensidige (ifølge NAF)",
+        "Bil, BestDrive (dekk og dekkhotell), NAF-senter, Noddi, leiebil",
+        "Reise, Strawberry, Citybox, De Historiske, Go Nordic Cruiseline",
+        "Mobil, Talkmore med rabatt på enkelt- og familieabonnement",
+        "Helse, Brilleland med rabatt på briller og synsundersøkelse",
+        "Camping, NAF Camp med rabatt på plass og hytter",
+        "Forsikring, opptil 24 % rabatt på bilforsikring hos Gjensidige (ifølge NAF)",
       ],
     },
     {
@@ -76,7 +75,7 @@ export const naf: FordelArticleContent = {
     {
       heading: "Er NAF verdt det?",
       paragraphs: [
-        "For bilister som kjører mye eller reiser med bil i Norge og Europa, kan veihjelpen alene forsvare prisen – én enkelt berging uten medlemskap kan koste flere tusen kroner.",
+        "For bilister som kjører mye eller reiser med bil i Norge og Europa, kan veihjelpen alene forsvare prisen, én enkelt berging uten medlemskap kan koste flere tusen kroner.",
         "Uten bil er medlemskapet mindre åpenbart, med mindre du aktivt bruker partnerrabattene. Sammenlign med OBOS og andre programmer på konkrete kjøp før du velger hvor du handler.",
       ],
     },
@@ -104,13 +103,13 @@ export const naf: FordelArticleContent = {
     },
   ],
   sources: [
-    { label: "NAF – Bli medlem", url: "https://www.naf.no/medlemskap/naf-medlem" },
-    { label: "NAF – Medlemsfordeler", url: "https://www.naf.no/medlemskap/medlemsfordeler" },
-    { label: "NAF – Veihjelp", url: "https://www.naf.no/medlemskap/medlemsfordeler/veihjelp" },
+    { label: "NAF, Bli medlem", url: "https://www.naf.no/medlemskap/naf-medlem" },
+    { label: "NAF, Medlemsfordeler", url: "https://www.naf.no/medlemskap/medlemsfordeler" },
+    { label: "NAF, Veihjelp", url: "https://www.naf.no/medlemskap/medlemsfordeler/veihjelp" },
   ],
   relatedLinks: [
-    { label: "NAF-tilbud – oversikt", href: "/tilbud?program=naf" },
-    { label: "OBOS – medlemsfordeler", href: "/fordeler/obos" },
+    { label: "NAF-tilbud, oversikt", href: "/tilbud?program=naf" },
+    { label: "OBOS, medlemsfordeler", href: "/fordeler/obos" },
     { label: "Lånets reelle verdi", href: "/verktoy/lanets-reelle-verdi" },
     { label: "Alle fordelsprogrammer", href: "/fordeler" },
   ],

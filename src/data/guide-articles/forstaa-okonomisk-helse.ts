@@ -2,7 +2,6 @@ import type { GuideArticleContent } from "@/types/guide-article";
 
 export const forstaaOkonomiskHelse: GuideArticleContent = {
   slug: "forstaa-okonomisk-helse",
-  readTimeMinutes: 5,
   intro:
     "Økonomisk helse handler om mer enn hvor mye du tjener. Det handler om buffer, gjeld, sparing og hvor robust du er når livet overrasker. Her får du en enkel innføring, og et verktøy som gir deg en rask temperaturmåling.",
   sections: [

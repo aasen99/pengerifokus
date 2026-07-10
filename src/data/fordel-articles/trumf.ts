@@ -3,7 +3,6 @@ import type { FordelArticleContent } from "@/types/fordel-article";
 export const trumf: FordelArticleContent = {
   slug: "trumf",
   title: "Trumf og Trumf-bonus",
-  readTimeMinutes: 12,
   intro:
     "Trumf er bonusprogrammet til NorgesGruppen der du samler Trumf-bonus på dagligvarer, hos utvalgte partnere og via Trumf Netthandel. Her får du oversikt over standardbonus, Trumf Pay, Trippel-Trumf, uttak til bankkonto, kjedespesifikke fordeler og Trumf Kredittkort.",
   lastVerified: "2. juli 2026",
@@ -194,7 +193,7 @@ export const trumf: FordelArticleContent = {
   ],
   sources: [
     {
-      label: "Trumf – Slik sparer du Trumf-bonus",
+      label: "Trumf, Slik sparer du Trumf-bonus",
       url: "https://www.trumf.no/slik-sparer-du-trumf-bonus",
     },
     {
@@ -202,7 +201,7 @@ export const trumf: FordelArticleContent = {
       url: "https://www.trumf.no/trumf-pay",
     },
     {
-      label: "Trumf – Bankoverføring",
+      label: "Trumf, Bankoverføring",
       url: "https://www.trumf.no/profil/bruk-bonus/bankoverforing",
     },
     {
@@ -218,7 +217,7 @@ export const trumf: FordelArticleContent = {
       url: "https://www.trumf.no/trumf-netthandel",
     },
     {
-      label: "KIWI – Om KIWI PLUSS",
+      label: "KIWI, Om KIWI PLUSS",
       url: "https://kiwi.no/informasjon/om-kiwi-pluss",
     },
     {
@@ -226,21 +225,21 @@ export const trumf: FordelArticleContent = {
       url: "https://meny.no/mer",
     },
     {
-      label: "SPAR – Trumf-bonus",
+      label: "SPAR, Trumf-bonus",
       url: "https://spar.no/trumf",
     },
     {
-      label: "Trumf Kredittkort – Fordeler",
+      label: "Trumf Kredittkort, Fordeler",
       url: "https://www.trumf.no/trumf-kredittkort/fordeler-med-trumf-kredittkort",
     },
     {
-      label: "Trumf Kredittkort – Priser og vilkår",
+      label: "Trumf Kredittkort, Priser og vilkår",
       url: "https://www.trumf.no/trumf-kredittkort/priser-og-vilkar",
     },
   ],
   relatedLinks: [
     { label: "Se Trumf-tilbud vi har samlet", href: "/tilbud?program=trumf" },
-    { label: "EuroBonus – flybonusprogram", href: "/fordeler/eurobonus" },
+    { label: "EuroBonus, flybonusprogram", href: "/fordeler/eurobonus" },
     { label: "Kredittkortfordeler", href: "/fordeler/kredittkortfordeler" },
   ],
 };

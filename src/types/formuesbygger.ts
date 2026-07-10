@@ -1,4 +1,4 @@
-import type { BaseContent } from "@/types/content";
+﻿import type { BaseContent } from "@/types/content";
 
 export type FormuesbyggerRegion = "norsk" | "internasjonal";
 
@@ -76,7 +76,7 @@ export interface FormuesbyggerQuote {
   category?: FormuesbyggerQuoteCategory;
   /** Brukes til å fremheve kilde når den ikke er original */
   sourceQuality?: FormuesbyggerQuoteSourceQuality;
-  /** Filtreres i UI – kun publiser og publiser-som-motto vises */
+  /** Filtreres i UI, kun publiser og publiser-som-motto vises */
   publishRecommendation?: FormuesbyggerQuotePublishRecommendation;
   /** Valgfri kontekst */
   note?: string;

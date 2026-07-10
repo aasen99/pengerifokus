@@ -62,7 +62,7 @@ export const formuesbyggerQuotes: Record<string, FormuesbyggerQuote[]> = {
       sourceUrl:
         "https://books.google.com/books?id=Hayx0w8S1tcC&pg=PA94",
       sourceLabel:
-        "The Warren Buffett Way (Robert Hagstrom, 1994) — fra foredrag ved Columbia University, 1993",
+        "The Warren Buffett Way (Robert Hagstrom, 1994), fra foredrag ved Columbia University, 1993",
     },
   ],
   "elon-musk": [

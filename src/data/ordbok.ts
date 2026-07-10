@@ -1,4 +1,4 @@
-import type { OrdbokEntry } from "@/types/content";
+﻿import type { OrdbokEntry } from "@/types/content";
 
 /**
  * CMS/ADMIN: Ordbokbegreper kan opprettes og redigeres via admin med kategorier og tags.
@@ -574,7 +574,7 @@ export const ordbok: OrdbokEntry[] = [
     status: "published",
     term: "Bonuspoeng",
     definition:
-      "Poeng eller bonus du får som belønning for kjøp eller medlemskap. Verdien varierer – noen programmer er kontantnære (Trumf, Coop), andre har dynamisk verdi (Spenn, flypoeng).",
+      "Poeng eller bonus du får som belønning for kjøp eller medlemskap. Verdien varierer, noen programmer er kontantnære (Trumf, Coop), andre har dynamisk verdi (Spenn, flypoeng).",
     category: "Fordeler",
     tags: ["trumf", "spenn", "cashback", "lojalitet"],
     createdAt: "2026-07-02",

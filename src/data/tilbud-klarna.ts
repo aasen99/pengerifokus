@@ -1,10 +1,10 @@
-import type { Tilbud } from "@/types/content";
+﻿import type { Tilbud } from "@/types/content";
 
 const klarnaTerms =
   "Cashback via Klarna. Krever betaling/handling gjennom Klarna. Sjekk gjeldende vilkår hos Klarna.";
 
 /**
- * CMS/ADMIN: Klarna cashback-partnere – oppdateres fra Klarnas tilbudsliste.
+ * CMS/ADMIN: Klarna cashback-partnere, oppdateres fra Klarnas tilbudsliste.
  */
 const klarnaCashback: Array<{ partner: string; rate: string }> = [
   { partner: "Kicks", rate: "6" },

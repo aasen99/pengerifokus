@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 
 const paths = [
   {
@@ -12,14 +12,14 @@ const paths = [
     href: "/tilbud",
     title: "Finn medlemsrabatter",
     description:
-      "Søkbare tilbud fra Trumf, OBOS, Klarna, NAF og Coop – filtrer etter program.",
+      "Søkbare tilbud fra Trumf, OBOS, Klarna, NAF og Coop, filtrer etter program.",
     icon: "🏷️",
   },
   {
     href: "/guider",
     title: "Les guider",
     description:
-      "Fra bufferkonto og gjeld til bolig og kredittkort – steg for steg.",
+      "Fra bufferkonto og gjeld til bolig og kredittkort, steg for steg.",
     icon: "📚",
   },
   {
@@ -40,7 +40,7 @@ const paths = [
     href: "/fordeler",
     title: "Fordelsprogrammer",
     description:
-      "Trumf, Coop, Spenn og mer – hva de gir og når de passer deg.",
+      "Trumf, Coop, Spenn og mer, hva de gir og når de passer deg.",
     icon: "🎁",
   },
 ];

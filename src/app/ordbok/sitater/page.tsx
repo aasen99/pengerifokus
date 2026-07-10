@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { SitatList } from "@/components/sitater/SitatList";
@@ -8,7 +8,7 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = createPageMetadata({
   title: "Sitater",
   description:
-    "Sitater og mottoer om penger, investering og formue fra formuesbyggerne – med kilde og lenke til profilen.",
+    "Sitater og mottoer om penger, investering og formue fra formuesbyggerne, med kilde og lenke til profilen.",
   path: "/ordbok/sitater",
   keywords: [
     "økonomisitater",
@@ -25,7 +25,7 @@ export default function SitaterPage() {
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
       <PageHeader
         title="Sitater"
-        description="Sitater og mottoer fra formuesbyggerne vi skriver om. Hvert funn har kilde – engelske sitater vises på originalspråk med norsk oversettelse."
+        description="Sitater og mottoer fra formuesbyggerne vi skriver om. Hvert funn har kilde, engelske sitater vises på originalspråk med norsk oversettelse."
       />
 
       <p className="mb-8 text-sm text-stone-600">

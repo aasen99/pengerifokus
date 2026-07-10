@@ -2,7 +2,6 @@ import type { GuideArticleContent } from "@/types/guide-article";
 
 export const inflasjonOgGjeld: GuideArticleContent = {
   slug: "inflasjon-og-gjeld",
-  readTimeMinutes: 6,
   intro:
     "Inflasjon gjør at penger gradvis mister kjøpekraft. Det påvirker også hvordan gjeld føles over tid, selv om du fortsatt skylder banken det samme nominelle beløpet. Her forklarer vi sammenhengen, og hvordan du kan bruke lønnsvekst til å bli raskere gjeldfri.",
   sections: [

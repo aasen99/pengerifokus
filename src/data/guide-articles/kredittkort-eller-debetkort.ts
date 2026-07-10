@@ -2,7 +2,6 @@ import type { GuideArticleContent } from "@/types/guide-article";
 
 export const kredittkortEllerDebetkort: GuideArticleContent = {
   slug: "kredittkort-eller-debetkort",
-  readTimeMinutes: 4,
   intro:
     "I mange år var kredittkort den eneste enkle måten å få reiseforsikring, lounge, cashback og andre fordeler på. Ville du ha ekstra goder, måtte du som regel bruke kreditt. Det er ikke lenger tilfelle. Flere banker og fintech-selskaper tilbyr nå betalte debetkort med mange av de samme fordelene som tradisjonelle kredittkort. Samtidig har premium-kredittkort blitt dyrere. For mange er spørsmålet derfor ikke lenger «hvilket kredittkort skal jeg velge?», men heller: «Trenger jeg egentlig et kredittkort?»",
   sections: [
@@ -60,7 +59,7 @@ export const kredittkortEllerDebetkort: GuideArticleContent = {
       ],
     },
     {
-      heading: "Premium koster penger – uansett løsning",
+      heading: "Premium koster penger, uansett løsning",
       paragraphs: [
         "Enten du velger kredittkort eller debetkort, er én ting felles: de beste fordelene er sjelden gratis. Premium-kredittkort kan ha årsavgift på flere tusen kroner. Premium-debetkort har ofte en månedlig abonnementspris.",
         "Derfor bør du stille det samme spørsmålet uansett produkt: Bruker jeg fordelene nok til at de er verdt prisen? Hvis svaret er nei, er et gratis kort ofte et bedre valg.",
@@ -82,7 +81,7 @@ export const kredittkortEllerDebetkort: GuideArticleContent = {
       ],
     },
     {
-      heading: "Ikke bare ett kort – men et system",
+      heading: "Ikke bare ett kort, men et system",
       paragraphs: [
         "For noen holder det med ett gratis bankkort. For andre består betalingsløsningen av flere produkter som utfyller hverandre.",
         "Et eksempel kan være: lønn inn på vanlig konto, buffer på høyrentekonto, kredittkort til daglige kjøp, automatisk betaling av hele kredittkortfakturaen hver måned, og bonus samlet i ett eller to fordelsprogrammer.",
@@ -92,8 +91,8 @@ export const kredittkortEllerDebetkort: GuideArticleContent = {
     {
       heading: "Penger i Fokus-vurdering",
       paragraphs: [
-        "Betalte debetkort gjør at kredittkort ikke lenger er den eneste veien til fordeler som reiseforsikring, cashback og premiumtjenester. Det betyr ikke at kredittkort er på vei ut – men konkurransen er blitt større, og valget handler i økende grad om hvilken løsning som passer økonomien og hverdagen din best.",
-        "For de fleste er det ikke nødvendig å optimalisere alt. Men hvis du først betaler for et premiumkort – enten det er debet eller kreditt – bør du være sikker på at fordelene faktisk er verdt prisen.",
+        "Betalte debetkort gjør at kredittkort ikke lenger er den eneste veien til fordeler som reiseforsikring, cashback og premiumtjenester. Det betyr ikke at kredittkort er på vei ut, men konkurransen er blitt større, og valget handler i økende grad om hvilken løsning som passer økonomien og hverdagen din best.",
+        "For de fleste er det ikke nødvendig å optimalisere alt. Men hvis du først betaler for et premiumkort, enten det er debet eller kreditt, bør du være sikker på at fordelene faktisk er verdt prisen.",
       ],
     },
   ],

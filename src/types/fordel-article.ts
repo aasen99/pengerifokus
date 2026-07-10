@@ -19,7 +19,8 @@ export interface FordelArticleFaqItem {
 export interface FordelArticleContent {
   slug: string;
   title: string;
-  readTimeMinutes: number;
+  /** Beregnes fra innhold ved visning hvis utelatt i kildefil */
+  readTimeMinutes?: number;
   intro: string;
   lastVerified: string;
   /** ISO-dato for structured data og sitemap, f.eks. 2026-07-02 */

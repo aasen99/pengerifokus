@@ -8,7 +8,7 @@ export function Hero() {
       </h1>
       <p className="mt-2 max-w-2xl text-base text-stone-600 sm:text-lg">
         Guider, kalkulatorer, ordbok, tilbud og mer for personlig økonomi i
-        Norge — uten bankjargong.
+        Norge, uten bankjargong.
       </p>
       <p className="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-sm font-semibold">
         <Link

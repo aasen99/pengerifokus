@@ -21,28 +21,45 @@ export function TilbudDisclaimer({
 
   if (variant === "banner") {
     return (
-      <div className="rounded-2xl border border-stone-200 bg-stone-50 px-5 py-4 text-sm text-stone-600">
-        <p>
-          <span className="font-semibold text-stone-800">Viktig: </span>
-          Tilbudene er hentet fra {sources} og kan endres av partner uten
-          varsel. Vi oppdaterer listen fortløpende, men garanterer ikke at alle
-          rabatter er gjeldende akkurat nå.
-        </p>
-        {showTrumfNetthandelNote && (
-          <p className="mt-3">
-            <span className="font-semibold text-stone-800">Trumf Netthandel: </span>
-            Du får Trumf-bonus når du starter handelen via Trumf Netthandel.
-            Start med tom handlekurv, unngå andre rabattkoder med mindre Trumf
-            godkjenner dem, og fullfør kjøpet i samme økt. Priser kan variere
-            etter kanal og tidspunkt – sammenlign spesielt totalpris på reise,
-            hotell og leiebil før du bestiller.
+      <details className="group rounded-xl border border-stone-200 bg-stone-50 text-stone-600">
+        <summary className="cursor-pointer list-none px-4 py-2.5 [&::-webkit-details-marker]:hidden">
+          <div className="flex items-center justify-between gap-3">
+            <p className="text-xs leading-snug sm:text-sm">
+              <span className="font-semibold text-stone-800">Viktig: </span>
+              Tilbud kan endres av partner uten varsel. Oppdatert {lastUpdated}.
+            </p>
+            <span
+              className="shrink-0 text-sm text-stone-400 transition-transform group-open:rotate-180"
+              aria-hidden="true"
+            >
+              ▾
+            </span>
+          </div>
+        </summary>
+
+        <div className="space-y-2 border-t border-stone-200 px-4 py-3 text-xs leading-relaxed sm:text-sm">
+          <p>
+            Tilbudene er hentet fra {sources} og kan endres av partner uten
+            varsel. Vi oppdaterer listen fortløpende, men garanterer ikke at
+            alle rabatter er gjeldende akkurat nå.
           </p>
-        )}
-        <p className="mt-2 text-stone-500">
-          Sist oppdatert: {lastUpdated}. Sjekk alltid vilkår hos aktuell partner
-          før du handler.
-        </p>
-      </div>
+          {showTrumfNetthandelNote && (
+            <p>
+              <span className="font-semibold text-stone-800">
+                Trumf Netthandel:{" "}
+              </span>
+              Du får Trumf-bonus når du starter handelen via Trumf Netthandel.
+              Start med tom handlekurv, unngå andre rabattkoder med mindre Trumf
+              godkjenner dem, og fullfør kjøpet i samme økt. Priser kan variere
+              etter kanal og tidspunkt. Sammenlign spesielt totalpris på reise,
+              hotell og leiebil før du bestiller.
+            </p>
+          )}
+          <p className="text-stone-500">
+            Sjekk alltid vilkår hos aktuell partner før du handler.
+          </p>
+        </div>
+      </details>
     );
   }
 

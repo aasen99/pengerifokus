@@ -58,7 +58,7 @@ export function BsuKalkulator() {
           innskudd per år gir opptil {formatIntegerInput(BSU_MAX_ANNUAL_TAX_BENEFIT)} kr i
           skattefradrag. BSU-kontoer har typisk ca.{" "}
           {BSU_TYPICAL_RATE_PREMIUM_OVER_REGULAR.toString().replace(".", ",")}{" "}
-          prosentpoeng høyere rente enn vanlige sparekontoer — med samme lave risiko
+          prosentpoeng høyere rente enn vanlige sparekontoer, med samme lave risiko
           (innskudsgaranti).
         </p>
 
@@ -200,7 +200,7 @@ export function BsuKalkulator() {
           {formatIntegerInput(BSU_MAX_ANNUAL_TAX_BENEFIT)} kr per år). Sammenligningen med
           vanlig sparekonto forutsetter ca.{" "}
           {BSU_TYPICAL_RATE_PREMIUM_OVER_REGULAR.toString().replace(".", ",")}{" "}
-          prosentpoeng lavere rente — BSU har like lav risiko via innskudsgaranti. Pengene
+          prosentpoeng lavere rente. BSU har like lav risiko via innskudsgaranti. Pengene
           må brukes til bolig. Sjekk gjeldende regler og satser hos Skatteetaten og banken
           din.
         </p>

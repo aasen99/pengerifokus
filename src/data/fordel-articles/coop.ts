@@ -3,7 +3,6 @@ import type { FordelArticleContent } from "@/types/fordel-article";
 export const coop: FordelArticleContent = {
   slug: "coop",
   title: "Coop Medlem og kjøpeutbytte",
-  readTimeMinutes: 14,
   intro:
     "Coop Medlem er medlemskapet i Coops samvirkelag der du opptjener kjøpeutbytte på handel, får renter på medlemskonto og tilgang til medlemsfordeler. Her får du oversikt over hvordan kjøpeutbytte fungerer, satser per samvirkelag, medlemskonto, høyrentekonto, Extra-fordeler og Coop Mastercard.",
   lastVerified: "2. juli 2026",
@@ -80,16 +79,16 @@ export const coop: FordelArticleContent = {
       bullets: [
         "Coop sentralt (minimum): 1 %",
         "Coop Nord: 5 % fra 1. januar 2026 i butikker på Coop Nords butikkliste (inkludert Obs der oppført)",
-        "Coop Midt-Norge: 3 % – kjøpeutbytte og renter godskrives i januar",
+        "Coop Midt-Norge: 3 %, kjøpeutbytte og renter godskrives i januar",
         "Coop Sørvest: 2 % i Coop Sørvests butikker",
-        "Coop Nordvest: 2 % fra 2025 – bør verifiseres for 2026",
-        "Coop Øst: 1 % forhåndsgarantert for 2025 – 2026 bør sjekkes",
-        "Coop Innlandet: 1 % forhåndsgarantert for 2025 – 2026 bør sjekkes",
-        "Coop Sørøst: 1 % forhåndsgarantert for 2025 – 2026 bør sjekkes",
-        "Coop Økonom: 1 % forhåndsgarantert for 2025 – 2026 bør sjekkes",
-        "Coop Nordland: 1 % for 2026 ifølge tidligere kilder – bør verifiseres",
-        "Coop Oppdal: 1 % ifølge tidligere kilder – bør verifiseres",
-        "Coop Vest og Coop Finnmark: ikke verifisert i denne gjennomgangen – sjekk hos Coop",
+        "Coop Nordvest: 2 % fra 2025, bør verifiseres for 2026",
+        "Coop Øst: 1 % forhåndsgarantert for 2025, 2026 bør sjekkes",
+        "Coop Innlandet: 1 % forhåndsgarantert for 2025, 2026 bør sjekkes",
+        "Coop Sørøst: 1 % forhåndsgarantert for 2025, 2026 bør sjekkes",
+        "Coop Økonom: 1 % forhåndsgarantert for 2025, 2026 bør sjekkes",
+        "Coop Nordland: 1 % for 2026 ifølge tidligere kilder, bør verifiseres",
+        "Coop Oppdal: 1 % ifølge tidligere kilder, bør verifiseres",
+        "Coop Vest og Coop Finnmark: ikke verifisert i denne gjennomgangen, sjekk hos Coop",
       ],
     },
     {
@@ -114,17 +113,17 @@ export const coop: FordelArticleContent = {
         "Coop oppgir medlemsfordeler innen dagligvare, drivstoff, strøm, reise, medlemskupp, kuponger og Coop Mastercard. Medlemmer får rabattkuponger på varer de handler ofte, tilgang til medlemskupp og oversikt i Coop-appen.",
       ],
       bullets: [
-        "Medlemskupp: egne tilbud som varierer over tid – behandles som kampanjer, ikke faste rabatter",
+        "Medlemskupp: egne tilbud som varierer over tid, behandles som kampanjer, ikke faste rabatter",
         "Personlige kuponger: digitale rabatter i appen basert på kjøpshistorikk",
-        "Partnerfordeler innen drivstoff, strøm og reise – satser og partnere varierer",
+        "Partnerfordeler innen drivstoff, strøm og reise, satser og partnere varierer",
       ],
     },
     {
       heading: "Extra, Prix, Mega og Obs",
       bullets: [
         "Extra: 11 % bonus på frukt og grønt, 50 % medlemsrabatt på bleier, bind, tamponger og truseinnlegg",
-        "Coop Prix: tidligere kilder viser 50 % rabatt på bind, tamponger, truseinnlegg og inkontinensprodukter – bør verifiseres",
-        "Coop Marked og Matkroken: bleierabatt kan gjelde i enkelte samvirkelag – bør verifiseres",
+        "Coop Prix: tidligere kilder viser 50 % rabatt på bind, tamponger, truseinnlegg og inkontinensprodukter, bør verifiseres",
+        "Coop Marked og Matkroken: bleierabatt kan gjelde i enkelte samvirkelag, bør verifiseres",
         "Coop Mega: inngår i Coop-systemet, men konkrete faste fordeler ble ikke fullstendig verifisert",
         "Obs og Obs BYGG: inngår i Coop-systemet og kan gi kjøpeutbytte der samvirkelaget omfatter dem, for eksempel hos Coop Nord med 5 %",
       ],
@@ -175,7 +174,7 @@ export const coop: FordelArticleContent = {
     {
       question: "Hvor mye kjøpeutbytte får jeg som Coop-medlem?",
       answer:
-        "Coop oppgir minimum 1 % kjøpeutbytte på handel i Coop. Den faktiske satsen avhenger av samvirkelaget ditt – for eksempel 3 % i Coop Midt-Norge, 2 % i Coop Sørvest og 5 % hos utvalgte Coop Nord-butikker fra 2026.",
+        "Coop oppgir minimum 1 % kjøpeutbytte på handel i Coop. Den faktiske satsen avhenger av samvirkelaget ditt, for eksempel 3 % i Coop Midt-Norge, 2 % i Coop Sørvest og 5 % hos utvalgte Coop Nord-butikker fra 2026.",
     },
     {
       question: "Når får jeg utbetalt kjøpeutbytte?",
@@ -195,12 +194,12 @@ export const coop: FordelArticleContent = {
     {
       question: "Får jeg rente på medlemskontoen?",
       answer:
-        "Ja, Coop-medlemmer får renter på innestående etter samvirkelagets betingelser. Rentesatsen varierer – for eksempel 0,25 % hos Coop Øst og 0,65 % hos Coop Sørvest og Coop Økonom på medlemskonto.",
+        "Ja, Coop-medlemmer får renter på innestående etter samvirkelagets betingelser. Rentesatsen varierer, for eksempel 0,25 % hos Coop Øst og 0,65 % hos Coop Sørvest og Coop Økonom på medlemskonto.",
     },
     {
       question: "Hva er forskjellen på kjøpeutbytte og Coop Mastercard-bonus?",
       answer:
-        "Kjøpeutbytte er en andel av kjøpesummen du får tilbake som medlem i samvirkelaget, og settes inn på medlemskonto. Coop Mastercard gir 1 % medlemsbonus på kjøp i Coop sine butikker, med årlig grense på 2 500 kr i bonus – i tillegg til at kortet fungerer som medlemskort.",
+        "Kjøpeutbytte er en andel av kjøpesummen du får tilbake som medlem i samvirkelaget, og settes inn på medlemskonto. Coop Mastercard gir 1 % medlemsbonus på kjøp i Coop sine butikker, med årlig grense på 2 500 kr i bonus, i tillegg til at kortet fungerer som medlemskort.",
     },
   ],
   sources: [
@@ -221,31 +220,31 @@ export const coop: FordelArticleContent = {
       url: "https://www.coop.no/medlem/fordeler",
     },
     {
-      label: "Coop Øst – sparing",
+      label: "Coop Øst, sparing",
       url: "https://www.coop.no/samvirkelag/coop-ost/medlem/sparing",
     },
     {
-      label: "Coop Sørvest – medlem",
+      label: "Coop Sørvest, medlem",
       url: "https://www.coop.no/samvirkelag/coop-sorvest/medlem",
     },
     {
-      label: "Coop Midt-Norge – medlem",
+      label: "Coop Midt-Norge, medlem",
       url: "https://www.coop.no/samvirkelag/coop-midt-norge/medlem",
     },
     {
-      label: "Coop Nord – 5 % kjøpeutbytte",
+      label: "Coop Nord, 5 % kjøpeutbytte",
       url: "https://www.coop.no/samvirkelag/coop-nord/5-prosent-kjopeutbytte",
     },
     {
-      label: "Coop Nord – butikker",
+      label: "Coop Nord, butikker",
       url: "https://www.coop.no/samvirkelag/coop-nord/butikker",
     },
     {
-      label: "Coop Nordvest – innskudd",
+      label: "Coop Nordvest, innskudd",
       url: "https://www.coop.no/samvirkelag/coop-nordvest/medlem/innskudd",
     },
     {
-      label: "Coop Innlandet – sparing",
+      label: "Coop Innlandet, sparing",
       url: "https://www.coop.no/samvirkelag/coop-innlandet/sparing",
     },
     {
@@ -253,13 +252,13 @@ export const coop: FordelArticleContent = {
       url: "https://www.coop.no/medlem/fordeler/coop-mastercard",
     },
     {
-      label: "Coop Mastercard – spørsmål og svar",
+      label: "Coop Mastercard, spørsmål og svar",
       url: "https://www.coop.no/medlem/fordeler/coop-mastercard/sporsmaal-svar",
     },
   ],
   relatedLinks: [
     { label: "Se Coop-tilbud vi har samlet", href: "/tilbud?program=coop" },
-    { label: "Trumf – bonusprogram hos NorgesGruppen", href: "/fordeler/trumf" },
+    { label: "Trumf, bonusprogram hos NorgesGruppen", href: "/fordeler/trumf" },
     { label: "Kredittkortfordeler", href: "/fordeler/kredittkortfordeler" },
   ],
 };

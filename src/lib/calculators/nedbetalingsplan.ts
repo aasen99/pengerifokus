@@ -1,4 +1,4 @@
-import { formatCurrency, formatYearsAndMonths } from "@/lib/calculators/loan";
+﻿import { formatCurrency, formatYearsAndMonths } from "@/lib/calculators/loan";
 
 export interface DebtLine {
   id: string;
@@ -192,7 +192,7 @@ export function formatPayoffSummaryLine(summary: DebtPayoffSummary): string {
       return "Månedsbudsjettet dekker ikke alle minimumsbeløp.";
     }
     return summary.hasGrowingDebt
-      ? "Gjelden vokser – minimumsbeløp dekker ikke renten på minst ett lån."
+      ? "Gjelden vokser, minimumsbeløp dekker ikke renten på minst ett lån."
       : `Gjeldsfri innen ${formatYearsAndMonths(summary.monthsToDebtFree)} (estimat)`;
   }
 

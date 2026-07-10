@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Suspense } from "react";
 import { PageHeader } from "@/components/ui/PageHeader";
@@ -40,7 +40,7 @@ export default function OrdbokPage() {
         <div>
           <p className="font-semibold text-stone-900">Sitater fra formuesbyggerne</p>
           <p className="mt-1 text-sm text-stone-600">
-            Visdom om penger, investering og formue – med kilde og lenke til profilen.
+            Visdom om penger, investering og formue, med kilde og lenke til profilen.
           </p>
         </div>
         <Link

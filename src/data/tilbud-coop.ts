@@ -1,4 +1,4 @@
-import type { Tilbud } from "@/types/content";
+﻿import type { Tilbud } from "@/types/content";
 
 const coopTerms =
   "Krever Coop-medlemskap. Sjekk gjeldende vilkår og bestilling hos Coop.";
@@ -9,7 +9,7 @@ export const coopTilbud: Tilbud[] = [
     id: "tilbud-coop-1",
     slug: "coop-riksteatret-voksen",
     status: "published",
-    title: "Riksteatret – voksenforestillinger",
+    title: "Riksteatret, voksenforestillinger",
     description:
       "100 kr rabatt på voksenforestillinger for Coop-medlemmer hos Riksteatret.",
     offerLabel: "100 kr rabatt",
@@ -24,7 +24,7 @@ export const coopTilbud: Tilbud[] = [
     id: "tilbud-coop-2",
     slug: "coop-riksteatret-barn",
     status: "published",
-    title: "Riksteatret – barne- og danseforestillinger",
+    title: "Riksteatret, barne- og danseforestillinger",
     description:
       "50 kr rabatt på barne- og danseforestillinger for Coop-medlemmer hos Riksteatret.",
     offerLabel: "50 kr rabatt",

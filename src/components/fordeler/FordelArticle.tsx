@@ -173,34 +173,49 @@ export function FordelArticle({ fordel, article, tilbud }: FordelArticleProps) {
         </section>
       )}
 
-      <section className="mt-10 rounded-2xl border border-stone-200 bg-stone-50 p-6">
-        <h2 className="text-lg font-semibold text-stone-900">
-          Kilder og sist oppdatert
-        </h2>
-        <p className="mt-3 text-sm leading-relaxed text-stone-600">
-          Informasjonen er hentet fra offentlige kilder hos Trumf, dagligvarekjeder
-          og partnere. Satser og vilkår kan endres: sjekk alltid hos utsteder før
-          du legger til grunn for beslutninger.
-        </p>
-        <ul className="mt-4 space-y-2">
-          {article.sources.map((source) => (
-            <li key={source.url}>
-              <a
-                href={source.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm font-medium text-orange-600 hover:text-orange-700"
-              >
-                {source.label} ↗
-              </a>
-            </li>
-          ))}
-        </ul>
-        <p className="mt-4 text-xs text-stone-500">
-          Sist kontrollert:{" "}
-          <time dateTime={article.lastModifiedIso}>{article.lastVerified}</time>
-        </p>
-      </section>
+      <details className="group mt-10 rounded-xl border border-stone-200 bg-stone-50">
+        <summary className="cursor-pointer list-none px-4 py-2.5 [&::-webkit-details-marker]:hidden">
+          <div className="flex items-center justify-between gap-3">
+            <span className="text-sm text-stone-700">
+              <span className="font-semibold text-stone-900">Kilder</span>
+              <span className="text-stone-500">
+                {" "}
+                · sist kontrollert{" "}
+                <time dateTime={article.lastModifiedIso}>
+                  {article.lastVerified}
+                </time>
+              </span>
+            </span>
+            <span
+              className="shrink-0 text-sm text-stone-400 transition-transform group-open:rotate-180"
+              aria-hidden="true"
+            >
+              ▾
+            </span>
+          </div>
+        </summary>
+
+        <div className="border-t border-stone-200 px-4 py-3">
+          <p className="text-xs leading-relaxed text-stone-600">
+            Satser og vilkår kan endres. Sjekk alltid hos utsteder før du legger
+            til grunn for beslutninger.
+          </p>
+          <ul className="mt-3 space-y-1.5">
+            {article.sources.map((source) => (
+              <li key={source.url}>
+                <a
+                  href={source.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-medium text-orange-600 hover:text-orange-700 sm:text-sm"
+                >
+                  {source.label} ↗
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </details>
 
       {article.relatedLinks && article.relatedLinks.length > 0 && (
         <aside className="mt-6 rounded-2xl border border-stone-200 bg-stone-50 p-6">

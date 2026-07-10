@@ -2,7 +2,6 @@ import type { GuideArticleContent } from "@/types/guide-article";
 
 export const byggBufferkonto: GuideArticleContent = {
   slug: "bygg-bufferkonto",
-  readTimeMinutes: 6,
   intro:
     "En bufferkonto er økonomiens airbag. Den gjør at uforutsette regninger ikke blir til dyr gjeld, og gir deg ro i hverdagen.",
   sections: [

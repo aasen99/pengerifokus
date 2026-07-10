@@ -2,7 +2,6 @@ import type { GuideArticleContent } from "@/types/guide-article";
 
 export const betalNedDyrGjeld: GuideArticleContent = {
   slug: "betal-ned-dyr-gjeld",
-  readTimeMinutes: 7,
   intro:
     "Dyr gjeld koster deg mer jo lenger den står. Med en enkel plan kan du betale ned raskere, uten å sette livet på vent.",
   sections: [

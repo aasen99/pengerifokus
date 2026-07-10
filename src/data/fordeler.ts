@@ -74,7 +74,7 @@ export const fordeler: Fordel[] = [
     status: "published",
     name: "Spenn",
     description:
-      "Felles poengvaluta hos Norwegian, Strawberry og REMA 1000. Slik tjener og bruker du Spenn – og hvorfor verdien varierer.",
+      "Felles poengvaluta hos Norwegian, Strawberry og REMA 1000. Slik tjener og bruker du Spenn, og hvorfor verdien varierer.",
     type: "Lojalitetsprogram",
     useCase: "Reise, hotell og dagligvarer",
     createdAt: "2025-01-12",
@@ -86,11 +86,11 @@ export const fordeler: Fordel[] = [
     status: "published",
     name: "EuroBonus",
     description:
-      "Oversikt over SAS EuroBonus: bonuspoeng, nivåer, SkyTeam-opptjening, Trumf-overføring og når poeng faktisk lønner seg.",
+      "EuroBonus forklart med offisielle kilder: poeng, nivåer, SkyTeam, Widerøe-endringen, Trumf og når poeng gir verdi for vanlige reisende.",
     type: "Flybonus",
     useCase: "Flyreiser og reise",
     createdAt: "2025-01-12",
-    updatedAt: "2026-07-02",
+    updatedAt: "2026-07-10",
   },
   {
     id: "fordel-5",

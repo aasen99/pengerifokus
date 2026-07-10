@@ -2,7 +2,6 @@ import type { GuideArticleContent } from "@/types/guide-article";
 
 export const kuttFasteKostnader: GuideArticleContent = {
   slug: "kutt-faste-kostnader",
-  readTimeMinutes: 6,
   intro:
     "Faste kostnader er utgifter som tikker hver måned uten at du tenker over dem. En gjennomgang kan frigjøre tusenlapper, uten at du må leve på nudler.",
   sections: [

@@ -8,7 +8,8 @@ export interface GuideArticleSection {
 /** CMS/ADMIN: Full artikkelinnhold kan lagres i database med rich text senere */
 export interface GuideArticleContent {
   slug: string;
-  readTimeMinutes: number;
+  /** Beregnes fra innhold ved visning hvis utelatt i kildefil */
+  readTimeMinutes?: number;
   intro: string;
   sections: GuideArticleSection[];
   relatedLinks?: { label: string; href: string }[];

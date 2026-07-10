@@ -1,4 +1,4 @@
-import type { Guide } from "@/types/content";
+﻿import type { Guide } from "@/types/content";
 
 /**
  * CMS/ADMIN: Erstatt denne statiske listen med data fra database/API.
@@ -37,7 +37,7 @@ export const guider: Guide[] = [
     status: "published",
     title: "Bankenes fordelsprogrammer",
     description:
-      "Bankfordeler er lojalitetsprogrammer – ikke veldedighet. Slik vurderer du DNB, Nordea og fagforeningsavtaler.",
+      "Bankfordeler er lojalitetsprogrammer, ikke veldedighet. Slik vurderer du DNB, Nordea og fagforeningsavtaler.",
     category: "Bank",
     tags: ["bank", "dnb", "nordea", "premium", "fagforening"],
     createdAt: "2026-07-02",

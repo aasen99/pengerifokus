@@ -2,7 +2,6 @@ import type { GuideArticleContent } from "@/types/guide-article";
 
 export const eieEllerLeieBolig: GuideArticleContent = {
   slug: "eie-eller-leie-bolig",
-  readTimeMinutes: 7,
   intro:
     "Skal du kjøpe eller leie? Det er et av de største økonomiske spørsmålene mange stiller. Svaret handler sjelden bare om månedlig husleie mot terminbeløp. Tid, kjøpskostnader og alternativ avkastning spiller minst like stor rolle.",
   sections: [

@@ -1,4 +1,4 @@
-import type { Tilbud } from "@/types/content";
+﻿import type { Tilbud } from "@/types/content";
 
 const nafTerms =
   "Krever NAF-medlemskap. Sjekk gjeldende vilkår og bestilling hos NAF.";
@@ -9,7 +9,7 @@ export const nafTilbud: Tilbud[] = [
     id: "tilbud-naf-1",
     slug: "naf-talkmore-enkelt",
     status: "published",
-    title: "Talkmore – enkeltabonnement",
+    title: "Talkmore, enkeltabonnement",
     description: "20 % rabatt på enkeltabonnement for NAF-medlemmer hos Talkmore.",
     offerLabel: "20 % rabatt",
     partner: "Talkmore",
@@ -23,7 +23,7 @@ export const nafTilbud: Tilbud[] = [
     id: "tilbud-naf-2",
     slug: "naf-talkmore-familie",
     status: "published",
-    title: "Talkmore – familieabonnement",
+    title: "Talkmore, familieabonnement",
     description: "10 % rabatt på familieabonnement for NAF-medlemmer hos Talkmore.",
     offerLabel: "10 % rabatt",
     partner: "Talkmore",
@@ -37,7 +37,7 @@ export const nafTilbud: Tilbud[] = [
     id: "tilbud-naf-3",
     slug: "naf-brilleland-komplett",
     status: "published",
-    title: "Brilleland – komplett brille",
+    title: "Brilleland, komplett brille",
     description: "20 % rabatt på komplett brille for NAF-medlemmer hos Brilleland.",
     offerLabel: "20 % rabatt",
     partner: "Brilleland",
@@ -51,7 +51,7 @@ export const nafTilbud: Tilbud[] = [
     id: "tilbud-naf-4",
     slug: "naf-brilleland-andre-brille",
     status: "published",
-    title: "Brilleland – komplett brille nummer to",
+    title: "Brilleland, komplett brille nummer to",
     description:
       "50 % rabatt på komplett brille nummer to for NAF-medlemmer hos Brilleland.",
     offerLabel: "50 % rabatt",
@@ -66,7 +66,7 @@ export const nafTilbud: Tilbud[] = [
     id: "tilbud-naf-5",
     slug: "naf-brilleland-synsundersokelse",
     status: "published",
-    title: "Brilleland – synsundersøkelse",
+    title: "Brilleland, synsundersøkelse",
     description: "Synsundersøkelse til 460 kr for NAF-medlemmer hos Brilleland.",
     offerLabel: "460 kr",
     partner: "Brilleland",
@@ -123,7 +123,7 @@ export const nafTilbud: Tilbud[] = [
     id: "tilbud-naf-9",
     slug: "naf-go-nordic-oslo-kobenhavn",
     status: "published",
-    title: "Go Nordic Cruiseline – Oslo–København",
+    title: "Go Nordic Cruiseline, Oslo–København",
     description:
       "15 % rabatt på Oslo–København med lugar og kjøretøy for NAF-medlemmer hos Go Nordic Cruiseline.",
     offerLabel: "15 % rabatt",
@@ -138,7 +138,7 @@ export const nafTilbud: Tilbud[] = [
     id: "tilbud-naf-10",
     slug: "naf-go-nordic-minicruise",
     status: "published",
-    title: "Go Nordic Cruiseline – MiniCruise",
+    title: "Go Nordic Cruiseline, MiniCruise",
     description: "10 % rabatt på MiniCruise for NAF-medlemmer hos Go Nordic Cruiseline.",
     offerLabel: "10 % rabatt",
     partner: "Go Nordic Cruiseline",
@@ -166,7 +166,7 @@ export const nafTilbud: Tilbud[] = [
     id: "tilbud-naf-12",
     slug: "naf-bestdrive-dekkhotell",
     status: "published",
-    title: "BestDrive – dekkhotell",
+    title: "BestDrive, dekkhotell",
     description: "25 % rabatt på dekkhotell for NAF-medlemmer hos BestDrive.",
     offerLabel: "25 % rabatt",
     partner: "BestDrive",
@@ -180,7 +180,7 @@ export const nafTilbud: Tilbud[] = [
     id: "tilbud-naf-13",
     slug: "naf-bestdrive-dekk",
     status: "published",
-    title: "BestDrive – dekk og dekktjenester",
+    title: "BestDrive, dekk og dekktjenester",
     description:
       "Minst 5 % rabatt på dekk og dekktjenester for NAF-medlemmer hos BestDrive.",
     offerLabel: "Minst 5 % rabatt",
@@ -195,7 +195,7 @@ export const nafTilbud: Tilbud[] = [
     id: "tilbud-naf-14",
     slug: "naf-bestdrive-garanti",
     status: "published",
-    title: "BestDrive – skadegaranti",
+    title: "BestDrive, skadegaranti",
     description:
       "2 års skadegaranti på utvalgte dekk for NAF-medlemmer hos BestDrive.",
     offerLabel: "2 års skadegaranti",
@@ -240,7 +240,7 @@ export const nafTilbud: Tilbud[] = [
     id: "tilbud-naf-17",
     slug: "naf-camp-campingplass",
     status: "published",
-    title: "NAF Camp – campingplass",
+    title: "NAF Camp, campingplass",
     description: "10 % rabatt på campingplass for NAF-medlemmer hos NAF Camp.",
     offerLabel: "10 % rabatt",
     partner: "NAF Camp",
@@ -254,7 +254,7 @@ export const nafTilbud: Tilbud[] = [
     id: "tilbud-naf-18",
     slug: "naf-camp-hytter",
     status: "published",
-    title: "NAF Camp – hytter og rom",
+    title: "NAF Camp, hytter og rom",
     description: "5 % rabatt på hytter og rom for NAF-medlemmer hos NAF Camp.",
     offerLabel: "5 % rabatt",
     partner: "NAF Camp",

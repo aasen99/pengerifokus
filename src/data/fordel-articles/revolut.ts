@@ -2,15 +2,14 @@ import type { FordelArticleContent } from "@/types/fordel-article";
 
 export const revolut: FordelArticleContent = {
   slug: "revolut",
-  title: "Revolut – digital bank og betalingskort",
-  readTimeMinutes: 11,
+  title: "Revolut, digital bank og betalingskort",
   intro:
-    "Revolut er en app-basert betalingsløsning med debetkort, valutaveksling og valgfrie betalte abonnementer. Det er ikke et kredittkort – du bruker penger du har på kontoen. Her får du oversikt over planene, RevPoints, reisefordeler og når et betalt abonnement faktisk kan lønne seg.",
+    "Revolut er en app-basert betalingsløsning med debetkort, valutaveksling og valgfrie betalte abonnementer. Det er ikke et kredittkort, du bruker penger du har på kontoen. Her får du oversikt over planene, RevPoints, reisefordeler og når et betalt abonnement faktisk kan lønne seg.",
   lastVerified: "2. juli 2026",
   lastModifiedIso: "2026-07-02",
   seoTitle: "Revolut Norge: planer, gebyrer, RevPoints og reisefordeler",
   seoDescription:
-    "Forstå Revolut: Standard, Plus, Premium og Metal, valutaveksling, minibankuttak, RevPoints, reiseforsikring og Wolt+ – og vanlige fallgruver.",
+    "Forstå Revolut: Standard, Plus, Premium og Metal, valutaveksling, minibankuttak, RevPoints, reiseforsikring og Wolt+, og vanlige fallgruver.",
   seoKeywords: [
     "Revolut Norge",
     "Revolut kort",
@@ -28,14 +27,14 @@ export const revolut: FordelArticleContent = {
     {
       heading: "Hva er Revolut?",
       paragraphs: [
-        "Revolut er en digital betalingsløsning der du får konto og debetkort i appen. Du kan betale i Norge og utlandet, veksle valuta, sette opp sparehvelv og – på utvalgte planer – få forsikring og andre premiumfordeler.",
-        "Revolut er ikke et kredittkort. Du låner ikke penger av Revolut – du bruker saldo på kontoen. Det gjør produktet annerledes enn tradisjonelle bonuskort der rente kan spise opp fordelene.",
+        "Revolut er en digital betalingsløsning der du får konto og debetkort i appen. Du kan betale i Norge og utlandet, veksle valuta, sette opp sparehvelv og, på utvalgte planer, få forsikring og andre premiumfordeler.",
+        "Revolut er ikke et kredittkort. Du låner ikke penger av Revolut, du bruker saldo på kontoen. Det gjør produktet annerledes enn tradisjonelle bonuskort der rente kan spise opp fordelene.",
       ],
     },
     {
       heading: "Planer og pris",
       paragraphs: [
-        "Revolut har flere prisplaner i Norge, fra gratis Standard til betalte Plus, Premium, Metal og Ultra. Prisene varierer etter plan og faktureringsperiode – sjekk alltid gjeldende pris i appen før du oppgraderer.",
+        "Revolut har flere prisplaner i Norge, fra gratis Standard til betalte Plus, Premium, Metal og Ultra. Prisene varierer etter plan og faktureringsperiode, sjekk alltid gjeldende pris i appen før du oppgraderer.",
       ],
       bullets: [
         "Standard: gratis grunnplan med begrensede gebyrfrie uttak og valutaveksling på hverdager",
@@ -49,11 +48,11 @@ export const revolut: FordelArticleContent = {
     {
       heading: "Valutaveksling og minibankuttak",
       paragraphs: [
-        "Revolut markedsfører gebyrfri eller lavkost valutaveksling på hverdager innenfor månedlige grenser. Utenfor grensene eller i helger kan det påløpe gebyr eller påslag – avhengig av plan og valuta.",
+        "Revolut markedsfører gebyrfri eller lavkost valutaveksling på hverdager innenfor månedlige grenser. Utenfor grensene eller i helger kan det påløpe gebyr eller påslag, avhengig av plan og valuta.",
         "Gratis minibankuttak har også månedlige tak. På Standard er grensen lav; Premium og Metal gir høyere grenser. Over grensen tar Revolut som regel prosentgebyr med minimumsbeløp.",
       ],
       bullets: [
-        "Sjekk gjeldende grenser for valuta og uttak i appen – de varierer etter plan",
+        "Sjekk gjeldende grenser for valuta og uttak i appen, de varierer etter plan",
         "Helgeveksling kan koste mer enn hverdagsveksling",
         "Minibankuttak i utlandet teller mot månedlig kvote",
         "Sammenlign med ditt vanlige bankkort før du bytter helt",
@@ -63,22 +62,22 @@ export const revolut: FordelArticleContent = {
       heading: "RevPoints",
       paragraphs: [
         "Revolut har et poengprogram kalt RevPoints (tidligere omtalt som cashback/poeng i ulike markeder). Du tjener poeng på kortbruk, og høyere planer gir ofte bedre opptjeningssats.",
-        "Poeng kan brukes til blant annet miles, cashback eller rabatterte kjøp – avhengig av hva som er tilgjengelig i appen. Verdien varierer, og programmet endres over tid.",
+        "Poeng kan brukes til blant annet miles, cashback eller rabatterte kjøp, avhengig av hva som er tilgjengelig i appen. Verdien varierer, og programmet endres over tid.",
       ],
-      tip: "RevPoints er en bonus – ikke en grunn til å øke forbruket. Sammenlign poengverdi med Trumf, Coop eller EuroBonus hvis du uansett jakter fordeler.",
+      tip: "RevPoints er en bonus, ikke en grunn til å øke forbruket. Sammenlign poengverdi med Trumf, Coop eller EuroBonus hvis du uansett jakter fordeler.",
     },
     {
       heading: "Reise og forsikring",
       paragraphs: [
-        "På Premium, Metal og Ultra inkluderer Revolut reiseforsikring – med vilkår som må leses nøye. Plus gir kjøpsbeskyttelse på daglige kjøp, mens reiseforsikring typisk krever høyere plan.",
-        "Rabattert lounge-tilgang og Wolt+ (gratis levering) er også knyttet til betalte planer. Wolt+ koster normalt rundt 99 kr per måned som eget abonnement – så for aktive Wolt-brukere kan dette alene forsvarer deler av Premium-prisen.",
+        "På Premium, Metal og Ultra inkluderer Revolut reiseforsikring, med vilkår som må leses nøye. Plus gir kjøpsbeskyttelse på daglige kjøp, mens reiseforsikring typisk krever høyere plan.",
+        "Rabattert lounge-tilgang og Wolt+ (gratis levering) er også knyttet til betalte planer. Wolt+ koster normalt rundt 99 kr per måned som eget abonnement, så for aktive Wolt-brukere kan dette alene forsvarer deler av Premium-prisen.",
       ],
     },
     {
       heading: "Andre fordeler på betalte planer",
       bullets: [
         "Plan-partnerskap: utvalgte abonnementstjenester inkludert på Metal (varierer over tid)",
-        "Kids & Teens-kontoer for barn – flere på høyere planer",
+        "Kids & Teens-kontoer for barn, flere på høyere planer",
         "Prioritert kundeservice i appen",
         "Rabatt på internasjonale overføringer",
         "Kryptovaluta og edle metaller til bedre priser enn Standard (der tilgjengelig)",
@@ -87,18 +86,18 @@ export const revolut: FordelArticleContent = {
     {
       heading: "Revolut vs. kredittkort",
       paragraphs: [
-        "Revolut passer godt som reise- og valutakort når du vil unngå høyt valutapåslag og ha kontroll i appen. Tradisjonelle kredittkort kan gi bedre bonus på dagligvarer (Trumf, Coop) eller flypoeng (EuroBonus) – men med risiko for rente hvis du ikke betaler hele fakturaen.",
+        "Revolut passer godt som reise- og valutakort når du vil unngå høyt valutapåslag og ha kontroll i appen. Tradisjonelle kredittkort kan gi bedre bonus på dagligvarer (Trumf, Coop) eller flypoeng (EuroBonus), men med risiko for rente hvis du ikke betaler hele fakturaen.",
         "Mange bruker Revolut som supplement til norsk bankkonto, ikke som full erstatning.",
       ],
     },
     {
       heading: "Ting du bør være klar over",
       bullets: [
-        "Revolut er debet – ingen rentefri kredittperiode, men heller ingen kredittramme",
-        "Betalte planer koster penger hver måned – regn ut om du faktisk bruker fordelene",
+        "Revolut er debet, ingen rentefri kredittperiode, men heller ingen kredittramme",
+        "Betalte planer koster penger hver måned, regn ut om du faktisk bruker fordelene",
         "Forsikring har unntak, egenandeler og krav om at du betaler med kortet",
-        "Grenser og gebyrer endres – sjekk appen før reiser",
-        "Revolut er ikke en norsk bank i tradisjonell forstand – forstå innskuddsbeskyttelse og vilkår",
+        "Grenser og gebyrer endres, sjekk appen før reiser",
+        "Revolut er ikke en norsk bank i tradisjonell forstand, forstå innskuddsbeskyttelse og vilkår",
         "Poeng og partnerskap kan endres eller avsluttes",
       ],
     },
@@ -119,7 +118,7 @@ export const revolut: FordelArticleContent = {
     {
       question: "Hva koster Revolut?",
       answer:
-        "Standard er gratis. Plus, Premium, Metal og Ultra har månedlig abonnementspris som varierer – sjekk gjeldende pris i Revolut-appen eller på revolut.com.",
+        "Standard er gratis. Plus, Premium, Metal og Ultra har månedlig abonnementspris som varierer, sjekk gjeldende pris i Revolut-appen eller på revolut.com.",
     },
     {
       question: "Har Revolut reiseforsikring?",
@@ -140,12 +139,12 @@ export const revolut: FordelArticleContent = {
   sources: [
     { label: "Revolut Norge", url: "https://www.revolut.com/nb-NO/" },
     {
-      label: "Revolut – Vilkår for betalte planer",
+      label: "Revolut, Vilkår for betalte planer",
       url: "https://www.revolut.com/nb-NO/legal/paid-plans/",
     },
     { label: "Revolut Metal", url: "https://www.revolut.com/en-NO/metal/" },
     {
-      label: "Wolt – partnerskap med Revolut",
+      label: "Wolt, partnerskap med Revolut",
       url: "https://press.wolt.com/no-NO/243361-wolt-samarbeider-med-revolut/",
     },
   ],

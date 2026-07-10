@@ -2,7 +2,6 @@ import type { GuideArticleContent } from "@/types/guide-article";
 
 export const funfacts: GuideArticleContent = {
   slug: "funfacts",
-  readTimeMinutes: 5,
   intro:
     "Økonomi trenger ikke alltid være alvorlig. Her er noen funfacts som gjør penger litt mer interessant, og kanskje motiverer deg til å ta bedre valg.",
   sections: [

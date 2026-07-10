@@ -2,10 +2,9 @@ import type { FordelArticleContent } from "@/types/fordel-article";
 
 export const spenn: FordelArticleContent = {
   slug: "spenn",
-  title: "Spenn – poeng på tvers av reise og hverdag",
-  readTimeMinutes: 9,
+  title: "Spenn, poeng på tvers av reise og hverdag",
   intro:
-    "Spenn er en felles poengvaluta som kobles til eksisterende fordelsprogrammer hos blant annet Norwegian, Strawberry og REMA 1000. Poeng samles i Spenn-appen og kan tjenes og brukes på tvers av flere merkevarer – men verdien er ikke fast i kroner som Trumf eller Coop.",
+    "Spenn er en felles poengvaluta som kobles til eksisterende fordelsprogrammer hos blant annet Norwegian, Strawberry og REMA 1000. Poeng samles i Spenn-appen og kan tjenes og brukes på tvers av flere merkevarer, men verdien er ikke fast i kroner som Trumf eller Coop.",
   lastVerified: "2. juli 2026",
   lastModifiedIso: "2026-07-02",
   seoTitle: "Spenn: opptjening, bruk og verdi hos Norwegian og REMA 1000",
@@ -49,7 +48,7 @@ export const spenn: FordelArticleContent = {
         "Norwegian: 1 Spenn per 10 kr på LowFare, 2 på LowFare+ og 5 på Flex. Gjelder Norwegian- og kommersielle Widerøe-flyvninger",
         "Strawberry: 3 Spenn per 10 kr (eller per 1 EUR) på hotellopphold, pluss medlemsboost på Silver, Gold og Platinum",
         "REMA 1000: 10 % bonus på frukt og grønt utbetalt i Spenn når Spenn er aktivert i REMA-appen",
-        "Narvesen, 7-Eleven og Uno-X: inngår i Spenn-økosystemet – sjekk gjeldende satser i appen",
+        "Narvesen, 7-Eleven og Uno-X: inngår i Spenn-økosystemet, sjekk gjeldende satser i appen",
       ],
       tip: "Strawberry oppgir at opptjente Spenn er gyldige i 36 måneder fra måneden de tjenes inn.",
     },
@@ -61,7 +60,7 @@ export const spenn: FordelArticleContent = {
       bullets: [
         "Norwegian: flyvninger, bagasje, Fast Track, setevalg, måltider og billettendringer. Kan ikke brukes til skatter og avgifter. Norwegian oppgir ingen blackout-datoer eller minimumsforbruk på egne flyvninger",
         "Strawberry: hotellopphold og Superdeals",
-        "REMA 1000: redusere sluttsummen i kassen – velg beløp i REMA-appen og skann medlemskoden",
+        "REMA 1000: redusere sluttsummen i kassen, velg beløp i REMA-appen og skann medlemskoden",
         "Andre Spenn-partnere via appen",
       ],
     },
@@ -85,12 +84,12 @@ export const spenn: FordelArticleContent = {
     {
       heading: "Ting du bør være klar over",
       bullets: [
-        "Ingen fast kroneverdi – vanskeligere å vurdere verdi enn Trumf, Coop eller CashPoints",
-        "Poeng kan utløpe – Strawberry oppgir 36 måneder fra opptjeningsmåneden",
+        "Ingen fast kroneverdi, vanskeligere å vurdere verdi enn Trumf, Coop eller CashPoints",
+        "Poeng kan utløpe, Strawberry oppgir 36 måneder fra opptjeningsmåneden",
         "Krever kobling og aktivering hos hver partner du vil bruke",
         "Mer app- og partneravhengig enn enkel kontantbonus",
         "Dynamisk prising gjør det vanskelig å sammenligne verdi over tid",
-        "Spenn passer best som ekstra bonus – ikke som grunn til å kjøpe dyrere fly, hotell eller dagligvarer",
+        "Spenn passer best som ekstra bonus, ikke som grunn til å kjøpe dyrere fly, hotell eller dagligvarer",
       ],
       tip: "Aktive bonusbrukere er ofte mer skeptiske til Spenn enn markedsføringen tilsier, særlig rundt verdi etter overgang fra tidligere hotell- og flypoeng. Sjekk alltid hva du får i appen før du legger opp poeng.",
     },
@@ -98,7 +97,7 @@ export const spenn: FordelArticleContent = {
       heading: "Spenn sammenlignet med andre programmer",
       paragraphs: [
         "Trumf og Coop gir kontantnær bonus med relativt forutsigbar verdi. CashPoints hos Norwegian hadde fast verdi innenfor Norwegian. EuroBonus og Spenn er reiseorienterte poeng med variabel verdi, men Spenn spenner bredere på tvers av dagligvarer og Reitan Retail.",
-        "Spenn er mest interessant hvis du allerede bruker flere aktører i økosystemet – REMA 1000, Norwegian og Strawberry. Det er mindre relevant hvis du vil ha enkel kontantbonus eller ikke bruker disse partnerne.",
+        "Spenn er mest interessant hvis du allerede bruker flere aktører i økosystemet, REMA 1000, Norwegian og Strawberry. Det er mindre relevant hvis du vil ha enkel kontantbonus eller ikke bruker disse partnerne.",
       ],
     },
   ],
@@ -136,11 +135,11 @@ export const spenn: FordelArticleContent = {
   ],
   sources: [
     {
-      label: "Spenn – Slik fungerer det",
+      label: "Spenn, Slik fungerer det",
       url: "https://spenngroup.com/nb-NO/how-it-works",
     },
     {
-      label: "Spenn – Hjem",
+      label: "Spenn, Hjem",
       url: "https://spenngroup.com/nb-NO/home",
     },
     {
@@ -148,18 +147,18 @@ export const spenn: FordelArticleContent = {
       url: "https://spenngroup.com/nb-NO/articles/spenn-til-rema-1000",
     },
     {
-      label: "Norwegian – Om Spenn",
+      label: "Norwegian, Om Spenn",
       url: "https://www.norwegian.com/no/reward/om-spenn/",
     },
     {
-      label: "Strawberry – Hva er Spenn?",
+      label: "Strawberry, Hva er Spenn?",
       url: "https://www.strawberry.no/medlemskap/hva-er-spenn/",
     },
   ],
   relatedLinks: [
     { label: "Bonuskalkulator", href: "/verktoy/bonuskalkulator" },
-    { label: "EuroBonus – SAS sitt bonusprogram", href: "/fordeler/eurobonus" },
-    { label: "Trumf – bonus hos NorgesGruppen", href: "/fordeler/trumf" },
-    { label: "Fordelsprogrammer – oversikt", href: "/fordeler" },
+    { label: "EuroBonus, SAS sitt bonusprogram", href: "/fordeler/eurobonus" },
+    { label: "Trumf, bonus hos NorgesGruppen", href: "/fordeler/trumf" },
+    { label: "Fordelsprogrammer, oversikt", href: "/fordeler" },
   ],
 };
