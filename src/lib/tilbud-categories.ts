@@ -16,6 +16,8 @@ export const TILBUD_CATEGORY_GROUPS = {
     "Kultur",
     "Sport",
     "Sport og event",
+    "Restaurant",
+    "Matlevering",
   ],
   "Mobil og forsikring": ["Mobil", "Forsikring"],
   Cashback: ["Cashback"],

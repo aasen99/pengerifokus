@@ -124,8 +124,19 @@ export const TILBUD_SORT_OPTIONS: { value: TilbudSortOption; label: string }[] =
   { value: "category-asc", label: "Kategori" },
 ];
 
-/** Trekker ut høyeste tall fra offerLabel, f.eks. «15–20 %» → 20 */
+/** Trekker ut sammenlignbart tall fra offerLabel, f.eks. «15–20 %» → 20 eller «50 poeng / 100 kr» → 50 */
 export function parseOfferRate(offerLabel: string): number | null {
+  const poengMatch = offerLabel.match(
+    /(?:opptil\s+)?(\d+[,.]?\d*)(?:\s*[–-]\s*(\d+[,.]?\d*))?\s*poeng\s*\/\s*100/i,
+  );
+  if (poengMatch) {
+    const low = parseFloat(poengMatch[1].replace(",", "."));
+    const high = poengMatch[2]
+      ? parseFloat(poengMatch[2].replace(",", "."))
+      : low;
+    return Math.max(low, high);
+  }
+
   const matches = offerLabel.match(/\d+[,.]?\d*/g);
   if (!matches?.length) return null;
 
