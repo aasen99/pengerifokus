@@ -7,9 +7,12 @@ import { klarna } from "./klarna";
 import { kredittkortfordeler } from "./kredittkortfordeler";
 import { naf } from "./naf";
 import { obos } from "./obos";
+import { norwegianReward } from "./norwegian-reward";
 import { revolut } from "./revolut";
 import { spenn } from "./spenn";
+import { strawberry } from "./strawberry";
 import { trumf } from "./trumf";
+import { usbl } from "./usbl";
 
 function withReadTime(
   article: Omit<FordelArticleContent, "readTimeMinutes">,
@@ -30,10 +33,13 @@ const fordelArticles: Record<string, FordelArticleContent> = {
   klarna: withReadTime(klarna),
   kredittkortfordeler: withReadTime(kredittkortfordeler),
   naf: withReadTime(naf),
+  "norwegian-reward": withReadTime(norwegianReward),
   obos: withReadTime(obos),
   revolut: withReadTime(revolut),
   spenn: withReadTime(spenn),
+  strawberry: withReadTime(strawberry),
   trumf: withReadTime(trumf),
+  usbl: withReadTime(usbl),
 };
 
 export function getFordelArticle(slug: string): FordelArticleContent | undefined {

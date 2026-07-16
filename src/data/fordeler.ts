@@ -43,6 +43,18 @@ export const fordeler: Fordel[] = [
     updatedAt: "2026-07-02",
   },
   {
+    id: "fordel-13",
+    slug: "usbl",
+    status: "published",
+    name: "Usbl",
+    description:
+      "Boligbyggelag på Østlandet med forkjøpsrett, bonus via Bonabo og medlemsrabatter på blant annet forsikring, byggevare, strøm og fritid.",
+    type: "Medlemsfordel",
+    useCase: "Bolig, ansiennitet og hverdagsrabatter",
+    createdAt: "2026-07-16",
+    updatedAt: "2026-07-16",
+  },
+  {
     id: "fordel-8",
     slug: "naf",
     status: "published",
@@ -79,6 +91,30 @@ export const fordeler: Fordel[] = [
     useCase: "Reise, hotell og dagligvarer",
     createdAt: "2025-01-12",
     updatedAt: "2026-07-02",
+  },
+  {
+    id: "fordel-11",
+    slug: "norwegian-reward",
+    status: "published",
+    name: "Norwegian Reward",
+    description:
+      "Norwegians flymedlemskap med Spenn-opptjening, valgbare flyfordeler og Priority etter mange flyvninger på 12 måneder.",
+    type: "Flybonus",
+    useCase: "Flyreiser med Norwegian og Widerøe",
+    createdAt: "2026-07-10",
+    updatedAt: "2026-07-10",
+  },
+  {
+    id: "fordel-12",
+    slug: "strawberry",
+    status: "published",
+    name: "Strawberry",
+    description:
+      "Hotellmedlemskap med nivåene Blue, Silver, Gold og Platinum. Tjen Spenn med tier booster og få hotellfordeler ved direktebooking.",
+    type: "Hotellmedlemskap",
+    useCase: "Hotell og reise",
+    createdAt: "2026-07-10",
+    updatedAt: "2026-07-10",
   },
   {
     id: "fordel-4",

@@ -35,7 +35,8 @@ export const spenn: FordelArticleContent = {
     {
       heading: "Hvem bruker Spenn?",
       paragraphs: [
-        "Per sommeren 2026 er Spenn relevant for Norwegian, kommersielle Widerøe-flyvninger via Norwegian Reward, Strawberry, REMA 1000, Narvesen, 7-Eleven, Uno-X og over 100 andre merkevarer i Spenn-appen.",
+        "Per sommeren 2026 er Spenn relevant for Norwegian Reward, kommersielle Widerøe-flyvninger, Strawberry, REMA 1000, Narvesen, 7-Eleven, Uno-X og over 100 andre merkevarer i Spenn-appen.",
+        "Norwegian Reward og Strawberry har egne medlemsnivåer og fordeler, men poengene samles som Spenn når kontoene er koblet. Les de dedikerte guidene for flyfordeler og hotellnivåer.",
         "REMA 1000 ble koblet på Spenn fra 8. juni 2026. Det gjør poengvalutaen mer relevant i hverdagen, ikke bare på reise og hotell.",
       ],
     },
@@ -156,6 +157,8 @@ export const spenn: FordelArticleContent = {
     },
   ],
   relatedLinks: [
+    { label: "Norwegian Reward", href: "/fordeler/norwegian-reward" },
+    { label: "Strawberry-medlemskap", href: "/fordeler/strawberry" },
     { label: "Bonuskalkulator", href: "/verktoy/bonuskalkulator" },
     { label: "EuroBonus, SAS sitt bonusprogram", href: "/fordeler/eurobonus" },
     { label: "Trumf, bonus hos NorgesGruppen", href: "/fordeler/trumf" },

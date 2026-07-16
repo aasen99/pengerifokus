@@ -115,6 +115,7 @@ export const obos: FordelArticleContent = {
   ],
   relatedLinks: [
     { label: "OBOS-tilbud, oversikt", href: "/tilbud?program=obos" },
+    { label: "Usbl, medlemsfordeler", href: "/fordeler/usbl" },
     { label: "NAF, medlemsfordeler", href: "/fordeler/naf" },
     { label: "Trumf, bonusprogram", href: "/fordeler/trumf" },
     { label: "Alle fordelsprogrammer", href: "/fordeler" },

@@ -213,6 +213,8 @@ export const eurobonus: FordelArticleContent = {
     },
   ],
   relatedLinks: [
+    { label: "Norwegian Reward", href: "/fordeler/norwegian-reward" },
+    { label: "Strawberry-medlemskap", href: "/fordeler/strawberry" },
     { label: "Trumf: bonus og uttak", href: "/fordeler/trumf" },
     { label: "Spenn: poeng på reise og i hverdagen", href: "/fordeler/spenn" },
     { label: "Bonuspoeng (ordbok)", href: "/ordbok/bonuspoeng" },

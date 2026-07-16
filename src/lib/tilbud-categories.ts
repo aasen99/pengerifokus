@@ -6,7 +6,7 @@ export const TILBUD_CATEGORY_GROUPS = {
   "Reise og hotell": ["Reise", "Hotell", "Transport"],
   "Bil": ["Bil"],
   "Helse og velvære": ["Helse", "Optikk"],
-  "Bolig": ["Interiør", "Bolig", "Byggevare"],
+  "Bolig": ["Interiør", "Bolig", "Byggevare", "Strøm"],
   "Elektronikk": ["Elektronikk"],
   "Shopping": ["Mote", "Netthandel"],
   "Fritid og opplevelser": [
@@ -18,8 +18,9 @@ export const TILBUD_CATEGORY_GROUPS = {
     "Sport og event",
     "Restaurant",
     "Matlevering",
+    "Utdanning",
   ],
-  "Mobil og forsikring": ["Mobil", "Forsikring"],
+  "Mobil og forsikring": ["Mobil", "Forsikring", "Bank"],
   Cashback: ["Cashback"],
 } as const;
 
