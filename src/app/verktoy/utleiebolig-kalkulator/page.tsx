@@ -44,6 +44,8 @@ export default function UtleieboligKalkulatorPage() {
         <p className="mt-3 max-w-2xl text-lg text-stone-600">
           Se om leieinntekten dekker lån og driftskostnader, hva du tjener på
           egenkapitalen, og få en vurdering med fordeler, ulemper og risiko.
+          Bolig vs. fond viser ofte sterk effekt fordi du er gearet med lån —
+          både oppside og nedsiden forsterkes.
         </p>
       </header>
 

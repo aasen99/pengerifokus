@@ -72,6 +72,20 @@ export function RontgenResultView({ result, onRestart }: RontgenResultViewProps)
               <p className="mt-2 text-sm leading-relaxed text-stone-700">
                 {recommendation.text}
               </p>
+              {recommendation.links.length > 0 && (
+                <ul className="mt-3 flex flex-wrap gap-2">
+                  {recommendation.links.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="inline-flex rounded-lg border border-orange-200 bg-white px-3 py-1.5 text-xs font-semibold text-orange-800 transition-colors hover:border-orange-300 hover:bg-orange-50"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </article>
           ))}
         </div>

@@ -1,11 +1,20 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import { UTLEIEBOLIG_DEFAULTS } from "@/data/utleiebolig";
 import { formatCurrency } from "@/lib/calculators/loan";
-import { calculateUtleiebolig, projectUtleieboligVsFond } from "@/lib/calculators/utleiebolig";
+import {
+  calculateUtleiebolig,
+  projectUtleieboligVsFond,
+} from "@/lib/calculators/utleiebolig";
 import { assessUtleiebolig } from "@/lib/calculators/utleiebolig-vurdering";
 import { formatIntegerInput } from "@/lib/format/number";
+import {
+  openPrintReport,
+  reportRows,
+  reportSection,
+} from "@/lib/print-report";
+import { useToolPersistence } from "@/lib/verktoy-persistence";
 import type { UtleieboligInput } from "@/types/utleiebolig";
 import {
   FormattedNumberInput,
@@ -15,6 +24,7 @@ import {
   CalculatorField,
   calculatorInputClassName,
 } from "@/components/verktoy/calculator-ui";
+import { ToolPersistenceBar } from "@/components/verktoy/ToolPersistenceBar";
 import { UtleieboligVurderingPanel } from "@/components/verktoy/UtleieboligVurdering";
 import { UtleieboligSammenligningChart } from "@/components/verktoy/UtleieboligSammenligningChart";
 
@@ -22,57 +32,82 @@ function formatPercent(value: number): string {
   return `${value.toFixed(1).replace(".", ",")} %`;
 }
 
-export function UtleieboligKalkulator() {
-  const d = UTLEIEBOLIG_DEFAULTS;
+interface UtleieboligFormState {
+  purchasePrice: string;
+  downPayment: string;
+  purchaseCosts: string;
+  rate: string;
+  termYears: string;
+  monthlyRent: string;
+  vacancyMonths: string;
+  commonCosts: string;
+  insurance: string;
+  maintenance: string;
+  propertyTax: string;
+  managementFee: string;
+  taxRate: string;
+  ownerOccupiedOverHalf: boolean;
+  alternativeRent: string;
+  propertyGrowth: string;
+  fundReturn: string;
+  projectionYears: string;
+  [key: string]: unknown;
+}
 
-  const [purchasePrice, setPurchasePrice] = useState(
-    formatIntegerInput(d.purchasePrice),
-  );
-  const [downPayment, setDownPayment] = useState(
-    formatIntegerInput(d.downPayment),
-  );
-  const [purchaseCosts, setPurchaseCosts] = useState(
-    formatIntegerInput(d.purchaseCosts),
-  );
-  const [rate, setRate] = useState(d.annualRatePercent.toString().replace(".", ","));
-  const [termYears, setTermYears] = useState(String(d.termYears));
-  const [monthlyRent, setMonthlyRent] = useState(
-    formatIntegerInput(d.monthlyRent),
-  );
-  const [vacancyMonths, setVacancyMonths] = useState(
-    d.vacancyMonthsPerYear.toString().replace(".", ","),
-  );
-  const [commonCosts, setCommonCosts] = useState(
-    formatIntegerInput(d.monthlyCommonCosts),
-  );
-  const [insurance, setInsurance] = useState(
-    formatIntegerInput(d.monthlyInsurance),
-  );
-  const [maintenance, setMaintenance] = useState(
-    formatIntegerInput(d.monthlyMaintenance),
-  );
-  const [propertyTax, setPropertyTax] = useState(
-    formatIntegerInput(d.monthlyPropertyTax),
-  );
-  const [managementFee, setManagementFee] = useState(
-    formatIntegerInput(d.monthlyManagementFee),
-  );
-  const [taxRate, setTaxRate] = useState(
-    d.taxRatePercent.toString().replace(".", ","),
-  );
-  const [ownerOccupiedOverHalf, setOwnerOccupiedOverHalf] = useState(false);
-  const [alternativeRent, setAlternativeRent] = useState(
-    formatIntegerInput(15_000),
-  );
-  const [propertyGrowth, setPropertyGrowth] = useState(
-    d.propertyGrowthPercent.toString().replace(".", ","),
-  );
-  const [fundReturn, setFundReturn] = useState(
-    d.fundReturnPercent.toString().replace(".", ","),
-  );
-  const [projectionYears, setProjectionYears] = useState(
-    String(d.projectionYears),
-  );
+function createDefaultFormState(): UtleieboligFormState {
+  const d = UTLEIEBOLIG_DEFAULTS;
+  return {
+    purchasePrice: formatIntegerInput(d.purchasePrice),
+    downPayment: formatIntegerInput(d.downPayment),
+    purchaseCosts: formatIntegerInput(d.purchaseCosts),
+    rate: d.annualRatePercent.toString().replace(".", ","),
+    termYears: String(d.termYears),
+    monthlyRent: formatIntegerInput(d.monthlyRent),
+    vacancyMonths: d.vacancyMonthsPerYear.toString().replace(".", ","),
+    commonCosts: formatIntegerInput(d.monthlyCommonCosts),
+    insurance: formatIntegerInput(d.monthlyInsurance),
+    maintenance: formatIntegerInput(d.monthlyMaintenance),
+    propertyTax: formatIntegerInput(d.monthlyPropertyTax),
+    managementFee: formatIntegerInput(d.monthlyManagementFee),
+    taxRate: d.taxRatePercent.toString().replace(".", ","),
+    ownerOccupiedOverHalf: false,
+    alternativeRent: formatIntegerInput(15_000),
+    propertyGrowth: d.propertyGrowthPercent.toString().replace(".", ","),
+    fundReturn: d.fundReturnPercent.toString().replace(".", ","),
+    projectionYears: String(d.projectionYears),
+  };
+}
+
+const DEFAULT_FORM_STATE = createDefaultFormState();
+
+export function UtleieboligKalkulator() {
+  const { state, update, source, clearSaved, copyShareLink } =
+    useToolPersistence<UtleieboligFormState>(
+      "utleiebolig-kalkulator",
+      DEFAULT_FORM_STATE,
+    );
+
+  const {
+    purchasePrice,
+    downPayment,
+    purchaseCosts,
+    rate,
+    termYears,
+    monthlyRent,
+    vacancyMonths,
+    commonCosts,
+    insurance,
+    maintenance,
+    propertyTax,
+    managementFee,
+    taxRate,
+    ownerOccupiedOverHalf,
+    alternativeRent,
+    propertyGrowth,
+    fundReturn,
+    projectionYears,
+  } = state;
+
 
   const parsedInput = useMemo((): UtleieboligInput | null => {
     const parsed = {
@@ -173,7 +208,96 @@ export function UtleieboligKalkulator() {
     !result.coversAllCosts &&
     vurdering.scenario === "owner-hybrid";
 
+  const handleExportPdf = () => {
+    if (!result || !parsedInput) return;
+
+    const leverage =
+      result.equityInvested > 0
+        ? result.loanAmount / result.equityInvested
+        : 0;
+
+    openPrintReport({
+      title: "Utleiebolig-kalkulator",
+      subtitle: "Kontantstrøm, avkastning og bolig vs. fond",
+      bodyHtml: [
+        reportSection(
+          "Nøkkeltall",
+          reportRows([
+            {
+              label: "Månedlig kontantstrøm",
+              value: `${result.monthlyCashFlow >= 0 ? "+" : ""}${formatCurrency(result.monthlyCashFlow)}`,
+              tone:
+                result.monthlyCashFlow >= 0 ? "positive" : "negative",
+            },
+            {
+              label: "Etter skatt",
+              value: `${result.cashFlowAfterTaxMonthly >= 0 ? "+" : ""}${formatCurrency(result.cashFlowAfterTaxMonthly)}`,
+            },
+            {
+              label: "Brutto leieavkastning",
+              value: formatPercent(result.grossYieldPercent),
+            },
+            {
+              label: "Netto leieavkastning",
+              value: formatPercent(result.netYieldPercent),
+            },
+            {
+              label: "Kontantavkastning",
+              value: formatPercent(result.cashOnCashReturnPercent),
+            },
+            {
+              label: "Break-even leie",
+              value: formatCurrency(result.breakEvenMonthlyRent),
+            },
+            { label: "Lånebeløp", value: formatCurrency(result.loanAmount) },
+            {
+              label: "Egenkapital inn",
+              value: formatCurrency(result.equityInvested),
+            },
+          ]),
+        ),
+        projection
+          ? reportSection(
+              `Bolig vs. fond (${parsedInput.projectionYears} år)`,
+              reportRows([
+                {
+                  label: "Nettoformue bolig",
+                  value: formatCurrency(projection.propertyNetWorth),
+                },
+                {
+                  label: "Fond (egenkapital)",
+                  value: formatCurrency(projection.fundNetWorth),
+                },
+                {
+                  label: "Differanse",
+                  value: `${projection.differenceVsFund >= 0 ? "+" : ""}${formatCurrency(projection.differenceVsFund)}`,
+                  tone:
+                    projection.differenceVsFund >= 0 ? "positive" : "negative",
+                },
+              ]) +
+                `<p style="margin:12px 0 0;font-size:0.85rem;color:#57534e">Bolig kan slå fond selv med lavere prisvekst fordi du er gearet: lånet forsterker både oppside og nedsiden. Her er lånet ca. ${leverage.toFixed(1).replace(".", ",")}× egenkapitalen.</p>`,
+            )
+          : "",
+        vurdering
+          ? reportSection(
+              `Vurdering: ${vurdering.verdictLabel}`,
+              `<p>${vurdering.verdictSummary}</p>`,
+            )
+          : "",
+      ].join(""),
+    });
+  };
+
   return (
+    <div className="space-y-6">
+      <ToolPersistenceBar
+        source={source}
+        onCopyShareLink={copyShareLink}
+        onClearSaved={clearSaved}
+        onExportPdf={handleExportPdf}
+        exportDisabled={!result}
+      />
+
     <div className="grid gap-8 lg:grid-cols-2">
       <div className="space-y-6">
         <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
@@ -186,7 +310,7 @@ export function UtleieboligKalkulator() {
             <CalculatorField label="Kjøpesum" hint="Total pris for boligen">
               <FormattedNumberInput
                 value={purchasePrice}
-                onChange={setPurchasePrice}
+                onChange={(value) => update("purchasePrice", value)}
                 className={calculatorInputClassName}
               />
             </CalculatorField>
@@ -197,7 +321,7 @@ export function UtleieboligKalkulator() {
             >
               <FormattedNumberInput
                 value={downPayment}
-                onChange={setDownPayment}
+                onChange={(value) => update("downPayment", value)}
                 className={calculatorInputClassName}
               />
             </CalculatorField>
@@ -208,7 +332,7 @@ export function UtleieboligKalkulator() {
             >
               <FormattedNumberInput
                 value={purchaseCosts}
-                onChange={setPurchaseCosts}
+                onChange={(value) => update("purchaseCosts", value)}
                 className={calculatorInputClassName}
               />
             </CalculatorField>
@@ -227,7 +351,9 @@ export function UtleieboligKalkulator() {
                 type="text"
                 inputMode="decimal"
                 value={rate}
-                onChange={(e) => setRate(e.target.value.replace(".", ","))}
+                onChange={(e) =>
+                  update("rate", e.target.value.replace(".", ","))
+                }
                 className={calculatorInputClassName}
               />
             </CalculatorField>
@@ -235,7 +361,7 @@ export function UtleieboligKalkulator() {
             <CalculatorField label="Nedbetalingstid" hint="Antall år">
               <FormattedNumberInput
                 value={termYears}
-                onChange={setTermYears}
+                onChange={(value) => update("termYears", value)}
                 className={calculatorInputClassName}
               />
             </CalculatorField>
@@ -252,7 +378,7 @@ export function UtleieboligKalkulator() {
             >
               <FormattedNumberInput
                 value={monthlyRent}
-                onChange={setMonthlyRent}
+                onChange={(value) => update("monthlyRent", value)}
                 className={calculatorInputClassName}
               />
             </CalculatorField>
@@ -265,7 +391,9 @@ export function UtleieboligKalkulator() {
                 type="text"
                 inputMode="decimal"
                 value={vacancyMonths}
-                onChange={(e) => setVacancyMonths(e.target.value.replace(".", ","))}
+                onChange={(e) =>
+                  update("vacancyMonths", e.target.value.replace(".", ","))
+                }
                 className={calculatorInputClassName}
               />
               {parsedInput && parsedInput.vacancyMonthsPerYear > 0 && (
@@ -282,7 +410,9 @@ export function UtleieboligKalkulator() {
                 <input
                   type="checkbox"
                   checked={ownerOccupiedOverHalf}
-                  onChange={(e) => setOwnerOccupiedOverHalf(e.target.checked)}
+                  onChange={(e) =>
+                    update("ownerOccupiedOverHalf", e.target.checked)
+                  }
                   className="mt-1 h-4 w-4 rounded border-stone-300 text-orange-600 focus:ring-orange-500"
                 />
                 <span>
@@ -304,7 +434,7 @@ export function UtleieboligKalkulator() {
                   >
                     <FormattedNumberInput
                       value={alternativeRent}
-                      onChange={setAlternativeRent}
+                      onChange={(value) => update("alternativeRent", value)}
                       className={calculatorInputClassName}
                     />
                   </CalculatorField>
@@ -323,7 +453,7 @@ export function UtleieboligKalkulator() {
             <CalculatorField label="Felleskostnader">
               <FormattedNumberInput
                 value={commonCosts}
-                onChange={setCommonCosts}
+                onChange={(value) => update("commonCosts", value)}
                 className={calculatorInputClassName}
               />
             </CalculatorField>
@@ -331,7 +461,7 @@ export function UtleieboligKalkulator() {
             <CalculatorField label="Forsikring">
               <FormattedNumberInput
                 value={insurance}
-                onChange={setInsurance}
+                onChange={(value) => update("insurance", value)}
                 className={calculatorInputClassName}
               />
             </CalculatorField>
@@ -342,7 +472,7 @@ export function UtleieboligKalkulator() {
             >
               <FormattedNumberInput
                 value={maintenance}
-                onChange={setMaintenance}
+                onChange={(value) => update("maintenance", value)}
                 className={calculatorInputClassName}
               />
             </CalculatorField>
@@ -350,7 +480,7 @@ export function UtleieboligKalkulator() {
             <CalculatorField label="Kommunale avgifter / eiendomsskatt">
               <FormattedNumberInput
                 value={propertyTax}
-                onChange={setPropertyTax}
+                onChange={(value) => update("propertyTax", value)}
                 className={calculatorInputClassName}
               />
             </CalculatorField>
@@ -358,7 +488,7 @@ export function UtleieboligKalkulator() {
             <CalculatorField label="Forvaltningshonorar" hint="Valgfritt">
               <FormattedNumberInput
                 value={managementFee}
-                onChange={setManagementFee}
+                onChange={(value) => update("managementFee", value)}
                 className={calculatorInputClassName}
               />
             </CalculatorField>
@@ -371,7 +501,9 @@ export function UtleieboligKalkulator() {
                 type="text"
                 inputMode="decimal"
                 value={taxRate}
-                onChange={(e) => setTaxRate(e.target.value.replace(".", ","))}
+                onChange={(e) =>
+                  update("taxRate", e.target.value.replace(".", ","))
+                }
                 className={calculatorInputClassName}
               />
             </CalculatorField>
@@ -395,7 +527,9 @@ export function UtleieboligKalkulator() {
                 type="text"
                 inputMode="decimal"
                 value={propertyGrowth}
-                onChange={(e) => setPropertyGrowth(e.target.value.replace(".", ","))}
+                onChange={(e) =>
+                  update("propertyGrowth", e.target.value.replace(".", ","))
+                }
                 className={calculatorInputClassName}
               />
             </CalculatorField>
@@ -408,7 +542,9 @@ export function UtleieboligKalkulator() {
                 type="text"
                 inputMode="decimal"
                 value={fundReturn}
-                onChange={(e) => setFundReturn(e.target.value.replace(".", ","))}
+                onChange={(e) =>
+                  update("fundReturn", e.target.value.replace(".", ","))
+                }
                 className={calculatorInputClassName}
               />
             </CalculatorField>
@@ -419,7 +555,7 @@ export function UtleieboligKalkulator() {
             >
               <FormattedNumberInput
                 value={projectionYears}
-                onChange={setProjectionYears}
+                onChange={(value) => update("projectionYears", value)}
                 className={calculatorInputClassName}
               />
             </CalculatorField>
@@ -589,6 +725,19 @@ export function UtleieboligKalkulator() {
                     projectionYears={parsedInput.projectionYears}
                   />
 
+                  <p className="mt-4 rounded-lg border border-stone-100 bg-stone-50 px-3 py-2.5 text-xs leading-relaxed text-stone-600">
+                    At bolig ofte kommer bedre ut enn fond her, skyldes i stor
+                    grad <span className="font-medium text-stone-800">giring</span>
+                    : du eier hele boligen, men har bare lagt inn egenkapitalen.
+                    Lånet forsterker både gevinst og tap. Med{" "}
+                    {formatCurrency(result.equityInvested)} i egenkapital og{" "}
+                    {formatCurrency(result.loanAmount)} i lån er du gearet ca.{" "}
+                    {(result.loanAmount / Math.max(result.equityInvested, 1))
+                      .toFixed(1)
+                      .replace(".", ",")}
+                    ×. Fondssammenligningen er uten tilsvarende belåning.
+                  </p>
+
                   <dl className="mt-4 space-y-2 text-xs">
                     <div className="flex justify-between gap-2">
                       <dt className="text-stone-500">Nettoformue bolig</dt>
@@ -651,6 +800,7 @@ export function UtleieboligKalkulator() {
           og regnskapsfører før du investerer.
         </p>
       </section>
+    </div>
     </div>
   );
 }

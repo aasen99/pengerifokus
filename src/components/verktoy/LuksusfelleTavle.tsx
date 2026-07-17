@@ -1,23 +1,49 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import { formatCurrency } from "@/lib/calculators/loan";
 import {
   breakIntoBills,
   billsFromBreakdown,
   calculateTavle,
   createTavleLine,
-  EMPTY_TAVLE_LINES,
   TAVLE_CATEGORIES,
   type TavleCategory,
   type TavleLine,
 } from "@/lib/calculators/luksusfelle-tavle";
-import { formatIntegerInput } from "@/lib/format/number";
+import { formatIntegerInput, parseIntegerInput } from "@/lib/format/number";
+import {
+  openPrintReport,
+  reportRows,
+  reportSection,
+} from "@/lib/print-report";
+import { useToolPersistence } from "@/lib/verktoy-persistence";
 import { FormattedNumberInput } from "@/components/ui/FormattedNumberInput";
 import {
   CalculatorField,
   calculatorInputClassName,
 } from "@/components/verktoy/calculator-ui";
+import { ToolPersistenceBar } from "@/components/verktoy/ToolPersistenceBar";
+
+type BoardView = "bars" | "bills";
+
+interface LuksusfelleState {
+  income: string;
+  boardView: BoardView;
+  linesByCategory: Record<TavleCategory, TavleLine[]>;
+  [key: string]: unknown;
+}
+
+const DEFAULT_STATE: LuksusfelleState = {
+  income: formatIntegerInput(35_000),
+  boardView: "bars",
+  linesByCategory: {
+    fixed: [],
+    variable: [],
+    debt: [],
+    savings: [],
+  },
+};
 
 function CategoryEditor({
   category,
@@ -218,8 +244,6 @@ function BoardBillSection({
     </div>
   );
 }
-
-type BoardView = "bars" | "bills";
 
 function BoardBar({
   label,
@@ -433,11 +457,86 @@ function BillsBoard({
   );
 }
 
+function buildLuksusfellePdf(
+  summary: NonNullable<ReturnType<typeof calculateTavle>>,
+  linesByCategory: Record<TavleCategory, TavleLine[]>,
+) {
+  const lineSections = TAVLE_CATEGORIES.map((category) => {
+    const lines = linesByCategory[category.id].filter(
+      (line) => line.label.trim() || line.amount.trim(),
+    );
+    if (lines.length === 0) return "";
+
+    const items = lines
+      .map((line) => {
+        const amount = parseIntegerInput(line.amount);
+        return `<li>${line.label.trim() || "Uten navn"}: ${formatCurrency(
+          Number.isFinite(amount) ? amount : 0,
+        )}</li>`;
+      })
+      .join("");
+
+    return reportSection(
+      `${category.label} (${formatCurrency(summary.categoryTotals[category.id])})`,
+      `<ul>${items}</ul>`,
+    );
+  }).join("");
+
+  const statusLabel = summary.isDeficit
+    ? "Underskudd"
+    : summary.remainder > 0
+      ? "Overskudd"
+      : "Balanse";
+
+  openPrintReport({
+    title: "Luksusfellen-tavle",
+    subtitle: "Månedlig oversikt over inntekt, utgifter og overskudd",
+    bodyHtml: [
+      reportSection(
+        "Oppsummering",
+        reportRows([
+          { label: "Nettoinntekt", value: formatCurrency(summary.income) },
+          { label: "Totalt ut", value: formatCurrency(summary.totalOut) },
+          {
+            label: statusLabel,
+            value: formatCurrency(summary.remainder),
+            tone: summary.isDeficit
+              ? "negative"
+              : summary.remainder > 0
+                ? "positive"
+                : undefined,
+          },
+        ]),
+      ),
+      lineSections,
+      reportSection(
+        "50/30/20-fordeling",
+        reportRows([
+          {
+            label: "Faste (mål ~50 %)",
+            value: `${Math.round(summary.shareOfIncome.fixed)} %`,
+          },
+          {
+            label: "Variable (mål ~30 %)",
+            value: `${Math.round(summary.shareOfIncome.variable)} %`,
+          },
+          {
+            label: "Sparing + gjeld (mål ~20 %)",
+            value: `${Math.round(
+              summary.shareOfIncome.savings + summary.shareOfIncome.debt,
+            )} %`,
+          },
+        ]),
+      ),
+    ].join(""),
+  });
+}
+
 export function LuksusfelleTavle() {
-  const [income, setIncome] = useState(formatIntegerInput(35_000));
-  const [boardView, setBoardView] = useState<BoardView>("bars");
-  const [linesByCategory, setLinesByCategory] =
-    useState<Record<TavleCategory, TavleLine[]>>(EMPTY_TAVLE_LINES);
+  const { state, setState, update, source, clearSaved, copyShareLink } =
+    useToolPersistence<LuksusfelleState>("luksusfelle-tavle", DEFAULT_STATE);
+
+  const { income, boardView, linesByCategory } = state;
 
   const summary = useMemo(
     () => calculateTavle(income, linesByCategory),
@@ -445,36 +544,42 @@ export function LuksusfelleTavle() {
   );
 
   const updateCategory = (category: TavleCategory, lines: TavleLine[]) => {
-    setLinesByCategory((prev) => ({ ...prev, [category]: lines }));
+    setState((prev) => ({
+      ...prev,
+      linesByCategory: { ...prev.linesByCategory, [category]: lines },
+    }));
   };
 
   const loadExample = () => {
-    setIncome(formatIntegerInput(42_000));
-    setLinesByCategory({
-      fixed: [
-        createTavleLine("Husleie"),
-        createTavleLine("Forsikring"),
-        createTavleLine("Mobil"),
-      ].map((line, index) => ({
-        ...line,
-        amount: formatIntegerInput([12_500, 1_200, 499][index]),
-      })),
-      variable: [
-        createTavleLine("Mat"),
-        createTavleLine("Transport"),
-        createTavleLine("Streaming"),
-      ].map((line, index) => ({
-        ...line,
-        amount: formatIntegerInput([5_500, 1_800, 399][index]),
-      })),
-      debt: [createTavleLine("Forbrukslån")].map((line) => ({
-        ...line,
-        amount: formatIntegerInput(3_200),
-      })),
-      savings: [createTavleLine("Buffer")].map((line) => ({
-        ...line,
-        amount: formatIntegerInput(2_000),
-      })),
+    setState({
+      income: formatIntegerInput(42_000),
+      boardView,
+      linesByCategory: {
+        fixed: [
+          createTavleLine("Husleie"),
+          createTavleLine("Forsikring"),
+          createTavleLine("Mobil"),
+        ].map((line, index) => ({
+          ...line,
+          amount: formatIntegerInput([12_500, 1_200, 499][index]),
+        })),
+        variable: [
+          createTavleLine("Mat"),
+          createTavleLine("Transport"),
+          createTavleLine("Streaming"),
+        ].map((line, index) => ({
+          ...line,
+          amount: formatIntegerInput([5_500, 1_800, 399][index]),
+        })),
+        debt: [createTavleLine("Forbrukslån")].map((line) => ({
+          ...line,
+          amount: formatIntegerInput(3_200),
+        })),
+        savings: [createTavleLine("Buffer")].map((line) => ({
+          ...line,
+          amount: formatIntegerInput(2_000),
+        })),
+      },
     });
   };
 
@@ -498,6 +603,16 @@ export function LuksusfelleTavle() {
         </button>
       </div>
 
+      <ToolPersistenceBar
+        source={source}
+        onCopyShareLink={copyShareLink}
+        onClearSaved={clearSaved}
+        onExportPdf={
+          summary ? () => buildLuksusfellePdf(summary, linesByCategory) : undefined
+        }
+        exportDisabled={!summary || summary.income <= 0}
+      />
+
       <div className="grid gap-8 xl:grid-cols-[1.1fr_0.9fr]">
         <div className="space-y-6">
           <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
@@ -507,7 +622,7 @@ export function LuksusfelleTavle() {
             >
               <FormattedNumberInput
                 value={income}
-                onChange={setIncome}
+                onChange={(value) => update("income", value)}
                 className={calculatorInputClassName}
               />
             </CalculatorField>
@@ -538,7 +653,7 @@ export function LuksusfelleTavle() {
               >
                 <button
                   type="button"
-                  onClick={() => setBoardView("bars")}
+                  onClick={() => update("boardView", "bars")}
                   className={`rounded-md px-3 py-1.5 text-xs font-medium transition-colors ${
                     boardView === "bars"
                       ? "bg-stone-100 text-stone-900"
@@ -549,7 +664,7 @@ export function LuksusfelleTavle() {
                 </button>
                 <button
                   type="button"
-                  onClick={() => setBoardView("bills")}
+                  onClick={() => update("boardView", "bills")}
                   className={`rounded-md px-3 py-1.5 text-xs font-medium transition-colors ${
                     boardView === "bills"
                       ? "bg-stone-100 text-stone-900"
@@ -611,7 +726,8 @@ export function LuksusfelleTavle() {
 
           <p className="text-xs leading-relaxed text-stone-500">
             Verktøyet er veiledende og erstatter ikke profesjonell rådgivning.
-            Tallene lagres ikke: skriv gjerne ned eller ta skjermbilde av tavlen.
+            Tallene lagres lokalt i nettleseren. Bruk «Last ned PDF» eller delbar
+            lenke for å ta med oversikten videre.
           </p>
         </div>
       </div>

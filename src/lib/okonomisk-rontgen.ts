@@ -1,5 +1,6 @@
 import { RONTGEN_CATEGORY_LABELS, rontgenQuestions, rontgenResultBands } from "@/data/okonomisk-rontgen";
 import type {
+  RontgenActionLink,
   RontgenCategory,
   RontgenRecommendation,
   RontgenResult,
@@ -37,6 +38,30 @@ const RECOMMENDATIONS: Record<
     mid: "Bygg mer økonomisk fleksibilitet gjennom buffer, forsikringer eller lavere faste kostnader.",
     high: "Du har god økonomisk motstandskraft. Oppdater planen dersom jobb- eller livssituasjonen endrer seg.",
   },
+};
+
+const CATEGORY_LINKS: Record<RontgenCategory, RontgenActionLink[]> = {
+  buffer: [
+    { label: "Sparekalkulator", href: "/verktoy/sparekalkulator" },
+    { label: "Luksusfelle-tavle", href: "/verktoy/luksusfelle-tavle" },
+  ],
+  gjeld: [
+    { label: "Nedbetalingskalkulator", href: "/verktoy/nedbetalingskalkulator" },
+    { label: "Rentekalkulator", href: "/verktoy/rentekalkulator" },
+  ],
+  kostnader: [
+    { label: "Luksusfelle-tavle", href: "/verktoy/luksusfelle-tavle" },
+    { label: "Se aktuelle tilbud", href: "/tilbud" },
+  ],
+  sparing: [
+    { label: "Sparekalkulator", href: "/verktoy/sparekalkulator" },
+    { label: "BSU-kalkulator", href: "/verktoy/bsu-kalkulator" },
+    { label: "Regel 72", href: "/verktoy/regel-72" },
+  ],
+  trygghet: [
+    { label: "Luksusfelle-tavle", href: "/verktoy/luksusfelle-tavle" },
+    { label: "Sparekalkulator", href: "/verktoy/sparekalkulator" },
+  ],
 };
 
 const CATEGORY_ORDER: RontgenCategory[] = [
@@ -120,6 +145,7 @@ export function calculateRontgenResult(answers: RontgenAnswers): RontgenResult |
     category: entry.category,
     label: entry.label,
     text: recommendationForCategory(entry.category, entry.percent),
+    links: CATEGORY_LINKS[entry.category],
   }));
 
   return {

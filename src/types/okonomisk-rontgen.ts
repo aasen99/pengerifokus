@@ -34,10 +34,16 @@ export interface RontgenCategoryScore {
   percent: number;
 }
 
+export interface RontgenActionLink {
+  label: string;
+  href: string;
+}
+
 export interface RontgenRecommendation {
   category: RontgenCategory;
   label: string;
   text: string;
+  links: RontgenActionLink[];
 }
 
 export interface RontgenResult {
