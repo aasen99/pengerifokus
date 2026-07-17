@@ -13,7 +13,6 @@ function studentOffer(
   category: string,
   options?: {
     terms?: string;
-    warning?: string;
     sourceUrl?: string;
   },
 ): Tilbud {
@@ -29,7 +28,6 @@ function studentOffer(
     category,
     terms: options?.terms ?? studentBaseTerms,
     sourceUrl: options?.sourceUrl,
-    warning: options?.warning,
     createdAt: studentCheckedAt,
     updatedAt: studentCheckedAt,
   };
@@ -47,7 +45,6 @@ export const studentTilbud: Tilbud[] = [
     {
       terms:
         "Gjelder studenter og lærlinger under 30 år i Oslo og Akershus. Gjelder 30-dagersbilletten, ikke enkeltbilletter eller andre periodebilletter. Gyldig studentbevis og legitimasjon må kunne vises.",
-      warning: "Regionalt tilbud: Oslo og Akershus.",
       sourceUrl: "https://ruter.no/",
     },
   ),
@@ -61,8 +58,6 @@ export const studentTilbud: Tilbud[] = [
     {
       terms:
         "Gjelder studenter under 30 år. Gyldig studentbevis og legitimasjon kreves. Rabatten beregnes med utgangspunkt i fullt fleksibel voksenpris. Minstepris gjelder. Rabatten kan variere etter strekning, avgang og billettype. Gjelder også rabatt på periodebilletter.",
-      warning:
-        "Rabatt varierer etter strekning og billettype. Sammenlign alltid med andre billettyper.",
       sourceUrl: "https://www.vy.no/",
     },
   ),
@@ -115,7 +110,6 @@ export const studentTilbud: Tilbud[] = [
     {
       terms:
         "Billettene selges blant annet via Vy og Entur. Gyldig studentbevis må kunne fremvises. Konkret rabatt hentes fra bestillingsløsningen for valgt avgang.",
-      warning: "Sjekk studentpris i bestillingen for din avgang.",
       sourceUrl: "https://www.go-aheadnordic.no/",
     },
   ),
@@ -129,7 +123,6 @@ export const studentTilbud: Tilbud[] = [
     {
       terms:
         "Gjelder enkeltbilletter, 24-timers-, 7-dagers- og 30-dagersbilletter på Skyss-busser, Bybanen og enkelte båtruter i Vestland. Gyldig studentbevis kreves. Enkelte båtruter kan ha egne regler.",
-      warning: "Regionalt tilbud: Vestland.",
       sourceUrl: "https://www.skyss.no/",
     },
   ),
@@ -143,7 +136,6 @@ export const studentTilbud: Tilbud[] = [
     {
       terms:
         "Studentpris gjelder til og med 34 år, også elever ved videregående skole i Trøndelag. 40 % på 30-dagersbilletten. 50 % på enkeltbillett ved reise i fire eller flere soner. Nattbuss og natt-trikk er inkludert i 30-dagersbilletten. For reiser i to eller tre soner gjelder minstepris.",
-      warning: "Regionalt tilbud: Trøndelag. Merk aldersgrense til og med 34 år.",
       sourceUrl: "https://www.atb.no/",
     },
   ),
@@ -157,7 +149,6 @@ export const studentTilbud: Tilbud[] = [
     {
       terms:
         "Gjelder bussbilletter i Rogaland. Gjelder ikke Kombibillett. Enkelte nærsonebilletter kan være unntatt. Båtbilletter kan ha andre rabattregler. Gyldig studentlegitimasjon kreves.",
-      warning: "Regionalt tilbud: Rogaland.",
       sourceUrl: "https://www.kolumbus.no/",
     },
   ),
@@ -171,8 +162,6 @@ export const studentTilbud: Tilbud[] = [
     {
       terms:
         "Gjelder normalt heltidsstudenter. Aldersgrense og rabatt varierer etter kampanje og marked. Studentkode og studentbevis kan kreves.",
-      warning:
-        "Kampanje- og markedsavhengig. Kontroller gjeldende studenttilbud før bestilling.",
     },
   ),
   studentOffer(
@@ -185,8 +174,6 @@ export const studentTilbud: Tilbud[] = [
     {
       terms:
         "Pris og tilgjengelighet varierer etter strekning og avgang. Aldersgrense eller studentbevis kan gjelde.",
-      warning:
-        "Sammenlign alltid studentpris med ordinære kampanjebilletter. Pris hentes dynamisk ved bestilling.",
       sourceUrl: "https://www.wideroe.no/",
     },
   ),
@@ -200,7 +187,6 @@ export const studentTilbud: Tilbud[] = [
     {
       terms:
         "Rabatten varierer etter flyselskap, destinasjon og produkt. Studentbevis eller aldersgrense kan gjelde.",
-      warning: "Sammenlign alltid med ordinære flypriser.",
       sourceUrl: "https://www.kilroy.no/",
     },
   ),
@@ -214,8 +200,6 @@ export const studentTilbud: Tilbud[] = [
     {
       terms:
         "Gjelder kvalifiserte studenter. Kan kreve verifisering av studentstatus. Produkter, rabatt og kampanjer kan endres. Apple har egne utdanningspriser som kan avvike fra StudentTorget-tilbudet.",
-      warning:
-        "Sjekk både Apple Education Store og eventuelle StudentTorget-tilbud. Satser kan avvike.",
       sourceUrl: "https://www.apple.com/no/store",
     },
   ),
@@ -229,8 +213,6 @@ export const studentTilbud: Tilbud[] = [
     {
       terms:
         "Studentstatus må verifiseres. Introduksjonspris kan øke etter første avtaleperiode. Abonnementet kan ha bindingstid. Omfatter normalt apper som Photoshop, Illustrator, Premiere Pro og Acrobat Pro.",
-      warning:
-        "Hent gjeldende månedspris direkte fra Adobe. Intropris og senere pris er ikke det samme.",
       sourceUrl: "https://www.adobe.com/no/creativecloud/buy/students.html",
     },
   ),
@@ -244,7 +226,6 @@ export const studentTilbud: Tilbud[] = [
     {
       terms:
         "Krever normalt e-postadresse fra en kvalifisert skole eller utdanningsinstitusjon. Tilgjengelige programmer (Word, Excel, PowerPoint, Teams, OneNote m.m.) avhenger av skolens avtale. Tilgangen kan opphøre når studenten avslutter studiet.",
-      warning: "Sjekk via skolens IT-sider eller office.com med skole-e-post.",
       sourceUrl: "https://www.microsoft.com/nb-no/education/products/office",
     },
   ),
@@ -258,7 +239,6 @@ export const studentTilbud: Tilbud[] = [
     {
       terms:
         "Gjelder kvalifiserte studenter ved høyere utdanning. Studentstatus må verifiseres regelmessig. Rabatten gjelder i en begrenset totalperiode.",
-      warning: "Kontroller gjeldende pris hos Spotify.",
       sourceUrl: "https://www.spotify.com/no/student/",
     },
   ),
@@ -272,7 +252,6 @@ export const studentTilbud: Tilbud[] = [
     {
       terms:
         "Krever bekreftet studentstatus. Studentstatus må verifiseres på nytt med jevne mellomrom.",
-      warning: "Pris kan variere. Oppdater løpende hos YouTube.",
     },
   ),
   studentOffer(
@@ -285,8 +264,6 @@ export const studentTilbud: Tilbud[] = [
     {
       terms:
         "Flere Schibsted-aviser tilbyr redusert pris til studenter eller personer under en bestemt alder. Enkelte tilbud gir første måned til svært lav pris. Deretter kan rabatten være opptil 50 %. Aldersgrense kan brukes i stedet for studentstatus. Pris varierer mellom avisene.",
-      warning:
-        "Skill mellom introduksjonspris og ordinær rabattpris. Sjekk hver avis for seg.",
     },
   ),
   studentOffer(
@@ -312,7 +289,6 @@ export const studentTilbud: Tilbud[] = [
     {
       terms:
         "20 % rabatt på ordinær klipp. Bestilling og betaling skjer i Cutters-appen. Rabattkode kreves. Førstegangstilbud (199 kr) gjelder nye studentkunder via StudentTorget. Oppgitt ordinær studentpris: 343 kr, vanlig pris: 429 kr.",
-      warning: "Kampanjekoder bør kontrolleres før publisering/bruk.",
     },
   ),
   studentOffer(
@@ -337,7 +313,6 @@ export const studentTilbud: Tilbud[] = [
     {
       terms:
         "Rabattkode: Student10. Gjelder ikke gavekort. Rabatten er kun gyldig i nettbutikken.",
-      warning: "Rabattkoden bør testes regelmessig.",
       sourceUrl: "https://www.interflora.no/",
     },
   ),
@@ -351,7 +326,6 @@ export const studentTilbud: Tilbud[] = [
     {
       terms:
         "Gjelder normalt siste torsdag i måneden på studentforestillinger i Oslo, Stavanger og Ålesund. Liten popcornmeny til 49 kr. Studentbevis må fremvises. Tilgjengeligheten varierer etter kino.",
-      warning: "Lokale kinoer og begrensede dager. Sjekk programmet.",
     },
   ),
   studentOffer(
@@ -376,8 +350,6 @@ export const studentTilbud: Tilbud[] = [
     {
       terms:
         "DNT bruker hovedsakelig aldersbaserte medlemskategorier. Fordelen er derfor ikke alltid en ren studentrabatt. Medlemspris på overnatting på DNT-hytter, samt rabatter på enkelte kurs og aktiviteter.",
-      warning:
-        "Merk som ungdoms-/medlemsfordel, ikke ren studentrabatt. Sjekk aldersgrense og pris.",
       sourceUrl: "https://www.dnt.no/",
     },
   ),
