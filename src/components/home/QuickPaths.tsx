@@ -12,7 +12,7 @@ const paths = [
     href: "/tilbud",
     title: "Finn medlemsrabatter",
     description:
-      "Søkbare tilbud fra Trumf, OBOS, Klarna, NAF og Coop, filtrer etter program.",
+      "Søkbare tilbud fra OBOS, Trumf, Usbl, Klarna, EuroBonus og mer. Huk av «Jeg er student» for studentrabatter.",
     icon: "🏷️",
   },
   {
@@ -40,7 +40,7 @@ const paths = [
     href: "/fordeler",
     title: "Fordelsprogrammer",
     description:
-      "Trumf, Coop, Spenn og mer, hva de gir og når de passer deg.",
+      "Trumf, OBOS, Usbl, Spenn, Norwegian Reward, Student og mer.",
     icon: "🎁",
   },
 ];

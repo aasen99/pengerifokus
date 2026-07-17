@@ -155,7 +155,7 @@ export const student: FordelArticleContent = {
     },
   ],
   relatedLinks: [
-    { label: "Studentrabatter, oversikt", href: "/tilbud?program=student" },
+    { label: "Studentrabatter, oversikt", href: "/tilbud?student=1" },
     { label: "Bankfordeler", href: "/fordeler/bankfordeler" },
     { label: "Klarna cashback", href: "/fordeler/klarna" },
     { label: "Trumf, bonusprogram", href: "/fordeler/trumf" },

@@ -3,8 +3,8 @@ import { getFordeler } from "@/lib/content";
 import { matchesTilbudCategoryGroup } from "@/lib/tilbud-categories";
 
 /**
- * Programmer som ikke vises i «Alle programmer».
- * Brukeren må velge programmet eksplisitt i filteret.
+ * Programmer som ikke vises i «Alle programmer» eller programlisten.
+ * Brukeren må huke av «Jeg er student» for å se dem.
  */
 export const TILBUD_OPT_IN_PROGRAMS = ["student"] as const;
 
@@ -194,12 +194,23 @@ export function filterTilbud(
   query: string,
   fordelSlug: string | null,
   categoryGroup: string | null,
+  includeOptIn = false,
 ): Tilbud[] {
   const normalizedQuery = query.trim();
 
   return entries.filter((entry) => {
-    if (fordelSlug && entry.fordelSlug !== fordelSlug) return false;
-    if (!fordelSlug && isTilbudOptInProgram(entry.fordelSlug)) return false;
+    const isOptIn = isTilbudOptInProgram(entry.fordelSlug);
+
+    if (includeOptIn) {
+      // Vis studenttilbud. Hvis et medlemsprogram også er valgt, vis det i tillegg.
+      const isSelectedProgram =
+        Boolean(fordelSlug) && entry.fordelSlug === fordelSlug;
+      if (!isOptIn && !isSelectedProgram) return false;
+    } else {
+      if (isOptIn) return false;
+      if (fordelSlug && entry.fordelSlug !== fordelSlug) return false;
+    }
+
     if (
       categoryGroup &&
       !matchesTilbudCategoryGroup(entry.category, categoryGroup)
@@ -214,6 +225,13 @@ export function filterTilbud(
 
 export function getFordelName(slug: string): string {
   return getFordeler().find((f) => f.slug === slug)?.name ?? slug;
+}
+
+/** Tekst for kildelenke på tilbudskort */
+export function getTilbudSourceLinkLabel(fordelSlug: string): string {
+  if (fordelSlug === "trumf") return "Kilde hos Trumf Netthandel ↗";
+  if (fordelSlug === "student") return "Se offisiell kilde ↗";
+  return `Kilde hos ${getFordelName(fordelSlug)} ↗`;
 }
 
 export function formatTilbudDate(isoDate: string): string {

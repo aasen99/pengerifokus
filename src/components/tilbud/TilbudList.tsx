@@ -14,7 +14,9 @@ import { TilbudDisclaimer } from "@/components/tilbud/TilbudDisclaimer";
 import {
   filterTilbud,
   getFordelName,
+  getTilbudSourceLinkLabel,
   groupTilbudByPartner,
+  isTilbudOptInProgram,
   sortGruppertTilbud,
   TILBUD_SORT_OPTIONS,
   type TilbudSortOption,
@@ -54,10 +56,15 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
   const [query, setQuery] = useState("");
   const [fordelSlug, setFordelSlug] = useState<string | null>(null);
   const [categoryGroup, setCategoryGroup] = useState<string | null>(null);
+  const [includeStudent, setIncludeStudent] = useState(false);
   const [sort, setSort] = useState<TilbudSortOption>("rate-desc");
 
   const updateUrl = useCallback(
-    (next: { program?: string | null; kategori?: string | null }) => {
+    (next: {
+      program?: string | null;
+      kategori?: string | null;
+      student?: boolean | null;
+    }) => {
       const params = new URLSearchParams(searchParams.toString());
 
       if (next.program !== undefined) {
@@ -70,6 +77,11 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
         else params.delete("kategori");
       }
 
+      if (next.student !== undefined) {
+        if (next.student) params.set("student", "1");
+        else params.delete("student");
+      }
+
       const qs = params.toString();
       router.replace(qs ? `${pathname}?${qs}` : pathname, { scroll: false });
     },
@@ -79,17 +91,32 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
   useEffect(() => {
     const program = searchParams.get("program");
     const kategori = searchParams.get("kategori");
+    const studentParam = searchParams.get("student");
+
+    // Støtt gammel lenke ?program=student → ?student=1
+    if (program === "student") {
+      const params = new URLSearchParams(searchParams.toString());
+      params.delete("program");
+      params.set("student", "1");
+      const qs = params.toString();
+      router.replace(qs ? `${pathname}?${qs}` : pathname, { scroll: false });
+      return;
+    }
+
     setFordelSlug(program);
     setCategoryGroup(kategori);
-  }, [searchParams]);
+    setIncludeStudent(studentParam === "1" || studentParam === "true");
+  }, [searchParams, pathname, router]);
 
-  const fordelerMedTilbud = fordeler.filter((f) =>
-    tilbud.some((t) => t.fordelSlug === f.slug),
+  const fordelerMedTilbud = fordeler.filter(
+    (f) =>
+      !isTilbudOptInProgram(f.slug) &&
+      tilbud.some((t) => t.fordelSlug === f.slug),
   );
 
   const visibleForCategoryFilter = useMemo(
-    () => filterTilbud(tilbud, query, fordelSlug, null),
-    [tilbud, query, fordelSlug],
+    () => filterTilbud(tilbud, query, fordelSlug, null, includeStudent),
+    [tilbud, query, fordelSlug, includeStudent],
   );
 
   const categoryOptions = useMemo(
@@ -108,8 +135,9 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
   }, [categoryGroup, categoryOptions, updateUrl]);
 
   const filtered = useMemo(
-    () => filterTilbud(tilbud, query, fordelSlug, categoryGroup),
-    [tilbud, query, fordelSlug, categoryGroup],
+    () =>
+      filterTilbud(tilbud, query, fordelSlug, categoryGroup, includeStudent),
+    [tilbud, query, fordelSlug, categoryGroup, includeStudent],
   );
 
   const grouped = useMemo(
@@ -118,12 +146,19 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
   );
 
   const hasFilters =
-    query.trim().length > 0 || fordelSlug !== null || categoryGroup !== null;
+    query.trim().length > 0 ||
+    fordelSlug !== null ||
+    categoryGroup !== null ||
+    includeStudent;
 
   const showTrumfNetthandelNote =
     fordelSlug === "trumf" || fordelSlug === null;
 
   const setProgramFilter = (slug: string | null) => {
+    if (slug && isTilbudOptInProgram(slug)) {
+      setStudentFilter(true);
+      return;
+    }
     const next = slug === fordelSlug ? null : slug;
     setFordelSlug(next);
     updateUrl({ program: next });
@@ -134,11 +169,17 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
     updateUrl({ kategori: group });
   };
 
+  const setStudentFilter = (checked: boolean) => {
+    setIncludeStudent(checked);
+    updateUrl({ student: checked });
+  };
+
   const resetFilters = () => {
     setQuery("");
     setFordelSlug(null);
     setCategoryGroup(null);
-    updateUrl({ program: null, kategori: null });
+    setIncludeStudent(false);
+    updateUrl({ program: null, kategori: null, student: false });
   };
 
   return (
@@ -205,9 +246,6 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
                 );
               })}
             </select>
-            <p className="mt-1.5 text-xs text-stone-500">
-              Studentrabatter vises bare når du velger Student.
-            </p>
           </div>
 
           <div>
@@ -233,6 +271,31 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
             </select>
           </div>
         </div>
+
+        <label
+          htmlFor="tilbud-student"
+          className="mt-4 flex cursor-pointer items-start gap-3 rounded-xl border border-stone-200 bg-stone-50 px-4 py-3 transition-colors hover:border-stone-300 hover:bg-stone-100 has-[:checked]:border-orange-300 has-[:checked]:bg-orange-50"
+        >
+          <input
+            id="tilbud-student"
+            type="checkbox"
+            checked={includeStudent}
+            onChange={(e) => setStudentFilter(e.target.checked)}
+            className="mt-0.5 h-4 w-4 rounded border-stone-300 text-orange-600 focus:ring-orange-500"
+          />
+          <span className="min-w-0">
+            <span className="block text-sm font-semibold uppercase tracking-wide text-stone-800">
+              Jeg er student
+            </span>
+            <span className="mt-0.5 block text-xs text-stone-500">
+              {includeStudent
+                ? fordelSlug
+                  ? `Viser studentrabatter + ${getFordelName(fordelSlug)}`
+                  : "Viser kun studentrabatter"
+                : "Huk av for å se studentrabatter"}
+            </span>
+          </span>
+        </label>
 
         {hasFilters && (
           <div className="mt-4 flex flex-wrap items-center gap-2">
@@ -264,6 +327,15 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
                 className="rounded-full bg-orange-100 px-3 py-1 text-xs font-medium text-orange-800 hover:bg-orange-200"
               >
                 {categoryGroup} ✕
+              </button>
+            )}
+            {includeStudent && (
+              <button
+                type="button"
+                onClick={() => setStudentFilter(false)}
+                className="rounded-full bg-orange-100 px-3 py-1 text-xs font-medium text-orange-800 hover:bg-orange-200"
+              >
+                Jeg er student ✕
               </button>
             )}
             <button
@@ -325,7 +397,11 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
                   >
                     <Tag
                       variant={
-                        fordelSlug === offer.fordelSlug ? "accent" : "default"
+                        fordelSlug === offer.fordelSlug ||
+                        (includeStudent &&
+                          isTilbudOptInProgram(offer.fordelSlug))
+                          ? "accent"
+                          : "default"
                       }
                     >
                       {getFordelName(offer.fordelSlug)} · {offer.offerLabel}
@@ -365,7 +441,7 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
                       rel="noopener noreferrer"
                       className="mt-3 inline-block text-xs font-medium text-orange-600 hover:text-orange-700"
                     >
-                      Kilde hos Trumf Netthandel ↗
+                      {getTilbudSourceLinkLabel(group.offers[0].fordelSlug)}
                     </a>
                   )}
                 </>
@@ -399,7 +475,7 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
                           rel="noopener noreferrer"
                           className="mt-2 inline-block text-xs font-medium text-orange-600 hover:text-orange-700"
                         >
-                          Kilde hos Trumf Netthandel ↗
+                          {getTilbudSourceLinkLabel(offer.fordelSlug)}
                         </a>
                       )}
                     </li>
