@@ -14,7 +14,7 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = createPageMetadata({
   title: FORDELSPROGRAMMER_TITLE,
   description:
-    "Oversikt over Trumf, OBOS, Spenn og andre fordelsprogrammer. Les guider om bonus, uttak og når programmene passer deg.",
+    "Oversikt over Trumf, OBOS, Usbl, Spenn, Norwegian Reward, Strawberry, studentrabatter og andre fordelsprogrammer. Les guider om bonus, uttak og når programmene passer deg.",
   path: "/fordeler",
   keywords: [
     "fordelsprogram",
@@ -23,10 +23,16 @@ export const metadata: Metadata = createPageMetadata({
     "trumf",
     "trumf-bonus",
     "trumf pay",
+    "obos",
+    "usbl",
     "spenn",
+    "norwegian reward",
+    "strawberry medlemskap",
+    "studentrabatt",
     "eurobonus",
     "bankfordeler",
     "medlemsfordeler",
+    "klarna cashback",
   ],
 });
 

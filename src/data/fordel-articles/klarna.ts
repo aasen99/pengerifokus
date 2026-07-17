@@ -107,6 +107,7 @@ export const klarna: FordelArticleContent = {
   ],
   relatedLinks: [
     { label: "Klarna-tilbud, oversikt", href: "/tilbud?program=klarna" },
+    { label: "Student, studentrabatter", href: "/fordeler/student" },
     { label: "Velg riktig kredittkort", href: "/guider/velg-riktig-kredittkort" },
     { label: "Bonuskalkulator", href: "/verktoy/bonuskalkulator" },
     { label: "Trumf Netthandel", href: "/fordeler/trumf" },

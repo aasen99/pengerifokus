@@ -5,13 +5,14 @@ import { nafTilbud } from "@/data/tilbud-naf";
 import { klarnaTilbud } from "@/data/tilbud-klarna";
 import { eurobonusTilbud } from "@/data/tilbud-eurobonus";
 import { usblTilbud } from "@/data/tilbud-usbl";
+import { studentTilbud } from "@/data/tilbud-student";
 
 /**
  * CMS/ADMIN: Dato for siste gjennomgang av tilbudslisten.
  * Oppdateres når tilbud verifiseres eller endres hos partner.
  */
 export const tilbudListMeta = {
-  lastUpdated: "2026-07-16",
+  lastUpdated: "2026-07-17",
   sources: [
     "OBOS medlemsfordeler",
     "offisielle Trumf Netthandel-sider",
@@ -20,6 +21,7 @@ export const tilbudListMeta = {
     "Klarna cashback",
     "SAS EuroBonus restaurant- og partnerprogram",
     "Usbl medlemsfordeler",
+    "offisielle studentrabatter hos partnere",
   ],
 };
 
@@ -556,4 +558,5 @@ export const tilbud: Tilbud[] = [
   ...nafTilbud,
   ...eurobonusTilbud,
   ...usblTilbud,
+  ...studentTilbud,
 ];

@@ -11,6 +11,7 @@ import { norwegianReward } from "./norwegian-reward";
 import { revolut } from "./revolut";
 import { spenn } from "./spenn";
 import { strawberry } from "./strawberry";
+import { student } from "./student";
 import { trumf } from "./trumf";
 import { usbl } from "./usbl";
 
@@ -38,6 +39,7 @@ const fordelArticles: Record<string, FordelArticleContent> = {
   revolut: withReadTime(revolut),
   spenn: withReadTime(spenn),
   strawberry: withReadTime(strawberry),
+  student: withReadTime(student),
   trumf: withReadTime(trumf),
   usbl: withReadTime(usbl),
 };

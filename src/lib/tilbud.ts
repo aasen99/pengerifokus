@@ -2,6 +2,16 @@ import type { Tilbud } from "@/types/content";
 import { getFordeler } from "@/lib/content";
 import { matchesTilbudCategoryGroup } from "@/lib/tilbud-categories";
 
+/**
+ * Programmer som ikke vises i «Alle programmer».
+ * Brukeren må velge programmet eksplisitt i filteret.
+ */
+export const TILBUD_OPT_IN_PROGRAMS = ["student"] as const;
+
+export function isTilbudOptInProgram(fordelSlug: string): boolean {
+  return (TILBUD_OPT_IN_PROGRAMS as readonly string[]).includes(fordelSlug);
+}
+
 /** Normaliserer søketekst for treff uten hensyn til aksenter */
 export function normalizeTilbudSearchText(text: string): string {
   return text
@@ -189,6 +199,7 @@ export function filterTilbud(
 
   return entries.filter((entry) => {
     if (fordelSlug && entry.fordelSlug !== fordelSlug) return false;
+    if (!fordelSlug && isTilbudOptInProgram(entry.fordelSlug)) return false;
     if (
       categoryGroup &&
       !matchesTilbudCategoryGroup(entry.category, categoryGroup)

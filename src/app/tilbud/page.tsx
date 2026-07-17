@@ -9,12 +9,17 @@ import { createPageMetadata } from "@/lib/seo";
 export const metadata: Metadata = createPageMetadata({
   title: TILBUD_TITLE,
   description:
-    "Medlemsrabatter og bonuser du kan bruke nå, søkbart og filtrerbart etter fordelsprogram.",
+    "Medlemsrabatter og bonuser du kan bruke nå: OBOS, Trumf, Usbl, Klarna, EuroBonus, NAF og studentrabatter. Søk og filtrer etter fordelsprogram.",
   path: "/tilbud",
   keywords: [
     "OBOS rabatt",
     "Trumf netthandel",
     "Trumf-bonus",
+    "Usbl medlemsfordeler",
+    "Klarna cashback",
+    "EuroBonus tilbud",
+    "NAF rabatt",
+    "studentrabatt",
     "medlemstilbud",
   ],
 });

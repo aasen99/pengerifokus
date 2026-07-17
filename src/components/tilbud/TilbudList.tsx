@@ -205,6 +205,9 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
                 );
               })}
             </select>
+            <p className="mt-1.5 text-xs text-stone-500">
+              Studentrabatter vises bare når du velger Student.
+            </p>
           </div>
 
           <div>

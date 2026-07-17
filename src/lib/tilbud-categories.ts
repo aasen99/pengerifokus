@@ -7,7 +7,7 @@ export const TILBUD_CATEGORY_GROUPS = {
   "Bil": ["Bil"],
   "Helse og velvære": ["Helse", "Optikk"],
   "Bolig": ["Interiør", "Bolig", "Byggevare", "Strøm"],
-  "Elektronikk": ["Elektronikk"],
+  "Elektronikk": ["Elektronikk", "Programvare"],
   "Shopping": ["Mote", "Netthandel"],
   "Fritid og opplevelser": [
     "Fritid",
@@ -19,6 +19,7 @@ export const TILBUD_CATEGORY_GROUPS = {
     "Restaurant",
     "Matlevering",
     "Utdanning",
+    "Abonnement",
   ],
   "Mobil og forsikring": ["Mobil", "Forsikring", "Bank"],
   Cashback: ["Cashback"],

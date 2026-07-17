@@ -81,6 +81,18 @@ export const fordeler: Fordel[] = [
     updatedAt: "2026-07-02",
   },
   {
+    id: "fordel-14",
+    slug: "student",
+    status: "published",
+    name: "Student",
+    description:
+      "Generell oversikt over studentrabatter: studentbevis, bank, forsikring, fagforening, netthandel og hvordan du vurderer om rabatten lønner seg.",
+    type: "Studentrabatt",
+    useCase: "Studier, bank og hverdagsrabatter",
+    createdAt: "2026-07-17",
+    updatedAt: "2026-07-17",
+  },
+  {
     id: "fordel-3",
     slug: "spenn",
     status: "published",
