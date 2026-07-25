@@ -17,11 +17,14 @@ export function Hero() {
         >
           Økonomisk røntgen →
         </Link>
+        <Link
+          href="/verktoy/prosentkalkulator"
+          className="text-orange-600 hover:text-orange-700"
+        >
+          Prosentkalkulator →
+        </Link>
         <Link href="/verktoy" className="text-orange-600 hover:text-orange-700">
           Alle verktøy →
-        </Link>
-        <Link href="/guider" className="text-orange-600 hover:text-orange-700">
-          Guider →
         </Link>
       </p>
     </header>

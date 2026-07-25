@@ -10,6 +10,7 @@ import { createPageMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = createPageMetadata({
+  title: "Personlig økonomi i Norge",
   description: siteConfig.description,
   path: "/",
   keywords: [
@@ -17,6 +18,7 @@ export const metadata: Metadata = createPageMetadata({
     "økonomiguider",
     "personlig økonomi norge",
     "sparekalkulator",
+    "prosentkalkulator",
     "eie eller leie",
     "bonuspoeng",
     "økonomisk røntgen",

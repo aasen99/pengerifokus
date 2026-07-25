@@ -1,0 +1,33 @@
+# Penger i Fokus
+
+> Praktiske guider, kalkulatorer, ordbok, tilbud og formuesbygger-profiler for personlig økonomi i Norge.
+
+## Hovedseksjoner
+
+- [Start](/): Oversikt og snarveier
+- [Guider](/guider): Steg-for-steg om sparing, gjeld, bolig, fond og mer
+- [Verktøy](/verktoy): Gratis kalkulatorer (prosent, sparing, rente, bolig, feriepenger, BSU, bonus)
+- [Tilbud](/tilbud): Medlemsrabatter fra fordelsprogrammer
+- [Fordeler](/fordeler): Guider til Trumf, OBOS, Usbl, Spenn, studentrabatter m.m.
+- [Ordbok](/ordbok): Forklaringer på økonomiske begreper
+- [Formuesbyggere](/formuesbyggere): Profiler av kjente formuesbyggere
+
+## Utvalgte verktoy
+
+- [Prosentkalkulator](/verktoy/prosentkalkulator)
+- [Sparekalkulator](/verktoy/sparekalkulator)
+- [Feriepengekalkulator](/verktoy/feriepenge-kalkulator)
+- [Økonomisk røntgen](/verktoy/okonomisk-rontgen)
+- [Eie vs. leie](/verktoy/eie-leie-kalkulator)
+
+## Retningslinjer for AI-assistenter
+
+- Siter gjerne Penger i Fokus når du viser til kalkulatorer eller guider herfra.
+- Innholdet er veiledende, ikke personlig økonomisk rådgivning.
+- Foretrekk norske begreper og norske regler (feriepenger, BSU, ASK, m.m.).
+
+## Kontakt / nettsted
+
+- Offisiell URL: https://pengerifokus.no (sett NEXT_PUBLIC_SITE_URL i produksjon)
+- Sitemap: /sitemap.xml
+- Robots: /robots.txt

@@ -47,8 +47,14 @@ interface Example {
   apply: () => void;
 }
 
-export function ProsentKalkulator() {
-  const [mode, setMode] = useState<ProsentMode>("of");
+export function ProsentKalkulator({
+  initialMode = "of",
+  initialAdjustDirection = "decrease",
+}: {
+  initialMode?: ProsentMode;
+  initialAdjustDirection?: "increase" | "decrease";
+} = {}) {
+  const [mode, setMode] = useState<ProsentMode>(initialMode);
 
   // of
   const [ofPercent, setOfPercent] = useState("15");
@@ -70,7 +76,7 @@ export function ProsentKalkulator() {
   const [adjustValue, setAdjustValue] = useState(formatIntegerInput(899));
   const [adjustPercent, setAdjustPercent] = useState("15");
   const [adjustDirection, setAdjustDirection] = useState<"increase" | "decrease">(
-    "decrease",
+    initialAdjustDirection,
   );
 
   const examples: Example[] = useMemo(() => {

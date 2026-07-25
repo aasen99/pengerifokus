@@ -38,6 +38,8 @@ export function getArticleJsonLd({
   dateModified: string;
 }) {
   const url = absoluteUrl(path);
+  const siteUrl = getSiteUrl();
+  const logoUrl = `${siteUrl}/icon`;
 
   return {
     "@context": "https://schema.org",
@@ -46,18 +48,23 @@ export function getArticleJsonLd({
     description,
     url,
     mainEntityOfPage: url,
+    image: [`${siteUrl}/opengraph-image`],
     datePublished,
     dateModified,
     inLanguage: siteConfig.language,
     author: {
       "@type": "Organization",
       name: siteConfig.name,
-      url: getSiteUrl(),
+      url: siteUrl,
     },
     publisher: {
       "@type": "Organization",
       name: siteConfig.name,
-      url: getSiteUrl(),
+      url: siteUrl,
+      logo: {
+        "@type": "ImageObject",
+        url: logoUrl,
+      },
     },
   };
 }
@@ -128,6 +135,74 @@ export function getSoftwareApplicationJsonLd({
       "@type": "Organization",
       name: siteConfig.name,
       url: getSiteUrl(),
+    },
+  };
+}
+
+export function getHowToJsonLd({
+  name,
+  description,
+  path,
+  steps,
+}: {
+  name: string;
+  description: string;
+  path: string;
+  steps: { name: string; text: string }[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name,
+    description,
+    url: absoluteUrl(path),
+    inLanguage: siteConfig.language,
+    step: steps.map((step, index) => ({
+      "@type": "HowToStep",
+      position: index + 1,
+      name: step.name,
+      text: step.text,
+    })),
+  };
+}
+
+export function getCollectionPageJsonLd({
+  name,
+  description,
+  path,
+  items,
+}: {
+  name: string;
+  description: string;
+  path: string;
+  items: { name: string; path: string; description?: string }[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name,
+    description,
+    url: absoluteUrl(path),
+    inLanguage: siteConfig.language,
+    isPartOf: {
+      "@type": "WebSite",
+      name: siteConfig.name,
+      url: getSiteUrl(),
+    },
+    breadcrumb: getBreadcrumbJsonLd([
+      { name: "Start", path: "/" },
+      { name, path },
+    ]),
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: items.length,
+      itemListElement: items.map((item, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: item.name,
+        url: absoluteUrl(item.path),
+        ...(item.description ? { description: item.description } : {}),
+      })),
     },
   };
 }

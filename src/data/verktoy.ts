@@ -168,9 +168,10 @@ export const verktoy: Verktoy[] = [
     id: "verktoy-15",
     slug: "prosentkalkulator",
     status: "published",
+    featured: true,
     name: "Prosentkalkulator",
     description:
-      "Regn ut prosentandel, prosentendring, økning og nedgang, raskt og uten reklame.",
+      "Gratis prosentkalkulator uten reklame: prosentandel, økning, nedgang og prosentendring med formel.",
     category: "Økonomi",
     createdAt: "2026-07-25",
     updatedAt: "2026-07-25",
@@ -183,6 +184,28 @@ export const verktoy: Verktoy[] = [
     description:
       "Regn ut feriepenger med 10,2 %, 12 %, 12,5 % eller 14,3 % ut fra grunnlag eller månedslønn.",
     category: "Lønn",
+    createdAt: "2026-07-25",
+    updatedAt: "2026-07-25",
+  },
+  {
+    id: "verktoy-17",
+    slug: "prosentokning",
+    status: "published",
+    name: "Prosentøkning-kalkulator",
+    description:
+      "Regn ut prosentøkning mellom to verdier, for lønn, pris og portefølje, uten reklame.",
+    category: "Økonomi",
+    createdAt: "2026-07-25",
+    updatedAt: "2026-07-25",
+  },
+  {
+    id: "verktoy-18",
+    slug: "prosentnedgang",
+    status: "published",
+    name: "Prosentnedgang-kalkulator",
+    description:
+      "Regn ut prosentnedgang eller ny pris etter rabatt, raskt og uten reklame.",
+    category: "Økonomi",
     createdAt: "2026-07-25",
     updatedAt: "2026-07-25",
   },

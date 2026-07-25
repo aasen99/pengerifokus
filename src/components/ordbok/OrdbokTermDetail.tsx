@@ -54,6 +54,24 @@ export function OrdbokTermDetail({ entry, related }: OrdbokTermDetailProps) {
         </section>
       )}
 
+      {entry.tags?.includes("prosentkalkulator") && (
+        <section className="mt-10 rounded-2xl border border-orange-200 bg-orange-50 p-6">
+          <h2 className="text-lg font-semibold text-stone-900">
+            Regn det ut
+          </h2>
+          <p className="mt-2 text-sm leading-relaxed text-stone-700">
+            Bruk prosentkalkulatoren for live utregning uten reklame, med
+            formelen under svaret.
+          </p>
+          <Link
+            href="/verktoy/prosentkalkulator"
+            className="mt-4 inline-block text-sm font-semibold text-orange-700 hover:text-orange-800"
+          >
+            Åpne prosentkalkulator →
+          </Link>
+        </section>
+      )}
+
       <p className="mt-8 text-sm text-stone-500">
         Vil du søke i hele ordboken?{" "}
         <Link href="/ordbok" className="font-medium text-orange-600 hover:text-orange-700">

@@ -3,13 +3,17 @@ import Link from "next/link";
 import { Suspense } from "react";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { OrdbokList } from "@/components/ordbok/OrdbokList";
+import { HubCrossLinks } from "@/components/seo/HubCrossLinks";
+import { HubPageSeo } from "@/components/seo/HubPageSeo";
 import { getOrdbok } from "@/lib/content";
 import { createPageMetadata } from "@/lib/seo";
 
+const pageDescription =
+  "Norsk økonomiordbok med forklaringer på begreper som realrente, nettoformue, BSU, inflasjon, egenkapital, prosent og annuitetslån.";
+
 export const metadata: Metadata = createPageMetadata({
   title: "Ordbok",
-  description:
-    "Norsk økonomiordbok med forklaringer på begreper som realrente, nettoformue, BSU, inflasjon, egenkapital og annuitetslån.",
+  description: pageDescription,
   path: "/ordbok",
   keywords: [
     "økonomiordbok",
@@ -19,6 +23,7 @@ export const metadata: Metadata = createPageMetadata({
     "egenkapital",
     "inflasjon",
     "annuitetslån",
+    "prosent",
   ],
 });
 
@@ -31,6 +36,17 @@ export default function OrdbokPage() {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
+      <HubPageSeo
+        name="Ordbok"
+        description={pageDescription}
+        path="/ordbok"
+        items={entries.map((entry) => ({
+          name: entry.term,
+          path: `/ordbok/${entry.slug}`,
+          description: entry.definition,
+        }))}
+      />
+
       <PageHeader
         title="Ordbok"
         description="Forklaringer på økonomiske begreper, kort og tydelig. Hvert begrep har egen side du kan lenke til og dele."
@@ -60,6 +76,14 @@ export default function OrdbokPage() {
       >
         <OrdbokList entries={entries} />
       </Suspense>
+
+      <HubCrossLinks
+        links={[
+          { href: "/guider", label: "Guider" },
+          { href: "/ordbok/prosent", label: "Prosent" },
+          { href: "/formuesbyggere", label: "Formuesbyggere" },
+        ]}
+      />
     </div>
   );
 }

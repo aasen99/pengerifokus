@@ -628,4 +628,40 @@ export const ordbok: OrdbokEntry[] = [
     createdAt: "2026-07-02",
     updatedAt: "2026-07-02",
   },
+  {
+    id: "ord-53",
+    slug: "prosent",
+    status: "published",
+    term: "Prosent",
+    definition:
+      "Per hundre. 15 % betyr 15 av 100, eller 0,15 som desimaltall. Brukes til andeler, rabatt, lønnsendring og avkastning.",
+    category: "Økonomi",
+    tags: ["prosentregning", "prosentkalkulator", "andel"],
+    createdAt: "2026-07-25",
+    updatedAt: "2026-07-25",
+  },
+  {
+    id: "ord-54",
+    slug: "prosentokning",
+    status: "published",
+    term: "Prosentøkning",
+    definition:
+      "Hvor mye en verdi har steget i prosent fra utgangspunktet. Regnes som ((ny − gammel) ÷ gammel) × 100.",
+    category: "Økonomi",
+    tags: ["prosentregning", "prosentkalkulator", "økning"],
+    createdAt: "2026-07-25",
+    updatedAt: "2026-07-25",
+  },
+  {
+    id: "ord-55",
+    slug: "prosentnedgang",
+    status: "published",
+    term: "Prosentnedgang",
+    definition:
+      "Hvor mye en verdi har falt i prosent fra utgangspunktet. Samme formel som prosentøkning, med negativt resultat.",
+    category: "Økonomi",
+    tags: ["prosentregning", "prosentkalkulator", "nedgang"],
+    createdAt: "2026-07-25",
+    updatedAt: "2026-07-25",
+  },
 ];

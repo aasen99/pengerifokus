@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { ContentCard } from "@/components/ui/ContentCard";
+import { HubCrossLinks } from "@/components/seo/HubCrossLinks";
+import { HubPageSeo } from "@/components/seo/HubPageSeo";
 import {
   FORDELSPROGRAMMER_INTRO,
   FORDELSPROGRAMMER_TITLE,
@@ -11,10 +13,12 @@ import { hasFordelArticle } from "@/data/fordel-articles";
 import { getFordeler, getTilbudByFordel } from "@/lib/content";
 import { createPageMetadata } from "@/lib/seo";
 
+const pageDescription =
+  "Oversikt over Trumf, OBOS, Usbl, Spenn, Norwegian Reward, Strawberry, studentrabatter og andre fordelsprogrammer. Les guider om bonus, uttak og når programmene passer deg.";
+
 export const metadata: Metadata = createPageMetadata({
   title: FORDELSPROGRAMMER_TITLE,
-  description:
-    "Oversikt over Trumf, OBOS, Usbl, Spenn, Norwegian Reward, Strawberry, studentrabatter og andre fordelsprogrammer. Les guider om bonus, uttak og når programmene passer deg.",
+  description: pageDescription,
   path: "/fordeler",
   keywords: [
     "fordelsprogram",
@@ -41,6 +45,17 @@ export default function FordelerPage() {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
+      <HubPageSeo
+        name={FORDELSPROGRAMMER_TITLE}
+        description={pageDescription}
+        path="/fordeler"
+        items={fordeler.map((fordel) => ({
+          name: fordel.name,
+          path: `/fordeler/${fordel.slug}`,
+          description: fordel.description,
+        }))}
+      />
+
       <PageHeader
         title={FORDELSPROGRAMMER_TITLE}
         description={FORDELSPROGRAMMER_INTRO}
@@ -76,6 +91,14 @@ export default function FordelerPage() {
         </Link>
         .
       </p>
+
+      <HubCrossLinks
+        links={[
+          { href: "/tilbud", label: TILBUD_TITLE },
+          { href: "/verktoy/bonuskalkulator", label: "Bonuskalkulator" },
+          { href: "/guider/velg-riktig-kredittkort", label: "Velg kredittkort" },
+        ]}
+      />
     </div>
   );
 }

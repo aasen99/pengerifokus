@@ -2,14 +2,18 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { TilbudList } from "@/components/tilbud/TilbudList";
+import { HubCrossLinks } from "@/components/seo/HubCrossLinks";
+import { HubPageSeo } from "@/components/seo/HubPageSeo";
 import { TILBUD_INTRO, TILBUD_TITLE } from "@/data/content-labels";
 import { getFordeler, getTilbud } from "@/lib/content";
 import { createPageMetadata } from "@/lib/seo";
 
+const pageDescription =
+  "Medlemsrabatter og bonuser du kan bruke nå: OBOS, Trumf, Usbl, Klarna, EuroBonus, NAF og studentrabatter. Søk og filtrer etter fordelsprogram.";
+
 export const metadata: Metadata = createPageMetadata({
   title: TILBUD_TITLE,
-  description:
-    "Medlemsrabatter og bonuser du kan bruke nå: OBOS, Trumf, Usbl, Klarna, EuroBonus, NAF og studentrabatter. Søk og filtrer etter fordelsprogram.",
+  description: pageDescription,
   path: "/tilbud",
   keywords: [
     "OBOS rabatt",
@@ -33,6 +37,21 @@ export default function TilbudPage() {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
+      <HubPageSeo
+        name={TILBUD_TITLE}
+        description={pageDescription}
+        path="/tilbud"
+        items={fordeler
+          .filter((fordel) =>
+            tilbud.some((item) => item.fordelSlug === fordel.slug),
+          )
+          .map((fordel) => ({
+            name: `${fordel.name}: tilbud`,
+            path: `/tilbud?program=${fordel.slug}`,
+            description: fordel.description,
+          }))}
+      />
+
       <PageHeader title={TILBUD_TITLE} description={TILBUD_INTRO} />
 
       <Suspense
@@ -44,6 +63,14 @@ export default function TilbudPage() {
       >
         <TilbudList tilbud={tilbud} fordeler={fordeler} />
       </Suspense>
+
+      <HubCrossLinks
+        links={[
+          { href: "/fordeler", label: "Fordelsprogrammer" },
+          { href: "/verktoy/bonuskalkulator", label: "Bonuskalkulator" },
+          { href: "/guider", label: "Guider" },
+        ]}
+      />
     </div>
   );
 }

@@ -1,16 +1,27 @@
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { ContentCard } from "@/components/ui/ContentCard";
+import { HubCrossLinks } from "@/components/seo/HubCrossLinks";
+import { HubPageSeo } from "@/components/seo/HubPageSeo";
 import { getVerktoy } from "@/lib/content";
 import { createPageMetadata } from "@/lib/seo";
 import type { Verktoy } from "@/types/content";
 
+const pageDescription =
+  "Gratis kalkulatorer for personlig økonomi: prosent, sparing, rente, bolig, feriepenger, BSU, bonuspoeng og mer. Uten regneark.";
+
 export const metadata: Metadata = createPageMetadata({
   title: "Verktøy",
-  description:
-    "Gratis kalkulatorer og verktøy for personlig økonomi: rentekalkulator, sparekalkulator, budsjett og mer.",
+  description: pageDescription,
   path: "/verktoy",
-  keywords: ["økonomiverktøy", "kalkulator", "rente", "sparing", "budsjett"],
+  keywords: [
+    "økonomiverktøy",
+    "kalkulator",
+    "prosentkalkulator",
+    "sparekalkulator",
+    "rentekalkulator",
+    "feriepengekalkulator",
+  ],
 });
 
 const categoryOrder = [
@@ -53,21 +64,34 @@ function groupByCategory(tools: Verktoy[]): { category: string; tools: Verktoy[]
  * status: 'coming-soon' vises som badge; 'published' gir aktiv lenke til /verktoy/[slug].
  */
 export default function VerktoyPage() {
-  const grouped = groupByCategory(getVerktoy());
+  const tools = getVerktoy();
+  const grouped = groupByCategory(tools);
+  const published = tools.filter((tool) => tool.status === "published");
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
+      <HubPageSeo
+        name="Verktøy"
+        description={pageDescription}
+        path="/verktoy"
+        items={published.map((tool) => ({
+          name: tool.name,
+          path: `/verktoy/${tool.slug}`,
+          description: tool.description,
+        }))}
+      />
+
       <PageHeader
         title="Verktøy"
         description="Kalkulatorer og verktøy som hjelper deg å regne, planlegge og sammenligne, uten regneark."
       />
 
       <div className="space-y-12">
-        {grouped.map(({ category, tools }) => (
+        {grouped.map(({ category, tools: categoryTools }) => (
           <section key={category}>
             <h2 className="text-lg font-semibold text-stone-900">{category}</h2>
             <div className="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {tools.map((tool) => {
+              {categoryTools.map((tool) => {
                 const isComingSoon = tool.status === "coming-soon";
                 return (
                   <ContentCard
@@ -85,6 +109,14 @@ export default function VerktoyPage() {
           </section>
         ))}
       </div>
+
+      <HubCrossLinks
+        links={[
+          { href: "/guider", label: "Guider" },
+          { href: "/guider/prosentregning", label: "Prosentregning" },
+          { href: "/ordbok", label: "Ordbok" },
+        ]}
+      />
     </div>
   );
 }

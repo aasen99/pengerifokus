@@ -141,4 +141,23 @@ export const guider: Guide[] = [
     createdAt: "2026-06-11",
     updatedAt: "2026-06-11",
   },
+  {
+    id: "guide-12",
+    slug: "prosentregning",
+    status: "published",
+    featured: true,
+    title: "Prosentregning",
+    description:
+      "Lær prosentøkning, prosentnedgang og de viktigste formlene, med gratis prosentkalkulator uten reklame.",
+    category: "Økonomi",
+    tags: [
+      "prosentregning",
+      "prosentkalkulator",
+      "prosentøkning",
+      "prosentnedgang",
+      "prosentformel",
+    ],
+    createdAt: "2026-07-25",
+    updatedAt: "2026-07-25",
+  },
 ];

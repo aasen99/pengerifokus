@@ -11,6 +11,7 @@ import { eieEllerLeieBolig } from "./eie-eller-leie-bolig";
 import { inflasjonOgGjeld } from "./inflasjon-og-gjeld";
 import { kredittkortEllerDebetkort } from "./kredittkort-eller-debetkort";
 import { velgRiktigKredittkort } from "./velg-riktig-kredittkort";
+import { prosentregning } from "./prosentregning";
 
 function withReadTime(
   article: Omit<GuideArticleContent, "readTimeMinutes">,
@@ -37,6 +38,7 @@ const guideArticles: Record<string, GuideArticleContent> = {
   "inflasjon-og-gjeld": withReadTime(inflasjonOgGjeld),
   "kredittkort-eller-debetkort": withReadTime(kredittkortEllerDebetkort),
   "velg-riktig-kredittkort": withReadTime(velgRiktigKredittkort),
+  prosentregning: withReadTime(prosentregning),
 };
 
 export function getGuideArticle(slug: string): GuideArticleContent | undefined {

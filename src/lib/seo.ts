@@ -71,6 +71,7 @@ export function createPageMetadata({
 
 export function getWebsiteJsonLd() {
   const siteUrl = getSiteUrl();
+  const logoUrl = `${siteUrl}/icon`;
 
   return {
     "@context": "https://schema.org",
@@ -82,6 +83,7 @@ export function getWebsiteJsonLd() {
         name: siteConfig.name,
         description: siteConfig.description,
         inLanguage: siteConfig.language,
+        publisher: { "@id": `${siteUrl}/#organization` },
         potentialAction: {
           "@type": "SearchAction",
           target: {
@@ -97,6 +99,11 @@ export function getWebsiteJsonLd() {
         name: siteConfig.name,
         url: siteUrl,
         description: siteConfig.description,
+        logo: {
+          "@type": "ImageObject",
+          url: logoUrl,
+        },
+        image: logoUrl,
       },
     ],
   };

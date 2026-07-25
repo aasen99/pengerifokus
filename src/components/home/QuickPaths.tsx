@@ -26,14 +26,14 @@ const paths = [
     href: "/verktoy",
     title: "Regn på store valg",
     description:
-      "Eie vs. leie, lånets reelle verdi, sparing, BSU og bonuspoeng.",
+      "Prosentkalkulator, eie vs. leie, sparing, BSU, feriepenger og bonuspoeng.",
     icon: "🧮",
   },
   {
     href: "/ordbok",
     title: "Slå opp begreper",
     description:
-      "Fra ASK og effektiv rente til lavinemetode og bonuspoeng.",
+      "Fra ASK og effektiv rente til prosent, lavinemetode og bonuspoeng.",
     icon: "📖",
   },
   {
