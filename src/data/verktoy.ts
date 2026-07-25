@@ -175,4 +175,15 @@ export const verktoy: Verktoy[] = [
     createdAt: "2026-07-25",
     updatedAt: "2026-07-25",
   },
+  {
+    id: "verktoy-16",
+    slug: "feriepenge-kalkulator",
+    status: "published",
+    name: "Feriepengekalkulator",
+    description:
+      "Regn ut feriepenger med 10,2 %, 12 %, 12,5 % eller 14,3 % ut fra grunnlag eller månedslønn.",
+    category: "Lønn",
+    createdAt: "2026-07-25",
+    updatedAt: "2026-07-25",
+  },
 ];
