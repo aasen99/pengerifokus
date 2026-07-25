@@ -12,10 +12,10 @@ import { createPageMetadata } from "@/lib/seo";
 import { getFaqPageJsonLd, getHowToJsonLd } from "@/lib/structured-data";
 
 const toolDescription =
-  "Gratis prosentkalkulator uten reklame. Regn ut prosent av et tall, prosentøkning, prosentnedgang, prosentendring og finn det hele tallet. Live svar med formel.";
+  "Prosentkalkulator for prosent av et tall, prosentøkning, prosentnedgang, prosentendring og for å finne det hele tallet. Live svar med formel.";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Prosentkalkulator: gratis prosentregning uten reklame",
+  title: "Prosentkalkulator",
   description: toolDescription,
   path: "/verktoy/prosentkalkulator",
   keywords: [
@@ -76,9 +76,8 @@ export default function ProsentkalkulatorPage() {
           Prosentkalkulator
         </h1>
         <p className="mt-3 max-w-3xl text-lg text-stone-600">
-          Gratis prosentregning uten reklame. Regn ut prosentandel,
-          prosentøkning, prosentnedgang og prosentendring, med formelen rett
-          under svaret.
+          Regn ut prosentandel, prosentøkning, prosentnedgang og prosentendring,
+          med formelen rett under svaret.
         </p>
       </header>
 

@@ -22,9 +22,9 @@ const faqItems = [
       "«15 % av 899» gir selve andelen (134,85). «Reduser 899 med 15 %» gir ny pris etter rabatt (764,15). Kalkulatoren har egne modi for begge.",
   },
   {
-    question: "Er prosentkalkulatoren gratis?",
+    question: "Må jeg logge inn for å bruke kalkulatoren?",
     answer:
-      "Ja. Du får live utregning uten innlogging og uten reklame. Formelen vises under svaret, så du kan lære samtidig.",
+      "Nei. Du får live utregning med en gang. Formelen vises under svaret, så du kan lære samtidig.",
   },
 ];
 
@@ -40,7 +40,7 @@ export function ProsentKalkulatorSeoContent() {
         <p className="mt-3 max-w-3xl text-stone-600 leading-relaxed">
           Velg modus øverst i kalkulatoren, fyll inn tallene, og se svaret med
           en gang. Under svaret står formelen, slik at du både får resultatet og
-          forstår utregningen. Alt er gratis, uten innlogging og uten reklame.
+          forstår utregningen.
         </p>
         <ul className="mt-4 max-w-3xl list-disc space-y-2 pl-5 text-stone-600">
           <li>
@@ -169,11 +169,10 @@ export function ProsentKalkulatorSeoContent() {
 
       <section>
         <h2 className="text-2xl font-bold tracking-tight text-stone-900">
-          Hvorfor bruke denne prosentkalkulatoren?
+          Mer om prosentkalkulatoren
         </h2>
         <ul className="mt-4 max-w-3xl list-disc space-y-2 pl-5 text-stone-600">
-          <li>Ingen reklame, pop-ups eller sporingsjungel</li>
-          <li>Live svar mens du skriver, uten «Beregn»-knapp</li>
+          <li>Live svar mens du skriver</li>
           <li>Fem modi som dekker vanlige prosentproblemer</li>
           <li>Formelen under svaret, så du lærer utregningen</li>
           <li>

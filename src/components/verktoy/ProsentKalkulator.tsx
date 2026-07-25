@@ -478,8 +478,8 @@ export function ProsentKalkulator({
         )}
 
         <p className="text-xs leading-relaxed text-stone-500">
-          Rask prosentregning uten reklame. Nyttig for rabatt, lønn, pris og
-          andre tall i hverdagsøkonomien.
+          Rask prosentregning for rabatt, lønn, pris og andre tall i
+          hverdagsøkonomien.
         </p>
       </section>
     </div>

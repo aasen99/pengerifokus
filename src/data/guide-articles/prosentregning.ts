@@ -3,7 +3,7 @@ import type { GuideArticleContent } from "@/types/guide-article";
 export const prosentregning: Omit<GuideArticleContent, "readTimeMinutes"> = {
   slug: "prosentregning",
   intro:
-    "Prosentregning dukker opp overalt: rabatt, lønn, budsjett, rente og prisendring. Her får du formlene, eksemplene og en gratis prosentkalkulator uten reklame.",
+    "Prosentregning dukker opp overalt: rabatt, lønn, budsjett, rente og prisendring. Her får du formlene, eksemplene og en prosentkalkulator du kan bruke underveis.",
   sections: [
     {
       heading: "Hva er prosent?",

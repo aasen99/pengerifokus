@@ -148,7 +148,7 @@ export const guider: Guide[] = [
     featured: true,
     title: "Prosentregning",
     description:
-      "Lær prosentøkning, prosentnedgang og de viktigste formlene, med gratis prosentkalkulator uten reklame.",
+      "Lær prosentøkning, prosentnedgang og de viktigste formlene, med prosentkalkulator og eksempler.",
     category: "Økonomi",
     tags: [
       "prosentregning",

@@ -60,8 +60,8 @@ export function OrdbokTermDetail({ entry, related }: OrdbokTermDetailProps) {
             Regn det ut
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-stone-700">
-            Bruk prosentkalkulatoren for live utregning uten reklame, med
-            formelen under svaret.
+            Bruk prosentkalkulatoren for live utregning med formelen under
+            svaret.
           </p>
           <Link
             href="/verktoy/prosentkalkulator"

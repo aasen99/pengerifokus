@@ -171,7 +171,7 @@ export const verktoy: Verktoy[] = [
     featured: true,
     name: "Prosentkalkulator",
     description:
-      "Gratis prosentkalkulator uten reklame: prosentandel, økning, nedgang og prosentendring med formel.",
+      "Regn ut prosentandel, økning, nedgang og prosentendring, med formelen under svaret.",
     category: "Økonomi",
     createdAt: "2026-07-25",
     updatedAt: "2026-07-25",
@@ -193,7 +193,7 @@ export const verktoy: Verktoy[] = [
     status: "published",
     name: "Prosentøkning-kalkulator",
     description:
-      "Regn ut prosentøkning mellom to verdier, for lønn, pris og portefølje, uten reklame.",
+      "Regn ut prosentøkning mellom to verdier, for lønn, pris og portefølje.",
     category: "Økonomi",
     createdAt: "2026-07-25",
     updatedAt: "2026-07-25",
@@ -204,7 +204,7 @@ export const verktoy: Verktoy[] = [
     status: "published",
     name: "Prosentnedgang-kalkulator",
     description:
-      "Regn ut prosentnedgang eller ny pris etter rabatt, raskt og uten reklame.",
+      "Regn ut prosentnedgang eller ny pris etter rabatt.",
     category: "Økonomi",
     createdAt: "2026-07-25",
     updatedAt: "2026-07-25",

@@ -8,7 +8,7 @@ import { createPageMetadata } from "@/lib/seo";
 import { getFaqPageJsonLd } from "@/lib/structured-data";
 
 const toolDescription =
-  "Gratis prosentøkning-kalkulator uten reklame. Regn ut hvor mange prosent en verdi har steget, med formel og live svar.";
+  "Prosentøkning-kalkulator: regn ut hvor mange prosent en verdi har steget, med formel og live svar.";
 
 const faq = [
   {
@@ -24,7 +24,7 @@ const faq = [
 ];
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Prosentøkning-kalkulator: regn ut økning i prosent",
+  title: "Prosentøkning-kalkulator",
   description: toolDescription,
   path: "/verktoy/prosentokning",
   keywords: [
@@ -58,8 +58,8 @@ export default function ProsentokningPage() {
           Prosentøkning-kalkulator
         </h1>
         <p className="mt-3 max-w-3xl text-lg text-stone-600">
-          Finn ut hvor mye en verdi har steget i prosent. Perfekt for lønn,
-          priser, portefølje og budsjett, uten reklame.
+          Finn ut hvor mye en verdi har steget i prosent. Passer til lønn,
+          priser, portefølje og budsjett.
         </p>
       </header>
 

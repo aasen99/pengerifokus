@@ -8,7 +8,7 @@ import { createPageMetadata } from "@/lib/seo";
 import { getFaqPageJsonLd } from "@/lib/structured-data";
 
 const toolDescription =
-  "Gratis prosentnedgang-kalkulator uten reklame. Regn ut hvor mange prosent en verdi har falt, eller redusér et beløp med prosent.";
+  "Prosentnedgang-kalkulator: regn ut hvor mange prosent en verdi har falt, eller redusér et beløp med prosent.";
 
 const faq = [
   {
@@ -24,7 +24,7 @@ const faq = [
 ];
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Prosentnedgang-kalkulator: regn ut nedgang i prosent",
+  title: "Prosentnedgang-kalkulator",
   description: toolDescription,
   path: "/verktoy/prosentnedgang",
   keywords: [
@@ -58,8 +58,7 @@ export default function ProsentnedgangPage() {
           Prosentnedgang-kalkulator
         </h1>
         <p className="mt-3 max-w-3xl text-lg text-stone-600">
-          Regn ut prosentvis nedgang, eller se ny pris etter rabatt. Raskt, gratis
-          og uten reklame.
+          Regn ut prosentvis nedgang, eller se ny pris etter rabatt.
         </p>
       </header>
 
