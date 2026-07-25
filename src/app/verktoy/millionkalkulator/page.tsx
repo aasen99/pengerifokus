@@ -1,27 +1,33 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Sparekalkulator } from "@/components/verktoy/Sparekalkulator";
+import { MillionKalkulator } from "@/components/verktoy/MillionKalkulator";
 import { ToolRelatedGuides } from "@/components/verktoy/ToolRelatedGuides";
 import { ToolPageSeo } from "@/components/seo/ToolPageSeo";
 import { createPageMetadata } from "@/lib/seo";
 
 const toolDescription =
-  "Gratis sparekalkulator. Se hvor mye sparingen din vokser og sammenlign effekten av ekstra månedlig sparing over tid.";
+  "Gratis millionkalkulator: se hvor lang tid det tar å spare til 1 million (eller et annet mål), hvor mye du må sette av per måned, eller hvilken avkastning som trengs.";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Sparekalkulator",
+  title: "Millionkalkulator",
   description: toolDescription,
-  path: "/verktoy/sparekalkulator",
-  keywords: ["sparekalkulator", "sparing", "avkastning", "rentes rente", "fond sparing"],
+  path: "/verktoy/millionkalkulator",
+  keywords: [
+    "millionkalkulator",
+    "spare til 1 million",
+    "månedlig sparing",
+    "avkastning",
+    "rentes rente",
+  ],
 });
 
-export default function SparekalkulatorPage() {
+export default function MillionkalkulatorPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
       <ToolPageSeo
-        name="Sparekalkulator"
+        name="Millionkalkulator"
         description={toolDescription}
-        path="/verktoy/sparekalkulator"
+        path="/verktoy/millionkalkulator"
       />
       <Link
         href="/verktoy"
@@ -32,31 +38,38 @@ export default function SparekalkulatorPage() {
 
       <header className="mt-4 mb-10">
         <h1 className="text-3xl font-bold tracking-tight text-stone-900 sm:text-4xl">
-          Sparekalkulator
+          Millionkalkulator
         </h1>
         <p className="mt-3 max-w-2xl text-lg text-stone-600">
-          Sammenlign vanlig sparing med å legge til litt ekstra hver måned,
-          for eksempel 200 kr, og se forskjellen over tid.
+          Finn tid, månedlig beløp eller nødvendig avkastning for å nå 1 million,
+          eller et annet sparemål.
         </p>
       </header>
 
-      <Sparekalkulator />
+      <MillionKalkulator />
 
       <p className="mt-10 text-sm text-stone-600">
-        Vil du spare til et mål, for eksempel 1 million? Prøv{" "}
+        Vil du se hvor mye sparingen vokser over tid? Prøv{" "}
         <Link
-          href="/verktoy/millionkalkulator"
+          href="/verktoy/sparekalkulator"
           className="font-medium text-orange-600 hover:text-orange-700"
         >
-          millionkalkulatoren
+          sparekalkulatoren
+        </Link>{" "}
+        eller{" "}
+        <Link
+          href="/verktoy/regel-72"
+          className="font-medium text-orange-600 hover:text-orange-700"
+        >
+          Regel 72
         </Link>
         .
       </p>
 
       <ToolRelatedGuides
         guides={[
-          { label: "Bygg bufferkonto", href: "/guider/bygg-bufferkonto" },
           { label: "Kom i gang med fond", href: "/guider/kom-i-gang-med-fond" },
+          { label: "Bygg bufferkonto", href: "/guider/bygg-bufferkonto" },
         ]}
       />
     </div>

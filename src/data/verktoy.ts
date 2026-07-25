@@ -153,4 +153,26 @@ export const verktoy: Verktoy[] = [
     createdAt: "2026-07-04",
     updatedAt: "2026-07-04",
   },
+  {
+    id: "verktoy-14",
+    slug: "millionkalkulator",
+    status: "published",
+    name: "Millionkalkulator",
+    description:
+      "Se hvor lang tid det tar å spare til 1 million, hvor mye du må sette av per måned, eller hvilken avkastning som trengs.",
+    category: "Sparing",
+    createdAt: "2026-07-25",
+    updatedAt: "2026-07-25",
+  },
+  {
+    id: "verktoy-15",
+    slug: "prosentkalkulator",
+    status: "published",
+    name: "Prosentkalkulator",
+    description:
+      "Regn ut prosentandel, prosentendring, økning og nedgang, raskt og uten reklame.",
+    category: "Økonomi",
+    createdAt: "2026-07-25",
+    updatedAt: "2026-07-25",
+  },
 ];
