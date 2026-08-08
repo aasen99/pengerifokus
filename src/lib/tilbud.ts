@@ -233,14 +233,13 @@ export function getTilbudSourceLinkLabel(
   sourceUrl?: string,
 ): string {
   if (sourceUrl?.includes("onlineshopping.flysas.com")) {
-    return "Kilde hos SAS Online Shopping ↗";
+    return "SAS Online Shopping ↗";
   }
-  if (sourceUrl?.includes("trumfnetthandel")) {
-    return "Kilde hos Trumf Netthandel ↗";
+  if (sourceUrl?.includes("trumfnetthandel") || fordelSlug === "trumf") {
+    return "Trumf Netthandel ↗";
   }
-  if (fordelSlug === "trumf") return "Kilde hos Trumf Netthandel ↗";
-  if (fordelSlug === "student") return "Se offisiell kilde ↗";
-  return `Kilde hos ${getFordelName(fordelSlug)} ↗`;
+  if (fordelSlug === "student") return "Offisiell kilde ↗";
+  return `${getFordelName(fordelSlug)} ↗`;
 }
 
 export function formatTilbudDate(isoDate: string): string {

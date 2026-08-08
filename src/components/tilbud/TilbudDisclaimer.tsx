@@ -4,6 +4,7 @@ import { formatTilbudDate } from "@/lib/tilbud";
 interface TilbudDisclaimerProps {
   variant?: "banner" | "footer";
   showTrumfNetthandelNote?: boolean;
+  showEurobonusShoppingNote?: boolean;
 }
 
 function formatSources(sources: readonly string[]): string {
@@ -15,6 +16,7 @@ function formatSources(sources: readonly string[]): string {
 export function TilbudDisclaimer({
   variant = "footer",
   showTrumfNetthandelNote = false,
+  showEurobonusShoppingNote = false,
 }: TilbudDisclaimerProps) {
   const lastUpdated = formatTilbudDate(tilbudListMeta.lastUpdated);
   const sources = formatSources(tilbudListMeta.sources);
@@ -53,6 +55,16 @@ export function TilbudDisclaimer({
               godkjenner dem, og fullfør kjøpet i samme økt. Priser kan variere
               etter kanal og tidspunkt. Sammenlign spesielt totalpris på reise,
               hotell og leiebil før du bestiller.
+            </p>
+          )}
+          {showEurobonusShoppingNote && (
+            <p>
+              <span className="font-semibold text-stone-800">
+                SAS Online Shopping:{" "}
+              </span>
+              EuroBonus-poeng på netthandel krever at du starter via
+              onlineshopping.flysas.com, er innlogget og fullfører kjøpet i samme
+              økt. Satser kan endres, og kampanjer kan gi ekstra poeng midlertidig.
             </p>
           )}
           <p className="text-stone-500">

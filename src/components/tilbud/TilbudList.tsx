@@ -1,12 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useMemo, useState } from "react";
-import {
-  FORDELSPROGRAMMER_TITLE,
-  TILBUD_TITLE,
-} from "@/data/content-labels";
 import type { Tilbud } from "@/types/content";
 import type { Fordel } from "@/types/content";
 import { Tag } from "@/components/ui/Tag";
@@ -151,8 +146,8 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
     categoryGroup !== null ||
     includeStudent;
 
-  const showTrumfNetthandelNote =
-    fordelSlug === "trumf" || fordelSlug === null;
+  const showTrumfNetthandelNote = fordelSlug === "trumf";
+  const showEurobonusShoppingNote = fordelSlug === "eurobonus";
 
   const setProgramFilter = (slug: string | null) => {
     if (slug && isTilbudOptInProgram(slug)) {
@@ -183,13 +178,14 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-5">
       <TilbudDisclaimer
         variant="banner"
         showTrumfNetthandelNote={showTrumfNetthandelNote}
+        showEurobonusShoppingNote={showEurobonusShoppingNote}
       />
 
-      <div className="rounded-2xl border border-stone-200 bg-white p-4 shadow-sm sm:p-5">
+      <div className="rounded-xl border border-stone-200 bg-white p-3 sm:p-4">
         <label htmlFor="tilbud-search" className="sr-only">
           Søk i tilbud
         </label>
@@ -216,16 +212,10 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
             </button>
           )}
         </div>
-        <p className="mt-2 text-xs text-stone-500">
-          Tips: du kan søke på flere ord, f.eks. «trumf hotell» eller «obos reise».
-        </p>
 
-        <div className="mt-5 grid gap-4 sm:grid-cols-2">
+        <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-[1fr_1fr_auto]">
           <div>
-            <label
-              htmlFor="tilbud-program"
-              className="mb-2 block text-xs font-semibold uppercase tracking-wider text-stone-500"
-            >
+            <label htmlFor="tilbud-program" className="sr-only">
               Fordelsprogram
             </label>
             <select
@@ -249,10 +239,7 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
           </div>
 
           <div>
-            <label
-              htmlFor="tilbud-category"
-              className="mb-2 block text-xs font-semibold uppercase tracking-wider text-stone-500"
-            >
+            <label htmlFor="tilbud-category" className="sr-only">
               Kategori
             </label>
             <select
@@ -270,106 +257,56 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
               ))}
             </select>
           </div>
+
+          <label
+            htmlFor="tilbud-student"
+            className="flex cursor-pointer items-center gap-2 rounded-lg border border-stone-200 px-3 py-2 text-sm text-stone-700 transition-colors hover:border-stone-300 has-[:checked]:border-orange-300 has-[:checked]:bg-orange-50"
+          >
+            <input
+              id="tilbud-student"
+              type="checkbox"
+              checked={includeStudent}
+              onChange={(e) => setStudentFilter(e.target.checked)}
+              className="h-4 w-4 rounded border-stone-300 text-orange-600 focus:ring-orange-500"
+            />
+            Student
+          </label>
         </div>
 
-        <label
-          htmlFor="tilbud-student"
-          className="mt-4 flex cursor-pointer items-start gap-3 rounded-xl border border-stone-200 bg-stone-50 px-4 py-3 transition-colors hover:border-stone-300 hover:bg-stone-100 has-[:checked]:border-orange-300 has-[:checked]:bg-orange-50"
-        >
-          <input
-            id="tilbud-student"
-            type="checkbox"
-            checked={includeStudent}
-            onChange={(e) => setStudentFilter(e.target.checked)}
-            className="mt-0.5 h-4 w-4 rounded border-stone-300 text-orange-600 focus:ring-orange-500"
-          />
-          <span className="min-w-0">
-            <span className="block text-sm font-semibold uppercase tracking-wide text-stone-800">
-              Jeg er student
-            </span>
-            <span className="mt-0.5 block text-xs text-stone-500">
-              {includeStudent
-                ? fordelSlug
-                  ? `Viser studentrabatter + ${getFordelName(fordelSlug)}`
-                  : "Viser kun studentrabatter"
-                : "Huk av for å se studentrabatter"}
-            </span>
-          </span>
-        </label>
-
         {hasFilters && (
-          <div className="mt-4 flex flex-wrap items-center gap-2">
-            <span className="text-xs font-semibold uppercase tracking-wider text-stone-500">
-              Aktive filter
-            </span>
-            {query.trim() && (
-              <button
-                type="button"
-                onClick={() => setQuery("")}
-                className="rounded-full bg-stone-100 px-3 py-1 text-xs font-medium text-stone-700 hover:bg-stone-200"
-              >
-                Søk: {query.trim()} ✕
-              </button>
-            )}
-            {fordelSlug && (
-              <button
-                type="button"
-                onClick={() => setProgramFilter(fordelSlug)}
-                className="rounded-full bg-orange-100 px-3 py-1 text-xs font-medium text-orange-800 hover:bg-orange-200"
-              >
-                {getFordelName(fordelSlug)} ✕
-              </button>
-            )}
-            {categoryGroup && (
-              <button
-                type="button"
-                onClick={() => setCategoryFilter(categoryGroup)}
-                className="rounded-full bg-orange-100 px-3 py-1 text-xs font-medium text-orange-800 hover:bg-orange-200"
-              >
-                {categoryGroup} ✕
-              </button>
-            )}
-            {includeStudent && (
-              <button
-                type="button"
-                onClick={() => setStudentFilter(false)}
-                className="rounded-full bg-orange-100 px-3 py-1 text-xs font-medium text-orange-800 hover:bg-orange-200"
-              >
-                Jeg er student ✕
-              </button>
-            )}
+          <div className="mt-3 flex justify-end">
             <button
               type="button"
               onClick={resetFilters}
               className="text-xs font-semibold text-orange-600 hover:text-orange-700"
             >
-              Nullstill alt
+              Nullstill filter
             </button>
           </div>
         )}
       </div>
 
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+      <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-sm text-stone-600">
           {grouped.length} {grouped.length === 1 ? "partner" : "partnere"}
-          {hasFilters ? " funnet" : ""}
           {grouped.length < filtered.length && (
             <span className="text-stone-500">
               {" "}
-              ({filtered.length} tilbud totalt)
+              ({filtered.length} tilbud)
             </span>
           )}
         </p>
 
         <div className="flex items-center gap-2">
-          <label htmlFor="tilbud-sort" className="text-sm text-stone-600">
+          <label htmlFor="tilbud-sort" className="sr-only">
             Sorter etter
           </label>
           <select
             id="tilbud-sort"
             value={sort}
             onChange={(e) => setSort(e.target.value as TilbudSortOption)}
-            className={`${calculatorInputClassName} w-auto min-w-[11rem] py-2 pr-8`}
+            className={`${calculatorInputClassName} w-auto min-w-[10rem] py-1.5 pr-8 text-sm`}
+            aria-label="Sorter etter"
           >
             {TILBUD_SORT_OPTIONS.map((option) => (
               <option key={option.value} value={option.value}>
@@ -381,121 +318,125 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
       </div>
 
       {grouped.length > 0 ? (
-        <div className="grid gap-4 sm:grid-cols-2">
-          {grouped.map((group) => (
-            <article
-              key={group.key}
-              className="flex h-full flex-col rounded-2xl border border-stone-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
-            >
-              <div className="mb-3 flex flex-wrap items-center gap-2">
-                {group.offers.map((offer) => (
-                  <button
-                    key={offer.tilbudId}
-                    type="button"
-                    onClick={() => setProgramFilter(offer.fordelSlug)}
-                    className="text-left"
-                  >
-                    <Tag
-                      variant={
-                        fordelSlug === offer.fordelSlug ||
-                        (includeStudent &&
-                          isTilbudOptInProgram(offer.fordelSlug))
-                          ? "accent"
-                          : "default"
-                      }
-                    >
-                      {getFordelName(offer.fordelSlug)} · {offer.offerLabel}
-                    </Tag>
-                  </button>
-                ))}
-                {group.categories.map((cat) => (
-                  <Tag key={cat} variant="muted">
-                    {cat}
-                  </Tag>
-                ))}
-              </div>
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {grouped.map((group) => {
+            const uniqueTerms = [
+              ...new Set(
+                group.offers
+                  .map((offer) => offer.terms?.trim())
+                  .filter((terms): terms is string => Boolean(terms)),
+              ),
+            ];
+            const sourceLinks = [
+              ...new Map(
+                group.offers
+                  .filter((offer) => offer.sourceUrl)
+                  .map((offer) => [
+                    `${offer.fordelSlug}|${offer.sourceUrl}`,
+                    offer,
+                  ]),
+              ).values(),
+            ];
+            const warnings = group.offers.filter((offer) => offer.warning);
 
-              <h2 className="text-lg font-semibold text-stone-900">
-                {group.partner}
-              </h2>
+            return (
+              <article
+                key={group.key}
+                className="flex h-full flex-col rounded-xl border border-stone-200 bg-white p-3.5 shadow-sm transition-shadow hover:shadow-md"
+              >
+                <h2 className="text-base font-semibold text-stone-900">
+                  {group.partner}
+                </h2>
 
-              {group.offers.length === 1 ? (
-                <>
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-stone-600">
-                    {group.offers[0].description}
-                  </p>
-                  {group.offers[0].warning && (
-                    <p className="mt-3 rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-xs leading-relaxed text-amber-900">
-                      {group.offers[0].warning}
-                    </p>
-                  )}
-                  {group.offers[0].terms && (
-                    <p className="mt-3 text-xs leading-relaxed text-stone-500">
-                      {group.offers[0].terms}
-                    </p>
-                  )}
-                  {group.offers[0].sourceUrl && (
-                    <a
-                      href={group.offers[0].sourceUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-3 inline-block text-xs font-medium text-orange-600 hover:text-orange-700"
-                    >
-                      {getTilbudSourceLinkLabel(group.offers[0].fordelSlug, group.offers[0].sourceUrl)}
-                    </a>
-                  )}
-                </>
-              ) : (
-                <ul className="mt-2 flex-1 space-y-4">
+                <div className="mt-2 flex flex-wrap items-center gap-1.5">
                   {group.offers.map((offer) => (
-                    <li
+                    <button
                       key={offer.tilbudId}
-                      className="border-t border-stone-100 pt-4 first:border-t-0 first:pt-0"
+                      type="button"
+                      onClick={() => setProgramFilter(offer.fordelSlug)}
+                      className="text-left"
                     >
-                      <p className="text-sm font-medium text-stone-900">
+                      <Tag
+                        variant={
+                          fordelSlug === offer.fordelSlug ||
+                          (includeStudent &&
+                            isTilbudOptInProgram(offer.fordelSlug))
+                            ? "accent"
+                            : "default"
+                        }
+                      >
                         {getFordelName(offer.fordelSlug)} · {offer.offerLabel}
-                      </p>
-                      <p className="mt-1 text-sm leading-relaxed text-stone-600">
-                        {offer.description}
-                      </p>
-                      {offer.warning && (
-                        <p className="mt-2 rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-xs leading-relaxed text-amber-900">
-                          {offer.warning}
-                        </p>
-                      )}
-                      {offer.terms && (
-                        <p className="mt-2 text-xs leading-relaxed text-stone-500">
-                          {offer.terms}
-                        </p>
-                      )}
-                      {offer.sourceUrl && (
-                        <a
-                          href={offer.sourceUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="mt-2 inline-block text-xs font-medium text-orange-600 hover:text-orange-700"
-                        >
-                          {getTilbudSourceLinkLabel(offer.fordelSlug, offer.sourceUrl)}
-                        </a>
-                      )}
-                    </li>
+                      </Tag>
+                    </button>
                   ))}
-                </ul>
-              )}
-            </article>
-          ))}
+                </div>
+
+                {!categoryGroup && group.categories.length > 0 && (
+                  <p className="mt-1.5 text-xs text-stone-500">
+                    {group.categories.join(" · ")}
+                  </p>
+                )}
+
+                {warnings.map((offer) => (
+                  <p
+                    key={`${offer.tilbudId}-warning`}
+                    className="mt-2 rounded-lg border border-amber-200 bg-amber-50 px-2.5 py-1.5 text-xs leading-snug text-amber-900"
+                  >
+                    {offer.warning}
+                  </p>
+                ))}
+
+                {(sourceLinks.length > 0 || uniqueTerms.length > 0) && (
+                  <div className="mt-auto flex flex-wrap items-center gap-x-3 gap-y-1 border-t border-stone-100 pt-2.5 mt-3">
+                    {sourceLinks.map((offer) => (
+                      <a
+                        key={`${offer.tilbudId}-source`}
+                        href={offer.sourceUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs font-medium text-orange-600 hover:text-orange-700"
+                      >
+                        {getTilbudSourceLinkLabel(
+                          offer.fordelSlug,
+                          offer.sourceUrl,
+                        )}
+                      </a>
+                    ))}
+                    {uniqueTerms.length > 0 && (
+                      <details className="group/terms">
+                        <summary className="cursor-pointer list-none text-xs font-medium text-stone-500 hover:text-stone-700 [&::-webkit-details-marker]:hidden">
+                          Vilkår
+                          <span
+                            className="ml-1 inline-block transition-transform group-open/terms:rotate-180"
+                            aria-hidden="true"
+                          >
+                            ▾
+                          </span>
+                        </summary>
+                        <div className="mt-1.5 space-y-2 text-xs leading-relaxed text-stone-500">
+                          {uniqueTerms.map((terms) => (
+                            <p key={terms}>{terms}</p>
+                          ))}
+                        </div>
+                      </details>
+                    )}
+                  </div>
+                )}
+              </article>
+            );
+          })}
         </div>
       ) : (
-        <div className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 px-6 py-12 text-center">
+        <div className="rounded-xl border border-dashed border-stone-300 bg-stone-50 px-6 py-10 text-center">
           <p className="font-medium text-stone-900">Ingen tilbud funnet</p>
-          <p className="mt-2 text-sm text-stone-600">
+          <p className="mt-1 text-sm text-stone-600">
             Prøv et annet søkeord eller fjern filteret.
           </p>
           {hasFilters && (
             <button
               type="button"
               onClick={resetFilters}
-              className="mt-4 text-sm font-semibold text-orange-600 hover:text-orange-700"
+              className="mt-3 text-sm font-semibold text-orange-600 hover:text-orange-700"
             >
               Nullstill filter
             </button>
@@ -504,14 +445,6 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
       )}
 
       <TilbudDisclaimer />
-
-      <p className="text-sm text-stone-500">
-        Vil du lese mer om fordelsprogrammene bak tilbudene?{" "}
-        <Link href="/fordeler" className="font-medium text-orange-600 hover:text-orange-700">
-          Se {FORDELSPROGRAMMER_TITLE.toLowerCase()}
-        </Link>
-        .
-      </p>
     </div>
   );
 }

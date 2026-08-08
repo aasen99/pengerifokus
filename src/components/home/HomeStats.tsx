@@ -8,8 +8,8 @@ const statLabels: {
 }[] = [
   { key: "tools", label: "kalkulatorer", href: "/verktoy" },
   { key: "guides", label: "guider", href: "/guider" },
-  { key: "fordeler", label: "fordelsprogrammer", href: "/fordeler" },
   { key: "tilbud", label: "tilbud", href: "/tilbud" },
+  { key: "fordeler", label: "fordeler", href: "/fordeler" },
   { key: "ordbok", label: "ordbok", href: "/ordbok" },
   { key: "formuesbyggere", label: "profiler", href: "/formuesbyggere" },
 ];
@@ -18,24 +18,19 @@ export function HomeStats() {
   const stats = getHomeStats();
 
   return (
-    <section
-      aria-label="Oversikt over innhold"
-      className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6"
-    >
-      {statLabels.map(({ key, label, href }) => (
-        <Link
-          key={key}
-          href={href}
-          className="group rounded-xl border border-stone-200 bg-white px-3 py-3 text-center shadow-sm transition-all hover:border-orange-200 hover:shadow-md"
-        >
-          <p className="text-xl font-bold text-stone-900 group-hover:text-orange-700">
-            {stats[key]}
-          </p>
-          <p className="mt-1 text-xs font-medium text-stone-500 group-hover:text-orange-600">
+    <section aria-label="Oversikt over innhold">
+      <div className="flex flex-wrap items-baseline gap-x-5 gap-y-2 text-sm text-stone-600">
+        {statLabels.map(({ key, label, href }) => (
+          <Link
+            key={key}
+            href={href}
+            className="hover:text-orange-700"
+          >
+            <span className="font-semibold text-stone-900">{stats[key]}</span>{" "}
             {label}
-          </p>
-        </Link>
-      ))}
+          </Link>
+        ))}
+      </div>
     </section>
   );
 }

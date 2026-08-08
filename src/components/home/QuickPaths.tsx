@@ -4,44 +4,22 @@ const paths = [
   {
     href: "/verktoy/okonomisk-rontgen",
     title: "Kartlegg økonomien",
-    description:
-      "Få en score og tre konkrete prioriteringer med Økonomisk røntgen.",
-    icon: "🩺",
+    description: "Få score og tre konkrete prioriteringer.",
   },
   {
     href: "/tilbud",
     title: "Finn medlemsrabatter",
-    description:
-      "Søkbare tilbud fra OBOS, Trumf, Usbl, Klarna, EuroBonus og mer. Huk av «Jeg er student» for studentrabatter.",
-    icon: "🏷️",
+    description: "OBOS, Trumf, Usbl, Klarna, EuroBonus og mer.",
+  },
+  {
+    href: "/verktoy",
+    title: "Regn på valgene",
+    description: "Sparing, bolig, feriepenger, prosent og bonus.",
   },
   {
     href: "/guider",
     title: "Les guider",
-    description:
-      "Fra bufferkonto og gjeld til bolig og kredittkort, steg for steg.",
-    icon: "📚",
-  },
-  {
-    href: "/verktoy",
-    title: "Regn på store valg",
-    description:
-      "Prosentkalkulator, eie vs. leie, sparing, BSU, feriepenger og bonuspoeng.",
-    icon: "🧮",
-  },
-  {
-    href: "/ordbok",
-    title: "Slå opp begreper",
-    description:
-      "Fra ASK og effektiv rente til prosent, lavinemetode og bonuspoeng.",
-    icon: "📖",
-  },
-  {
-    href: "/fordeler",
-    title: "Fordelsprogrammer",
-    description:
-      "Trumf, OBOS, Usbl, Spenn, Norwegian Reward, Student og mer.",
-    icon: "🎁",
+    description: "Steg for steg om sparing, gjeld og bolig.",
   },
 ];
 
@@ -49,30 +27,17 @@ export function QuickPaths() {
   return (
     <section>
       <h2 className="text-2xl font-bold text-stone-900">Hvor vil du starte?</h2>
-      <p className="mt-2 max-w-2xl text-stone-600">
-        Velg det som passer situasjonen din nå. Du kan alltid hoppe videre til
-        flere verktøy, tilbud eller profiler senere.
-      </p>
-
-      <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-5 grid gap-3 sm:grid-cols-2">
         {paths.map((path) => (
           <Link
             key={path.href}
             href={path.href}
-            className="group rounded-2xl border border-stone-200 bg-white p-5 shadow-sm transition-all hover:border-orange-200 hover:shadow-md"
+            className="group rounded-xl border border-stone-200 bg-white px-5 py-4 transition-colors hover:border-orange-300"
           >
-            <span className="text-2xl" aria-hidden="true">
-              {path.icon}
-            </span>
-            <h3 className="mt-3 text-lg font-semibold text-stone-900 group-hover:text-orange-700">
+            <h3 className="text-base font-semibold text-stone-900 group-hover:text-orange-700">
               {path.title}
             </h3>
-            <p className="mt-2 text-sm leading-relaxed text-stone-600">
-              {path.description}
-            </p>
-            <span className="mt-4 inline-block text-sm font-semibold text-orange-600 group-hover:text-orange-700">
-              Gå dit →
-            </span>
+            <p className="mt-1 text-sm text-stone-600">{path.description}</p>
           </Link>
         ))}
       </div>

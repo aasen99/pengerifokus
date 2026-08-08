@@ -11,8 +11,7 @@ export function FeaturedTools() {
         <div>
           <h2 className="text-2xl font-bold text-stone-900">Populære verktøy</h2>
           <p className="mt-2 max-w-2xl text-stone-600">
-            Kalkulatorer og tester som hjelper deg å ta konkrete valg, fra bolig
-            og gjeld til bonuspoeng og økonomisk helse.
+            Kalkulatorer for bolig, sparing, gjeld og bonuspoeng.
           </p>
         </div>
         <Link

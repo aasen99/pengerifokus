@@ -16,8 +16,7 @@ export function FeaturedGuides() {
         <div>
           <h2 className="text-2xl font-bold text-stone-900">Populære guider</h2>
           <p className="mt-2 max-w-2xl text-stone-600">
-            Steg-for-steg hjelp til sparing, gjeld, bolig og hverdagsøkonomi, uten
-            bankjargong.
+            Steg-for-steg hjelp til sparing, gjeld og bolig.
           </p>
         </div>
         <Link

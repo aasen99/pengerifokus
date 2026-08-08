@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import { PageHeader } from "@/components/ui/PageHeader";
 import { TilbudList } from "@/components/tilbud/TilbudList";
 import { HubCrossLinks } from "@/components/seo/HubCrossLinks";
 import { HubPageSeo } from "@/components/seo/HubPageSeo";
@@ -36,7 +35,7 @@ export default function TilbudPage() {
   const fordeler = getFordeler();
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
+    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-10">
       <HubPageSeo
         name={TILBUD_TITLE}
         description={pageDescription}
@@ -52,7 +51,12 @@ export default function TilbudPage() {
           }))}
       />
 
-      <PageHeader title={TILBUD_TITLE} description={TILBUD_INTRO} />
+      <header className="mb-6">
+        <h1 className="text-3xl font-bold tracking-tight text-stone-900 sm:text-4xl">
+          {TILBUD_TITLE}
+        </h1>
+        <p className="mt-2 max-w-2xl text-base text-stone-600">{TILBUD_INTRO}</p>
+      </header>
 
       <Suspense
         fallback={
