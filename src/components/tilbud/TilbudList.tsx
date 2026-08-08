@@ -441,7 +441,7 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
                       rel="noopener noreferrer"
                       className="mt-3 inline-block text-xs font-medium text-orange-600 hover:text-orange-700"
                     >
-                      {getTilbudSourceLinkLabel(group.offers[0].fordelSlug)}
+                      {getTilbudSourceLinkLabel(group.offers[0].fordelSlug, group.offers[0].sourceUrl)}
                     </a>
                   )}
                 </>
@@ -475,7 +475,7 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
                           rel="noopener noreferrer"
                           className="mt-2 inline-block text-xs font-medium text-orange-600 hover:text-orange-700"
                         >
-                          {getTilbudSourceLinkLabel(offer.fordelSlug)}
+                          {getTilbudSourceLinkLabel(offer.fordelSlug, offer.sourceUrl)}
                         </a>
                       )}
                     </li>

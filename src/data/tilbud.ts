@@ -12,7 +12,7 @@ import { studentTilbud } from "@/data/tilbud-student";
  * Oppdateres når tilbud verifiseres eller endres hos partner.
  */
 export const tilbudListMeta = {
-  lastUpdated: "2026-07-17",
+  lastUpdated: "2026-08-08",
   sources: [
     "OBOS medlemsfordeler",
     "offisielle Trumf Netthandel-sider",
@@ -20,6 +20,7 @@ export const tilbudListMeta = {
     "NAF medlemsfordeler",
     "Klarna cashback",
     "SAS EuroBonus restaurant- og partnerprogram",
+    "SAS Online Shopping (onlineshopping.flysas.com)",
     "Usbl medlemsfordeler",
     "offisielle studentrabatter hos partnere",
   ],

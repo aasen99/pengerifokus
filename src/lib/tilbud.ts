@@ -228,7 +228,16 @@ export function getFordelName(slug: string): string {
 }
 
 /** Tekst for kildelenke på tilbudskort */
-export function getTilbudSourceLinkLabel(fordelSlug: string): string {
+export function getTilbudSourceLinkLabel(
+  fordelSlug: string,
+  sourceUrl?: string,
+): string {
+  if (sourceUrl?.includes("onlineshopping.flysas.com")) {
+    return "Kilde hos SAS Online Shopping ↗";
+  }
+  if (sourceUrl?.includes("trumfnetthandel")) {
+    return "Kilde hos Trumf Netthandel ↗";
+  }
   if (fordelSlug === "trumf") return "Kilde hos Trumf Netthandel ↗";
   if (fordelSlug === "student") return "Se offisiell kilde ↗";
   return `Kilde hos ${getFordelName(fordelSlug)} ↗`;

@@ -5,8 +5,8 @@ export const eurobonus: FordelArticleContent = {
   title: "SAS EuroBonus",
   intro:
     "EuroBonus er SAS sitt lojalitetsprogram. Medlemskapet er gratis, men poeng er ikke penger på konto: verdi og regler avhenger av hvordan du tjener og bruker dem. Her får du en praktisk oversikt basert på offisielle kilder fra SAS, SkyTeam-partnere, Trumf og Widerøe, med særskilt oppmerksomhet på endringene etter SkyTeam-overgangen og Widerøe-bruddet.",
-  lastVerified: "10. juli 2026",
-  lastModifiedIso: "2026-07-10",
+  lastVerified: "8. august 2026",
+  lastModifiedIso: "2026-08-08",
   seoTitle: "SAS EuroBonus: poeng, nivåer, SkyTeam og verdi i praksis",
   seoDescription:
     "EuroBonus forklart med offisielle kilder: bonuspoeng vs. nivåpoeng, medlemsnivåer, SkyTeam, Trumf-overføring, Widerøe-endringen og når poeng faktisk gir mening for vanlige reisende.",
@@ -21,6 +21,8 @@ export const eurobonus: FordelArticleContent = {
     "EuroBonus utløp",
     "EuroBonus kredittkort",
     "EuroBonus verdi",
+    "SAS Online Shopping",
+    "EuroBonus netthandel",
   ],
   sections: [
     {
@@ -68,9 +70,24 @@ export const eurobonus: FordelArticleContent = {
         "SkyTeam: fra 1. september 2024 følger EuroBonus nye vilkår for allianseflyvninger. På kodedelingsflyvninger innen SkyTeam bestemmer markedsførende flyselskap opptjening (EuroBonus-vilkår). SAS partner-sider for blant annet KLM, Air France og Delta viser egne tabeller per bookingklasse",
         "EuroBonus-kort: SAS oppgir for eksempel 10–25 bonuspoeng per 100 kr avhengig av kort, pluss velkomstbonuser og i noen tilfeller nivåpoeng (SAS betalingskort-side). Års- eller månedsgebyr kommer i tillegg",
         "Trumf: 1 kr Trumf-bonus = 10 EuroBonus-poeng ved engangsoverføring, eller 13,5 poeng ved automatisk overføring (Trumf)",
+        "SAS Online Shopping: poeng hos nettbutikker via onlineshopping.flysas.com. Du må starte handelen via portalen, på samme måte som Trumf Netthandel. Satser varierer per butikk og kan ha midlertidige kampanjer",
         "Hotell og andre partnere: satser varierer. SAS oppgir for eksempel 70 bonuspoeng og 35 nivåpoeng per 100 kr på utvalgte Scandic-bestillinger. Sjekk partnerens side før kjøp",
       ],
-      tip: "Vurdering: Kredittkort og Trumf-overføring kan gi poeng uten flyreise, men gebyrer og alternativkostnad (bankuttak fra Trumf) bør regnes inn før du maksimerer.",
+      tip: "Vurdering: Kredittkort, Trumf-overføring og Online Shopping kan gi poeng uten flyreise, men gebyrer, alternativkostnad og krav om å gå via portalen bør regnes inn før du maksimerer.",
+    },
+    {
+      heading: "SAS Online Shopping",
+      paragraphs: [
+        "SAS Online Shopping er EuroBonus sin netthandelsportal. Du logger inn, velger butikk i portalen og handler derfra. Poengene krediteres EuroBonus-kontoen når kjøpet er godkjent hos partneren.",
+        "Portalen fungerer i praksis som Trumf Netthandel: går du direkte til butikkens egen nettside utenom portalen, får du normalt ikke poengene. Aktuelle butikker og satser finnes på onlineshopping.flysas.com.",
+      ],
+      bullets: [
+        "Start alltid via SAS Online Shopping før du legger varer i handlekurven",
+        "Logg inn med EuroBonus-kontoen din",
+        "Satser oppgis typisk som poeng per 100 kr, eller fast poengsum ved abonnement og tjenester",
+        "Kampanjer kan gi ekstra eller doble poeng midlertidig",
+      ],
+      tip: "Vurdering: Online Shopping er mest verdifullt på kjøp du uansett skulle gjort. Sammenlign poengverdien med Trumf Netthandel eller vanlig cashback før du velger portal.",
     },
     {
       heading: "Widerøe, Spenn og andre programmer",
@@ -150,6 +167,11 @@ export const eurobonus: FordelArticleContent = {
         "Nei. SAS oppgir at partnerskapet med Widerøe ble avsluttet 15. oktober 2025, og at det fra 16. oktober 2025 ikke gis EuroBonus-poeng eller -fordeler på Widerøe-flyvninger. Widerøe kobler kommersielle flyvninger til Norwegian Reward og Spenn.",
     },
     {
+      question: "Hvordan tjener jeg EuroBonus via netthandel?",
+      answer:
+        "Via SAS Online Shopping (onlineshopping.flysas.com). Du må starte handelen via portalen og være innlogget med EuroBonus. Går du direkte til butikken utenom portalen, får du normalt ikke poengene.",
+    },
+    {
       question: "Kan jeg overføre Trumf-bonus til EuroBonus?",
       answer:
         "Ja. Trumf oppgir 1 kr = 10 EuroBonus-poeng ved engangsoverføring, eller 13,5 poeng ved automatisk overføring. Sammenlign med bankuttak før du overfører.",
@@ -204,6 +226,10 @@ export const eurobonus: FordelArticleContent = {
       url: "https://www.sas.no/eurobonus/partnere/flyselskaper/klm",
     },
     {
+      label: "SAS Online Shopping",
+      url: "https://onlineshopping.flysas.com/nb-NO/",
+    },
+    {
       label: "Trumf: overføring til EuroBonus",
       url: "https://www.trumf.no/fordeler/sas-eurobonus",
     },
@@ -213,6 +239,7 @@ export const eurobonus: FordelArticleContent = {
     },
   ],
   relatedLinks: [
+    { label: "EuroBonus-tilbud", href: "/tilbud?program=eurobonus" },
     { label: "Norwegian Reward", href: "/fordeler/norwegian-reward" },
     { label: "Strawberry-medlemskap", href: "/fordeler/strawberry" },
     { label: "Trumf: bonus og uttak", href: "/fordeler/trumf" },

@@ -12,7 +12,7 @@ const klarnaCashback: Array<{ partner: string; rate: string }> = [
   { partner: "Lyko", rate: "5,5" },
   { partner: "ginatricot.com", rate: "5,5" },
   { partner: "CS MEGASTORE", rate: "3" },
-  { partner: "Zooplus", rate: "7" },
+  { partner: "Zooplus", rate: "4" },
   { partner: "Autodoc", rate: "5,5" },
   { partner: "Floyd", rate: "5,5" },
   { partner: "Adidas", rate: "5" },
@@ -148,5 +148,5 @@ export const klarnaTilbud: Tilbud[] = klarnaCashback.map((item, index) => ({
   category: "Cashback",
   terms: klarnaTerms,
   createdAt: "2026-06-11",
-  updatedAt: "2026-06-11",
+  updatedAt: "2026-08-08",
 }));
