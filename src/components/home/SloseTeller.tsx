@@ -20,17 +20,18 @@ export function SloseTeller({
 }: {
   scenario?: SloseScenario;
 }) {
-  const [value, setValue] = useState(() => spentSoFar(scenario));
+  const [value, setValue] = useState<number | null>(null);
   const rate = kronerPerSecond(scenario);
 
-  const onTick = useEffectEvent((nowMs: number) => {
-    setValue(spentSoFar(scenario, new Date(nowMs)));
+  const onTick = useEffectEvent(() => {
+    setValue(spentSoFar(scenario, new Date()));
   });
 
   useEffect(() => {
+    onTick();
     let frame = 0;
-    const loop = (now: number) => {
-      onTick(now);
+    const loop = () => {
+      onTick();
       frame = window.requestAnimationFrame(loop);
     };
     frame = window.requestAnimationFrame(loop);
@@ -57,7 +58,7 @@ export function SloseTeller({
           style={{ fontSize: "clamp(1.75rem, 6vw, 3.25rem)", lineHeight: 1.1 }}
           aria-live="polite"
         >
-          {formatKr(value)}
+          {value === null ? "—" : formatKr(value)}
           <span className="ml-2 text-[0.45em] font-medium text-stone-400">
             kr
           </span>
@@ -65,22 +66,17 @@ export function SloseTeller({
 
         <p className="mt-4 text-sm text-stone-300">
           Ca.{" "}
-          <span className="font-semibold text-white">
-            {formatKr(rate)} kr
-          </span>{" "}
-          i sekundet —{" "}
-          {scenario.people.toLocaleString("nb-NO")} voksne ×{" "}
-          {scenario.unitsPerPersonPerWeek} {scenario.unitLabel}/uke ×{" "}
-          {scenario.kronerPerUnit} kr
+          <span className="font-semibold text-white">{formatKr(rate)} kr</span>{" "}
+          i sekundet
         </p>
 
-        <p className="mt-5 max-w-2xl text-xs leading-relaxed text-stone-400">
+        <p className="mt-5 max-w-xl text-xs leading-relaxed text-stone-400">
           {scenario.footnote}{" "}
           <Link
             href="/verktoy/sparekalkulator"
             className="underline decoration-stone-600 underline-offset-2 hover:text-stone-200"
           >
-            Hva skjer hvis du sparer den ene koppen?
+            Hva hvis du sparer den ene koppen?
           </Link>
         </p>
       </div>

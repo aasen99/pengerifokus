@@ -30,8 +30,7 @@ export const KAFFE_SLOSE: SloseScenario = {
   unitsPerPersonPerWeek: 1,
   kronerPerUnit: 50,
   unitLabel: "kopp",
-  footnote:
-    "Illustrasjon: 4,5 mill. voksne × 1 kjøpekaffe/uke × 50 kr. Snittet er inspirert av Kaffeundersøkelsen (ca. én kopp ukentlig på kafé/kiosk). Ikke offisiell statistikk.",
+  footnote: "Illustrasjon: 4,5 mill. × 1 kopp/uke × 50 kr.",
 };
 
 export function annualSlose(scenario: SloseScenario): number {
