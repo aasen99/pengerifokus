@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useMemo, useState } from "react";
 import { QuoteDisplay } from "@/components/sitater/QuoteDisplay";
 import { filterSitater, type SitatEntry } from "@/lib/sitater";
@@ -19,8 +18,8 @@ export function SitatList({ entries }: SitatListProps) {
   );
 
   return (
-    <div className="space-y-6">
-      <div className="rounded-2xl border border-stone-200 bg-white p-4 shadow-sm sm:p-5">
+    <div className="space-y-5">
+      <div className="rounded-xl border border-stone-200 bg-white p-3.5">
         <label htmlFor="sitater-search" className="sr-only">
           Søk i sitater
         </label>
@@ -40,33 +39,25 @@ export function SitatList({ entries }: SitatListProps) {
       </p>
 
       {filtered.length > 0 ? (
-        <div className="grid gap-4 lg:grid-cols-2">
+        <div className="grid gap-3 lg:grid-cols-2">
           {filtered.map((entry) => (
             <QuoteDisplay
               key={entry.id}
               quote={entry.quote}
               attribution={entry.profileName}
               profileHref={`/formuesbyggere/${entry.profileSlug}`}
+              compact
             />
           ))}
         </div>
       ) : (
-        <div className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 px-6 py-12 text-center">
+        <div className="rounded-xl border border-dashed border-stone-300 bg-stone-50 px-6 py-10 text-center">
           <p className="font-medium text-stone-900">Ingen sitater funnet</p>
           <p className="mt-2 text-sm text-stone-600">
             Prøv et annet søkeord.
           </p>
         </div>
       )}
-
-      <p className="text-sm text-stone-600">
-        <Link
-          href="/ordbok"
-          className="font-medium text-orange-600 hover:text-orange-700"
-        >
-          ← Tilbake til ordboken
-        </Link>
-      </p>
     </div>
   );
 }

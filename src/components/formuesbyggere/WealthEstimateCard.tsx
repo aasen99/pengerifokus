@@ -25,11 +25,11 @@ export function WealthEstimateCard({
   }
 
   return (
-    <div className="mt-6 rounded-2xl border border-stone-200 bg-stone-50 px-5 py-4">
+    <div className="mt-6 rounded-xl border border-stone-200 bg-stone-50 px-4 py-3">
       <p className="text-xs font-semibold uppercase tracking-wider text-stone-500">
         Omtrentlig formue
       </p>
-      <p className="mt-1 text-2xl font-bold tracking-tight text-stone-900">
+      <p className="mt-1 text-xl font-bold tracking-tight text-stone-900">
         {formatted}
       </p>
       {sourceLabel && (

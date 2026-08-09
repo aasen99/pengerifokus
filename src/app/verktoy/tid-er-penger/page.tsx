@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { ToolPageHeader } from "@/components/verktoy/ToolPageHeader";
 import { TidErPengerKalkulator } from "@/components/verktoy/TidErPengerKalkulator";
 import { ToolRelatedGuides } from "@/components/verktoy/ToolRelatedGuides";
 import { ToolPageSeo } from "@/components/seo/ToolPageSeo";
@@ -23,28 +23,16 @@ export const metadata: Metadata = createPageMetadata({
 
 export default function TidErPengerPage() {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
+    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-10">
       <ToolPageSeo
         name="Tid er penger-kalkulator"
         description={toolDescription}
         path="/verktoy/tid-er-penger"
       />
-      <Link
-        href="/verktoy"
-        className="text-sm font-medium text-orange-600 hover:text-orange-700"
-      >
-        ← Tilbake til verktøy
-      </Link>
-
-      <header className="mt-4 mb-10">
-        <h1 className="text-3xl font-bold tracking-tight text-stone-900 sm:text-4xl">
-          Tid er penger-kalkulator
-        </h1>
-        <p className="mt-3 max-w-2xl text-lg text-stone-600">
-          Lønn delt på arbeidstid høres bra ut, men hva tjener du egentlig per
-          time når du regner med pendling og det jobben koster deg?
-        </p>
-      </header>
+      <ToolPageHeader
+        title="Tid er penger-kalkulator"
+        description="Lønn delt på arbeidstid høres bra ut, men hva tjener du egentlig per time når du regner med pendling og det jobben koster deg?"
+      />
 
       <TidErPengerKalkulator />
 

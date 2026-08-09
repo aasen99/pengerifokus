@@ -69,7 +69,7 @@ export default function VerktoyPage() {
   const published = tools.filter((tool) => tool.status === "published");
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
+    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-10">
       <HubPageSeo
         name="Verktøy"
         description={pageDescription}
@@ -86,11 +86,13 @@ export default function VerktoyPage() {
         description="Kalkulatorer og verktøy som hjelper deg å regne, planlegge og sammenligne, uten regneark."
       />
 
-      <div className="space-y-12">
+      <div className="space-y-8">
         {grouped.map(({ category, tools: categoryTools }) => (
           <section key={category}>
-            <h2 className="text-lg font-semibold text-stone-900">{category}</h2>
-            <div className="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <h2 className="text-sm font-semibold uppercase tracking-wider text-stone-500">
+              {category}
+            </h2>
+            <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {categoryTools.map((tool) => {
                 const isComingSoon = tool.status === "coming-soon";
                 return (
@@ -99,7 +101,7 @@ export default function VerktoyPage() {
                     title={tool.name}
                     description={tool.description}
                     badge={isComingSoon ? "Kommer snart" : undefined}
-                    actionLabel={isComingSoon ? "Kommer snart" : "Åpne verktøy"}
+                    actionLabel={isComingSoon ? "Kommer snart" : "Åpne"}
                     disabled={isComingSoon}
                     href={isComingSoon ? undefined : `/verktoy/${tool.slug}`}
                   />

@@ -130,7 +130,7 @@ export function BonusPoengKalkulator() {
       />
 
       {step === 0 && (
-        <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+        <section className="rounded-xl border border-stone-200 bg-white p-4">
           <h2 className="text-lg font-semibold text-stone-900">
             Steg 1: Hva har poengene kostet?
           </h2>
@@ -321,7 +321,7 @@ export function BonusPoengKalkulator() {
       )}
 
       {step === 1 && (
-        <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+        <section className="rounded-xl border border-stone-200 bg-white p-4">
           <h2 className="text-lg font-semibold text-stone-900">
             Steg 2: Hva er dealen verdt?
           </h2>

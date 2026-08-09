@@ -8,10 +8,8 @@ interface ButtonProps {
 }
 
 const variants = {
-  primary:
-    "bg-stone-800 text-white hover:bg-stone-900 shadow-sm shadow-stone-900/10",
-  secondary:
-    "bg-orange-600 text-white hover:bg-orange-700 shadow-sm shadow-orange-900/10",
+  primary: "bg-stone-800 text-white hover:bg-stone-900",
+  secondary: "bg-orange-600 text-white hover:bg-orange-700",
   outline:
     "border border-stone-200 bg-white text-stone-700 hover:border-orange-300 hover:text-orange-700",
 };

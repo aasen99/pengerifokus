@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { ToolPageHeader } from "@/components/verktoy/ToolPageHeader";
 import { BsuKalkulator } from "@/components/verktoy/BsuKalkulator";
 import { ToolRelatedGuides } from "@/components/verktoy/ToolRelatedGuides";
 import { ToolPageSeo } from "@/components/seo/ToolPageSeo";
@@ -17,28 +17,16 @@ export const metadata: Metadata = createPageMetadata({
 
 export default function BsuKalkulatorPage() {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
+    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-10">
       <ToolPageSeo
         name="BSU-kalkulator"
         description={toolDescription}
         path="/verktoy/bsu-kalkulator"
       />
-      <Link
-        href="/verktoy"
-        className="text-sm font-medium text-orange-600 hover:text-orange-700"
-      >
-        ← Tilbake til verktøy
-      </Link>
-
-      <header className="mt-4 mb-10">
-        <h1 className="text-3xl font-bold tracking-tight text-stone-900 sm:text-4xl">
-          BSU-kalkulator
-        </h1>
-        <p className="mt-3 max-w-2xl text-lg text-stone-600">
-          Se hvor mye du kan spare med BSU, inkludert skattefradraget på 10 % av
-          årlige innskudd.
-        </p>
-      </header>
+      <ToolPageHeader
+        title="BSU-kalkulator"
+        description="Se hvor mye du kan spare med BSU, inkludert skattefradraget på 10 % av årlige innskudd."
+      />
 
       <BsuKalkulator />
 

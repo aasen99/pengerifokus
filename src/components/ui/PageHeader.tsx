@@ -5,11 +5,11 @@ interface PageHeaderProps {
 
 export function PageHeader({ title, description }: PageHeaderProps) {
   return (
-    <header className="mb-10">
-      <h1 className="text-3xl font-bold tracking-tight text-stone-900 sm:text-4xl">
+    <header className="mb-6">
+      <h1 className="text-2xl font-bold tracking-tight text-stone-900 sm:text-3xl">
         {title}
       </h1>
-      <p className="mt-3 max-w-2xl text-lg text-stone-600">{description}</p>
+      <p className="mt-2 max-w-2xl text-base text-stone-600">{description}</p>
     </header>
   );
 }

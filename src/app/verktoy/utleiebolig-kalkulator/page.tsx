@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ToolPageHeader } from "@/components/verktoy/ToolPageHeader";
 import { UtleieboligKalkulator } from "@/components/verktoy/UtleieboligKalkulator";
 import { ToolRelatedGuides } from "@/components/verktoy/ToolRelatedGuides";
 import { ToolPageSeo } from "@/components/seo/ToolPageSeo";
@@ -24,34 +25,20 @@ export const metadata: Metadata = createPageMetadata({
 
 export default function UtleieboligKalkulatorPage() {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
+    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-10">
       <ToolPageSeo
         name="Utleiebolig-kalkulator"
         description={toolDescription}
         path="/verktoy/utleiebolig-kalkulator"
       />
-      <Link
-        href="/verktoy"
-        className="text-sm font-medium text-orange-600 hover:text-orange-700"
-      >
-        ← Tilbake til verktøy
-      </Link>
-
-      <header className="mt-4 mb-10">
-        <h1 className="text-3xl font-bold tracking-tight text-stone-900 sm:text-4xl">
-          Utleiebolig-kalkulator
-        </h1>
-        <p className="mt-3 max-w-2xl text-lg text-stone-600">
-          Se om leieinntekten dekker lån og driftskostnader, hva du tjener på
-          egenkapitalen, og få en vurdering med fordeler, ulemper og risiko.
-          Bolig vs. fond viser ofte sterk effekt fordi du er gearet med lån —
-          både oppside og nedsiden forsterkes.
-        </p>
-      </header>
+      <ToolPageHeader
+        title="Utleiebolig-kalkulator"
+        description="Se om leieinntekten dekker lån og driftskostnader, hva du tjener på egenkapitalen, og få en vurdering med fordeler, ulemper og risiko. Bolig vs. fond viser ofte sterk effekt fordi du er gearet med lån — både oppside og nedsiden forsterkes."
+      />
 
       <UtleieboligKalkulator />
 
-      <section className="mt-10 rounded-2xl border border-stone-200 bg-stone-50 p-6">
+      <section className="mt-10 rounded-xl border border-stone-200 bg-stone-50 p-4">
         <h2 className="text-lg font-semibold text-stone-900">Relaterte verktøy</h2>
         <ul className="mt-3 space-y-2 text-sm">
           <li>

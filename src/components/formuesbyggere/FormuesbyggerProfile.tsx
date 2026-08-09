@@ -8,6 +8,7 @@ import {
 import type { Formuesbygger } from "@/types/formuesbygger";
 import type { FormuesbyggerArticle } from "@/types/formuesbygger";
 import { Tag } from "@/components/ui/Tag";
+import { RelatedLinks } from "@/components/ui/RelatedLinks";
 import { QuoteDisplay } from "@/components/sitater/QuoteDisplay";
 import { WealthEstimateCard } from "@/components/formuesbyggere/WealthEstimateCard";
 import { FormuesbyggerLifecycle } from "@/components/formuesbyggere/FormuesbyggerLifecycle";
@@ -33,31 +34,31 @@ export function FormuesbyggerProfile({
         ← Tilbake til {FORMUESBYGGERE_TITLE.toLowerCase()}
       </Link>
 
-      <header className="mt-6 border-b border-stone-200 pb-8">
-        <div className="mb-3 flex flex-wrap gap-2">
+      <header className="mt-3 border-b border-stone-200 pb-6">
+        <div className="mb-2 flex flex-wrap gap-1.5">
           <Tag variant="accent">{REGION_LABELS[profile.region]}</Tag>
           <Tag>{INDUSTRY_LABELS[profile.industry]}</Tag>
           <Tag variant="muted">{BUILD_TYPE_LABELS[profile.buildType]}</Tag>
         </div>
         <p className="text-sm font-medium text-orange-700">{article.seoAngle}</p>
-        <h1 className="mt-2 text-3xl font-bold tracking-tight text-stone-900 sm:text-4xl">
+        <h1 className="mt-1 text-2xl font-bold tracking-tight text-stone-900 sm:text-3xl">
           {profile.name}
         </h1>
         <FormuesbyggerLifecycle profile={profile} className="mt-2" />
-        <p className="mt-4 max-w-2xl text-lg leading-relaxed text-stone-600">
+        <p className="mt-2 max-w-2xl text-base leading-relaxed text-stone-600">
           {article.intro}
         </p>
-        <p className="mt-3 text-sm text-stone-500">
+        <p className="mt-2 text-sm text-stone-500">
           {article.readTimeMinutes} min lesetid
         </p>
       </header>
 
       <WealthEstimateCard profile={profile} />
 
-      <div className="mt-10 space-y-10">
+      <div className="mt-8 space-y-8">
         {article.sections.map((section) => (
           <section key={section.heading}>
-            <h2 className="text-xl font-semibold text-stone-900">
+            <h2 className="text-lg font-semibold text-stone-900">
               {section.heading}
             </h2>
             {section.paragraphs?.map((paragraph) => (
@@ -92,9 +93,9 @@ export function FormuesbyggerProfile({
       </div>
 
       {quotes && quotes.length > 0 && (
-        <section className="mt-12">
+        <section className="mt-10">
           <div className="flex flex-wrap items-end justify-between gap-3">
-            <h2 className="text-xl font-semibold text-stone-900">
+            <h2 className="text-lg font-semibold text-stone-900">
               Sitater og mottoer
             </h2>
             <Link
@@ -104,25 +105,23 @@ export function FormuesbyggerProfile({
               Alle sitater →
             </Link>
           </div>
-          <div className="mt-5 space-y-5">
+          <div className="mt-4 space-y-3">
             {quotes.map((quote) => (
-              <QuoteDisplay key={quote.text} quote={quote} />
+              <QuoteDisplay key={quote.text} quote={quote} compact />
             ))}
           </div>
         </section>
       )}
 
-      <section className="mt-12 rounded-2xl border border-orange-200 bg-orange-50 p-6">
-        <h2 className="text-lg font-semibold text-stone-900">
-          Hva kan vi lære?
-        </h2>
-        <ul className="mt-4 space-y-3">
+      <section className="mt-10 rounded-xl border border-orange-200 bg-orange-50 px-4 py-3">
+        <h2 className="text-sm font-semibold text-stone-900">Hva kan vi lære?</h2>
+        <ul className="mt-3 space-y-2">
           {article.lessons.map((lesson) => (
             <li
               key={lesson}
               className="flex gap-3 text-sm leading-relaxed text-stone-700"
             >
-              <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-orange-500" />
+              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-orange-500" />
               <span>{lesson}</span>
             </li>
           ))}
@@ -130,21 +129,7 @@ export function FormuesbyggerProfile({
       </section>
 
       {article.relatedLinks && article.relatedLinks.length > 0 && (
-        <aside className="mt-10 rounded-2xl border border-stone-200 bg-stone-50 p-6">
-          <h2 className="font-semibold text-stone-900">Les også</h2>
-          <ul className="mt-3 space-y-2">
-            {article.relatedLinks.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className="text-sm font-medium text-orange-600 hover:text-orange-700"
-                >
-                  {link.label} →
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </aside>
+        <RelatedLinks links={article.relatedLinks} />
       )}
     </article>
   );

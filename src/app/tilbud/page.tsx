@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { TilbudList } from "@/components/tilbud/TilbudList";
+import { PageHeader } from "@/components/ui/PageHeader";
 import { HubCrossLinks } from "@/components/seo/HubCrossLinks";
 import { HubPageSeo } from "@/components/seo/HubPageSeo";
 import { TILBUD_INTRO, TILBUD_TITLE } from "@/data/content-labels";
@@ -51,16 +52,11 @@ export default function TilbudPage() {
           }))}
       />
 
-      <header className="mb-6">
-        <h1 className="text-3xl font-bold tracking-tight text-stone-900 sm:text-4xl">
-          {TILBUD_TITLE}
-        </h1>
-        <p className="mt-2 max-w-2xl text-base text-stone-600">{TILBUD_INTRO}</p>
-      </header>
+      <PageHeader title={TILBUD_TITLE} description={TILBUD_INTRO} />
 
       <Suspense
         fallback={
-          <div className="rounded-2xl border border-stone-200 bg-white p-6 text-sm text-stone-600">
+          <div className="rounded-xl border border-stone-200 bg-white p-4 text-sm text-stone-600">
             Laster tilbud...
           </div>
         }

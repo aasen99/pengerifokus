@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { ToolPageHeader } from "@/components/verktoy/ToolPageHeader";
 import { ProsentKalkulator } from "@/components/verktoy/ProsentKalkulator";
 import {
   ProsentKalkulatorSeoContent,
@@ -34,7 +34,7 @@ export const metadata: Metadata = createPageMetadata({
 
 export default function ProsentkalkulatorPage() {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
+    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-10">
       <ToolPageSeo
         name="Prosentkalkulator"
         description={toolDescription}
@@ -63,23 +63,10 @@ export default function ProsentkalkulatorPage() {
           ],
         })}
       />
-
-      <Link
-        href="/verktoy"
-        className="text-sm font-medium text-orange-600 hover:text-orange-700"
-      >
-        ← Tilbake til verktøy
-      </Link>
-
-      <header className="mt-4 mb-10">
-        <h1 className="text-3xl font-bold tracking-tight text-stone-900 sm:text-4xl">
-          Prosentkalkulator
-        </h1>
-        <p className="mt-3 max-w-3xl text-lg text-stone-600">
-          Regn ut prosentandel, prosentøkning, prosentnedgang og prosentendring,
-          med formelen rett under svaret.
-        </p>
-      </header>
+      <ToolPageHeader
+        title="Prosentkalkulator"
+        description="Regn ut prosentandel, prosentøkning, prosentnedgang og prosentendring, med formelen rett under svaret."
+      />
 
       <ProsentKalkulator />
 

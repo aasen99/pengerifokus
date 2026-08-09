@@ -71,8 +71,8 @@ export function OrdbokList({ entries }: OrdbokListProps) {
   const hasFilters = query.trim().length > 0 || category !== null;
 
   return (
-    <div className="space-y-6">
-      <div className="rounded-2xl border border-stone-200 bg-white p-4 shadow-sm sm:p-5">
+    <div className="space-y-5">
+      <div className="rounded-xl border border-stone-200 bg-white p-3.5">
         <label htmlFor="ordbok-search" className="sr-only">
           Søk i ordboken
         </label>
@@ -105,16 +105,12 @@ export function OrdbokList({ entries }: OrdbokListProps) {
             </button>
           )}
         </div>
-        <p className="mt-2 text-xs text-stone-500">
-          Tips: du kan søke på flere ord, f.eks. «effektiv rente» eller «bonus
-          trumf».
-        </p>
 
-        <div className="mt-4 flex flex-wrap gap-2">
+        <div className="mt-3 flex flex-wrap gap-1.5">
           <button
             type="button"
             onClick={() => setCategory(null)}
-            className={`rounded-full px-3 py-1.5 text-sm font-medium transition-colors ${
+            className={`rounded-full px-2.5 py-1 text-sm font-medium transition-colors ${
               category === null
                 ? "bg-stone-800 text-white"
                 : "bg-stone-100 text-stone-700 hover:bg-stone-200"
@@ -127,7 +123,7 @@ export function OrdbokList({ entries }: OrdbokListProps) {
               key={cat}
               type="button"
               onClick={() => setCategory(cat === category ? null : cat)}
-              className={`rounded-full px-3 py-1.5 text-sm font-medium transition-colors ${
+              className={`rounded-full px-2.5 py-1 text-sm font-medium transition-colors ${
                 category === cat
                   ? "bg-orange-600 text-white"
                   : "bg-stone-100 text-stone-700 hover:bg-stone-200"
@@ -145,35 +141,25 @@ export function OrdbokList({ entries }: OrdbokListProps) {
       </p>
 
       {filtered.length > 0 ? (
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((entry) => (
             <Link
               key={entry.id}
               href={`/ordbok/${entry.slug}`}
-              className="group rounded-2xl border border-stone-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+              className="group rounded-xl border border-stone-200 bg-white p-3.5 transition-colors hover:border-orange-300"
             >
-              <div className="mb-2 flex flex-wrap gap-2">
-                <Tag>{entry.category}</Tag>
-                {entry.tags?.slice(0, 2).map((tag) => (
-                  <Tag key={tag} variant="muted">
-                    {tag}
-                  </Tag>
-                ))}
-              </div>
-              <h2 className="text-lg font-semibold text-stone-900 group-hover:text-orange-700">
+              <Tag>{entry.category}</Tag>
+              <h2 className="mt-2 text-base font-semibold text-stone-900 group-hover:text-orange-700">
                 {entry.term}
               </h2>
-              <p className="mt-2 text-sm leading-relaxed text-stone-600">
+              <p className="mt-1 line-clamp-2 text-sm leading-snug text-stone-600">
                 {entry.definition}
               </p>
-              <span className="mt-4 inline-block text-sm font-semibold text-orange-600 group-hover:text-orange-700">
-                Les mer →
-              </span>
             </Link>
           ))}
         </div>
       ) : (
-        <div className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 px-6 py-12 text-center">
+        <div className="rounded-xl border border-dashed border-stone-300 bg-stone-50 px-6 py-10 text-center">
           <p className="font-medium text-stone-900">Ingen treff</p>
           <p className="mt-2 text-sm text-stone-600">
             Prøv et annet søkeord, eller fjern kategorifilteret.

@@ -43,7 +43,7 @@ export function FeriepengeKalkulator() {
 
   return (
     <div className="grid gap-8 lg:grid-cols-2">
-      <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+      <section className="rounded-xl border border-stone-200 bg-white p-4">
         <h2 className="text-lg font-semibold text-stone-900">
           Feriepengegrunnlag
         </h2>
@@ -167,7 +167,7 @@ export function FeriepengeKalkulator() {
       <section className="space-y-4">
         {result ? (
           <>
-            <div className="rounded-2xl border border-orange-200 bg-orange-50 p-6">
+            <div className="rounded-xl border border-orange-200 bg-orange-50 p-4">
               <h2 className="text-lg font-semibold text-stone-900">
                 Feriepenger
               </h2>
@@ -182,7 +182,7 @@ export function FeriepengeKalkulator() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+            <div className="rounded-xl border border-stone-200 bg-white p-4">
               <h2 className="text-lg font-semibold text-stone-900">Detaljer</h2>
               <dl className="mt-5 space-y-4">
                 <div className="flex items-baseline justify-between gap-4">
@@ -210,7 +210,7 @@ export function FeriepengeKalkulator() {
               </dl>
             </div>
 
-            <div className="rounded-2xl border border-stone-200 bg-white p-6 text-sm leading-relaxed text-stone-600 shadow-sm">
+            <div className="rounded-xl border border-stone-200 bg-white p-4 text-sm leading-relaxed text-stone-600 shadow-sm">
               <p>
                 Feriepenger erstatter vanlig lønn mens du er i ferie, de er ikke
                 «ekstra» på toppen. Utbetales vanligvis i juni/juli basert på
@@ -225,7 +225,7 @@ export function FeriepengeKalkulator() {
             </div>
           </>
         ) : (
-          <div className="rounded-2xl border border-stone-200 bg-white p-6 text-sm text-stone-600 shadow-sm">
+          <div className="rounded-xl border border-stone-200 bg-white p-4 text-sm text-stone-600 shadow-sm">
             Fyll inn gyldige verdier for å se resultatet.
           </div>
         )}

@@ -3,42 +3,34 @@ import { getFeaturedVerktoy } from "@/lib/content";
 import { Tag } from "@/components/ui/Tag";
 
 export function FeaturedTools() {
-  const tools = getFeaturedVerktoy();
+  const tools = getFeaturedVerktoy().slice(0, 2);
 
   return (
     <section>
       <div className="flex flex-wrap items-end justify-between gap-3">
-        <div>
-          <h2 className="text-2xl font-bold text-stone-900">Populære verktøy</h2>
-          <p className="mt-2 max-w-2xl text-stone-600">
-            Kalkulatorer for bolig, sparing, gjeld og bonuspoeng.
-          </p>
-        </div>
+        <h2 className="text-xl font-bold text-stone-900">Populære verktøy</h2>
         <Link
           href="/verktoy"
           className="text-sm font-semibold text-orange-600 hover:text-orange-700"
         >
-          Se alle verktøy →
+          Alle verktøy →
         </Link>
       </div>
 
-      <div className="mt-6 grid gap-4 sm:grid-cols-2">
+      <div className="mt-4 grid gap-3 sm:grid-cols-2">
         {tools.map((tool) => (
           <Link
             key={tool.id}
             href={`/verktoy/${tool.slug}`}
-            className="group rounded-2xl border border-stone-200 bg-white p-5 shadow-sm transition-all hover:border-orange-200 hover:shadow-md"
+            className="group rounded-xl border border-stone-200 bg-white px-5 py-4 transition-colors hover:border-orange-300"
           >
             <Tag variant="accent">{tool.category}</Tag>
-            <h3 className="mt-3 text-lg font-semibold text-stone-900 group-hover:text-orange-700">
+            <h3 className="mt-2 text-base font-semibold text-stone-900 group-hover:text-orange-700">
               {tool.name}
             </h3>
-            <p className="mt-2 text-sm leading-relaxed text-stone-600">
+            <p className="mt-1 line-clamp-2 text-sm text-stone-600">
               {tool.description}
             </p>
-            <span className="mt-4 inline-block text-sm font-semibold text-orange-600 group-hover:text-orange-700">
-              Åpne verktøy →
-            </span>
           </Link>
         ))}
       </div>

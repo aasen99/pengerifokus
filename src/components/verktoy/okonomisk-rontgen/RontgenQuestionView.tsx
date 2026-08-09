@@ -40,7 +40,7 @@ export function RontgenQuestionView({
         </div>
       </div>
 
-      <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm sm:p-8">
+      <div className="rounded-xl border border-stone-200 bg-white p-4 sm:p-8">
         <h2 className="text-xl font-semibold leading-snug text-stone-900 sm:text-2xl">
           {question.text}
         </h2>

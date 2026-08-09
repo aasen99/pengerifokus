@@ -32,9 +32,9 @@ export const prosentKalkulatorFaq = faqItems;
 
 export function ProsentKalkulatorSeoContent() {
   return (
-    <div className="mt-14 space-y-12">
+    <div className="mt-10 space-y-8">
       <section>
-        <h2 className="text-2xl font-bold tracking-tight text-stone-900">
+        <h2 className="text-lg font-semibold tracking-tight text-stone-900">
           Hvordan bruke prosentkalkulatoren
         </h2>
         <p className="mt-3 max-w-3xl text-stone-600 leading-relaxed">
@@ -67,7 +67,7 @@ export function ProsentKalkulatorSeoContent() {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold tracking-tight text-stone-900">
+        <h2 className="text-lg font-semibold tracking-tight text-stone-900">
           Formler for prosentregning
         </h2>
         <p className="mt-3 max-w-3xl text-stone-600 leading-relaxed">
@@ -110,7 +110,7 @@ export function ProsentKalkulatorSeoContent() {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold tracking-tight text-stone-900">
+        <h2 className="text-lg font-semibold tracking-tight text-stone-900">
           Prosentøkning og prosentnedgang
         </h2>
         <p className="mt-3 max-w-3xl text-stone-600 leading-relaxed">
@@ -134,7 +134,7 @@ export function ProsentKalkulatorSeoContent() {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold tracking-tight text-stone-900">
+        <h2 className="text-lg font-semibold tracking-tight text-stone-900">
           Praktiske eksempler fra hverdagsøkonomien
         </h2>
         <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -168,7 +168,7 @@ export function ProsentKalkulatorSeoContent() {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold tracking-tight text-stone-900">
+        <h2 className="text-lg font-semibold tracking-tight text-stone-900">
           Mer om prosentkalkulatoren
         </h2>
         <ul className="mt-4 max-w-3xl list-disc space-y-2 pl-5 text-stone-600">
@@ -225,17 +225,14 @@ export function ProsentKalkulatorSeoContent() {
       </section>
 
       <section id="ofte-stilte-sporsmal">
-        <h2 className="text-2xl font-bold tracking-tight text-stone-900">
+        <h2 className="text-lg font-semibold tracking-tight text-stone-900">
           Ofte stilte spørsmål om prosentregning
         </h2>
-        <dl className="mt-5 space-y-4">
+        <dl className="mt-4 space-y-4">
           {faqItems.map((item) => (
-            <div
-              key={item.question}
-              className="rounded-xl border border-stone-200 bg-white px-5 py-4"
-            >
+            <div key={item.question}>
               <dt className="font-medium text-stone-900">{item.question}</dt>
-              <dd className="mt-2 text-sm leading-relaxed text-stone-600">
+              <dd className="mt-1.5 text-sm leading-relaxed text-stone-600">
                 {item.answer}
               </dd>
             </div>
@@ -256,10 +253,10 @@ function FormulaCard({
   example: string;
 }) {
   return (
-    <div className="rounded-xl border border-stone-200 bg-white p-5">
+    <div className="rounded-xl border border-stone-200 bg-white p-3.5">
       <h3 className="font-semibold text-stone-900">{title}</h3>
-      <p className="mt-2 font-mono text-sm text-orange-800">{formula}</p>
-      <p className="mt-2 text-sm text-stone-600">{example}</p>
+      <p className="mt-1.5 font-mono text-sm text-orange-800">{formula}</p>
+      <p className="mt-1.5 text-sm text-stone-600">{example}</p>
     </div>
   );
 }
@@ -276,9 +273,9 @@ function ExampleCard({
   hrefLabel?: string;
 }) {
   return (
-    <div className="rounded-xl border border-stone-200 bg-stone-50 p-5">
+    <div className="rounded-xl border border-stone-200 bg-stone-50 p-3.5">
       <h3 className="font-semibold text-stone-900">{title}</h3>
-      <p className="mt-2 text-sm leading-relaxed text-stone-600">{body}</p>
+      <p className="mt-1.5 text-sm leading-relaxed text-stone-600">{body}</p>
       {href && hrefLabel && (
         <Link
           href={href}

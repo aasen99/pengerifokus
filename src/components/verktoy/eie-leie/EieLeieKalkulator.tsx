@@ -230,7 +230,7 @@ export function EieLeieKalkulator() {
         />
       </div>
 
-      <section className="mt-6 rounded-2xl border border-stone-200 bg-white p-6 shadow-sm sm:p-8">
+      <section className="mt-6 rounded-xl border border-stone-200 bg-white p-4 sm:p-8">
         {step === 0 && (
           <div className="space-y-5">
             <h2 className="text-lg font-semibold text-stone-900">Tidshorisont</h2>

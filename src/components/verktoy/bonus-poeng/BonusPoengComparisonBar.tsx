@@ -54,7 +54,7 @@ export function BonusPoengComparisonBar({
   );
 
   return (
-    <div className="rounded-2xl border border-stone-200 bg-white p-5 shadow-sm">
+    <div className="rounded-xl border border-stone-200 bg-white p-4">
       <h3 className="font-semibold text-stone-900">Sammenligning per poeng</h3>
       <p className="mt-1 text-sm text-stone-600">
         Jo høyere innløsningsverdi er over kostpris og målverdi, jo bedre deal.

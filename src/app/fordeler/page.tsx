@@ -44,7 +44,7 @@ export default function FordelerPage() {
   const fordeler = getFordeler();
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
+    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-10">
       <HubPageSeo
         name={FORDELSPROGRAMMER_TITLE}
         description={pageDescription}
@@ -61,7 +61,7 @@ export default function FordelerPage() {
         description={FORDELSPROGRAMMER_INTRO}
       />
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {fordeler.map((fordel) => {
           const tilbudCount = getTilbudByFordel(fordel.slug).length;
           const hasArticle = hasFordelArticle(fordel.slug);
@@ -73,18 +73,17 @@ export default function FordelerPage() {
               description={fordel.description}
               meta={fordel.type}
               tags={[
-                fordel.useCase,
+                ...(tilbudCount > 0 ? [`${tilbudCount} tilbud`] : []),
                 ...(hasArticle ? ["Full guide"] : []),
-                ...(tilbudCount > 0 ? [`${tilbudCount} tilbud samlet`] : []),
               ]}
-              actionLabel={hasArticle ? "Les guiden" : "Les om programmet"}
+              actionLabel={hasArticle ? "Les guiden" : "Les mer"}
               href={`/fordeler/${fordel.slug}`}
             />
           );
         })}
       </div>
 
-      <p className="mt-10 text-sm text-stone-500">
+      <p className="mt-8 text-sm text-stone-500">
         Leter du etter rabatter du kan bruke nå?{" "}
         <Link href="/tilbud" className="font-medium text-orange-600 hover:text-orange-700">
           Gå til {TILBUD_TITLE.toLowerCase()}

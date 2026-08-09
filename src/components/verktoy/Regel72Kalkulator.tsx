@@ -61,7 +61,7 @@ export function Regel72Kalkulator() {
   return (
     <div className="grid gap-8 lg:grid-cols-2">
       <section className="space-y-6">
-        <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+        <div className="rounded-xl border border-stone-200 bg-white p-4">
           <h2 className="text-lg font-semibold text-stone-900">
             Hvor lang tid til å doble?
           </h2>
@@ -85,7 +85,7 @@ export function Regel72Kalkulator() {
           </div>
         </div>
 
-        <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+        <div className="rounded-xl border border-stone-200 bg-white p-4">
           <h2 className="text-lg font-semibold text-stone-900">
             Hvilken avkastning trengs?
           </h2>
@@ -108,7 +108,7 @@ export function Regel72Kalkulator() {
           </div>
         </div>
 
-        <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+        <div className="rounded-xl border border-stone-200 bg-white p-4">
           <h2 className="text-lg font-semibold text-stone-900">
             Hva blir pengene?
           </h2>
@@ -131,7 +131,7 @@ export function Regel72Kalkulator() {
       <section className="space-y-4">
         {result ? (
           <>
-            <div className="rounded-2xl border border-orange-200 bg-orange-50 p-6">
+            <div className="rounded-xl border border-orange-200 bg-orange-50 p-4">
               <h2 className="text-lg font-semibold text-stone-900">Regel 72</h2>
               <p className="mt-3 text-3xl font-bold text-stone-900">
                 {formatYears(result.yearsRule72)} år
@@ -146,7 +146,7 @@ export function Regel72Kalkulator() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+            <div className="rounded-xl border border-stone-200 bg-white p-4">
               <h2 className="text-lg font-semibold text-stone-900">
                 Eksakt beregning
               </h2>
@@ -179,13 +179,13 @@ export function Regel72Kalkulator() {
             </div>
           </>
         ) : (
-          <div className="rounded-2xl border border-stone-200 bg-white p-6 text-sm text-stone-600 shadow-sm">
+          <div className="rounded-xl border border-stone-200 bg-white p-4 text-sm text-stone-600 shadow-sm">
             Fyll inn en avkastning over 0 % for å se resultatet.
           </div>
         )}
 
         {requiredRate !== null && (
-          <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+          <div className="rounded-xl border border-stone-200 bg-white p-4">
             <h2 className="text-lg font-semibold text-stone-900">
               For å doble på {formatYears(Number(targetYears.replace(",", ".")))}{" "}
               år
@@ -200,7 +200,7 @@ export function Regel72Kalkulator() {
           </div>
         )}
 
-        <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+        <div className="rounded-xl border border-stone-200 bg-white p-4">
           <h2 className="text-lg font-semibold text-stone-900">
             Vanlige avkastninger
           </h2>

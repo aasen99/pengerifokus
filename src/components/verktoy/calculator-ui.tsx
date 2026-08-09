@@ -1,5 +1,12 @@
 export const calculatorInputClassName =
-  "w-full rounded-lg border border-stone-200 bg-white px-3 py-2.5 text-stone-900 shadow-sm outline-none transition-colors focus:border-orange-400 focus:ring-2 focus:ring-orange-100";
+  "w-full rounded-lg border border-stone-200 bg-white px-3 py-2.5 text-stone-900 outline-none transition-colors focus:border-orange-400 focus:ring-2 focus:ring-orange-100";
+
+/** Standard panel for kalkulator-input, resultater og callouts. */
+export const calculatorPanelClassName =
+  "rounded-xl border border-stone-200 bg-white p-4";
+
+export const calculatorMutedPanelClassName =
+  "rounded-xl border border-stone-200 bg-stone-50 p-4";
 
 interface FieldProps {
   label: React.ReactNode;

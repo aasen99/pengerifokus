@@ -23,7 +23,6 @@ import type {
 } from "@/types/formuesbygger";
 import { Tag } from "@/components/ui/Tag";
 import { WealthEstimateCard } from "@/components/formuesbyggere/WealthEstimateCard";
-import { FormuesbyggerLifecycle } from "@/components/formuesbyggere/FormuesbyggerLifecycle";
 import { calculatorInputClassName } from "@/components/verktoy/calculator-ui";
 
 interface FormuesbyggerListProps {
@@ -43,7 +42,7 @@ function FilterChip({
     <button
       type="button"
       onClick={onClick}
-      className={`rounded-full px-3 py-1.5 text-sm font-medium transition-colors ${
+      className={`rounded-full px-2.5 py-1 text-sm font-medium transition-colors ${
         active
           ? "bg-orange-600 text-white"
           : "bg-stone-100 text-stone-700 hover:bg-stone-200"
@@ -78,13 +77,20 @@ export function FormuesbyggerList({ entries }: FormuesbyggerListProps) {
     industry !== null ||
     buildType !== null;
 
-  return (
-    <div className="space-y-6">
-      <div className="rounded-2xl border border-stone-200 bg-stone-50 px-5 py-4 text-sm leading-relaxed text-stone-600">
-        {FORMUE_DISCLAIMER}
-      </div>
+  const activeFilterCount = [region, industry, buildType].filter(Boolean).length;
 
-      <div className="rounded-2xl border border-stone-200 bg-white p-4 shadow-sm sm:p-5">
+  return (
+    <div className="space-y-5">
+      <details className="rounded-xl border border-stone-200 bg-stone-50">
+        <summary className="cursor-pointer list-none px-4 py-2.5 text-sm text-stone-600 [&::-webkit-details-marker]:hidden">
+          Om formuestallene ▾
+        </summary>
+        <p className="border-t border-stone-200 px-4 py-3 text-sm leading-relaxed text-stone-600">
+          {FORMUE_DISCLAIMER}
+        </p>
+      </details>
+
+      <div className="rounded-xl border border-stone-200 bg-white p-3.5">
         <label htmlFor="formuesbygger-search" className="sr-only">
           Søk i formuesbyggere
         </label>
@@ -97,87 +103,101 @@ export function FormuesbyggerList({ entries }: FormuesbyggerListProps) {
           className={calculatorInputClassName}
         />
 
-        <div className="mt-4">
-          <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-stone-500">
-            Region
-          </p>
-          <div className="flex flex-wrap gap-2">
-            <FilterChip active={region === null} onClick={() => setRegion(null)}>
-              Alle
-            </FilterChip>
-            {(Object.keys(REGION_LABELS) as FormuesbyggerRegion[]).map((key) => (
-              <FilterChip
-                key={key}
-                active={region === key}
-                onClick={() => setRegion(region === key ? null : key)}
-              >
-                {REGION_LABELS[key]}
-              </FilterChip>
-            ))}
-          </div>
-        </div>
-
-        <div className="mt-4">
-          <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-stone-500">
-            Bransje
-          </p>
-          <div className="flex flex-wrap gap-2">
-            <FilterChip
-              active={industry === null}
-              onClick={() => setIndustry(null)}
-            >
-              Alle
-            </FilterChip>
-            {(Object.keys(INDUSTRY_LABELS) as FormuesbyggerIndustry[]).map(
-              (key) => (
+        <details className="mt-3">
+          <summary className="cursor-pointer list-none text-sm font-medium text-stone-700 [&::-webkit-details-marker]:hidden">
+            Filtrer
+            {activeFilterCount > 0 ? ` (${activeFilterCount})` : ""} ▾
+          </summary>
+          <div className="mt-3 space-y-3 border-t border-stone-100 pt-3">
+            <div>
+              <p className="mb-1.5 text-xs font-semibold uppercase tracking-wider text-stone-500">
+                Region
+              </p>
+              <div className="flex flex-wrap gap-1.5">
                 <FilterChip
-                  key={key}
-                  active={industry === key}
-                  onClick={() => setIndustry(industry === key ? null : key)}
+                  active={region === null}
+                  onClick={() => setRegion(null)}
                 >
-                  {INDUSTRY_LABELS[key]}
+                  Alle
                 </FilterChip>
-              ),
-            )}
-          </div>
-        </div>
+                {(Object.keys(REGION_LABELS) as FormuesbyggerRegion[]).map(
+                  (key) => (
+                    <FilterChip
+                      key={key}
+                      active={region === key}
+                      onClick={() => setRegion(region === key ? null : key)}
+                    >
+                      {REGION_LABELS[key]}
+                    </FilterChip>
+                  ),
+                )}
+              </div>
+            </div>
 
-        <div className="mt-4">
-          <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-stone-500">
-            Byggetype
-          </p>
-          <div className="flex flex-wrap gap-2">
-            <FilterChip
-              active={buildType === null}
-              onClick={() => setBuildType(null)}
-            >
-              Alle
-            </FilterChip>
-            {(Object.keys(BUILD_TYPE_LABELS) as FormuesbyggerBuildType[]).map(
-              (key) => (
+            <div>
+              <p className="mb-1.5 text-xs font-semibold uppercase tracking-wider text-stone-500">
+                Bransje
+              </p>
+              <div className="flex flex-wrap gap-1.5">
                 <FilterChip
-                  key={key}
-                  active={buildType === key}
-                  onClick={() => setBuildType(buildType === key ? null : key)}
+                  active={industry === null}
+                  onClick={() => setIndustry(null)}
                 >
-                  {BUILD_TYPE_LABELS[key]}
+                  Alle
                 </FilterChip>
-              ),
-            )}
+                {(Object.keys(INDUSTRY_LABELS) as FormuesbyggerIndustry[]).map(
+                  (key) => (
+                    <FilterChip
+                      key={key}
+                      active={industry === key}
+                      onClick={() => setIndustry(industry === key ? null : key)}
+                    >
+                      {INDUSTRY_LABELS[key]}
+                    </FilterChip>
+                  ),
+                )}
+              </div>
+            </div>
+
+            <div>
+              <p className="mb-1.5 text-xs font-semibold uppercase tracking-wider text-stone-500">
+                Byggetype
+              </p>
+              <div className="flex flex-wrap gap-1.5">
+                <FilterChip
+                  active={buildType === null}
+                  onClick={() => setBuildType(null)}
+                >
+                  Alle
+                </FilterChip>
+                {(
+                  Object.keys(BUILD_TYPE_LABELS) as FormuesbyggerBuildType[]
+                ).map((key) => (
+                  <FilterChip
+                    key={key}
+                    active={buildType === key}
+                    onClick={() =>
+                      setBuildType(buildType === key ? null : key)
+                    }
+                  >
+                    {BUILD_TYPE_LABELS[key]}
+                  </FilterChip>
+                ))}
+              </div>
+            </div>
           </div>
-        </div>
+        </details>
       </div>
 
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-sm text-stone-600">
-          {filtered.length}{" "}
-          {filtered.length === 1 ? "profil" : "profiler"}
+          {filtered.length} {filtered.length === 1 ? "profil" : "profiler"}
           {hasFilters ? " funnet" : " i oversikten"}
         </p>
 
         <div className="flex items-center gap-2">
           <label htmlFor="formuesbygger-sort" className="text-sm text-stone-600">
-            Sorter etter
+            Sorter
           </label>
           <select
             id="formuesbygger-sort"
@@ -195,36 +215,19 @@ export function FormuesbyggerList({ entries }: FormuesbyggerListProps) {
       </div>
 
       {filtered.length > 0 ? (
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((entry) => {
             const hasArticle = hasFormuesbyggerArticle(entry.slug);
             const card = (
               <>
-                <div className="mb-3 flex flex-wrap gap-2">
+                <div className="mb-2 flex flex-wrap gap-1.5">
                   <Tag variant="accent">{REGION_LABELS[entry.region]}</Tag>
-                  <Tag>{INDUSTRY_LABELS[entry.industry]}</Tag>
-                  <Tag variant="muted">
-                    {BUILD_TYPE_LABELS[entry.buildType]}
-                  </Tag>
+                  <Tag variant="muted">{INDUSTRY_LABELS[entry.industry]}</Tag>
                 </div>
-                <h2 className="text-lg font-semibold text-stone-900 group-hover:text-orange-700">
+                <h2 className="text-base font-semibold text-stone-900 group-hover:text-orange-700">
                   {entry.name}
                 </h2>
-                <FormuesbyggerLifecycle
-                  profile={entry}
-                  variant="compact"
-                  className="mt-1"
-                />
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-stone-600">
-                  {entry.tagline}
-                </p>
                 <WealthEstimateCard profile={entry} compact />
-                <p className="mt-1 text-xs text-stone-500">{entry.wealthContext}</p>
-                {hasArticle && (
-                  <span className="mt-4 inline-block text-sm font-semibold text-orange-600 group-hover:text-orange-700">
-                    Les profil →
-                  </span>
-                )}
               </>
             );
 
@@ -232,7 +235,7 @@ export function FormuesbyggerList({ entries }: FormuesbyggerListProps) {
               return (
                 <article
                   key={entry.id}
-                  className="flex h-full flex-col rounded-2xl border border-stone-200 bg-white p-6 shadow-sm"
+                  className="rounded-xl border border-stone-200 bg-white p-3.5"
                 >
                   {card}
                 </article>
@@ -243,7 +246,7 @@ export function FormuesbyggerList({ entries }: FormuesbyggerListProps) {
               <Link
                 key={entry.id}
                 href={`/formuesbyggere/${entry.slug}`}
-                className="group flex h-full flex-col rounded-2xl border border-stone-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+                className="group rounded-xl border border-stone-200 bg-white p-3.5 transition-colors hover:border-orange-300"
               >
                 {card}
               </Link>
@@ -251,7 +254,7 @@ export function FormuesbyggerList({ entries }: FormuesbyggerListProps) {
           })}
         </div>
       ) : (
-        <div className="rounded-2xl border border-dashed border-stone-300 bg-stone-50 px-6 py-12 text-center">
+        <div className="rounded-xl border border-dashed border-stone-300 bg-stone-50 px-6 py-10 text-center">
           <p className="font-medium text-stone-900">Ingen profiler funnet</p>
           <p className="mt-2 text-sm text-stone-600">
             Prøv et annet søkeord eller fjern filter.

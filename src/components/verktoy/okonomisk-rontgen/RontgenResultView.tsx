@@ -30,7 +30,7 @@ export function RontgenResultView({ result, onRestart }: RontgenResultViewProps)
 
   return (
     <div className="mx-auto max-w-2xl space-y-6">
-      <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm sm:p-8">
+      <div className="rounded-xl border border-stone-200 bg-white p-4 sm:p-8">
         <p className="text-center text-sm font-medium uppercase tracking-wider text-stone-500">
           Din økonomiske score
         </p>
@@ -49,14 +49,14 @@ export function RontgenResultView({ result, onRestart }: RontgenResultViewProps)
         </p>
       </div>
 
-      <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm sm:p-8">
+      <div className="rounded-xl border border-stone-200 bg-white p-4 sm:p-8">
         <h3 className="text-lg font-semibold text-stone-900">Delresultater</h3>
         <div className="mt-5">
           <CategoryBars categories={result.categories} />
         </div>
       </div>
 
-      <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm sm:p-8">
+      <div className="rounded-xl border border-stone-200 bg-white p-4 sm:p-8">
         <h3 className="text-lg font-semibold text-stone-900">
           Dette bør du prioritere nå
         </h3>

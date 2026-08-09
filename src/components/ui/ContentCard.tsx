@@ -23,28 +23,32 @@ export function ContentCard({
   href,
 }: ContentCardProps) {
   const className =
-    "group flex h-full flex-col rounded-2xl border border-stone-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md";
+    "group flex h-full flex-col rounded-xl border border-stone-200 bg-white p-3.5 transition-colors hover:border-orange-300";
+
+  const visibleTags = tags?.slice(0, 1) ?? [];
 
   const content = (
     <>
-      <div className="mb-3 flex flex-wrap items-center gap-2">
-        {meta && <Tag>{meta}</Tag>}
-        {badge && <Tag variant="accent">{badge}</Tag>}
-        {tags?.map((tag) => (
-          <Tag key={tag} variant="muted">
-            {tag}
-          </Tag>
-        ))}
-      </div>
+      {(meta || badge || visibleTags.length > 0) && (
+        <div className="mb-2 flex flex-wrap items-center gap-1.5">
+          {meta && <Tag>{meta}</Tag>}
+          {badge && <Tag variant="accent">{badge}</Tag>}
+          {visibleTags.map((tag) => (
+            <Tag key={tag} variant="muted">
+              {tag}
+            </Tag>
+          ))}
+        </div>
+      )}
 
-      <h2 className="text-lg font-semibold text-stone-900 group-hover:text-orange-700">
+      <h2 className="text-base font-semibold text-stone-900 group-hover:text-orange-700">
         {title}
       </h2>
-      <p className="mt-2 flex-1 text-sm leading-relaxed text-stone-600">
+      <p className="mt-1 line-clamp-2 flex-1 text-sm leading-snug text-stone-600">
         {description}
       </p>
 
-      <div className="mt-5">
+      <div className="mt-3">
         {disabled ? (
           <span className="text-sm font-medium text-stone-400">
             {actionLabel}

@@ -112,7 +112,7 @@ export function TidErPengerKalkulator() {
 
   return (
     <div className="grid gap-8 lg:grid-cols-2">
-      <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+      <section className="rounded-xl border border-stone-200 bg-white p-4">
         <h2 className="text-lg font-semibold text-stone-900">Din situasjon</h2>
         <p className="mt-1 text-sm text-stone-600">
           Regn med det du faktisk sitter igjen med, og tiden jobben tar utover
@@ -262,7 +262,7 @@ export function TidErPengerKalkulator() {
       <section className="space-y-4">
         {result ? (
           <>
-            <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+            <div className="rounded-xl border border-stone-200 bg-white p-4">
               <h2 className="text-lg font-semibold text-stone-900">
                 Din reelle timelønn
               </h2>
@@ -298,7 +298,7 @@ export function TidErPengerKalkulator() {
               </dl>
             </div>
 
-            <div className="rounded-2xl border border-orange-200 bg-orange-50 p-6">
+            <div className="rounded-xl border border-orange-200 bg-orange-50 p-4">
               <h2 className="text-lg font-semibold text-stone-900">
                 Hva tiden din betyr
               </h2>
@@ -329,7 +329,7 @@ export function TidErPengerKalkulator() {
               </dl>
             </div>
 
-            <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+            <div className="rounded-xl border border-stone-200 bg-white p-4">
               <h2 className="text-lg font-semibold text-stone-900">
                 Hva koster et kjøp i tid?
               </h2>
@@ -355,7 +355,7 @@ export function TidErPengerKalkulator() {
             </div>
           </>
         ) : (
-          <div className="rounded-2xl border border-stone-200 bg-white p-6 text-sm text-stone-600 shadow-sm">
+          <div className="rounded-xl border border-stone-200 bg-white p-4 text-sm text-stone-600 shadow-sm">
             Fyll inn gyldige verdier for å se resultatet.
           </div>
         )}

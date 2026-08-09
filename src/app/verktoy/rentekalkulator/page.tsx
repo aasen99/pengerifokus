@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ToolPageHeader } from "@/components/verktoy/ToolPageHeader";
 import { Rentekalkulator } from "@/components/verktoy/Rentekalkulator";
 import { ToolRelatedGuides } from "@/components/verktoy/ToolRelatedGuides";
 import { ToolPageSeo } from "@/components/seo/ToolPageSeo";
@@ -17,32 +18,20 @@ export const metadata: Metadata = createPageMetadata({
 
 export default function RentekalkulatorPage() {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
+    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-10">
       <ToolPageSeo
         name="Rentekalkulator"
         description={toolDescription}
         path="/verktoy/rentekalkulator"
       />
-      <Link
-        href="/verktoy"
-        className="text-sm font-medium text-orange-600 hover:text-orange-700"
-      >
-        ← Tilbake til verktøy
-      </Link>
-
-      <header className="mt-4 mb-10">
-        <h1 className="text-3xl font-bold tracking-tight text-stone-900 sm:text-4xl">
-          Rentekalkulator
-        </h1>
-        <p className="mt-3 max-w-2xl text-lg text-stone-600">
-          For ett annuitetslån: se hva lånet koster over tid, og hvor mye du
-          sparer med ekstra innbetaling per måned eller engangsinnbetaling.
-        </p>
-      </header>
+      <ToolPageHeader
+        title="Rentekalkulator"
+        description="For ett annuitetslån: se hva lånet koster over tid, og hvor mye du sparer med ekstra innbetaling per måned eller engangsinnbetaling."
+      />
 
       <Rentekalkulator />
 
-      <section className="mt-8 rounded-2xl border border-stone-200 bg-stone-50 p-5 text-sm text-stone-700">
+      <section className="mt-8 rounded-xl border border-stone-200 bg-stone-50 p-4 text-sm text-stone-700">
         <p className="font-medium text-stone-900">Flere lån samtidig?</p>
         <p className="mt-1">
           For kredittkort, forbrukslån og studielån i én plan, bruk{" "}

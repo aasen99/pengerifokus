@@ -2,11 +2,6 @@
 
 const paths = [
   {
-    href: "/verktoy/okonomisk-rontgen",
-    title: "Kartlegg økonomien",
-    description: "Få score og tre konkrete prioriteringer.",
-  },
-  {
     href: "/tilbud",
     title: "Finn medlemsrabatter",
     description: "OBOS, Trumf, Usbl, Klarna, EuroBonus og mer.",
@@ -21,13 +16,18 @@ const paths = [
     title: "Les guider",
     description: "Steg for steg om sparing, gjeld og bolig.",
   },
+  {
+    href: "/ordbok",
+    title: "Slå opp begreper",
+    description: "Korte forklaringer uten bankjargong.",
+  },
 ];
 
 export function QuickPaths() {
   return (
     <section>
-      <h2 className="text-2xl font-bold text-stone-900">Hvor vil du starte?</h2>
-      <div className="mt-5 grid gap-3 sm:grid-cols-2">
+      <h2 className="text-xl font-bold text-stone-900">Hvor vil du starte?</h2>
+      <div className="mt-4 grid gap-3 sm:grid-cols-2">
         {paths.map((path) => (
           <Link
             key={path.href}

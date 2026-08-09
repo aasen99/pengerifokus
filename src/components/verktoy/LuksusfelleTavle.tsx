@@ -63,7 +63,7 @@ function CategoryEditor({
   };
 
   return (
-    <section className="rounded-2xl border border-stone-200 bg-white p-5 shadow-sm">
+    <section className="rounded-xl border border-stone-200 bg-white p-4">
       <div className="flex items-start justify-between gap-3">
         <div>
           <h3 className="font-semibold text-stone-900">{category.label}</h3>
@@ -615,7 +615,7 @@ export function LuksusfelleTavle() {
 
       <div className="grid gap-8 xl:grid-cols-[1.1fr_0.9fr]">
         <div className="space-y-6">
-          <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+          <section className="rounded-xl border border-stone-200 bg-white p-4">
             <CalculatorField
               label="Nettoinntekt per måned"
               hint="Lønn etter skatt, pluss eventuelle faste ytelser"

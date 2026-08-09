@@ -167,7 +167,7 @@ export function MillionKalkulator() {
 
   return (
     <div className="grid gap-8 lg:grid-cols-2">
-      <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+      <section className="rounded-xl border border-stone-200 bg-white p-4">
         <h2 className="text-lg font-semibold text-stone-900">Hva vil du finne?</h2>
         <p className="mt-1 text-sm text-stone-600">
           Velg modus, fyll inn det du vet, og se det som mangler.
@@ -294,7 +294,7 @@ export function MillionKalkulator() {
 
       <section className="space-y-4">
         {result?.mode === "time" && (
-          <div className="rounded-2xl border border-orange-200 bg-orange-50 p-6">
+          <div className="rounded-xl border border-orange-200 bg-orange-50 p-4">
             <h2 className="text-lg font-semibold text-stone-900">
               Tid til {formatCurrency(result.targetAmount)}
             </h2>
@@ -328,7 +328,7 @@ export function MillionKalkulator() {
         )}
 
         {result?.mode === "monthly" && (
-          <div className="rounded-2xl border border-orange-200 bg-orange-50 p-6">
+          <div className="rounded-xl border border-orange-200 bg-orange-50 p-4">
             <h2 className="text-lg font-semibold text-stone-900">
               Månedlig sparing for {formatCurrency(result.targetAmount)}
             </h2>
@@ -358,7 +358,7 @@ export function MillionKalkulator() {
         )}
 
         {result?.mode === "rate" && (
-          <div className="rounded-2xl border border-orange-200 bg-orange-50 p-6">
+          <div className="rounded-xl border border-orange-200 bg-orange-50 p-4">
             <h2 className="text-lg font-semibold text-stone-900">
               Avkastning for {formatCurrency(result.targetAmount)}
             </h2>
@@ -400,7 +400,7 @@ export function MillionKalkulator() {
         )}
 
         {!result && (
-          <div className="rounded-2xl border border-stone-200 bg-white p-6 text-sm text-stone-600 shadow-sm">
+          <div className="rounded-xl border border-stone-200 bg-white p-4 text-sm text-stone-600 shadow-sm">
             Fyll inn gyldige verdier for å se resultatet.
           </div>
         )}

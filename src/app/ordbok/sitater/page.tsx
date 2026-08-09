@@ -22,21 +22,22 @@ export default function SitaterPage() {
   const entries = getAllSitater();
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
+    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-10">
       <PageHeader
         title="Sitater"
-        description="Sitater og mottoer fra formuesbyggerne vi skriver om. Hvert funn har kilde, engelske sitater vises på originalspråk med norsk oversettelse."
+        description="Sitater og mottoer fra formuesbyggerne, med dokumentert kilde. Engelske sitater vises på originalspråk med norsk oversettelse."
       />
 
-      <p className="mb-8 text-sm text-stone-600">
-        Del av{" "}
-        <Link href="/ordbok" className="font-medium text-orange-600 hover:text-orange-700">
-          ordboken
-        </Link>
-        . Kun sitater og mottoer med dokumentert kilde vises her.
-      </p>
-
       <SitatList entries={entries} />
+
+      <p className="mt-8 text-sm text-stone-600">
+        <Link
+          href="/ordbok"
+          className="font-medium text-orange-600 hover:text-orange-700"
+        >
+          ← Tilbake til ordboken
+        </Link>
+      </p>
     </div>
   );
 }

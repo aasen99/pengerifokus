@@ -148,7 +148,7 @@ export function LanetsReelleVerdiKalkulator() {
         <p className="mt-3 text-stone-600">{LRV_NOMINAL_NOTE}</p>
       </div>
 
-      <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm sm:p-8">
+      <section className="rounded-xl border border-stone-200 bg-white p-4 sm:p-8">
         <h2 className="text-lg font-semibold text-stone-900">
           Hovedkalkulator
         </h2>
@@ -211,7 +211,7 @@ export function LanetsReelleVerdiKalkulator() {
         </CalculatorField>
       </section>
 
-      <section className="rounded-2xl border border-orange-100 bg-orange-50/60 p-6 shadow-sm sm:p-8">
+      <section className="rounded-xl border border-orange-100 bg-orange-50/60 p-4 sm:p-5">
         <p className="text-sm font-medium uppercase tracking-wider text-orange-800">
           Hovedresultat
         </p>
@@ -259,7 +259,7 @@ export function LanetsReelleVerdiKalkulator() {
         </div>
       </section>
 
-      <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm sm:p-8">
+      <section className="rounded-xl border border-stone-200 bg-white p-4 sm:p-8">
         <h3 className="text-lg font-semibold text-stone-900">
           Utvikling år for år
         </h3>
@@ -269,7 +269,7 @@ export function LanetsReelleVerdiKalkulator() {
         <p className="mt-4 text-xs text-stone-500">{LRV_GRAPH_NOTE}</p>
       </section>
 
-      <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm sm:p-8">
+      <section className="rounded-xl border border-stone-200 bg-white p-4 sm:p-8">
         <h3 className="text-lg font-semibold text-stone-900">
           Hvorfor kan lånet føles lettere over tid?
         </h3>
@@ -293,7 +293,7 @@ export function LanetsReelleVerdiKalkulator() {
         </div>
       </section>
 
-      <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm sm:p-8">
+      <section className="rounded-xl border border-stone-200 bg-white p-4 sm:p-8">
         <label className="flex cursor-pointer items-start gap-3">
           <input
             type="checkbox"

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Tag } from "@/components/ui/Tag";
+import { RelatedLinks } from "@/components/ui/RelatedLinks";
 import type { Guide } from "@/types/content";
 import type { GuideArticleContent } from "@/types/guide-article";
 
@@ -18,30 +19,30 @@ export function GuideArticle({ guide, article }: GuideArticleProps) {
         ← Tilbake til guider
       </Link>
 
-      <header className="mt-4 border-b border-stone-200 pb-8">
-        <div className="mb-3 flex flex-wrap gap-2">
+      <header className="mt-3 border-b border-stone-200 pb-6">
+        <div className="mb-2 flex flex-wrap gap-1.5">
           <Tag>{guide.category}</Tag>
-          {guide.tags.map((tag) => (
+          {guide.tags.slice(0, 2).map((tag) => (
             <Tag key={tag} variant="muted">
               {tag}
             </Tag>
           ))}
         </div>
-        <h1 className="text-3xl font-bold tracking-tight text-stone-900 sm:text-4xl">
+        <h1 className="text-2xl font-bold tracking-tight text-stone-900 sm:text-3xl">
           {guide.title}
         </h1>
-        <p className="mt-4 max-w-2xl text-lg leading-relaxed text-stone-600">
+        <p className="mt-2 max-w-2xl text-base leading-relaxed text-stone-600">
           {article.intro}
         </p>
-        <p className="mt-3 text-sm text-stone-500">
+        <p className="mt-2 text-sm text-stone-500">
           {article.readTimeMinutes} min lesetid
         </p>
       </header>
 
-      <div className="mt-10 space-y-10">
+      <div className="mt-8 space-y-8">
         {article.sections.map((section) => (
           <section key={section.heading}>
-            <h2 className="text-xl font-semibold text-stone-900">
+            <h2 className="text-lg font-semibold text-stone-900">
               {section.heading}
             </h2>
             {section.paragraphs?.map((paragraph) => (
@@ -76,27 +77,13 @@ export function GuideArticle({ guide, article }: GuideArticleProps) {
       </div>
 
       {article.relatedLinks && article.relatedLinks.length > 0 && (
-        <aside className="mt-12 rounded-2xl border border-stone-200 bg-stone-50 p-6">
-          <h2 className="font-semibold text-stone-900">Les også</h2>
-          <ul className="mt-3 space-y-2">
-            {article.relatedLinks.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className="text-sm font-medium text-orange-600 hover:text-orange-700"
-                >
-                  {link.label} →
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </aside>
+        <RelatedLinks links={article.relatedLinks} />
       )}
 
       <p className="mt-10 text-xs leading-relaxed text-stone-500">
-        Innholdet er veiledende og erstatter ikke individuell økonomisk rådgivning.
-        Regler og produkter kan endres: sjekk alltid med bank eller Skatteetaten
-        for oppdatert informasjon.
+        Innholdet er veiledende og erstatter ikke individuell økonomisk
+        rådgivning. Regler og produkter kan endres: sjekk alltid med bank eller
+        Skatteetaten for oppdatert informasjon.
       </p>
     </article>
   );

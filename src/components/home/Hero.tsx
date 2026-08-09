@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { siteConfig } from "@/lib/site";
 
@@ -15,24 +14,11 @@ export function Hero() {
         Guider, kalkulatorer og tilbud for personlig økonomi i Norge — uten
         bankjargong.
       </p>
-      <div className="mt-6 flex flex-wrap gap-3">
+      <div className="mt-6">
         <Button href="/verktoy/okonomisk-rontgen" variant="secondary">
           Ta økonomisk røntgen
         </Button>
-        <Button href="/verktoy" variant="outline">
-          Alle verktøy
-        </Button>
       </div>
-      <p className="mt-4 text-sm text-stone-500">
-        Eller gå direkte til{" "}
-        <Link
-          href="/tilbud"
-          className="font-medium text-orange-600 hover:text-orange-700"
-        >
-          medlemstilbud
-        </Link>
-        .
-      </p>
     </header>
   );
 }

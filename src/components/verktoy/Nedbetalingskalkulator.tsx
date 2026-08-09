@@ -63,7 +63,7 @@ function StrategyResultCard({
   const interestSaved = minimumOnly.totalInterestPaid - summary.totalInterestPaid;
 
   return (
-    <div className="rounded-2xl border border-orange-200 bg-orange-50 p-6">
+    <div className="rounded-xl border border-orange-200 bg-orange-50 p-4">
       <h2 className="text-lg font-semibold text-stone-900">{title}</h2>
 
       {!summary.debtFree ? (
@@ -173,7 +173,7 @@ export function Nedbetalingskalkulator() {
 
   return (
     <div className="grid gap-8 lg:grid-cols-2">
-      <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+      <section className="rounded-xl border border-stone-200 bg-white p-4">
         <h2 className="text-lg font-semibold text-stone-900">Dine lån</h2>
         <p className="mt-1 text-sm text-stone-600">
           Legg inn alle gjeldsposter. Angi hvor mye du totalt kan bruke på lån
@@ -299,7 +299,7 @@ export function Nedbetalingskalkulator() {
       <section className="space-y-4">
         {result ? (
           <>
-            <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+            <div className="rounded-xl border border-stone-200 bg-white p-4">
               <h2 className="text-lg font-semibold text-stone-900">
                 Kun minimum på alt
               </h2>
@@ -337,7 +337,7 @@ export function Nedbetalingskalkulator() {
               result.snowball.debtFree &&
               result.avalanche.totalInterestPaid !==
                 result.snowball.totalInterestPaid && (
-                <div className="rounded-2xl border border-stone-200 bg-white p-5 text-sm text-stone-700 shadow-sm">
+                <div className="rounded-xl border border-stone-200 bg-white p-4 text-sm text-stone-700 shadow-sm">
                   {result.avalanche.totalInterestPaid <
                   result.snowball.totalInterestPaid ? (
                     <>
@@ -360,7 +360,7 @@ export function Nedbetalingskalkulator() {
               )}
           </>
         ) : (
-          <div className="rounded-2xl border border-stone-200 bg-white p-6 text-sm text-stone-600 shadow-sm">
+          <div className="rounded-xl border border-stone-200 bg-white p-4 text-sm text-stone-600 shadow-sm">
             Fyll inn minst ett lån med gyldige tall for å se planen.
           </div>
         )}

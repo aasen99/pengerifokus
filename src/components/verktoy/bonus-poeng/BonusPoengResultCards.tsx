@@ -31,7 +31,7 @@ function ResultCard({
           : "text-stone-900";
 
   return (
-    <div className="rounded-2xl border border-stone-200 bg-white p-5 shadow-sm">
+    <div className="rounded-xl border border-stone-200 bg-white p-4">
       <p className="text-xs font-semibold uppercase tracking-wider text-stone-500">
         {label}
       </p>
@@ -145,7 +145,7 @@ export function BonusPoengResultCards({
         </p>
       )}
 
-      <details className="rounded-2xl border border-stone-200 bg-white shadow-sm">
+      <details className="rounded-xl border border-stone-200 bg-white">
         <summary className="cursor-pointer px-5 py-4 text-sm font-semibold text-stone-900">
           Vis detaljert kostnadsoppdeling
         </summary>
@@ -190,7 +190,7 @@ export function BonusPoengConcepts({ defaultOpen = true }: { defaultOpen?: boole
         Les mer om kostpris, innløsning og eksempler
       </summary>
       <div className="space-y-6 border-t border-stone-200 px-6 py-6">
-      <section className="rounded-2xl border border-stone-200 bg-stone-50 p-6">
+      <section className="rounded-xl border border-stone-200 bg-stone-50 p-4">
         <h2 className="text-lg font-semibold text-stone-900">
           Forskjellen på kostpris, innløsningsverdi og målverdi
         </h2>
@@ -238,7 +238,7 @@ export function BonusPoengConcepts({ defaultOpen = true }: { defaultOpen?: boole
         </ul>
       </section>
 
-      <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+      <section className="rounded-xl border border-stone-200 bg-white p-4">
         <h2 className="text-lg font-semibold text-stone-900">Eksempler</h2>
         <div className="mt-4 space-y-4 text-sm leading-relaxed text-stone-700">
           <div>

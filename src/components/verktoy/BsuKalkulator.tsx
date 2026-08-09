@@ -51,7 +51,7 @@ export function BsuKalkulator() {
 
   return (
     <div className="grid gap-8 lg:grid-cols-2">
-      <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+      <section className="rounded-xl border border-stone-200 bg-white p-4">
         <h2 className="text-lg font-semibold text-stone-900">BSU-detaljer</h2>
         <p className="mt-1 text-sm text-stone-600">
           Boligsparing for ungdom, maks {formatIntegerInput(BSU_MAX_ANNUAL_DEPOSIT)} kr
@@ -108,7 +108,7 @@ export function BsuKalkulator() {
       <section className="space-y-4">
         {result ? (
           <>
-            <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+            <div className="rounded-xl border border-stone-200 bg-white p-4">
               <h2 className="text-lg font-semibold text-stone-900">
                 Din BSU-sparing
               </h2>
@@ -142,7 +142,7 @@ export function BsuKalkulator() {
               </dl>
             </div>
 
-            <div className="rounded-2xl border border-orange-200 bg-orange-50 p-6">
+            <div className="rounded-xl border border-orange-200 bg-orange-50 p-4">
               <h2 className="text-lg font-semibold text-stone-900">
                 Samlet fordel med BSU
               </h2>
@@ -190,7 +190,7 @@ export function BsuKalkulator() {
             </div>
           </>
         ) : (
-          <div className="rounded-2xl border border-stone-200 bg-white p-6 text-sm text-stone-600 shadow-sm">
+          <div className="rounded-xl border border-stone-200 bg-white p-4 text-sm text-stone-600 shadow-sm">
             Fyll inn gyldige verdier for å se resultatet.
           </div>
         )}

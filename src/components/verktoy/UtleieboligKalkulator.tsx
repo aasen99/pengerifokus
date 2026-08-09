@@ -300,7 +300,7 @@ export function UtleieboligKalkulator() {
 
     <div className="grid gap-8 lg:grid-cols-2">
       <div className="space-y-6">
-        <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+        <section className="rounded-xl border border-stone-200 bg-white p-4">
           <h2 className="text-lg font-semibold text-stone-900">Boligen</h2>
           <p className="mt-1 text-sm text-stone-600">
             Kjøpesum, egenkapital og engangsomkostninger ved kjøp.
@@ -339,7 +339,7 @@ export function UtleieboligKalkulator() {
           </div>
         </section>
 
-        <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+        <section className="rounded-xl border border-stone-200 bg-white p-4">
           <h2 className="text-lg font-semibold text-stone-900">Finansiering</h2>
           <p className="mt-1 text-sm text-stone-600">
             Annuitetslån med månedlige terminer.
@@ -368,7 +368,7 @@ export function UtleieboligKalkulator() {
           </div>
         </section>
 
-        <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+        <section className="rounded-xl border border-stone-200 bg-white p-4">
           <h2 className="text-lg font-semibold text-stone-900">Leie</h2>
 
           <div className="mt-6 space-y-5">
@@ -444,7 +444,7 @@ export function UtleieboligKalkulator() {
           </div>
         </section>
 
-        <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+        <section className="rounded-xl border border-stone-200 bg-white p-4">
           <h2 className="text-lg font-semibold text-stone-900">
             Månedlige driftskostnader
           </h2>
@@ -510,7 +510,7 @@ export function UtleieboligKalkulator() {
           </div>
         </section>
 
-        <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+        <section className="rounded-xl border border-stone-200 bg-white p-4">
           <h2 className="text-lg font-semibold text-stone-900">
             Langsiktig sammenligning
           </h2>
@@ -787,7 +787,7 @@ export function UtleieboligKalkulator() {
             )}
           </>
         ) : (
-          <div className="rounded-2xl border border-stone-200 bg-white p-6 text-sm text-stone-600 shadow-sm">
+          <div className="rounded-xl border border-stone-200 bg-white p-4 text-sm text-stone-600 shadow-sm">
             Fyll inn gyldige verdier for å se resultatet.
           </div>
         )}

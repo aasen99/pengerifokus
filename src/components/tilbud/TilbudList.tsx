@@ -342,7 +342,7 @@ export function TilbudList({ tilbud, fordeler }: TilbudListProps) {
             return (
               <article
                 key={group.key}
-                className="flex h-full flex-col rounded-xl border border-stone-200 bg-white p-3.5 shadow-sm transition-shadow hover:shadow-md"
+                className="flex h-full flex-col rounded-xl border border-stone-200 bg-white p-3.5 transition-colors hover:border-orange-300"
               >
                 <h2 className="text-base font-semibold text-stone-900">
                   {group.partner}

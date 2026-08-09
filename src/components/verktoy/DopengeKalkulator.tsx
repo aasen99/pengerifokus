@@ -43,7 +43,7 @@ export function DopengeKalkulator() {
 
   return (
     <div className="grid gap-8 lg:grid-cols-2">
-      <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+      <section className="rounded-xl border border-stone-200 bg-white p-4">
         <h2 className="text-lg font-semibold text-stone-900">Jobben din</h2>
         <p className="mt-1 text-sm text-stone-600">
           Vi regner timelønn ut fra det du faktisk får utbetalt, og hvor lang tid
@@ -120,7 +120,7 @@ export function DopengeKalkulator() {
       <section className="space-y-4">
         {result ? (
           <>
-            <div className="rounded-2xl border border-orange-200 bg-orange-50 p-6">
+            <div className="rounded-xl border border-orange-200 bg-orange-50 p-4">
               <h2 className="text-lg font-semibold text-stone-900">
                 Din dopenge
               </h2>
@@ -135,7 +135,7 @@ export function DopengeKalkulator() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+            <div className="rounded-xl border border-stone-200 bg-white p-4">
               <h2 className="text-lg font-semibold text-stone-900">
                 Oppdeling
               </h2>
@@ -200,7 +200,7 @@ export function DopengeKalkulator() {
             </div>
           </>
         ) : (
-          <div className="rounded-2xl border border-stone-200 bg-white p-6 text-sm text-stone-600 shadow-sm">
+          <div className="rounded-xl border border-stone-200 bg-white p-4 text-sm text-stone-600 shadow-sm">
             Fyll inn gyldige tall for å se dopenge.
           </div>
         )}

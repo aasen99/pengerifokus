@@ -8,7 +8,7 @@ interface RontgenIntroProps {
 
 export function RontgenIntro({ onStart }: RontgenIntroProps) {
   return (
-    <div className="mx-auto max-w-2xl rounded-2xl border border-stone-200 bg-white p-6 shadow-sm sm:p-8">
+    <div className="mx-auto max-w-2xl rounded-xl border border-stone-200 bg-white p-4 sm:p-8">
       <p className="text-lg leading-relaxed text-stone-700">
         Hvor robust er privatøkonomien din? Svar på 10 enkle spørsmål og få en
         rask temperaturmåling av buffer, gjeld, sparing og økonomisk trygghet.

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { ToolPageHeader } from "@/components/verktoy/ToolPageHeader";
 import { EieLeieKalkulator } from "@/components/verktoy/eie-leie/EieLeieKalkulator";
 import { ToolRelatedGuides } from "@/components/verktoy/ToolRelatedGuides";
 import { ToolPageSeo } from "@/components/seo/ToolPageSeo";
@@ -24,29 +24,16 @@ export const metadata: Metadata = createPageMetadata({
 
 export default function EieLeieKalkulatorPage() {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
+    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-10">
       <ToolPageSeo
         name="Eie vs. leie-kalkulator"
         description={toolDescription}
         path="/verktoy/eie-leie-kalkulator"
       />
-      <Link
-        href="/verktoy"
-        className="text-sm font-medium text-orange-600 hover:text-orange-700"
-      >
-        ← Tilbake til verktøy
-      </Link>
-
-      <header className="mt-4 mb-10">
-        <h1 className="text-3xl font-bold tracking-tight text-stone-900 sm:text-4xl">
-          Lønner det seg å eie eller leie bolig?
-        </h1>
-        <p className="mt-3 max-w-3xl text-lg text-stone-600">
-          Sammenlign nettoformue ved å kjøpe bolig mot å leie. Kalkulatoren
-          investerer månedlig differanse begge veier, slik at sammenligningen
-          holder kontantstrømmen lik.
-        </p>
-      </header>
+      <ToolPageHeader
+        title="Lønner det seg å eie eller leie bolig?"
+        description="Sammenlign nettoformue ved å kjøpe bolig mot å leie. Kalkulatoren investerer månedlig differanse begge veier, slik at sammenligningen holder kontantstrømmen lik."
+      />
 
       <EieLeieKalkulator />
 

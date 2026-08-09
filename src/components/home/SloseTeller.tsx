@@ -41,7 +41,7 @@ export function SloseTeller({
   return (
     <section
       aria-label={scenario.headline}
-      className="relative overflow-hidden rounded-2xl bg-stone-900 px-5 py-8 text-white sm:px-8 sm:py-10"
+      className="relative overflow-hidden rounded-xl bg-stone-900 px-5 py-7 text-white sm:px-7 sm:py-8"
     >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(249,115,22,0.2),transparent_55%)]" />
 

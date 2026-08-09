@@ -80,7 +80,7 @@ export function Sparekalkulator() {
 
   return (
     <div className="grid gap-8 lg:grid-cols-2">
-      <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+      <section className="rounded-xl border border-stone-200 bg-white p-4">
         <h2 className="text-lg font-semibold text-stone-900">Sparedetaljer</h2>
         <p className="mt-1 text-sm text-stone-600">
           Sammenlign vanlig månedlig sparing med et ekstra beløp oppå.
@@ -140,7 +140,7 @@ export function Sparekalkulator() {
       <section className="space-y-4">
         {result && projections ? (
           <>
-            <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+            <div className="rounded-xl border border-stone-200 bg-white p-4">
               <h2 className="text-lg font-semibold text-stone-900">
                 Med {formatCurrency(result.standard.monthlySaving)} / mnd
               </h2>
@@ -167,7 +167,7 @@ export function Sparekalkulator() {
             </div>
 
             {result.withExtra && (
-              <div className="rounded-2xl border border-orange-200 bg-orange-50 p-6">
+              <div className="rounded-xl border border-orange-200 bg-orange-50 p-4">
                 <h2 className="text-lg font-semibold text-stone-900">
                   Med {formatCurrency(result.withExtra.monthlySaving)} / mnd
                 </h2>
@@ -202,7 +202,7 @@ export function Sparekalkulator() {
               </div>
             )}
 
-            <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+            <div className="rounded-xl border border-stone-200 bg-white p-4">
               <h2 className="text-lg font-semibold text-stone-900">Vekst over tid</h2>
               <div className="mt-4">
                 <SavingsGrowthChart
@@ -213,7 +213,7 @@ export function Sparekalkulator() {
               </div>
             </div>
 
-            <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+            <div className="rounded-xl border border-stone-200 bg-white p-4">
               <h2 className="text-lg font-semibold text-stone-900">År for år</h2>
               <div className="mt-4 max-h-72 overflow-auto">
                 <table className="w-full min-w-[16rem] text-left text-sm">
@@ -242,7 +242,7 @@ export function Sparekalkulator() {
             </div>
           </>
         ) : (
-          <div className="rounded-2xl border border-stone-200 bg-white p-6 text-sm text-stone-600 shadow-sm">
+          <div className="rounded-xl border border-stone-200 bg-white p-4 text-sm text-stone-600 shadow-sm">
             Fyll inn gyldige verdier for å se resultatet.
           </div>
         )}

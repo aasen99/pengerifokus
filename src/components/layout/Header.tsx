@@ -4,9 +4,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-import { FORDELSPROGRAMMER_TITLE } from "@/data/content-labels";
-import { FORMUESBYGGERE_TITLE } from "@/data/formuesbyggere-labels";
-
 interface NavItem {
   href: string;
   label: string;
@@ -25,8 +22,8 @@ const secondaryNav: NavItem[] = [
 ];
 
 const mobileMoreNav: NavItem[] = [
-  { href: "/fordeler", label: FORDELSPROGRAMMER_TITLE },
-  { href: "/formuesbyggere", label: FORMUESBYGGERE_TITLE },
+  { href: "/fordeler", label: "Fordeler" },
+  { href: "/formuesbyggere", label: "Profiler" },
   { href: "/ordbok", label: "Ordbok" },
 ];
 

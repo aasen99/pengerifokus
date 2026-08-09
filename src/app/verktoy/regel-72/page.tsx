@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { ToolPageHeader } from "@/components/verktoy/ToolPageHeader";
 import { Regel72Kalkulator } from "@/components/verktoy/Regel72Kalkulator";
 import { ToolRelatedGuides } from "@/components/verktoy/ToolRelatedGuides";
 import { ToolPageSeo } from "@/components/seo/ToolPageSeo";
@@ -17,28 +17,16 @@ export const metadata: Metadata = createPageMetadata({
 
 export default function Regel72Page() {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
+    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-10">
       <ToolPageSeo
         name="Regel 72"
         description={toolDescription}
         path="/verktoy/regel-72"
       />
-      <Link
-        href="/verktoy"
-        className="text-sm font-medium text-orange-600 hover:text-orange-700"
-      >
-        ← Tilbake til verktøy
-      </Link>
-
-      <header className="mt-4 mb-10">
-        <h1 className="text-3xl font-bold tracking-tight text-stone-900 sm:text-4xl">
-          Regel 72
-        </h1>
-        <p className="mt-3 max-w-2xl text-lg text-stone-600">
-          Del 72 på avkastningen i prosent. Da får du grovt antall år det tar
-          å doble pengene dine.
-        </p>
-      </header>
+      <ToolPageHeader
+        title="Regel 72"
+        description="Del 72 på avkastningen i prosent. Da får du grovt antall år det tar å doble pengene dine."
+      />
 
       <Regel72Kalkulator />
 

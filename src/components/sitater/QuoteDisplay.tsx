@@ -67,7 +67,7 @@ export function QuoteDisplay({
 
   return (
     <blockquote
-      className={`rounded-2xl border border-stone-200 bg-white shadow-sm ${padding}`}
+      className={`rounded-xl border border-stone-200 bg-white ${padding}`}
     >
       {attribution && (
         <footer className="mb-2 text-sm font-semibold text-stone-900">

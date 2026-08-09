@@ -85,7 +85,7 @@ export function EieLeieResultView({
 
   return (
     <div className="space-y-6">
-      <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm sm:p-8">
+      <div className="rounded-xl border border-stone-200 bg-white p-4 sm:p-8">
         <h2 className="text-xl font-bold text-stone-900 sm:text-2xl">
           {result.betterOption === "eie" && (
             <>
@@ -131,7 +131,7 @@ export function EieLeieResultView({
       </div>
 
       <div className="grid gap-6 lg:grid-cols-2">
-        <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+        <section className="rounded-xl border border-stone-200 bg-white p-4">
           <h3 className="text-lg font-semibold text-stone-900">Eie</h3>
           <div className="mt-4 divide-y divide-stone-100">
             <ResultRow
@@ -178,7 +178,7 @@ export function EieLeieResultView({
           </div>
         </section>
 
-        <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+        <section className="rounded-xl border border-stone-200 bg-white p-4">
           <h3 className="text-lg font-semibold text-stone-900">Leie</h3>
           <div className="mt-4 divide-y divide-stone-100">
             <ResultRow
@@ -210,7 +210,7 @@ export function EieLeieResultView({
         </section>
       </div>
 
-      <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm sm:p-8">
+      <section className="rounded-xl border border-stone-200 bg-white p-4 sm:p-8">
         <h3 className="text-lg font-semibold text-stone-900">
           Nettoformue over tid
         </h3>
@@ -223,7 +223,7 @@ export function EieLeieResultView({
       </section>
 
       <div className="grid gap-6 lg:grid-cols-2">
-        <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+        <section className="rounded-xl border border-stone-200 bg-white p-4">
           <h3 className="text-lg font-semibold text-stone-900">
             Kostnadsfordeling, eie
           </h3>
@@ -278,7 +278,7 @@ export function EieLeieResultView({
           </p>
         </section>
 
-        <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+        <section className="rounded-xl border border-stone-200 bg-white p-4">
           <h3 className="text-lg font-semibold text-stone-900">
             Kostnadsfordeling, leie
           </h3>
@@ -291,7 +291,7 @@ export function EieLeieResultView({
         </section>
       </div>
 
-      <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm sm:p-8">
+      <section className="rounded-xl border border-stone-200 bg-white p-4 sm:p-8">
         <h3 className="text-lg font-semibold text-stone-900">Tre scenarioer</h3>
         <p className="mt-1 text-sm text-stone-600">
           Samme bolig og leie, men med forsiktige, normale og optimistiske
@@ -323,7 +323,7 @@ export function EieLeieResultView({
         </div>
       </section>
 
-      <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm sm:p-8">
+      <section className="rounded-xl border border-stone-200 bg-white p-4 sm:p-8">
         <h3 className="text-lg font-semibold text-stone-900">
           Hva skjer dersom forutsetningene endrer seg?
         </h3>

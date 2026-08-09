@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Tag } from "@/components/ui/Tag";
+import { RelatedLinks } from "@/components/ui/RelatedLinks";
 import {
   FORDELSPROGRAMMER_TITLE,
   TILBUD_TITLE,
@@ -38,32 +39,29 @@ export function FordelArticle({ fordel, article, tilbud }: FordelArticleProps) {
         ← Tilbake til {FORDELSPROGRAMMER_TITLE.toLowerCase()}
       </Link>
 
-      <header className="mt-4 border-b border-stone-200 pb-8">
-        <div className="mb-3 flex flex-wrap gap-2">
+      <header className="mt-3 border-b border-stone-200 pb-6">
+        <div className="mb-2 flex flex-wrap gap-1.5">
           <Tag>{fordel.type}</Tag>
           <Tag variant="muted">{fordel.useCase}</Tag>
         </div>
-        <h1 className="text-3xl font-bold tracking-tight text-stone-900 sm:text-4xl">
+        <h1 className="text-2xl font-bold tracking-tight text-stone-900 sm:text-3xl">
           {article.title}
         </h1>
-        <p className="mt-4 max-w-2xl text-lg leading-relaxed text-stone-600">
+        <p className="mt-2 max-w-2xl text-base leading-relaxed text-stone-600">
           {article.intro}
         </p>
-        <p className="mt-3 text-sm text-stone-500">
+        <p className="mt-2 text-sm text-stone-500">
           {article.readTimeMinutes} min lesetid · Sist kontrollert{" "}
           <time dateTime={article.lastModifiedIso}>{article.lastVerified}</time>
         </p>
       </header>
 
       {showTableOfContents && (
-        <nav
-          aria-label="Innhold på siden"
-          className="mt-8 rounded-2xl border border-stone-200 bg-stone-50 p-5"
-        >
+        <nav aria-label="Innhold på siden" className="mt-6">
           <h2 className="text-sm font-semibold uppercase tracking-wider text-stone-500">
             Innhold
           </h2>
-          <ol className="mt-3 space-y-2 text-sm">
+          <ol className="mt-2 space-y-1.5 text-sm">
             {article.sections.map((section) => {
               const id = sectionAnchorId(section.heading);
               return (
@@ -91,13 +89,13 @@ export function FordelArticle({ fordel, article, tilbud }: FordelArticleProps) {
         </nav>
       )}
 
-      <div className="mt-10 space-y-10">
+      <div className="mt-8 space-y-8">
         {article.sections.map((section) => {
           const id = sectionAnchorId(section.heading);
 
           return (
             <section key={id} id={id}>
-              <h2 className="text-xl font-semibold text-stone-900">
+              <h2 className="text-lg font-semibold text-stone-900">
                 {section.heading}
               </h2>
               {section.paragraphs?.map((paragraph) => (
@@ -134,17 +132,14 @@ export function FordelArticle({ fordel, article, tilbud }: FordelArticleProps) {
 
       {article.faq && article.faq.length > 0 && (
         <section id="ofte-stilte-sporsmal" className="mt-10">
-          <h2 className="text-xl font-semibold text-stone-900">
+          <h2 className="text-lg font-semibold text-stone-900">
             Ofte stilte spørsmål
           </h2>
-          <dl className="mt-4 space-y-5">
+          <dl className="mt-4 space-y-4">
             {article.faq.map((item) => (
-              <div
-                key={item.question}
-                className="rounded-xl border border-stone-200 bg-white px-5 py-4"
-              >
+              <div key={item.question}>
                 <dt className="font-medium text-stone-900">{item.question}</dt>
-                <dd className="mt-2 text-sm leading-relaxed text-stone-600">
+                <dd className="mt-1.5 text-sm leading-relaxed text-stone-600">
                   {item.answer}
                 </dd>
               </div>
@@ -154,23 +149,16 @@ export function FordelArticle({ fordel, article, tilbud }: FordelArticleProps) {
       )}
 
       {tilbud.length > 0 && (
-        <section className="mt-10 rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
-          <h2 className="text-lg font-semibold text-stone-900">
-            Tilbud vi har samlet
-          </h2>
-          <p className="mt-3 text-sm leading-relaxed text-stone-600">
-            Vi har {tilbud.length}{" "}
-            {tilbud.length === 1 ? "tilbud" : "tilbud"} knyttet til{" "}
-            {fordel.name}. På tilbudssiden finner du partner, rabatt og vilkår
-            du kan bruke i praksis.
-          </p>
+        <p className="mt-10 text-sm text-stone-600">
+          {tilbud.length}{" "}
+          {tilbud.length === 1 ? "tilbud" : "tilbud"} samlet for {fordel.name}.{" "}
           <Link
             href={`/tilbud?program=${fordel.slug}`}
-            className="mt-5 inline-flex rounded-xl bg-orange-600 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-orange-700"
+            className="font-semibold text-orange-600 hover:text-orange-700"
           >
-            Se tilbud for {fordel.name} →
+            Se tilbud →
           </Link>
-        </section>
+        </p>
       )}
 
       <details className="group mt-10 rounded-xl border border-stone-200 bg-stone-50">
@@ -218,30 +206,24 @@ export function FordelArticle({ fordel, article, tilbud }: FordelArticleProps) {
       </details>
 
       {article.relatedLinks && article.relatedLinks.length > 0 && (
-        <aside className="mt-6 rounded-2xl border border-stone-200 bg-stone-50 p-6">
-          <h2 className="font-semibold text-stone-900">Les også</h2>
-          <ul className="mt-3 space-y-2">
-            {article.relatedLinks.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className="text-sm font-medium text-orange-600 hover:text-orange-700"
-                >
-                  {link.label} →
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </aside>
+        <RelatedLinks links={article.relatedLinks} className="mt-8" />
       )}
 
       <p className="mt-10 text-xs leading-relaxed text-stone-500">
-        Innholdet er veiledende og erstatter ikke individuell økonomisk rådgivning.
-        Leter du etter rabatter du kan bruke nå?{" "}
-        <Link href="/tilbud" className="font-medium text-orange-600 hover:text-orange-700">
-          Gå til {TILBUD_TITLE.toLowerCase()}
-        </Link>
-        .
+        Innholdet er veiledende og erstatter ikke individuell økonomisk
+        rådgivning.
+        {tilbud.length === 0 && (
+          <>
+            {" "}
+            <Link
+              href="/tilbud"
+              className="font-medium text-orange-600 hover:text-orange-700"
+            >
+              Se {TILBUD_TITLE.toLowerCase()}
+            </Link>
+            .
+          </>
+        )}
       </p>
     </article>
   );
