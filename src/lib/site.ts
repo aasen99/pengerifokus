@@ -8,15 +8,22 @@ import { verktoy } from "@/data/verktoy";
 import { formuesbyggere } from "@/data/formuesbyggere";
 import { tilbud } from "@/data/tilbud";
 
-/** CMS/DEPLOY: Sett NEXT_PUBLIC_SITE_URL i produksjon (f.eks. https://pengerifokus.no) */
+/** Kanonisk produksjonsdomene – brukes for sitemap, canonical, OG og JSON-LD. */
+export const CANONICAL_SITE_URL = "https://www.pengerifokus.no";
+
+/**
+ * CMS/DEPLOY: Sett NEXT_PUBLIC_SITE_URL eller SITE_URL for override.
+ * Bruk aldri VERCEL_URL – det gir midlertidige deployment-URLer i sitemap/SEO.
+ */
 export function getSiteUrl(): string {
-  if (process.env.NEXT_PUBLIC_SITE_URL) {
-    return process.env.NEXT_PUBLIC_SITE_URL.replace(/\/$/, "");
+  const fromEnv =
+    process.env.NEXT_PUBLIC_SITE_URL?.trim() || process.env.SITE_URL?.trim();
+
+  if (fromEnv) {
+    return fromEnv.replace(/\/$/, "");
   }
-  if (process.env.VERCEL_URL) {
-    return `https://${process.env.VERCEL_URL}`;
-  }
-  return "http://localhost:3000";
+
+  return CANONICAL_SITE_URL;
 }
 
 export type ChangeFrequency =

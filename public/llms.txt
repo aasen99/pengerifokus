@@ -28,6 +28,6 @@
 
 ## Kontakt / nettsted
 
-- Offisiell URL: https://pengerifokus.no (sett NEXT_PUBLIC_SITE_URL i produksjon)
-- Sitemap: /sitemap.xml
+- Offisiell URL: https://www.pengerifokus.no
+- Sitemap: https://www.pengerifokus.no/sitemap.xml
 - Robots: /robots.txt
