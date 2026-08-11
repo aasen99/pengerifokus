@@ -5,6 +5,13 @@ import {
   INDUSTRY_LABELS,
   REGION_LABELS,
 } from "@/data/formuesbyggere-labels";
+import { WEALTH_SOURCE_LABELS } from "@/data/formuesbygger-articles/helpers";
+import {
+  groupSourcesByTier,
+  SOURCE_TIER_DESCRIPTIONS,
+  SOURCE_TIER_DISPLAY_ORDER,
+  SOURCE_TIER_LABELS,
+} from "@/data/formuesbygger-articles/source-tiers";
 import type { Formuesbygger } from "@/types/formuesbygger";
 import type { FormuesbyggerArticle } from "@/types/formuesbygger";
 import { Tag } from "@/components/ui/Tag";
@@ -19,11 +26,21 @@ interface FormuesbyggerProfileProps {
   article: FormuesbyggerArticle;
 }
 
+function formatVerifiedDate(isoDate: string): string {
+  const date = new Date(`${isoDate}T12:00:00`);
+  return date.toLocaleDateString("nb-NO", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
+}
+
 export function FormuesbyggerProfile({
   profile,
   article,
 }: FormuesbyggerProfileProps) {
   const quotes = getProfileQuotes(article.quotes);
+  const sourcesByTier = groupSourcesByTier(article.sources);
 
   return (
     <article>
@@ -45,9 +62,6 @@ export function FormuesbyggerProfile({
           {profile.name}
         </h1>
         <FormuesbyggerLifecycle profile={profile} className="mt-2" />
-        <p className="mt-2 max-w-2xl text-base leading-relaxed text-stone-600">
-          {article.intro}
-        </p>
         <p className="mt-2 text-sm text-stone-500">
           {article.readTimeMinutes} min lesetid
         </p>
@@ -56,40 +70,131 @@ export function FormuesbyggerProfile({
       <WealthEstimateCard profile={profile} />
 
       <div className="mt-8 space-y-8">
-        {article.sections.map((section) => (
-          <section key={section.heading}>
-            <h2 className="text-lg font-semibold text-stone-900">
-              {section.heading}
-            </h2>
-            {section.paragraphs?.map((paragraph) => (
-              <p
-                key={paragraph.slice(0, 48)}
-                className="mt-3 leading-relaxed text-stone-600"
-              >
-                {paragraph}
-              </p>
+        <section className="rounded-xl border border-orange-200 bg-orange-50 px-4 py-4 sm:px-5">
+          <h2 className="text-lg font-semibold text-stone-900">Kort svar</h2>
+          <p className="mt-3 leading-relaxed text-stone-700">
+            {article.shortAnswer}
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-lg font-semibold text-stone-900">Tidslinje</h2>
+          <ol className="mt-4 space-y-4">
+            {article.timeline.map((event) => (
+              <li key={`${event.date}-${event.title}`} className="flex gap-4">
+                <time
+                  dateTime={event.date}
+                  className="w-20 shrink-0 text-sm font-semibold tabular-nums text-orange-700 sm:w-24"
+                >
+                  {event.date}
+                </time>
+                <div>
+                  <p className="font-medium text-stone-900">{event.title}</p>
+                  {event.description && (
+                    <p className="mt-1 leading-relaxed text-stone-600">
+                      {event.description}
+                    </p>
+                  )}
+                </div>
+              </li>
             ))}
-            {section.bullets && (
-              <ul className="mt-4 space-y-2">
-                {section.bullets.map((item) => (
-                  <li
-                    key={item}
-                    className="flex gap-3 leading-relaxed text-stone-600"
-                  >
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-orange-500" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            )}
-            {section.tip && (
-              <div className="mt-4 rounded-xl border border-orange-200 bg-orange-50 px-4 py-3 text-sm text-stone-700">
-                <span className="font-semibold text-orange-800">Å huske: </span>
-                {section.tip}
+          </ol>
+        </section>
+
+        <section>
+          <h2 className="text-lg font-semibold text-stone-900">
+            Hvor kom formuen fra?
+          </h2>
+          <dl className="mt-4 space-y-4">
+            {article.wealthSources.map((source) => (
+              <div key={source.category}>
+                <dt className="text-sm font-semibold text-stone-900">
+                  {WEALTH_SOURCE_LABELS[source.category]}
+                </dt>
+                <dd className="mt-1 leading-relaxed text-stone-600">
+                  {source.description}
+                </dd>
               </div>
-            )}
+            ))}
+          </dl>
+        </section>
+
+        {article.ownershipVsControl && (
+          <section>
+            <h2 className="text-lg font-semibold text-stone-900">
+              Eierskap versus kontroll
+            </h2>
+            <p className="mt-3 leading-relaxed text-stone-600">
+              {article.ownershipVsControl}
+            </p>
           </section>
-        ))}
+        )}
+
+        <section className="rounded-xl border border-stone-200 bg-stone-50 px-4 py-4 sm:px-5">
+          <h2 className="text-lg font-semibold text-stone-900">
+            Det avgjørende grepet
+          </h2>
+          <p className="mt-3 leading-relaxed text-stone-700">
+            {article.decisiveMove}
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-lg font-semibold text-stone-900">
+            Hva kunne gått galt?
+          </h2>
+          <ul className="mt-4 space-y-2">
+            {article.whatCouldGoWrong.map((item) => (
+              <li
+                key={item}
+                className="flex gap-3 leading-relaxed text-stone-600"
+              >
+                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-orange-500" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section>
+          <h2 className="text-lg font-semibold text-stone-900">
+            Myte mot virkelighet
+          </h2>
+          <div className="mt-4 space-y-4">
+            {article.mythVsReality.map((pair) => (
+              <div
+                key={pair.myth}
+                className="rounded-xl border border-stone-200 px-4 py-3"
+              >
+                <p className="text-sm font-medium text-stone-500">Myte</p>
+                <p className="mt-1 text-stone-700">{pair.myth}</p>
+                <p className="mt-3 text-sm font-medium text-stone-500">
+                  Virkelighet
+                </p>
+                <p className="mt-1 leading-relaxed text-stone-700">
+                  {pair.reality}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="rounded-xl border border-orange-200 bg-orange-50 px-4 py-4">
+          <h2 className="text-lg font-semibold text-stone-900">
+            Hva kan en vanlig person faktisk lære?
+          </h2>
+          <ul className="mt-4 space-y-2">
+            {article.personalLessons.map((lesson) => (
+              <li
+                key={lesson}
+                className="flex gap-3 leading-relaxed text-stone-700"
+              >
+                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-orange-500" />
+                <span>{lesson}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
       </div>
 
       {quotes && quotes.length > 0 && (
@@ -113,19 +218,49 @@ export function FormuesbyggerProfile({
         </section>
       )}
 
-      <section className="mt-10 rounded-xl border border-orange-200 bg-orange-50 px-4 py-3">
-        <h2 className="text-sm font-semibold text-stone-900">Hva kan vi lære?</h2>
-        <ul className="mt-3 space-y-2">
-          {article.lessons.map((lesson) => (
-            <li
-              key={lesson}
-              className="flex gap-3 text-sm leading-relaxed text-stone-700"
-            >
-              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-orange-500" />
-              <span>{lesson}</span>
-            </li>
-          ))}
-        </ul>
+      <section className="mt-10 border-t border-stone-200 pt-6">
+        <h2 className="text-lg font-semibold text-stone-900">
+          Kilder og sist kontrollert
+        </h2>
+        <p className="mt-2 text-sm text-stone-500">
+          Sist kontrollert {formatVerifiedDate(article.lastVerified)}
+        </p>
+        <p className="mt-2 text-sm text-stone-500">
+          Vi prioriterer årsrapporter, SEC og Brønnøysund, deretter
+          børsmeldinger, før Kapital og andre medier. Wikipedia og formueblogger
+          brukes kun internt for å finne spor.
+        </p>
+        <div className="mt-4 space-y-5">
+          {SOURCE_TIER_DISPLAY_ORDER.map((tier) => {
+            const tierSources = sourcesByTier[tier];
+            if (!tierSources?.length) return null;
+
+            return (
+              <div key={tier}>
+                <h3 className="text-sm font-semibold text-stone-800">
+                  {SOURCE_TIER_LABELS[tier]}
+                </h3>
+                <p className="text-xs text-stone-500">
+                  {SOURCE_TIER_DESCRIPTIONS[tier]}
+                </p>
+                <ul className="mt-2 space-y-2">
+                  {tierSources.map((source) => (
+                    <li key={source.url}>
+                      <a
+                        href={source.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm font-medium text-orange-600 hover:text-orange-700"
+                      >
+                        {source.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
+        </div>
       </section>
 
       {article.relatedLinks && article.relatedLinks.length > 0 && (

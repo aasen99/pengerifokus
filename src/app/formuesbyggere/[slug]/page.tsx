@@ -33,7 +33,7 @@ export async function generateMetadata({
 
   return createPageMetadata({
     title: article.seoAngle,
-    description: `${article.intro} Omtrentlig formue: ${formatWealthEstimate(profile.wealthEstimate)}. ${profile.wealthContext}`,
+    description: `${article.shortAnswer} Omtrentlig formue: ${formatWealthEstimate(profile.wealthEstimate)}. ${profile.wealthContext}`,
     path: `/formuesbyggere/${slug}`,
     keywords: [
       profile.name,
@@ -70,7 +70,7 @@ export default async function FormuesbyggerPage({
       <JsonLd
         data={getArticleJsonLd({
           title: article.seoAngle,
-          description: article.intro,
+          description: article.shortAnswer,
           path,
           datePublished: profile.createdAt,
           dateModified: profile.updatedAt,

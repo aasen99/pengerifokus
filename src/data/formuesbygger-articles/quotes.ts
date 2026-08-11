@@ -21,7 +21,7 @@ export const formuesbyggerQuotes: Record<string, FormuesbyggerQuote[]> = {
     {
       text: "Be fearful when others are greedy and greedy when others are fearful.",
       translation:
-        "Vær fryktløs når andre er grådige, og grådig når andre er fryktløse.",
+        "Vær forsiktig når andre er grådige, og grådig når andre er redde.",
       sourceUrl:
         "https://www.berkshirehathaway.com/letters/2004ltr.pdf",
       sourceLabel: "Berkshire Hathaway, 2004",
@@ -170,6 +170,61 @@ export const formuesbyggerQuotes: Record<string, FormuesbyggerQuote[]> = {
       sourceUrl:
         "https://genius.com/Kanye-west-diamonds-from-sierra-leone-remix-lyrics",
       sourceLabel: "Diamonds from Sierra Leone (Remix), 2005",
+    },
+  ],
+  "erling-haaland": [
+    {
+      text: "I want to keep developing, keep working to get better and look to do my best to try and help us achieve more success going forward.",
+      translation:
+        "Jeg vil fortsette å utvikle meg, fortsette å jobbe for å bli bedre, og gjøre mitt beste for å hjelpe oss å oppnå mer suksess fremover.",
+      sourceUrl:
+        "https://www.mancity.com/news/mens/erling-haaland-signs-new-contract-63859158",
+      sourceLabel: "Manchester City, kontraktsmelding 2025",
+    },
+  ],
+  "oystein-stray-spetalen": [
+    {
+      text: "Du er i aksjemarkedet for å tjene penger, ikke for striper og stjerner.",
+      sourceUrl: "https://www.dn.no/",
+      sourceLabel: "Dagens Næringsliv, 2021",
+      note: "Gjengitt av DN; bruk som motto, ikke som full investeringsfilosofi.",
+      category: "motto",
+      publishRecommendation: "publiser-som-motto",
+    },
+  ],
+  "johan-johannson": [
+    {
+      text: "Det har ligget lenge i kortene at jeg overtar som styreleder for NorgesGruppen på et tidspunkt, så dette er helt udramatisk. Konsernstrategien ligger fast, og min far Knut Hartvig vil fortsatt være aktivt deltagende som observatør i styremøtene fremover.",
+      sourceUrl: "https://www.norgesgruppen.no/",
+      sourceLabel: "NorgesGruppen, styrelederskifte 2022",
+    },
+  ],
+  "steve-jobs": [
+    {
+      text: "Stay hungry. Stay foolish.",
+      translation: "Vær sulten. Vær tåpelig.",
+      sourceUrl: "https://news.stanford.edu/2005/06/14/jobs-061505/",
+      sourceLabel: "Stanford-talen 2005 (siterer The Whole Earth Catalog)",
+      note: "Jobs siterte linjen fra The Whole Earth Catalog — ikke en original Jobs-formulering.",
+      publishRecommendation: "publiser",
+    },
+  ],
+  "george-lucas": [
+    {
+      text: "Dreams are extremely important. You can’t do it unless you imagine it.",
+      translation:
+        "Drømmer er ekstremt viktige. Du klarer det ikke med mindre du forestiller deg det.",
+      sourceUrl: "https://www.lucasfilm.com/",
+      sourceLabel: "Lucasfilm — offisiell hjemmeside",
+    },
+  ],
+  "rihanna": [
+    {
+      text: "Fenty Beauty was created for everyone: for women of all shades, personalities, attitudes, cultures, and races.",
+      translation:
+        "Fenty Beauty ble skapt for alle: for kvinner i alle nyanser, personligheter, holdninger, kulturer og raser.",
+      sourceUrl: "https://www.lvmh.com/en/news-documents/news/fenty-beauty/",
+      sourceLabel: "LVMH — Fenty Beauty",
     },
   ],
 };

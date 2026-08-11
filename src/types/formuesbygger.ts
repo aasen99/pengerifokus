@@ -82,21 +82,77 @@ export interface FormuesbyggerQuote {
   note?: string;
 }
 
-export interface FormuesbyggerArticleSection {
-  heading: string;
-  paragraphs?: string[];
-  bullets?: string[];
-  tip?: string;
+export interface FormuesbyggerTimelineEvent {
+  /** Datert vendepunkt, f.eks. «1984» eller «1. jan. 2026» */
+  date: string;
+  title: string;
+  description?: string;
 }
 
+export type FormuesbyggerWealthSourceCategory =
+  | "selskaper"
+  | "aksjer"
+  | "salg"
+  | "royalty"
+  | "arv";
+
+export interface FormuesbyggerWealthSource {
+  category: FormuesbyggerWealthSourceCategory;
+  description: string;
+}
+
+export interface FormuesbyggerMythReality {
+  myth: string;
+  reality: string;
+}
+
+export interface FormuesbyggerSource {
+  label: string;
+  url: string;
+  /**
+   * Kildehierarki:
+   * primary → årsrapport / SEC / Brønnøysund
+   * secondary → børsmelding / oppkjøpsmelding
+   * tertiary → Kapital / Forbes / Reuters / DN / E24
+   * quaternary → intervju
+   * trace → Wikipedia, formueblogger (kun spor — filtreres bort i UI)
+   */
+  tier: FormuesbyggerSourceTier;
+}
+
+export type FormuesbyggerSourceTier =
+  | "primary"
+  | "secondary"
+  | "tertiary"
+  | "quaternary"
+  | "trace";
+
+/** Fast artikkelmal — samme ni seksjoner på alle profiler */
 export interface FormuesbyggerArticle {
   slug: string;
   readTimeMinutes: number;
   /** SEO-vennlig vinkling, f.eks. «Hvordan ble X rik?» */
   seoAngle: string;
-  intro: string;
-  sections: FormuesbyggerArticleSection[];
+  /** Kort svar: hvordan ble personen rik (50–80 ord) */
+  shortAnswer: string;
+  /** Fire til seks daterte vendepunkter */
+  timeline: FormuesbyggerTimelineEvent[];
+  /** Fordeling: selskaper, aksjer, salg, royalty, arv */
+  wealthSources: FormuesbyggerWealthSource[];
+  /** Eierskap versus kontroll — utelates når ikke relevant */
+  ownershipVsControl?: string;
+  /** Én konkret transaksjon eller strategisk beslutning */
+  decisiveMove: string;
+  /** Gjeld, konsentrasjon, konjunkturer, utvanning */
+  whatCouldGoWrong: string[];
+  /** Selvskapt, arvet, lønn, kontanter eller aksjeverdi */
+  mythVsReality: FormuesbyggerMythReality[];
+  /** Unikt for profilen — ikke generiske fire punkter */
+  personalLessons: string[];
+  /** Direkte kildelenker */
+  sources: FormuesbyggerSource[];
+  /** ISO-dato (YYYY-MM-DD) */
+  lastVerified: string;
   quotes?: FormuesbyggerQuote[];
-  lessons: string[];
   relatedLinks?: { label: string; href: string }[];
 }

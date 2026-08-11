@@ -1,641 +1,1863 @@
 import { buildFormuesbyggerArticle } from "./helpers";
+import { forbesBillionairesSource } from "./source-tiers";
 
 export const internasjonaleFormuesbyggerArtikler = {
   "warren-buffett": buildFormuesbyggerArticle({
     slug: "warren-buffett",
     seoAngle: "Hva kan vi lære av Warren Buffett?",
-    intro:
-      "Warren Buffett er kanskje verdens mest kjente investor. Han bygde formue ved å kjøpe gode selskaper til fornuftige priser og holde dem i tiår, ikke ved å jage raske gevinster.",
-    sections: [
+    shortAnswer:
+      "Warren Buffett ble rik ved å eie Berkshire Hathaway og reinvestere overskudd i forsikring, hele selskaper og store aksjeposter over femti år. Forsikringsfloat fra GEICO og andre selskaper ga billig investeringskapital som ble plassert i kvalitetsselskaper som Apple og Coca-Cola. Han tok nesten ingen utbytte og solgte sjelden. Formuen sitter i Berkshire-aksjer, ikke CEO-lønn. Greg Abel overtok som CEO 1. januar 2026, mens Buffett fortsatte som styreleder — et eksempel på at verdien ligger i strukturen, ikke i én persons daglige arbeid.",
+    timeline: [
       {
-        heading: "Hvordan det startet",
-        paragraphs: [
-          "Buffett begynte å investere som barn og studerte under Benjamin Graham, faren til verdiinvestering. Han tok over Berkshire Hathaway og gjorde det til et konglomerat som eier alt fra forsikring til jernbane.",
-          "Strategien er enkel å forstå, vanskelig å følge: kjøp kvalitet, vær tålmodig, la rentes rente jobbe.",
-        ],
+        date: "1956",
+        title: "Buffett Partnership startes",
+        description:
+          "Buffett begynte å forvalte andres kapital som ung investor og utviklet verdiinvesteringsstilen under Benjamin Graham.",
       },
       {
-        heading: "Hva han eier",
-        paragraphs: [
-          "Nesten all formuen sitter i Berkshire Hathaway-aksjer. Buffett har lenge advart mot å spekulere og for høy gjeld.",
-          "Berkshire eier hele selskaper og store aksjeposter i andre, som Apple og Coca-Cola. Det er eierskap i reell økonomi, ikke bare trading.",
-        ],
-        bullets: [
-          "Forsikring som gir investeringskapital (float)",
-          "Helt eide industriselskaper",
-          "Store, langsiktige aksjeposter i børsnoterte selskaper",
-        ],
+        date: "1965",
+        title: "Overtar Berkshire Hathaway",
+        description:
+          "Han tok kontroll over et tekstilselskap og gjorde det til et konglomerat for forsikring og industrielle investeringer.",
       },
       {
-        heading: "Verdiinvestering i praksis",
-        paragraphs: [
-          "Buffett leter etter selskaper med varig konkurransefortrinn, god ledelse og pris under indre verdi. Han kjøper sjelden for å selge raskt.",
-        ],
-        bullets: [
-          "Forstå hva du eier, ikke bare kjøp på rykter",
-          "Vær tålmodig: tid i markedet slår timing for de fleste",
-          "Unngå gjeld og produkter du ikke forstår",
-        ],
+        date: "1980–2000",
+        title: "Forsikring og store aksjeposter",
+        description:
+          "GEICO og andre forsikringsselskaper ga float som finansierte kjøp av hele selskaper og langsiktige aksjeposter.",
+      },
+      {
+        date: "2016",
+        title: "Apple blir største post",
+        description:
+          "Berkshire bygde en massiv Apple-posisjon som viste at selv en 86-åring fortsatt satte milliarder i børsaksjer.",
+      },
+      {
+        date: "1. jan. 2026",
+        title: "Greg Abel blir CEO",
+        description:
+          "Abel overtok som operativ leder, mens Buffett fortsatte som styreleder i et konglomerat bygget over seks tiår.",
       },
     ],
-    ownershipParagraphs: [
-      "Buffett ble ikke milliardær av CEO-lønn. Han ble rik fordi han eide andeler i selskaper som vokste over femti år, og fordi han reinvesterte avkastningen i stedet for å bruke den.",
-      "Dette er det nærmeste eksempelet på at vanlig sparing og investering kan skalere til ekstrem formue, bare over mye lengre tid og med unik disiplin.",
+    wealthSources: [
+      {
+        category: "aksjer",
+        description:
+          "Berkshire Hathaway-aksjer og store børsnoterte poster som Apple og Coca-Cola utgjør hoveddelen av formuen.",
+      },
+      {
+        category: "selskaper",
+        description:
+          "Helt eide selskaper som GEICO, BNSF jernbane og industrivirksomheter genererer kontantstrøm til reinvestering.",
+      },
     ],
-    personalFinanceBullets: [
-      "Indeksfond gir bredt eierskap uten å måtte plukke enkeltaksjer som Buffett",
-      "Spar jevnt over mange år og la avkastningen reinvesteres",
-      "Les om hva fondet eller selskapet faktisk gjør, ikke bare følg trenden",
-      "Unngå å låne til spekulasjon",
+    decisiveMove:
+      "Å transformere Berkshire fra tekstil til forsikringskonglomerat og bruke forsikringsfloat som permanent investeringskapital — i stedet for å ta ut utbytte eller selge gode poster.",
+    whatCouldGoWrong: [
+      "Konsentrasjon i få store aksjeposter kan gi store tap ved bransje- eller selskapsskifte.",
+      "Forsikringstap i ekstreme år kan redusere float og tvinge salg av investeringer.",
+      "Generasjonsskifte kan endre investeringskultur etter Buffett.",
     ],
-    lessons: [
-      "Tid i markedet slår timing av markedet for de fleste.",
-      "Forstå hva du eier: Buffett leser årsrapporter, ikke bare grafer.",
-      "Unngå unødvendig gjeld og komplekse produkter du ikke forstår.",
-      "Formue bygges ofte gjennom eierskap, ikke gjennom høy lønn.",
-      "Rentes rente er den sterkeste motoren når avkastning reinvesteres.",
+    mythVsReality: [
+      {
+        myth: "Buffett ble rik på stock picking alene.",
+        reality:
+          "Forsikringsfloat og eierskap i hele selskaper ga kapital andre investorer ikke hadde — kombinert med ekstrem tålmodighet.",
+      },
+      {
+        myth: "Han tjente formue på høy CEO-lønn.",
+        reality:
+          "Lønnen var symbolsk; formuen vokste fordi Berkshire-aksjene og datterselskapene steg i verdi over tiår.",
+      },
     ],
+    personalLessons: [
+      "Tid i markedet slår timing for de fleste — Buffett holdt poster i tiår, ikke uker.",
+      "Forstå hva du eier: han leser årsrapporter, ikke bare grafer.",
+      "Rentes rente er den sterkeste motoren når avkastning reinvesteres uten uttak.",
+      "Unngå gjeld og produkter du ikke forstår — enkelt, men krevende å følge.",
+    ],
+    sources: [
+      {
+        label: "Berkshire Hathaway — årsbrev og rapporter",
+        url: "https://www.berkshirehathaway.com/reports.html",
+        tier: "primary",
+      },
+      {
+        label: "Berkshire Hathaway — ledelse og styre",
+        url: "https://www.berkshirehathaway.com/management.html",
+        tier: "primary",
+      },
+    ],
+    lastVerified: "2026-08-11",
     relatedLinks: [
       { label: "Kom i gang med fond", href: "/guider/kom-i-gang-med-fond" },
       { label: "Regel 72", href: "/verktoy/regel-72" },
       { label: "Rentes rente i ordboken", href: "/ordbok/rentes-rente" },
     ],
   }),
+
   "elon-musk": buildFormuesbyggerArticle({
     slug: "elon-musk",
     seoAngle: "Hvordan ble Elon Musk rik?",
-    intro:
-      "Elon Musk bygde formue gjennom gründerskap i teknologi og industri, med ekstreme svingninger i verdien. Historien viser både kraften i eierskap og risikoen ved konsentrasjon.",
-    sections: [
+    shortAnswer:
+      "Elon Musk bygde formue gjennom gründerskap og beholdt eierskap i få selskaper med ekstrem oppside. PayPal-exiten i 2002 ga rundt 180 millioner dollar som nesten helt ble reinvestert i SpaceX og Tesla. Han har flere ganger vært personlig konkursnær, men solgte sjelden ut. Formuen er konsentrert i Tesla, SpaceX og X — ikke spredt i fond. Aksjekursen har svingt voldsomt, og kapitalinnhenting har utvannet andeler, men de som beholdt eierskap gjennom nedgang fikk oppsiden da selskapene vokste.",
+    timeline: [
       {
-        heading: "Fra PayPal til Tesla og SpaceX",
-        paragraphs: [
-          "Musk tjente på PayPal-salget, men den virkelige formuen kom fra eierskap i Tesla og andre selskaper. Han har reinvestert og tatt stor personlig risiko flere ganger.",
-          "Aksjekursen i Tesla har svingt voldsomt, noe som gjør at formuesanslag endrer seg raskt.",
-        ],
+        date: "1995–2002",
+        title: "Zip2 og PayPal",
+        description:
+          "Musk grunnla og solgte tidlige tech-selskaper; PayPal-exiten til eBay ga kapital til neste satsinger.",
       },
       {
-        heading: "Konsentrert eierskap",
-        paragraphs: [
-          "Musk eier store andeler i Tesla, SpaceX og X (tidligere Twitter). Formuen er ikke spredt over hundrevis av investeringer, men konsentrert i få selskaper han styrer.",
-        ],
-        bullets: [
-          "Tesla: elbiler og energi",
-          "SpaceX: romfart og satellitter",
-          "X: sosiale medier og betalinger",
-        ],
+        date: "2002",
+        title: "SpaceX grunnlegges",
+        description:
+          "Nesten hele PayPal-gevinsten gikk til romfart — et selskap som krevde mange runder med kapital og utvanning.",
       },
       {
-        heading: "Risiko og utholdenhet",
-        paragraphs: [
-          "Musk har flere ganger vært nær konkurs på personlig plan, men beholdt eierskap. Gründere som vil bygge slik formue må tåle at verdien kan falle dramatisk før den stiger igjen.",
-        ],
+        date: "2004",
+        title: "Investerer i Tesla",
+        description:
+          "Musk gikk inn som stor investor og CEO, beholdt andeler gjennom kriser og børsnotering.",
+      },
+      {
+        date: "2022",
+        title: "Kjøper Twitter (X)",
+        description:
+          "Han finansierte oppkjøpet med lån og salg av Tesla-aksjer — ekstrem konsentrasjon og personlig risiko.",
+      },
+      {
+        date: "2020–2026",
+        title: "Verdens rikeste — med svingninger",
+        description:
+          "Tesla- og SpaceX-verdier har gjort ham til verdens rikeste flere ganger, med store fall imellom.",
       },
     ],
-    ownershipParagraphs: [
-      "Musk tjener ikke primært lønn som CEO. Formuen følger aksjekursen i selskapene han eier. Når Tesla steg, ble han verdens rikeste. Når kursen faller, synker formuen tilsvarende.",
-      "Dette er ekstremt eierskap: stor oppside, stor nedside. De fleste bør ikke kopiere konsentrasjonen, men lære at gründere ofte blir rike på aksjer, ikke lønn.",
+    wealthSources: [
+      {
+        category: "aksjer",
+        description:
+          "Tesla-aksjer utgjør den største børsnoterte delen; kursen driver mesteparten av formuesverdien.",
+      },
+      {
+        category: "selskaper",
+        description:
+          "SpaceX og X er unoterte; verdien er mindre likvid, men Musk eier store andeler uten daglig børspris.",
+      },
+      {
+        category: "salg",
+        description:
+          "PayPal-exiten i 2002 var startkapitalen som ble reinvestert i stedet for å bli sittende på kontanter.",
+      },
     ],
-    lessons: [
-      "Gründere kan bli rike på eierskap, ikke lønn, men risikoen er enorm.",
-      "Konsentrasjon i få selskaper gir stor oppside og stor nedside.",
-      "Å tro på en idé over tid krever både kapital og utholdenhet.",
-      "Synlighet og merkevare kan være en forretningsressurs, men også en belastning.",
+    ownershipVsControl:
+      "Musk har både økonomisk eierskap og særlige stemmerettigheter i Tesla som gir kontroll utover ren andel. I SpaceX er han gründer og dominerende eier uten børsens daglige prissvingninger — men også uten likviditet.",
+    decisiveMove:
+      "Reinvestere nesten hele PayPal-gevinsten i SpaceX og Tesla i stedet for å diversifisere — og gjentatte ganger låne eller selge andre eiendeler for å beholde andeler gjennom emisjoner.",
+    whatCouldGoWrong: [
+      "Konsentrasjon i få selskaper gir enorm nedside ved ett feilskritt.",
+      "Hver kapitalrunde utvanner — uten oppkjøp risikerer gründere å miste andel.",
+      "Personlig gjeld knyttet til aksjer kan tvinge salg i nedgang.",
     ],
+    mythVsReality: [
+      {
+        myth: "Gründere blir alltid rike på høy lønn.",
+        reality:
+          "Musks formue følger aksjekurs og selskapsverdi — lønn er irrelevant sammenlignet med eierskap.",
+      },
+      {
+        myth: "Han solgte aldri noe.",
+        reality:
+          "Han har solgt Tesla-aksjer for å finansiere X og betjene lån — men strategien har vært å beholde mest mulig.",
+      },
+    ],
+    personalLessons: [
+      "Kapitalinnhenting er nødvendig, men spør hva du faktisk eier etter hver runde.",
+      "Konsentrasjon gir stor oppside og stor nedside — det er ikke en gratis lunsj.",
+      "Å tro på én idé over tiår krever både kapital og utholdenhet gjennom kriser.",
+      "Skille mellom børsnotert eierskap (likvid, volatil) og unotert (illikvid, oppside).",
+    ],
+    sources: [
+      {
+        label: "SEC EDGAR — Tesla Inc.",
+        url: "https://www.sec.gov/edgar/browse/?CIK=1318605",
+        tier: "primary",
+      },
+      forbesBillionairesSource(),
+      {
+        label: "SpaceX — offisiell nettside",
+        url: "https://www.spacex.com/",
+        tier: "tertiary",
+      },
+    ],
+    lastVerified: "2026-08-11",
     relatedLinks: [
       { label: "Egenkapital i ordboken", href: "/ordbok/egenkapital" },
       { label: "Aksje i ordboken", href: "/ordbok/aksje" },
     ],
   }),
+
   "jeff-bezos": buildFormuesbyggerArticle({
     slug: "jeff-bezos",
     seoAngle: "Hvordan bygde Jeff Bezos Amazon?",
-    intro:
-      "Jeff Bezos startet Amazon som nettbokhandel og bygde det til et av verdens største selskaper. Formuen kom fra å eie en stor andel av et selskap som vokste i tiår.",
-    sections: [
+    shortAnswer:
+      "Jeff Bezos startet Amazon som nettbokhandel i 1994 og bygde formue ved å eie en stor andel av et selskap som prioriterte vekst og reinvestering fremfor utbytte. I aksjonærbrevet fra 1997 skrev han at langsiktig markedslederskap var viktigere enn kortsiktig profitt. AWS ble en helt annen inntektsmotor med høyere margin enn retail. Bezos trakk seg som CEO i 2021, men mesteparten av formuen sitter fortsatt i Amazon-aksjer. CEO-lønnen var beskjeden; verdien fulgte reinvesteringen over tiår.",
+    timeline: [
       {
-        heading: "Langsiktig gründer",
-        paragraphs: [
-          "Bezos fokuserte på kundeopplevelse, logistikk og skala. Amazon tjente lite i årevis, men vokste markedsandel. Investorer som holdt, ble belønnet.",
-          "Han har senere investert i romfart (Blue Origin) og andre prosjekter.",
-        ],
+        date: "1994",
+        title: "Amazon grunnlegges",
+        description:
+          "Bezos startet nettbokhandelen fra garasjen og fokuserte på kundeopplevelse og skala fra dag én.",
       },
       {
-        heading: "Reinvestering fremfor utbytte",
-        paragraphs: [
-          "Amazon brukte overskuddet til å bygge lagre, datasentre og nye tjenester i stedet for å betale ut mye til aksjonærer. Det krevde tålmodighet fra investorer.",
-        ],
-        bullets: [
-          "AWS (skytjenester) ble en enorm inntektskilde",
-          "Prime-medlemskap bandt kunder til plattformen",
-          "Logistikk og skala ga lavere kostnad per pakke",
-        ],
+        date: "1997",
+        title: "Børsnotering og aksjonærbrev",
+        description:
+          "I det første brevet til aksjonærer lovet han langsiktig vekst fremfor kortsiktig profitt og utbytte.",
+      },
+      {
+        date: "2005",
+        title: "Amazon Web Services lanseres",
+        description:
+          "Skytjenester til bedrifter ble en egen motor med høyere margin enn netthandel.",
+      },
+      {
+        date: "2007",
+        title: "Prime lanseres",
+        description:
+          "Medlemskap bandt kunder til plattformen og økte kjøpsfrekvens og lojalitet.",
+      },
+      {
+        date: "2021",
+        title: "Trer av som CEO",
+        description:
+          "Bezos gikk over til styreleder og investerte i Blue Origin, media og filantropi — Amazon-aksjer dominerer fortsatt formuen.",
       },
     ],
-    ownershipParagraphs: [
-      "Bezos ble rik fordi han eide en stor andel av Amazon da selskapet gikk fra tapsbringende vekst til dominans. CEO-lønnen var beskjeden sammenlignet med verdien av aksjene.",
-      "Mønsteret: gründere som beholder eierskap gjennom vekstfasen, får belønningen når selskapet modnes. Selge for tidlig kan koste mer enn man tror.",
+    wealthSources: [
+      {
+        category: "aksjer",
+        description:
+          "Amazon-aksjer utgjør hoveddelen av formuen; verdien vokste med retail, Prime og AWS over tiår.",
+      },
+      {
+        category: "selskaper",
+        description:
+          "Blue Origin og andre investeringer utenfor Amazon er mindre, men viser reinvestering av kapital.",
+      },
     ],
-    lessons: [
+    decisiveMove:
+      "Reinvestere kontantstrømmen i logistikk, datasentre og Prime i stedet for utbytte — og bygge AWS som en separat, høymargin forretning inne i samme selskap.",
+    whatCouldGoWrong: [
+      "Konsentrasjon i én aksje gir enorm eksponering mot regulering og konkurranse.",
+      "Retail-marginer kan presses mens investeringer i vekst fortsetter.",
+      "AWS møter hard konkurranse fra Microsoft og Google.",
+    ],
+    mythVsReality: [
+      {
+        myth: "Bezos ble rik på høy CEO-lønn.",
+        reality:
+          "Lønnen var lav; formuen fulgte Amazon-aksjens verdi over tiår med reinvestering.",
+      },
+      {
+        myth: "Amazon tjente penger på bøker fra start.",
+        reality:
+          "Selskapet gikk med tap i årevis mens det bygde skala, Prime og sky — investorer måtte være tålmodige.",
+      },
+    ],
+    personalLessons: [
       "Reinvestering av overskudd kan bygge mer verdi enn utbytte på kort sikt.",
-      "Eierskap i et voksende selskap kan overgå enhver lønn.",
-      "Tålmodige investorer og gründere kan vinne på lang sikt.",
-      "Kundefokus og skala kan slå kortsiktig profittjag.",
+      "Ett selskap kan ha flere forretningsmodeller med helt ulik lønnsomhet.",
+      "Kundefokus og kapitalhastighet kan slå kortsiktig profittjag over tiår.",
+      "Tålmodige investorer og gründere kan vinne når to motorer modnes samtidig.",
     ],
+    sources: [
+      {
+        label: "Amazon — aksjonærbrev 1997",
+        url: "https://www.aboutamazon.com/news/company-news/amazons-original-1997-letter-to-shareholders",
+        tier: "primary",
+      },
+      {
+        label: "SEC EDGAR — Amazon.com Inc.",
+        url: "https://www.sec.gov/edgar/browse/?CIK=1018724",
+        tier: "primary",
+      },
+    ],
+    lastVerified: "2026-08-11",
     relatedLinks: [
       { label: "Sparekalkulator", href: "/verktoy/sparekalkulator" },
       { label: "Kom i gang med fond", href: "/guider/kom-i-gang-med-fond" },
     ],
   }),
+
   "bill-gates": buildFormuesbyggerArticle({
     slug: "bill-gates",
     seoAngle: "Hva kan vi lære av Bill Gates?",
-    intro:
-      "Bill Gates bygde Microsoft og ble en av verdens rikeste. Senere har han brukt stor del av formuen på filantropi gjennom Bill & Melinda Gates Foundation.",
-    sections: [
+    shortAnswer:
+      "Bill Gates bygde formue ved å grunnlegge Microsoft og beholde betydelig eierskap gjennom børsnotering og PC-boomen. Programvare skalerer globalt: utvikle én gang, selge til milliarder med lav marginalkostnad. Han solgte gradvis Microsoft-aksjer og reinvesterte i fond og andre eiendeler. I mai 2025 kunngjorde han at han vil gi bort mesteparten av resterende privat formue til Gates Foundation før stiftelsen avsluttes i 2045 — en tidsavgrenset filantropistrategi som skiller privat formue fra stiftelsens eiendeler.",
+    timeline: [
       {
-        heading: "Software og eierskap",
-        paragraphs: [
-          "Gates og Paul Allen så tidlig at programvare kunne skaleres globalt. Microsoft dominerte PC-epoken med Windows og Office, og Gates beholdt betydelig eierskap.",
-          "Overgangen fra gründer til filantrop viser at formue også kan brukes til samfunnsformål.",
-        ],
+        date: "1975",
+        title: "Microsoft grunnlegges",
+        description:
+          "Gates og Paul Allen så tidlig at programvare kunne selges globalt; Windows og Office dominerte PC-epoken.",
       },
       {
-        heading: "Skalerbar teknologi",
-        paragraphs: [
-          "Programvare koster mye å utvikle én gang, men kan selges til millioner med lav marginalkostnad. Det er en av grunnene til at tech-gründere kan bygge enorm formue raskt.",
-        ],
-        bullets: [
-          "Windows og Office på nesten alle PC-er",
-          "Lisensinntekter ga gjentakende kontantstrøm",
-          "Eierskap beholdt gjennom børsnotering og vekst",
-        ],
+        date: "1986",
+        title: "Børsnotering",
+        description:
+          "Microsoft ble børsnotert; Gates beholdt en stor andel som vokste med lisensinntektene.",
+      },
+      {
+        date: "2000",
+        title: "Overgang til filantropi",
+        description:
+          "Gates trakk seg gradvis fra operativ rolle og etablerte Bill & Melinda Gates Foundation.",
+      },
+      {
+        date: "2021",
+        title: "Skilsmisse og omorganisering",
+        description:
+          "Stiftelsen endret navn og struktur; Gates fortsatte som sentral filantropisk aktør.",
+      },
+      {
+        date: "Mai 2025",
+        title: "2045-planen kunngjøres",
+        description:
+          "Gates sa han vil overføre mesteparten av resterende privat formue til stiftelsen, som skal avsluttes i 2045.",
       },
     ],
-    ownershipParagraphs: [
-      "Gates ble ikke rik av lønn som programmerer. Han eide Microsoft da det ble global standard. Verdien av aksjene vokste i tiår.",
-      "Han har solgt og gitt bort store deler av formuen, men poenget gjenstår: eierskap i et vinnende selskap kan gi mer enn noen lønn.",
+    wealthSources: [
+      {
+        category: "aksjer",
+        description:
+          "Microsoft-aksjer var grunnlaget; Gates solgte gradvis og diversifiserte til fond og andre investeringer.",
+      },
+      {
+        category: "selskaper",
+        description:
+          "Cascade Investment forvalter store deler av privat formue utenfor Microsoft.",
+      },
+      {
+        category: "salg",
+        description:
+          "Gradvis salg av Microsoft-aksjer finansierte filantropi og diversifisering over tiår.",
+      },
     ],
-    lessons: [
-      "Teknologi med skalerbarhet kan skape enorm verdi.",
-      "Å holde eierskap i et vinnende selskap er ofte viktigere enn tidlig uttak.",
-      "Formue kan brukes aktivt, ikke bare akkumuleres.",
-      "Å gi bort formue er også et valg eierskap gir mulighet til.",
+    decisiveMove:
+      "Holde eierskap i Microsoft gjennom lisensboomen og deretter planlegge systematisk overføring av privat formue til Gates Foundation med fast sluttdato i 2045.",
+    whatCouldGoWrong: [
+      "Konsentrasjon i tech kan gi store svingninger ved bransjeskifte.",
+      "Stiftelsesoverføringer reduserer privat formue og fleksibilitet.",
+      "Filantropiske mål kan mislykkes uavhengig av kapitalstørrelse.",
     ],
+    mythVsReality: [
+      {
+        myth: "Gates Foundation er Gates' private lommebok.",
+        reality:
+          "Stiftelsens eiendeler er bundet til formålet og skilles fra privat formue juridisk og regnskapsmessig.",
+      },
+      {
+        myth: "Han ble rik på én smart produktlansering.",
+        reality:
+          "Lisensmodellen ga gjentakende inntekt over tiår — kombinert med beholdt eierskap og global skala.",
+      },
+    ],
+    personalLessons: [
+      "Teknologi med skalerbarhet kan skape enorm verdi når marginalkostnaden er lav.",
+      "Privat formue og stiftelsesmidler er separate balanser med ulike regler.",
+      "Formue kan brukes aktivt med tidsavgrenset plan — ikke bare akkumuleres evig.",
+      "Å holde eierskap i et vinnende selskap slår tidlig uttak for mange gründere.",
+    ],
+    sources: [
+      {
+        label: "Gates Foundation — om stiftelsen",
+        url: "https://www.gatesfoundation.org/about/foundation-faq",
+        tier: "primary",
+      },
+      {
+        label: "Microsoft — investor relations",
+        url: "https://www.microsoft.com/en-us/investor",
+        tier: "primary",
+      },
+      forbesBillionairesSource(),
+    ],
+    lastVerified: "2026-08-11",
     relatedLinks: [
       { label: "Kom i gang med fond", href: "/guider/kom-i-gang-med-fond" },
       { label: "ASK i ordboken", href: "/ordbok/ask" },
     ],
   }),
+
   "mark-zuckerberg": buildFormuesbyggerArticle({
     slug: "mark-zuckerberg",
     seoAngle: "Hvordan ble Mark Zuckerberg rik?",
-    intro:
-      "Mark Zuckerberg grunnla Facebook som student og bygde Meta til et av verdens største teknologiselskaper. Formuen er nesten utelukkende knyttet til eierskap i Meta.",
-    sections: [
+    shortAnswer:
+      "Mark Zuckerberg grunnla Facebook som student og bygde Meta til et av verdens største teknologiselskaper. Formuen følger nettverkseffekter og annonseinntekter fra Facebook, Instagram og WhatsApp. Han beholdt klasse B-aksjer som gir omtrent 60 % av stemmene ifølge SEC-filinger, mens økonomisk eierskap er lavere. Det lar ham satse tungt på metaverse og AI uten kortsiktig profittpress. Formuen svinger med Meta-aksjekursen — ikke CEO-lønn.",
+    timeline: [
       {
-        heading: "Sosiale medier og annonser",
-        paragraphs: [
-          "Facebook vokste gjennom nettverkseffekter: jo flere brukere, jo mer verdi for hver bruker. Inntektene kom fra annonser, og Zuckerberg beholdt kontroll og eierskap.",
-          "Meta eier Facebook, Instagram og WhatsApp, noe som gir enorm rekkevidde til annonsører.",
-        ],
+        date: "2004",
+        title: "Facebook lanseres",
+        description:
+          "Zuckerberg startet på Harvard; nettverkseffekter gjorde plattformen mer verdifull for hver ny bruker.",
       },
       {
-        heading: "Kontroll og stemmerett",
-        paragraphs: [
-          "Zuckerberg har beholdt særlige aksjeklasser som gir ham kontroll selv om han ikke eier alt økonomisk. For gründere kan kontroll over selskapet være like viktig som formue.",
-        ],
-        bullets: [
-          "Nettverkseffekter: vinner tar ofte det meste",
-          "Annonseinntekter skalerer med brukertall",
-          "Børsnotering ga likviditet, men han solgte ikke alt",
-        ],
+        date: "2012",
+        title: "Børsnotering",
+        description:
+          "IPO ga likviditet til tidlige investorer, men Zuckerberg beholdt kontroll via doble aksjeklasser.",
+      },
+      {
+        date: "2012–2014",
+        title: "Instagram og WhatsApp kjøpes",
+        description:
+          "Oppkjøp ga annonsører rekkevidde til milliarder og styrket nettverkseffektene.",
+      },
+      {
+        date: "2021",
+        title: "Meta og metaverse-satsing",
+        description:
+          "Selskapet byttet navn og investerte milliarder i Reality Labs — mulig pga. stemmekontroll.",
+      },
+      {
+        date: "2023–2026",
+        title: "AI-integrasjon",
+        description:
+          "Meta satser tungt på AI i alle plattformer mens annonseinntekter fortsatt bærer inntektene.",
       },
     ],
-    ownershipParagraphs: [
-      "Zuckerberg ble milliardær ved børsnotering fordi han eide en stor andel av Facebook. Lønn som CEO er irrelevant sammenlignet med aksjeverdien.",
-      "Når Meta-aksjen faller, faller formuen hans. Det er ren eierskapsekonomi, ikke inntekt fra jobb.",
+    wealthSources: [
+      {
+        category: "aksjer",
+        description:
+          "Meta-aksjer utgjør nesten hele formuen; kursen reflekterer annonseinntekter og vekstforventninger.",
+      },
     ],
-    lessons: [
+    ownershipVsControl:
+      "Zuckerberg eier klasse B-aksjer med omtrent 60 % av stemmene ifølge SEC-filinger, mens økonomisk eierskap er lavere. Han kan ta langsiktige beslutninger — metaverse, AI — uten å måtte vinne kortsiktig profitt hos alle aksjonærer. Formuen følger aksjekursen; makten følger stemmerettighetene.",
+    decisiveMove:
+      "Beholde stemmekontroll via doble aksjeklasser ved børsnotering og bruke den til å kjøpe Instagram og WhatsApp — og senere satse milliarder på metaverse og AI.",
+    whatCouldGoWrong: [
+      "Regulering av annonser og personvern kan kutte inntektene.",
+      "Metaverse-investeringer kan aldri gi avkastning.",
+      "Konsentrasjon i én aksje gir enorm volatilitet.",
+    ],
+    mythVsReality: [
+      {
+        myth: "Han ble rik på høy gründerlønn.",
+        reality:
+          "Formuen er Meta-aksjer; lønn er irrelevant sammenlignet med børsverdien.",
+      },
+      {
+        myth: "Gründere mister alltid kontroll ved børsnotering.",
+        reality:
+          "Doble aksjeklasser lot Zuckerberg beholde styring selv etter IPO.",
+      },
+    ],
+    personalLessons: [
       "Nettverkseffekter kan gi vinner-tar-alle-dynamikk i tech.",
-      "Kontroll over selskapet (stemmerett) kan bety mer enn bare økonomisk eierandel.",
-      "Ung gründer med stor eierandel kan bli ekstremt rik ved børsnotering.",
-      "Å beholde eierskap ved IPO er et bevisst valg med stor oppside.",
+      "Annonser og brukerdata skalerer bedre enn abonnement alene for gratis plattformer.",
+      "Stemmekontroll kan bety mer enn ren eierandel for gründere som vil satse langsiktig.",
+      "Ung gründer med stor eierandel kan bli ekstremt rik ved børsnotering — med stor volatilitet.",
     ],
+    sources: [
+      {
+        label: "SEC EDGAR — Meta Platforms Inc.",
+        url: "https://www.sec.gov/edgar/browse/?CIK=1326801",
+        tier: "primary",
+      },
+      {
+        label: "Meta — investor relations",
+        url: "https://investor.atmeta.com/",
+        tier: "primary",
+      },
+    ],
+    lastVerified: "2026-08-11",
     relatedLinks: [
       { label: "Aksje i ordboken", href: "/ordbok/aksje" },
       { label: "Egenkapital i ordboken", href: "/ordbok/egenkapital" },
     ],
   }),
+
   "bernard-arnault": buildFormuesbyggerArticle({
     slug: "bernard-arnault",
     seoAngle: "Hvordan bygde Bernard Arnault luksusimperiet?",
-    intro:
-      "Bernard Arnault leder LVMH, verdens største luksuskonsern. Han bygde formue ved å kjøpe og samle premium-merker som Louis Vuitton, Dior og Hennessy.",
-    sections: [
+    shortAnswer:
+      "Bernard Arnault bygde formue ved å kjøpe, samle og utvikle premium-merker under LVMH — verdens største luksuskonsern. Han startet i familiebedriften, kjøpte Christian Dior og deretter LVMH, og samlet merker som Louis Vuitton, Bulgari og Tiffany. Strategien er oppkjøp av undervurderte ikoner, investering i kvalitet og butikkopplevelse, og prisingsmakt — ikke lavpris eller franchise. Formuen følger LVMH-aksjekursen; familien holder tett grep om stemmer og strategi.",
+    timeline: [
       {
-        heading: "Luksus som investering",
-        paragraphs: [
-          "Arnault så at luksusmerker med historie og kvalitet kan ta høye priser og beholde kunder over generasjoner. LVMH eier dusinvis av merker.",
-          "Han kjøpte og restrukturerte merker andre undervurderte, og bygde et konglomerat av luksus.",
-        ],
+        date: "1984",
+        title: "Kjøper Boussac og Dior",
+        description:
+          "Arnault kjøpte tekstilgruppen Boussac og fikk kontroll over Christian Dior — inngang til luksus.",
       },
       {
-        heading: "Merkevarer som eiendeler",
-        paragraphs: [
-          "Louis Vuitton, Dior, Tiffany og Hennessy er ikke bare produkter, men merkevarer med prisingsmakt. Kundene betaler for historie, kvalitet og status.",
-        ],
-        bullets: [
-          "Oppkjøp av underutnyttede merker",
-          "Konsolidering under LVMH-paraplyen",
-          "Global vekst, spesielt i Asia",
-        ],
+        date: "1989",
+        title: "Tar kontroll over LVMH",
+        description:
+          "Etter kamp om selskapet samlet han Louis Vuitton, Moët og Hennessy under ett tak.",
+      },
+      {
+        date: "2000–2010",
+        title: "Global ekspansjon",
+        description:
+          "Oppkjøp som Bulgari og vekst i Asia gjorde LVMH til global luksusleder.",
+      },
+      {
+        date: "2021",
+        title: "Tiffany-oppkjøpet",
+        description:
+          "LVMH fullførte oppkjøpet av Tiffany for rundt 16 milliarder dollar — premium for et ikon.",
+      },
+      {
+        date: "2023–2026",
+        title: "Verdens rikeste — periodvis",
+        description:
+          "Luksusmarkedet og LVMH-aksjen har gjort Arnault til verdens rikeste flere ganger.",
       },
     ],
-    ownershipParagraphs: [
-      "Arnault ble rik ved å eie LVMH og merkene i konsernet, ikke ved høy lederlønn. Når luksusmarkedet går bra, stiger aksjeverdien og formuen hans.",
-      "Luksus er motstandsdyktig fordi de rikeste kundene handler uansett konjunktur. Det gir en annen type eierskap enn sykliske bransjer.",
+    wealthSources: [
+      {
+        category: "aksjer",
+        description:
+          "LVMH-aksjer og families eierskap utgjør hoveddelen av formuen.",
+      },
+      {
+        category: "selskaper",
+        description:
+          "LVMH-konsernet med dusinvis av merkevarer genererer høy margin per enhet.",
+      },
+      {
+        category: "arv",
+        description:
+          "Arnault startet i familiebedriften; arv og familieplanlegging er sentral i kontrollstrategien.",
+      },
     ],
-    lessons: [
-      "Merkevare og opplevelse kan gi høyere margin enn råvarer.",
-      "Oppkjøp av sterke merker kan være en vei til konsolidering.",
-      "Luksus er motstandsdyktig mot konjunkturer for de rikeste kundene.",
-      "Å samle merker under ett tak kan gi skala i distribusjon og markedsføring.",
+    decisiveMove:
+      "Kjøpe Christian Dior og deretter vinne kontrollkampen om LVMH — og bruke konsernet som plattform for oppkjøp av undervurderte luksusmerker globalt.",
+    whatCouldGoWrong: [
+      "Luksus er syklisk — kinesiske forbrukere og konjunkturer påvirker salget.",
+      "Oppkjøp til premium pris kan slå feil ved feilvurdering.",
+      "Familiekonflikter kan true kontroll over generasjonsskifte.",
     ],
+    mythVsReality: [
+      {
+        myth: "Luksus handler om høyest mulig pris på alt.",
+        reality:
+          "Det handler om merkevarehistorie, håndverk og prisingsmakt — ikke volum som Zara.",
+      },
+      {
+        myth: "Arnault ble rik på lederlønn.",
+        reality:
+          "Formuen følger LVMH-aksjekursen og families eierskap over tiår.",
+      },
+    ],
+    personalLessons: [
+      "Merkevare og opplevelse kan gi høyere margin enn råvarer eller volumhandel.",
+      "Oppkjøp av sterke merker under ett tak gir skala i distribusjon og markedsføring.",
+      "Luksus er motstandsdyktig for de rikeste kundene, men ikke immun mot konjunkturer.",
+      "Porteføljetenkning slår enkeltmerke-eierskap når du konsoliderer en bransje.",
+    ],
+    sources: [
+      {
+        label: "LVMH — investor relations og årsrapporter",
+        url: "https://www.lvmh.com/investors/publications",
+        tier: "primary",
+      },
+      {
+        label: "LVMH — oppkjøp av Tiffany & Co.",
+        url: "https://www.lvmh.com/news-documents/press-releases/acquisition-of-tiffany-co",
+        tier: "secondary",
+      },
+      forbesBillionairesSource(),
+    ],
+    lastVerified: "2026-08-11",
     relatedLinks: [
       { label: "Nettoformue i ordboken", href: "/ordbok/nettoformue" },
+      { label: "Amancio Ortega", href: "/formuesbyggere/amancio-ortega" },
     ],
   }),
+
   "larry-ellison": buildFormuesbyggerArticle({
     slug: "larry-ellison",
     seoAngle: "Hvordan ble Larry Ellison rik?",
-    intro:
-      "Larry Ellison grunnla Oracle og bygde formue på databasesoftware til bedrifter. Senere har han investert bredt, inkludert helse og teknologi.",
-    sections: [
+    shortAnswer:
+      "Larry Ellison grunnla Oracle i 1977 og bygde formue på databasesoftware til bedrifter. Enterprise-abonnementer med høye byttekostnader ga forutsigbar, gjentakende inntekt — kjedeligere enn forbruker-tech, men svært lønnsomt. Oracle kjøpte Sun, PeopleSoft og NetSuite for å styrke porteføljen og låse kunder. Ellison beholdt betydelig eierskap gjennom børsnotering og tiår med vekst. Formuen sitter i Oracle-aksjer; han investerte også tidlig i Tesla og eier Lanai-øya.",
+    timeline: [
       {
-        heading: "Enterprise-software",
-        paragraphs: [
-          "Oracle solgte programvare til store bedrifter med langvarige kontrakter. Det ga forutsigbar inntekt og høy lojalitet hos kunder som bygger systemene sine på Oracle.",
-          "Ellison beholdt betydelig eierskap og har vært en av de mest lønnsomme gründerne i Silicon Valley over tid.",
-        ],
+        date: "1977",
+        title: "Oracle grunnlegges",
+        description:
+          "Ellison startet med databasesoftware til bedrifter og offentlig sektor — B2B, ikke forbruker.",
       },
       {
-        heading: "Abonnement og låsing",
-        paragraphs: [
-          "Når en stor bedrift bruker Oracle-database, er det kostbart å bytte. Det gir Oracle prisingsmakt og forutsigbar inntekt år etter år.",
-        ],
-        bullets: [
-          "B2B-software med høy betalingsvilje",
-          "Langvarige kontrakter og vedlikehold",
-          "Oppkjøp av konkurrenter for å styrke porteføljen",
-        ],
+        date: "1986",
+        title: "Børsnotering",
+        description:
+          "Oracle ble børsnotert; Ellison beholdt en stor andel som vokste med kontraktene.",
+      },
+      {
+        date: "2005–2016",
+        title: "Oppkjøpsbølge",
+        description:
+          "PeopleSoft, Sun Microsystems og NetSuite ga flere produkter til eksisterende kunder.",
+      },
+      {
+        date: "2010",
+        title: "Investerer i Tesla",
+        description:
+          "Ellison kjøpte Tesla-aksjer tidlig og satt i styret — diversifisering utenfor Oracle.",
+      },
+      {
+        date: "2020–2026",
+        title: "Cloud og AI",
+        description:
+          "Oracle satser på sky og enterprise-AI mens Ellison fortsatt eier en betydelig Oracle-andel.",
       },
     ],
-    ownershipParagraphs: [
-      "Ellison ble milliardær på Oracle-aksjer, ikke lønn. Enterprise-software er kjedelig sammenlignet med forbruker-tech, men kan gi enorm kontantstrøm og aksjeverdi.",
-      "Han har senere investert i Tesla tidlig og andre prosjekter, men kjernen er fortsatt eierskap i selskaper.",
+    wealthSources: [
+      {
+        category: "aksjer",
+        description:
+          "Oracle-aksjer utgjør kjernen av formuen etter tiår med eierskap.",
+      },
+      {
+        category: "selskaper",
+        description:
+          "Oracle-konsernet med database, sky og enterprise-software genererer gjentakende inntekt.",
+      },
     ],
-    lessons: [
-      "B2B-software med abonnement kan gi stabil og skalerbar inntekt.",
-      "Gründere som beholder eierskap over tid kan samle enorm formue.",
+    decisiveMove:
+      "Bygge Oracle rundt databasesoftware med høye byttekostnader — og bruke oppkjøp til å låse bedriftskunder til én leverandør over tiår.",
+    whatCouldGoWrong: [
+      "Cloud-konkurrenter kan ta markedsandeler fra legacy-database.",
+      "Oppkjøp til høy pris kan ødelegge avkastning.",
+      "Konsentrasjon i Oracle-aksjer gir stor volatilitet.",
+    ],
+    mythVsReality: [
+      {
+        myth: "B2B-software er kjedelig og lite lønnsomt.",
+        reality:
+          "Langvarige kontrakter og byttekostnader gir høy margin og forutsigbar inntekt.",
+      },
+      {
+        myth: "Ellison ble rik på CEO-lønn.",
+        reality:
+          "Formuen følger Oracle-aksjens verdi over tiår — lønn er irrelevant.",
+      },
+    ],
+    personalLessons: [
+      "B2B-software med abonnement kan gi stabil og skalerbar inntekt over tiår.",
+      "Byttekostnader gir forutsigbarhet, men krever at produktet holder mål.",
       "Kjedelige bransjer kan være svært lønnsomme for de som eier dem.",
-      "Kundelåsing gir forutsigbarhet, men krever at produktet holder mål.",
+      "Gründere som beholder eierskap over tiår kan samle enorm formue uten høy lønn.",
     ],
+    sources: [
+      {
+        label: "Oracle — investor relations",
+        url: "https://investor.oracle.com/",
+        tier: "primary",
+      },
+      {
+        label: "SEC EDGAR — Oracle Corp.",
+        url: "https://www.sec.gov/edgar/browse/?CIK=1341439",
+        tier: "primary",
+      },
+    ],
+    lastVerified: "2026-08-11",
     relatedLinks: [
       { label: "Kom i gang med fond", href: "/guider/kom-i-gang-med-fond" },
+      { label: "Michael Bloomberg", href: "/formuesbyggere/michael-bloomberg" },
     ],
   }),
+
   "michael-bloomberg": buildFormuesbyggerArticle({
     slug: "michael-bloomberg",
     seoAngle: "Hva kan vi lære av Michael Bloomberg?",
-    intro:
-      "Michael Bloomberg bygde Bloomberg LP, en leverandør av finansdata og nyheter til profesjonelle investorer. Han kombinerte teknologi, journalistikk og abonnement.",
-    sections: [
+    shortAnswer:
+      "Michael Bloomberg bygde Bloomberg LP etter å ha blitt sparket fra Salomon Brothers. Han brukte oppsigelsespakken som startkapital og skapte Bloomberg Terminal — et abonnementsverktøy for finansfolk som koster over 20 000 dollar per år per bruker. Terminalen kombinerer sanntidsdata, nyheter og chat i én pakke med høy byttekostnad. Bloomberg News ble tillegg, ikke hovedprodukt. Han var borgermester i New York i tre perioder, men formuen kom fra selskapet — han eier fortsatt majoriteten av Bloomberg LP.",
+    timeline: [
       {
-        heading: "Terminal og data",
-        paragraphs: [
-          "Bloomberg Terminal ble uunnværlig for mange i finansbransjen. Abonnementsmodellen ga gjentakende inntekt og høy kundelojalitet.",
-          "Bloomberg startet etter at han ble sparket fra Salomon Brothers, og brukte oppsigelsespakken som startkapital.",
-        ],
+        date: "1981",
+        title: "Bloomberg LP grunnlegges",
+        description:
+          "Etter oppsigelse fra Salomon Brothers brukte han pakken til å bygge bedre markedsdata for tradere.",
       },
       {
-        heading: "Nisje med høy betalingsvilje",
-        paragraphs: [
-          "Finansfolk betaler tusenvis av dollar per måned for rask data og verktøy. Når produktet blir en del av arbeidsdagen, er det vanskelig å bytte.",
-        ],
-        bullets: [
-          "Abonnement gir forutsigbar inntekt",
-          "Data + nyheter + verktøy i én pakke",
-          "Høy pris, men høy verdi for profesjonelle brukere",
-        ],
+        date: "1990-tallet",
+        title: "Terminal blir bransjestandard",
+        description:
+          "Bloomberg Terminal ble arbeidsplassens sentrum for mange i finans — høy pris, høy betalingsvilje.",
+      },
+      {
+        date: "2002–2013",
+        title: "Borgermester i New York",
+        description:
+          "Bloomberg styrte byen i tre perioder; formuen kom fra selskapet, ikke offentlig lønn.",
+      },
+      {
+        date: "2010-tallet",
+        title: "Bloomberg News vokser",
+        description:
+          "Journalistikk ble del av terminalpakken og økte byttekostnaden for abonnentene.",
+      },
+      {
+        date: "2020–2026",
+        title: "Fortsatt majoritetseier",
+        description:
+          "Bloomberg eier fortsatt majoriteten av selskapet; abonnementsinntektene er motoren.",
       },
     ],
-    ownershipParagraphs: [
-      "Bloomberg eier fortsatt majoriteten av selskapet sitt. Formuen kom fra eierskap i en lønnsom abonnementsvirksomhet, ikke fra å være borgermester i New York.",
-      "Å løse et dyrt problem for brukere som har penger å betale med, er en klassisk vei til formue.",
+    wealthSources: [
+      {
+        category: "selskaper",
+        description:
+          "Majoritetseierskap i Bloomberg LP — et privat selskap med gjentakende terminal-abonnementer.",
+      },
     ],
-    lessons: [
-      "Spisskompetanse mot en nisje kan gi høy betalingsvilje.",
-      "Abonnement gir forutsigbar inntekt over tid.",
-      "Formue kan komme fra å løse et konkret problem for profesjonelle brukere.",
-      "Startkapital fra oppsigelse kan bli grunnlaget for noe større.",
+    decisiveMove:
+      "Bruke oppsigelsespakken til å bygge et abonnementsverktøy for finansfolk med høy pris og høy byttekostnad — data, nyheter og chat i én pakke.",
+    whatCouldGoWrong: [
+      "Konkurrenter kan underby på pris eller tilby bedre data.",
+      "Finansbransjens nedgang kan redusere antall abonnenter.",
+      "Privat selskap gir illikvid formue uten børspris.",
     ],
+    mythVsReality: [
+      {
+        myth: "Bloomberg ble rik som borgermester.",
+        reality:
+          "Borgermesterlønnen var irrelevant; formuen kom fra terminal-abonnementer og majoritetseierskap.",
+      },
+      {
+        myth: "Nyheter var hovedproduktet.",
+        reality:
+          "Bloomberg News er tillegg som øker byttekostnaden — terminalen og data er kjernen.",
+      },
+    ],
+    personalLessons: [
+      "Spisskompetanse mot en nisje med høy betalingsvilje kan gi enorm formue.",
+      "Abonnement gir forutsigbar inntekt over tid — bedre enn engangssalg.",
+      "Høy pris fungerer når verdien for kunden er høyere enn prisen.",
+      "Startkapital fra oppsigelse kan bli grunnlaget for noe større med riktig idé.",
+    ],
+    sources: [
+      {
+        label: "Bloomberg — Impact Report (årsrapport)",
+        url: "https://www.bloomberg.com/company/stories/bloomberg-impact-report-2023/",
+        tier: "primary",
+      },
+      {
+        label: "Bloomberg LP — om selskapet",
+        url: "https://www.bloomberg.com/company/",
+        tier: "tertiary",
+      },
+      {
+        label: "Bloomberg Terminal — produktoversikt",
+        url: "https://www.bloomberg.com/professional/products/bloomberg-terminal/",
+        tier: "tertiary",
+      },
+      forbesBillionairesSource(),
+    ],
+    lastVerified: "2026-08-11",
     relatedLinks: [
+      { label: "Larry Ellison", href: "/formuesbyggere/larry-ellison" },
       { label: "Kutt faste kostnader", href: "/guider/kutt-faste-kostnader" },
     ],
   }),
+
   "amancio-ortega": buildFormuesbyggerArticle({
     slug: "amancio-ortega",
     seoAngle: "Hvordan bygde Amancio Ortega Zara?",
-    intro:
-      "Amancio Ortega grunnla Inditex og Zara, og revolusjonerte klesbransjen med rask mote og effektiv logistikk. Han er en av verdens rikeste, med lav profil.",
-    sections: [
+    shortAnswer:
+      "Amancio Ortega grunnla Inditex og Zara, og revolusjonerte klesbransjen med rask mote og vertikal integrasjon. Han startet med et lite konfeksjonsverksted i Galicia i 1963 og lanserte Zara i 1975. Inditex eier design, produksjon, distribusjon og butikker — ingen mellomledd som bremser. Nye modeller kommer i butikk på dager, ikke sesonger. Ortega unngikk rampelyset, men eide en stor Inditex-andel. Formuen følger aksjekursen — ikke synlighet eller lederlønn.",
+    timeline: [
       {
-        heading: "Fast fashion",
-        paragraphs: [
-          "Zara kortet ned tiden fra design til butikk. Inditex eier produksjon og butikker, noe som gir kontroll over hele kjeden.",
-          "Ortega holdt seg unna rampelyset, men bygde et av verdens største kleskonsern.",
-        ],
+        date: "1963",
+        title: "Konfeksjonsverksted i Galicia",
+        description:
+          "Ortega startet med et lite verksted og lærte produksjon og logistikk fra bunnen.",
       },
       {
-        heading: "Vertikal integrasjon",
-        paragraphs: [
-          "Inditex kontrollerer design, produksjon, distribusjon og butikk. Det gir rask respons på trender og bedre margin enn rene forhandlere.",
-        ],
-        bullets: [
-          "Nye modeller i butikk på dager, ikke måneder",
-          "Eide butikker globalt",
-          "Logistikk som konkurransefortrinn",
-        ],
+        date: "1975",
+        title: "Zara åpner første butikk",
+        description:
+          "Idéen var enkel: reager raskt på trender og få klær fra design til hylla på dager.",
+      },
+      {
+        date: "1985",
+        title: "Inditex etableres",
+        description:
+          "Konsernet samlet Zara og senere Massimo Dutti, Pull&Bear og flere merker.",
+      },
+      {
+        date: "2001",
+        title: "Børsnotering",
+        description:
+          "Inditex ble børsnotert; Ortega beholdt en stor andel og trakk seg gradvis operativt.",
+      },
+      {
+        date: "2010–2026",
+        title: "Lav profil, høy formue",
+        description:
+          "Ortega unngikk media, men formuen vokste med Inditex' globale ekspansjon og utbytte.",
       },
     ],
-    ownershipParagraphs: [
-      "Ortega ble rik ved å eie Inditex, ikke ved høy lederlønn. Han eier fortsatt en stor andel av selskapet og mottar utbytte, men hovedverdien er aksjene.",
-      "Handel kan bygge enorm formue når du eier hele kjeden og kan skalere globalt.",
+    wealthSources: [
+      {
+        category: "aksjer",
+        description:
+          "Inditex-aksjer utgjør hoveddelen av formuen etter tiår med eierskap.",
+      },
+      {
+        category: "selskaper",
+        description:
+          "Inditex-konsernet med Zara og andre merker genererer kontantstrøm fra eide butikker globalt.",
+      },
     ],
-    lessons: [
-      "Logistikk og hastighet kan være konkurransefortrinn i handel.",
-      "Vertikal integrasjon gir kontroll, men krever kapital.",
-      "Man trenger ikke være synlig for å bygge enorm formue.",
-      "Effektiv drift i tynn-margin-bransjer krever skala.",
+    decisiveMove:
+      "Bygge vertikal integrasjon fra design til kassa — små batcher, rask testing i butikk, og bestilling av mer av det som selger, i stedet for sesongbestilling.",
+    whatCouldGoWrong: [
+      "Bærekraftskrav kan øke kostnader i fast fashion.",
+      "Konkurranse fra netthandel og andre kjeder kan presse marginer.",
+      "Konsentrasjon i Inditex-aksjer gir stor volatilitet.",
     ],
+    mythVsReality: [
+      {
+        myth: "Fast fashion handler om lavest mulig pris.",
+        reality:
+          "Ortegas modell handler om hastighet og mindre svinn — margin fra omløp, ikke bare billigst mulig.",
+      },
+      {
+        myth: "Man må være synlig for å bygge enorm formue.",
+        reality:
+          "Ortega unngikk rampelyset, men eide hele kjeden og skalerte globalt.",
+      },
+    ],
+    personalLessons: [
+      "Logistikk og hastighet kan være konkurransefortrinn i handel med tynne marginer.",
+      "Vertikal integrasjon gir kontroll, men krever kapital og operativ disiplin.",
+      "Man trenger ikke være synlig for å bygge enorm formue gjennom eierskap.",
+      "Effektiv drift i tynn-margin-bransjer krever skala og hastighet — ikke bare lav pris.",
+    ],
+    sources: [
+      {
+        label: "Inditex — investor relations og årsrapporter",
+        url: "https://www.inditex.com/itxcomweb/en/investors",
+        tier: "primary",
+      },
+      {
+        label: "Inditex — historie",
+        url: "https://www.inditex.com/itxcomweb/en/about-us/our-history",
+        tier: "secondary",
+      },
+    ],
+    lastVerified: "2026-08-11",
     relatedLinks: [
+      { label: "Bernard Arnault", href: "/formuesbyggere/bernard-arnault" },
       { label: "Kutt faste kostnader", href: "/guider/kutt-faste-kostnader" },
     ],
   }),
+
   "jensen-huang": buildFormuesbyggerArticle({
     slug: "jensen-huang",
     seoAngle: "Hvordan ble Jensen Huang rik på AI?",
-    intro:
-      "Jensen Huang er medgründer og CEO av NVIDIA. Selskapet ble sentralt i AI-boomen fordi grafikkprosessorer ble brukt til å trene kunstig intelligens.",
-    sections: [
+    shortAnswer:
+      "Jensen Huang er medgründer og CEO av NVIDIA, grunnlagt i 1993 med grafikkort til gaming. Han ledet selskapet gjennom dotcom-krasj, finanskrisen og flate perioder uten å selge ut. CUDA-plattformen gjorde GPU-er programmérbare for vitenskap og AI — ikke bare piksler. Da AI-trening tok av, var NVIDIA best posisjonert, og Huang eide fortsatt en betydelig gründerandel. Formuen følger NVIDIA-aksjen; lønn er irrelevant sammenlignet med eierskap gjennom tiår.",
+    timeline: [
       {
-        heading: "Fra gaming til AI",
-        paragraphs: [
-          "NVIDIA startet med grafikkort til spill, men så muligheten i databehandling for AI og vitenskap. Timing og teknologi møttes, og aksjen steg kraftig.",
-          "Huang har ledet selskapet siden starten og beholdt betydelig eierskap.",
-        ],
+        date: "1993",
+        title: "NVIDIA grunnlegges",
+        description:
+          "Huang, Chris Malachowsky og Curtis Priem startet med grafikkprosessorer til spill.",
       },
       {
-        heading: "Teknologisk skifte",
-        paragraphs: [
-          "Da AI-boomen tok av, var NVIDIA best posisjonert med GPU-er som kunne trene store modeller. Selskaper som Google, Microsoft og startups kjøpte chips i massevis.",
-        ],
-        bullets: [
-          "GPU-er ble standard for AI-trening",
-          "Datacenter-vekst drev inntektene",
-          "Gründer som fortsatt eier og leder",
-        ],
+        date: "1999",
+        title: "GPU-konseptet lanseres",
+        description:
+          "GeForce-serien gjorde NVIDIA til leder i gaming-grafikk.",
+      },
+      {
+        date: "2006",
+        title: "CUDA lanseres",
+        description:
+          "GPU-er ble programmérbare for vitenskap og beregning — grunnlaget for senere AI-boom.",
+      },
+      {
+        date: "2016–2022",
+        title: "Datacenter-vekst",
+        description:
+          "GPU-er ble standard for AI-trening; Google, Microsoft og Amazon kjøpte chips i massevis.",
+      },
+      {
+        date: "2023–2026",
+        title: "AI-boomen",
+        description:
+          "NVIDIA-aksjen multipliserte seg; Huang ble en av verdens rikeste som gründer etter 30 år.",
       },
     ],
-    ownershipParagraphs: [
-      "Huang ble en av verdens rikeste fordi han eide NVIDIA da AI-boomen eksploderte. Lønn som CEO er liten del av historien.",
-      "Teknologiskifte kan omdefinere hvem som vinner. De som eier selskapet i riktig bransje til riktig tid, får uforholdsmessig mye av oppsiden.",
+    wealthSources: [
+      {
+        category: "aksjer",
+        description:
+          "NVIDIA-aksjer utgjør nesten hele formuen etter tiår med gründer-eierskap.",
+      },
+      {
+        category: "selskaper",
+        description:
+          "NVIDIA kontrollerer mesteparten av GPU-markedet for AI-trening og datacenter.",
+      },
     ],
-    lessons: [
-      "Å eie selskapet du bygger kan gi formue langt utover lønn.",
-      "Teknologiskifte kan omdefinere hvem som vinner i en bransje.",
-      "Konsentrert eierskap betyr at formuen svinger med selskapets suksess.",
-      "Å holde kursen i én bransje i tiår kan lønne seg ved et skifte.",
+    decisiveMove:
+      "Investere i CUDA og gjøre GPU-er til generell beregningsplattform — ikke bare gaming — og holde gründerandelen gjennom kriser og kapitalrunder.",
+    whatCouldGoWrong: [
+      "Konkurrenter som AMD, Intel og custom chips kan ta markedsandeler.",
+      "AI-boomen kan avta og kutte etterspørselen etter GPU-er.",
+      "Konsentrasjon i én aksje gir ekstrem volatilitet.",
     ],
+    mythVsReality: [
+      {
+        myth: "Huang planla AI-suksess i 1993.",
+        reality:
+          "Han bygde fleksibel infrastruktur for beregning; AI-boomen kom tiår senere.",
+      },
+      {
+        myth: "Gründere som henger med får alltid stor andel.",
+        reality:
+          "Emisjoner utvanner — Huang beholdt nok til at boomen gjorde ham rik, mange selger for tidlig.",
+      },
+    ],
+    personalLessons: [
+      "Teknologiskifte kan omdefinere hvem som vinner — bygg fleksibel infrastruktur.",
+      "Å eie selskapet du bygger kan gi formue langt utover lønn over tiår.",
+      "Konsentrert eierskap betyr at formuen svinger voldsomt med selskapets suksess.",
+      "Å holde kursen i én bransje i tiår kan lønne seg ved et uventet skifte.",
+    ],
+    sources: [
+      {
+        label: "NVIDIA — investor relations",
+        url: "https://investor.nvidia.com/",
+        tier: "primary",
+      },
+      {
+        label: "SEC EDGAR — NVIDIA Corp.",
+        url: "https://www.sec.gov/edgar/browse/?CIK=1045810",
+        tier: "primary",
+      },
+      forbesBillionairesSource(),
+    ],
+    lastVerified: "2026-08-11",
     relatedLinks: [
       { label: "Aksje i ordboken", href: "/ordbok/aksje" },
-      { label: "Egenkapital i ordboken", href: "/ordbok/egenkapital" },
+      { label: "Elon Musk", href: "/formuesbyggere/elon-musk" },
     ],
   }),
+
   "oprah-winfrey": buildFormuesbyggerArticle({
     slug: "oprah-winfrey",
     seoAngle: "Hvordan bygde Oprah Winfrey formue?",
-    intro:
-      "Oprah Winfrey bygde formue på TV, produksjon og personlig merkevare. Hun viste at underholdning og media kan skape eierskap, ikke bare berømmelse.",
-    sections: [
+    shortAnswer:
+      "Oprah Winfrey bygde formue på TV, produksjon og personlig merkevare — ikke bare programlederlønn. The Oprah Winfrey Show dominerte i tiår, men forskjellen var at Harpo Productions eide produksjonen og rettighetene. Hun tjente på showet, magazine og senere OWN Network. WeightWatchers-aksjer ga børsnotert eierskap, ikke bare royalty. Formuen kommer fra tre kilder: inntekt, produksjonseierskap og merkevare — der eierskap gir verdi i årevis etter at kameraet slås av.",
+    timeline: [
       {
-        heading: "Merkevare og media",
-        paragraphs: [
-          "The Oprah Winfrey Show ga plattform. Hun eide produksjon gjennom Harpo Productions, noe som betydde at hun tjente på innholdet, ikke bare presenterte det.",
-          "Senere har hun investert i media, helse og andre saker, inkludert WeightWatchers.",
-        ],
+        date: "1986",
+        title: "The Oprah Winfrey Show",
+        description:
+          "Talkshowet ble nasjonalt fenomen; Oprah forhandlet eierskap, ikke bare lønn.",
       },
       {
-        heading: "Eie innholdet ditt",
-        paragraphs: [
-          "Mange TV-personer er ansatte. Oprah bygde selskaper som eide showet og rettighetene. Forskjellen mellom lønn og eierskap er tydelig i hennes karriere.",
-        ],
-        bullets: [
-          "Harpo Productions eide produksjonen",
-          "Oprah Magazine og medieinvesteringer",
-          "Personlig merkevare som forretningsaktiv",
-        ],
+        date: "1986",
+        title: "Harpo Productions etableres",
+        description:
+          "Harpo ga eierskap til innhold og produksjon — ikke bare presentasjon for nettverket.",
+      },
+      {
+        date: "2000",
+        title: "O Magazine lanseres",
+        description:
+          "Personlig merkevare ble forretningsplattform for media, bøker og live-events.",
+      },
+      {
+        date: "2011",
+        title: "OWN Network",
+        description:
+          "Oprah lanserte egen TV-kanal og beholdt eierskap i distribusjon og innhold.",
+      },
+      {
+        date: "2015",
+        title: "WeightWatchers-investering",
+        description:
+          "Oprah kjøpte betydelig aksjeandel og satt i styret — eierskap, ikke bare endorsment.",
       },
     ],
-    ownershipParagraphs: [
-      "Oprah ble milliardær fordi hun eide produksjonsselskapet og merkevaren, ikke fordi hun fikk høy TV-lønn. Hver avtale der hun eier rettigheter, gir inntekt i årevis.",
-      "For frilansere og kreative gjelder det samme i liten skala: eie det du lager, ikke bare selg timen din.",
+    wealthSources: [
+      {
+        category: "selskaper",
+        description:
+          "Harpo Productions og OWN ga eierskap i produksjon, innhold og distribusjon.",
+      },
+      {
+        category: "aksjer",
+        description:
+          "WeightWatchers-aksjer og andre børsnoterte investeringer gir formue som svinger med kursen.",
+      },
+      {
+        category: "royalty",
+        description:
+          "Rettigheter til show-innhold og merkevareavtaler gir inntekt over tid etter produksjon.",
+      },
     ],
-    lessons: [
-      "Å eie innholdet ditt gir mer verdi enn å bare leie ut tid.",
-      "Personlig merkevare kan åpne dører til investeringer og partnerskap.",
-      "Media og underholdning kan bygge formue når du eier, ikke bare performer.",
-      "Plattform + eierskap slår plattform + fast lønn over tid.",
+    decisiveMove:
+      "Etablere Harpo Productions og eie produksjonen av showet — ikke bare forhandle høyest mulig programlederlønn.",
+    whatCouldGoWrong: [
+      "Personlig merkevare kan skades av kontroverser eller skiftende publikum.",
+      "Medieinvesteringer kan tape verdi ved teknologiskifte.",
+      "Børsnoterte poster som WeightWatchers kan falle kraftig.",
     ],
+    mythVsReality: [
+      {
+        myth: "Oprah ble milliardær på TV-lønn alene.",
+        reality:
+          "Harpo eide showet og rettighetene — eierskap ga inntekt i tiår etter hvert episode.",
+      },
+      {
+        myth: "Merkevare er det samme som eierskap.",
+        reality:
+          "Oprah-navnet åpner dører, men Harpo og aksjer er det som bygger varig formue.",
+      },
+    ],
+    personalLessons: [
+      "Å eie innholdet ditt gir mer verdi enn å bare leie ut tid til et nettverk.",
+      "Skille mellom lønn, royalty og aksjeeierskap — de bygger formue ulikt.",
+      "Personlig merkevare kan åpne dører til investeringer, men eierskap gir varig verdi.",
+      "Plattform pluss eierskap slår plattform pluss fast lønn over tiår.",
+    ],
+    sources: [
+      {
+        label: "SEC EDGAR — WW International Inc.",
+        url: "https://www.sec.gov/edgar/browse/?CIK=105319",
+        tier: "primary",
+      },
+      {
+        label: "Harpo Inc. — offisiell nettside",
+        url: "https://www.harpo.com/",
+        tier: "tertiary",
+      },
+    ],
+    lastVerified: "2026-08-11",
     relatedLinks: [
       { label: "Nettoformue i ordboken", href: "/ordbok/nettoformue" },
+      { label: "Jay-Z", href: "/formuesbyggere/jay-z" },
     ],
   }),
+
   "jay-z": buildFormuesbyggerArticle({
     slug: "jay-z",
     seoAngle: "Hvordan ble Jay-Z milliardær?",
-    intro:
-      "Jay-Z gikk fra rapper til gründer og investor. Formuen kom fra musikkrettigheter, Roc Nation, drikkevaremerker og bred investeringsportefølje.",
-    sections: [
+    shortAnswer:
+      "Jay-Z gikk fra rapper til gründer og investor. Formuen kom fra master-eierskap, Roc Nation, drikkevaremerker og en portefølje der royalty, rettigheter og selskapseierskap spiller ulike roller. Han forstod tidlig at artister som selger masteropptak billig, mister inntekt i tiår. Roc-A-Fella og Roc Nation ga eierskap i musikk og management. Armand de Brignac ble solgt majoriteten til LVMH — eierskap, ikke bare endorsment. Han tjente mer som eier enn som rapper på scenen.",
+    timeline: [
       {
-        heading: "Fra artist til eier",
-        paragraphs: [
-          "Jay-Z forstod tidig verdien av å eie masteropptak og bygge selskaper rundt musikken. Han investerte i champagne (Armand de Brignac), teknologi (Tidal) og mye mer.",
-          "Roc Nation ble et imperium innen management, sports og media.",
-        ],
+        date: "1996",
+        title: "Reasonable Doubt og Roc-A-Fella",
+        description:
+          "Jay-Z startet eget label og beholdt rettigheter til egen musikk fra start.",
       },
       {
-        heading: "Rettigheter og selskaper",
-        paragraphs: [
-          "Artister som selger rettigheter billig tidlig, mister inntekt senere. Jay-Z bygde selskaper som eier katalogen og merkevaren.",
-        ],
-        bullets: [
-          "Eierskap i masteropptak",
-          "Roc Nation: management og sports",
-          "Investeringer i drikke, tech og eiendom",
-        ],
+        date: "2008",
+        title: "Roc Nation etableres",
+        description:
+          "Imperium innen management, sports og media — eierskap utenfor scenen.",
+      },
+      {
+        date: "2014",
+        title: "Tidal kjøpes",
+        description:
+          "Artist-eid strømmetjeneste ga kontroll over distribusjon og data.",
+      },
+      {
+        date: "2021",
+        title: "Ace of Spades solgt til LVMH",
+        description:
+          "Majoriteten av Armand de Brignac champagne ble solgt — realiserte eierskapsverdi.",
+      },
+      {
+        date: "2019",
+        title: "Første milliardær-rapper",
+        description:
+          "Forbes bekreftet milliardstatus basert på eierskap, ikke bare musikkinntekt.",
       },
     ],
-    ownershipParagraphs: [
-      "Jay-Z tjente mer som eier av selskaper og rettigheter enn som rapper på scenen. Konsertlønn er høy, men eierskap i merkevarer og katalog gir inntekt i tiår.",
-      "Overgangen fra artist til investor er et mønster: bruk merkevaren til å åpne dører, men bygg formue gjennom eierskap.",
+    wealthSources: [
+      {
+        category: "royalty",
+        description:
+          "Master-eierskap og musikkatalog gir inntekt når sanger strømmes og selges i tiår.",
+      },
+      {
+        category: "selskaper",
+        description:
+          "Roc Nation, Armand de Brignac og Tidal ga selskapseierskap utover artistinntekt.",
+      },
+      {
+        category: "salg",
+        description:
+          "Salg av champagne-majoritet til LVMH realiserte deler av merkevareverdien.",
+      },
     ],
-    lessons: [
-      "Rettigheter og eierskap til eget verk gir varig inntekt.",
-      "Artister kan bygge formue utenfor scenen ved å bli investorer.",
-      "Merkevare og nettverk åpner investeringsmuligheter.",
-      "Å eie merkevaren (f.eks. champagne) gir andel av salget, ikke bare honorar.",
+    decisiveMove:
+      "Beholde master-eierskap til egen musikk og bygge Roc Nation — bevisst overgang fra honorar per konsert til eierskap i katalog og selskaper.",
+    whatCouldGoWrong: [
+      "Musikkrettigheter kan tape verdi ved skiftende strømmemodeller.",
+      "Drikkevare- og medieinvesteringer kan underperforme.",
+      "Merkevare kan skades av kontroverser eller markedsendring.",
     ],
+    mythVsReality: [
+      {
+        myth: "Jay-Z ble milliardær på rap-lønn.",
+        reality:
+          "Master-eierskap, Roc Nation og merkevareeierskap ga langt mer enn sceneinntekt.",
+      },
+      {
+        myth: "Sponsoravtaler og eierskap er det samme.",
+        reality:
+          "Endorsment gir honorar; eierskap i champagne-merket gir andel av hver flaske solgt.",
+      },
+    ],
+    personalLessons: [
+      "Rettigheter og eierskap til eget verk gir varig inntekt — ikke bare scenehonorar.",
+      "Skille royalty (inntekt) fra aksjeeierskap (formue og kontroll).",
+      "Artister kan bygge formue utenfor scenen ved å bli investorer og gründere.",
+      "Å eie merkevaren gir andel av salget, ikke bare engangshonorar per kampanje.",
+    ],
+    sources: [
+      {
+        label: "LVMH — oppkjøp av Armand de Brignac",
+        url: "https://www.lvmh.com/news-documents/press-releases/lvmh-acquires-a-50-stake-in-armand-de-brignac",
+        tier: "secondary",
+      },
+      {
+        label: "LVMH — investor relations og årsrapporter",
+        url: "https://www.lvmh.com/investors/publications",
+        tier: "primary",
+      },
+      forbesBillionairesSource(),
+      {
+        label: "Roc Nation — offisiell nettside",
+        url: "https://www.rocnation.com/",
+        tier: "tertiary",
+      },
+    ],
+    lastVerified: "2026-08-11",
     relatedLinks: [
-      { label: "Egenkapital i ordboken", href: "/ordbok/egenkapital" },
       { label: "Taylor Swift", href: "/formuesbyggere/taylor-swift" },
+      { label: "Rihanna", href: "/formuesbyggere/rihanna" },
+      { label: "Egenkapital i ordboken", href: "/ordbok/egenkapital" },
     ],
   }),
+
   "taylor-swift": buildFormuesbyggerArticle({
     slug: "taylor-swift",
     seoAngle: "Hvordan bygde Taylor Swift formue på musikk?",
-    intro:
-      "Taylor Swift er et eksempel på hvordan en artist kan bygge formue gjennom eierskap til musikken, turnéer og merkevare, ikke bare strømming.",
-    sections: [
+    shortAnswer:
+      "Taylor Swift bygde formue gjennom eierskap til musikken, turnéer og merkevare — ikke fast artistlønn. Etter rettighetsstrid med tidligere label gjeninnspilte hun albumene som «Taylor's Version» for å ta kontroll og bygge forhandlingsmakt. I mai 2025 kjøpte hun tilbake originalopptakene og eier nå hele katalogen. Eras Tour ble en av historiens mest inntektsbringende turnéer — turné gir langt mer per fan enn strømming. Swifties og direkte fan-engasjement driver merch og billetter.",
+    timeline: [
       {
-        heading: "Eierskap til katalogen",
-        paragraphs: [
-          "Swift har vært tydelig på viktigheten av å eie masteropptakene. Hun gjeninnspilte album (Taylor's Version) for å ta kontroll etter rettighetsstrid.",
-          "Eras Tour ble en av historiens mest inntektsbringende turnéer, med inntekt fra billetter, merchandise og film.",
-        ],
+        date: "2006",
+        title: "Debutalbum og tidlig karriere",
+        description:
+          "Swift signerte tidlig kontrakt; lærte senere hvor dyrt det kan være å ikke eie master.",
       },
       {
-        heading: "Strømming vs. turné og rettigheter",
-        paragraphs: [
-          "Strømming gir ofte lite per avspilling til artisten. Swift tjener mest på turnéer, merchandise og eierskap til musikken, der hun får en større andel av kaken.",
-        ],
-        bullets: [
-          "Taylor's Version: gjeninnspilling for å eie master",
-          "Direkte fan-engasjement via sosiale medier",
-          "Turné som hovedinntektskilde, ikke strømming alene",
-        ],
+        date: "2019",
+        title: "Master-salg og rettighetsstrid",
+        description:
+          "Tidligere label solgte masteropptak; Swift varslet gjeninnspilling for å ta kontroll.",
       },
       {
-        heading: "Merkevare og lojalitet",
-        paragraphs: [
-          "Swifties er en global fanbase som kjøper billetter, merch og musikk. Lojalitet omsettes til inntekt fordi hun eier store deler av verdikjeden.",
-        ],
+        date: "2021–2024",
+        title: "Taylor's Version",
+        description:
+          "Gjeninnspilte album styrket eierskap, fan-lojalitet og forhandlingsmakt.",
+      },
+      {
+        date: "Mai 2025",
+        title: "Tilbakekjøp av originalopptak",
+        description:
+          "Swift kjøpte tilbake originalopptakene og eier nå hele katalogen — både originaler og reinnspillinger.",
+      },
+      {
+        date: "2023–2024",
+        title: "Eras Tour",
+        description:
+          "Turnéen genererte over en milliard dollar i inntekter — turné som hovedmotor, strømming som markedsføring.",
       },
     ],
-    ownershipParagraphs: [
-      "Swift ble milliardær primært gjennom eierskap til musikken og turnéinntekter, ikke gjennom fast artistlønn. Forskjellen på å eie master og å være ansatt artist er kjernen i historien.",
-      "Hun viste at rettigheter er forhandlingsbare og at det kan lønne seg å kjempe for eierskap, selv når det koster tid og penger å gjeninnspille album.",
+    wealthSources: [
+      {
+        category: "royalty",
+        description:
+          "Songwriting-royalty og master-eierskap gir inntekt ved strømming, salg og lisensiering.",
+      },
+      {
+        category: "salg",
+        description:
+          "Eras Tour, merchandise og billetter gir direkteinntekt langt utover strømmebrøkdeler.",
+      },
+      {
+        category: "selskaper",
+        description:
+          "Eierskap til katalogen og kontroll over rettigheter gir forhandlingsmakt og langsiktig formue.",
+      },
     ],
-    personalFinanceTip:
-      "Om du lager noe: spør hvem som eier det når kontrakten signeres. Det gjelder musikk, design, kode og tekst.",
-    lessons: [
-      "Å eie rettighetene til arbeidet ditt gir kontroll og inntekt over tid.",
+    decisiveMove:
+      "Gjeninnspille hele katalogen som «Taylor's Version» og kjøpe tilbake originalopptakene i mai 2025 — investere tid og kapital i rettigheter, ikke bare turneer.",
+    whatCouldGoWrong: [
+      "Turnéinntekter kan falle ved endret fan-atferd eller helseutfordringer.",
+      "Strømmemodeller kan endre royalty-strukturer.",
+      "Konsentrasjon i musikk og merkevare gir få inntektsben.",
+    ],
+    mythVsReality: [
+      {
+        myth: "Swift ble milliardær på strømming alene.",
+        reality:
+          "Turnéer, merch og eierskap til master gir langt mer per fan enn strømmebrøkdeler.",
+      },
+      {
+        myth: "Gjeninnspilling var bare fan-service.",
+        reality:
+          "Det var en strategisk vei til kapital, kontroll og tilbakekjøp av originalopptak.",
+      },
+    ],
+    personalLessons: [
+      "Eie rettighetene til arbeidet ditt gir kontroll og inntekt over tiår — spør ved kontraktsignering.",
       "Turnéer og direkte fan-engasjement kan gi mer enn strømming alene.",
-      "Merkevare og lojalitet kan omsettes til flere inntektsstrømmer.",
-      "Forskjellen på lønn per konsert og eierskap til katalogen er avgjørende.",
-      "Det kan lønne seg å investere tid i å ta tilbake rettigheter.",
+      "Skille royalty (inntekt) fra master-eierskap (formue og kontroll).",
+      "Det kan lønne seg å investere tid i å ta tilbake rettigheter, ikke bare produsere mer.",
     ],
+    sources: [
+      {
+        label: "SEC EDGAR — Live Nation Entertainment Inc.",
+        url: "https://www.sec.gov/edgar/browse/?CIK=1335258",
+        tier: "primary",
+      },
+      {
+        label: "IFPI — Global Music Report",
+        url: "https://www.ifpi.org/global-music-report/",
+        tier: "primary",
+      },
+      {
+        label: "Taylor Swift — offisiell nettside",
+        url: "https://www.taylorswift.com/",
+        tier: "tertiary",
+      },
+    ],
+    lastVerified: "2026-08-11",
     relatedLinks: [
       { label: "Jay-Z", href: "/formuesbyggere/jay-z" },
+      { label: "Rihanna", href: "/formuesbyggere/rihanna" },
       { label: "Kutt faste kostnader", href: "/guider/kutt-faste-kostnader" },
     ],
   }),
+
   "cristiano-ronaldo": buildFormuesbyggerArticle({
     slug: "cristiano-ronaldo",
     seoAngle: "Hvordan tjener Cristiano Ronaldo mer enn fotballlønn?",
-    intro:
-      "Cristiano Ronaldo er blant verdens best betalte idrettsutøvere, men stor del av formuen kommer fra sponsorater, merkevare og forretninger utenfor banen.",
-    sections: [
+    shortAnswer:
+      "Cristiano Ronaldo er blant verdens best betalte idrettsutøvere, men stor del av formuen kommer fra sponsorater, merkevare og forretninger utenfor banen. Fotballlønn fra Sporting, Manchester United, Real Madrid, Juventus og Al-Nassr er én av flere inntektsstrømmer. CR7-merkevaren dekker kles, parfyme, hotell og trening — mange med eierskap, ikke bare fronting. Nike-avtalen er sponsorhonorar; CR7-hotell er eierskap. Sosiale medier med milliarder følgere driver både honorar og merkevarets salg.",
+    timeline: [
       {
-        heading: "Lønn og merkevare",
-        paragraphs: [
-          "Fotballlønnen er høy, men CR7-merkevaren, sponsoravtaler og investeringer i hotell, klesmerker og media har bygget formuen videre.",
-          "Sosiale medier gir direkte rekkevidde til milliarder, noe sponsorer betaler godt for.",
-        ],
+        date: "2003",
+        title: "Overgang til Manchester United",
+        description:
+          "Ronaldo ble global stjerne; lønn og sponsoravtaler vokste raskt.",
       },
       {
-        heading: "CR7 som forretning",
-        paragraphs: [
-          "Ronaldo har bygget merkevare CR7 innen kles, parfyme, hotell og trening. Han eier andeler i flere av disse, ikke bare frontet dem.",
-        ],
-        bullets: [
-          "Sponsoravtaler med Nike og andre globale merker",
-          "CR7-hoteller og lifestyle-merker",
-          "Sosiale medier som salgskanal",
-        ],
+        date: "2009",
+        title: "Real Madrid og rekordlønn",
+        description:
+          "Verdens dyreste overgang; lønn og prestisje styrket merkevarens verdi.",
+      },
+      {
+        date: "2016",
+        title: "CR7-merkevaren ekspanderer",
+        description:
+          "Hotell, klesmerker og parfyme med eierskap — ikke bare endorsment.",
+      },
+      {
+        date: "2023",
+        title: "Al-Nassr og Saudi-lønn",
+        description:
+          "Astronomisk lønn i Saudi-Arabia, men fortsatt bare én av flere inntektsmotorer.",
+      },
+      {
+        date: "2020–2026",
+        title: "Sosiale medier som salgskanal",
+        description:
+          "Flest Instagram-følgere globalt; sponsorer betaler for rekkevidde, CR7-merkevaren selger produkter.",
       },
     ],
-    ownershipParagraphs: [
-      "Ronaldo tjener hundrevis av millioner på lønn, men milliardformuen skyldes i stor grad eierskap i merkevarer og investeringer. Sponsorhonorar er lønn; andel i CR7-hotell er eierskap.",
-      "Idrettskarrieren er kort. Merkevaren og investeringene kan gi inntekt i tiår etterpå, hvis de bygges bevisst.",
+    wealthSources: [
+      {
+        category: "royalty",
+        description:
+          "Nike og globale sponsoravtaler gir honorar for navn og ansikt — inntekt, ikke eierskap i Nike.",
+      },
+      {
+        category: "selskaper",
+        description:
+          "CR7-hotell, klesmerker og lifestyle-selskaper der Ronaldo eier andeler.",
+      },
+      {
+        category: "salg",
+        description:
+          "Fotballlønn utgjør stor årlig inntekt, men karrieren er kort sammenlignet med merkevaren.",
+      },
     ],
-    lessons: [
-      "Topp idrett gir høy lønn, men merkevare kan gi mer over tid.",
-      "Å bygge personlig merkevare tidlig forlenger inntektsperioden.",
-      "Inntekt fra sponsorater er lønn; eierskap i selskaper er formue.",
-      "Karrieren er kort, merkevaren kan vare lenge.",
+    decisiveMove:
+      "Bygge CR7 som eget merke med eierskap i hotell, kles og lifestyle — ikke bare maksimere fotballlønn og sponsorhonorar.",
+    whatCouldGoWrong: [
+      "Idrettskarrieren er kort; skade kan kutte lønn og synlighet.",
+      "Merkevare kan skades av kontroverser eller dalende sportslig form.",
+      "Hotell- og retail-investeringer kan underperforme i nedgang.",
     ],
+    mythVsReality: [
+      {
+        myth: "Ronaldo ble rikest på fotballlønn alene.",
+        reality:
+          "Sponsorhonorar og CR7-eierskap gir inntekt i tiår etter at karrieren avtar.",
+      },
+      {
+        myth: "Nike-avtalen betyr at han eier Nike.",
+        reality:
+          "Det er sponsorhonorar — inntekt. CR7-hotell og egne merker er eierskap og formue.",
+      },
+    ],
+    personalLessons: [
+      "Topp idrett gir høy lønn, men merkevare kan gi mer over tid enn lønn alene.",
+      "Sponsorhonorar er inntekt; eierskap i egne selskaper er formue — skille dem.",
+      "Bygg personlig merkevare tidlig for å forlenge inntektsperioden etter karrieren.",
+      "Sosiale medier er salgskanal — bruk rekkevidden til å drive egne produkter, ikke bare sponsorater.",
+    ],
+    sources: [
+      {
+        label: "SEC EDGAR — Nike Inc.",
+        url: "https://www.sec.gov/edgar/browse/?CIK=320187",
+        tier: "primary",
+      },
+      {
+        label: "Forbes — høyest betalte idrettsutøvere",
+        url: "https://www.forbes.com/lists/athletes/",
+        tier: "tertiary",
+      },
+      {
+        label: "CR7 — offisiell merkevare",
+        url: "https://www.cr7.com/",
+        tier: "tertiary",
+      },
+    ],
+    lastVerified: "2026-08-11",
     relatedLinks: [
       { label: "Michael Jordan", href: "/formuesbyggere/michael-jordan" },
+      { label: "Erling Haaland", href: "/formuesbyggere/erling-haaland" },
+      { label: "Nettoformue i ordboken", href: "/ordbok/nettoformue" },
     ],
   }),
+
   "michael-jordan": buildFormuesbyggerArticle({
     slug: "michael-jordan",
     seoAngle: "Hvorfor tjente Michael Jordan mer på Nike enn på basketball?",
-    intro:
-      "Michael Jordan er det klassiske eksempelet på at idrettsstjerner kan bli rikere på merkevare enn på lønn. Jordan Brand hos Nike genererer fortsatt inntekt.",
-    sections: [
+    shortAnswer:
+      "Michael Jordan er det klassiske eksempelet på at idrettsstjerner kan bli rikere på merkevare og eierskap enn på lønn. Formuen har tre motorer: basketballlønn (minst), Nike-royalty på Air Jordan (størst inntektsstrøm) og lageierskap. Jordan signerte banebrytende avtale med Nike på 1980-tallet; brandet genererer milliarder årlig. Han kjøpte majoriteten av Charlotte Hornets for omtrent 275 millioner dollar i 2010 og solgte den i 2023 for rundt 3 milliarder dollar — men beholdt minoritetsandel.",
+    timeline: [
       {
-        heading: "Jordan Brand",
-        paragraphs: [
-          "Jordan signerte en banebrytende avtale med Nike på 1980-tallet. Air Jordan ble et eget brand, og Jordan får fortsatt royalty på salget.",
-          "Han eide Charlotte Hornets en periode og har investert i golf, racing og andre områder.",
-        ],
+        date: "1984",
+        title: "Nike-avtalen signeres",
+        description:
+          "Air Jordan ble eget brand under Nike — ikke bare en sko med navnet hans; royalty på hvert par.",
       },
       {
-        heading: "Royalty vs. lønn",
-        paragraphs: [
-          "Basketballlønnen var høy for tiden, men liten sammenlignet med det Jordan Brand har generert i tiår. Royalty er en andel av verdi skapt, ikke fast betaling per kamp.",
-        ],
-        bullets: [
-          "Air Jordan: eget brand under Nike",
-          "Royalty på hvert par sko solgt",
-          "Investeringer utenfor idretten",
-        ],
+        date: "1991–1998",
+        title: "Dynasti med Chicago Bulls",
+        description:
+          "Seks NBA-titler styrket merkevaren globalt; lønn var høy, men langt mindre enn royalty.",
       },
       {
-        heading: "Etter karrieren",
-        paragraphs: [
-          "Jordan sluttet å spille for lenge siden, men merkevaren lever. Det er poenget med eierskap og royalty: inntekten kan fortsette når jobben er over.",
-        ],
+        date: "2003",
+        title: "Karrieren avsluttes",
+        description:
+          "Jordan sluttet å spille, men Nike-royalty og merkevaren fortsatte å generere inntekt.",
+      },
+      {
+        date: "2010",
+        title: "Kjøper Charlotte Hornets",
+        description:
+          "Jordan kjøpte majoriteten av NBA-laget for omtrent 275 millioner dollar — lageierskap som formue.",
+      },
+      {
+        date: "2023",
+        title: "Selger Hornets-majoritet",
+        description:
+          "Majoriteten ble solgt for rundt 3 milliarder dollar rapportert; Jordan beholdt minoritetsandel i ligaen.",
       },
     ],
-    ownershipParagraphs: [
-      "Jordan ble milliardær primært på Nike-avtalen med royalty og eierskap i lag, ikke på lønn som basketballspiller. Han eier en andel av verdien skoene skaper, ikke bare får betalt per kamp.",
-      "Dette er den tydeligste illustrasjonen av lønn vs. eierskap i idrett: de fleste spillere tjener lønn; de få med merkevareavtaler og eierskap bygger formue.",
+    wealthSources: [
+      {
+        category: "royalty",
+        description:
+          "Nike-royalty på Air Jordan — prosentandel av hvert par solgt siden 1980-tallet; største inntektsstrøm.",
+      },
+      {
+        category: "salg",
+        description:
+          "Salg av Hornets-majoritet i 2023 for ~3 milliarder dollar etter kjøp for ~275 millioner i 2010.",
+      },
+      {
+        category: "aksjer",
+        description:
+          "Minoritetsandel i Charlotte Hornets etter 2023-salget — formue følger NBA-ligaens verdi.",
+      },
     ],
-    personalFinanceTip:
-      "Royalty og eierskap betyr at du får en andel når noe du har skapt selges videre. I vanlig økonomi er det nærmere aksjer og fond enn sponsoravtaler.",
-    lessons: [
-      "Eierskap og royalty slår engangslønn over tid.",
-      "Å koble idrett til sterkt merkevare kan gi inntekt i tiår etter karrieren.",
-      "Investeringer i lag og selskaper kan bygge formue utenfor banen.",
-      "Dette er forskjellen på å være ansatt og å eie en andel av verdien du skaper.",
-      "Bygg noe som kan selges igjen og igjen, ikke bare bytt timer mot penger.",
+    decisiveMove:
+      "Signere Nike-avtalen med royalty på eget brand i stedet for engangshonorar — og kjøpe NBA-lag i 2010 for ~275 millioner dollar som ble solgt for ~3 milliarder i 2023.",
+    whatCouldGoWrong: [
+      "Sneakermarkedet kan endres; Nike-avtalen er avhengig av merkevare etter karrieren.",
+      "NBA-verdier kan falle ved liga-kriser eller lavere TV-inntekter.",
+      "Minoritetsandel gir mindre kontroll enn majoritet.",
     ],
+    mythVsReality: [
+      {
+        myth: "Jordan ble milliardær på basketballlønn.",
+        reality:
+          "Total karrierelønn var kanskje 90 millioner dollar — langt mindre enn Nike-royalty og lag-salg.",
+      },
+      {
+        myth: "Royalty og eierskap er det samme som lønn.",
+        reality:
+          "Royalty er inntekt per salg; lageierskap er formue som kan realiseres ved salg — helt ulik skalerbarhet.",
+      },
+    ],
+    personalLessons: [
+      "Tre motorer — lønn, royalty, eierskap — har helt ulik skalerbarhet for idrettsutøvere.",
+      "Eierskap og royalty slår engangslønn over tid når merkevaren lever etter karrieren.",
+      "Investeringer i lag og selskaper kan bygge formue utenfor banen — Jordan viste det med Hornets.",
+      "Bygg noe som selges igjen og igjen (royalty), ikke bare bytt timer mot penger (lønn).",
+    ],
+    sources: [
+      {
+        label: "SEC EDGAR — Nike Inc.",
+        url: "https://www.sec.gov/edgar/browse/?CIK=320187",
+        tier: "primary",
+      },
+      {
+        label: "NBA — salg av Hornets-majoritet",
+        url: "https://www.nba.com/news/michael-jordan-sells-majority-stake-in-hornets",
+        tier: "secondary",
+      },
+      forbesBillionairesSource(),
+      {
+        label: "Jordan Brand — Nike",
+        url: "https://www.nike.com/jordan",
+        tier: "tertiary",
+      },
+    ],
+    lastVerified: "2026-08-11",
     relatedLinks: [
       { label: "Cristiano Ronaldo", href: "/formuesbyggere/cristiano-ronaldo" },
+      { label: "Erling Haaland", href: "/formuesbyggere/erling-haaland" },
+      { label: "Egenkapital i ordboken", href: "/ordbok/egenkapital" },
+    ],
+  }),
+
+  "steve-jobs": buildFormuesbyggerArticle({
+    slug: "steve-jobs",
+    seoAngle:
+      "Steve Jobs formue: Hvorfor Pixar betydde mer enn Apple for rikdommen",
+    shortAnswer:
+      "Steve Jobs er uløselig knyttet til Apple, men ved dødsfallet i 2011 kom en stor, identifiserbar del av formuen fra Pixar-salget og Disney-aksjene. Forbes anslo formuen til omtrent 6,5–7 milliarder dollar — et historisk anslag, ikke «dagens formue». Apples SEC-proxy 2012 oppga 5,5 millioner Apple-aksjer, én dollar i årslønn i 2011, og at han ikke hadde solgt Apple-aksjer etter returen i 1997. NeXT ble veien tilbake; Pixar ble det store private formuesgrepet.",
+    timeline: [
+      {
+        date: "1976",
+        title: "Apple grunnlegges",
+        description:
+          "Jobs og Steve Wozniak startet Apple. Jobs var medgründer og produktleder — ikke aleneoppfinner.",
+      },
+      {
+        date: "1985–1986",
+        title: "Ut av Apple; Pixar og NeXT",
+        description:
+          "Jobs ble presset ut. I 1986 kjøpte han Lucasfilms Computer Division og etablerte Pixar; NeXT ble teknologisk vei tilbake.",
+      },
+      {
+        date: "1997",
+        title: "Retur via NeXT",
+        description:
+          "Apple kjøpte NeXT; Jobs kom tilbake og samlet virksomheten under tydeligere prioritering.",
+      },
+      {
+        date: "2006",
+        title: "Disney kjøper Pixar",
+        description:
+          "Avtaleverdi 7,4 milliarder dollar i aksjer. Jobs eide 50,6 prosent av Pixar før transaksjonen ifølge Disney SEC.",
+      },
+      {
+        date: "5. oktober 2011",
+        title: "Død",
+        description:
+          "Apple kunngjorde at Jobs døde. Forbes-anslaget på ca. 6,5–7 mrd. USD gjelder ved dødsfallet.",
+      },
+    ],
+    wealthSources: [
+      {
+        category: "aksjer",
+        description:
+          "Disney-aksjer mottatt ved Pixar-salget — den største identifiserbare private formuesposten ved dødsfallet ifølge Forbes.",
+      },
+      {
+        category: "selskaper",
+        description:
+          "5,5 millioner Apple-aksjer (SEC-proxy 2012) pluss tidligere eierskap i Pixar/NeXT.",
+      },
+      {
+        category: "salg",
+        description:
+          "Pixar ble solgt til Disney for 7,4 milliarder dollar i aksjer — ikke kontantuttak av hele verdien.",
+      },
+    ],
+    ownershipVsControl:
+      "Ved Pixar-salget eide Jobs 50,6 prosent av Pixar ifølge Disney SEC — reell kontroll over selskapet som ble byttet mot Disney-aksjer. I Apple var eierandelen betydelig, men ikke majoritet; verdien fulgte kursen. Én dollar i lønn illustrerte skillet mellom lønn og egenkapital, ikke mangel på økonomiske incentiver.",
+    decisiveMove:
+      "Å kjøpe Lucasfilms Computer Division i 1986, bygge Pixar, og bytte 50,6 prosent eierskap mot Disney-aksjer i 2006 — et «andre forsøk» som ble viktigere for privat formue enn mange tror.",
+    whatCouldGoWrong: [
+      "Konsentrert eierverdi svinger hardt med aksjekurs og selskapets utvikling.",
+      "Etter et stort tilbakeslag (ut av Apple) er det ingen garanti for et like verdifullt andre forsøk.",
+      "Produktfokus og hard lederstil kan ha menneskelige og organisatoriske kostnader.",
+      "Medisinsk risiko er personlig — unngå spekulasjon om at én beslutning sikkert endret utfallet.",
+    ],
+    mythVsReality: [
+      {
+        myth: "Hele Jobs-formuen kom fra Apple.",
+        reality:
+          "Pixar-salget og Disney-aksjene var en svært stor, trolig større, privat formueskilde ved dødsfallet.",
+      },
+      {
+        myth: "Én dollar i lønn betyr at han ikke hadde økonomiske incentiver.",
+        reality:
+          "Egenkapitalen i Apple og Disney var verdt milliarder.",
+      },
+      {
+        myth: "Jobs fant opp Apple alene.",
+        reality:
+          "Han var medgründer og produktleder i organisasjoner med sterke tekniske og kreative team.",
+      },
+      {
+        myth: "«Stay hungry. Stay foolish.» var Jobs' egen originale formulering.",
+        reality:
+          "I Stanford-talen 2005 oppga han at linjen sto på baksiden av siste utgave av The Whole Earth Catalog.",
+      },
+    ],
+    personalLessons: [
+      "Eierskap i flere selskapsperioder kan bety mer enn høy lønn i ett selskap.",
+      "Et sterkt «andre forsøk» etter et tilbakeslag kan bli hovedformuesgrepet.",
+      "Aksjer som betaling ved oppkjøp skaper formue — og ny kursrisiko.",
+      "Skill medgründer/produktleder fra myten om den ensomme oppfinneren.",
+    ],
+    sources: [
+      {
+        label: "Apple — SEC-proxy 2012 (Jobs: 5,5 mill. aksjer, $1 lønn)",
+        url: "https://www.sec.gov/Archives/edgar/data/320193/000119312512006704/d275281ddef14a.htm",
+        tier: "primary",
+      },
+      {
+        label: "Disney/Pixar — SEC om Pixar-eierskap og oppkjøp",
+        url: "https://www.sec.gov/edgar/browse/?CIK=1001039",
+        tier: "primary",
+      },
+      {
+        label: "Pixar — selskapets historie",
+        url: "https://www.pixar.com/our-story",
+        tier: "primary",
+      },
+      {
+        label: "Apple — styrets uttalelse ved Jobs' død",
+        url: "https://www.apple.com/newsroom/2011/10/05Apple-Media-Advisory-Steve-Jobs-Passes-Away/",
+        tier: "secondary",
+      },
+      {
+        label: "Stanford — manus fra Jobs' tale 2005",
+        url: "https://news.stanford.edu/2005/06/14/jobs-061505/",
+        tier: "quaternary",
+      },
+      forbesBillionairesSource(),
+    ],
+    lastVerified: "2026-08-11",
+    relatedLinks: [
+      { label: "George Lucas", href: "/formuesbyggere/george-lucas" },
+      { label: "Bill Gates", href: "/formuesbyggere/bill-gates" },
+      { label: "Elon Musk", href: "/formuesbyggere/elon-musk" },
+      { label: "Jeff Bezos", href: "/formuesbyggere/jeff-bezos" },
+      { label: "Aksje i ordboken", href: "/ordbok/aksje" },
+    ],
+  }),
+
+  "george-lucas": buildFormuesbyggerArticle({
+    slug: "george-lucas",
+    seoAngle: "George Lucas formue: Slik ble Star Wars til en forretningsmaskin",
+    shortAnswer:
+      "George Lucas bygde ikke bare en filmserie — han eide et system av historier, lisensiering, spesialeffekter og produksjonsteknologi. Disney kjøpte Lucasfilm i 2012 for 4,05 milliarder dollar, omtrent halvparten kontant og halvparten Disney-aksjer; selgeren var et selskap tilknyttet Lucas som eneste aksjonær. Forbes anslo formuen til 5,2 milliarder dollar 11. august 2026. Kinobilletten var én inntekt; universet ga mange.",
+    timeline: [
+      {
+        date: "14. mai 1944",
+        title: "Født",
+        description: "Lucasfilm oppgir Lucas som grunnlegger og formgiver av Star Wars-universet.",
+      },
+      {
+        date: "1971",
+        title: "Lucasfilm grunnlegges",
+        description:
+          "Selskapet ble hjem for Star Wars og Indiana Jones — før den store franchisen var fullt utbygd.",
+      },
+      {
+        date: "1975",
+        title: "Industrial Light & Magic",
+        description:
+          "ILM ble etablert for Star Wars-effekter — en intern kapabilitet som ble verdifull leverandør og del av selskapsverdien.",
+      },
+      {
+        date: "1986",
+        title: "Computer Division selges til Jobs",
+        description:
+          "Pixar oppgir at Jobs kjøpte Lucasfilms Computer Division — startpunktet for Pixar.",
+      },
+      {
+        date: "30. okt. 2012",
+        title: "Disney kjøper Lucasfilm",
+        description:
+          "SEC: 4,05 milliarder dollar i kontant og aksjer. Lucasfilm omfattet franchise, produksjon, forbrukerprodukter, ILM og lyd.",
+      },
+    ],
+    wealthSources: [
+      {
+        category: "selskaper",
+        description:
+          "Eierskap i Lucasfilm som eneste aksjonær før Disney-salget — inkludert Star Wars, produksjon, ILM og lisensvirksomhet.",
+      },
+      {
+        category: "salg",
+        description:
+          "Disney-avtalen på 4,05 milliarder dollar (ca. 50 % kontant / 50 % Disney-aksjer) realiserte verdien av hele plattformen.",
+      },
+      {
+        category: "royalty",
+        description:
+          "Lisensiering og forbrukerprodukter rundt universet — inntekter utenfor kinobilletten, dokumentert som sentral Lucasfilm-funksjon.",
+      },
+      {
+        category: "aksjer",
+        description:
+          "Disney-aksjer mottatt som del av salgsvederlaget; videre formuesestimat følger investeringer over tid.",
+      },
+    ],
+    ownershipVsControl:
+      "Ved salget var Lucas (via tilknyttet selskap) Lucasfilms eneste aksjonær ifølge Disneys SEC-melding — full økonomisk eierskap og kontroll som ga forhandlingsstyrke. Etter closing eide Disney selskapet; Lucas ga fra seg operativ kontroll over videre utvikling av universet mot likviditet og diversifisering.",
+    decisiveMove:
+      "Å selge hele Lucasfilm-pakken til Disney for 4,05 milliarder dollar i 2012 — ikke bare én filmrettighet, men franchise, lisensiering, produksjon, ILM og lyd under ett eierskap.",
+    whatCouldGoWrong: [
+      "En franchise har konsentrasjonsrisiko: publikums smak og nye utgivelser kan endre verdien.",
+      "Store film- og teknologiprosjekter binder kapital lenge før inntektene kommer.",
+      "Salg til Disney reduserte operativ risiko, men fratok kontrollen over videre universutvikling.",
+      "Forbes-estimatet er ikke et offentlig personlig regnskap.",
+    ],
+    mythVsReality: [
+      {
+        myth: "Lucas ble milliardær bare på kinobilletter.",
+        reality:
+          "Den store verdien omfattet rettigheter, lisensiering og flere produksjonsvirksomheter.",
+      },
+      {
+        myth: "Disney betalte 4,05 milliarder dollar kontant til Lucas.",
+        reality:
+          "Avtalen var omtrent halvparten kontant og halvparten Disney-aksjer, før ordinære sluttjusteringer.",
+      },
+      {
+        myth: "Pixar var alltid et Steve Jobs-selskap.",
+        reality:
+          "Teknologimiljøet startet som en divisjon i Lucasfilm og ble solgt til Jobs i 1986.",
+      },
+    ],
+    personalLessons: [
+      "Å lage et verk er ikke det samme som å eie det økonomiske universet rundt verket.",
+      "Immaterielle rettigheter + lisensiering kan gi inntekt i mange formater — spør hvem som eier rettighetene.",
+      "En intern kapabilitet (som ILM) kan bli egen verdidriver utenfor kjerneproduktet.",
+      "Å være eneste aksjonær ved et strategisk salg gir forhandlingsmakt — og forplikter deg til å slippe kontroll.",
+    ],
+    sources: [
+      {
+        label: "Disney — SEC 8-K Lucasfilm-oppkjøp (30. okt. 2012)",
+        url: "https://www.sec.gov/Archives/edgar/data/1001039/000119312512441509/d429302d8k.htm",
+        tier: "primary",
+      },
+      {
+        label: "Disney — SEC pressemelding Exhibit 99.1",
+        url: "https://www.sec.gov/Archives/edgar/data/1001039/000119312512441509/d429302dex991.htm",
+        tier: "secondary",
+      },
+      {
+        label: "Lucasfilm — offisiell hjemmeside / historie",
+        url: "https://www.lucasfilm.com/",
+        tier: "primary",
+      },
+      {
+        label: "Pixar — historie (Lucasfilm Computer Division)",
+        url: "https://www.pixar.com/our-story",
+        tier: "primary",
+      },
+      {
+        label: "Giving Pledge — George Lucas",
+        url: "https://www.givingpledge.org/pledger/george-lucas-and-mellody-hobson/",
+        tier: "quaternary",
+      },
+      forbesBillionairesSource(),
+    ],
+    lastVerified: "2026-08-11",
+    relatedLinks: [
+      { label: "Steve Jobs", href: "/formuesbyggere/steve-jobs" },
+      { label: "Taylor Swift", href: "/formuesbyggere/taylor-swift" },
+      { label: "Egenkapital i ordboken", href: "/ordbok/egenkapital" },
+    ],
+  }),
+
+  "rihanna": buildFormuesbyggerArticle({
+    slug: "rihanna",
+    seoAngle:
+      "Rihanna formue: Hvordan Fenty Beauty ble større enn musikkinntektene",
+    shortAnswer:
+      "Musikken ga Rihanna global oppmerksomhet. Medeierskap i Fenty Beauty gjorde oppmerksomheten om til selskapsverdi — en annen modell enn vanlige reklamehonorarer. Forbes anslo formuen til 1 milliard dollar 11. august 2026, hovedsakelig knyttet til Fenty Beauty, pluss estimert andel i Savage X Fenty. Et publikum er ikke formue; egenkapital i merkevaren er det. Private selskapsverdier er usikre og ikke det samme som kontanter på konto.",
+    timeline: [
+      {
+        date: "20. februar 1988",
+        title: "Født på Barbados",
+        description:
+          "Grammy oppgir fødselsdatoen. Artistkarrieren ble distribusjons- og merkevaregrunnlag.",
+      },
+      {
+        date: "2017",
+        title: "Fenty Beauty lanseres",
+        description:
+          "LVMH: utviklet over to år; lansert med 40 foundation-nyanser ved 1 660 utsalgssteder i 17 land.",
+      },
+      {
+        date: "2021",
+        title: "Savage X Fenty Series B og Fenty-mote på pause",
+        description:
+          "L Catterton: 115 mill. USD hentet til selskapet — ikke privat inntekt til Rihanna. Ready-to-wear-motehuset ble satt på pause samme år.",
+      },
+      {
+        date: "2021",
+        title: "Forbes: ca. 50 % av Fenty Beauty",
+        description:
+          "Forbes Africa estimerte ~50 % eierskap. LVMH bekrefter at hun etablerte merket, men publiserer ikke løpende eierbok — tallet er estimat.",
+      },
+      {
+        date: "2023",
+        title: "Går av som CEO i Savage X Fenty",
+        description:
+          "Fortsatte som styreleder — strategisk innflytelse uten daglig drift.",
+      },
+      {
+        date: "oktober 2025",
+        title: "Reuters: mulig LVMH-salg av Fenty-andel",
+        description:
+          "Anonyme kilder: LVMH vurderte å selge 50 %-andel; mulig selskapsverdi 1–2 mrd. USD. Ikke bekreftet fullført per 11. august 2026.",
+      },
+    ],
+    wealthSources: [
+      {
+        category: "selskaper",
+        description:
+          "Medeierskap i Fenty Beauty (LVMH/Kendo-partnerskap) og estimert andel i Savage X Fenty — hovedforklaringen på milliardformuen ifølge Forbes.",
+      },
+      {
+        category: "royalty",
+        description:
+          "Musikk- og lisensinntekter finnes, men er ikke den primære milliardforklaringen i Forbes' vinkling.",
+      },
+      {
+        category: "salg",
+        description:
+          "Ingen bekreftet fullført salg av Fenty Beauty-andelen per sist kontrollert; Reuters omtalte en mulig prosess.",
+      },
+    ],
+    ownershipVsControl:
+      "Forbes har estimert rundt 50 prosent eierskap i Fenty Beauty (2021) og ca. 28 prosent i Savage X Fenty — medieestimater, ikke offentlig eierbok. LVMH/Kendo ga industriell plattform; Rihanna bidro med produktvisjon og rekkevidde. Etter 2023 beholder hun styreinfluens i Savage X Fenty uten CEO-rollen.",
+    decisiveMove:
+      "Å ta medeierskap i Fenty Beauty i stedet for bare et reklamehonorar — slik at vekst i merkevaren kunne bli egenkapitalverdi, ikke bare engangsbetaling.",
+    whatCouldGoWrong: [
+      "Private selskapsverdier er usikre og kan endres kraftig mellom kapitalrunder eller ved salg.",
+      "Skjønnhetsmarkedet er trend- og konkurranseutsatt.",
+      "Personlig merkevare kan både løfte og skade flere produkter samtidig.",
+      "Suksess i én kategori (beauty) kopieres ikke automatisk til en annen (motehuset ble satt på pause).",
+    ],
+    mythVsReality: [
+      {
+        myth: "Musikkinntektene alene gjorde Rihanna til milliardær.",
+        reality:
+          "Forbes peker på Fenty Beauty som den viktigste formueskilden.",
+      },
+      {
+        myth: "En selskapsverdi på én milliard betyr én milliard i kontanter til eieren.",
+        reality:
+          "Eierandel, gjeld, likviditetsrabatt, skatt og salgspris avgjør hva som kan realiseres.",
+      },
+      {
+        myth: "Alle Fenty-produkter ligger i samme selskap.",
+        reality:
+          "Fenty Beauty, Savage X Fenty og det suspenderte Fenty-motehuset er ulike virksomheter og partnerskap.",
+      },
+      {
+        myth: "Kapitalrunden på 115 millioner dollar var privat inntekt til Rihanna.",
+        reality:
+          "Det var kapital hentet inn av Savage X Fenty.",
+      },
+    ],
+    personalLessons: [
+      "Reklamehonorar gir inntekt; medeierskap gir andel av selskapsverdien — og nedsiderisiko.",
+      "Kjendisrekkevidde er en distribusjonsfordel, ikke formue i seg selv.",
+      "Partner med industriell plattform (produksjon, retail) kan være det artisten mangler alene.",
+      "Mislykkede satsinger under samme navn (motehuset) viser at merkevare ikke garanterer produkt–marked-tilpasning.",
+    ],
+    sources: [
+      {
+        label: "LVMH — Fenty Beauty",
+        url: "https://www.lvmh.com/en/news-documents/news/fenty-beauty/",
+        tier: "primary",
+      },
+      {
+        label: "L Catterton — pressemeldingsarkiv (Savage X Fenty Series B)",
+        url: "https://www.lcatterton.com/",
+        tier: "secondary",
+      },
+      {
+        label: "Reuters — mulig LVMH-salg av Fenty Beauty-andel (okt. 2025)",
+        url: "https://www.reuters.com/",
+        tier: "tertiary",
+      },
+      forbesBillionairesSource(),
+      {
+        label: "Forbes — Rihanna-profil",
+        url: "https://www.forbes.com/profile/rihanna/",
+        tier: "tertiary",
+      },
+      {
+        label: "Grammy — Rihanna-profil",
+        url: "https://www.grammy.com/artists/rihanna/15454",
+        tier: "primary",
+      },
+    ],
+    lastVerified: "2026-08-11",
+    relatedLinks: [
+      { label: "Taylor Swift", href: "/formuesbyggere/taylor-swift" },
+      { label: "Jay-Z", href: "/formuesbyggere/jay-z" },
+      { label: "Oprah Winfrey", href: "/formuesbyggere/oprah-winfrey" },
       { label: "Egenkapital i ordboken", href: "/ordbok/egenkapital" },
     ],
   }),

@@ -1,42 +1,60 @@
 import { calculateReadTimeFromTexts } from "@/lib/read-time";
 import type {
   FormuesbyggerArticle,
-  FormuesbyggerArticleSection,
+  FormuesbyggerMythReality,
   FormuesbyggerQuote,
+  FormuesbyggerSource,
+  FormuesbyggerTimelineEvent,
+  FormuesbyggerWealthSource,
 } from "@/types/formuesbygger";
 import { getFormuesbyggerQuotesForSlug } from "@/lib/sitater";
+import { normalizeArticleSources } from "./source-tiers";
 
-interface BuildArticleOptions {
+export interface BuildArticleOptions {
   slug: string;
   seoAngle: string;
-  intro: string;
-  sections: FormuesbyggerArticleSection[];
-  ownershipParagraphs: string[];
-  personalFinanceBullets?: string[];
-  personalFinanceTip?: string;
+  shortAnswer: string;
+  timeline: FormuesbyggerTimelineEvent[];
+  wealthSources: FormuesbyggerWealthSource[];
+  ownershipVsControl?: string;
+  decisiveMove: string;
+  whatCouldGoWrong: string[];
+  mythVsReality: FormuesbyggerMythReality[];
+  personalLessons: string[];
+  sources: FormuesbyggerSource[];
+  lastVerified: string;
   quotes?: FormuesbyggerQuote[];
-  lessons: string[];
   relatedLinks?: { label: string; href: string }[];
 }
 
 function collectArticleTexts(
   article: Omit<FormuesbyggerArticle, "readTimeMinutes">,
 ): string[] {
-  const texts: string[] = [article.intro, article.seoAngle];
+  const texts: string[] = [article.seoAngle, article.shortAnswer];
 
-  for (const section of article.sections) {
-    texts.push(section.heading, ...(section.paragraphs ?? []));
-    texts.push(...(section.bullets ?? []));
-    if (section.tip) texts.push(section.tip);
+  for (const event of article.timeline) {
+    texts.push(event.date, event.title, ...(event.description ? [event.description] : []));
   }
+
+  for (const source of article.wealthSources) {
+    texts.push(source.category, source.description);
+  }
+
+  if (article.ownershipVsControl) texts.push(article.ownershipVsControl);
+  texts.push(article.decisiveMove);
+  texts.push(...article.whatCouldGoWrong);
+
+  for (const pair of article.mythVsReality) {
+    texts.push(pair.myth, pair.reality);
+  }
+
+  texts.push(...article.personalLessons);
 
   for (const quote of article.quotes ?? []) {
     texts.push(quote.text);
     if (quote.translation) texts.push(quote.translation);
     if (quote.note) texts.push(quote.note);
   }
-
-  texts.push(...article.lessons);
 
   return texts;
 }
@@ -50,38 +68,23 @@ export function calculateFormuesbyggerReadTime(
 export function buildFormuesbyggerArticle(
   options: BuildArticleOptions,
 ): FormuesbyggerArticle {
-  const personalBullets = options.personalFinanceBullets ?? [
-    "Høy lønn alene bygger sjelden stor formue. Det er det du beholder og lar vokse som teller.",
-    "Sparing i fond eller aksjer over mange år kopierer i liten skala det store eierskapet gjør i stor skala.",
-    "Kompetanse og nettverk kan være starten på eget firma, sideprosjekt eller bedre investeringsvalg.",
-    "Unngå dyr gjeld som spiser av det du kunne investert.",
-  ];
-
   const quotes =
     options.quotes ?? getFormuesbyggerQuotesForSlug(options.slug);
 
   const articleWithoutReadTime = {
     slug: options.slug,
     seoAngle: options.seoAngle,
-    intro: options.intro,
-    sections: [
-      ...options.sections,
-      {
-        heading: "Lønn versus eierskap",
-        paragraphs: options.ownershipParagraphs,
-        tip: "Lønn er det du får utbetalt hver måned. Eierskap er andelen av verdi du sitter igjen med når et selskap, en merkevare eller en eiendel vokser. De fleste store formuer er bygget på det siste.",
-      },
-      {
-        heading: "Hva betyr dette for deg?",
-        paragraphs: [
-          "Du trenger ikke starte et industrikonsern for å ta lærdommen på alvor. Prinsippet om eierskap gjelder også i vanlig privatøkonomi.",
-        ],
-        bullets: personalBullets,
-        tip: options.personalFinanceTip,
-      },
-    ],
+    shortAnswer: options.shortAnswer,
+    timeline: options.timeline,
+    wealthSources: options.wealthSources,
+    ownershipVsControl: options.ownershipVsControl,
+    decisiveMove: options.decisiveMove,
+    whatCouldGoWrong: options.whatCouldGoWrong,
+    mythVsReality: options.mythVsReality,
+    personalLessons: options.personalLessons,
+    sources: normalizeArticleSources(options.sources),
+    lastVerified: options.lastVerified,
     quotes,
-    lessons: options.lessons,
     relatedLinks: options.relatedLinks,
   };
 
@@ -90,3 +93,14 @@ export function buildFormuesbyggerArticle(
     readTimeMinutes: calculateFormuesbyggerReadTime(articleWithoutReadTime),
   };
 }
+
+export const WEALTH_SOURCE_LABELS: Record<
+  FormuesbyggerWealthSource["category"],
+  string
+> = {
+  selskaper: "Selskaper",
+  aksjer: "Aksjer",
+  salg: "Salg",
+  royalty: "Royalty",
+  arv: "Arv",
+};
