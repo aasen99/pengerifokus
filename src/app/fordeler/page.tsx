@@ -14,7 +14,7 @@ import { getFordeler, getTilbudByFordel } from "@/lib/content";
 import { createPageMetadata } from "@/lib/seo";
 
 const pageDescription =
-  "Oversikt over Trumf, OBOS, Usbl, Spenn, Norwegian Reward, Strawberry, studentrabatter og andre fordelsprogrammer. Les guider om bonus, uttak og når programmene passer deg.";
+  "Oversikt over Trumf, OBOS, Usbl, Spenn, Norwegian Reward, Strawberry, Scandic Friends, THON+, studentrabatter og andre fordelsprogrammer. Les guider om bonus, uttak og når programmene passer deg.";
 
 export const metadata: Metadata = createPageMetadata({
   title: FORDELSPROGRAMMER_TITLE,
@@ -32,6 +32,9 @@ export const metadata: Metadata = createPageMetadata({
     "spenn",
     "norwegian reward",
     "strawberry medlemskap",
+    "scandic friends",
+    "thon+",
+    "hotellbonus",
     "studentrabatt",
     "eurobonus",
     "bankfordeler",

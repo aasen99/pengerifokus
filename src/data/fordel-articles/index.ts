@@ -3,15 +3,18 @@ import { calculateFordelArticleReadTime } from "@/lib/read-time";
 import { bankfordeler } from "./bankfordeler";
 import { coop } from "./coop";
 import { eurobonus } from "./eurobonus";
+import { hotellbonus } from "./hotellbonus";
 import { klarna } from "./klarna";
 import { kredittkortfordeler } from "./kredittkortfordeler";
 import { naf } from "./naf";
 import { obos } from "./obos";
 import { norwegianReward } from "./norwegian-reward";
 import { revolut } from "./revolut";
+import { scandicFriends } from "./scandic-friends";
 import { spenn } from "./spenn";
 import { strawberry } from "./strawberry";
 import { student } from "./student";
+import { thonPlus } from "./thon-plus";
 import { trumf } from "./trumf";
 import { usbl } from "./usbl";
 
@@ -31,15 +34,18 @@ const fordelArticles: Record<string, FordelArticleContent> = {
   bankfordeler: withReadTime(bankfordeler),
   coop: withReadTime(coop),
   eurobonus: withReadTime(eurobonus),
+  hotellbonus: withReadTime(hotellbonus),
   klarna: withReadTime(klarna),
   kredittkortfordeler: withReadTime(kredittkortfordeler),
   naf: withReadTime(naf),
   "norwegian-reward": withReadTime(norwegianReward),
   obos: withReadTime(obos),
   revolut: withReadTime(revolut),
+  "scandic-friends": withReadTime(scandicFriends),
   spenn: withReadTime(spenn),
   strawberry: withReadTime(strawberry),
   student: withReadTime(student),
+  "thon-plus": withReadTime(thonPlus),
   trumf: withReadTime(trumf),
   usbl: withReadTime(usbl),
 };

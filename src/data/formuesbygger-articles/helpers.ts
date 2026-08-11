@@ -23,6 +23,9 @@ export interface BuildArticleOptions {
   personalLessons: string[];
   sources: FormuesbyggerSource[];
   lastVerified: string;
+  metaDescription?: string;
+  seoKeywords?: string[];
+  faq?: { question: string; answer: string }[];
   quotes?: FormuesbyggerQuote[];
   relatedLinks?: { label: string; href: string }[];
 }
@@ -84,6 +87,9 @@ export function buildFormuesbyggerArticle(
     personalLessons: options.personalLessons,
     sources: normalizeArticleSources(options.sources),
     lastVerified: options.lastVerified,
+    metaDescription: options.metaDescription,
+    seoKeywords: options.seoKeywords,
+    faq: options.faq,
     quotes,
     relatedLinks: options.relatedLinks,
   };
@@ -103,4 +109,5 @@ export const WEALTH_SOURCE_LABELS: Record<
   salg: "Salg",
   royalty: "Royalty",
   arv: "Arv",
+  lonn: "Lønn og kontrakter",
 };

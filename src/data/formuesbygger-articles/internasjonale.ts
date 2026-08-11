@@ -1261,104 +1261,207 @@ export const internasjonaleFormuesbyggerArtikler = {
 
   "cristiano-ronaldo": buildFormuesbyggerArticle({
     slug: "cristiano-ronaldo",
-    seoAngle: "Hvordan tjener Cristiano Ronaldo mer enn fotballlønn?",
+    seoAngle:
+      "Cristiano Ronaldo formue og lønn: Slik bygde han CR7-imperiet",
+    metaDescription:
+      "Forbes anslår Cristiano Ronaldos formue til 1,2 milliarder dollar. Se hva han tjener på Al-Nassr, Nike, CR7-hoteller og egne selskaper.",
+    seoKeywords: [
+      "Cristiano Ronaldo formue",
+      "Ronaldo formue",
+      "Cristiano Ronaldo lønn",
+      "hvor mye tjener Ronaldo",
+      "Ronaldo lønn i uken",
+      "Ronaldo Al Nassr kontrakt",
+      "Ronaldo Nike avtale",
+      "Ronaldo hoteller",
+      "Ronaldo selskaper",
+      "CR7 merkevare",
+      "Ronaldo milliardær",
+      "Pestana CR7 eier",
+      "Ronaldo Insparya",
+      "Ronaldo følgere",
+    ],
     shortAnswer:
-      "Cristiano Ronaldo er blant verdens best betalte idrettsutøvere, men stor del av formuen kommer fra sponsorater, merkevare og forretninger utenfor banen. Fotballlønn fra Sporting, Manchester United, Real Madrid, Juventus og Al-Nassr er én av flere inntektsstrømmer. CR7-merkevaren dekker kles, parfyme, hotell og trening, mange med eierskap, ikke bare fronting. Nike-avtalen er sponsorhonorar; CR7-hotell er eierskap. Sosiale medier med milliarder følgere driver både honorar og merkevarets salg.",
+      "Cristiano Ronaldo har tjent mesteparten av pengene gjennom fotball og sponsorater. Forbes anslo formuen til rundt 1,2 milliarder dollar den 11. august 2026, og årsinntekten til 300 millioner dollar frem til mai 2026: 235 millioner fra Al-Nassr-kontrakten og 65 millioner utenfor banen. CR7-merket, Pestana-hotellene, Insparya og en enorm følgerskare gjør den kommersielle karrieren mindre avhengig av at han spiller kamper. Lønn er den største dokumenterte motoren; virksomheter diversifiserer og forlenger inntektene.",
     timeline: [
       {
-        date: "2003",
-        title: "Overgang til Manchester United",
+        date: "5. feb. 1985",
+        title: "Født i Funchal, Madeira",
         description:
-          "Ronaldo ble global stjerne; lønn og sponsoravtaler vokste raskt.",
+          "Real Madrid oppgir fødselsdato og fødested i klubbens historikk.",
       },
       {
-        date: "2009",
-        title: "Real Madrid og rekordlønn",
+        date: "2009–2018",
+        title: "Real Madrid-perioden",
         description:
-          "Verdens dyreste overgang; lønn og prestisje styrket merkevarens verdi.",
+          "451 mål på 438 tellende kamper; klubbens mest scorende spiller. Fire Champions League-titler styrket lønn, sponsorverdi og global rekkevidde.",
+      },
+      {
+        date: "des. 2015",
+        title: "Pestana CR7-fellesforetak",
+        description:
+          "Pestana Group: fellesforetak på 75 millioner euro for fire livsstilshoteller (Funchal, Lisboa, Madrid, New York). Like eierandeler; Pestana drifter.",
       },
       {
         date: "2016",
-        title: "CR7-merkevaren ekspanderer",
+        title: "Nike-livstidsavtale",
         description:
-          "Hotell, klesmerker og parfyme med eierskap, ikke bare endorsment.",
+          "Forbes omtalte livstidsavtale; totalverdi «opptil 1 mrd. dollar» var rapportert, ikke offentlig bekreftet av Nike.",
       },
       {
-        date: "2023",
-        title: "Al-Nassr og Saudi-lønn",
+        date: "sept. 2024",
+        title: "Én milliard følgerkontoer",
         description:
-          "Astronomisk lønn i Saudi-Arabia, men fortsatt bare én av flere inntektsmotorer.",
+          "Reuters: første person over én milliard følgere samlet på tvers av plattformer. Overlapp mellom kontoer; ikke én milliard unike personer.",
       },
       {
-        date: "2020–2026",
-        title: "Sosiale medier som salgskanal",
+        date: "juni 2025",
+        title: "Al-Nassr til juni 2027",
         description:
-          "Flest Instagram-følgere globalt; sponsorer betaler for rekkevidde, CR7-merkevaren selger produkter.",
+          "Kontrakten forlenget; løpetid dokumentert. Forbes estimerte senere 235 mill. dollar i spillerinntekt i 2026-målingen.",
       },
     ],
     wealthSources: [
       {
+        category: "lonn",
+        description:
+          "Fotballkontrakter er den største dokumenterte pengemotoren. Forbes: 235 mill. USD fra Al-Nassr i siste 12-månedersperiode til mai 2026. Karriereinntekter over 2 mrd. USD brutto (før skatt og agent) er ikke det samme som nettoformue.",
+      },
+      {
         category: "royalty",
         description:
-          "Nike og globale sponsoravtaler gir honorar for navn og ansikt, inntekt, ikke eierskap i Nike.",
+          "Sponsorater, lisensiering og øvrig kommersiell aktivitet: Forbes estimerte 65 mill. USD utenfor banen i samme måling. Nike-livstidsavtale er omtalt; totalverdi opptil 1 mrd. USD var rapportert, ikke bekreftet utbetaling.",
       },
       {
         category: "selskaper",
         description:
-          "CR7-hotell, klesmerker og lifestyle-selskaper der Ronaldo eier andeler.",
-      },
-      {
-        category: "salg",
-        description:
-          "Fotballlønn utgjør stor årlig inntekt, men karrieren er kort sammenlignet med merkevaren.",
+          "Dokumenterte partnerskap: Pestana CR7 (fellesforetak) og Insparya (medgründer). CR7 brukes i flere produktkategorier, men samlede inntekter og eierandeler er ikke offentlig dokumentert for alle merker.",
       },
     ],
     decisiveMove:
-      "Bygge CR7 som eget merke med eierskap i hotell, kles og lifestyle, ikke bare maksimere fotballlønn og sponsorhonorar.",
+      "Å omgjøre ekstrem fotballønn og global rekkevidde til en CR7-distribusjonsplattform: livstidsavtale med Nike, fellesforetak med Pestana, medeierskap via Insparya, og sponsor-/lisensinntekter som kan leve etter siste kamp, uten å late som virksomhetene allerede har skapt størstedelen av formuen.",
     whatCouldGoWrong: [
-      "Idrettskarrieren er kort; skade kan kutte lønn og synlighet.",
-      "Merkevare kan skades av kontroverser eller dalende sportslig form.",
-      "Hotell- og retail-investeringer kan underperforme i nedgang.",
+      "Al-Nassr-kontrakten varer til 2027; den største synlige inntektsstrømmen kan falle kraftig når spillerlønnen forsvinner.",
+      "CR7-navnet knytter mange produkter til én persons omdømme; en krise kan treffe flere inntekter samtidig.",
+      "Private verdsettelser (hotell, klinikker) mangler daglig markedspris; Forbes og Bloomberg kan lande på ulike tall.",
+      "Hotell og klinikker krever kapital og drift; kjent eier fjerner ikke bransjerisiko.",
+      "Forbes-inntekter er før skatt og agenthonorarer; nettolønn kan ikke regnes uten kontrakt og skatteforhold.",
     ],
     mythVsReality: [
       {
-        myth: "Ronaldo ble rikest på fotballlønn alene.",
+        myth: "Ronaldo ble milliardær fordi han eier en hotellkjede.",
         reality:
-          "Sponsorhonorar og CR7-eierskap gir inntekt i tiår etter at karrieren avtar.",
+          "De største dokumenterte beløpene kommer fra fotballønn og sponsorinntekter. Hotellene drives gjennom et fellesforetak som bidrar til diversifisering.",
       },
       {
-        myth: "Nike-avtalen betyr at han eier Nike.",
+        myth: "Forbes' 300 millioner dollar er formuesøkningen hans i 2026.",
         reality:
-          "Det er sponsorhonorar, inntekt. CR7-hotell og egne merker er eierskap og formue.",
+          "Det er estimert bruttoinntekt før skatt og agenthonorarer, ikke økning i nettoformue.",
+      },
+      {
+        myth: "Nike har bekreftet at Ronaldo fikk én milliard dollar utbetalt.",
+        reality:
+          "Livstidsavtalen er omtalt som bekreftet; verdien på opptil én milliard var rapportert og kan være maksimal verdi over lang tid.",
+      },
+      {
+        myth: "Én milliard følgere betyr én milliard forskjellige mennesker.",
+        reality:
+          "Tallet summerer opp kontoer på tvers av plattformer og inneholder overlapp.",
+      },
+      {
+        myth: "75 millioner euro til Pestana CR7 var betaling til Ronaldo.",
+        reality:
+          "Pestana beskriver dette som størrelsen på fellesforetaket for hotellutvikling, ikke kontantinntekt til Ronaldo.",
+      },
+      {
+        myth: "Karriereinntekter og nettoformue er det samme.",
+        reality:
+          "Forbes anslår over to milliarder i brutto karriereinntekter, men 1,2 milliarder i nettoformue.",
       },
     ],
     personalLessons: [
-      "Topp idrett gir høy lønn, men merkevare kan gi mer over tid enn lønn alene.",
-      "Sponsorhonorar er inntekt; eierskap i egne selskaper er formue, skille dem.",
-      "Bygg personlig merkevare tidlig for å forlenge inntektsperioden etter karrieren.",
-      "Sosiale medier er salgskanal, bruk rekkevidden til å drive egne produkter, ikke bare sponsorater.",
+      "Maksimer knapp kompetanse før du diversifiserer: kommersielle muligheter kom fordi prestasjonene skapte global etterspørsel.",
+      "Forleng inntektsperioden: sponsorater, lisensiering og virksomheter kan fortsette etter at spillerlønnen stopper.",
+      "Eie distribusjonen: enorm rekkevidde gjør deg mindre avhengig av kjøpt medieoppmerksomhet.",
+      "Bruk industripartnere: Pestana kan drive hotell, Insparya har medisinsk drift. Du trenger ikke bygge alle kapasiteter selv.",
+      "Skill honorar fra egenkapital: sponsorinntekt gir kontantstrøm; medeierskap kan gi langsiktig verdi, men også tap.",
+      "Ikke forveksle popularitet med lønnsomhet: følgere gir en fordel, men hvert selskap må fortsatt tjene penger.",
+    ],
+    faq: [
+      {
+        question: "Hvor stor formue har Cristiano Ronaldo?",
+        answer:
+          "Forbes anslo formuen til 1,2 milliarder dollar den 11. august 2026. Bloomberg anslo 1,4 milliarder dollar i oktober 2025 (via Reuters). Begge tallene er estimater, ikke revidert personlig regnskap.",
+      },
+      {
+        question: "Hvor mye tjener Ronaldo i året?",
+        answer:
+          "Forbes anslo 300 millioner dollar i de siste tolv månedene frem til mai 2026: 235 millioner fra fotball og 65 millioner utenfor banen. Tallene er før skatt og agenthonorarer.",
+      },
+      {
+        question: "Hvor lenge har Ronaldo kontrakt med Al-Nassr?",
+        answer:
+          "Kontrakten varer til juni 2027, ifølge Reuters' omtale av forlengelsen i juni 2025.",
+      },
+      {
+        question: "Eier Ronaldo hotellene selv?",
+        answer:
+          "Pestana CR7 er et partnerskap og fellesforetak mellom Ronaldo og Pestana Group. Det er misvisende å beskrive alle hotellene som heleid av Ronaldo.",
+      },
+      {
+        question: "Hvor mye er Nike-avtalen verdt?",
+        answer:
+          "Forbes omtalte en livstidsavtale og skrev at den var rapportert å kunne være verdt opptil én milliard dollar. En endelig garantert totalverdi er ikke offentlig bekreftet.",
+      },
     ],
     sources: [
       {
-        label: "SEC EDGAR: Nike Inc.",
-        url: "https://www.sec.gov/edgar/browse/?CIK=320187",
+        label: "Real Madrid: historikk og statistikk",
+        url: "https://www.realmadrid.com/en-US/football/first-team/legends/cristiano-ronaldo",
         tier: "primary",
       },
       {
-        label: "Forbes: høyest betalte idrettsutøvere",
-        url: "https://www.forbes.com/lists/athletes/",
+        label: "Pestana Group: CR7-partnerskap",
+        url: "https://www.pestanagroup.com/en/pestana-cr7/",
+        tier: "primary",
+      },
+      {
+        label: "Pestana Group: åpning og 75 mill. euro-fellesforetak",
+        url: "https://www.pestanagroup.com/en/cristiano-ronaldo-and-dionisio-pestana-open-doors-together/",
+        tier: "primary",
+      },
+      {
+        label: "Insparya: om selskapet (Ronaldo som medgründer)",
+        url: "https://insparya.com/",
+        tier: "primary",
+      },
+      {
+        label: "Reuters: Al-Nassr-kontrakt til 2027",
+        url: "https://www.reuters.com/",
         tier: "tertiary",
       },
       {
-        label: "CR7: offisiell merkevare",
-        url: "https://www.cr7.com/",
+        label: "Reuters: én milliard følgerkontoer (2024)",
+        url: "https://www.reuters.com/",
         tier: "tertiary",
       },
+      {
+        label: "Forbes: Cristiano Ronaldo-profil",
+        url: "https://www.forbes.com/profile/cristiano-ronaldo/",
+        tier: "tertiary",
+      },
+      {
+        label: "Forbes: verdens best betalte idrettsutøvere 2026",
+        url: "https://www.forbes.com/lists/athletes/",
+        tier: "tertiary",
+      },
+      forbesBillionairesSource(),
     ],
     lastVerified: "2026-08-11",
     relatedLinks: [
+      { label: "Erling Braut Haaland", href: "/formuesbyggere/erling-haaland" },
       { label: "Michael Jordan", href: "/formuesbyggere/michael-jordan" },
-      { label: "Erling Haaland", href: "/formuesbyggere/erling-haaland" },
+      { label: "Rihanna", href: "/formuesbyggere/rihanna" },
       { label: "Nettoformue i ordboken", href: "/ordbok/nettoformue" },
     ],
   }),
@@ -1463,7 +1566,7 @@ export const internasjonaleFormuesbyggerArtikler = {
     lastVerified: "2026-08-11",
     relatedLinks: [
       { label: "Cristiano Ronaldo", href: "/formuesbyggere/cristiano-ronaldo" },
-      { label: "Erling Haaland", href: "/formuesbyggere/erling-haaland" },
+      { label: "Erling Braut Haaland", href: "/formuesbyggere/erling-haaland" },
       { label: "Egenkapital i ordboken", href: "/ordbok/egenkapital" },
     ],
   }),
@@ -1472,6 +1575,17 @@ export const internasjonaleFormuesbyggerArtikler = {
     slug: "steve-jobs",
     seoAngle:
       "Steve Jobs formue: Hvorfor Pixar betydde mer enn Apple for rikdommen",
+    metaDescription:
+      "Omtrentlig formue ca. 6,5–7 mrd. USD ved dødsfallet (Forbes 2011). Pixar/Disney-aksjer var viktigere for Jobs' privatformue enn mange tror.",
+    seoKeywords: [
+      "Steve Jobs formue",
+      "Steve Jobs Pixar",
+      "Steve Jobs Apple aksjer",
+      "Steve Jobs lønn 1 dollar",
+      "Steve Jobs dødsårsak",
+      "hvor gammel ble Steve Jobs",
+      "Steve Jobs sitater",
+    ],
     shortAnswer:
       "Steve Jobs er uløselig knyttet til Apple, men ved dødsfallet i 2011 kom en stor, identifiserbar del av formuen fra Pixar-salget og Disney-aksjene. Forbes anslo formuen til omtrent 6,5–7 milliarder dollar, et historisk anslag, ikke «dagens formue». Apples SEC-proxy 2012 oppga 5,5 millioner Apple-aksjer, én dollar i årslønn i 2011, og at han ikke hadde solgt Apple-aksjer etter returen i 1997. NeXT ble veien tilbake; Pixar ble det store private formuesgrepet.",
     timeline: [
@@ -1602,6 +1716,17 @@ export const internasjonaleFormuesbyggerArtikler = {
   "george-lucas": buildFormuesbyggerArticle({
     slug: "george-lucas",
     seoAngle: "George Lucas formue: Slik ble Star Wars til en forretningsmaskin",
+    metaDescription:
+      "Omtrentlig formue ca. 5,2 mrd. USD (Forbes 2026). Lucas solgte Lucasfilm til Disney for 4,05 mrd. USD, med lisensiering og IP utenfor kinobilletten.",
+    seoKeywords: [
+      "George Lucas formue",
+      "George Lucas Star Wars",
+      "hvor mye solgte George Lucas Lucasfilm for",
+      "Disney kjøpte Star Wars",
+      "George Lucas merchandising",
+      "George Lucas Pixar",
+      "George Lucas alder",
+    ],
     shortAnswer:
       "George Lucas bygde ikke bare en filmserie, han eide et system av historier, lisensiering, spesialeffekter og produksjonsteknologi. Disney kjøpte Lucasfilm i 2012 for 4,05 milliarder dollar, omtrent halvparten kontant og halvparten Disney-aksjer; selgeren var et selskap tilknyttet Lucas som eneste aksjonær. Forbes anslo formuen til 5,2 milliarder dollar 11. august 2026. Kinobilletten var én inntekt; universet ga mange.",
     timeline: [
@@ -1730,6 +1855,17 @@ export const internasjonaleFormuesbyggerArtikler = {
     slug: "rihanna",
     seoAngle:
       "Rihanna formue: Hvordan Fenty Beauty ble større enn musikkinntektene",
+    metaDescription:
+      "Omtrentlig formue ca. 1 mrd. USD (Forbes 2026). Rihanna ble milliardær på medeierskap i Fenty Beauty, ikke bare musikkinntekter eller reklamehonorar.",
+    seoKeywords: [
+      "Rihanna formue",
+      "Rihanna milliardær",
+      "Rihanna Fenty Beauty",
+      "hvem eier Fenty Beauty",
+      "Rihanna selskaper",
+      "Savage X Fenty eierandel",
+      "Rihanna alder",
+    ],
     shortAnswer:
       "Musikken ga Rihanna global oppmerksomhet. Medeierskap i Fenty Beauty gjorde oppmerksomheten om til selskapsverdi, en annen modell enn vanlige reklamehonorarer. Forbes anslo formuen til 1 milliard dollar 11. august 2026, hovedsakelig knyttet til Fenty Beauty, pluss estimert andel i Savage X Fenty. Et publikum er ikke formue; egenkapital i merkevaren er det. Private selskapsverdier er usikre og ikke det samme som kontanter på konto.",
     timeline: [

@@ -6,15 +6,29 @@ export const norskeProfilerBatch3 = {
   "erling-haaland": buildFormuesbyggerArticle({
     slug: "erling-haaland",
     seoAngle:
-      "Erling Haaland formue og lønn: Slik bygger han rikdom utenfor banen",
+      "Erling Braut Haaland formue og lønn: Slik bygger han rikdom utenfor banen",
+    metaDescription:
+      "Omtrentlig formue ca. 4,1 mrd. NOK (Kapital 2025). Erling Braut Haaland omgjør fotball- og sponsorinntekt til holdingselskaper, verdipapirer og eiendom.",
+    seoKeywords: [
+      "Erling Braut Haaland",
+      "Erling Braut Haaland formue",
+      "Erling Haaland formue",
+      "Erling Haaland lønn",
+      "hvor mye tjener Haaland",
+      "Haaland Nike avtale",
+      "Haaland investeringer",
+      "Pillage 3",
+      "Erling Haaland alder",
+      "Manchester City kontrakt 2034",
+    ],
     shortAnswer:
-      "Erling Haaland tjener ekstremt på fotball og sponsorater. Formuesgrepet er hvordan inntektene flyttes til holdingselskaper, verdipapirer og eiendom. Kapital anslo formuen til rundt 4,1 milliarder kroner i 2025, et medieanslag, ikke revidert nettoformue. Forbes anslo årsinntektene til 80 millioner dollar i sin 2026-måling. Formue og inntekt er to forskjellige størrelser. Prestasjon skaper råvaren; kontrakt, merkevare og investert kapital avgjør hva som blir igjen etter karrieren.",
+      "Erling Braut Haaland tjener ekstremt på fotball og sponsorater. Formuesgrepet er hvordan inntektene flyttes til holdingselskaper, verdipapirer og eiendom. Kapital anslo formuen til rundt 4,1 milliarder kroner i 2025, et medieanslag, ikke revidert nettoformue. Forbes anslo årsinntektene til 80 millioner dollar i sin 2026-måling. Formue og inntekt er to forskjellige størrelser. Prestasjon skaper råvaren; kontrakt, merkevare og investert kapital avgjør hva som blir igjen etter karrieren.",
     timeline: [
       {
         date: "21. juli 2000",
         title: "Født i Leeds",
         description:
-          "Haaland er født 21. juli 2000. Manchester City oppgir fødselsdatoen i spillerprofilen.",
+          "Erling Braut Haaland er født 21. juli 2000. Manchester City oppgir fødselsdatoen i spillerprofilen.",
       },
       {
         date: "1. juli 2022",
@@ -123,7 +137,7 @@ export const norskeProfilerBatch3 = {
       },
       kapital400Source(),
       {
-        label: "Forbes: Haaland / best betalte unge idrettsutøvere",
+        label: "Forbes: Erling Braut Haaland / best betalte unge idrettsutøvere",
         url: "https://www.forbes.com/profile/erling-haaland/",
         tier: "tertiary",
       },
@@ -140,6 +154,18 @@ export const norskeProfilerBatch3 = {
     slug: "oystein-stray-spetalen",
     seoAngle:
       "Øystein Stray Spetalen: Slik bygget han formuen gjennom aksjer, oppkjøp og kontroll",
+    metaDescription:
+      "Omtrentlig formue ca. 5,5 mrd. NOK (Kapital 2025, før gavene). Spetalen, Ferncliff, Tycoon og skillet mellom eierskap, stemmer og kontroll.",
+    seoKeywords: [
+      "Øystein Stray Spetalen formue",
+      "Spetalen døtre",
+      "Spetalen aksjer",
+      "Spetalen selskaper",
+      "Ferncliff",
+      "Tycoon Industrier",
+      "Spetalen Saga Pure",
+      "Spetalen alder",
+    ],
     shortAnswer:
       "Øystein Stray Spetalen bygde formue gjennom konsentrerte investeringer og aktiv selskapskontroll, ikke gjennom ett produkt. Kapital anslo formuen til 5,5 milliarder kroner i 2025, før store aksjegaver til døtrene. Gaver, flaggemeldinger og senere kjøp gjør det nødvendig å skille økonomisk eierskap, juridisk eierskap, stemmerett og faktisk kontroll. Høy avkastning har fulgt med konsentrasjon, omdømmerisiko og store svingninger.",
     timeline: [
@@ -277,6 +303,18 @@ export const norskeProfilerBatch3 = {
     slug: "johan-johannson",
     seoAngle:
       "Johan Johannson og NorgesGruppen: Formuen bak Norges største dagligvarehus",
+    metaDescription:
+      "Omtrentlig formue ca. 59 mrd. NOK (Kapital 2025, tilordnet). Johannson-familien og NorgesGruppen: skala, lave marginer og familieeierskap vs personlig eierandel.",
+    seoKeywords: [
+      "Johan Johannson formue",
+      "Johan Johannson NorgesGruppen",
+      "hvem eier NorgesGruppen",
+      "Johannson familien",
+      "NorgesGruppen eierandel",
+      "Johan Johannson alder",
+      "NorgesGruppen Vitusapotek",
+      "Kiwi Meny eier",
+    ],
     shortAnswer:
       "Johan Johannson er femte generasjon i handelsslekten bak NorgesGruppen. Kapital anslo i 2025 formuen tilordnet ham til 59 milliarder kroner, ofte familieverdier tilordnet én person, ikke personlig bankbeholdning. Familien kontrollerte 74,4 prosent av aksjer og stemmer i NorgesGruppen ved utgangen av 2024 via Joh. Johannson Handel AS. Historien handler om arv plus skala: lave marginer på enorme volumer, vertikal integrasjon og langsiktig familiekapital, ikke «selvskapt fra null».",
     timeline: [

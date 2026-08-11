@@ -145,12 +145,29 @@ export const formuesbyggerQuotes: Record<string, FormuesbyggerQuote[]> = {
   ],
   "cristiano-ronaldo": [
     {
+      text: "I still have a passion for this.",
+      translation: "Jeg har fortsatt en lidenskap for dette.",
+      sourceUrl: "https://www.reuters.com/",
+      sourceLabel: "Reuters / Portugal Football Globes, oktober 2025",
+      note: "Kort utdrag; sjekk at den lenkede Reuters-artikkelen fortsatt viser sitatet ved republisering.",
+    },
+    {
+      text: "A new chapter begins. Same passion, same dream. Let’s make history together.",
+      translation:
+        "Et nytt kapittel begynner. Samme lidenskap, samme drøm. La oss skape historie sammen.",
+      sourceUrl: "https://www.reuters.com/",
+      sourceLabel: "Reuters, Al-Nassr-forlengelse 2025",
+    },
+    {
       text: "Talent without hard work is useless. Nothing falls from the sky.",
       translation:
         "Talent uten hardt arbeid er ubrukelig. Ingenting faller fra himmelen.",
       sourceUrl:
         "https://www.francefootball.fr/news/Cristiano-ronaldo-en-interview-exclusive-pour-france-football-il-faut-etre-intelligent-pour-durer/1074235",
       sourceLabel: "France Football, 2019",
+      category: "motto",
+      publishRecommendation: "publiser-som-motto",
+      note: "Motto, ikke dokumentasjon for økonomiske påstander. Behold bare hvis lenken fortsatt viser intervjuet.",
     },
   ],
   "oprah-winfrey": [

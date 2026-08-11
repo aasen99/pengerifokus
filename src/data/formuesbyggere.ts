@@ -464,11 +464,13 @@ const baseFormuesbyggere: Formuesbygger[] = [
     region: "internasjonal",
     industry: "sport",
     buildType: "idrett-underholdning",
-    tagline: "Fotballspiller som bygde formue på lønn, sponsorater og eget merkevareimperium.",
-    wealthEstimate: forbesEstimate("1–1,5"),
-    wealthContext: "Fotballlønn, sponsorater og CR7-merkevare utenfor banen.",
+    tagline:
+      "Fotballønn er den største dokumenterte motoren; CR7, sponsorater og partnerskap forlenger inntektene etter karrieren.",
+    wealthEstimate: forbesEstimate("1,2", "2026"),
+    wealthContext:
+      "Forbes-estimat 11. august 2026. Bloomberg anslo 1,4 mrd. USD i oktober 2025 (via Reuters). Lønn og kontrakter er hoveddriver; sponsorater og virksomheter diversifiserer.",
     createdAt: "2026-06-11",
-    updatedAt: "2026-06-11",
+    updatedAt: "2026-08-11",
   },
   {
     id: "fb-i15",
@@ -490,7 +492,7 @@ const baseFormuesbyggere: Formuesbygger[] = [
     slug: "erling-haaland",
     status: "published",
     featured: true,
-    name: "Erling Haaland",
+    name: "Erling Braut Haaland",
     region: "norsk",
     industry: "sport",
     buildType: "idrett-underholdning",

@@ -6,7 +6,7 @@ import type {
 
 export const FORMUESBYGGERE_TITLE = "Formuesbyggerne";
 export const FORMUESBYGGERE_INTRO =
-  "Korte profiler av kjente formuesbyggere. Hvordan de startet, hva de eier, og hva vi kan lære av reisen deres.";
+  "Profiler av kjente formuesbyggere: hvordan formuen ble bygget, hvor verdien sitter, og hva som faktisk kan læres. Med tidslinje, kildehierarki og skillet mellom lønn, eierskap og kontroll.";
 
 export const FORMUE_DISCLAIMER =
   "Formueanslagene er omtrentlige markedsverdier, ikke skattemessig ligningsformue. Norske profiler følger i hovedsak Kapital 400 (publiseres årlig). Internasjonale profiler følger Forbes Billionaires List. Tallene svinger med aksjekurser og eiendomspriser, og skal ikke behandles som fasit.";

@@ -30,12 +30,14 @@ export function getArticleJsonLd({
   path,
   datePublished,
   dateModified,
+  about,
 }: {
   title: string;
   description: string;
   path: string;
   datePublished: string;
   dateModified: string;
+  about?: { name: string; birthDate?: string; deathDate?: string };
 }) {
   const url = absoluteUrl(path);
   const siteUrl = getSiteUrl();
@@ -66,6 +68,40 @@ export function getArticleJsonLd({
         url: logoUrl,
       },
     },
+    ...(about
+      ? {
+          about: {
+            "@type": "Person",
+            name: about.name,
+            ...(about.birthDate ? { birthDate: about.birthDate } : {}),
+            ...(about.deathDate ? { deathDate: about.deathDate } : {}),
+          },
+        }
+      : {}),
+  };
+}
+
+export function getPersonJsonLd({
+  name,
+  description,
+  path,
+  birthDate,
+  deathDate,
+}: {
+  name: string;
+  description: string;
+  path: string;
+  birthDate?: string;
+  deathDate?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name,
+    description,
+    url: absoluteUrl(path),
+    ...(birthDate ? { birthDate } : {}),
+    ...(deathDate ? { deathDate } : {}),
   };
 }
 

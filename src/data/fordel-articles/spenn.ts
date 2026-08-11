@@ -47,7 +47,7 @@ export const spenn: FordelArticleContent = {
       ],
       bullets: [
         "Norwegian: 1 Spenn per 10 kr på LowFare, 2 på LowFare+ og 5 på Flex. Gjelder Norwegian- og kommersielle Widerøe-flyvninger",
-        "Strawberry: 3 Spenn per 10 kr (eller per 1 EUR) på hotellopphold, pluss medlemsboost på Silver, Gold og Platinum",
+        "Strawberry: 3 Spenn per 10 kr (eller per 1 EUR) på Blue, totalt 4/5/6 Spenn på Silver/Gold/Platinum (+1/+2/+3 medlemsboost)",
         "REMA 1000: 10 % bonus på frukt og grønt utbetalt i Spenn når Spenn er aktivert i REMA-appen",
         "Narvesen, 7-Eleven og Uno-X: inngår i Spenn-økosystemet, sjekk gjeldende satser i appen",
       ],

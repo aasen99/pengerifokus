@@ -94,7 +94,8 @@ export type FormuesbyggerWealthSourceCategory =
   | "aksjer"
   | "salg"
   | "royalty"
-  | "arv";
+  | "arv"
+  | "lonn";
 
 export interface FormuesbyggerWealthSource {
   category: FormuesbyggerWealthSourceCategory;
@@ -153,6 +154,12 @@ export interface FormuesbyggerArticle {
   sources: FormuesbyggerSource[];
   /** ISO-dato (YYYY-MM-DD) */
   lastVerified: string;
+  /** Valgfri meta description (ellers bygges automatisk) */
+  metaDescription?: string;
+  /** Ekstra SEO-nøkkelord utover standardsett */
+  seoKeywords?: string[];
+  /** Valgfri FAQ (ellers bygges fra synlig artikkelinnhold) */
+  faq?: { question: string; answer: string }[];
   quotes?: FormuesbyggerQuote[];
   relatedLinks?: { label: string; href: string }[];
 }

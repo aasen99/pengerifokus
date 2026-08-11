@@ -11,7 +11,7 @@ import { getFormuesbyggere } from "@/lib/content";
 import { createPageMetadata } from "@/lib/seo";
 
 const pageDescription =
-  "Korte profiler av kjente formuesbyggere i Norge og internasjonalt. Hvordan de startet, hva de eier, og hva vi kan lære av reisen deres.";
+  "Slik ble de rike: formuesbyggere i Norge og internasjonalt. Formueanslag, tidslinje, eierskap versus kontroll, og konkrete lærdommer, med kildehierarki.";
 
 export const metadata: Metadata = createPageMetadata({
   title: FORMUESBYGGERE_TITLE,
@@ -21,10 +21,13 @@ export const metadata: Metadata = createPageMetadata({
     "formuesbyggere",
     "hvordan ble de rike",
     "milliardærer",
+    "formue",
     "eierskap",
     "gründer",
     "investor",
     "norske milliardærer",
+    "Kapital 400",
+    "Forbes",
   ],
 });
 
