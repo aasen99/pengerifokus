@@ -498,7 +498,7 @@ const baseFormuesbyggere: Formuesbygger[] = [
       "Fotballspiller som omgjør ekstrem arbeidsinntekt til holdingselskaper, verdipapirer og eiendom.",
     wealthEstimate: kapitalEstimate("4,1"),
     wealthContext:
-      "Kapital-anslag 2025. Formuen omfatter blant annet Pillage-strukturer — ikke lønn på konto. Forbes-inntektsanslag er en annen størrelse.",
+      "Kapital-anslag 2025. Formuen omfatter blant annet Pillage-strukturer, ikke lønn på konto. Forbes-inntektsanslag er en annen størrelse.",
     createdAt: "2026-08-11",
     updatedAt: "2026-08-11",
   },
@@ -511,7 +511,7 @@ const baseFormuesbyggere: Formuesbygger[] = [
     industry: "investering",
     buildType: "investor",
     tagline:
-      "Investor som bygde formue gjennom konsentrerte aksjeposisjoner, oppkjøp og kontroll — med store familieoverføringer i 2025.",
+      "Investor som bygde formue gjennom konsentrerte aksjeposisjoner, oppkjøp og kontroll, med store familieoverføringer i 2025.",
     wealthEstimate: kapitalEstimate("5,5"),
     wealthContext:
       "Kapital-anslag 2025 før de store aksjegavene. Skiller personlig eierskap, familiesfære og stemmemakt.",
@@ -528,7 +528,7 @@ const baseFormuesbyggere: Formuesbygger[] = [
     industry: "handel",
     buildType: "arv-videreutvikling",
     tagline:
-      "Femte generasjon bak NorgesGruppen — skala, logistikk og familieeierskap i lavmargin dagligvare.",
+      "Femte generasjon bak NorgesGruppen, skala, logistikk og familieeierskap i lavmargin dagligvare.",
     wealthEstimate: kapitalEstimate("59"),
     wealthContext:
       "Kapital tilordnet familieverdier i NorgesGruppen-sfæren. Familieandel er ikke det samme som personlig eierandel.",
@@ -561,7 +561,7 @@ const baseFormuesbyggere: Formuesbygger[] = [
     industry: "teknologi",
     buildType: "grunder",
     tagline:
-      "Bygget Lucasfilm, lisensiering og ILM — solgte hele plattformen til Disney i 2012.",
+      "Bygget Lucasfilm, lisensiering og ILM, solgte hele plattformen til Disney i 2012.",
     wealthEstimate: forbesEstimate("5,2", "2026"),
     wealthContext:
       "Forbes-estimat. Formuen springer ut av immaterielle rettigheter, lisensiering og salget av Lucasfilm.",
@@ -578,7 +578,7 @@ const baseFormuesbyggere: Formuesbygger[] = [
     industry: "musikk",
     buildType: "merkevare",
     tagline:
-      "Artist som omgjorde kjendisoppmerksomhet til medeierskap i Fenty Beauty — ikke bare reklamehonorar.",
+      "Artist som omgjorde kjendisoppmerksomhet til medeierskap i Fenty Beauty, ikke bare reklamehonorar.",
     wealthEstimate: forbesEstimate("1", "2026"),
     wealthContext:
       "Forbes-estimat basert i stor grad på private selskapsverdier i Fenty Beauty og Savage X Fenty.",

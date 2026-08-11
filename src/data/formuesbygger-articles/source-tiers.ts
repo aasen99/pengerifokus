@@ -6,7 +6,7 @@ import {
 } from "@/data/formuesbyggere-labels";
 import type { FormuesbyggerSource, FormuesbyggerSourceTier } from "@/types/formuesbygger";
 
-/** Sorteringsrekkefølge — lavere tall vises først */
+/** Sorteringsrekkefølge, lavere tall vises først */
 export const SOURCE_TIER_ORDER: Record<FormuesbyggerSourceTier, number> = {
   primary: 0,
   secondary: 1,
@@ -36,7 +36,7 @@ export const SOURCE_TIER_DESCRIPTIONS: Record<
   quaternary: "Intervju",
 };
 
-/** Kildehierarki: Wikipedia og formueblogger brukes kun til å finne spor — aldri som hovedkilde. */
+/** Kildehierarki: Wikipedia og formueblogger brukes kun til å finne spor, aldri som hovedkilde. */
 export function kapital400Source(): FormuesbyggerSource {
   return {
     label: KAPITAL_400_SOURCE,

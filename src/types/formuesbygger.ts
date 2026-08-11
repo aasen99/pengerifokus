@@ -115,7 +115,7 @@ export interface FormuesbyggerSource {
    * secondary → børsmelding / oppkjøpsmelding
    * tertiary → Kapital / Forbes / Reuters / DN / E24
    * quaternary → intervju
-   * trace → Wikipedia, formueblogger (kun spor — filtreres bort i UI)
+   * trace → Wikipedia, formueblogger (kun spor, filtreres bort i UI)
    */
   tier: FormuesbyggerSourceTier;
 }
@@ -127,7 +127,7 @@ export type FormuesbyggerSourceTier =
   | "quaternary"
   | "trace";
 
-/** Fast artikkelmal — samme ni seksjoner på alle profiler */
+/** Fast artikkelmal, samme ni seksjoner på alle profiler */
 export interface FormuesbyggerArticle {
   slug: string;
   readTimeMinutes: number;
@@ -139,7 +139,7 @@ export interface FormuesbyggerArticle {
   timeline: FormuesbyggerTimelineEvent[];
   /** Fordeling: selskaper, aksjer, salg, royalty, arv */
   wealthSources: FormuesbyggerWealthSource[];
-  /** Eierskap versus kontroll — utelates når ikke relevant */
+  /** Eierskap versus kontroll, utelates når ikke relevant */
   ownershipVsControl?: string;
   /** Én konkret transaksjon eller strategisk beslutning */
   decisiveMove: string;
@@ -147,7 +147,7 @@ export interface FormuesbyggerArticle {
   whatCouldGoWrong: string[];
   /** Selvskapt, arvet, lønn, kontanter eller aksjeverdi */
   mythVsReality: FormuesbyggerMythReality[];
-  /** Unikt for profilen — ikke generiske fire punkter */
+  /** Unikt for profilen, ikke generiske fire punkter */
   personalLessons: string[];
   /** Direkte kildelenker */
   sources: FormuesbyggerSource[];

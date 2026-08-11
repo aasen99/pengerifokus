@@ -8,7 +8,7 @@ export const norskeProfilerBatch3 = {
     seoAngle:
       "Erling Haaland formue og lønn: Slik bygger han rikdom utenfor banen",
     shortAnswer:
-      "Erling Haaland tjener ekstremt på fotball og sponsorater. Formuesgrepet er hvordan inntektene flyttes til holdingselskaper, verdipapirer og eiendom. Kapital anslo formuen til rundt 4,1 milliarder kroner i 2025 — et medieanslag, ikke revidert nettoformue. Forbes anslo årsinntektene til 80 millioner dollar i sin 2026-måling. Formue og inntekt er to forskjellige størrelser. Prestasjon skaper råvaren; kontrakt, merkevare og investert kapital avgjør hva som blir igjen etter karrieren.",
+      "Erling Haaland tjener ekstremt på fotball og sponsorater. Formuesgrepet er hvordan inntektene flyttes til holdingselskaper, verdipapirer og eiendom. Kapital anslo formuen til rundt 4,1 milliarder kroner i 2025, et medieanslag, ikke revidert nettoformue. Forbes anslo årsinntektene til 80 millioner dollar i sin 2026-måling. Formue og inntekt er to forskjellige størrelser. Prestasjon skaper råvaren; kontrakt, merkevare og investert kapital avgjør hva som blir igjen etter karrieren.",
     timeline: [
       {
         date: "21. juli 2000",
@@ -44,19 +44,19 @@ export const norskeProfilerBatch3 = {
         date: "2025/26",
         title: "Champions League-statistikk",
         description:
-          "UEFA registrerte 57 mål på 58 CL-kamper og Haaland som raskest til 30, 40 og 50 mål — dokumentasjon som styrker forhandlingsmakt.",
+          "UEFA registrerte 57 mål på 58 CL-kamper og Haaland som raskest til 30, 40 og 50 mål, dokumentasjon som styrker forhandlingsmakt.",
       },
     ],
     wealthSources: [
       {
         category: "selskaper",
         description:
-          "Holdingselskaper som Pillage 2 og Pillage 3 — bokførte aksjer, investeringer og eiendomsinteresser. Bokført verdi er ikke nødvendigvis markedsverdi.",
+          "Holdingselskaper som Pillage 2 og Pillage 3, bokførte aksjer, investeringer og eiendomsinteresser. Bokført verdi er ikke nødvendigvis markedsverdi.",
       },
       {
         category: "aksjer",
         description:
-          "Verdipapirer og eierinteresser i investeringsselskapene, omtalt via regnskaper — ikke frie private kontanter.",
+          "Verdipapirer og eierinteresser i investeringsselskapene, omtalt via regnskaper, ikke frie private kontanter.",
       },
       {
         category: "salg",
@@ -65,12 +65,12 @@ export const norskeProfilerBatch3 = {
       },
     ],
     decisiveMove:
-      "Å flytte ekstrem arbeidsinntekt inn i holdingselskaper og investeringer (Pillage-strukturen) — slik at en tidsbegrenset idrettskarriere kan bli kapital som varer lengre enn karrieren.",
+      "Å flytte ekstrem arbeidsinntekt inn i holdingselskaper og investeringer (Pillage-strukturen), slik at en tidsbegrenset idrettskarriere kan bli kapital som varer lengre enn karrieren.",
     whatCouldGoWrong: [
       "Inntekten er fortsatt sterkt knyttet til helse, prestasjoner og fotballens kommersielle økonomi.",
       "Lang kontrakt gir forutsigbarhet, men skaper konsentrasjon mot én klubb og én bransje.",
       "Private selskaper gjør eksakt nettoformue vanskelig å beregne.",
-      "Formues- og inntektsestimater kan ikke legges sammen — og begge er før skatt og kostnader.",
+      "Formues- og inntektsestimater kan ikke legges sammen, og begge er før skatt og kostnader.",
     ],
     mythVsReality: [
       {
@@ -90,40 +90,40 @@ export const norskeProfilerBatch3 = {
       },
     ],
     personalLessons: [
-      "Ekstrem arbeidsinntekt er råvare — formue avgjøres av hva som beholdes og hvordan det eies.",
+      "Ekstrem arbeidsinntekt er råvare, formue avgjøres av hva som beholdes og hvordan det eies.",
       "En lang kontrakt reduserer én type risiko, men løser ikke konsentrasjon i én bransje.",
       "Holdingselskap kan gjøre tidsbegrenset inntekt om til kapital som overlever karrieren.",
-      "Skill alltid formueanslag (Kapital) fra inntektsanslag (Forbes) — de måler ulike ting.",
+      "Skill alltid formueanslag (Kapital) fra inntektsanslag (Forbes), de måler ulike ting.",
     ],
     sources: [
       {
-        label: "Manchester City — spillerprofil",
+        label: "Manchester City: spillerprofil",
         url: "https://www.mancity.com/players/erling-haaland",
         tier: "primary",
       },
       {
-        label: "Manchester City — ny kontrakt (2025)",
+        label: "Manchester City: ny kontrakt (2025)",
         url: "https://www.mancity.com/news/mens/erling-haaland-signs-new-contract-63859158",
         tier: "primary",
       },
       {
-        label: "Nike — offisiell kunngjøring (mars 2023)",
+        label: "Nike: offisiell kunngjøring (mars 2023)",
         url: "https://about.nike.com/en/newsroom/releases/erling-haaland-signs-with-nike",
         tier: "secondary",
       },
       {
-        label: "UEFA — Champions League-statistikk",
+        label: "UEFA: Champions League-statistikk",
         url: "https://www.uefa.com/uefachampionsleague/news/",
         tier: "primary",
       },
       {
-        label: "E24 — Pillage 3-regnskapet",
+        label: "E24: Pillage 3-regnskapet",
         url: "https://e24.no/",
         tier: "tertiary",
       },
       kapital400Source(),
       {
-        label: "Forbes — Haaland / best betalte unge idrettsutøvere",
+        label: "Forbes: Haaland / best betalte unge idrettsutøvere",
         url: "https://www.forbes.com/profile/erling-haaland/",
         tier: "tertiary",
       },
@@ -141,7 +141,7 @@ export const norskeProfilerBatch3 = {
     seoAngle:
       "Øystein Stray Spetalen: Slik bygget han formuen gjennom aksjer, oppkjøp og kontroll",
     shortAnswer:
-      "Øystein Stray Spetalen bygde formue gjennom konsentrerte investeringer og aktiv selskapskontroll — ikke gjennom ett produkt. Kapital anslo formuen til 5,5 milliarder kroner i 2025, før store aksjegaver til døtrene. Gaver, flaggemeldinger og senere kjøp gjør det nødvendig å skille økonomisk eierskap, juridisk eierskap, stemmerett og faktisk kontroll. Høy avkastning har fulgt med konsentrasjon, omdømmerisiko og store svingninger.",
+      "Øystein Stray Spetalen bygde formue gjennom konsentrerte investeringer og aktiv selskapskontroll, ikke gjennom ett produkt. Kapital anslo formuen til 5,5 milliarder kroner i 2025, før store aksjegaver til døtrene. Gaver, flaggemeldinger og senere kjøp gjør det nødvendig å skille økonomisk eierskap, juridisk eierskap, stemmerett og faktisk kontroll. Høy avkastning har fulgt med konsentrasjon, omdømmerisiko og store svingninger.",
     timeline: [
       {
         date: "17. juni 1962",
@@ -153,7 +153,7 @@ export const norskeProfilerBatch3 = {
         date: "tidlig 1990-tallet",
         title: "Fra broker til Sveaas",
         description:
-          "Oslo Securities, Noka Securities og Gjensidige, deretter investeringsdirektør for Christen Sveaas — nettverk før Tycoon.",
+          "Oslo Securities, Noka Securities og Gjensidige, deretter investeringsdirektør for Christen Sveaas, nettverk før Tycoon.",
       },
       {
         date: "1995",
@@ -171,7 +171,7 @@ export const norskeProfilerBatch3 = {
         date: "september 2025",
         title: "Gave av Saga Pure-aksjer til døtrene",
         description:
-          "Alle 172 841 799 Saga Pure-aksjer eid via Ferncliff Holding — og aksjene i Ferncliff Holding — overført 50/50 til døtrenes selskaper (flaggemelding).",
+          "Alle 172 841 799 Saga Pure-aksjer eid via Ferncliff Holding, og aksjene i Ferncliff Holding, overført 50/50 til døtrenes selskaper (flaggemelding).",
       },
       {
         date: "desember 2025",
@@ -194,13 +194,13 @@ export const norskeProfilerBatch3 = {
       {
         category: "salg",
         description:
-          "Gevinster ved exit fra posisjoner (f.eks. Nel) — ofte medieestimater, ikke offisiell gevinstoppgave.",
+          "Gevinster ved exit fra posisjoner (f.eks. Nel), ofte medieestimater, ikke offisiell gevinstoppgave.",
       },
     ],
     ownershipVsControl:
       "Gavene i 2025 flyttet juridisk og økonomisk eierskap til døtrenes selskaper, men kontrollspørsmålet forsvant ikke. Aksjonærlister, direkte kjøp og eventuelle A-aksjer i familieselskaper må undersøkes separat. Prosent eierskap er ikke det samme som stemmer eller faktisk innflytelse.",
     decisiveMove:
-      "De dokumenterte gavene i september 2025 — overføring av Ferncliff Holdings Saga Pure-post og Ferncliff Holding-aksjene 50/50 til døtrenes selskaper — som gjør skillet mellom personlig formue, familiesfære og kontroll til selve lærdommen.",
+      "De dokumenterte gavene i september 2025, overføring av Ferncliff Holdings Saga Pure-post og Ferncliff Holding-aksjene 50/50 til døtrenes selskaper, som gjør skillet mellom personlig formue, familiesfære og kontroll til selve lærdommen.",
     whatCouldGoWrong: [
       "Konsentrerte posisjoner gir stor oppside og stort tap.",
       "Verdier i private selskaper er vanskeligere å kontrollere enn børsverdier.",
@@ -222,44 +222,44 @@ export const norskeProfilerBatch3 = {
       {
         myth: "Kapitals 2025-anslag er et presist nåtidsbilde.",
         reality:
-          "Store eierskifter gjør sammenligningen krevende — anslaget er historisk kontekst, ikke fasit etter gavene.",
+          "Store eierskifter gjør sammenligningen krevende, anslaget er historisk kontekst, ikke fasit etter gavene.",
       },
     ],
     personalLessons: [
-      "I finans bygges formue ofte gjennom kapitalallokering og kontroll — ikke gjennom ett produkt.",
+      "I finans bygges formue ofte gjennom kapitalallokering og kontroll, ikke gjennom ett produkt.",
       "Skill alltid økonomisk eierskap, juridisk eierskap, stemmerett og faktisk kontroll.",
-      "Konsentrasjon kan gi ekstrem avkastning — og ekstrem nedsiderisiko.",
+      "Konsentrasjon kan gi ekstrem avkastning, og ekstrem nedsiderisiko.",
       "Les børsmeldinger før medieoppsummeringer når eierskap endres.",
     ],
     sources: [
       {
-        label: "Flagging — gave av Saga Pure / Ferncliff (sept. 2025)",
+        label: "Flagging: gave av Saga Pure / Ferncliff (sept. 2025)",
         url: "https://newsweb.oslobors.no/",
         tier: "secondary",
       },
       {
-        label: "Saga Pure — investor relations / aksjonærliste",
+        label: "Saga Pure: investor relations / aksjonærliste",
         url: "https://www.sagapure.com/",
         tier: "primary",
       },
       {
-        label: "Nel — årsrapport 2014",
+        label: "Nel: årsrapport 2014",
         url: "https://nelhydrogen.com/",
         tier: "primary",
       },
       {
-        label: "Store norske leksikon — Øystein Stray Spetalen",
+        label: "Store norske leksikon: Øystein Stray Spetalen",
         url: "https://snl.no/%C3%98ystein_Stray_Spetalen",
         tier: "primary",
       },
       kapital400Source(),
       {
-        label: "E24 — omtale av Kapital-anslag og eierskifter",
+        label: "E24: omtale av Kapital-anslag og eierskifter",
         url: "https://e24.no/",
         tier: "tertiary",
       },
       {
-        label: "Dagens Næringsliv — Spetalen-sitat (2021)",
+        label: "Dagens Næringsliv: Spetalen-sitat (2021)",
         url: "https://www.dn.no/",
         tier: "quaternary",
       },
@@ -278,13 +278,13 @@ export const norskeProfilerBatch3 = {
     seoAngle:
       "Johan Johannson og NorgesGruppen: Formuen bak Norges største dagligvarehus",
     shortAnswer:
-      "Johan Johannson er femte generasjon i handelsslekten bak NorgesGruppen. Kapital anslo i 2025 formuen tilordnet ham til 59 milliarder kroner — ofte familieverdier tilordnet én person, ikke personlig bankbeholdning. Familien kontrollerte 74,4 prosent av aksjer og stemmer i NorgesGruppen ved utgangen av 2024 via Joh. Johannson Handel AS. Historien handler om arv plus skala: lave marginer på enorme volumer, vertikal integrasjon og langsiktig familiekapital — ikke «selvskapt fra null».",
+      "Johan Johannson er femte generasjon i handelsslekten bak NorgesGruppen. Kapital anslo i 2025 formuen tilordnet ham til 59 milliarder kroner, ofte familieverdier tilordnet én person, ikke personlig bankbeholdning. Familien kontrollerte 74,4 prosent av aksjer og stemmer i NorgesGruppen ved utgangen av 2024 via Joh. Johannson Handel AS. Historien handler om arv plus skala: lave marginer på enorme volumer, vertikal integrasjon og langsiktig familiekapital, ikke «selvskapt fra null».",
     timeline: [
       {
         date: "1866",
         title: "Handelsslektens røtter",
         description:
-          "SNL beskriver virksomheten med røtter tilbake til 1866 — Johannson er femte generasjon.",
+          "SNL beskriver virksomheten med røtter tilbake til 1866, Johannson er femte generasjon.",
       },
       {
         date: "25. januar 1967",
@@ -320,12 +320,12 @@ export const norskeProfilerBatch3 = {
       {
         category: "arv",
         description:
-          "Startposisjon i familievirksomhet med røtter til 1866 — kategori arv + videreutvikling, ikke «bare arving».",
+          "Startposisjon i familievirksomhet med røtter til 1866, kategori arv + videreutvikling, ikke «bare arving».",
       },
       {
         category: "selskaper",
         description:
-          "Familiekontroll i NorgesGruppen via Joh. Johannson Handel AS — privat selskap uten løpende børspris.",
+          "Familiekontroll i NorgesGruppen via Joh. Johannson Handel AS, privat selskap uten løpende børspris.",
       },
       {
         category: "salg",
@@ -334,12 +334,12 @@ export const norskeProfilerBatch3 = {
       },
     ],
     ownershipVsControl:
-      "Nordic Credit Rating oppga at Johannson-familien kontrollerte 74,4 prosent av aksjene og stemmene i NorgesGruppen ved utgangen av 2024 gjennom Joh. Johannson Handel AS. Riktig formulering er at familien kontrollerer andelen — ikke at Johan eier 74,4 prosent personlig. Kapital kan tilordne familieformue til én person selv om arvinger eier deler.",
+      "Nordic Credit Rating oppga at Johannson-familien kontrollerte 74,4 prosent av aksjene og stemmene i NorgesGruppen ved utgangen av 2024 gjennom Joh. Johannson Handel AS. Riktig formulering er at familien kontrollerer andelen, ikke at Johan eier 74,4 prosent personlig. Kapital kan tilordne familieformue til én person selv om arvinger eier deler.",
     decisiveMove:
-      "Å bygge og beholde vertikal skala i NorgesGruppen — produksjon, grossist, distribusjon og ca. 1 800 butikker — der 3,3 prosent driftsmargin på 125,3 milliarder i omsetning (2025) likevel gir milliarder i absolutt resultat.",
+      "Å bygge og beholde vertikal skala i NorgesGruppen, produksjon, grossist, distribusjon og ca. 1 800 butikker, der 3,3 prosent driftsmargin på 125,3 milliarder i omsetning (2025) likevel gir milliarder i absolutt resultat.",
     whatCouldGoWrong: [
       "Dagligvaremarkedet er politisk og regulatorisk utsatt.",
-      "De tre store gruppene står for om lag 95 prosent av markedet — skala gir makt, men også vedvarende konkurransedebatt.",
+      "De tre store gruppene står for om lag 95 prosent av markedet, skala gir makt, men også vedvarende konkurransedebatt.",
       "Lav driftsmargin gjør kostnadsøkninger svært merkbare.",
       "Privat selskap mangler løpende børspris; formuesanslag blir modellberegninger.",
     ],
@@ -366,39 +366,39 @@ export const norskeProfilerBatch3 = {
       },
     ],
     personalLessons: [
-      "Små marginer kan gi store resultater når volumet er enormt — omsetning er ikke formue.",
+      "Små marginer kan gi store resultater når volumet er enormt, omsetning er ikke formue.",
       "Familieandel er ikke det samme som personlig eierandel; les holdingselskap og metodefotnoter.",
       "Vertikal integrasjon kan skape effektivitet i flere ledd, ikke bare i butikkassen.",
       "Skala kan flyttes til nabomarkeder (apotek), men kjøpesum uten offentlig tall bør ikke gjettes.",
     ],
     sources: [
       {
-        label: "NorgesGruppen — 2025-resultat / rapportarkiv",
+        label: "NorgesGruppen: 2025-resultat / rapportarkiv",
         url: "https://www.norgesgruppen.no/",
         tier: "primary",
       },
       {
-        label: "NorgesGruppen — styrelederskifte (2022)",
+        label: "NorgesGruppen: styrelederskifte (2022)",
         url: "https://www.norgesgruppen.no/",
         tier: "secondary",
       },
       {
-        label: "Nordic Credit Rating — NorgesGruppen (juni 2025)",
+        label: "Nordic Credit Rating: NorgesGruppen (juni 2025)",
         url: "https://nordiccreditrating.com/",
         tier: "primary",
       },
       {
-        label: "Konkurransetilsynet — NMD/Vitusapotek-vedtak",
+        label: "Konkurransetilsynet: NMD/Vitusapotek-vedtak",
         url: "https://konkurransetilsynet.no/",
         tier: "primary",
       },
       {
-        label: "McKesson — fullføring av salget (30. jan. 2026)",
+        label: "McKesson: fullføring av salget (30. jan. 2026)",
         url: "https://www.mckesson.com/",
         tier: "secondary",
       },
       {
-        label: "Store norske leksikon — Johan Johannson",
+        label: "Store norske leksikon: Johan Johannson",
         url: "https://snl.no/Johan_Johannson",
         tier: "primary",
       },

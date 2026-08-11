@@ -205,7 +205,7 @@ export const formuesbyggerQuotes: Record<string, FormuesbyggerQuote[]> = {
       translation: "Vær sulten. Vær tåpelig.",
       sourceUrl: "https://news.stanford.edu/2005/06/14/jobs-061505/",
       sourceLabel: "Stanford-talen 2005 (siterer The Whole Earth Catalog)",
-      note: "Jobs siterte linjen fra The Whole Earth Catalog — ikke en original Jobs-formulering.",
+      note: "Jobs siterte linjen fra The Whole Earth Catalog, ikke en original Jobs-formulering.",
       publishRecommendation: "publiser",
     },
   ],
@@ -215,7 +215,7 @@ export const formuesbyggerQuotes: Record<string, FormuesbyggerQuote[]> = {
       translation:
         "Drømmer er ekstremt viktige. Du klarer det ikke med mindre du forestiller deg det.",
       sourceUrl: "https://www.lucasfilm.com/",
-      sourceLabel: "Lucasfilm — offisiell hjemmeside",
+      sourceLabel: "Lucasfilm, offisiell hjemmeside",
     },
   ],
   "rihanna": [
@@ -224,7 +224,7 @@ export const formuesbyggerQuotes: Record<string, FormuesbyggerQuote[]> = {
       translation:
         "Fenty Beauty ble skapt for alle: for kvinner i alle nyanser, personligheter, holdninger, kulturer og raser.",
       sourceUrl: "https://www.lvmh.com/en/news-documents/news/fenty-beauty/",
-      sourceLabel: "LVMH — Fenty Beauty",
+      sourceLabel: "LVMH, Fenty Beauty",
     },
   ],
 };

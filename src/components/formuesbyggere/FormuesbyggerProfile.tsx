@@ -218,50 +218,72 @@ export function FormuesbyggerProfile({
         </section>
       )}
 
-      <section className="mt-10 border-t border-stone-200 pt-6">
-        <h2 className="text-lg font-semibold text-stone-900">
-          Kilder og sist kontrollert
-        </h2>
-        <p className="mt-2 text-sm text-stone-500">
-          Sist kontrollert {formatVerifiedDate(article.lastVerified)}
-        </p>
-        <p className="mt-2 text-sm text-stone-500">
-          Vi prioriterer årsrapporter, SEC og Brønnøysund, deretter
-          børsmeldinger, før Kapital og andre medier. Wikipedia og formueblogger
-          brukes kun internt for å finne spor.
-        </p>
-        <div className="mt-4 space-y-5">
-          {SOURCE_TIER_DISPLAY_ORDER.map((tier) => {
-            const tierSources = sourcesByTier[tier];
-            if (!tierSources?.length) return null;
+      <details className="group mt-10 rounded-xl border border-stone-200 bg-stone-50">
+        <summary className="cursor-pointer list-none px-4 py-2.5 [&::-webkit-details-marker]:hidden">
+          <div className="flex items-center justify-between gap-3">
+            <span className="text-sm text-stone-700">
+              <span className="font-semibold text-stone-900">
+                Kilder og sist kontrollert
+              </span>
+              <span className="text-stone-500">
+                {" "}
+                ·{" "}
+                <time dateTime={article.lastVerified}>
+                  {formatVerifiedDate(article.lastVerified)}
+                </time>
+                {" · "}
+                {article.sources.length}{" "}
+                {article.sources.length === 1 ? "kilde" : "kilder"}
+              </span>
+            </span>
+            <span
+              className="shrink-0 text-sm text-stone-400 transition-transform group-open:rotate-180"
+              aria-hidden="true"
+            >
+              ▾
+            </span>
+          </div>
+        </summary>
 
-            return (
-              <div key={tier}>
-                <h3 className="text-sm font-semibold text-stone-800">
-                  {SOURCE_TIER_LABELS[tier]}
-                </h3>
-                <p className="text-xs text-stone-500">
-                  {SOURCE_TIER_DESCRIPTIONS[tier]}
-                </p>
-                <ul className="mt-2 space-y-2">
-                  {tierSources.map((source) => (
-                    <li key={source.url}>
-                      <a
-                        href={source.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-sm font-medium text-orange-600 hover:text-orange-700"
-                      >
-                        {source.label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            );
-          })}
+        <div className="border-t border-stone-200 px-4 py-3">
+          <p className="text-xs leading-relaxed text-stone-600">
+            Vi prioriterer årsrapporter, SEC og Brønnøysund, deretter
+            børsmeldinger, før Kapital og andre medier. Wikipedia og
+            formueblogger brukes kun internt for å finne spor.
+          </p>
+          <div className="mt-4 space-y-5">
+            {SOURCE_TIER_DISPLAY_ORDER.map((tier) => {
+              const tierSources = sourcesByTier[tier];
+              if (!tierSources?.length) return null;
+
+              return (
+                <div key={tier}>
+                  <h3 className="text-sm font-semibold text-stone-800">
+                    {SOURCE_TIER_LABELS[tier]}
+                  </h3>
+                  <p className="text-xs text-stone-500">
+                    {SOURCE_TIER_DESCRIPTIONS[tier]}
+                  </p>
+                  <ul className="mt-2 space-y-2">
+                    {tierSources.map((source) => (
+                      <li key={source.url}>
+                        <a
+                          href={source.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm font-medium text-orange-600 hover:text-orange-700"
+                        >
+                          {source.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            })}
+          </div>
         </div>
-      </section>
+      </details>
 
       {article.relatedLinks && article.relatedLinks.length > 0 && (
         <RelatedLinks links={article.relatedLinks} />
