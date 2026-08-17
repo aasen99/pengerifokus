@@ -109,6 +109,10 @@ export const sifoBudsjett: GuideArticleContent = {
   ],
   relatedLinks: [
     { label: "SIFO-kalkulator", href: "/verktoy/sifo-kalkulator" },
+    {
+      label: "Sammenlign to husholdninger",
+      href: "/guider/sifo-sammenligne-husholdninger",
+    },
     { label: "Kutt faste kostnader", href: "/guider/kutt-faste-kostnader" },
     { label: "Bygg bufferkonto", href: "/guider/bygg-bufferkonto" },
     { label: "Luksusfellen-tavle", href: "/verktoy/luksusfelle-tavle" },

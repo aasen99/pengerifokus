@@ -6,7 +6,7 @@ import { ToolPageSeo } from "@/components/seo/ToolPageSeo";
 import { createPageMetadata } from "@/lib/seo";
 
 const toolDescription =
-  "Gratis SIFO-kalkulator: se referansebudsjett for forbruksutgifter 2026 etter husholdningssammensetning, med valgfri sammenligning mot egne tall.";
+  "Gratis SIFO-kalkulator: se referansebudsjett for forbruksutgifter 2026 etter husholdningssammensetning, sammenlign to scenarioer eller egne tall.";
 
 export const metadata: Metadata = createPageMetadata({
   title: "SIFO-kalkulator",
@@ -16,6 +16,7 @@ export const metadata: Metadata = createPageMetadata({
     "sifo kalkulator",
     "referansebudsjett",
     "sifo referansebudsjett 2026",
+    "sammenligne husholdninger",
     "forbruksutgifter",
     "levekostnader",
     "budsjett",
@@ -32,7 +33,7 @@ export default function SifoKalkulatorPage() {
       />
       <ToolPageHeader
         title="SIFO-kalkulator"
-        description="Finn referansebeløp for mat, klær, transport og andre forbruksutgifter basert på SIFOs referansebudsjett 2026."
+        description="Finn referansebeløp for mat, klær, transport og andre forbruksutgifter basert på SIFOs referansebudsjett 2026. Sammenlign én husholdning, to scenarioer eller egne tall."
       />
 
       <SifoKalkulator />
@@ -42,6 +43,10 @@ export default function SifoKalkulatorPage() {
           {
             label: "SIFO referansebudsjett 2026",
             href: "/guider/sifo-budsjett",
+          },
+          {
+            label: "Sammenlign to husholdninger",
+            href: "/guider/sifo-sammenligne-husholdninger",
           },
           {
             label: "Kutt faste kostnader",

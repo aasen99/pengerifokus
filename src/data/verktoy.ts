@@ -91,7 +91,7 @@ export const verktoy: Verktoy[] = [
     featured: true,
     name: "Eie vs. leie-kalkulator",
     description:
-      "Sammenlign kjøp og leie over tid, med nettoformue, break-even og månedlig beregning.",
+      "Regn ut og sammenlign nettoformue ved boligkjøp mot leie. Finn break-even med boliglån, egenkapital og husleie.",
     category: "Bolig",
     createdAt: "2026-06-11",
     updatedAt: "2026-06-11",
@@ -216,7 +216,7 @@ export const verktoy: Verktoy[] = [
     featured: true,
     name: "SIFO-kalkulator",
     description:
-      "Se referansebudsjett for forbruksutgifter 2026 etter husholdningssammensetning, med valgfri sammenligning.",
+      "Se referansebudsjett for forbruksutgifter 2026 etter husholdningssammensetning, sammenlign to scenarioer eller egne tall.",
     category: "Budsjett",
     createdAt: "2026-08-17",
     updatedAt: "2026-08-17",

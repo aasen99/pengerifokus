@@ -7,10 +7,6 @@ export type SifoAksPlass = "heltid" | "deltid" | "delvisGratis";
 
 export interface SifoCalculatorInput {
   members: SifoMemberType[];
-  /** Kollektivtransport for medlemmer som har rett (6+ år). */
-  includeKollektiv: boolean;
-  /** Studentrabatt for voksne 20–29. */
-  studentKollektiv: boolean;
   car: SifoCarType;
   barnehageBarn: number;
   barnehageInntekt: SifoBarnehageInntekt;
@@ -41,4 +37,50 @@ export interface SifoCalculatorResult {
 export interface SifoComparisonResult {
   diff: number;
   diffPercent: number | null;
+}
+
+export type SifoUserTotalSource = "direct" | "categories";
+
+export interface SifoSummaryComparisonLine {
+  id: SifoUserTotalSource;
+  label: string;
+  userMonthly: number;
+  userYearly: number;
+  monthlyDiff: SifoComparisonResult;
+  yearlyDiff: SifoComparisonResult;
+  filledCategoryCount?: number;
+  totalCategoryCount?: number;
+}
+
+export interface SifoSummaryComparison {
+  sifoMonthly: number;
+  sifoYearly: number;
+  lines: SifoSummaryComparisonLine[];
+}
+
+export interface SifoCategoryDiff {
+  id: string;
+  label: string;
+  group: SifoCategoryAmount["group"];
+  amountA: number;
+  amountB: number;
+  diff: number;
+  diffPercent: number | null;
+}
+
+export interface SifoHouseholdGroupDiffs {
+  individ: SifoComparisonResult;
+  husholdning: SifoComparisonResult;
+  valgfritt: SifoComparisonResult;
+}
+
+export interface SifoHouseholdComparison {
+  scenarioA: { label: string; result: SifoCalculatorResult };
+  scenarioB: { label: string; result: SifoCalculatorResult };
+  monthlyDiff: SifoComparisonResult;
+  yearlyDiff: SifoComparisonResult;
+  categoryDiffs: SifoCategoryDiff[];
+  topChanges: SifoCategoryDiff[];
+  groupDiffs: SifoHouseholdGroupDiffs;
+  insights: string[];
 }

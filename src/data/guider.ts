@@ -155,6 +155,19 @@ export const guider: Guide[] = [
     updatedAt: "2026-08-17",
   },
   {
+    id: "guide-14",
+    slug: "sifo-sammenligne-husholdninger",
+    status: "published",
+    featured: true,
+    title: "SIFO: Slik endrer utgiftene seg når du får barn eller flytter sammen",
+    description:
+      "Sammenlign to husholdningsscenarier med SIFO-referansebudsjett: alene vs. samboer, par vs. familie med barn, og forstå individ- vs. husholdningsposter.",
+    category: "Budsjett",
+    tags: ["sifo", "referansebudsjett", "husholdning", "barn", "samboer", "2026"],
+    createdAt: "2026-08-17",
+    updatedAt: "2026-08-17",
+  },
+  {
     id: "guide-12",
     slug: "prosentregning",
     status: "published",

@@ -1,24 +1,33 @@
 import type { Metadata } from "next";
 import { ToolPageHeader } from "@/components/verktoy/ToolPageHeader";
 import { EieLeieKalkulator } from "@/components/verktoy/eie-leie/EieLeieKalkulator";
+import { EieLeieKalkulatorSeoContent } from "@/components/verktoy/eie-leie/EieLeieKalkulatorSeoContent";
 import { ToolRelatedGuides } from "@/components/verktoy/ToolRelatedGuides";
 import { ToolPageSeo } from "@/components/seo/ToolPageSeo";
 import { createPageMetadata } from "@/lib/seo";
 
 const toolDescription =
-  "Sammenlign nettoformue ved å kjøpe bolig mot å leie, med månedlig investering av differansen begge veier.";
+  "Gratis eie vs. leie-kalkulator: regn ut og sammenlign nettoformue ved boligkjøp mot leie. Finn break-even med boliglån, egenkapital og husleie.";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Eie vs. leie-kalkulator",
   description: toolDescription,
   path: "/verktoy/eie-leie-kalkulator",
   keywords: [
+    "eie vs leie kalkulator",
     "eie eller leie",
-    "eie vs leie",
-    "boligkalkulator",
+    "eie bolig",
+    "leie bolig",
     "kjøpe eller leie bolig",
-    "nettoformue",
+    "boligkjøp",
     "boliglån",
+    "egenkapital",
+    "nettoformue",
+    "break-even",
+    "husleie",
+    "terminbeløp",
+    "boligkalkulator",
+    "sammenligne eie og leie",
   ],
 });
 
@@ -31,15 +40,19 @@ export default function EieLeieKalkulatorPage() {
         path="/verktoy/eie-leie-kalkulator"
       />
       <ToolPageHeader
-        title="Lønner det seg å eie eller leie bolig?"
-        description="Sammenlign nettoformue ved å kjøpe bolig mot å leie. Kalkulatoren investerer månedlig differanse begge veier, slik at sammenligningen holder kontantstrømmen lik."
+        title="Eie vs. leie-kalkulator"
+        description="Regn ut og sammenlign nettoformue ved boligkjøp mot leie. Finn break-even, med boliglån, egenkapital, husleie og alternativ avkastning."
       />
 
       <EieLeieKalkulator />
 
+      <EieLeieKalkulatorSeoContent />
+
       <ToolRelatedGuides
         guides={[
           { label: "Eie eller leie bolig", href: "/guider/eie-eller-leie-bolig" },
+          { label: "BSU-kalkulator", href: "/verktoy/bsu-kalkulator" },
+          { label: "Rentekalkulator", href: "/verktoy/rentekalkulator" },
           { label: "Nettoformue i ordboken", href: "/ordbok/nettoformue" },
         ]}
       />

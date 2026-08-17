@@ -13,6 +13,7 @@ import {
   SIFO_SPEDBARNSUTSTYR,
   type SifoMemberType,
 } from "./data";
+import { parseIntegerInput } from "@/lib/format/number";
 import type {
   SifoAksInntekt,
   SifoAksPlass,
@@ -20,7 +21,12 @@ import type {
   SifoCalculatorInput,
   SifoCalculatorResult,
   SifoCategoryAmount,
+  SifoCategoryDiff,
   SifoComparisonResult,
+  SifoHouseholdComparison,
+  SifoHouseholdGroupDiffs,
+  SifoSummaryComparison,
+  SifoSummaryComparisonLine,
 } from "./types";
 
 const BARNEHAGE_ALDER = new Set<SifoMemberType>([
@@ -55,22 +61,6 @@ const PENSJONIST_TYPES = new Set<SifoMemberType>([
   "mann_70_plus",
 ]);
 
-const STUDENT_ALDER_TYPES = new Set<SifoMemberType>([
-  "kvinne_18_24",
-  "mann_18_24",
-]);
-
-const BARN_6_19_TYPES = new Set<SifoMemberType>([
-  "jente_4_6",
-  "gutt_4_6",
-  "jente_7_10",
-  "gutt_7_10",
-  "jente_11_14",
-  "gutt_11_14",
-  "jente_15_17",
-  "gutt_15_17",
-]);
-
 function householdIndex(personCount: number): number {
   return Math.min(Math.max(personCount, 1), 7) - 1;
 }
@@ -85,18 +75,9 @@ function sumCategory(
   );
 }
 
-function getReisekostnad(
-  member: SifoMemberType,
-  studentKollektiv: boolean,
-): number {
+function getReisekostnad(member: SifoMemberType): number {
   if (PENSJONIST_TYPES.has(member)) {
     return SIFO_REISEKOSTNADER.pensjonist_66_plus;
-  }
-  if (BARN_6_19_TYPES.has(member)) {
-    return SIFO_REISEKOSTNADER.barn_6_19;
-  }
-  if (STUDENT_ALDER_TYPES.has(member) && studentKollektiv) {
-    return SIFO_REISEKOSTNADER.student_20_29;
   }
   if (VOKSEN_TYPES.has(member)) {
     return SIFO_REISEKOSTNADER.voksen_20_66;
@@ -124,6 +105,16 @@ function countEligibleBarnehage(members: SifoMemberType[]): number {
 
 function countEligibleAks(members: SifoMemberType[]): number {
   return members.filter((m) => AKS_ALDER.has(m)).length;
+}
+
+/** Antall barn i husholdningen som er i barnehagealder (1–6 år). */
+export function getEligibleBarnehageCount(members: SifoMemberType[]): number {
+  return countEligibleBarnehage(members);
+}
+
+/** Antall barn i husholdningen som er i AKS-alder (7–14 år). */
+export function getEligibleAksCount(members: SifoMemberType[]): number {
+  return countEligibleAks(members);
 }
 
 function calculateBarnehage(
@@ -189,19 +180,9 @@ export function calculateSifoBudget(
   const lekOgMediebruk = sumCategory(members, "lekOgMediebruk");
   const spedbarnsutstyr = getSpedbarnsutstyr(members);
 
-  const reisekostnader = input.includeKollektiv
-    ? members.reduce(
-        (sum, member) =>
-          sum + getReisekostnad(member, input.studentKollektiv),
-        0,
-      )
-    : members
-        .filter((m) => VOKSEN_TYPES.has(m))
-        .reduce(
-          (sum, member) =>
-            sum + getReisekostnad(member, input.studentKollektiv),
-          0,
-        );
+  const reisekostnader = members
+    .filter((m) => VOKSEN_TYPES.has(m))
+    .reduce((sum, member) => sum + getReisekostnad(member), 0);
 
   const andreDagligvarer = SIFO_ANDRE_DAGLIGVARER[idx];
   const husholdningsartikler = SIFO_HUSHOLDNINGSARTIKLER[idx];
@@ -360,12 +341,195 @@ export function compareToSifo(
   return { diff, diffPercent };
 }
 
+export function sumUserCategoryAmounts(
+  categories: SifoCategoryAmount[],
+  rawAmounts: Record<string, string>,
+): { total: number; filledCount: number } | null {
+  let total = 0;
+  let filledCount = 0;
+
+  for (const category of categories) {
+    const raw = rawAmounts[category.id];
+    if (raw === undefined || raw.trim() === "") continue;
+
+    const amount = parseIntegerInput(raw);
+    if (!Number.isFinite(amount) || amount < 0) continue;
+
+    total += amount;
+    filledCount += 1;
+  }
+
+  if (filledCount === 0) return null;
+  return { total, filledCount };
+}
+
+export function buildSifoSummaryComparison(
+  result: SifoCalculatorResult,
+  rawUserMonthlyTotal: string,
+  rawUserCategoryAmounts: Record<string, string>,
+): SifoSummaryComparison {
+  const lines: SifoSummaryComparisonLine[] = [];
+
+  if (rawUserMonthlyTotal.trim() !== "") {
+    const userMonthly = parseIntegerInput(rawUserMonthlyTotal);
+    if (Number.isFinite(userMonthly) && userMonthly >= 0) {
+      const userYearly = userMonthly * 12;
+      lines.push({
+        id: "direct",
+        label: "Dine utgifter (totalt)",
+        userMonthly,
+        userYearly,
+        monthlyDiff: compareToSifo(userMonthly, result.monthlyTotal),
+        yearlyDiff: compareToSifo(userYearly, result.yearlyTotal),
+      });
+    }
+  }
+
+  const categorySum = sumUserCategoryAmounts(
+    result.categories,
+    rawUserCategoryAmounts,
+  );
+  if (categorySum) {
+    const userYearly = categorySum.total * 12;
+    lines.push({
+      id: "categories",
+      label: "Sum av kategorier",
+      userMonthly: categorySum.total,
+      userYearly,
+      monthlyDiff: compareToSifo(categorySum.total, result.monthlyTotal),
+      yearlyDiff: compareToSifo(userYearly, result.yearlyTotal),
+      filledCategoryCount: categorySum.filledCount,
+      totalCategoryCount: result.categories.length,
+    });
+  }
+
+  return {
+    sifoMonthly: result.monthlyTotal,
+    sifoYearly: result.yearlyTotal,
+    lines,
+  };
+}
+
+function buildHouseholdComparisonInsights(
+  resultA: SifoCalculatorResult,
+  resultB: SifoCalculatorResult,
+  groupDiffs: SifoHouseholdGroupDiffs,
+  topChanges: SifoCategoryDiff[],
+): string[] {
+  const insights: string[] = [];
+
+  if (resultB.personCount !== resultA.personCount) {
+    insights.push(
+      `Antall personer endres fra ${resultA.personCount} til ${resultB.personCount}.`,
+    );
+  }
+
+  if (groupDiffs.husholdning.diff !== 0) {
+    const verb = groupDiffs.husholdning.diff > 0 ? "øker" : "reduseres";
+    const pct =
+      groupDiffs.husholdning.diffPercent !== null
+        ? ` (${groupDiffs.husholdning.diffPercent > 0 ? "+" : ""}${groupDiffs.husholdning.diffPercent.toLocaleString("nb-NO", { maximumFractionDigits: 1 })} %)`
+        : "";
+    insights.push(
+      `Husholdningsposter ${verb} med ${Math.abs(groupDiffs.husholdning.diff).toLocaleString("nb-NO")} kr per måned${pct}.`,
+    );
+  }
+
+  if (groupDiffs.individ.diff !== 0) {
+    const verb = groupDiffs.individ.diff > 0 ? "øker" : "reduseres";
+    insights.push(
+      `Individposter ${verb} med ${Math.abs(groupDiffs.individ.diff).toLocaleString("nb-NO")} kr per måned.`,
+    );
+  }
+
+  if (groupDiffs.valgfritt.diff !== 0) {
+    const verb = groupDiffs.valgfritt.diff > 0 ? "øker" : "reduseres";
+    insights.push(
+      `Barnehage og AKS ${verb} med ${Math.abs(groupDiffs.valgfritt.diff).toLocaleString("nb-NO")} kr per måned.`,
+    );
+  }
+
+  const meaningful = topChanges.filter((c) => c.diff !== 0).slice(0, 3);
+  if (meaningful.length > 0) {
+    insights.push(
+      `Størst endring i: ${meaningful.map((c) => c.label.toLowerCase()).join(", ")}.`,
+    );
+  }
+
+  return insights;
+}
+
+export function compareSifoHouseholds(
+  inputA: SifoCalculatorInput,
+  inputB: SifoCalculatorInput,
+  labelA = "Scenario A",
+  labelB = "Scenario B",
+): SifoHouseholdComparison | null {
+  const resultA = calculateSifoBudget(inputA);
+  const resultB = calculateSifoBudget(inputB);
+  if (!resultA || !resultB) return null;
+
+  const monthlyDiff = compareToSifo(resultB.monthlyTotal, resultA.monthlyTotal);
+  const yearlyDiff = compareToSifo(resultB.yearlyTotal, resultA.yearlyTotal);
+
+  const categoryIds = new Set([
+    ...resultA.categories.map((c) => c.id),
+    ...resultB.categories.map((c) => c.id),
+  ]);
+
+  const categoryDiffs: SifoCategoryDiff[] = [];
+  for (const id of categoryIds) {
+    const catA = resultA.categories.find((c) => c.id === id);
+    const catB = resultB.categories.find((c) => c.id === id);
+    const amountA = catA?.amount ?? 0;
+    const amountB = catB?.amount ?? 0;
+    const diff = amountB - amountA;
+    categoryDiffs.push({
+      id,
+      label: catB?.label ?? catA?.label ?? id,
+      group: catB?.group ?? catA?.group ?? "individ",
+      amountA,
+      amountB,
+      diff,
+      diffPercent: amountA > 0 ? (diff / amountA) * 100 : null,
+    });
+  }
+
+  const topChanges = [...categoryDiffs].sort(
+    (a, b) => Math.abs(b.diff) - Math.abs(a.diff),
+  );
+
+  const valgfrittA = resultA.barnehageTotal + resultA.aksTotal;
+  const valgfrittB = resultB.barnehageTotal + resultB.aksTotal;
+  const groupDiffs: SifoHouseholdGroupDiffs = {
+    individ: compareToSifo(resultB.individTotal, resultA.individTotal),
+    husholdning: compareToSifo(resultB.husholdTotal, resultA.husholdTotal),
+    valgfritt: compareToSifo(valgfrittB, valgfrittA),
+  };
+
+  const insights = buildHouseholdComparisonInsights(
+    resultA,
+    resultB,
+    groupDiffs,
+    topChanges,
+  );
+
+  return {
+    scenarioA: { label: labelA, result: resultA },
+    scenarioB: { label: labelB, result: resultB },
+    monthlyDiff,
+    yearlyDiff,
+    categoryDiffs,
+    topChanges,
+    groupDiffs,
+    insights,
+  };
+}
+
 /** Verifiserer eksempelfamilien fra rapporten kap. 2.3 (uten barnehage/AKS). */
 export function calculateEksempelfamilieNordmann(): SifoCalculatorResult | null {
   return calculateSifoBudget({
     members: [...SIFO_EXAMPLE_FAMILY.members],
-    includeKollektiv: false,
-    studentKollektiv: false,
     car: "bensin",
     barnehageBarn: 0,
     barnehageInntekt: "hoy",

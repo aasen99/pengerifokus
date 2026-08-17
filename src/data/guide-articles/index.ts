@@ -13,6 +13,7 @@ import { kredittkortEllerDebetkort } from "./kredittkort-eller-debetkort";
 import { velgRiktigKredittkort } from "./velg-riktig-kredittkort";
 import { prosentregning } from "./prosentregning";
 import { sifoBudsjett } from "./sifo-budsjett";
+import { sifoSammenligneHusholdninger } from "./sifo-sammenligne-husholdninger";
 
 function withReadTime(
   article: Omit<GuideArticleContent, "readTimeMinutes">,
@@ -41,6 +42,7 @@ const guideArticles: Record<string, GuideArticleContent> = {
   "velg-riktig-kredittkort": withReadTime(velgRiktigKredittkort),
   prosentregning: withReadTime(prosentregning),
   "sifo-budsjett": withReadTime(sifoBudsjett),
+  "sifo-sammenligne-husholdninger": withReadTime(sifoSammenligneHusholdninger),
 };
 
 export function getGuideArticle(slug: string): GuideArticleContent | undefined {
