@@ -209,4 +209,16 @@ export const verktoy: Verktoy[] = [
     createdAt: "2026-07-25",
     updatedAt: "2026-07-25",
   },
+  {
+    id: "verktoy-19",
+    slug: "sifo-kalkulator",
+    status: "published",
+    featured: true,
+    name: "SIFO-kalkulator",
+    description:
+      "Se referansebudsjett for forbruksutgifter 2026 etter husholdningssammensetning, med valgfri sammenligning.",
+    category: "Budsjett",
+    createdAt: "2026-08-17",
+    updatedAt: "2026-08-17",
+  },
 ];

@@ -142,6 +142,19 @@ export const guider: Guide[] = [
     updatedAt: "2026-06-11",
   },
   {
+    id: "guide-13",
+    slug: "sifo-budsjett",
+    status: "published",
+    featured: true,
+    title: "SIFO budsjett – referansebudsjettet 2026",
+    description:
+      "Hva SIFOs referansebudsjett måler, hva det utelater, og hvordan du bruker det sammen med eget budsjett.",
+    category: "Budsjett",
+    tags: ["sifo", "referansebudsjett", "standardbudsjett", "forbruk", "2026"],
+    createdAt: "2026-08-17",
+    updatedAt: "2026-08-17",
+  },
+  {
     id: "guide-12",
     slug: "prosentregning",
     status: "published",

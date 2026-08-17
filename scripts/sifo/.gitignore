@@ -1,0 +1,6 @@
+xlsx-tmp/
+[trash]/
+*.zip
+out.xlsx
+test.xlsx
+api.json
