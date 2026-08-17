@@ -25,23 +25,54 @@ export function calculateReadTimeFromTexts(
 
 interface ReadableArticleSections {
   intro: string;
+  shortAnswer?: string;
+  conclusion?: string;
   sections: {
     heading: string;
+    subheading?: string;
     paragraphs?: string[];
     bullets?: string[];
     tip?: string;
+    table?: { caption?: string; rows: { label: string; value: string }[] };
+    cta?: { heading: string; description: string; buttonText: string };
+    factBox?: string[];
+    subsections?: {
+      subheading: string;
+      paragraphs?: string[];
+      bullets?: string[];
+    }[];
   }[];
   faq?: { question: string; answer: string }[];
 }
 
 function collectReadableArticleTexts(article: ReadableArticleSections): string[] {
   const texts: string[] = [article.intro];
+  if (article.shortAnswer) texts.push(article.shortAnswer);
+  if (article.conclusion) texts.push(article.conclusion);
 
   for (const section of article.sections) {
     texts.push(section.heading);
+    if (section.subheading) texts.push(section.subheading);
     texts.push(...(section.paragraphs ?? []));
     texts.push(...(section.bullets ?? []));
     if (section.tip) texts.push(section.tip);
+    if (section.table?.caption) texts.push(section.table.caption);
+    for (const row of section.table?.rows ?? []) {
+      texts.push(row.label, row.value);
+    }
+    if (section.cta) {
+      texts.push(
+        section.cta.heading,
+        section.cta.description,
+        section.cta.buttonText,
+      );
+    }
+    texts.push(...(section.factBox ?? []));
+    for (const subsection of section.subsections ?? []) {
+      texts.push(subsection.subheading);
+      texts.push(...(subsection.paragraphs ?? []));
+      texts.push(...(subsection.bullets ?? []));
+    }
   }
 
   for (const item of article.faq ?? []) {

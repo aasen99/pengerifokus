@@ -5,7 +5,11 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { getGuideArticle, getGuideArticleSlugs } from "@/data/guide-articles";
 import { getGuideBySlug } from "@/lib/content";
 import { createPageMetadata } from "@/lib/seo";
-import { getArticleJsonLd, getBreadcrumbJsonLd } from "@/lib/structured-data";
+import {
+  getArticleJsonLd,
+  getBreadcrumbJsonLd,
+  getFaqPageJsonLd,
+} from "@/lib/structured-data";
 
 interface GuidePageProps {
   params: Promise<{ slug: string }>;
@@ -25,7 +29,7 @@ export async function generateMetadata({
   if (!guide || !article) return {};
 
   return createPageMetadata({
-    title: guide.title,
+    title: article.seoTitle ?? guide.title,
     description: guide.description,
     path: `/guider/${slug}`,
     keywords: guide.tags,
@@ -61,6 +65,9 @@ export default async function GuidePage({ params }: GuidePageProps) {
           dateModified: guide.updatedAt,
         })}
       />
+      {article.faq && article.faq.length > 0 && (
+        <JsonLd data={getFaqPageJsonLd(article.faq)} />
+      )}
       <GuideArticle guide={guide} article={article} />
     </div>
   );

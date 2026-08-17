@@ -109,13 +109,13 @@ export const guider: Guide[] = [
     slug: "eie-eller-leie-bolig",
     status: "published",
     featured: true,
-    title: "Eie eller leie bolig?",
+    title: "Eie eller leie bolig – hva lønner seg for deg?",
     description:
-      "Når lønner det seg å kjøpe, og hva bør du tenke på utover månedlig husleie og terminbeløp?",
+      "Sammenlign kostnader og nettoformue ved å eie eller leie bolig. Se regneeksempel og bruk gratis kalkulator med dine egne tall.",
     category: "Bolig",
-    tags: ["eie", "leie", "boligkjøp", "egenkapital"],
+    tags: ["eie", "leie", "boligkjøp", "egenkapital", "nettoformue"],
     createdAt: "2026-06-11",
-    updatedAt: "2026-06-11",
+    updatedAt: "2026-08-17",
   },
   {
     id: "guide-9",
