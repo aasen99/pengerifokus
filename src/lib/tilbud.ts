@@ -134,28 +134,59 @@ export const TILBUD_SORT_OPTIONS: { value: TilbudSortOption; label: string }[] =
   { value: "category-asc", label: "Kategori" },
 ];
 
-/** Trekker ut sammenlignbart tall fra offerLabel, f.eks. «15–20 %» → 20 eller «50 poeng / 100 kr» → 50 */
-export function parseOfferRate(offerLabel: string): number | null {
-  const poengMatch = offerLabel.match(
-    /(?:opptil\s+)?(\d+[,.]?\d*)(?:\s*[–-]\s*(\d+[,.]?\d*))?\s*poeng\s*\/\s*100/i,
+/**
+ * Ca. kroneverdi per poeng brukt ved sortering på «Høyest rabatt».
+ * EuroBonus: Trumf oppgir 1 kr = 10 poeng; bonuskalkulatoren bruker 0,10 kr som målverdi.
+ * Spenn: ingen fast kurs – samme tomelfingerregel for sammenlignbarhet med prosent.
+ */
+const POENG_KRONEVERDI: Record<string, number> = {
+  eurobonus: 0.1,
+  spenn: 0.1,
+};
+
+function parseOfferNumber(raw: string): number {
+  return parseFloat(raw.replace(/\s/g, "").replace(",", "."));
+}
+
+/** Trekker ut sammenlignbart tall fra offerLabel, f.eks. «15–20 %» → 20 eller «50 poeng / 100 kr» → 5 (ca. kr-verdi ved EuroBonus) */
+export function parseOfferRate(
+  offerLabel: string,
+  fordelSlug?: string,
+): number | null {
+  const krPerPoeng = fordelSlug ? POENG_KRONEVERDI[fordelSlug] : undefined;
+
+  const poengPer100Match = offerLabel.match(
+    /(?:opptil\s+)?([\d\s,.]+)(?:\s*[–-]\s*([\d\s,.]+))?\s*poeng\s*\/\s*100/i,
   );
-  if (poengMatch) {
-    const low = parseFloat(poengMatch[1].replace(",", "."));
-    const high = poengMatch[2]
-      ? parseFloat(poengMatch[2].replace(",", "."))
+  if (poengPer100Match) {
+    const low = parseOfferNumber(poengPer100Match[1]);
+    const high = poengPer100Match[2]
+      ? parseOfferNumber(poengPer100Match[2])
       : low;
-    return Math.max(low, high);
+    const poeng = Math.max(low, high);
+
+    if (krPerPoeng) {
+      // Poeng per 100 kr → ca. kr verdi per 100 kr, sammenlignbart med prosent rabatt
+      return poeng * krPerPoeng;
+    }
+
+    return poeng;
+  }
+
+  if (krPerPoeng && /\d[\d\s,.]*\s*poeng/i.test(offerLabel)) {
+    // Fast poengsum uten kjøpsbeløp – kan ikke sammenlignes rettferdig med prosent
+    return null;
   }
 
   const matches = offerLabel.match(/\d+[,.]?\d*/g);
   if (!matches?.length) return null;
 
-  return Math.max(...matches.map((match) => parseFloat(match.replace(",", "."))));
+  return Math.max(...matches.map((match) => parseOfferNumber(match)));
 }
 
 function getGroupBestRate(group: GruppertTilbud): number {
   const rates = group.offers
-    .map((offer) => parseOfferRate(offer.offerLabel))
+    .map((offer) => parseOfferRate(offer.offerLabel, offer.fordelSlug))
     .filter((rate): rate is number => rate !== null);
 
   return rates.length ? Math.max(...rates) : -1;
