@@ -18,6 +18,7 @@ export const sifoSammenligneHusholdninger: GuideArticleContent = {
       paragraphs: [
         "SIFO skiller mellom individposter (følger hver person) og husholdningsposter (deles i husholdningen etter antall personer). Når to voksne flytter sammen, dobles individpostene for den andre voksne, mens husholdningspostene ikke dobles.",
         "Husholdningspostene hentes fra tabeller som går fra 1 til 7 personer. For to voksne uten barn ligger de typisk lavere enn summen av to enkeltpersoners husholdningsposter, fordi dere deler dagligvarer, møbler og medier.",
+        "En enkel tommelfingerregel: hvis par-husholdningen koster mindre enn det dobbelte av ett enslighusholdning, sparer dere penger sammenlignet med to separate husholdninger. I kalkulatoren vises dette automatisk når du sammenligner én voksen mot to voksne uten barn.",
       ],
       bullets: [
         "Individposter som øker: mat, klær, personlig pleie, lek/medier og kollektiv per ekstra voksen",
@@ -44,6 +45,7 @@ export const sifoSammenligneHusholdninger: GuideArticleContent = {
         "Scenario A: én kvinne 25–50 år, ingen bil. Scenario B: par 25–50 år uten barn, ingen bil.",
         "I SIFO-kalkulatoren (2026-tall) lander enslig på ca. 12 600 kr per måned i forbruksutgifter. Par uten barn ligger på ca. 21 700 kr per måned. Forskjellen er ca. 9 100 kr per måned, eller rundt 109 000 kr per år.",
         "Individpostene øker med den andre voksnes mat, klær, pleie og transport. Husholdningspostene går opp moderat: fra ca. 4 100 kr til ca. 4 400 kr per måned, langt mindre enn om begge bodde helt alene.",
+        "Økningen fra enslig til par er ca. 72 % — under 100 %. Det betyr at dere sparer rundt 3 500 kr per måned sammenlignet med to separate enslighusholdninger, eller ca. 1 760 kr per person per måned.",
       ],
       tip: "Velg forhåndsvalgene «Enslig kvinne 25–50 år» og «Par 25–50 år uten barn» i kalkulatoren for å gjenskape eksempelet.",
     },

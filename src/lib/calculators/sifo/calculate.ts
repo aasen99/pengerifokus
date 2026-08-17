@@ -20,8 +20,10 @@ import type {
   SifoBarnehageInntekt,
   SifoCalculatorInput,
   SifoCalculatorResult,
+  SifoCarFuelType,
   SifoCategoryAmount,
   SifoCategoryDiff,
+  SifoCohabitationInsight,
   SifoComparisonResult,
   SifoHouseholdComparison,
   SifoHouseholdGroupDiffs,
@@ -151,6 +153,36 @@ function calculateAks(
   return tier[plass] * barn;
 }
 
+/**
+ * Månedlig bilkostnad for én bil. SIFO-tabellen har satser per husholdning
+ * (1–4 vs 5–7 personer), ikke per bil. Vi antar at hver bil i husholdningen
+ * belastes med samme husstandsstørrelse-band — altså summeres kostnaden per bil.
+ */
+function getBilkostnadForCar(
+  carType: SifoCarFuelType,
+  personCount: number,
+): number {
+  const bilKey =
+    personCount <= 4
+      ? carType === "bensin"
+        ? "bensin_1_4"
+        : "el_1_4"
+      : carType === "bensin"
+        ? "bensin_5_7"
+        : "el_5_7";
+  return SIFO_BILKOSTNADER[bilKey];
+}
+
+function calculateBilkostnader(
+  cars: SifoCalculatorInput["cars"],
+  personCount: number,
+): number {
+  return cars.reduce(
+    (sum, car) => sum + getBilkostnadForCar(car.type, personCount),
+    0,
+  );
+}
+
 function hasMatStordriftRabatt(members: SifoMemberType[]): boolean {
   const voksne = members.filter((m) => VOKSEN_TYPES.has(m)).length;
   const barn = members.filter(
@@ -189,18 +221,7 @@ export function calculateSifoBudget(
   const mobler = SIFO_MOBler[idx];
   const mediebrukOgFritid = SIFO_MEDIEBRUK_FRITID[idx];
 
-  let bilkostnader = 0;
-  if (input.car !== "none") {
-    const bilKey =
-      personCount <= 4
-        ? input.car === "bensin"
-          ? "bensin_1_4"
-          : "el_1_4"
-        : input.car === "bensin"
-          ? "bensin_5_7"
-          : "el_5_7";
-    bilkostnader = SIFO_BILKOSTNADER[bilKey];
-  }
+  const bilkostnader = calculateBilkostnader(input.cars, personCount);
 
   const maxBarnehage = countEligibleBarnehage(members);
   const barnehageBarn = Math.min(input.barnehageBarn, maxBarnehage);
@@ -410,6 +431,109 @@ export function buildSifoSummaryComparison(
   };
 }
 
+function countAdults(members: SifoMemberType[]): number {
+  return members.filter((m) => VOKSEN_TYPES.has(m)).length;
+}
+
+function formatKrAmount(amount: number): string {
+  return `${Math.round(amount).toLocaleString("nb-NO")} kr`;
+}
+
+/**
+ * Sammenligner enslig ↔ par der kun antall voksne endres (+/− én person).
+ * Besparelse vs. to enslige: 2 × ensligTotal − parTotal når parTotal < 2 × ensligTotal.
+ */
+export function buildCohabitationInsight(
+  inputA: SifoCalculatorInput,
+  inputB: SifoCalculatorInput,
+  resultA: SifoCalculatorResult,
+  resultB: SifoCalculatorResult,
+): SifoCohabitationInsight | null {
+  const adultsA = countAdults(inputA.members);
+  const adultsB = countAdults(inputB.members);
+  const personsA = resultA.personCount;
+  const personsB = resultB.personCount;
+
+  const fmtPct = (n: number) =>
+    n.toLocaleString("nb-NO", { maximumFractionDigits: 1 });
+
+  if (adultsA === 1 && adultsB === 2 && personsB === personsA + 1) {
+    const singleMonthly = resultA.monthlyTotal;
+    const coupledMonthly = resultB.monthlyTotal;
+    const increasePercent =
+      ((coupledMonthly - singleMonthly) / singleMonthly) * 100;
+    const collectiveMonthlySavings = 2 * singleMonthly - coupledMonthly;
+    const perPersonCoupled = coupledMonthly / 2;
+    const perPersonSavings = singleMonthly - perPersonCoupled;
+
+    const highlights: string[] = [];
+    if (collectiveMonthlySavings > 0) {
+      highlights.push(
+        `Samlet økning er ${fmtPct(increasePercent)} % — under 100 %. Dere sparer ${formatKrAmount(collectiveMonthlySavings)}/mnd sammenlignet med to separate enslighusholdninger.`,
+      );
+      highlights.push(
+        `Per person: ${formatKrAmount(perPersonCoupled)}/mnd mot ${formatKrAmount(singleMonthly)} alene (spar ${formatKrAmount(perPersonSavings)}/mnd hver).`,
+      );
+      highlights.push(
+        `Det tilsvarer ${formatKrAmount(collectiveMonthlySavings * 12)}/år samlet, eller ${formatKrAmount(perPersonSavings * 12)}/år per person.`,
+      );
+    } else {
+      highlights.push(
+        `Samlet økning er ${fmtPct(increasePercent)} % — høyere enn to separate enslighusholdninger (${formatKrAmount(2 * singleMonthly)}/mnd).`,
+      );
+    }
+
+    return {
+      direction: "enslig-til-par",
+      singleMonthlyTotal: singleMonthly,
+      coupledMonthlyTotal: coupledMonthly,
+      increasePercent,
+      collectiveMonthlySavings,
+      collectiveYearlySavings: collectiveMonthlySavings * 12,
+      perPersonCoupledMonthly: perPersonCoupled,
+      perPersonSavingsMonthly: perPersonSavings,
+      perPersonSavingsYearly: perPersonSavings * 12,
+      highlights,
+    };
+  }
+
+  if (adultsA === 2 && adultsB === 1 && personsA === personsB + 1) {
+    const coupledMonthly = resultA.monthlyTotal;
+    const singleMonthly = resultB.monthlyTotal;
+    const perPersonWhenTogether = coupledMonthly / 2;
+    const perPersonIncrease = singleMonthly - perPersonWhenTogether;
+    const collectiveMonthlySavings = 2 * singleMonthly - coupledMonthly;
+    const totalDrop = coupledMonthly - singleMonthly;
+
+    const highlights: string[] = [
+      `Husholdningen bruker ${formatKrAmount(totalDrop)}/mnd mindre totalt, men per person stiger utgiftene fra ${formatKrAmount(perPersonWhenTogether)}/mnd sammen til ${formatKrAmount(singleMonthly)}/mnd alene (+${formatKrAmount(perPersonIncrease)}/mnd).`,
+    ];
+    if (collectiveMonthlySavings > 0) {
+      highlights.push(
+        `To separate enslighusholdninger ville koste ${formatKrAmount(2 * singleMonthly)}/mnd totalt — ${formatKrAmount(collectiveMonthlySavings)}/mnd mer enn dere bruker sammen.`,
+      );
+    }
+
+    return {
+      direction: "par-til-enslig",
+      singleMonthlyTotal: singleMonthly,
+      coupledMonthlyTotal: coupledMonthly,
+      increasePercent:
+        perPersonWhenTogether > 0
+          ? (perPersonIncrease / perPersonWhenTogether) * 100
+          : 0,
+      collectiveMonthlySavings,
+      collectiveYearlySavings: collectiveMonthlySavings * 12,
+      perPersonCoupledMonthly: perPersonWhenTogether,
+      perPersonSavingsMonthly: -perPersonIncrease,
+      perPersonSavingsYearly: -perPersonIncrease * 12,
+      highlights,
+    };
+  }
+
+  return null;
+}
+
 function buildHouseholdComparisonInsights(
   resultA: SifoCalculatorResult,
   resultB: SifoCalculatorResult,
@@ -507,6 +631,13 @@ export function compareSifoHouseholds(
     valgfritt: compareToSifo(valgfrittB, valgfrittA),
   };
 
+  const cohabitationInsight = buildCohabitationInsight(
+    inputA,
+    inputB,
+    resultA,
+    resultB,
+  );
+
   const insights = buildHouseholdComparisonInsights(
     resultA,
     resultB,
@@ -523,6 +654,7 @@ export function compareSifoHouseholds(
     topChanges,
     groupDiffs,
     insights,
+    cohabitationInsight,
   };
 }
 
@@ -530,7 +662,7 @@ export function compareSifoHouseholds(
 export function calculateEksempelfamilieNordmann(): SifoCalculatorResult | null {
   return calculateSifoBudget({
     members: [...SIFO_EXAMPLE_FAMILY.members],
-    car: "bensin",
+    cars: [{ type: "bensin" }],
     barnehageBarn: 0,
     barnehageInntekt: "hoy",
     aksBarn: 0,

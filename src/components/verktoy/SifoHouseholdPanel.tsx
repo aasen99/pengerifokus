@@ -10,7 +10,8 @@ import {
   type SifoAksPlass,
   type SifoBarnehageInntekt,
   type SifoCalculatorInput,
-  type SifoCarType,
+  type SifoCar,
+  type SifoCarFuelType,
   type SifoMemberType,
 } from "@/lib/calculators/sifo";
 import {
@@ -22,7 +23,7 @@ import {
 export interface SifoHouseholdState {
   label: string;
   members: SifoMemberType[];
-  car: SifoCarType;
+  cars: SifoCar[];
   barnehageBarn: number;
   barnehageInntekt: SifoBarnehageInntekt;
   aksBarn: number;
@@ -30,15 +31,35 @@ export interface SifoHouseholdState {
   aksInntekt: SifoAksInntekt;
 }
 
+/** Bakoverkompatibilitet: eldre tilstand med enkelt `car`-felt. */
+export function normalizeSifoHouseholdState(
+  state: SifoHouseholdState & { car?: "none" | SifoCarFuelType },
+): SifoHouseholdState {
+  if (state.cars !== undefined) {
+    const { car: _legacy, ...rest } = state as SifoHouseholdState & {
+      car?: string;
+    };
+    return rest;
+  }
+  const legacyCar = state.car;
+  if (!legacyCar || legacyCar === "none") {
+    const { car: _legacy, ...rest } = state;
+    return { ...rest, cars: [] };
+  }
+  const { car: _legacy, ...rest } = state;
+  return { ...rest, cars: [{ type: legacyCar }] };
+}
+
 export function sifoStateToInput(state: SifoHouseholdState): SifoCalculatorInput {
+  const normalized = normalizeSifoHouseholdState(state);
   return {
-    members: state.members,
-    car: state.car,
-    barnehageBarn: state.barnehageBarn,
-    barnehageInntekt: state.barnehageInntekt,
-    aksBarn: state.aksBarn,
-    aksPlass: state.aksPlass,
-    aksInntekt: state.aksInntekt,
+    members: normalized.members,
+    cars: normalized.cars,
+    barnehageBarn: normalized.barnehageBarn,
+    barnehageInntekt: normalized.barnehageInntekt,
+    aksBarn: normalized.aksBarn,
+    aksPlass: normalized.aksPlass,
+    aksInntekt: normalized.aksInntekt,
   };
 }
 
@@ -52,7 +73,7 @@ export function createSifoHouseholdFromPreset(
   return {
     label,
     members,
-    car: isFamily ? "bensin" : "none",
+    cars: isFamily ? [{ type: "bensin" }] : [],
     barnehageBarn: isFamily ? 1 : 0,
     barnehageInntekt: "hoy",
     aksBarn: isFamily ? 1 : 0,
@@ -108,6 +129,20 @@ export function SifoHouseholdPanel({
     onChange({ ...state, ...partial });
   }
 
+  function addCar(type: SifoCarFuelType = "bensin") {
+    patch({ cars: [...state.cars, { type }] });
+  }
+
+  function removeCar(index: number) {
+    patch({ cars: state.cars.filter((_, i) => i !== index) });
+  }
+
+  function updateCarType(index: number, type: SifoCarFuelType) {
+    patch({
+      cars: state.cars.map((car, i) => (i === index ? { type } : car)),
+    });
+  }
+
   function applyPreset(presetId: string) {
     const preset = SIFO_HOUSEHOLD_PRESETS.find((p) => p.id === presetId);
     if (!preset) return;
@@ -115,7 +150,7 @@ export function SifoHouseholdPanel({
     onChange({
       ...state,
       members: [...preset.members],
-      car: isFamily ? "bensin" : "none",
+      cars: isFamily ? [{ type: "bensin" }] : [],
       barnehageBarn: isFamily ? 1 : 0,
       aksBarn: isFamily ? 1 : 0,
     });
@@ -271,17 +306,53 @@ export function SifoHouseholdPanel({
       </div>
 
       <div className="mt-6 space-y-5 border-t border-stone-200 pt-6">
-        <CalculatorField label="Bil (husholdning)">
-          <select
-            value={state.car}
-            onChange={(e) => patch({ car: e.target.value as SifoCarType })}
-            className={calculatorInputClassName}
+        <div>
+          <p className="text-sm font-medium text-stone-900">Biler</p>
+          {state.cars.length === 0 ? (
+            <p className="mt-1 text-sm text-stone-500">Ingen bil registrert.</p>
+          ) : (
+            <div className="mt-3 space-y-3">
+              {state.cars.map((car, index) => (
+                <div
+                  key={index}
+                  className="rounded-lg border border-stone-200 bg-stone-50 p-4"
+                >
+                  <div className="flex items-center justify-between gap-2">
+                    <p className="text-sm font-medium text-stone-900">
+                      Bil {index + 1}
+                    </p>
+                    <button
+                      type="button"
+                      onClick={() => removeCar(index)}
+                      className="text-xs font-medium text-stone-500 hover:text-stone-800"
+                    >
+                      Fjern
+                    </button>
+                  </div>
+                  <div className="mt-3">
+                    <select
+                      value={car.type}
+                      onChange={(e) =>
+                        updateCarType(index, e.target.value as SifoCarFuelType)
+                      }
+                      className={calculatorInputClassName}
+                    >
+                      <option value="bensin">Bensinbil</option>
+                      <option value="el">Elbil</option>
+                    </select>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+          <button
+            type="button"
+            onClick={() => addCar()}
+            className="mt-3 rounded-lg bg-stone-100 px-3 py-2 text-sm font-medium text-stone-700 transition-colors hover:bg-stone-200"
           >
-            <option value="none">Ingen bil</option>
-            <option value="bensin">Bensinbil</option>
-            <option value="el">Elbil</option>
-          </select>
-        </CalculatorField>
+            Legg til bil
+          </button>
+        </div>
 
         {eligibleBarnehage > 0 && (
           <>

@@ -64,8 +64,16 @@ function groupLabel(group: SifoCategoryDiff["group"]): string {
 }
 
 function SifoDualComparison({ comparison }: { comparison: SifoHouseholdComparison }) {
-  const { scenarioA, scenarioB, monthlyDiff, yearlyDiff, topChanges, groupDiffs, insights } =
-    comparison;
+  const {
+    scenarioA,
+    scenarioB,
+    monthlyDiff,
+    yearlyDiff,
+    topChanges,
+    groupDiffs,
+    insights,
+    cohabitationInsight,
+  } = comparison;
 
   return (
     <div className="space-y-4">
@@ -116,6 +124,43 @@ function SifoDualComparison({ comparison }: { comparison: SifoHouseholdCompariso
           </p>
         </div>
       </div>
+
+      {cohabitationInsight && (
+        <div
+          className={`rounded-xl border p-4 ${
+            cohabitationInsight.direction === "enslig-til-par" &&
+            cohabitationInsight.collectiveMonthlySavings > 0
+              ? "border-emerald-200 bg-emerald-50"
+              : "border-amber-200 bg-amber-50"
+          }`}
+        >
+          <h3 className="text-base font-semibold text-stone-900">
+            {cohabitationInsight.direction === "enslig-til-par"
+              ? "Besparelse ved å bo sammen"
+              : "Kostnad per person ved å bo alene"}
+          </h3>
+          <p className="mt-1 text-xs text-stone-600">
+            Sammenlignet med to separate enslighusholdninger med samme SIFO-profil.
+          </p>
+          <ul className="mt-3 space-y-2 text-sm text-stone-800">
+            {cohabitationInsight.highlights.map((line) => (
+              <li key={line} className="flex gap-2">
+                <span
+                  className={
+                    cohabitationInsight.direction === "enslig-til-par" &&
+                    cohabitationInsight.collectiveMonthlySavings > 0
+                      ? "text-emerald-600"
+                      : "text-amber-600"
+                  }
+                >
+                  •
+                </span>
+                <span>{line}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       {insights.length > 0 && (
         <div className={calculatorPanelClassName}>

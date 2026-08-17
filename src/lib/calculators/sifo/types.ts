@@ -1,13 +1,17 @@
 import type { SifoMemberType } from "./data";
 
-export type SifoCarType = "none" | "bensin" | "el";
+export type SifoCarFuelType = "bensin" | "el";
+
+export interface SifoCar {
+  type: SifoCarFuelType;
+}
 export type SifoBarnehageInntekt = "hoy" | "lav";
 export type SifoAksInntekt = "hoy" | "middels" | "lav";
 export type SifoAksPlass = "heltid" | "deltid" | "delvisGratis";
 
 export interface SifoCalculatorInput {
   members: SifoMemberType[];
-  car: SifoCarType;
+  cars: SifoCar[];
   barnehageBarn: number;
   barnehageInntekt: SifoBarnehageInntekt;
   aksBarn: number;
@@ -74,6 +78,22 @@ export interface SifoHouseholdGroupDiffs {
   valgfritt: SifoComparisonResult;
 }
 
+/** SIFO-sammenligning enslig ↔ par: besparelse vs. to separate husholdninger. */
+export interface SifoCohabitationInsight {
+  direction: "enslig-til-par" | "par-til-enslig";
+  singleMonthlyTotal: number;
+  coupledMonthlyTotal: number;
+  /** Prosent økning fra enslig til par (eller per person ved par → enslig). */
+  increasePercent: number;
+  /** 2 × enslig − par; positiv når samboerskap er billigere enn to enslige. */
+  collectiveMonthlySavings: number;
+  collectiveYearlySavings: number;
+  perPersonCoupledMonthly: number;
+  perPersonSavingsMonthly: number;
+  perPersonSavingsYearly: number;
+  highlights: string[];
+}
+
 export interface SifoHouseholdComparison {
   scenarioA: { label: string; result: SifoCalculatorResult };
   scenarioB: { label: string; result: SifoCalculatorResult };
@@ -83,4 +103,5 @@ export interface SifoHouseholdComparison {
   topChanges: SifoCategoryDiff[];
   groupDiffs: SifoHouseholdGroupDiffs;
   insights: string[];
+  cohabitationInsight: SifoCohabitationInsight | null;
 }

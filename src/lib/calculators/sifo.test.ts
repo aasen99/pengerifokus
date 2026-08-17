@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
 import {
+  buildCohabitationInsight,
   buildSifoSummaryComparison,
   calculateEksempelfamilieNordmann,
   calculateSifoBudget,
@@ -51,7 +52,7 @@ describe("sumUserCategoryAmounts", () => {
 describe("compareSifoHouseholds", () => {
   const ensligInput: SifoCalculatorInput = {
     members: ["kvinne_25_50"],
-    car: "none",
+    cars: [],
     barnehageBarn: 0,
     barnehageInntekt: "hoy",
     aksBarn: 0,
@@ -61,7 +62,7 @@ describe("compareSifoHouseholds", () => {
 
   const parInput: SifoCalculatorInput = {
     members: ["kvinne_25_50", "mann_25_50"],
-    car: "none",
+    cars: [],
     barnehageBarn: 0,
     barnehageInntekt: "hoy",
     aksBarn: 0,
@@ -71,7 +72,7 @@ describe("compareSifoHouseholds", () => {
 
   const familieInput: SifoCalculatorInput = {
     members: ["kvinne_25_50", "mann_25_50", "gutt_4_6", "jente_11_14"],
-    car: "bensin",
+    cars: [{ type: "bensin" }],
     barnehageBarn: 1,
     barnehageInntekt: "hoy",
     aksBarn: 1,
@@ -122,6 +123,12 @@ describe("compareSifoHouseholds", () => {
         0,
       ),
     );
+
+    assert.ok(comparison.cohabitationInsight);
+    assert.equal(comparison.cohabitationInsight.direction, "enslig-til-par");
+    assert.equal(comparison.cohabitationInsight.collectiveMonthlySavings, 3_520);
+    assert.equal(comparison.cohabitationInsight.perPersonSavingsMonthly, 1_760);
+    assert.ok(comparison.cohabitationInsight.increasePercent < 100);
   });
 
   it("sammenligner par og familie med barnehage og AKS", () => {
@@ -141,6 +148,7 @@ describe("compareSifoHouseholds", () => {
     assert.ok(comparison.groupDiffs.individ.diff > 0);
     assert.ok(comparison.groupDiffs.husholdning.diff > 0);
     assert.ok(comparison.groupDiffs.valgfritt.diff > 0);
+    assert.equal(comparison.cohabitationInsight, null);
 
     const matDiff = comparison.categoryDiffs.find((c) => c.id === "matOgDrikke");
     assert.ok(matDiff);
@@ -150,6 +158,131 @@ describe("compareSifoHouseholds", () => {
     assert.ok(barnehageDiff);
     assert.equal(barnehageDiff.amountA, 0);
     assert.ok(barnehageDiff.amountB > 0);
+  });
+});
+
+describe("buildCohabitationInsight", () => {
+  const ensligInput: SifoCalculatorInput = {
+    members: ["kvinne_25_50"],
+    cars: [],
+    barnehageBarn: 0,
+    barnehageInntekt: "hoy",
+    aksBarn: 0,
+    aksPlass: "heltid",
+    aksInntekt: "hoy",
+  };
+
+  const parInput: SifoCalculatorInput = {
+    members: ["kvinne_25_50", "mann_25_50"],
+    cars: [],
+    barnehageBarn: 0,
+    barnehageInntekt: "hoy",
+    aksBarn: 0,
+    aksPlass: "heltid",
+    aksInntekt: "hoy",
+  };
+
+  it("beregner besparelse ved enslig → par", () => {
+    const enslig = calculateSifoBudget(ensligInput);
+    const par = calculateSifoBudget(parInput);
+    assert.ok(enslig);
+    assert.ok(par);
+
+    const insight = buildCohabitationInsight(
+      ensligInput,
+      parInput,
+      enslig,
+      par,
+    );
+    assert.ok(insight);
+    assert.equal(insight.direction, "enslig-til-par");
+    assert.equal(insight.singleMonthlyTotal, 12_599);
+    assert.equal(insight.coupledMonthlyTotal, 21_678);
+    assert.equal(insight.collectiveMonthlySavings, 3_520);
+    assert.equal(insight.perPersonCoupledMonthly, 10_839);
+    assert.equal(insight.perPersonSavingsMonthly, 1_760);
+    assert.ok(insight.increasePercent > 70 && insight.increasePercent < 73);
+    assert.ok(insight.highlights.length >= 2);
+    assert.ok(
+      insight.highlights.some((line) => line.includes("under 100 %")),
+    );
+  });
+
+  it("beskriver kostnad per person ved par → enslig", () => {
+    const enslig = calculateSifoBudget(ensligInput);
+    const par = calculateSifoBudget(parInput);
+    assert.ok(enslig);
+    assert.ok(par);
+
+    const insight = buildCohabitationInsight(
+      parInput,
+      ensligInput,
+      par,
+      enslig,
+    );
+    assert.ok(insight);
+    assert.equal(insight.direction, "par-til-enslig");
+    assert.equal(insight.perPersonSavingsMonthly, -1_760);
+    assert.ok(
+      insight.highlights.some((line) => line.includes("per person stiger")),
+    );
+  });
+
+  it("returnerer null når mønsteret ikke matcher", () => {
+    const familieInput: SifoCalculatorInput = {
+      members: ["kvinne_25_50", "mann_25_50", "gutt_4_6"],
+      cars: [],
+      barnehageBarn: 0,
+      barnehageInntekt: "hoy",
+      aksBarn: 0,
+      aksPlass: "heltid",
+      aksInntekt: "hoy",
+    };
+    const enslig = calculateSifoBudget(ensligInput);
+    const familie = calculateSifoBudget(familieInput);
+    assert.ok(enslig);
+    assert.ok(familie);
+
+    assert.equal(
+      buildCohabitationInsight(ensligInput, familieInput, enslig, familie),
+      null,
+    );
+  });
+});
+
+describe("calculateSifoBudget – flere biler", () => {
+  const baseInput: SifoCalculatorInput = {
+    members: ["kvinne_25_50", "mann_25_50", "gutt_4_6", "jente_11_14"],
+    cars: [],
+    barnehageBarn: 0,
+    barnehageInntekt: "hoy",
+    aksBarn: 0,
+    aksPlass: "heltid",
+    aksInntekt: "hoy",
+  };
+
+  it("summerer bilkostnad per bil (samme husstandsstørrelse-band)", () => {
+    const enBil = calculateSifoBudget({
+      ...baseInput,
+      cars: [{ type: "bensin" }],
+    });
+    const toBiler = calculateSifoBudget({
+      ...baseInput,
+      cars: [{ type: "bensin" }, { type: "el" }],
+    });
+    assert.ok(enBil);
+    assert.ok(toBiler);
+
+    const bilEn = enBil.categories.find((c) => c.id === "bilkostnader");
+    const bilTo = toBiler.categories.find((c) => c.id === "bilkostnader");
+    assert.ok(bilEn);
+    assert.ok(bilTo);
+    assert.equal(bilEn.amount, 3_375);
+    assert.equal(bilTo.amount, 3_375 + 2_245);
+    assert.equal(
+      toBiler.husholdTotal - enBil.husholdTotal,
+      bilTo.amount - bilEn.amount,
+    );
   });
 });
 
