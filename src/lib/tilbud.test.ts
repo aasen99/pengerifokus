@@ -21,15 +21,29 @@ describe("parseOfferRate", () => {
 
   it("converts Spenn poeng per 100 kr the same way", () => {
     assert.equal(parseOfferRate("40 poeng / 100 kr", "spenn"), 4);
+    assert.ok(
+      Math.abs((parseOfferRate("3,8 Spenn / 10 kr", "spenn") ?? 0) - 3.8) <
+        1e-9,
+    );
+    assert.ok(
+      Math.abs((parseOfferRate("Opptil 2,4 Spenn / 10 kr", "spenn") ?? 0) - 2.4) <
+        1e-9,
+    );
   });
 
   it("returns raw poeng for unknown programs", () => {
     assert.equal(parseOfferRate("50 poeng / 100 kr"), 50);
+    assert.equal(parseOfferRate("3,8 Spenn / 10 kr"), 38);
   });
 
   it("ignores flat EuroBonus poeng without purchase amount", () => {
     assert.equal(parseOfferRate("500 poeng", "eurobonus"), null);
     assert.equal(parseOfferRate("1 500 poeng", "eurobonus"), null);
     assert.equal(parseOfferRate("3 000 poeng", "eurobonus"), null);
+  });
+
+  it("ignores flat Spenn without purchase amount", () => {
+    assert.equal(parseOfferRate("816 Spenn på kjøpet", "spenn"), null);
+    assert.equal(parseOfferRate("1 680 Spenn på kjøpet", "spenn"), null);
   });
 });

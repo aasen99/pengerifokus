@@ -148,33 +148,35 @@ function parseOfferNumber(raw: string): number {
   return parseFloat(raw.replace(/\s/g, "").replace(",", "."));
 }
 
-/** Trekker ut sammenlignbart tall fra offerLabel, f.eks. «15–20 %» → 20 eller «50 poeng / 100 kr» → 5 (ca. kr-verdi ved EuroBonus) */
+/** Trekker ut sammenlignbart tall fra offerLabel, f.eks. «15–20 %» → 20 eller «3,8 Spenn / 10 kr» → 3,8 (ca. kr-verdi ved Spenn) */
 export function parseOfferRate(
   offerLabel: string,
   fordelSlug?: string,
 ): number | null {
   const krPerPoeng = fordelSlug ? POENG_KRONEVERDI[fordelSlug] : undefined;
 
-  const poengPer100Match = offerLabel.match(
-    /(?:opptil\s+)?([\d\s,.]+)(?:\s*[–-]\s*([\d\s,.]+))?\s*poeng\s*\/\s*100/i,
+  const poengPerKronerMatch = offerLabel.match(
+    /(?:opptil\s+)?([\d\s,.]+)(?:\s*[–-]\s*([\d\s,.]+))?\s*(?:poeng|spenn)\s*\/\s*(10|100)\s*kr?/i,
   );
-  if (poengPer100Match) {
-    const low = parseOfferNumber(poengPer100Match[1]);
-    const high = poengPer100Match[2]
-      ? parseOfferNumber(poengPer100Match[2])
+  if (poengPerKronerMatch) {
+    const low = parseOfferNumber(poengPerKronerMatch[1]);
+    const high = poengPerKronerMatch[2]
+      ? parseOfferNumber(poengPerKronerMatch[2])
       : low;
-    const poeng = Math.max(low, high);
+    const points = Math.max(low, high);
+    const divisor = parseInt(poengPerKronerMatch[3], 10);
+    const pointsPer100Kr = points * (100 / divisor);
 
     if (krPerPoeng) {
-      // Poeng per 100 kr → ca. kr verdi per 100 kr, sammenlignbart med prosent rabatt
-      return poeng * krPerPoeng;
+      // Poeng/Spenn per X kr → ca. kr-verdi per 100 kr, sammenlignbart med prosent rabatt
+      return pointsPer100Kr * krPerPoeng;
     }
 
-    return poeng;
+    return pointsPer100Kr;
   }
 
-  if (krPerPoeng && /\d[\d\s,.]*\s*poeng/i.test(offerLabel)) {
-    // Fast poengsum uten kjøpsbeløp – kan ikke sammenlignes rettferdig med prosent
+  if (krPerPoeng && /\d[\d\s,.]*\s*(?:poeng|spenn)/i.test(offerLabel)) {
+    // Fast poengsum uten kjøpsbeløp – kan ikke sammenlignes rettferdig med prosent/kroneverdi
     return null;
   }
 
