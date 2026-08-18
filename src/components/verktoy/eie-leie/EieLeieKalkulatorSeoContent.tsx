@@ -8,11 +8,23 @@ export function EieLeieKalkulatorSeoContent() {
           Slik sammenligner du eie og leie
         </h2>
         <p className="mt-3 max-w-3xl text-stone-600 leading-relaxed">
-          Kalkulatoren regner ut nettoformue over tid: hva du sitter igjen med
-          ved å kjøpe bolig mot å leie. Den holder kontantstrømmen lik måned for
-          måned — hvis eie koster mer enn leie, investerer leieren differansen,
-          og omvendt. Avdrag bygger egenkapital i boligen og investeres ikke på
-          nytt.
+          Kalkulatoren regner ut{" "}
+          <Link
+            href="/ordbok/nettoformue"
+            className="font-medium text-emerald-700 underline decoration-emerald-700/30 underline-offset-2 hover:decoration-emerald-700"
+          >
+            nettoformue
+          </Link>{" "}
+          over tid: hva du sitter igjen med ved å kjøpe bolig mot å leie. Den
+          holder kontantstrømmen lik måned for måned — hvis eie koster mer enn
+          leie, investerer leieren differansen, og omvendt. Avdrag bygger{" "}
+          <Link
+            href="/ordbok/egenkapital"
+            className="font-medium text-emerald-700 underline decoration-emerald-700/30 underline-offset-2 hover:decoration-emerald-700"
+          >
+            egenkapital
+          </Link>{" "}
+          i boligen og investeres ikke på nytt.
         </p>
         <ul className="mt-4 max-w-3xl list-disc space-y-2 pl-5 text-stone-600">
           <li>
@@ -34,8 +46,14 @@ export function EieLeieKalkulatorSeoContent() {
           >
             guiden om eie eller leie bolig
           </Link>{" "}
-          for tidshorisont, dokumentavgift, alternativkostnad og andre
-          forhold utover det rene tallet.
+          for tidshorisont, dokumentavgift,{" "}
+          <Link
+            href="/ordbok/alternativkostnad"
+            className="font-medium text-emerald-700 underline decoration-emerald-700/30 underline-offset-2 hover:decoration-emerald-700"
+          >
+            alternativkostnad
+          </Link>{" "}
+          og andre forhold utover det rene tallet.
         </p>
       </section>
     </div>

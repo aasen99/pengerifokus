@@ -52,6 +52,13 @@ export default function MillionkalkulatorPage() {
         >
           Regel 72
         </Link>
+        . Begge viser effekten av{" "}
+        <Link
+          href="/ordbok/rentes-rente"
+          className="font-medium text-orange-600 hover:text-orange-700"
+        >
+          rentes rente
+        </Link>
         .
       </p>
 
@@ -59,6 +66,8 @@ export default function MillionkalkulatorPage() {
         guides={[
           { label: "Kom i gang med fond", href: "/guider/kom-i-gang-med-fond" },
           { label: "Bygg bufferkonto", href: "/guider/bygg-bufferkonto" },
+          { label: "Rentes rente i ordboken", href: "/ordbok/rentes-rente" },
+          { label: "Emne: sparing og investering", href: "/emner/sparing-og-investering" },
         ]}
       />
     </div>

@@ -41,15 +41,28 @@ export default function NedbetalingskalkulatorPage() {
       <section className="mt-8 rounded-xl border border-stone-200 bg-stone-50 p-4 text-sm text-stone-700">
         <p className="font-medium text-stone-900">Ett enkelt lån?</p>
         <p className="mt-1">
-          For boliglån og annuitetslån med terminbeløp og engangsinnbetaling,
-          bruk{" "}
+          For boliglån og{" "}
+          <Link
+            href="/ordbok/annuitetslan"
+            className="font-medium text-orange-600 hover:text-orange-700"
+          >
+            annuitetslån
+          </Link>{" "}
+          med terminbeløp og engangsinnbetaling, bruk{" "}
           <Link
             href="/verktoy/rentekalkulator"
             className="font-medium text-orange-600 hover:text-orange-700"
           >
             rentekalkulatoren
           </Link>
-          .
+          . Dyr{" "}
+          <Link
+            href="/ordbok/forbruksgjeld"
+            className="font-medium text-orange-600 hover:text-orange-700"
+          >
+            forbruksgjeld
+          </Link>{" "}
+          bør vanligvis ned først.
         </p>
       </section>
 
@@ -60,6 +73,7 @@ export default function NedbetalingskalkulatorPage() {
           { label: "Snøballmetode (ordbok)", href: "/ordbok/snoballmetode" },
           { label: "Rentekalkulator (ett lån)", href: "/verktoy/rentekalkulator" },
           { label: "Lånets reelle verdi", href: "/verktoy/lanets-reelle-verdi" },
+          { label: "Emne: gjeld", href: "/emner/gjeld" },
         ]}
       />
     </div>

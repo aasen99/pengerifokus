@@ -49,6 +49,20 @@ export interface OrdbokEntry extends BaseContent {
   tags?: string[];
 }
 
+export interface OrdbokArticle {
+  slug: string;
+  whyItMatters: string;
+  example: string;
+  formula?: string;
+  misconception: string;
+  versus: { term: string; slug: string; difference: string };
+  relatedTool?: { label: string; href: string };
+  relatedGuide?: { label: string; href: string };
+  source: { label: string; url: string };
+  lastVerified: string;
+  lastModifiedIso: string;
+}
+
 export type ContentType =
   | "guide"
   | "fordel"

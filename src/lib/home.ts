@@ -7,7 +7,7 @@ import {
   getTilbud,
 } from "@/lib/content";
 import { hasGuideArticle } from "@/data/guide-articles";
-import { isTilbudOptInProgram } from "@/lib/tilbud";
+import { isTilbudOptInProgram } from "@/lib/tilbud-ui";
 
 export function getHomeStats() {
   const publiserteTilbud = getTilbud().filter(

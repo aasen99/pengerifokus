@@ -2,13 +2,7 @@
 
 import Link from "next/link";
 import { useMemo, useState, type ReactNode } from "react";
-import {
-  BUILD_TYPE_LABELS,
-  FORMUE_DISCLAIMER,
-  INDUSTRY_LABELS,
-  REGION_LABELS,
-} from "@/data/formuesbyggere-labels";
-import { hasFormuesbyggerArticle } from "@/data/formuesbygger-articles";
+import { BUILD_TYPE_LABELS, FORMUE_DISCLAIMER, INDUSTRY_LABELS, REGION_LABELS } from "@/data/formuesbyggere-labels";
 import {
   filterFormuesbyggere,
   FORMUESBYGGER_SORT_OPTIONS,
@@ -27,6 +21,7 @@ import { calculatorInputClassName } from "@/components/verktoy/calculator-ui";
 
 interface FormuesbyggerListProps {
   entries: Formuesbygger[];
+  articleSlugs: string[];
 }
 
 function FilterChip({
@@ -53,7 +48,10 @@ function FilterChip({
   );
 }
 
-export function FormuesbyggerList({ entries }: FormuesbyggerListProps) {
+export function FormuesbyggerList({
+  entries,
+  articleSlugs,
+}: FormuesbyggerListProps) {
   const [query, setQuery] = useState("");
   const [region, setRegion] = useState<FormuesbyggerRegion | null>(null);
   const [industry, setIndustry] = useState<FormuesbyggerIndustry | null>(null);
@@ -61,6 +59,7 @@ export function FormuesbyggerList({ entries }: FormuesbyggerListProps) {
     null,
   );
   const [sort, setSort] = useState<FormuesbyggerSortOption>("wealth-desc");
+  const articleSlugSet = useMemo(() => new Set(articleSlugs), [articleSlugs]);
 
   const filtered = useMemo(
     () =>
@@ -191,7 +190,8 @@ export function FormuesbyggerList({ entries }: FormuesbyggerListProps) {
 
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-sm text-stone-600">
-          {filtered.length} {filtered.length === 1 ? "profil" : "profiler"}
+          {filtered.length}{" "}
+          {filtered.length === 1 ? "formuesbygger" : "formuesbyggere"}
           {hasFilters ? " funnet" : " i oversikten"}
         </p>
 
@@ -217,7 +217,7 @@ export function FormuesbyggerList({ entries }: FormuesbyggerListProps) {
       {filtered.length > 0 ? (
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((entry) => {
-            const hasArticle = hasFormuesbyggerArticle(entry.slug);
+            const hasArticle = articleSlugSet.has(entry.slug);
             const card = (
               <>
                 <div className="mb-2 flex flex-wrap gap-1.5">
@@ -255,7 +255,9 @@ export function FormuesbyggerList({ entries }: FormuesbyggerListProps) {
         </div>
       ) : (
         <div className="rounded-xl border border-dashed border-stone-300 bg-stone-50 px-6 py-10 text-center">
-          <p className="font-medium text-stone-900">Ingen profiler funnet</p>
+          <p className="font-medium text-stone-900">
+            Ingen formuesbyggere funnet
+          </p>
           <p className="mt-2 text-sm text-stone-600">
             Prøv et annet søkeord eller fjern filter.
           </p>

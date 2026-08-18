@@ -3,7 +3,7 @@ import type { GuideArticleContent } from "@/types/guide-article";
 export const sifoBudsjett: GuideArticleContent = {
   slug: "sifo-budsjett",
   intro:
-    "SIFOs referansebudsjett (tidligere standardbudsjettet) viser hva som kreves for et akseptabelt forbruksnivå i norske husholdninger. Det er et nyttig sammenligningsgrunnlag, men det er ikke et komplett husholdningsbudsjett.",
+    "SIFOs referansebudsjett (tidligere standardbudsjettet) viser hva som kreves for et akseptabelt forbruksnivå i norske husholdninger. Det er et nyttig sammenligningsgrunnlag, men det er ikke et komplett [budsjett](/ordbok/budsjett) for husholdningen.",
   sections: [
     {
       heading: "Hva er SIFO og referansebudsjettet?",
@@ -28,7 +28,7 @@ export const sifoBudsjett: GuideArticleContent = {
         "Referansebudsjettet er et forbruksbudsjett, ikke et fullt livsopphold. De største postene mange sliter med i hverdagen, bolig og strøm, ligger utenfor.",
       ],
       bullets: [
-        "Bolig: husleie, renter, avdrag, felleskostnader og vedlikehold",
+        "Bolig: husleie, renter, avdrag, [felleskostnader](/ordbok/felleskostnader) og vedlikehold",
         "Strøm og andre faste boutgifter",
         "Forsikring, lån, sparing og investering",
         "Alkohol, tobakk, feriereiser og kostbare hobbyer",
@@ -116,5 +116,7 @@ export const sifoBudsjett: GuideArticleContent = {
     { label: "Kutt faste kostnader", href: "/guider/kutt-faste-kostnader" },
     { label: "Bygg bufferkonto", href: "/guider/bygg-bufferkonto" },
     { label: "Luksusfellen-tavle", href: "/verktoy/luksusfelle-tavle" },
+    { label: "Budsjett i ordboken", href: "/ordbok/budsjett" },
+    { label: "Emne: budsjett", href: "/emner/budsjett" },
   ],
 };

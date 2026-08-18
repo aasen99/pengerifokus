@@ -174,7 +174,7 @@ export const bankfordeler: FordelArticleContent = {
       heading: "Fagforening og medlemsavtaler",
       paragraphs: [
         "Bankfordeler kommer ikke bare fra banken direkte. Nordea oppgir at de er medlemsbank for blant annet NITO, YS, Unio, Econa, Finansforbundet, Lederne, Norsk Journalistlag og flere. Medlemskap kan gi bedre betingelser, og i noen tilfeller tilgang til Premium eller Premium Next uten å møte inntektskravene alene.",
-        "Andre veier inn kan være arbeidsgiver, akademikeravtaler, LO/YS/Unio-avtaler eller at foreldre allerede er premiumkunde. Les mer i guiden om bankenes fordelsprogrammer.",
+        "Andre veier inn kan være arbeidsgiver, akademikeravtaler, LO/YS/Unio-avtaler eller at foreldre allerede er premiumkunde. Se [guiden om total bankpris og lojalitetskostnad](/guider/bankenes-fordelsprogrammer).",
       ],
     },
     {

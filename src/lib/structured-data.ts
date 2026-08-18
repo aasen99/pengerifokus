@@ -1,4 +1,4 @@
-import { getSiteUrl, siteConfig } from "@/lib/site";
+import { getSiteUrl, siteConfig } from "@/lib/site-config";
 
 export interface BreadcrumbItem {
   name: string;

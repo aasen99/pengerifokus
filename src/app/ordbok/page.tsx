@@ -1,11 +1,12 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
-import { Suspense } from "react";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { OrdbokList } from "@/components/ordbok/OrdbokList";
 import { HubCrossLinks } from "@/components/seo/HubCrossLinks";
 import { HubPageSeo } from "@/components/seo/HubPageSeo";
+import { FORMUESBYGGERE_TITLE } from "@/data/formuesbyggere-labels";
 import { getOrdbok } from "@/lib/content";
+import { sortOrdbokEntries } from "@/lib/ordbok";
 import { createPageMetadata } from "@/lib/seo";
 
 const pageDescription =
@@ -27,12 +28,24 @@ export const metadata: Metadata = createPageMetadata({
   ],
 });
 
+interface OrdbokPageProps {
+  searchParams: Promise<{
+    q?: string | string[];
+  }>;
+}
+
+function first(value?: string | string[]): string | undefined {
+  return Array.isArray(value) ? value[0] : value;
+}
+
 /**
  * CMS/ADMIN: Ordbokbegreper administreres via getOrdbok().
- * Søk og filtrering skjer i OrdbokList: data kan senere hentes fra API/database.
+ * Hele listen rendres som HTML. Søk filtrerer allerede rendret innhold.
  */
-export default function OrdbokPage() {
-  const entries = getOrdbok();
+export default async function OrdbokPage({ searchParams }: OrdbokPageProps) {
+  const params = await searchParams;
+  const query = first(params.q)?.trim() ?? "";
+  const entries = sortOrdbokEntries(getOrdbok());
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-10">
@@ -63,21 +76,13 @@ export default function OrdbokPage() {
         .
       </p>
 
-      <Suspense
-        fallback={
-          <div className="rounded-xl border border-stone-200 bg-white p-4 text-sm text-stone-600">
-            Laster ordbok...
-          </div>
-        }
-      >
-        <OrdbokList entries={entries} />
-      </Suspense>
+      <OrdbokList entries={entries} initialQuery={query} />
 
       <HubCrossLinks
         links={[
           { href: "/guider", label: "Guider" },
           { href: "/ordbok/prosent", label: "Prosent" },
-          { href: "/formuesbyggere", label: "Formuesbyggere" },
+          { href: "/formuesbyggere", label: FORMUESBYGGERE_TITLE },
         ]}
       />
     </div>

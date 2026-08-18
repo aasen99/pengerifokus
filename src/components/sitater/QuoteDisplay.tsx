@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { FormuesbyggerQuote } from "@/types/formuesbygger";
-import { getQuoteCategoryLabel } from "@/lib/sitater";
+import { getQuoteCategoryLabel } from "@/lib/sitater-filter";
 
 interface QuoteDisplayProps {
   quote: FormuesbyggerQuote;

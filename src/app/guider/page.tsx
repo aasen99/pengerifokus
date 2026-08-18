@@ -56,7 +56,9 @@ export default function GuiderPage() {
               description={guide.description}
               meta={guide.category}
               tags={guide.tags}
-              actionLabel={hasArticle ? "Les mer" : "Kommer snart"}
+              contentType="Guide"
+              year={guide.updatedAt}
+              actionLabel={hasArticle ? "Les guiden" : "Kommer snart"}
               disabled={!hasArticle}
               href={hasArticle ? `/guider/${guide.slug}` : undefined}
             />
@@ -66,9 +68,11 @@ export default function GuiderPage() {
 
       <HubCrossLinks
         links={[
+          { href: "/emner/bolig", label: "Emne: bolig" },
+          { href: "/emner/gjeld", label: "Emne: gjeld" },
+          { href: "/emner/sparing-og-investering", label: "Emne: sparing og investering" },
           { href: "/verktoy", label: "Kalkulatorer og verktøy" },
           { href: "/ordbok", label: "Økonomiordbok" },
-          { href: "/verktoy/prosentkalkulator", label: "Prosentkalkulator" },
         ]}
       />
     </div>

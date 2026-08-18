@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getSiteUrl, siteConfig } from "@/lib/site";
+import { getSiteUrl, siteConfig } from "@/lib/site-config";
 
 interface PageSeoOptions {
   title?: string;

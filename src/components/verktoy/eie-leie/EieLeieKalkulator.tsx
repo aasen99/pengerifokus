@@ -44,7 +44,7 @@ function integerField(
         tooltip ? (
           <span className="inline-flex items-center">
             {label}
-            <InfoTip text={tooltip} />
+            <InfoTip text={tooltip} label={`Mer om ${label}`} />
           </span>
         ) : (
           label
@@ -410,8 +410,8 @@ export function EieLeieKalkulator() {
                   </select>
                 </CalculatorField>
                 <CalculatorField
-                  label="Rentefri eller avdragsfri periode"
-                  hint="Antall måneder i starten"
+                  label="Avdragsfri periode"
+                  hint="Antall måneder i starten. Renter betales fortsatt."
                 >
                   <IntegerNumberInput
                     value={input.interestOnlyMonths}
@@ -511,7 +511,10 @@ export function EieLeieKalkulator() {
                   decimalField(
                     <span className="inline-flex items-center">
                       Vedlikehold per år
-                      <InfoTip text={EIE_LEIE_TOOLTIPS.maintenance} />
+                      <InfoTip
+                        text={EIE_LEIE_TOOLTIPS.maintenance}
+                        label="Mer om vedlikehold"
+                      />
                     </span>,
                     input.maintenancePercentAnnual,
                     (value) => update({ maintenancePercentAnnual: value }),
@@ -533,7 +536,10 @@ export function EieLeieKalkulator() {
               label={
                 <span className="inline-flex items-center">
                   Forventet boligprisvekst
-                  <InfoTip text={EIE_LEIE_TOOLTIPS.propertyGrowth} />
+                  <InfoTip
+                    text={EIE_LEIE_TOOLTIPS.propertyGrowth}
+                    label="Mer om boligprisvekst"
+                  />
                 </span>
               }
               hint="Årlig vekst i prosent"
@@ -554,7 +560,10 @@ export function EieLeieKalkulator() {
               decimalField(
                 <span className="inline-flex items-center">
                   Salgskostnader
-                  <InfoTip text={EIE_LEIE_TOOLTIPS.saleCosts} />
+                  <InfoTip
+                    text={EIE_LEIE_TOOLTIPS.saleCosts}
+                    label="Mer om salgskostnader"
+                  />
                 </span>,
                 input.saleCostPercent,
                 (value) =>
@@ -619,7 +628,10 @@ export function EieLeieKalkulator() {
               label={
                 <span className="inline-flex items-center">
                   Forventet årlig avkastning
-                  <InfoTip text={EIE_LEIE_TOOLTIPS.alternativeReturn} />
+                  <InfoTip
+                    text={EIE_LEIE_TOOLTIPS.alternativeReturn}
+                    label="Mer om alternativ avkastning"
+                  />
                 </span>
               }
               hint="Ikke garantert: brukes for sammenligning"
@@ -644,8 +656,27 @@ export function EieLeieKalkulator() {
                 "F.eks. fondskostnad i prosent",
               )}
 
+            <label className="flex items-start gap-2 text-sm text-stone-700">
+              <input
+                type="checkbox"
+                checked={input.assumeTaxFreeHomeSale}
+                onChange={(event) =>
+                  update({ assumeTaxFreeHomeSale: event.target.checked })
+                }
+                className="mt-0.5 rounded border-stone-300 text-orange-600"
+              />
+              <span>
+                Anta skattefritt boligsalg. Gevinst på egen bolig kan være
+                skattefri når kravene til eiertid og botid er oppfylt.
+              </span>
+            </label>
+
             <div className="rounded-xl border border-stone-100 bg-stone-50 px-4 py-3 text-xs text-stone-600">
-              <p className="font-medium text-stone-800">Forutsetninger i enkel modus</p>
+              <p className="font-medium text-stone-800">
+                {mode === "simple"
+                  ? "Forutsetninger i enkel modus"
+                  : "Øvrige forutsetninger"}
+              </p>
               <ul className="mt-2 space-y-1">
                 <li>Dokumentavgift: {formatCurrency(calculateDocumentFee(input))}</li>
                 <li>Kjøpskostnader totalt: {formatCurrency(totalPurchaseCosts)}</li>

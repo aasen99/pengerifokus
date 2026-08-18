@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getCardMeta } from "@/lib/card-meta";
 import { Tag } from "./Tag";
 
 interface ContentCardProps {
@@ -7,6 +8,8 @@ interface ContentCardProps {
   tags?: string[];
   meta?: string;
   badge?: string;
+  contentType?: string;
+  year?: string | number;
   actionLabel?: string;
   disabled?: boolean;
   href?: string;
@@ -18,26 +21,27 @@ export function ContentCard({
   tags,
   meta,
   badge,
-  actionLabel = "Les mer",
+  contentType,
+  year,
+  actionLabel = "Åpne",
   disabled = false,
   href,
 }: ContentCardProps) {
   const className =
     "group flex h-full flex-col rounded-xl border border-stone-200 bg-white p-3.5 transition-colors hover:border-orange-300";
 
-  const visibleTags = tags?.slice(0, 1) ?? [];
+  const { category, secondary } = getCardMeta(meta, tags, {
+    type: contentType,
+    year,
+  });
 
   const content = (
     <>
-      {(meta || badge || visibleTags.length > 0) && (
+      {(category || badge || secondary) && (
         <div className="mb-2 flex flex-wrap items-center gap-1.5">
-          {meta && <Tag>{meta}</Tag>}
+          {category && <Tag>{category}</Tag>}
           {badge && <Tag variant="accent">{badge}</Tag>}
-          {visibleTags.map((tag) => (
-            <Tag key={tag} variant="muted">
-              {tag}
-            </Tag>
-          ))}
+          {secondary && <Tag variant="muted">{secondary}</Tag>}
         </div>
       )}
 

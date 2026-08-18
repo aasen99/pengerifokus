@@ -9,7 +9,7 @@ export const komIGangMedFond: GuideArticleContent = {
       heading: "Hva er et fond?",
       paragraphs: [
         "Et fond er en kurv av mange investeringer: ofte aksjer og obligasjoner, forvaltet av et selskap. Når du kjøper andeler i fondet, eier du en liten bit av hele kurven.",
-        "Fordelen er spredning, du risikerer ikke alt på én enkelt aksje. Et indeksfond kan for eksempel følge hundrevis av selskaper i ett kjøp.",
+        "Fordelen er spredning, du risikerer ikke alt på én enkelt aksje. Et [indeksfond](/ordbok/indeksfond) kan for eksempel følge hundrevis av selskaper i ett kjøp.",
       ],
     },
     {
@@ -24,7 +24,7 @@ export const komIGangMedFond: GuideArticleContent = {
     {
       heading: "ASK: aksjesparekonto",
       paragraphs: [
-        "ASK er en skattegunstig konto for aksjer og fond i Norge. Du betaler skatt når du tar ut gevinst, ikke underveis.",
+        "[ASK](/ordbok/ask) er en skattegunstig konto for aksjer og fond i Norge. Du betaler skatt når du tar ut gevinst, ikke underveis.",
         "Du kan flytte penger inn og ut av aksjer/fond på kontoen uten å utløse skatt, så lenge pengene blir værende på ASK. Det gjør den fleksibel for langsiktig sparing.",
       ],
       bullets: [
@@ -36,7 +36,7 @@ export const komIGangMedFond: GuideArticleContent = {
     {
       heading: "Slik kommer du i gang",
       bullets: [
-        "1. Sørg for bufferkonto først: fond er for langsiktige penger",
+        "1. Sørg for [bufferkonto](/ordbok/bufferkonto) først: fond er for langsiktige penger",
         "2. Velg bank eller plattform med lave fondskostnader",
         "3. Start med ett bredt indeksfond (verden eller Norden)",
         "4. Sett opp fast månedlig sparing: «dollar cost averaging»",
@@ -69,6 +69,8 @@ export const komIGangMedFond: GuideArticleContent = {
   relatedLinks: [
     { label: "Sparekalkulator", href: "/verktoy/sparekalkulator" },
     { label: "Bygg bufferkonto", href: "/guider/bygg-bufferkonto" },
-    { label: "Les om ASK i ordboken", href: "/ordbok/ask" },
+    { label: "ASK i ordboken", href: "/ordbok/ask" },
+    { label: "Rentes rente i ordboken", href: "/ordbok/rentes-rente" },
+    { label: "Emne: sparing og investering", href: "/emner/sparing-og-investering" },
   ],
 };

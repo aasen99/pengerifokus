@@ -47,7 +47,7 @@ export const usbl: FordelArticleContent = {
     {
       heading: "Bonus og Bonabo",
       paragraphs: [
-        "Usbl har et bonusprogram der du kan samle penger på kjøp hos utvalgte samarbeidspartnere. For automatisk opptjening må du registrere debet- eller kredittkort i Bonabo under «Bonus».",
+        "Usbl har et bonusprogram der du kan samle penger på kjøp hos utvalgte samarbeidspartnere, en form for [cashback](/ordbok/cashback). For automatisk opptjening må du registrere debet- eller kredittkort i Bonabo under «Bonus».",
         "Usbl oppgir at bonus kan overføres til bankkonto når du selv ønsker, minst 30 dager etter kjøpet. Bonus registreres ikke ved betaling med Apple Pay, MobilePay, Vipps, Klarna eller Google Pay.",
       ],
       bullets: [
@@ -133,5 +133,6 @@ export const usbl: FordelArticleContent = {
     { label: "NAF, medlemsfordeler", href: "/fordeler/naf" },
     { label: "Trumf, bonusprogram", href: "/fordeler/trumf" },
     { label: "Alle fordelsprogrammer", href: "/fordeler" },
+    { label: "Emne: bolig", href: "/emner/bolig" },
   ],
 };

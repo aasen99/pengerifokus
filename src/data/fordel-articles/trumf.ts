@@ -32,7 +32,7 @@ export const trumf: FordelArticleContent = {
     {
       heading: "Hva er Trumf?",
       paragraphs: [
-        "Trumf er et bonusprogram der medlemmer kan spare Trumf-bonus på dagligvarer, hos utvalgte partnere og via Trumf Netthandel. Bonusen samles på Trumf-kontoen din, og Trumf oppgir at 1 kr i Trumf-bonus tilsvarer 1 kr.",
+        "Trumf er et bonusprogram der medlemmer kan spare Trumf-bonus på dagligvarer, hos utvalgte partnere og via Trumf Netthandel. Bonusen samles på Trumf-kontoen din, og Trumf oppgir at 1 kr i Trumf-bonus tilsvarer 1 kr – i praksis en form for [cashback](/ordbok/cashback).",
         "Programmet brukes blant annet hos KIWI, MENY, SPAR, Joker, Jacob's, Nærbutikken, CC Mat, Lerøy Mat og Gigaboks. Du kan opptjene bonus med registrert bankkort, Trumf-kort, digitalt Trumf-kort, Trumf Pay, Trumf Kredittkort, utvalgte mobilbetalinger, netthandel og partnere.",
       ],
     },
@@ -241,5 +241,7 @@ export const trumf: FordelArticleContent = {
     { label: "Se Trumf-tilbud vi har samlet", href: "/tilbud?program=trumf" },
     { label: "EuroBonus, flybonusprogram", href: "/fordeler/eurobonus" },
     { label: "Kredittkortfordeler", href: "/fordeler/kredittkortfordeler" },
+    { label: "Cashback i ordboken", href: "/ordbok/cashback" },
+    { label: "Emne: bonus og fordeler", href: "/emner/bonus-og-fordeler" },
   ],
 };

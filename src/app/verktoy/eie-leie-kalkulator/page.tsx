@@ -54,6 +54,7 @@ export default function EieLeieKalkulatorPage() {
           { label: "BSU-kalkulator", href: "/verktoy/bsu-kalkulator" },
           { label: "Rentekalkulator", href: "/verktoy/rentekalkulator" },
           { label: "Nettoformue i ordboken", href: "/ordbok/nettoformue" },
+          { label: "Emne: bolig", href: "/emner/bolig" },
         ]}
       />
     </div>

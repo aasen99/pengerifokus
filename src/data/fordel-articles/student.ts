@@ -67,7 +67,7 @@ export const student: FordelArticleContent = {
         "Bankenes student- og ung-programmer er blant de mest verdifulle studentfordelene for mange. Typisk får du gratis brukskonto og bankkort, eventuelt kredittkort uten årsavgift, og bedre vilkår på forsikring eller boliglån senere.",
         "Eksempler er DNB Ung og Nordea Student. Krav til alder og studie-/kundestatus varierer. Sammenlign gjerne med hva du allerede får gjennom foreldre, fagforening eller innbo via husstanden.",
       ],
-      tip: "Les mer i guiden om bankfordeler hvis du vil sammenligne bankenes kundeprogrammer mer detaljert.",
+      tip: "Sammenlign [bankenes fordelsprogrammer](/guider/bankenes-fordelsprogrammer) mer detaljert hvis du vil se DNB, Nordea og fagforeningsavtaler side om side.",
     },
     {
       heading: "Fagforeninger for studenter",
@@ -160,5 +160,6 @@ export const student: FordelArticleContent = {
     { label: "Klarna cashback", href: "/fordeler/klarna" },
     { label: "Trumf, bonusprogram", href: "/fordeler/trumf" },
     { label: "Alle fordelsprogrammer", href: "/fordeler" },
+    { label: "Emne: bonus og fordeler", href: "/emner/bonus-og-fordeler" },
   ],
 };

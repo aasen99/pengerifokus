@@ -1,5 +1,6 @@
 import { UTLEIEBOLIG_MELDINGER } from "@/data/utleiebolig-meldinger";
 import type { UtleieboligVurderingContext } from "@/data/utleiebolig-meldinger";
+import { calculateUtleieboligBuyerCosts } from "@/lib/calculators/utleiebolig";
 import type { UtleieboligInput } from "@/types/utleiebolig";
 import type { UtleieboligResult } from "@/types/utleiebolig";
 import type {
@@ -76,7 +77,7 @@ export function buildVurderingContext(
         : 0,
     purchaseCostsShareOfEquity:
       result.equityInvested > 0
-        ? (input.purchaseCosts / result.equityInvested) * 100
+        ? (calculateUtleieboligBuyerCosts(input) / result.equityInvested) * 100
         : 0,
     netHousingCostMonthly,
     housingSavingsMonthly,

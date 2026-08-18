@@ -79,7 +79,7 @@ export default function FordelerPage() {
                 ...(tilbudCount > 0 ? [`${tilbudCount} tilbud`] : []),
                 ...(hasArticle ? ["Full guide"] : []),
               ]}
-              actionLabel={hasArticle ? "Les guiden" : "Les mer"}
+              actionLabel={hasArticle ? "Les guiden" : "Se programmet"}
               href={`/fordeler/${fordel.slug}`}
             />
           );
@@ -96,6 +96,7 @@ export default function FordelerPage() {
 
       <HubCrossLinks
         links={[
+          { href: "/emner/bonus-og-fordeler", label: "Emne: bonus og fordeler" },
           { href: "/tilbud", label: TILBUD_TITLE },
           { href: "/verktoy/bonuskalkulator", label: "Bonuskalkulator" },
           { href: "/guider/velg-riktig-kredittkort", label: "Velg kredittkort" },

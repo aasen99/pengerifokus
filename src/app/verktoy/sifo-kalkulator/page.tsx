@@ -56,6 +56,8 @@ export default function SifoKalkulatorPage() {
             label: "Luksusfellen-tavle",
             href: "/verktoy/luksusfelle-tavle",
           },
+          { label: "Budsjett i ordboken", href: "/ordbok/budsjett" },
+          { label: "Emne: budsjett", href: "/emner/budsjett" },
         ]}
       />
     </div>

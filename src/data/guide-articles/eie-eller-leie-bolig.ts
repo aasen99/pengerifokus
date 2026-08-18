@@ -8,7 +8,7 @@ export const eieEllerLeieBolig: GuideArticleContent = {
   intro:
     "Skal du kjøpe eller leie? Svaret handler sjelden bare om månedlig husleie mot terminbeløp. Tid, kjøpskostnader, vedlikehold og alternativ avkastning på egenkapitalen kan snu regnestykket fullstendig.",
   shortAnswer:
-    "Leie er ofte mest attraktivt når du skal bo kort, har en svært gunstig husleie eller trenger fleksibilitet. Eie kan lønne seg over tid fordi avdrag bygger egenkapital og boligen kan stige i verdi. Men renter, vedlikehold, kjøps- og salgskostnader og avkastningen du kunne fått på egenkapitalen kan endre svaret fullstendig. Derfor bør du regne med dine egne tall.",
+    "Leie er ofte mest attraktivt når du skal bo kort, har en svært gunstig husleie eller trenger fleksibilitet. Eie kan lønne seg over tid fordi avdrag bygger [egenkapital](/ordbok/egenkapital) og boligen kan stige i verdi. Men renter, vedlikehold, kjøps- og salgskostnader og avkastningen du kunne fått på egenkapitalen kan endre svaret fullstendig. Derfor bør du regne med dine egne tall.",
   topCta: {
     heading: "Få svaret med dine egne tall",
     description:
@@ -21,7 +21,7 @@ export const eieEllerLeieBolig: GuideArticleContent = {
     {
       heading: "Hvor lenge skal du bo der?",
       paragraphs: [
-        "Kjøp og salg av bolig koster penger. Dokumentavgift, megler, flytting og andre engangskostnader får stor betydning når du ser på kort tidshorisont.",
+        "Kjøp og salg av bolig koster penger. [Dokumentavgift](/ordbok/dokumentavgift), megler, flytting og andre engangskostnader får stor betydning når du ser på kort tidshorisont.",
         "På kort sikt trekker kjøps- og salgskostnader ofte i retning av leie. På lengre sikt får avdrag og eventuell boligprisvekst mer tid til å virke. Break-even kan imidlertid komme etter to, fem eller ti år – eller aldri – avhengig av tallene.",
         "Break-even er tidspunktet der det ene alternativet går forbi det andre målt i anslått nettoformue. Det finnes ingen fast regel som gjelder for alle boliger og alle markeder.",
       ],
@@ -50,8 +50,8 @@ export const eieEllerLeieBolig: GuideArticleContent = {
     {
       heading: "Alternativkostnaden ved å binde egenkapital",
       paragraphs: [
-        "Egenkapitalen du legger i bolig, kunne også vært investert i fond eller annet. Hvis boligen stiger lite og fondene gjør det bra, kan leie pluss sparing teoretisk slå eie – og omvendt.",
-        `Ingen vet fremtiden. Poenget er å være bevisst på at egenkapital har en alternativ verdi, og at du bør teste flere realistiske antagelser i [eie-versus-leie-kalkulatoren](${CALCULATOR_HREF}).`,
+        "[Egenkapitalen](/ordbok/egenkapital) du legger i bolig, kunne også vært investert i fond eller annet. Hvis boligen stiger lite og fondene gjør det bra, kan leie pluss sparing teoretisk slå eie – og omvendt.",
+        `Ingen vet fremtiden. Poenget er å være bevisst på at egenkapital har en [alternativkostnad](/ordbok/alternativkostnad), og at du bør teste flere realistiske antagelser i [eie-versus-leie-kalkulatoren](${CALCULATOR_HREF}).`,
       ],
     },
     {
@@ -150,7 +150,7 @@ export const eieEllerLeieBolig: GuideArticleContent = {
       heading: "Fellesgjeld og borettslag",
       paragraphs: [
         "I et borettslag må du se på totalprisen, ikke bare prisantydningen. Totalprisen inkluderer boligens andel av fellesgjelden. Undersøk også hvor mye av felleskostnadene som går til renter og avdrag på fellesgjelden, slik at de samme kostnadene ikke telles to ganger i regnestykket.",
-        "Borettslagsandeler har normalt ikke dokumentavgift på samme måte som fast eiendom, men andre gebyrer kan forekomme. Les mer om [fellesgjeld](/ordbok/fellesgjeld) i ordboken.",
+        "Borettslagsandeler har normalt ikke dokumentavgift på samme måte som fast eiendom, men andre gebyrer kan forekomme. Se [fellesgjeld](/ordbok/fellesgjeld) i ordboken.",
       ],
     },
     {
@@ -203,7 +203,7 @@ export const eieEllerLeieBolig: GuideArticleContent = {
         "Boliglån kan som hovedregel utgjøre maksimalt 90 % av boligverdien, tilsvarende minst 10 % egenkapital.",
         "Samlet gjeld kan som hovedregel ikke overstige fem ganger brutto årsinntekt.",
         "Banken skal teste betjeningsevnen mot det høyeste av 7 % rente og en renteøkning på tre prosentpoeng.",
-        "Rentefradraget er 22 % av rentekostnadene.",
+        "[Rentefradraget](/ordbok/rentefradrag) er 22 % av rentekostnadene.",
         "Dokumentavgiften er som hovedregel 2,5 % av markedsverdien ved tinglysing av fast eiendom.",
         "Gevinst ved salg av egen bolig kan være skattefri når kravene til eiertid og botid er oppfylt.",
         "Regler og satser kan endres. Kontroller alltid oppdatert informasjon hos myndighetene.",
@@ -212,7 +212,7 @@ export const eieEllerLeieBolig: GuideArticleContent = {
     {
       heading: "Slik fungerer kalkulatoren",
       paragraphs: [
-        "Kalkulatoren sammenligner anslått nettoformue, ikke bare husleie mot terminbeløp. Den bruker lik kontantstrøm måned for måned. Dersom eie koster mer, investerer leieren forskjellen. Dersom leie koster mer, investerer eieren forskjellen. Avdrag reduserer samtidig boliglånet og bygger egenkapital.",
+        "Kalkulatoren sammenligner anslått [nettoformue](/ordbok/nettoformue), ikke bare husleie mot terminbeløp. Den bruker lik kontantstrøm måned for måned. Dersom eie koster mer, investerer leieren forskjellen. Dersom leie koster mer, investerer eieren forskjellen. Avdrag reduserer samtidig boliglånet og bygger egenkapital.",
         "Resultatet er et estimat basert på forutsetningene du legger inn – ikke en prognose for boligmarkedet. Start enkelt med kjøpesum, egenkapital, rente og husleie. I avansert modus kan du legge til vedlikehold, salgskostnader, lønnsvekst og flere scenarioer.",
       ],
       cta: {
@@ -303,5 +303,6 @@ export const eieEllerLeieBolig: GuideArticleContent = {
     { label: "Bygg bufferkonto", href: "/guider/bygg-bufferkonto" },
     { label: "Nettoformue i ordboken", href: "/ordbok/nettoformue" },
     { label: "Fellesgjeld i ordboken", href: "/ordbok/fellesgjeld" },
+    { label: "Emne: bolig", href: "/emner/bolig" },
   ],
 };

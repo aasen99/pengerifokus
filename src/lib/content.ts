@@ -7,20 +7,21 @@
  */
 
 import { guider } from "@/data/guider";
-import { fordeler } from "@/data/fordeler";
 import { formuesbyggere } from "@/data/formuesbyggere";
 import { verktoy } from "@/data/verktoy";
 import { ordbok } from "@/data/ordbok";
 import { tilbud } from "@/data/tilbud";
+import { getFordelBySlug, getFordeler } from "@/lib/fordeler";
 import type {
   Guide,
-  Fordel,
   Verktoy,
   OrdbokEntry,
   Tilbud,
   PublishStatus,
 } from "@/types/content";
 import type { Formuesbygger } from "@/types/formuesbygger";
+
+export { getFordelBySlug, getFordeler };
 
 function isPublished<T extends { status: PublishStatus }>(item: T): boolean {
   return item.status === "published";
@@ -37,14 +38,6 @@ export function getGuideBySlug(slug: string): Guide | undefined {
 
 export function getFeaturedGuides(): Guide[] {
   return getGuides().filter((g) => g.featured);
-}
-
-export function getFordeler(): Fordel[] {
-  return fordeler.filter(isPublished);
-}
-
-export function getFordelBySlug(slug: string): Fordel | undefined {
-  return getFordeler().find((fordel) => fordel.slug === slug);
 }
 
 export function getVerktoy(): Verktoy[] {

@@ -7,7 +7,8 @@ import {
   getFormuesbyggerArticle,
   getFormuesbyggerSlugs,
 } from "@/data/formuesbygger-articles";
-import { getFormuesbyggerBySlug } from "@/lib/content";
+import { getFormuesbyggerBySlug, getFormuesbyggere } from "@/lib/content";
+import { getRelatedFormuesbyggere } from "@/lib/formuesbyggere";
 import {
   buildFormuesbyggerFaq,
   buildFormuesbyggerKeywords,
@@ -58,6 +59,7 @@ export default async function FormuesbyggerPage({
 
   if (!profile || !article) notFound();
 
+  const related = getRelatedFormuesbyggere(profile, getFormuesbyggere());
   const path = `/formuesbyggere/${slug}`;
   const metaDescription = buildFormuesbyggerMetaDescription(profile, article);
   const faq = buildFormuesbyggerFaq(profile, article);
@@ -94,7 +96,11 @@ export default async function FormuesbyggerPage({
         })}
       />
       {faq.length > 0 && <JsonLd data={getFaqPageJsonLd(faq)} />}
-      <FormuesbyggerProfile profile={profile} article={article} />
+      <FormuesbyggerProfile
+        profile={profile}
+        article={article}
+        related={related}
+      />
     </div>
   );
 }

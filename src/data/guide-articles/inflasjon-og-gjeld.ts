@@ -3,7 +3,7 @@ import type { GuideArticleContent } from "@/types/guide-article";
 export const inflasjonOgGjeld: GuideArticleContent = {
   slug: "inflasjon-og-gjeld",
   intro:
-    "Inflasjon gjør at penger gradvis mister kjøpekraft. Det påvirker også hvordan gjeld føles over tid, selv om du fortsatt skylder banken det samme nominelle beløpet. Her forklarer vi sammenhengen, og hvordan du kan bruke lønnsvekst til å bli raskere gjeldfri.",
+    "[Inflasjon](/ordbok/inflasjon) gjør at penger gradvis mister kjøpekraft. Det påvirker også hvordan gjeld føles over tid, selv om du fortsatt skylder banken det samme nominelle beløpet. Her forklarer vi sammenhengen, og hvordan du kan bruke lønnsvekst til å bli raskere gjeldfri.",
   sections: [
     {
       heading: "Nominell gjeld vs. reell verdi",
@@ -16,14 +16,14 @@ export const inflasjonOgGjeld: GuideArticleContent = {
     {
       heading: "Hva er realrente?",
       paragraphs: [
-        "Realrenten er lånerenten etter at inflasjon er tatt med. Den viser omtrent hvor dyr gjeld er målt i reell kjøpekraft.",
+        "[Realrenten](/ordbok/realrente) er lånerenten etter at inflasjon er tatt med. Den viser omtrent hvor dyr gjeld er målt i reell kjøpekraft.",
         "Har du 5 % nominell rente og 2,5 % inflasjon, er realrenten omtrent 2,4 %, ikke 2,5 %. Det skyldes at prisvekst og rente påvirker hverandre (Fisher-ligningen).",
       ],
     },
     {
       heading: "Hvorfor kan boliglån føles lettere over tid?",
       paragraphs: [
-        "Ved et annuitetslån betaler du samme terminbeløp hver måned, men andelen renter faller og avdragene øker etter hvert.",
+        "Ved et [annuitetslån](/ordbok/annuitetslan) betaler du samme terminbeløp hver måned, men andelen renter faller og avdragene øker etter hvert.",
         "Samtidig vil inflasjon og ofte lønnsvekst gjøre at terminbeløpet utgjør en mindre del av inntekten din over tid, selv om beløpet i kroner er det samme.",
       ],
       bullets: [
@@ -75,5 +75,6 @@ export const inflasjonOgGjeld: GuideArticleContent = {
     { label: "Rentekalkulator", href: "/verktoy/rentekalkulator" },
     { label: "Betal ned dyr gjeld", href: "/guider/betal-ned-dyr-gjeld" },
     { label: "Realrente i ordboken", href: "/ordbok/realrente" },
+    { label: "Emne: gjeld", href: "/emner/gjeld" },
   ],
 };

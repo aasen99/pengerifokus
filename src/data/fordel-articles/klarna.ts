@@ -24,7 +24,7 @@ export const klarna: FordelArticleContent = {
     {
       heading: "Hva er Klarna cashback?",
       paragraphs: [
-        "Klarna cashback er et bonusprogram der du kan tjene poeng på kjøp hos deltakende butikker i Klarna-appen. Poengene er lojalitetskreditter, ikke kontanter, og har ingen verdi før du løser dem inn etter Klarnas vilkår.",
+        "[Klarna cashback](/ordbok/cashback) er et bonusprogram der du kan tjene poeng på kjøp hos deltakende butikker i Klarna-appen. Poengene er lojalitetskreditter, ikke kontanter, og har ingen verdi før du løser dem inn etter Klarnas vilkår.",
         "Programmet er gratis for forbrukeren, men krever Klarna-app og i praksis en aktiv Klarna-saldo for å motta utbetalt cashback.",
       ],
     },
@@ -111,5 +111,7 @@ export const klarna: FordelArticleContent = {
     { label: "Velg riktig kredittkort", href: "/guider/velg-riktig-kredittkort" },
     { label: "Bonuskalkulator", href: "/verktoy/bonuskalkulator" },
     { label: "Trumf Netthandel", href: "/fordeler/trumf" },
+    { label: "Cashback i ordboken", href: "/ordbok/cashback" },
+    { label: "Emne: bonus og fordeler", href: "/emner/bonus-og-fordeler" },
   ],
 };

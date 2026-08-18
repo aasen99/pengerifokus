@@ -1,11 +1,18 @@
 "use client";
 
 import { useMemo } from "react";
-import { UTLEIEBOLIG_DEFAULTS } from "@/data/utleiebolig";
+import {
+  UTLEIEBOLIG_DEFAULTS,
+  UTLEIEBOLIG_HOUSING_TYPES,
+  UTLEIEBOLIG_TOOLTIPS,
+} from "@/data/utleiebolig";
 import { formatCurrency } from "@/lib/calculators/loan";
+import { calculateDocumentFeeForPrice } from "@/lib/calculators/dokumentavgift";
 import {
   calculateUtleiebolig,
+  calculateUtleieboligBuyerCosts,
   projectUtleieboligVsFond,
+  resolvedDocumentFee,
 } from "@/lib/calculators/utleiebolig";
 import { assessUtleiebolig } from "@/lib/calculators/utleiebolig-vurdering";
 import { formatIntegerInput } from "@/lib/format/number";
@@ -15,7 +22,11 @@ import {
   reportSection,
 } from "@/lib/print-report";
 import { useToolPersistence } from "@/lib/verktoy-persistence";
-import type { UtleieboligInput } from "@/types/utleiebolig";
+import type {
+  UtleieboligHousingType,
+  UtleieboligInput,
+  UtleieboligMode,
+} from "@/types/utleiebolig";
 import {
   FormattedNumberInput,
   parseIntegerInput,
@@ -24,6 +35,7 @@ import {
   CalculatorField,
   calculatorInputClassName,
 } from "@/components/verktoy/calculator-ui";
+import { InfoTip } from "@/components/verktoy/eie-leie/InfoTip";
 import { ToolPersistenceBar } from "@/components/verktoy/ToolPersistenceBar";
 import { UtleieboligVurderingPanel } from "@/components/verktoy/UtleieboligVurdering";
 import { UtleieboligSammenligningChart } from "@/components/verktoy/UtleieboligSammenligningChart";
@@ -32,10 +44,28 @@ function formatPercent(value: number): string {
   return `${value.toFixed(1).replace(".", ",")} %`;
 }
 
+function parseDecimal(value: string): number {
+  return Number(String(value).replace(",", "."));
+}
+
+function isHousingType(value: unknown): value is UtleieboligHousingType {
+  return (
+    value === "selveier" ||
+    value === "andelsbolig" ||
+    value === "aksjeleilighet"
+  );
+}
+
 interface UtleieboligFormState {
+  mode: UtleieboligMode;
   purchasePrice: string;
   downPayment: string;
-  purchaseCosts: string;
+  housingType: UtleieboligHousingType;
+  autoDocumentFee: boolean;
+  documentFee: string;
+  registrationFee: string;
+  appraisalFee: string;
+  otherBuyerCosts: string;
   rate: string;
   termYears: string;
   monthlyRent: string;
@@ -46,20 +76,38 @@ interface UtleieboligFormState {
   propertyTax: string;
   managementFee: string;
   taxRate: string;
+  shareGainTax: string;
   ownerOccupiedOverHalf: boolean;
   alternativeRent: string;
   propertyGrowth: string;
   fundReturn: string;
   projectionYears: string;
+  saleCostPercent: string;
+  saleCostFixed: string;
   [key: string]: unknown;
+}
+
+function documentFeeInputValue(
+  purchasePrice: string,
+  housingType: UtleieboligHousingType,
+): string {
+  const price = parseIntegerInput(purchasePrice);
+  if (!Number.isFinite(price) || price < 0) return "0";
+  return formatIntegerInput(calculateDocumentFeeForPrice(price, housingType));
 }
 
 function createDefaultFormState(): UtleieboligFormState {
   const d = UTLEIEBOLIG_DEFAULTS;
   return {
+    mode: "simple",
     purchasePrice: formatIntegerInput(d.purchasePrice),
     downPayment: formatIntegerInput(d.downPayment),
-    purchaseCosts: formatIntegerInput(d.purchaseCosts),
+    housingType: d.housingType,
+    autoDocumentFee: d.autoDocumentFee,
+    documentFee: formatIntegerInput(d.documentFee),
+    registrationFee: formatIntegerInput(d.registrationFee),
+    appraisalFee: formatIntegerInput(d.appraisalFee),
+    otherBuyerCosts: formatIntegerInput(d.otherBuyerCosts),
     rate: d.annualRatePercent.toString().replace(".", ","),
     termYears: String(d.termYears),
     monthlyRent: formatIntegerInput(d.monthlyRent),
@@ -70,27 +118,36 @@ function createDefaultFormState(): UtleieboligFormState {
     propertyTax: formatIntegerInput(d.monthlyPropertyTax),
     managementFee: formatIntegerInput(d.monthlyManagementFee),
     taxRate: d.taxRatePercent.toString().replace(".", ","),
+    shareGainTax: d.shareGainTaxPercent.toString().replace(".", ","),
     ownerOccupiedOverHalf: false,
     alternativeRent: formatIntegerInput(15_000),
     propertyGrowth: d.propertyGrowthPercent.toString().replace(".", ","),
     fundReturn: d.fundReturnPercent.toString().replace(".", ","),
     projectionYears: String(d.projectionYears),
+    saleCostPercent: d.saleCostPercent.toString().replace(".", ","),
+    saleCostFixed: formatIntegerInput(d.saleCostFixed),
   };
 }
 
 const DEFAULT_FORM_STATE = createDefaultFormState();
 
 export function UtleieboligKalkulator() {
-  const { state, update, source, clearSaved, copyShareLink } =
+  const { state, setState, update, source, clearSaved, copyShareLink } =
     useToolPersistence<UtleieboligFormState>(
       "utleiebolig-kalkulator",
       DEFAULT_FORM_STATE,
     );
 
   const {
+    mode,
     purchasePrice,
     downPayment,
-    purchaseCosts,
+    housingType,
+    autoDocumentFee,
+    documentFee,
+    registrationFee,
+    appraisalFee,
+    otherBuyerCosts,
     rate,
     termYears,
     monthlyRent,
@@ -101,32 +158,51 @@ export function UtleieboligKalkulator() {
     propertyTax,
     managementFee,
     taxRate,
+    shareGainTax,
     ownerOccupiedOverHalf,
     alternativeRent,
     propertyGrowth,
     fundReturn,
     projectionYears,
+    saleCostPercent,
+    saleCostFixed,
   } = state;
 
+  const resolvedHousingType: UtleieboligHousingType = isHousingType(housingType)
+    ? housingType
+    : "selveier";
+  const isAdvanced = mode === "advanced";
 
   const parsedInput = useMemo((): UtleieboligInput | null => {
-    const parsed = {
+    const parsed: UtleieboligInput = {
       purchasePrice: parseIntegerInput(purchasePrice),
       downPayment: parseIntegerInput(downPayment),
-      purchaseCosts: parseIntegerInput(purchaseCosts) || 0,
-      annualRatePercent: Number(rate.replace(",", ".")),
-      termYears: Number(termYears.replace(/\s/g, "")),
+      housingType: resolvedHousingType,
+      autoDocumentFee: Boolean(autoDocumentFee),
+      documentFee: parseIntegerInput(documentFee) || 0,
+      registrationFee: parseIntegerInput(registrationFee) || 0,
+      appraisalFee: parseIntegerInput(appraisalFee) || 0,
+      otherBuyerCosts: parseIntegerInput(otherBuyerCosts) || 0,
+      annualRatePercent: parseDecimal(rate),
+      termYears: Number(String(termYears).replace(/\s/g, "")),
       monthlyRent: parseIntegerInput(monthlyRent),
-      vacancyMonthsPerYear: Number(vacancyMonths.replace(",", ".")),
+      vacancyMonthsPerYear: parseDecimal(vacancyMonths),
       monthlyCommonCosts: parseIntegerInput(commonCosts) || 0,
       monthlyInsurance: parseIntegerInput(insurance) || 0,
       monthlyMaintenance: parseIntegerInput(maintenance) || 0,
       monthlyPropertyTax: parseIntegerInput(propertyTax) || 0,
       monthlyManagementFee: parseIntegerInput(managementFee) || 0,
-      taxRatePercent: Number(taxRate.replace(",", ".")),
-      propertyGrowthPercent: Number(propertyGrowth.replace(",", ".")),
-      fundReturnPercent: Number(fundReturn.replace(",", ".")),
-      projectionYears: Number(projectionYears.replace(/\s/g, "")),
+      taxRatePercent: parseDecimal(taxRate),
+      shareGainTaxPercent: Number.isFinite(parseDecimal(shareGainTax))
+        ? parseDecimal(shareGainTax)
+        : UTLEIEBOLIG_DEFAULTS.shareGainTaxPercent,
+      propertyGrowthPercent: parseDecimal(propertyGrowth),
+      fundReturnPercent: parseDecimal(fundReturn),
+      projectionYears: Number(String(projectionYears).replace(/\s/g, "")),
+      saleCostPercent: Number.isFinite(parseDecimal(saleCostPercent))
+        ? parseDecimal(saleCostPercent)
+        : UTLEIEBOLIG_DEFAULTS.saleCostPercent,
+      saleCostFixed: parseIntegerInput(saleCostFixed) || 0,
     };
 
     if (
@@ -137,9 +213,11 @@ export function UtleieboligKalkulator() {
       !Number.isFinite(parsed.monthlyRent) ||
       !Number.isFinite(parsed.vacancyMonthsPerYear) ||
       !Number.isFinite(parsed.taxRatePercent) ||
+      !Number.isFinite(parsed.shareGainTaxPercent) ||
       !Number.isFinite(parsed.propertyGrowthPercent) ||
       !Number.isFinite(parsed.fundReturnPercent) ||
       !Number.isFinite(parsed.projectionYears) ||
+      !Number.isFinite(parsed.saleCostPercent) ||
       parsed.purchasePrice <= 0 ||
       parsed.downPayment < 0 ||
       parsed.downPayment > parsed.purchasePrice ||
@@ -149,6 +227,8 @@ export function UtleieboligKalkulator() {
       parsed.vacancyMonthsPerYear < 0 ||
       parsed.vacancyMonthsPerYear > 12 ||
       parsed.taxRatePercent < 0 ||
+      parsed.shareGainTaxPercent < 0 ||
+      parsed.saleCostPercent < 0 ||
       parsed.projectionYears <= 0 ||
       parsed.projectionYears > 40
     ) {
@@ -159,7 +239,12 @@ export function UtleieboligKalkulator() {
   }, [
     purchasePrice,
     downPayment,
-    purchaseCosts,
+    resolvedHousingType,
+    autoDocumentFee,
+    documentFee,
+    registrationFee,
+    appraisalFee,
+    otherBuyerCosts,
     rate,
     termYears,
     monthlyRent,
@@ -170,9 +255,12 @@ export function UtleieboligKalkulator() {
     propertyTax,
     managementFee,
     taxRate,
+    shareGainTax,
     propertyGrowth,
     fundReturn,
     projectionYears,
+    saleCostPercent,
+    saleCostFixed,
   ]);
 
   const result = useMemo(() => {
@@ -202,19 +290,43 @@ export function UtleieboligKalkulator() {
     });
   }, [result, parsedInput, ownerOccupiedOverHalf, alternativeRent]);
 
+  const buyerCostsPreview = parsedInput
+    ? calculateUtleieboligBuyerCosts(parsedInput)
+    : null;
+  const documentFeePreview = parsedInput
+    ? resolvedDocumentFee(parsedInput)
+    : null;
+
   const showHybridCashFlowWarning =
     result &&
     vurdering &&
     !result.coversAllCosts &&
     vurdering.scenario === "owner-hybrid";
 
+  const comparedFundNetWorth = projection
+    ? isAdvanced
+      ? projection.fundNetWorthAfterTax
+      : projection.fundNetWorth
+    : null;
+  const comparedDifference = projection
+    ? isAdvanced
+      ? projection.differenceVsFundAfterTax
+      : projection.differenceVsFund
+    : null;
+
   const handleExportPdf = () => {
-    if (!result || !parsedInput) return;
+    if (!result || !parsedInput || !projection) return;
 
     const leverage =
       result.equityInvested > 0
         ? result.loanAmount / result.equityInvested
         : 0;
+    const fundValue = isAdvanced
+      ? projection.fundNetWorthAfterTax
+      : projection.fundNetWorth;
+    const difference = isAdvanced
+      ? projection.differenceVsFundAfterTax
+      : projection.differenceVsFund;
 
     openPrintReport({
       title: "Utleiebolig-kalkulator",
@@ -254,30 +366,39 @@ export function UtleieboligKalkulator() {
               label: "Egenkapital inn",
               value: formatCurrency(result.equityInvested),
             },
+            {
+              label: "Kjøpskostnader (kjøper)",
+              value: formatCurrency(result.purchaseCosts),
+            },
+            {
+              label: "Dokumentavgift",
+              value: formatCurrency(result.documentFee),
+            },
           ]),
         ),
-        projection
-          ? reportSection(
-              `Bolig vs. fond (${parsedInput.projectionYears} år)`,
-              reportRows([
-                {
-                  label: "Nettoformue bolig",
-                  value: formatCurrency(projection.propertyNetWorth),
-                },
-                {
-                  label: "Fond (egenkapital)",
-                  value: formatCurrency(projection.fundNetWorth),
-                },
-                {
-                  label: "Differanse",
-                  value: `${projection.differenceVsFund >= 0 ? "+" : ""}${formatCurrency(projection.differenceVsFund)}`,
-                  tone:
-                    projection.differenceVsFund >= 0 ? "positive" : "negative",
-                },
-              ]) +
-                `<p style="margin:12px 0 0;font-size:0.85rem;color:#57534e">Bolig kan slå fond selv med lavere prisvekst fordi du er gearet: lånet forsterker både oppside og nedsiden. Her er lånet ca. ${leverage.toFixed(1).replace(".", ",")}× egenkapitalen.</p>`,
-            )
-          : "",
+        reportSection(
+          `Bolig vs. fond (${parsedInput.projectionYears} år)`,
+          reportRows([
+            {
+              label: "Nettoformue bolig etter salgskostnader",
+              value: formatCurrency(projection.propertyNetWorth),
+            },
+            {
+              label: "Salgskostnader",
+              value: formatCurrency(projection.saleCosts),
+            },
+            {
+              label: isAdvanced ? "Fond etter latent skatt" : "Fond (egenkapital)",
+              value: formatCurrency(fundValue),
+            },
+            {
+              label: "Differanse",
+              value: `${difference >= 0 ? "+" : ""}${formatCurrency(difference)}`,
+              tone: difference >= 0 ? "positive" : "negative",
+            },
+          ]) +
+            `<p style="margin:12px 0 0;font-size:0.85rem;color:#57534e">Bolig kan slå fond selv med lavere prisvekst fordi du er gearet: lånet forsterker både oppside og nedsiden. Her er lånet ca. ${leverage.toFixed(1).replace(".", ",")}× egenkapitalen.</p>`,
+        ),
         vurdering
           ? reportSection(
               `Vurdering: ${vurdering.verdictLabel}`,
@@ -298,19 +419,91 @@ export function UtleieboligKalkulator() {
         exportDisabled={!result}
       />
 
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <div className="flex gap-2">
+          {(["simple", "advanced"] as const).map((value) => (
+            <button
+              key={value}
+              type="button"
+              onClick={() => update("mode", value)}
+              className={`rounded-lg px-3 py-1.5 text-sm font-medium transition-colors ${
+                mode === value
+                  ? "bg-stone-900 text-white"
+                  : "bg-stone-100 text-stone-700 hover:bg-stone-200"
+              }`}
+            >
+              {value === "simple" ? "Enkel" : "Avansert"}
+            </button>
+          ))}
+        </div>
+        <p className="text-sm text-stone-500">
+          {isAdvanced
+            ? "Inkluderer anslag på skatt på fondsgevinst og rentefradrag mot leieoverskudd."
+            : "Forenklet visning uten skatt på fondsgevinst."}
+        </p>
+      </div>
+
     <div className="grid gap-8 lg:grid-cols-2">
       <div className="space-y-6">
         <section className="rounded-xl border border-stone-200 bg-white p-4">
           <h2 className="text-lg font-semibold text-stone-900">Boligen</h2>
           <p className="mt-1 text-sm text-stone-600">
-            Kjøpesum, egenkapital og engangsomkostninger ved kjøp.
+            Kjøpesum, egenkapital og kjøpskostnader som{" "}
+            <span className="font-medium text-stone-800">kjøper</span> betaler.
+            Meglerhonorar er selgers kostnad og er ikke med.
           </p>
 
           <div className="mt-6 space-y-5">
+            <CalculatorField
+              label="Boligtype"
+              hint={
+                UTLEIEBOLIG_HOUSING_TYPES.find(
+                  (option) => option.value === resolvedHousingType,
+                )?.hint
+              }
+            >
+              <select
+                value={resolvedHousingType}
+                onChange={(event) => {
+                  const nextType = event.target.value;
+                  if (!isHousingType(nextType)) return;
+                  setState((prev) => ({
+                    ...prev,
+                    housingType: nextType,
+                    autoDocumentFee: true,
+                    documentFee: documentFeeInputValue(
+                      String(prev.purchasePrice),
+                      nextType,
+                    ),
+                  }));
+                }}
+                className={calculatorInputClassName}
+              >
+                {UTLEIEBOLIG_HOUSING_TYPES.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+            </CalculatorField>
+
             <CalculatorField label="Kjøpesum" hint="Total pris for boligen">
               <FormattedNumberInput
                 value={purchasePrice}
-                onChange={(value) => update("purchasePrice", value)}
+                onChange={(value) => {
+                  setState((prev) => {
+                    const nextType = isHousingType(prev.housingType)
+                      ? prev.housingType
+                      : "selveier";
+                    return {
+                      ...prev,
+                      purchasePrice: value,
+                      documentFee: prev.autoDocumentFee
+                        ? documentFeeInputValue(value, nextType)
+                        : String(prev.documentFee),
+                    };
+                  });
+                }}
                 className={calculatorInputClassName}
               />
             </CalculatorField>
@@ -327,22 +520,120 @@ export function UtleieboligKalkulator() {
             </CalculatorField>
 
             <CalculatorField
-              label="Omkostninger ved kjøp"
-              hint="Tinglysing, takst, meglerhonorar osv."
+              label={
+                <span className="inline-flex items-center">
+                  Dokumentavgift
+                  <InfoTip
+                    text={UTLEIEBOLIG_TOOLTIPS.documentFee}
+                    label="Mer om dokumentavgift"
+                  />
+                </span>
+              }
+              hint={
+                autoDocumentFee
+                  ? resolvedHousingType === "selveier"
+                    ? "Beregnes automatisk (2,5 % av kjøpesum). Du kan overstyre."
+                    : "Andelsbolig og aksjeleilighet har normalt ikke dokumentavgift."
+                  : "Manuelt beløp. Endre boligtype for å beregne automatisk igjen."
+              }
             >
               <FormattedNumberInput
-                value={purchaseCosts}
-                onChange={(value) => update("purchaseCosts", value)}
+                value={documentFee}
+                onChange={(value) =>
+                  setState((prev) => ({
+                    ...prev,
+                    documentFee: value,
+                    autoDocumentFee: false,
+                  }))
+                }
                 className={calculatorInputClassName}
               />
             </CalculatorField>
+
+            <CalculatorField
+              label={
+                <span className="inline-flex items-center">
+                  Tinglysing
+                  <InfoTip
+                    text={UTLEIEBOLIG_TOOLTIPS.registrationFee}
+                    label="Mer om tinglysing"
+                  />
+                </span>
+              }
+              hint={
+                resolvedHousingType === "selveier"
+                  ? "Tinglysing av skjøte og pantedokument som kjøper betaler"
+                  : "Overføringsgebyr og tinglysing som kjøper betaler"
+              }
+            >
+              <FormattedNumberInput
+                value={registrationFee}
+                onChange={(value) => update("registrationFee", value)}
+                className={calculatorInputClassName}
+              />
+            </CalculatorField>
+
+            {isAdvanced && (
+              <>
+                <CalculatorField
+                  label={
+                    <span className="inline-flex items-center">
+                      Boligtakst / due diligence
+                      <InfoTip
+                        text={UTLEIEBOLIG_TOOLTIPS.appraisalFee}
+                        label="Mer om takst"
+                      />
+                    </span>
+                  }
+                  hint="Valgfritt. Bare det du som kjøper faktisk betaler."
+                >
+                  <FormattedNumberInput
+                    value={appraisalFee}
+                    onChange={(value) => update("appraisalFee", value)}
+                    className={calculatorInputClassName}
+                  />
+                </CalculatorField>
+
+                <CalculatorField
+                  label="Andre kjøpskostnader"
+                  hint="Andre kostnader kjøper betaler. Ikke meglerhonorar."
+                >
+                  <FormattedNumberInput
+                    value={otherBuyerCosts}
+                    onChange={(value) => update("otherBuyerCosts", value)}
+                    className={calculatorInputClassName}
+                  />
+                </CalculatorField>
+              </>
+            )}
+
+            {buyerCostsPreview !== null && documentFeePreview !== null && (
+              <div className="rounded-xl bg-stone-50 px-4 py-3 text-sm text-stone-700">
+                <p>
+                  Kjøpskostnader for kjøper:{" "}
+                  <strong className="text-stone-900">
+                    {formatCurrency(buyerCostsPreview)}
+                  </strong>
+                </p>
+                <p className="mt-1 text-xs text-stone-500">
+                  Dokumentavgift {formatCurrency(documentFeePreview)}
+                  {" · "}
+                  tinglysing {formatCurrency(parsedInput?.registrationFee ?? 0)}
+                  {isAdvanced
+                    ? ` · takst ${formatCurrency(parsedInput?.appraisalFee ?? 0)}`
+                    : null}
+                  . Meglerhonorar er ikke med.
+                </p>
+              </div>
+            )}
           </div>
         </section>
 
         <section className="rounded-xl border border-stone-200 bg-white p-4">
           <h2 className="text-lg font-semibold text-stone-900">Finansiering</h2>
           <p className="mt-1 text-sm text-stone-600">
-            Annuitetslån med månedlige terminer.
+            Annuitetslån med månedlige terminer. Renten kan du endre selv;
+            kalkulatoren antar den er uendret gjennom perioden.
           </p>
 
           <div className="mt-6 space-y-5">
@@ -494,8 +785,8 @@ export function UtleieboligKalkulator() {
             </CalculatorField>
 
             <CalculatorField
-              label="Skattesats på overskudd"
-              hint="Forenklet: leieinntekt minus kostnader og rente"
+              label="Skattesats på leieoverskudd"
+              hint="Forenklet 2026: 22 %. Renter trekkes fra leieinntekt før skatt, ikke mot annen inntekt."
             >
               <input
                 type="text"
@@ -516,6 +807,7 @@ export function UtleieboligKalkulator() {
           </h2>
           <p className="mt-1 text-sm text-stone-600">
             Sammenlign nettoformue i bolig med å plassere egenkapitalen i fond.
+            Salgskostnader trekkes fra boligverdien.
           </p>
 
           <div className="mt-6 space-y-5">
@@ -559,6 +851,59 @@ export function UtleieboligKalkulator() {
                 className={calculatorInputClassName}
               />
             </CalculatorField>
+
+            <CalculatorField
+              label={
+                <span className="inline-flex items-center">
+                  Salgskostnader
+                  <InfoTip
+                    text={UTLEIEBOLIG_TOOLTIPS.saleCosts}
+                    label="Mer om salgskostnader"
+                  />
+                </span>
+              }
+              hint="Prosent av salgspris. Selger betaler normalt megler og markedsføring."
+            >
+              <input
+                type="text"
+                inputMode="decimal"
+                value={saleCostPercent}
+                onChange={(e) =>
+                  update("saleCostPercent", e.target.value.replace(".", ","))
+                }
+                className={calculatorInputClassName}
+              />
+            </CalculatorField>
+
+            {isAdvanced && (
+              <>
+                <CalculatorField
+                  label="Faste salgskostnader"
+                  hint="Kroner i tillegg til prosentandelen, f.eks. styling eller fast meglerhonorar"
+                >
+                  <FormattedNumberInput
+                    value={saleCostFixed}
+                    onChange={(value) => update("saleCostFixed", value)}
+                    className={calculatorInputClassName}
+                  />
+                </CalculatorField>
+
+                <CalculatorField
+                  label="Skattesats på fondsgevinst"
+                  hint="Latent skatt på gevinst, 37,84 % i 2026. ASK utsetter skatten til uttak."
+                >
+                  <input
+                    type="text"
+                    inputMode="decimal"
+                    value={shareGainTax}
+                    onChange={(e) =>
+                      update("shareGainTax", e.target.value.replace(".", ","))
+                    }
+                    className={calculatorInputClassName}
+                  />
+                </CalculatorField>
+              </>
+            )}
           </div>
         </section>
       </div>
@@ -653,6 +998,34 @@ export function UtleieboligKalkulator() {
                 </div>
               </dl>
 
+              {isAdvanced && (
+                <div className="mt-3 border-t border-stone-100 pt-3">
+                  <p className="text-xs font-medium text-stone-500">
+                    Skatt og rentefradrag (anslag)
+                  </p>
+                  <dl className="mt-1.5 space-y-1 text-xs">
+                    <div className="flex justify-between gap-2">
+                      <dt className="text-stone-500">Skattbart leieoverskudd / år</dt>
+                      <dd className="font-medium text-stone-900">
+                        {formatCurrency(result.taxableSurplusAnnual)}
+                      </dd>
+                    </div>
+                    <div className="flex justify-between gap-2">
+                      <dt className="text-stone-500">Rentefradrag mot leieinntekt / år</dt>
+                      <dd className="font-medium text-stone-900">
+                        {formatCurrency(result.interestDeductionBenefitAnnual)}
+                      </dd>
+                    </div>
+                    <div className="flex justify-between gap-2">
+                      <dt className="text-stone-500">Anslått skatt / år</dt>
+                      <dd className="font-medium text-stone-900">
+                        {formatCurrency(result.estimatedTaxAnnual)}
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+              )}
+
               <div className="mt-3 border-t border-stone-100 pt-3">
                 <p className="text-xs font-medium text-stone-500">
                   Månedlig fordeling
@@ -679,7 +1052,10 @@ export function UtleieboligKalkulator() {
 
             {vurdering && <UtleieboligVurderingPanel vurdering={vurdering} />}
 
-            {projection && parsedInput && (
+            {projection &&
+              parsedInput &&
+              comparedFundNetWorth !== null &&
+              comparedDifference !== null && (
               <details className="group rounded-xl border border-stone-200 bg-white shadow-sm">
                 <summary className="cursor-pointer list-none p-4 [&::-webkit-details-marker]:hidden">
                   <div className="flex items-center justify-between gap-3">
@@ -695,18 +1071,18 @@ export function UtleieboligKalkulator() {
                         {" · "}
                         Fond{" "}
                         <span className="font-medium text-stone-700">
-                          {formatCurrency(projection.fundNetWorth)}
+                          {formatCurrency(comparedFundNetWorth)}
                         </span>
                         {" · "}
                         <span
                           className={
-                            projection.differenceVsFund >= 0
+                            comparedDifference >= 0
                               ? "font-medium text-green-700"
                               : "font-medium text-red-700"
                           }
                         >
-                          {projection.differenceVsFund >= 0 ? "+" : ""}
-                          {formatCurrency(projection.differenceVsFund)}
+                          {comparedDifference >= 0 ? "+" : ""}
+                          {formatCurrency(comparedDifference)}
                         </span>
                       </p>
                     </div>
@@ -746,19 +1122,38 @@ export function UtleieboligKalkulator() {
                       </dd>
                     </div>
                     <div className="flex justify-between gap-2 text-stone-500">
-                      <span>Boligverdi / lån / kontantstrøm</span>
+                      <span>Boligverdi / lån / salgskostnader / kontantstrøm</span>
                       <span>
                         {formatCurrency(projection.propertyValue)} / −
-                        {formatCurrency(projection.remainingLoan)} /{" "}
+                        {formatCurrency(projection.remainingLoan)} / −
+                        {formatCurrency(projection.saleCosts)} /{" "}
                         {formatCurrency(projection.cashReserve)}
                       </span>
                     </div>
                     <div className="flex justify-between gap-2">
-                      <dt className="text-stone-500">Fond (egenkapital)</dt>
+                      <dt className="text-stone-500">
+                        {isAdvanced ? "Fond før skatt" : "Fond (egenkapital)"}
+                      </dt>
                       <dd className="font-medium text-stone-900">
                         {formatCurrency(projection.fundNetWorth)}
                       </dd>
                     </div>
+                    {isAdvanced && (
+                      <>
+                        <div className="flex justify-between gap-2">
+                          <dt className="text-stone-500">Latent fondsskatt</dt>
+                          <dd className="font-medium text-stone-900">
+                            −{formatCurrency(projection.fundLatentTax)}
+                          </dd>
+                        </div>
+                        <div className="flex justify-between gap-2">
+                          <dt className="text-stone-500">Fond etter latent skatt</dt>
+                          <dd className="font-medium text-stone-900">
+                            {formatCurrency(projection.fundNetWorthAfterTax)}
+                          </dd>
+                        </div>
+                      </>
+                    )}
                     <div className="flex justify-between gap-2">
                       <dt className="text-stone-500">Fond m/ kontantstrøm</dt>
                       <dd className="font-medium text-stone-900">
@@ -785,6 +1180,43 @@ export function UtleieboligKalkulator() {
                 </div>
               </details>
             )}
+
+            <div className="rounded-2xl border border-stone-200 bg-stone-50 px-5 py-4 text-sm leading-relaxed text-stone-700">
+              <p className="font-medium text-stone-900">
+                Dette er med / dette er ikke med
+              </p>
+              {isAdvanced ? (
+                <>
+                  <p className="mt-2">
+                    Med: forenklet skatt på leieoverskudd (
+                    {parsedInput?.taxRatePercent.toString().replace(".", ",")} %),
+                    rentefradrag mot leieinntekt (ikke mot annen inntekt), latent
+                    skatt på fondsgevinst (
+                    {parsedInput?.shareGainTaxPercent.toString().replace(".", ",")}
+                    %), og salgskostnader ved sammenligning over tid.
+                  </p>
+                  <p className="mt-2">
+                    Ikke med: formueskatt, skatt på boliggevinst ved salg av
+                    utleiebolig, gebyrer du ikke har fylt inn, renteendringer utover
+                    den satsen du har lagt inn, og at ASK utsetter fondsskatten til
+                    gevinsten tas ut. Dette er et anslag, ikke skatterådgivning.
+                  </p>
+                </>
+              ) : (
+                <>
+                  <p className="mt-2">
+                    Med: forenklet skatt på leieoverskudd, og salgskostnader i den
+                    langsiktige sammenligningen.
+                  </p>
+                  <p className="mt-2">
+                    Ikke med i enkel visning: skatt på fondsgevinst, formueskatt,
+                    skatt på boliggevinst ved salg, og renteendringer. Bruk avansert
+                    modus for anslag på fondsskatt og rentefradrag. Dette er ikke
+                    skatterådgivning.
+                  </p>
+                </>
+              )}
+            </div>
           </>
         ) : (
           <div className="rounded-xl border border-stone-200 bg-white p-4 text-sm text-stone-600 shadow-sm">
@@ -793,11 +1225,11 @@ export function UtleieboligKalkulator() {
         )}
 
         <p className="text-xs leading-relaxed text-stone-500">
-          Beregningen er veiledende. Skatteestimatet er forenklet. Langsiktig
-          sammenligning inkluderer forventet prisvekst, avdrag og kontantstrøm,
-          men ikke salgskostnader, formueskatt eller renteendringer. Fondssammenligning
-          er forenklet og tar ikke høyde for skatt på fond. Sjekk tallene med bank
-          og regnskapsfører før du investerer.
+          Beregningen er veiledende. Skatteestimatet er forenklet. I enkel visning
+          inngår ikke skatt på fondsgevinst eller renteendringer. Formueskatt er
+          ikke med. Bruk avansert modus for anslag på skatt på fondsgevinst og
+          rentefradrag mot leieoverskudd. Sjekk tallene med bank og
+          regnskapsfører før du investerer.
         </p>
       </section>
     </div>

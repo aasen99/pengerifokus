@@ -6,7 +6,7 @@ import { ToolPageSeo } from "@/components/seo/ToolPageSeo";
 import { createPageMetadata } from "@/lib/seo";
 
 const toolDescription =
-  "Gratis feriepengekalkulator: regn ut feriepenger med 10,2 %, 12 %, 12,5 % eller 14,3 % ut fra feriepengegrunnlag eller månedslønn.";
+  "Gratis feriepengekalkulator: regn ut feriepenger og anslått bruttoutbetaling i juni, med trekk for feriedager og ekstra uke fra 60 år.";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Feriepengekalkulator",
@@ -16,6 +16,7 @@ export const metadata: Metadata = createPageMetadata({
     "feriepengekalkulator",
     "feriepenger",
     "feriepengegrunnlag",
+    "feriepenger juni",
     "10,2 prosent",
     "12 prosent feriepenger",
   ],
@@ -31,7 +32,7 @@ export default function FeriepengeKalkulatorPage() {
       />
       <ToolPageHeader
         title="Feriepengekalkulator"
-        description="Se hvor mye du får i feriepenger ut fra fjorårets grunnlag, ferielengde og om du fyller 60 år i ferieåret."
+        description="Se feriepenger og anslått bruttoutbetaling i juni ut fra fjorårets grunnlag, ferielengde og om du fyller 60 år i ferieåret."
       />
 
       <FeriepengeKalkulator />

@@ -47,6 +47,7 @@ export default function BonuskalkulatorPage() {
           { label: "Spenn", href: "/fordeler/spenn" },
           { label: "Kredittkortfordeler", href: "/fordeler/kredittkortfordeler" },
           { label: "Se tilbud", href: "/tilbud" },
+          { label: "Emne: bonus og fordeler", href: "/emner/bonus-og-fordeler" },
         ]}
       />
     </div>

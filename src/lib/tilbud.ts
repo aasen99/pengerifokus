@@ -1,33 +1,27 @@
 import type { Tilbud } from "@/types/content";
-import { getFordeler } from "@/lib/content";
+import { getFordelName } from "@/lib/fordeler";
+import { normalizeSearchText } from "@/lib/normalize-search";
 import { matchesTilbudCategoryGroup } from "@/lib/tilbud-categories";
+import {
+  isTilbudOptInProgram,
+  type TilbudSortOption,
+} from "@/lib/tilbud-ui";
 
-/**
- * Programmer som ikke vises i «Alle programmer» eller programlisten.
- * Brukeren må huke av «Jeg er student» for å se dem.
- */
-export const TILBUD_OPT_IN_PROGRAMS = ["student"] as const;
-
-export function isTilbudOptInProgram(fordelSlug: string): boolean {
-  return (TILBUD_OPT_IN_PROGRAMS as readonly string[]).includes(fordelSlug);
-}
-
-/** Normaliserer søketekst for treff uten hensyn til aksenter */
-export function normalizeTilbudSearchText(text: string): string {
-  return text
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/æ/g, "ae")
-    .replace(/ø/g, "o")
-    .replace(/å/g, "a");
-}
+export { getFordelName } from "@/lib/fordeler";
+export { normalizeSearchText as normalizeTilbudSearchText } from "@/lib/normalize-search";
+export {
+  formatTilbudDate,
+  getTilbudSourceLinkLabel,
+  isTilbudOptInProgram,
+  TILBUD_OPT_IN_PROGRAMS,
+  TILBUD_SORT_OPTIONS,
+  type TilbudSortOption,
+} from "@/lib/tilbud-ui";
 
 function matchesTilbudQuery(entry: Tilbud, query: string): boolean {
-  const fordelName =
-    getFordeler().find((f) => f.slug === entry.fordelSlug)?.name ?? "";
+  const fordelName = getFordelName(entry.fordelSlug);
 
-  const searchable = normalizeTilbudSearchText(
+  const searchable = normalizeSearchText(
     [
       entry.title,
       entry.description,
@@ -40,7 +34,7 @@ function matchesTilbudQuery(entry: Tilbud, query: string): boolean {
     ].join(" "),
   );
 
-  const tokens = normalizeTilbudSearchText(query)
+  const tokens = normalizeSearchText(query)
     .split(/\s+/)
     .filter(Boolean);
 
@@ -60,6 +54,7 @@ export function normalizePartnerKey(partner: string): string {
 export interface TilbudProgramOffer {
   tilbudId: string;
   fordelSlug: string;
+  fordelName: string;
   offerLabel: string;
   description: string;
   category: string;
@@ -105,6 +100,7 @@ export function groupTilbudByPartner(entries: Tilbud[]): GruppertTilbud[] {
       offers: sorted.map((entry) => ({
         tilbudId: entry.id,
         fordelSlug: entry.fordelSlug,
+        fordelName: getFordelName(entry.fordelSlug),
         offerLabel: entry.offerLabel,
         description: entry.description,
         category: entry.category,
@@ -121,18 +117,28 @@ export function groupTilbudByPartner(entries: Tilbud[]): GruppertTilbud[] {
   return groups;
 }
 
-export type TilbudSortOption =
-  | "name-asc"
-  | "rate-desc"
-  | "programs-desc"
-  | "category-asc";
+export const TILBUD_PAGE_SIZE = 30;
 
-export const TILBUD_SORT_OPTIONS: { value: TilbudSortOption; label: string }[] = [
-  { value: "name-asc", label: "Navn A–Å" },
-  { value: "rate-desc", label: "Høyest rabatt" },
-  { value: "programs-desc", label: "Flest medlemskap" },
-  { value: "category-asc", label: "Kategori" },
-];
+export function parseTilbudPage(raw?: string | string[] | null): number {
+  const value = Array.isArray(raw) ? raw[0] : raw;
+  const parsed = Number(value);
+  return Number.isInteger(parsed) && parsed > 0 ? parsed : 1;
+}
+
+export function paginateGruppertTilbud<T>(
+  items: T[],
+  page: number,
+  pageSize = TILBUD_PAGE_SIZE,
+): { items: T[]; page: number; pageCount: number } {
+  const pageCount = Math.max(1, Math.ceil(items.length / pageSize));
+  const safePage = Math.min(page, pageCount);
+  const start = (safePage - 1) * pageSize;
+  return {
+    items: items.slice(start, start + pageSize),
+    page: safePage,
+    pageCount,
+  };
+}
 
 /**
  * Ca. kroneverdi per poeng brukt ved sortering på «Høyest rabatt».
@@ -254,31 +260,4 @@ export function filterTilbud(
 
     return matchesTilbudQuery(entry, normalizedQuery);
   });
-}
-
-export function getFordelName(slug: string): string {
-  return getFordeler().find((f) => f.slug === slug)?.name ?? slug;
-}
-
-/** Tekst for kildelenke på tilbudskort */
-export function getTilbudSourceLinkLabel(
-  fordelSlug: string,
-  sourceUrl?: string,
-): string {
-  if (sourceUrl?.includes("onlineshopping.flysas.com")) {
-    return "SAS Online Shopping ↗";
-  }
-  if (sourceUrl?.includes("trumfnetthandel") || fordelSlug === "trumf") {
-    return "Trumf Netthandel ↗";
-  }
-  if (fordelSlug === "student") return "Offisiell kilde ↗";
-  return `${getFordelName(fordelSlug)} ↗`;
-}
-
-export function formatTilbudDate(isoDate: string): string {
-  return new Intl.DateTimeFormat("nb-NO", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  }).format(new Date(isoDate));
 }

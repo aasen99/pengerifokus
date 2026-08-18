@@ -3,29 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-
-interface NavItem {
-  href: string;
-  label: string;
-}
-
-const primaryNav: NavItem[] = [
-  { href: "/guider", label: "Guider" },
-  { href: "/verktoy", label: "Verktøy" },
-  { href: "/tilbud", label: "Tilbud" },
-];
-
-const secondaryNav: NavItem[] = [
-  { href: "/fordeler", label: "Fordeler" },
-  { href: "/formuesbyggere", label: "Profiler" },
-  { href: "/ordbok", label: "Ordbok" },
-];
-
-const mobileMoreNav: NavItem[] = [
-  { href: "/fordeler", label: "Fordeler" },
-  { href: "/formuesbyggere", label: "Profiler" },
-  { href: "/ordbok", label: "Ordbok" },
-];
+import { primaryNav, secondaryNav } from "@/data/nav";
 
 function isNavActive(pathname: string, href: string): boolean {
   return href === "/"
@@ -176,7 +154,7 @@ export function Header() {
                 Mer innhold
               </p>
               <div className="mt-1 flex flex-col gap-1">
-                {mobileMoreNav.map((item) => {
+                {secondaryNav.map((item) => {
                   const isActive = isNavActive(pathname, item.href);
                   return (
                     <Link

@@ -1,10 +1,38 @@
 import { calculateMonthlyPayment } from "@/lib/calculators/loan";
+import { calculateDocumentFeeForPrice } from "@/lib/calculators/dokumentavgift";
 import type {
   UtleieboligInput,
   UtleieboligProjection,
   UtleieboligResult,
   UtleieboligYearSnapshot,
 } from "@/types/utleiebolig";
+
+export function resolvedDocumentFee(input: UtleieboligInput): number {
+  if (input.autoDocumentFee) {
+    return calculateDocumentFeeForPrice(input.purchasePrice, input.housingType);
+  }
+  return Math.max(0, input.documentFee);
+}
+
+/** Buyer-side purchase costs only. Meglerhonorar is a seller cost and is not included. */
+export function calculateUtleieboligBuyerCosts(input: UtleieboligInput): number {
+  return (
+    resolvedDocumentFee(input) +
+    Math.max(0, input.registrationFee) +
+    Math.max(0, input.appraisalFee) +
+    Math.max(0, input.otherBuyerCosts)
+  );
+}
+
+export function calculateUtleieboligSaleCosts(
+  propertyValue: number,
+  input: Pick<UtleieboligInput, "saleCostPercent" | "saleCostFixed">,
+): number {
+  return Math.max(
+    0,
+    input.saleCostFixed + propertyValue * (input.saleCostPercent / 100),
+  );
+}
 
 /** Estimerer første års rentekostnad på annuitetslån */
 function estimateFirstYearInterest(
@@ -28,8 +56,10 @@ function estimateFirstYearInterest(
 }
 
 export function calculateUtleiebolig(input: UtleieboligInput): UtleieboligResult {
+  const documentFee = resolvedDocumentFee(input);
+  const purchaseCosts = calculateUtleieboligBuyerCosts(input);
   const loanAmount = Math.max(0, input.purchasePrice - input.downPayment);
-  const equityInvested = input.downPayment + input.purchaseCosts;
+  const equityInvested = input.downPayment + purchaseCosts;
   const termMonths = Math.round(input.termYears * 12);
   const monthlyLoanPayment = calculateMonthlyPayment(
     loanAmount,
@@ -82,7 +112,10 @@ export function calculateUtleiebolig(input: UtleieboligInput): UtleieboligResult
     0,
     annualRentNet - annualOperatingCosts - annualLoanInterestFirstYear,
   );
-  const estimatedTaxAnnual = taxableSurplusAnnual * (input.taxRatePercent / 100);
+  const taxRate = input.taxRatePercent / 100;
+  const estimatedTaxAnnual = taxableSurplusAnnual * taxRate;
+  const interestDeductionBenefitAnnual =
+    annualLoanInterestFirstYear * taxRate;
   const cashFlowAfterTaxAnnual = annualCashFlow - estimatedTaxAnnual;
   const cashFlowAfterTaxMonthly = cashFlowAfterTaxAnnual / 12;
 
@@ -92,6 +125,8 @@ export function calculateUtleiebolig(input: UtleieboligInput): UtleieboligResult
   return {
     loanAmount,
     equityInvested,
+    purchaseCosts,
+    documentFee,
     monthlyLoanPayment,
     effectiveMonthlyRent,
     monthlyOperatingCosts,
@@ -107,6 +142,7 @@ export function calculateUtleiebolig(input: UtleieboligInput): UtleieboligResult
     annualOperatingCosts,
     taxableSurplusAnnual,
     estimatedTaxAnnual,
+    interestDeductionBenefitAnnual,
     cashFlowAfterTaxAnnual,
     cashFlowAfterTaxMonthly,
     coversAllCosts,
@@ -122,6 +158,15 @@ function annualizedReturn(
   if (initial <= 0 || years <= 0) return 0;
   if (final <= 0) return -100;
   return (Math.pow(final / initial, 1 / years) - 1) * 100;
+}
+
+function fundLatentTax(
+  investmentValue: number,
+  contributed: number,
+  taxPercent: number,
+): number {
+  const gain = Math.max(0, investmentValue - contributed);
+  return gain * (taxPercent / 100);
 }
 
 export function projectUtleieboligVsFond(
@@ -183,29 +228,44 @@ export function projectUtleieboligVsFond(
 
     if (month % 12 === 0) {
       propertyValue *= 1 + annualPropertyGrowth;
+      const yearSaleCosts = calculateUtleieboligSaleCosts(propertyValue, input);
 
       yearSnapshots.push({
         year: month / 12,
         propertyValue,
         loanBalance,
         cashReserve,
-        propertyNetWorth: propertyValue - loanBalance + cashReserve,
+        saleCosts: yearSaleCosts,
+        propertyNetWorth:
+          propertyValue - loanBalance - yearSaleCosts + cashReserve,
         fundNetWorth,
       });
     }
   }
 
-  const propertyNetWorth = propertyValue - loanBalance + cashReserve;
+  const saleCosts = calculateUtleieboligSaleCosts(propertyValue, input);
+  const propertyNetWorth =
+    propertyValue - loanBalance - saleCosts + cashReserve;
+  const latentFundTax = fundLatentTax(
+    fundNetWorth,
+    base.equityInvested,
+    input.shareGainTaxPercent,
+  );
+  const fundNetWorthAfterTax = fundNetWorth - latentFundTax;
 
   return {
     propertyNetWorth,
     propertyValue,
     remainingLoan: loanBalance,
     cashReserve,
+    saleCosts,
     fundNetWorth,
     fundWithMonthlyFlows,
+    fundLatentTax: latentFundTax,
+    fundNetWorthAfterTax,
     differenceVsFund: propertyNetWorth - fundNetWorth,
     differenceVsFundWithFlows: propertyNetWorth - fundWithMonthlyFlows,
+    differenceVsFundAfterTax: propertyNetWorth - fundNetWorthAfterTax,
     totalSubsidiesPaid,
     propertyGain: propertyNetWorth - base.equityInvested,
     fundGain: fundNetWorth - base.equityInvested,

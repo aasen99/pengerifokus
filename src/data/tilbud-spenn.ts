@@ -81,7 +81,7 @@ export const spennTilbud: Tilbud[] = [
     "Db Journey",
     "1,4 Spenn / 10 kr",
     "Tjen 1,4 Spenn per 10 kr hos Db Journey via Spenn Shopping.",
-    "Reise",
+    "Sport",
   ),
   spennShoppingOffer(
     "gina-tricot",

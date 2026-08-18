@@ -4,7 +4,7 @@ export const kredittkortfordeler: FordelArticleContent = {
   slug: "kredittkortfordeler",
   title: "Kredittkortfordeler, bonus, forsikring og gebyrer",
   intro:
-    "Kredittkort kan gi bonus, cashback, reiseforsikring og kjøpsbeskyttelse, men bare hvis du bruker dem riktig. Her får du oversikt over de vanligste fordelene, typiske kort i Norge, og hvorfor rente ofte spiser opp bonusen.",
+    "Faktaguide til kredittkortfordeler i Norge: hvilke typer bonus, forsikring og gebyrer som er vanlige, og hva typiske kort faktisk gir. Valg av kort og valget mellom kreditt og debet tar vi i egne guider.",
   lastVerified: "2. juli 2026",
   lastModifiedIso: "2026-07-02",
   seoTitle: "Kredittkortfordeler: bonus, forsikring og fallgruver",
@@ -20,13 +20,13 @@ export const kredittkortfordeler: FordelArticleContent = {
     "Coop Mastercard",
     "EuroBonus kredittkort",
     "effektiv rente kredittkort",
-    "velg kredittkort",
+    "kredittkort gebyrer norge",
   ],
   sections: [
     {
       heading: "Hva er kredittkortfordeler?",
       paragraphs: [
-        "Kredittkortfordeler er alt du får utover selve lånet: bonuspoeng, cashback, rabatter, forsikring og ekstratjenester. Utstederen finansierer ofte fordelene gjennom årsavgift, interchange-gebyr og rente fra kunder som ikke betaler hele fakturaen.",
+        "Kredittkortfordeler er alt du får utover selve lånet: [bonuspoeng](/ordbok/bonuspoeng), [cashback](/ordbok/cashback), rabatter, forsikring og ekstratjenester. Utstederen finansierer ofte fordelene gjennom årsavgift, interchange-gebyr og rente fra kunder som ikke betaler hele fakturaen.",
         "Fordelene er reelle, men de er designet for å belønne kunder som betaler i rute og handler mye. Bærer du saldo, kan renten fort koste mer enn bonusen er verdt.",
       ],
     },
@@ -43,12 +43,11 @@ export const kredittkortfordeler: FordelArticleContent = {
       ],
     },
     {
-      heading: "Regel én: betal hele fakturaen",
+      heading: "Rente spiser bonus",
       paragraphs: [
-        "De fleste kredittkort i Norge har høy nominell rente, ofte rundt 20–30 %. En «god» bonus på 1–2 % forsvinner raskt hvis du betaler rente én enkelt måned.",
-        "Kredittkort er et betalingsmiddel med lånemulighet, ikke en inntektskilde. Hvis du ikke er sikker på å betale alt ved forfall, prioriter lav rente og få gebyrer, ikke bonus.",
+        "De fleste kredittkort i Norge har høy nominell rente, ofte rundt 20–30 %. En bonus på 1–2 % forsvinner raskt hvis du bærer saldo. Hvordan du velger kort ut fra den vanen, hører hjemme i guiden Velg riktig kredittkort. Her er poenget et faktum: fordelene er priset ut fra at mange betaler rente.",
       ],
-      tip: "Regn på effektiv rente inkludert gebyrer, ikke bare nominell rente i reklamen.",
+      tip: "Effektiv rente, ikke nominell rente i reklamen, viser hva saldoen faktisk koster.",
     },
     {
       heading: "Bonus og cashback",
@@ -85,21 +84,11 @@ export const kredittkortfordeler: FordelArticleContent = {
       ],
     },
     {
-      heading: "Kredittkort vs. debetkort",
+      heading: "Skillet mot debetkort",
       paragraphs: [
-        "Debetkort som Revolut gir valutafordeler uten kredittramme, men sjelden samme bonus på dagligvarer. Kredittkort gir ofte bedre forsikring og bonus, men med rente- og gjeldskrisiko.",
-        "Mange bruker ett kredittkort til bonus og forsikring, og ett debetkort til utlandet, forutsatt at de betaler kredittkortet i rute.",
+        "Denne siden er faktaguiden om kredittkortfordeler. Valget mellom kreditt og debet, inkludert betalte debetkort med lignende goder, tar vi i Kredittkort eller debetkort. Kort sagt: debet trekker egne penger, kreditt gir lånemulighet, ofte sterkere kjøpsbeskyttelse, og høy rente hvis du ikke gjør opp.",
       ],
-    },
-    {
-      heading: "Slik vurderer du om et kort lønner seg",
-      bullets: [
-        "1. Betaler du hele fakturaen hver måned? Hvis nei, stopp ved rente",
-        "2. Hvor handler du mest? Match kort til butikk eller program",
-        "3. Estimer årlig bonus minus årsavgift og gebyr du faktisk får",
-        "4. Tell forsikring bare hvis du ikke har lik dekning fra før",
-        "5. Test med bonuskalkulator, er poengene gode nok?",
-      ],
+      tip: "Trenger du en beslutning, start med Kredittkort eller debetkort. Trenger du å velge blant kredittkort, gå til Velg riktig kredittkort.",
     },
     {
       heading: "Vanlige fallgruver",

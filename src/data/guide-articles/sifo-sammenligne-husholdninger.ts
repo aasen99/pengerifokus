@@ -86,5 +86,6 @@ export const sifoSammenligneHusholdninger: GuideArticleContent = {
     { label: "SIFO referansebudsjett 2026", href: "/guider/sifo-budsjett" },
     { label: "Kutt faste kostnader", href: "/guider/kutt-faste-kostnader" },
     { label: "Bygg bufferkonto", href: "/guider/bygg-bufferkonto" },
+    { label: "Emne: budsjett", href: "/emner/budsjett" },
   ],
 };

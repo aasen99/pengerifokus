@@ -8,8 +8,8 @@ export const byggBufferkonto: GuideArticleContent = {
     {
       heading: "Hva er en bufferkonto?",
       paragraphs: [
-        "Bufferkontoen er penger du setter til side for det du ikke planlegger: bil som ryker, tannlege, plutselig jobbtap eller en ødelagt vaskemaskin.",
-        "Pengene bør være lett tilgjengelige på en vanlig sparekonto, ikke låst i fond eller BSU. Poenget er at du skal kunne bruke dem raskt uten å måtte selge investeringer eller ta opp forbrukslån.",
+        "[Bufferkontoen](/ordbok/bufferkonto) er penger du setter til side for det du ikke planlegger: bil som ryker, tannlege, plutselig jobbtap eller en ødelagt vaskemaskin.",
+        "Pengene bør være lett tilgjengelige på en vanlig sparekonto, ikke låst i fond eller [BSU](/ordbok/bsu). Poenget er at du skal kunne bruke dem raskt uten å måtte selge investeringer eller ta opp [forbruksgjeld](/ordbok/forbruksgjeld).",
       ],
     },
     {
@@ -62,5 +62,7 @@ export const byggBufferkonto: GuideArticleContent = {
   relatedLinks: [
     { label: "Sparekalkulator", href: "/verktoy/sparekalkulator" },
     { label: "BSU-kalkulator", href: "/verktoy/bsu-kalkulator" },
+    { label: "Bufferkonto i ordboken", href: "/ordbok/bufferkonto" },
+    { label: "Emne: sparing og investering", href: "/emner/sparing-og-investering" },
   ],
 };

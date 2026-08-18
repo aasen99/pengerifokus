@@ -27,7 +27,7 @@ export const obos: FordelArticleContent = {
       heading: "Hva er OBOS-medlemskap?",
       paragraphs: [
         "OBOS er en boligorganisasjon der medlemskap gir deg ansiennitet i boligkøen og tilgang til medlemsfordeler. Medlemskapet er ikke det samme som å eie en OBOS-bolig, du kan melde deg inn uavhengig av boligstatus.",
-        "I tillegg til boligfordeler får medlemmer rabatter og bonus hos et stort nettverk av partnere. Fordelene administreres gjennom OBOS-appen og Min side, der du også finner medlemsbevis.",
+        "I tillegg til boligfordeler får medlemmer rabatter og bonus hos et stort nettverk av partnere. Fordelene administreres gjennom OBOS-appen og Min side, der du også finner medlemsbevis. For boligkjøp er [egenkapital](/ordbok/egenkapital) og [fellesgjeld](/ordbok/fellesgjeld) like viktige som selve forkjøpsretten.",
       ],
     },
     {
@@ -119,5 +119,6 @@ export const obos: FordelArticleContent = {
     { label: "NAF, medlemsfordeler", href: "/fordeler/naf" },
     { label: "Trumf, bonusprogram", href: "/fordeler/trumf" },
     { label: "Alle fordelsprogrammer", href: "/fordeler" },
+    { label: "Emne: bolig", href: "/emner/bolig" },
   ],
 };

@@ -42,7 +42,7 @@ const klarnaCashback: Array<{ partner: string; rate: string }> = [
   { partner: "Makeup Mekka", rate: "5,5" },
   { partner: "COS", rate: "4" },
   { partner: "Husqvarna", rate: "5" },
-  { partner: "Db", rate: "8,5" },
+  { partner: "Db Journey", rate: "4" },
   { partner: "24mx", rate: "5" },
   { partner: "Polarn O. Pyret", rate: "5,5" },
   { partner: "ARKET", rate: "7" },

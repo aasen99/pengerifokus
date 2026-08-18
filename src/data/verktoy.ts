@@ -13,8 +13,8 @@ export const verktoy: Verktoy[] = [
     description:
       "Se hva du faktisk tjener per time når du regner med reisetid, skatt og faste kostnader.",
     category: "Lønn",
-    createdAt: "2025-01-05",
-    updatedAt: "2026-06-11",
+    createdAt: "2026-06-11",
+    updatedAt: "2026-06-16",
   },
   {
     id: "verktoy-2",
@@ -24,7 +24,7 @@ export const verktoy: Verktoy[] = [
     description:
       "Ett lån (annuitet): beregn terminbeløp, rentekostnad, og hva du sparer med ekstra eller engangsinnbetaling.",
     category: "Gjeld",
-    createdAt: "2025-01-05",
+    createdAt: "2026-06-11",
     updatedAt: "2026-07-01",
   },
   {
@@ -36,7 +36,7 @@ export const verktoy: Verktoy[] = [
     description:
       "Flere lån: angi månedsbudsjett, sammenlign lavine og snøball, og se tid og renter spart.",
     category: "Gjeld",
-    createdAt: "2025-01-08",
+    createdAt: "2026-06-11",
     updatedAt: "2026-07-01",
   },
   {
@@ -65,9 +65,9 @@ export const verktoy: Verktoy[] = [
     id: "verktoy-7",
     slug: "regel-72",
     status: "published",
-    name: "Regel 72",
+    name: "Regel 72-kalkulator",
     description:
-      "Hvor lang tid tar det å doble pengene? Del 72 på avkastningen og få et raskt svar.",
+      "Når dobles pengene? Del 72 på avkastningen og få et raskt anslag.",
     category: "Sparing",
     createdAt: "2026-06-11",
     updatedAt: "2026-06-11",
@@ -128,8 +128,8 @@ export const verktoy: Verktoy[] = [
     description:
       "Lag din egen pengetavle: inntekt, utgifter, gjeld og sparing samlet med overskudd eller underskudd.",
     category: "Budsjett",
-    createdAt: "2025-01-10",
-    updatedAt: "2026-06-11",
+    createdAt: "2026-06-13",
+    updatedAt: "2026-06-13",
   },
   {
     id: "verktoy-5",
@@ -139,8 +139,8 @@ export const verktoy: Verktoy[] = [
     description:
       "Regn ut skattefordelen og se hvor mye du kan spare med BSU-sparing.",
     category: "Sparing",
-    createdAt: "2025-01-12",
-    updatedAt: "2026-06-11",
+    createdAt: "2026-06-11",
+    updatedAt: "2026-06-13",
   },
   {
     id: "verktoy-13",
@@ -182,7 +182,7 @@ export const verktoy: Verktoy[] = [
     status: "published",
     name: "Feriepengekalkulator",
     description:
-      "Regn ut feriepenger med 10,2 %, 12 %, 12,5 % eller 14,3 % ut fra grunnlag eller månedslønn.",
+      "Regn ut feriepenger og anslått bruttoutbetaling i juni, med trekk for feriedager.",
     category: "Lønn",
     createdAt: "2026-07-25",
     updatedAt: "2026-07-25",

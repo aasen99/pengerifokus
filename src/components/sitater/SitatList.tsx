@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { QuoteDisplay } from "@/components/sitater/QuoteDisplay";
-import { filterSitater, type SitatEntry } from "@/lib/sitater";
+import { filterSitater, type SitatEntry } from "@/lib/sitater-filter";
 import { calculatorInputClassName } from "@/components/verktoy/calculator-ui";
 
 interface SitatListProps {

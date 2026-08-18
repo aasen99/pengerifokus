@@ -25,7 +25,7 @@ export default function BsuKalkulatorPage() {
       />
       <ToolPageHeader
         title="BSU-kalkulator"
-        description="Se hvor mye du kan spare med BSU, inkludert skattefradraget på 10 % av årlige innskudd."
+        description="Se hvor mye du kan spare med BSU innenfor innskuddsgrensen, og når skattefradraget faktisk gjelder."
       />
 
       <BsuKalkulator />

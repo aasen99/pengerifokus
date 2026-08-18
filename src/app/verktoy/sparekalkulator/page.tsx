@@ -39,13 +39,22 @@ export default function SparekalkulatorPage() {
         >
           millionkalkulatoren
         </Link>
-        .
+        . Over tid er det{" "}
+        <Link
+          href="/ordbok/rentes-rente"
+          className="font-medium text-orange-600 hover:text-orange-700"
+        >
+          rentes rente
+        </Link>{" "}
+        som gjør jevn sparing mer verdifull enn enkeltinnskudd.
       </p>
 
       <ToolRelatedGuides
         guides={[
           { label: "Bygg bufferkonto", href: "/guider/bygg-bufferkonto" },
           { label: "Kom i gang med fond", href: "/guider/kom-i-gang-med-fond" },
+          { label: "Rentes rente i ordboken", href: "/ordbok/rentes-rente" },
+          { label: "Emne: sparing og investering", href: "/emner/sparing-og-investering" },
         ]}
       />
     </div>

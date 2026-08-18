@@ -9,7 +9,7 @@ export const betalNedDyrGjeld: GuideArticleContent = {
       heading: "Hva er «dyr» gjeld?",
       paragraphs: [
         "Dyr gjeld er lån med høy rente: der rentekostnaden spiser av det du betaler. Kredittkort, forbrukslån og delbetaling uten rentefri periode er vanlige eksempler.",
-        "Boliglån har ofte lavere rente og lengre løpetid. Det betyr ikke at boliglån er ufarlig, men i de fleste tilfeller bør du prioritere å kvitte deg med dyr forbruksgjeld først.",
+        "Boliglån har ofte lavere rente og lengre løpetid. Det betyr ikke at boliglån er ufarlig, men i de fleste tilfeller bør du prioritere å kvitte deg med dyr [forbruksgjeld](/ordbok/forbruksgjeld) først.",
       ],
       bullets: [
         "Kredittkort med høy rente: typisk blant det dyreste",
@@ -17,7 +17,7 @@ export const betalNedDyrGjeld: GuideArticleContent = {
         "Delbetaling og kjøp på kreditt etter rentefri periode",
         "Studielån: lavere rente, men verdt å ha oversikt over",
       ],
-      tip: "Se på effektiv rente, ikke bare «lav månedlig rate». Et lån kan virke billig per måned, men være dyrt over tid.",
+      tip: "Se på [effektiv rente](/ordbok/effektiv-rente), ikke bare «lav månedlig rate». Et lån kan virke billig per måned, men være dyrt over tid.",
     },
     {
       heading: "Kartlegg alt du skylder",
@@ -42,7 +42,7 @@ export const betalNedDyrGjeld: GuideArticleContent = {
       bullets: [
         "Uten buffer: uforutsette utgifter → nytt kredittkortkjøp",
         "Med liten buffer, du kan holde momentum på nedbetalingen",
-        "Les mer i guiden om bufferkonto hvis du starter fra null",
+        "[Guiden om bufferkonto](/guider/bygg-bufferkonto) hvis du starter fra null",
       ],
     },
     {
@@ -73,10 +73,10 @@ export const betalNedDyrGjeld: GuideArticleContent = {
     {
       heading: "Refinansiering: når lønner det seg?",
       paragraphs: [
-        "Refinansiering betyr å ta opp nytt lån for å betale ut dyre lån. Det kan gi lavere rente og én enklere faktura, men bare hvis du faktisk endrer adferd.",
+        "[Refinansiering](/ordbok/refinansiering) betyr å ta opp nytt lån for å betale ut dyre lån. Det kan gi lavere rente og én enklere faktura, men bare hvis du faktisk endrer adferd.",
       ],
       bullets: [
-        "Sammenlign effektiv rente inkludert etableringsgebyr",
+        "Sammenlign [effektiv rente](/ordbok/effektiv-rente) inkludert etableringsgebyr",
         "Ikke forleng løpetid bare for å få lavere månedlig beløp. Da kan totalen bli dyrere",
         "Unngå å fylle kredittkortet igjen etter at du har refinansiert",
         "Sjekk om du mister fordeler ved å flytte studielån eller boliglån",
@@ -118,5 +118,6 @@ export const betalNedDyrGjeld: GuideArticleContent = {
     { label: "Kutt faste kostnader", href: "/guider/kutt-faste-kostnader" },
     { label: "Bygg bufferkonto", href: "/guider/bygg-bufferkonto" },
     { label: "Les om effektiv rente i ordboken", href: "/ordbok/effektiv-rente" },
+    { label: "Emne: gjeld", href: "/emner/gjeld" },
   ],
 };

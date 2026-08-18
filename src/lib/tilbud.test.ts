@@ -1,6 +1,13 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
-import { parseOfferRate } from "./tilbud";
+import { tilbud } from "../data/tilbud";
+import {
+  TILBUD_PAGE_SIZE,
+  filterTilbud,
+  groupTilbudByPartner,
+  paginateGruppertTilbud,
+  parseOfferRate,
+} from "./tilbud";
 
 describe("parseOfferRate", () => {
   it("returns max percent for rabatt labels", () => {
@@ -45,5 +52,26 @@ describe("parseOfferRate", () => {
   it("ignores flat Spenn without purchase amount", () => {
     assert.equal(parseOfferRate("816 Spenn på kjøpet", "spenn"), null);
     assert.equal(parseOfferRate("1 680 Spenn på kjøpet", "spenn"), null);
+  });
+});
+
+describe("default tilbud grouping", () => {
+  const published = tilbud.filter((item) => item.status === "published");
+  const grouped = groupTilbudByPartner(
+    filterTilbud(published, "", null, null, false),
+  );
+
+  it("has partner cards on the default grouping", () => {
+    assert.ok(grouped.length > 0);
+    assert.ok(grouped.every((group) => group.offers.length > 0));
+  });
+
+  it("paginates default grouping instead of returning every card", () => {
+    assert.ok(TILBUD_PAGE_SIZE >= 24 && TILBUD_PAGE_SIZE <= 36);
+    const page = paginateGruppertTilbud(grouped, 1);
+    assert.ok(page.items.length > 0);
+    assert.ok(page.items.length <= TILBUD_PAGE_SIZE);
+    assert.ok(page.pageCount >= 1);
+    assert.ok(page.items.length < grouped.length || grouped.length <= TILBUD_PAGE_SIZE);
   });
 });

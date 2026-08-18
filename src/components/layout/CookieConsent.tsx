@@ -62,7 +62,7 @@ function CookieBanner({
   );
 }
 
-export function CookieConsent() {
+export function CookieConsent({ gaId }: { gaId?: string }) {
   const [ready, setReady] = useState(false);
   const [consent, setConsent] = useState<CookieConsentChoice | null>(null);
 
@@ -93,7 +93,7 @@ export function CookieConsent() {
 
   return (
     <>
-      {consent === "accepted" && <GoogleAnalytics />}
+      {consent === "accepted" && gaId ? <GoogleAnalytics gaId={gaId} /> : null}
       {ready && consent === null && (
         <CookieBanner onAccept={accept} onReject={reject} />
       )}

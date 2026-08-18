@@ -1,5 +1,5 @@
-import { tilbudListMeta } from "@/data/tilbud";
-import { formatTilbudDate } from "@/lib/tilbud";
+import { tilbudListMeta } from "@/data/tilbud-meta";
+import { formatTilbudDate } from "@/lib/tilbud-ui";
 
 interface TilbudDisclaimerProps {
   variant?: "banner" | "footer";

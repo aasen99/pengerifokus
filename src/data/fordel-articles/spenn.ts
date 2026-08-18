@@ -5,11 +5,11 @@ export const spenn: FordelArticleContent = {
   title: "Spenn, poeng på tvers av reise og hverdag",
   intro:
     "Spenn er en felles poengvaluta som kobles til eksisterende fordelsprogrammer hos blant annet Norwegian, Strawberry og REMA 1000. Poeng samles i Spenn-appen og kan tjenes og brukes på tvers av flere merkevarer, men verdien er ikke fast i kroner som Trumf eller Coop.",
-  lastVerified: "2. juli 2026",
-  lastModifiedIso: "2026-07-02",
+  lastVerified: "18. august 2026",
+  lastModifiedIso: "2026-08-18",
   seoTitle: "Spenn: opptjening, bruk og verdi hos Norwegian og REMA 1000",
   seoDescription:
-    "Forstå Spenn: hvordan du tjener poeng hos Norwegian, Strawberry og REMA 1000, hva de kan brukes til, og hvorfor verdien varierer.",
+    "Forstå Spenn: hvordan du tjener poeng hos Norwegian, Strawberry, REMA 1000 og Spenn Shopping, hva de kan brukes til, og hvorfor verdien varierer.",
   seoKeywords: [
     "Spenn",
     "Spenn poeng",
@@ -50,8 +50,22 @@ export const spenn: FordelArticleContent = {
         "Strawberry: 3 Spenn per 10 kr (eller per 1 EUR) på Blue, totalt 4/5/6 Spenn på Silver/Gold/Platinum (+1/+2/+3 medlemsboost)",
         "REMA 1000: 10 % bonus på frukt og grønt utbetalt i Spenn når Spenn er aktivert i REMA-appen",
         "Narvesen, 7-Eleven og Uno-X: inngår i Spenn-økosystemet, sjekk gjeldende satser i appen",
+        "Spenn Shopping: nettbutikker med satser som ofte oppgis som «Spenn per 10 kr» eller faste kampanjepoeng",
       ],
       tip: "Strawberry oppgir at opptjente Spenn er gyldige i 36 måneder fra måneden de tjenes inn.",
+    },
+    {
+      heading: "Spenn Shopping og tilbudsoversikten vår",
+      paragraphs: [
+        "Spenn Shopping fungerer som en netthandelsportal der opptjening kan variere per butikk, kampanjeperiode og kundetype (for eksempel ny vs. eksisterende kunde).",
+        "For å gjøre det enklere å sammenligne har vi en løpende oversikt over kjente Spenn-tilbud på tvers av butikker. Der kan du filtrere på partner og kategori, og se hvilke satser som er oppgitt nå.",
+      ],
+      bullets: [
+        "Satser i portalen kan endres uten varsel",
+        "«Opptil»-satser gjelder ikke nødvendigvis hele handlekurven",
+        "Faste poengkampanjer er vanskeligere å sammenligne direkte med prosent",
+      ],
+      tip: "Bruk alltid satsen i Spenn-portalen i kjøpsøyeblikket som fasit.",
     },
     {
       heading: "Slik bruker du Spenn",
@@ -148,6 +162,10 @@ export const spenn: FordelArticleContent = {
       url: "https://spenngroup.com/nb-NO/articles/spenn-til-rema-1000",
     },
     {
+      label: "Spenn Shopping",
+      url: "https://www.spenn.com/no/shopping",
+    },
+    {
       label: "Norwegian, Om Spenn",
       url: "https://www.norwegian.com/no/reward/om-spenn/",
     },
@@ -157,6 +175,7 @@ export const spenn: FordelArticleContent = {
     },
   ],
   relatedLinks: [
+    { label: "Spenn-tilbud, oversikt", href: "/tilbud?program=spenn" },
     { label: "Norwegian Reward", href: "/fordeler/norwegian-reward" },
     { label: "Strawberry-medlemskap", href: "/fordeler/strawberry" },
     { label: "Bonuskalkulator", href: "/verktoy/bonuskalkulator" },

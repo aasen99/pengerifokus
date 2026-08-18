@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/Button";
-import { siteConfig } from "@/lib/site";
+import { siteConfig } from "@/lib/site-config";
 
 export function Hero() {
   return (

@@ -5,8 +5,8 @@ import type {
   MonthlySnapshot,
   SensitivityCase,
 } from "@/types/eie-leie";
-import { DOCUMENT_FEE_RATE } from "@/data/eie-leie";
 import { calculateMonthlyPayment } from "@/lib/calculators/loan";
+import { calculateDocumentFeeForPrice } from "@/lib/calculators/dokumentavgift";
 
 function monthlyRate(annualPercent: number): number {
   return annualPercent / 100 / 12;
@@ -20,9 +20,8 @@ function netInvestmentMonthlyRate(
 }
 
 export function calculateDocumentFee(input: EieLeieInput): number {
-  if (input.isBorettslag) return 0;
-  if (input.autoDocumentFee) {
-    return Math.round(input.purchasePrice * DOCUMENT_FEE_RATE);
+  if (input.isBorettslag || input.autoDocumentFee) {
+    return calculateDocumentFeeForPrice(input.purchasePrice, input.isBorettslag);
   }
   return input.documentFee;
 }
@@ -145,7 +144,123 @@ function simulateLoanMonth(
   };
 }
 
+function classifyDifference(diff: number): EieLeieResult["betterOption"] {
+  if (diff > 500) return "eie";
+  if (diff < -500) return "leie";
+  return "lik";
+}
+
+function fundLatentTax(
+  investmentValue: number,
+  contributed: number,
+  taxPercent: number,
+): number {
+  const gain = Math.max(0, investmentValue - contributed);
+  return gain * (taxPercent / 100);
+}
+
 export function calculateEieLeie(input: EieLeieInput): EieLeieResult {
+  const pretax = simulateEieLeie(input, false);
+  const afterTaxCash = simulateEieLeie(input, true);
+
+  const ownerFundTax = fundLatentTax(
+    afterTaxCash.ownerInvestment,
+    afterTaxCash.ownerContributed,
+    input.shareGainTaxPercent,
+  );
+  const renterFundTax = fundLatentTax(
+    afterTaxCash.renterInvestment,
+    afterTaxCash.startInvestment + afterTaxCash.totalMonthlyInvestments,
+    input.shareGainTaxPercent,
+  );
+  const homeSaleTax = input.assumeTaxFreeHomeSale
+    ? 0
+    : Math.max(0, afterTaxCash.propertyValue - input.purchasePrice) *
+      (input.propertyGainTaxPercent / 100);
+
+  const ownerAfterTax = afterTaxCash.ownerNetWorth - ownerFundTax - homeSaleTax;
+  const renterAfterTax = afterTaxCash.renterNetWorth - renterFundTax;
+  const netWorthDifferenceAfterTax = ownerAfterTax - renterAfterTax;
+
+  return {
+    loanAmount: pretax.loanAmount,
+    totalFinancedAmount: pretax.totalFinancedAmount,
+    totalPurchaseCosts: pretax.totalPurchaseCosts,
+    startInvestment: pretax.startInvestment,
+    owner: {
+      propertyValue: pretax.propertyValue,
+      remainingDebt: pretax.loanBalance,
+      equityBuilt: pretax.propertyValue - pretax.loanBalance,
+      totalInterestPaid: pretax.totalInterestPaid,
+      totalPrincipalPaid: pretax.totalPrincipalPaid,
+      totalMaintenance: pretax.totalMaintenance,
+      totalPurchaseCosts: pretax.totalPurchaseCosts,
+      totalSaleCosts: pretax.saleCosts,
+      totalFixedOwnerCosts: pretax.totalFixedOwnerCosts,
+      ownerInvestmentValue: pretax.ownerInvestment,
+      netWorth: pretax.ownerNetWorth,
+      netWorthAfterTax: ownerAfterTax,
+      interestTaxBenefit: pretax.totalInterestPaid * (input.interestDeductionPercent / 100),
+      latentFundTax: ownerFundTax,
+      homeSaleTax,
+    },
+    renter: {
+      totalRentPaid: pretax.totalRentPaid,
+      startInvestment: pretax.startInvestment,
+      totalMonthlyInvestments: pretax.totalMonthlyInvestments,
+      investmentValue: pretax.renterInvestment,
+      depositReturned: pretax.depositReturned,
+      netWorth: pretax.renterNetWorth,
+      netWorthAfterTax: renterAfterTax,
+      latentFundTax: renterFundTax,
+    },
+    netWorthDifference: pretax.ownerNetWorth - pretax.renterNetWorth,
+    netWorthDifferenceAfterTax,
+    betterOption: classifyDifference(pretax.ownerNetWorth - pretax.renterNetWorth),
+    betterOptionAfterTax: classifyDifference(netWorthDifferenceAfterTax),
+    crossoverMonth: pretax.crossoverMonth,
+    ownerAheadFromStart: pretax.ownerAheadFromStart,
+    monthlySnapshots: pretax.monthlySnapshots,
+    ownerCostBreakdown: {
+      interest: pretax.totalInterestPaid,
+      maintenance: pretax.totalMaintenance,
+      fixedCosts: pretax.totalFixedOwnerCosts,
+      purchaseCosts: pretax.totalPurchaseCosts,
+      saleCosts: pretax.saleCosts,
+    },
+    totalRentPaid: pretax.totalRentPaid,
+  };
+}
+
+interface SimulationResult {
+  loanAmount: number;
+  totalFinancedAmount: number;
+  totalPurchaseCosts: number;
+  startInvestment: number;
+  propertyValue: number;
+  loanBalance: number;
+  saleCosts: number;
+  ownerInvestment: number;
+  ownerContributed: number;
+  renterInvestment: number;
+  depositReturned: number;
+  ownerNetWorth: number;
+  renterNetWorth: number;
+  totalInterestPaid: number;
+  totalPrincipalPaid: number;
+  totalMaintenance: number;
+  totalFixedOwnerCosts: number;
+  totalRentPaid: number;
+  totalMonthlyInvestments: number;
+  crossoverMonth: number | null;
+  ownerAheadFromStart: boolean;
+  monthlySnapshots: MonthlySnapshot[];
+}
+
+function simulateEieLeie(
+  input: EieLeieInput,
+  deductInterestTax: boolean,
+): SimulationResult {
   const totalMonths = Math.round(input.horizonYears * 12);
   const loanAmount = calculateLoanAmount(input);
   const totalPurchaseCosts = calculateTotalPurchaseCosts(input);
@@ -181,6 +296,7 @@ export function calculateEieLeie(input: EieLeieInput): EieLeieResult {
   let totalFixedOwnerCosts = 0;
   let totalRentPaid = 0;
   let totalMonthlyInvestments = 0;
+  let ownerContributed = 0;
   let crossoverMonth: number | null = null;
   let ownerAheadFromStart = false;
 
@@ -227,8 +343,11 @@ export function calculateEieLeie(input: EieLeieInput): EieLeieResult {
     totalMaintenance += maintenance;
     totalFixedOwnerCosts += fixedCosts;
 
+    const interestTaxBenefit = deductInterestTax
+      ? loanMonth.interest * (input.interestDeductionPercent / 100)
+      : 0;
     const ownerCashOut =
-      loanMonth.payment + fixedCosts + maintenance;
+      loanMonth.payment + fixedCosts + maintenance - interestTaxBenefit;
     const renterCashOut = currentRent;
     totalRentPaid += currentRent;
 
@@ -243,11 +362,12 @@ export function calculateEieLeie(input: EieLeieInput): EieLeieResult {
       ownerInvestment = applyInvestmentGrowth(ownerInvestment, 0, investmentRate);
     } else if (renterCashOut > ownerCashOut) {
       const diff = renterCashOut - ownerCashOut;
-      ownerInvestment = applyInvestmentGrowth(
+        ownerInvestment = applyInvestmentGrowth(
         ownerInvestment,
         diff,
         investmentRate,
       );
+      ownerContributed += diff;
       renterInvestment = applyInvestmentGrowth(
         renterInvestment,
         0,
@@ -301,11 +421,6 @@ export function calculateEieLeie(input: EieLeieInput): EieLeieResult {
     totalPurchaseCosts;
   const depositReturned = depositBalance;
   const renterNetWorth = renterInvestment + depositReturned;
-  const netWorthDifference = ownerNetWorth - renterNetWorth;
-
-  let betterOption: EieLeieResult["betterOption"] = "lik";
-  if (netWorthDifference > 500) betterOption = "eie";
-  if (netWorthDifference < -500) betterOption = "leie";
 
   if (monthlySnapshots.length > 0) {
     const first = monthlySnapshots[0];
@@ -317,40 +432,24 @@ export function calculateEieLeie(input: EieLeieInput): EieLeieResult {
     totalFinancedAmount: calculateTotalFinancedAmount(input),
     totalPurchaseCosts,
     startInvestment,
-    owner: {
-      propertyValue: finalPropertyValue,
-      remainingDebt: loanBalance,
-      equityBuilt: finalPropertyValue - loanBalance,
-      totalInterestPaid,
-      totalPrincipalPaid,
-      totalMaintenance,
-      totalPurchaseCosts,
-      totalSaleCosts: saleCosts,
-      totalFixedOwnerCosts,
-      ownerInvestmentValue: ownerInvestment,
-      netWorth: ownerNetWorth,
-    },
-    renter: {
-      totalRentPaid,
-      startInvestment,
-      totalMonthlyInvestments,
-      investmentValue: renterInvestment,
-      depositReturned,
-      netWorth: renterNetWorth,
-    },
-    netWorthDifference,
-    betterOption,
+    propertyValue: finalPropertyValue,
+    loanBalance,
+    saleCosts,
+    ownerInvestment,
+    ownerContributed,
+    renterInvestment,
+    depositReturned,
+    ownerNetWorth,
+    renterNetWorth,
+    totalInterestPaid,
+    totalPrincipalPaid,
+    totalMaintenance,
+    totalFixedOwnerCosts,
+    totalRentPaid,
+    totalMonthlyInvestments,
     crossoverMonth,
     ownerAheadFromStart,
     monthlySnapshots,
-    ownerCostBreakdown: {
-      interest: totalInterestPaid,
-      maintenance: totalMaintenance,
-      fixedCosts: totalFixedOwnerCosts,
-      purchaseCosts: totalPurchaseCosts,
-      saleCosts,
-    },
-    totalRentPaid,
   };
 }
 

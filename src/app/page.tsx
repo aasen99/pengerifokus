@@ -6,8 +6,10 @@ import { HomeStats } from "@/components/home/HomeStats";
 import { QuickPaths } from "@/components/home/QuickPaths";
 import { SloseTeller } from "@/components/home/SloseTeller";
 import { HubCrossLinks } from "@/components/seo/HubCrossLinks";
+import { FORDELSPROGRAMMER_TITLE, TILBUD_TITLE } from "@/data/content-labels";
+import { FORMUESBYGGERE_TITLE } from "@/data/formuesbyggere-labels";
 import { createPageMetadata } from "@/lib/seo";
-import { siteConfig } from "@/lib/site";
+import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Personlig økonomi i Norge",
@@ -44,10 +46,11 @@ export default function HomePage() {
 
       <HubCrossLinks
         links={[
-          { href: "/fordeler", label: "Fordelsprogrammer" },
-          { href: "/tilbud", label: "Tilbud" },
+          { href: "/emner", label: "Emner" },
+          { href: "/fordeler", label: FORDELSPROGRAMMER_TITLE },
+          { href: "/tilbud", label: TILBUD_TITLE },
           { href: "/ordbok", label: "Ordbok" },
-          { href: "/formuesbyggere", label: "Formuesbyggere" },
+          { href: "/formuesbyggere", label: FORMUESBYGGERE_TITLE },
         ]}
       />
     </div>

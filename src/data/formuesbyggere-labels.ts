@@ -4,9 +4,9 @@ import type {
   FormuesbyggerRegion,
 } from "@/types/formuesbygger";
 
-export const FORMUESBYGGERE_TITLE = "Formuesbyggerne";
+export const FORMUESBYGGERE_TITLE = "Formuesbyggere";
 export const FORMUESBYGGERE_INTRO =
-  "Profiler av kjente formuesbyggere: hvordan formuen ble bygget, hvor verdien sitter, og hva som faktisk kan læres. Med tidslinje, kildehierarki og skillet mellom lønn, eierskap og kontroll.";
+  "Hvordan kjente formuesbyggere bygde formuen, hvor verdien sitter, og hva som faktisk kan læres. Med tidslinje, kildehierarki og skillet mellom lønn, eierskap og kontroll.";
 
 export const FORMUE_DISCLAIMER =
   "Formueanslagene er omtrentlige markedsverdier, ikke skattemessig ligningsformue. Norske profiler følger i hovedsak Kapital 400 (publiseres årlig). Internasjonale profiler følger Forbes Billionaires List. Tallene svinger med aksjekurser og eiendomspriser, og skal ikke behandles som fasit.";

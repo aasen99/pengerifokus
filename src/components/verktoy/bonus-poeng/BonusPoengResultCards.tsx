@@ -187,7 +187,7 @@ export function BonusPoengConcepts({ defaultOpen = true }: { defaultOpen?: boole
       open={defaultOpen || undefined}
     >
       <summary className="cursor-pointer px-6 py-4 text-sm font-semibold text-stone-900">
-        Les mer om kostpris, innløsning og eksempler
+        Kostpris, innløsning og eksempler
       </summary>
       <div className="space-y-6 border-t border-stone-200 px-6 py-6">
       <section className="rounded-xl border border-stone-200 bg-stone-50 p-4">

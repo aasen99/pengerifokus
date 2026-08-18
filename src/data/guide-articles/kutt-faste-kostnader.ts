@@ -8,7 +8,7 @@ export const kuttFasteKostnader: GuideArticleContent = {
     {
       heading: "Hva er faste kostnader?",
       paragraphs: [
-        "Faste kostnader er utgifter som kommer igjen med jevne mellomrom: husleie, strøm, forsikring, mobil, streaming, treningsmedlemskap og lån. De er forutsigbare, men de er også lette å glemme.",
+        "[Faste kostnader](/ordbok/fast-kostnad) er utgifter som kommer igjen med jevne mellomrom: husleie, strøm, forsikring, mobil, streaming, treningsmedlemskap og lån. De er forutsigbare, men de er også lette å glemme.",
         "I motsetning til impulskjøp kan faste kostnader spise store deler av lønnen uten at du merker det. Én glemt abonnementstjeneste à 149 kr i måneden blir nesten 1 800 kr i året.",
       ],
     },
@@ -86,7 +86,7 @@ export const kuttFasteKostnader: GuideArticleContent = {
     {
       heading: "Oppsummert",
       paragraphs: [
-        "Kutting av faste kostnader handler om oversikt, ærlighet om hva du bruker, og å fjerne det som ikke gir deg verdi. Du trenger ikke optimalisere alt, selv noen få kutt kan gi mer luft i budsjettet hver eneste måned.",
+        "Kutting av faste kostnader handler om oversikt, ærlighet om hva du bruker, og å fjerne det som ikke gir deg verdi. Du trenger ikke optimalisere alt, selv noen få kutt kan gi mer luft i [budsjettet](/ordbok/budsjett) hver eneste måned.",
       ],
     },
   ],
@@ -94,5 +94,7 @@ export const kuttFasteKostnader: GuideArticleContent = {
     { label: "Betal ned dyr gjeld", href: "/guider/betal-ned-dyr-gjeld" },
     { label: "Bygg bufferkonto", href: "/guider/bygg-bufferkonto" },
     { label: "Sparekalkulator", href: "/verktoy/sparekalkulator" },
+    { label: "Faste kostnader i ordboken", href: "/ordbok/fast-kostnad" },
+    { label: "Emne: budsjett", href: "/emner/budsjett" },
   ],
 };

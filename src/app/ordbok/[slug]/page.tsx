@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { OrdbokTermDetail } from "@/components/ordbok/OrdbokTermDetail";
+import { getOrdbokArticle } from "@/data/ordbok-articles";
 import { getOrdbok, getOrdbokBySlug } from "@/lib/content";
 import { createPageMetadata } from "@/lib/seo";
 import {
@@ -26,7 +27,8 @@ export async function generateMetadata({
   if (!entry) return {};
 
   return createPageMetadata({
-    title: entry.term,
+    title:
+      slug === "regel-72" ? "Hva er Regel 72? Enkel forklaring" : entry.term,
     description: `${entry.term}: ${entry.definition}`,
     path: `/ordbok/${slug}`,
     keywords: [entry.term, entry.category, ...(entry.tags ?? [])],
@@ -39,6 +41,7 @@ export default async function OrdbokTermPage({ params }: OrdbokTermPageProps) {
 
   if (!entry) notFound();
 
+  const article = getOrdbokArticle(entry.slug);
   const related = getOrdbok()
     .filter((item) => item.category === entry.category && item.slug !== entry.slug)
     .slice(0, 5);
@@ -60,7 +63,7 @@ export default async function OrdbokTermPage({ params }: OrdbokTermPageProps) {
           path,
         })}
       />
-      <OrdbokTermDetail entry={entry} related={related} />
+      <OrdbokTermDetail entry={entry} related={related} article={article} />
     </div>
   );
 }

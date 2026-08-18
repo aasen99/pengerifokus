@@ -50,6 +50,11 @@ export interface EieLeieInput {
 
   investmentReturnPercent: number;
   investmentCostPercent: number;
+
+  interestDeductionPercent: number;
+  shareGainTaxPercent: number;
+  assumeTaxFreeHomeSale: boolean;
+  propertyGainTaxPercent: number;
 }
 
 export interface MonthlySnapshot {
@@ -72,6 +77,10 @@ export interface EieLeieOwnerSummary {
   totalFixedOwnerCosts: number;
   ownerInvestmentValue: number;
   netWorth: number;
+  netWorthAfterTax: number;
+  interestTaxBenefit: number;
+  latentFundTax: number;
+  homeSaleTax: number;
 }
 
 export interface EieLeieRenterSummary {
@@ -81,6 +90,8 @@ export interface EieLeieRenterSummary {
   investmentValue: number;
   depositReturned: number;
   netWorth: number;
+  netWorthAfterTax: number;
+  latentFundTax: number;
 }
 
 export interface EieLeieCostBreakdown {
@@ -99,7 +110,9 @@ export interface EieLeieResult {
   owner: EieLeieOwnerSummary;
   renter: EieLeieRenterSummary;
   netWorthDifference: number;
+  netWorthDifferenceAfterTax: number;
   betterOption: "eie" | "leie" | "lik";
+  betterOptionAfterTax: "eie" | "leie" | "lik";
   crossoverMonth: number | null;
   ownerAheadFromStart: boolean;
   monthlySnapshots: MonthlySnapshot[];

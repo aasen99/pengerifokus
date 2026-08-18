@@ -19,11 +19,15 @@ import { RelatedLinks } from "@/components/ui/RelatedLinks";
 import { QuoteDisplay } from "@/components/sitater/QuoteDisplay";
 import { WealthEstimateCard } from "@/components/formuesbyggere/WealthEstimateCard";
 import { FormuesbyggerLifecycle } from "@/components/formuesbyggere/FormuesbyggerLifecycle";
-import { getProfileQuotes } from "@/lib/sitater";
+import { RelatedFormuesbyggere } from "@/components/formuesbyggere/RelatedFormuesbyggere";
+import { getProfileQuotes } from "@/lib/sitater-filter";
+import { createOrdbokLinker } from "@/lib/ordbok-inline";
+import { renderTextWithLinks } from "@/lib/rich-text";
 
 interface FormuesbyggerProfileProps {
   profile: Formuesbygger;
   article: FormuesbyggerArticle;
+  related: Formuesbygger[];
 }
 
 function formatVerifiedDate(isoDate: string): string {
@@ -38,9 +42,12 @@ function formatVerifiedDate(isoDate: string): string {
 export function FormuesbyggerProfile({
   profile,
   article,
+  related,
 }: FormuesbyggerProfileProps) {
   const quotes = getProfileQuotes(article.quotes);
   const sourcesByTier = groupSourcesByTier(article.sources);
+  const linkOrdbok = createOrdbokLinker(3);
+  const withTerms = (text: string) => renderTextWithLinks(linkOrdbok(text));
 
   return (
     <article>
@@ -73,7 +80,7 @@ export function FormuesbyggerProfile({
         <section className="rounded-xl border border-orange-200 bg-orange-50 px-4 py-4 sm:px-5">
           <h2 className="text-lg font-semibold text-stone-900">Kort svar</h2>
           <p className="mt-3 leading-relaxed text-stone-700">
-            {article.shortAnswer}
+            {withTerms(article.shortAnswer)}
           </p>
         </section>
 
@@ -112,7 +119,7 @@ export function FormuesbyggerProfile({
                   {WEALTH_SOURCE_LABELS[source.category]}
                 </dt>
                 <dd className="mt-1 leading-relaxed text-stone-600">
-                  {source.description}
+                  {withTerms(source.description)}
                 </dd>
               </div>
             ))}
@@ -125,7 +132,7 @@ export function FormuesbyggerProfile({
               Eierskap versus kontroll
             </h2>
             <p className="mt-3 leading-relaxed text-stone-600">
-              {article.ownershipVsControl}
+              {withTerms(article.ownershipVsControl)}
             </p>
           </section>
         )}
@@ -135,7 +142,7 @@ export function FormuesbyggerProfile({
             Det avgjørende grepet
           </h2>
           <p className="mt-3 leading-relaxed text-stone-700">
-            {article.decisiveMove}
+            {withTerms(article.decisiveMove)}
           </p>
         </section>
 
@@ -172,7 +179,7 @@ export function FormuesbyggerProfile({
                   Virkelighet
                 </p>
                 <p className="mt-1 leading-relaxed text-stone-700">
-                  {pair.reality}
+                  {withTerms(pair.reality)}
                 </p>
               </div>
             ))}
@@ -190,7 +197,7 @@ export function FormuesbyggerProfile({
                 className="flex gap-3 leading-relaxed text-stone-700"
               >
                 <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-orange-500" />
-                <span>{lesson}</span>
+                <span>{withTerms(lesson)}</span>
               </li>
             ))}
           </ul>
@@ -284,6 +291,8 @@ export function FormuesbyggerProfile({
           </div>
         </div>
       </details>
+
+      <RelatedFormuesbyggere current={profile} related={related} />
 
       {article.relatedLinks && article.relatedLinks.length > 0 && (
         <RelatedLinks links={article.relatedLinks} />

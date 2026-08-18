@@ -1,63 +1,14 @@
-import type { ReactNode } from "react";
 import Link from "next/link";
 import { Tag } from "@/components/ui/Tag";
 import { RelatedLinks } from "@/components/ui/RelatedLinks";
 import { GuideCalculatorCta } from "@/components/guider/GuideCalculatorCta";
+import { renderTextWithLinks } from "@/lib/rich-text";
 import type { Guide } from "@/types/content";
 import type { GuideArticleContent } from "@/types/guide-article";
 
 interface GuideArticleProps {
   guide: Guide;
   article: GuideArticleContent;
-}
-
-const LINK_PATTERN = /\[([^\]]+)\]\(([^)]+)\)/g;
-
-function renderTextWithLinks(text: string) {
-  const parts: ReactNode[] = [];
-  let lastIndex = 0;
-  let match: RegExpExecArray | null;
-  let key = 0;
-
-  while ((match = LINK_PATTERN.exec(text)) !== null) {
-    if (match.index > lastIndex) {
-      parts.push(text.slice(lastIndex, match.index));
-    }
-
-    const label = match[1];
-    const href = match[2];
-    const external = href.startsWith("http");
-
-    parts.push(
-      external ? (
-        <a
-          key={`link-${key++}`}
-          href={href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-medium text-orange-600 hover:text-orange-700"
-        >
-          {label}
-        </a>
-      ) : (
-        <Link
-          key={`link-${key++}`}
-          href={href}
-          className="font-medium text-orange-600 hover:text-orange-700"
-        >
-          {label}
-        </Link>
-      ),
-    );
-
-    lastIndex = match.index + match[0].length;
-  }
-
-  if (lastIndex < text.length) {
-    parts.push(text.slice(lastIndex));
-  }
-
-  return parts.length > 0 ? parts : text;
 }
 
 function GuideTable({
@@ -106,7 +57,13 @@ export function GuideArticle({ guide, article }: GuideArticleProps) {
       <header className="mt-3 border-b border-stone-200 pb-6">
         <div className="mb-2 flex flex-wrap gap-1.5">
           <Tag>{guide.category}</Tag>
-          {guide.tags.slice(0, 2).map((tag) => (
+          {guide.tags
+            .filter(
+              (tag) =>
+                tag.trim().toLowerCase() !== guide.category.trim().toLowerCase(),
+            )
+            .slice(0, 2)
+            .map((tag) => (
             <Tag key={tag} variant="muted">
               {tag}
             </Tag>
@@ -116,7 +73,7 @@ export function GuideArticle({ guide, article }: GuideArticleProps) {
           {guide.title}
         </h1>
         <p className="mt-2 max-w-2xl text-base leading-relaxed text-stone-600">
-          {article.intro}
+          {renderTextWithLinks(article.intro)}
         </p>
         <p className="mt-2 text-sm text-stone-500">
           {article.readTimeMinutes} min lesetid

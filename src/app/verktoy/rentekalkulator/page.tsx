@@ -34,7 +34,22 @@ export default function RentekalkulatorPage() {
       <section className="mt-8 rounded-xl border border-stone-200 bg-stone-50 p-4 text-sm text-stone-700">
         <p className="font-medium text-stone-900">Flere lån samtidig?</p>
         <p className="mt-1">
-          For kredittkort, forbrukslån og studielån i én plan, bruk{" "}
+          Kalkulatoren gjelder ett{" "}
+          <Link
+            href="/ordbok/annuitetslan"
+            className="font-medium text-orange-600 hover:text-orange-700"
+          >
+            annuitetslån
+          </Link>
+          . Når du sammenligner tilbud, bruk{" "}
+          <Link
+            href="/ordbok/effektiv-rente"
+            className="font-medium text-orange-600 hover:text-orange-700"
+          >
+            effektiv rente
+          </Link>
+          , ikke bare nominell sats. For kredittkort, forbrukslån og studielån i
+          én plan, bruk{" "}
           <Link
             href="/verktoy/nedbetalingskalkulator"
             className="font-medium text-orange-600 hover:text-orange-700"
@@ -50,6 +65,7 @@ export default function RentekalkulatorPage() {
           { label: "Betal ned dyr gjeld", href: "/guider/betal-ned-dyr-gjeld" },
           { label: "Nedbetalingskalkulator (flere lån)", href: "/verktoy/nedbetalingskalkulator" },
           { label: "Effektiv rente i ordboken", href: "/ordbok/effektiv-rente" },
+          { label: "Emne: gjeld", href: "/emner/gjeld" },
         ]}
       />
     </div>

@@ -4,7 +4,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { CookieConsent } from "@/components/layout/CookieConsent";
 import { WebsiteJsonLd } from "@/components/seo/WebsiteJsonLd";
-import { getSiteUrl, siteConfig } from "@/lib/site";
+import { getGoogleAnalyticsId, getSiteUrl, siteConfig } from "@/lib/site-config";
 import "./globals.css";
 
 const inter = Inter({
@@ -59,7 +59,7 @@ export default function RootLayout({
   return (
     <html lang={siteConfig.language} className={`${inter.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col">
-        <CookieConsent />
+        <CookieConsent gaId={getGoogleAnalyticsId()} />
         <WebsiteJsonLd />
         <Header />
         <main className="flex-1">{children}</main>

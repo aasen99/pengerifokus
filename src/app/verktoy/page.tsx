@@ -114,6 +114,7 @@ export default function VerktoyPage() {
 
       <HubCrossLinks
         links={[
+          { href: "/emner", label: "Emner" },
           { href: "/guider", label: "Guider" },
           { href: "/guider/prosentregning", label: "Prosentregning" },
           { href: "/ordbok", label: "Ordbok" },

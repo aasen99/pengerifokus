@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { EIE_LEIE_DISCLAIMER, EIE_LEIE_CASH_FLOW_NOTE, SCENARIO_PRESETS } from "@/data/eie-leie";
 import { formatCurrency } from "@/lib/calculators/loan";
 import {
@@ -52,6 +52,7 @@ export function EieLeieResultView({
   onEdit,
 }: EieLeieResultViewProps) {
   const [copied, setCopied] = useState(false);
+  const [taxView, setTaxView] = useState<"before" | "after">("after");
   const sensitivity = calculateSensitivityCases(input);
   const scenarioResults = (Object.keys(SCENARIO_PRESETS) as ScenarioPreset[]).map(
     (preset) => {
@@ -69,7 +70,26 @@ export function EieLeieResultView({
       };
     },
   );
-  const diff = Math.abs(Math.round(result.netWorthDifference));
+  const afterTax = taxView === "after";
+  const betterOption = afterTax ? result.betterOptionAfterTax : result.betterOption;
+  const diff = Math.abs(
+    Math.round(
+      afterTax ? result.netWorthDifferenceAfterTax : result.netWorthDifference,
+    ),
+  );
+  const ownerNetWorth = afterTax
+    ? result.owner.netWorthAfterTax
+    : result.owner.netWorth;
+  const renterNetWorth = afterTax
+    ? result.renter.netWorthAfterTax
+    : result.renter.netWorth;
+  const wealthLabel = afterTax ? "Formue etter anslått skatt" : "Formue før skatt";
+
+  useEffect(() => {
+    const heading = document.getElementById("eie-leie-resultat");
+    heading?.scrollIntoView({ behavior: "smooth", block: "start" });
+    heading?.focus();
+  }, []);
 
   const handleCopy = async () => {
     try {
@@ -86,23 +106,51 @@ export function EieLeieResultView({
   return (
     <div className="space-y-6">
       <div className="rounded-xl border border-stone-200 bg-white p-4 sm:p-8">
-        <h2 className="text-xl font-bold text-stone-900 sm:text-2xl">
-          {result.betterOption === "eie" && (
+        <div className="mb-4 flex flex-wrap gap-2">
+          <button
+            type="button"
+            onClick={() => setTaxView("after")}
+            className={`rounded-lg px-3 py-1.5 text-xs font-semibold ${
+              afterTax
+                ? "bg-orange-100 text-orange-800"
+                : "bg-stone-100 text-stone-700"
+            }`}
+          >
+            Etter anslått skatt
+          </button>
+          <button
+            type="button"
+            onClick={() => setTaxView("before")}
+            className={`rounded-lg px-3 py-1.5 text-xs font-semibold ${
+              !afterTax
+                ? "bg-orange-100 text-orange-800"
+                : "bg-stone-100 text-stone-700"
+            }`}
+          >
+            Før skatt
+          </button>
+        </div>
+        <h2
+          id="eie-leie-resultat"
+          tabIndex={-1}
+          className="scroll-mt-24 text-xl font-bold text-stone-900 outline-none sm:text-2xl"
+        >
+          {betterOption === "eie" && (
             <>
               Etter {input.horizonYears} år gir eie anslagsvis{" "}
-              {formatCurrency(diff)} høyere nettoformue enn leie.
+              {formatCurrency(diff)} høyere {wealthLabel.toLowerCase()} enn leie.
             </>
           )}
-          {result.betterOption === "leie" && (
+          {betterOption === "leie" && (
             <>
               Etter {input.horizonYears} år gir leie og investering anslagsvis{" "}
-              {formatCurrency(diff)} høyere nettoformue enn eie.
+              {formatCurrency(diff)} høyere {wealthLabel.toLowerCase()} enn eie.
             </>
           )}
-          {result.betterOption === "lik" && (
+          {betterOption === "lik" && (
             <>
-              Etter {input.horizonYears} år gir eie og leie omtrent lik
-              nettoformue basert på dine forutsetninger.
+              Etter {input.horizonYears} år gir eie og leie omtrent lik{" "}
+              {wealthLabel.toLowerCase()} basert på dine forutsetninger.
             </>
           )}
         </h2>
@@ -126,7 +174,18 @@ export function EieLeieResultView({
       </div>
 
       <div className="rounded-2xl border border-stone-200 bg-stone-50 px-5 py-4 text-sm leading-relaxed text-stone-700">
-        <p className="font-medium text-stone-900">Slik sammenligner vi</p>
+        <p className="font-medium text-stone-900">Dette er med / dette er ikke med</p>
+        <p className="mt-2">
+          Med: rentefradrag {input.interestDeductionPercent.toString().replace(".", ",")}
+          %, latent skatt på fondsgevinst {input.shareGainTaxPercent.toString().replace(".", ",")}
+          % når du velger etter skatt, og {input.assumeTaxFreeHomeSale
+            ? "antatt skattefritt boligsalg når eier- og botid er oppfylt"
+            : "anslått skatt på boliggevinst"}.
+        </p>
+        <p className="mt-2">
+          Ikke med: formueskatt, eiendomsskatt utover det du har lagt inn, gebyrer
+          som ikke er fylt inn, og at ASK utsetter skatten til gevinsten tas ut.
+        </p>
         <p className="mt-2">{EIE_LEIE_CASH_FLOW_NOTE}</p>
       </div>
 
@@ -151,6 +210,10 @@ export function EieLeieResultView({
               value={formatCurrency(result.owner.totalInterestPaid)}
             />
             <ResultRow
+              label="Skatteverdi av renter (22 %)"
+              value={formatCurrency(result.owner.interestTaxBenefit)}
+            />
+            <ResultRow
               label="Betalte avdrag"
               value={formatCurrency(result.owner.totalPrincipalPaid)}
             />
@@ -170,9 +233,21 @@ export function EieLeieResultView({
                 value={formatCurrency(result.owner.ownerInvestmentValue)}
               />
             )}
+            {result.owner.ownerInvestmentValue > 0 && (
+              <ResultRow
+                label="Latent skatt på fondsgevinst"
+                value={formatCurrency(result.owner.latentFundTax)}
+              />
+            )}
+            {!input.assumeTaxFreeHomeSale && (
+              <ResultRow
+                label="Anslått skatt ved boligsalg"
+                value={formatCurrency(result.owner.homeSaleTax)}
+              />
+            )}
             <ResultRow
-              label="Nettoformue"
-              value={formatCurrency(result.owner.netWorth)}
+              label={wealthLabel}
+              value={formatCurrency(ownerNetWorth)}
               emphasize
             />
           </div>
@@ -202,8 +277,12 @@ export function EieLeieResultView({
               value={formatCurrency(result.renter.depositReturned)}
             />
             <ResultRow
-              label="Nettoformue"
-              value={formatCurrency(result.renter.netWorth)}
+              label="Latent skatt på fondsgevinst"
+              value={formatCurrency(result.renter.latentFundTax)}
+            />
+            <ResultRow
+              label={wealthLabel}
+              value={formatCurrency(renterNetWorth)}
               emphasize
             />
           </div>

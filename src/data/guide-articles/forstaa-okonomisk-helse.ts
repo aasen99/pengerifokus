@@ -9,7 +9,7 @@ export const forstaaOkonomiskHelse: GuideArticleContent = {
       heading: "Hva mener vi med økonomisk helse?",
       paragraphs: [
         "Økonomisk helse er hvor godt privatøkonomien din tåler hverdagen og uventede hendelser. Du trenger ikke være rik for å ha god økonomisk helse. Det handler om balanse mellom inntekt, utgifter, gjeld og sparing.",
-        "En person med middels lønn og god buffer kan være mer robust enn en med høy inntekt, høy gjeld og ingen oversikt.",
+        "En person med middels lønn og god [bufferkonto](/ordbok/bufferkonto) kan være mer robust enn en med høy inntekt, høy gjeld og ingen oversikt.",
       ],
     },
     {
@@ -48,7 +48,7 @@ export const forstaaOkonomiskHelse: GuideArticleContent = {
       bullets: [
         "Skaff oversikt: vet du omtrent hva som går ut hver måned?",
         "Bygg en liten buffer, selv noen tusenlapper reduserer stress",
-        "Prioriter dyr gjeld: forbruksgjeld med høy rente bør ofte ned først",
+        "Prioriter dyr gjeld: [forbruksgjeld](/ordbok/forbruksgjeld) med høy rente bør ofte ned først",
       ],
     },
     {
@@ -64,5 +64,6 @@ export const forstaaOkonomiskHelse: GuideArticleContent = {
     { label: "Bygg bufferkonto", href: "/guider/bygg-bufferkonto" },
     { label: "Betal ned dyr gjeld", href: "/guider/betal-ned-dyr-gjeld" },
     { label: "Bufferkonto i ordboken", href: "/ordbok/bufferkonto" },
+    { label: "Emne: budsjett", href: "/emner/budsjett" },
   ],
 };

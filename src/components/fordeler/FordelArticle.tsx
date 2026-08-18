@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Tag } from "@/components/ui/Tag";
 import { RelatedLinks } from "@/components/ui/RelatedLinks";
+import { renderTextWithLinks } from "@/lib/rich-text";
 import {
   FORDELSPROGRAMMER_TITLE,
   TILBUD_TITLE,
@@ -48,7 +49,7 @@ export function FordelArticle({ fordel, article, tilbud }: FordelArticleProps) {
           {article.title}
         </h1>
         <p className="mt-2 max-w-2xl text-base leading-relaxed text-stone-600">
-          {article.intro}
+          {renderTextWithLinks(article.intro)}
         </p>
         <p className="mt-2 text-sm text-stone-500">
           {article.readTimeMinutes} min lesetid · Sist kontrollert{" "}
@@ -103,7 +104,7 @@ export function FordelArticle({ fordel, article, tilbud }: FordelArticleProps) {
                   key={paragraph.slice(0, 48)}
                   className="mt-3 leading-relaxed text-stone-600"
                 >
-                  {paragraph}
+                  {renderTextWithLinks(paragraph)}
                 </p>
               ))}
               {section.bullets && (
@@ -114,7 +115,7 @@ export function FordelArticle({ fordel, article, tilbud }: FordelArticleProps) {
                       className="flex gap-3 leading-relaxed text-stone-600"
                     >
                       <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-orange-500" />
-                      <span>{item}</span>
+                      <span>{renderTextWithLinks(item)}</span>
                     </li>
                   ))}
                 </ul>
@@ -122,7 +123,7 @@ export function FordelArticle({ fordel, article, tilbud }: FordelArticleProps) {
               {section.tip && (
                 <div className="mt-4 rounded-xl border border-orange-200 bg-orange-50 px-4 py-3 text-sm text-stone-700">
                   <span className="font-semibold text-orange-800">Tips: </span>
-                  {section.tip}
+                  {renderTextWithLinks(section.tip)}
                 </div>
               )}
             </section>
@@ -140,7 +141,7 @@ export function FordelArticle({ fordel, article, tilbud }: FordelArticleProps) {
               <div key={item.question}>
                 <dt className="font-medium text-stone-900">{item.question}</dt>
                 <dd className="mt-1.5 text-sm leading-relaxed text-stone-600">
-                  {item.answer}
+                  {renderTextWithLinks(item.answer)}
                 </dd>
               </div>
             ))}

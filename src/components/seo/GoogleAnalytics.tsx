@@ -1,11 +1,6 @@
 import Script from "next/script";
-import { getGoogleAnalyticsId } from "@/lib/site";
 
-export function GoogleAnalytics() {
-  const gaId = getGoogleAnalyticsId();
-
-  if (!gaId) return null;
-
+export function GoogleAnalytics({ gaId }: { gaId: string }) {
   return (
     <>
       <Script

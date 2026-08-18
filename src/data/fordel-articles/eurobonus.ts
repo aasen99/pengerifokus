@@ -35,7 +35,7 @@ export const eurobonus: FordelArticleContent = {
     {
       heading: "To poengtyper du må skille mellom",
       paragraphs: [
-        "EuroBonus skiller mellom bonuspoeng og nivåpoeng. SAS beskriver at bonuspoeng brukes til innløsning, mens nivåpoeng styrer medlemsnivå (Sølv, Gull, Diamant) og ikke kan brukes som betaling.",
+        "EuroBonus skiller mellom [bonuspoeng](/ordbok/bonuspoeng) og nivåpoeng. SAS beskriver at bonuspoeng brukes til innløsning, mens nivåpoeng styrer medlemsnivå (Sølv, Gull, Diamant) og ikke kan brukes som betaling.",
         "EuroBonus-vilkårene (gjeldende fra 1. september 2024) definerer i tillegg kvalifiserende flygninger som egen kategori for status. Bonusreiser, charter og enkelte rabattbilletter gir ifølge vilkårene normalt verken opptjening eller status.",
       ],
       bullets: [
@@ -252,5 +252,6 @@ export const eurobonus: FordelArticleContent = {
     { label: "Bonuspoeng (ordbok)", href: "/ordbok/bonuspoeng" },
     { label: "Velg riktig kredittkort", href: "/guider/velg-riktig-kredittkort" },
     { label: "Bonuskalkulator", href: "/verktoy/bonuskalkulator" },
+    { label: "Emne: bonus og fordeler", href: "/emner/bonus-og-fordeler" },
   ],
 };

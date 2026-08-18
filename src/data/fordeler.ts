@@ -14,7 +14,7 @@ export const fordeler: Fordel[] = [
       "Oversikt over Trumf-bonus, Trumf Pay, Trippel-Trumf, uttak til bankkonto og fordeler hos dagligvarekjeder og partnere.",
     type: "Bonusprogram",
     useCase: "Dagligvarer og hverdagskjøp",
-    createdAt: "2025-01-10",
+    createdAt: "2026-06-11",
     updatedAt: "2026-07-02",
   },
   {
@@ -26,7 +26,7 @@ export const fordeler: Fordel[] = [
       "Oversikt over Coop Medlem, kjøpeutbytte, medlemskonto, samvirkelagssatser, Extra-fordeler og Coop Mastercard.",
     type: "Medlemsfordel",
     useCase: "Dagligvarer og medlemsrabatter",
-    createdAt: "2025-01-10",
+    createdAt: "2026-06-11",
     updatedAt: "2026-07-02",
   },
   {
@@ -101,7 +101,7 @@ export const fordeler: Fordel[] = [
       "Felles poengvaluta hos Norwegian, Strawberry og REMA 1000. Slik tjener og bruker du Spenn, og hvorfor verdien varierer.",
     type: "Lojalitetsprogram",
     useCase: "Reise, hotell og dagligvarer",
-    createdAt: "2025-01-12",
+    createdAt: "2026-07-02",
     updatedAt: "2026-07-02",
   },
   {
@@ -174,7 +174,7 @@ export const fordeler: Fordel[] = [
       "EuroBonus forklart med offisielle kilder: poeng, nivåer, SkyTeam, Widerøe-endringen, Trumf og når poeng gir verdi for vanlige reisende.",
     type: "Flybonus",
     useCase: "Flyreiser og reise",
-    createdAt: "2025-01-12",
+    createdAt: "2026-06-11",
     updatedAt: "2026-07-10",
   },
   {
@@ -186,7 +186,7 @@ export const fordeler: Fordel[] = [
       "Oversikt over Revolut: planer, valutaveksling, RevPoints, reiseforsikring og når betalt abonnement lønner seg.",
     type: "Fintech",
     useCase: "Reise, valuta og dagligbank",
-    createdAt: "2025-01-15",
+    createdAt: "2026-06-11",
     updatedAt: "2026-07-02",
   },
   {
@@ -210,7 +210,7 @@ export const fordeler: Fordel[] = [
       "Oversikt over kredittkortfordeler: bonus, forsikring, gebyrer og når kortet faktisk lønner seg.",
     type: "Kredittkort",
     useCase: "Hverdagskjøp, reise og forsikring",
-    createdAt: "2025-01-18",
+    createdAt: "2026-06-11",
     updatedAt: "2026-07-02",
   },
 ];

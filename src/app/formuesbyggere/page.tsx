@@ -7,6 +7,7 @@ import {
   FORMUESBYGGERE_INTRO,
   FORMUESBYGGERE_TITLE,
 } from "@/data/formuesbyggere-labels";
+import { getFormuesbyggerSlugs } from "@/data/formuesbygger-articles";
 import { getFormuesbyggere } from "@/lib/content";
 import { createPageMetadata } from "@/lib/seo";
 
@@ -48,10 +49,14 @@ export default function FormuesbyggerePage() {
       />
 
       <PageHeader title={FORMUESBYGGERE_TITLE} description={FORMUESBYGGERE_INTRO} />
-      <FormuesbyggerList entries={entries} />
+      <FormuesbyggerList
+        entries={entries}
+        articleSlugs={getFormuesbyggerSlugs()}
+      />
 
       <HubCrossLinks
         links={[
+          { href: "/emner/sparing-og-investering", label: "Emne: sparing og investering" },
           { href: "/ordbok/sitater", label: "Sitater" },
           { href: "/guider", label: "Guider" },
           { href: "/verktoy", label: "Verktøy" },

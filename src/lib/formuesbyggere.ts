@@ -133,3 +133,65 @@ export function sortFormuesbyggere(
       });
   }
 }
+
+const RELATED_MIN = 3;
+const RELATED_MAX = 5;
+
+function relatedScore(current: Formuesbygger, candidate: Formuesbygger): number {
+  return (
+    (candidate.industry === current.industry ? 3 : 0) +
+    (candidate.buildType === current.buildType ? 2 : 0) +
+    (candidate.region === current.region ? 1 : 0)
+  );
+}
+
+/**
+ * 3–5 relaterte profiler: samme bransje veier tyngst, deretter byggetype.
+ * Fyller ut med øvrige profiler hvis det er for få treff.
+ */
+export function getRelatedFormuesbyggere(
+  current: Formuesbygger,
+  all: Formuesbygger[],
+): Formuesbygger[] {
+  const scored = all
+    .filter((entry) => entry.slug !== current.slug && entry.status === "published")
+    .map((entry) => ({
+      entry,
+      score: relatedScore(current, entry),
+      wealth: getWealthSortValue(entry.wealthEstimate),
+    }));
+
+  scored.sort((a, b) => {
+    if (b.score !== a.score) return b.score - a.score;
+    if (b.wealth !== a.wealth) return b.wealth - a.wealth;
+    return compareBySurname(a.entry, b.entry);
+  });
+
+  const preferredCount = scored.filter((item) => item.score >= 2).length;
+  const take = Math.min(
+    RELATED_MAX,
+    Math.max(RELATED_MIN, preferredCount),
+    scored.length,
+  );
+
+  return scored.slice(0, take).map((item) => item.entry);
+}
+
+export function getRelatedFormuesbyggerReason(
+  current: Formuesbygger,
+  related: Formuesbygger,
+): string {
+  const sameIndustry = related.industry === current.industry;
+  const sameBuildType = related.buildType === current.buildType;
+
+  if (sameIndustry && sameBuildType) {
+    return `${INDUSTRY_LABELS[related.industry]} · ${BUILD_TYPE_LABELS[related.buildType]}`;
+  }
+  if (sameIndustry) {
+    return `Samme bransje: ${INDUSTRY_LABELS[related.industry]}`;
+  }
+  if (sameBuildType) {
+    return `Samme byggetype: ${BUILD_TYPE_LABELS[related.buildType]}`;
+  }
+  return related.tagline;
+}

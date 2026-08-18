@@ -9,9 +9,9 @@ const statLabels: {
   { key: "tools", label: "kalkulatorer", href: "/verktoy" },
   { key: "guides", label: "guider", href: "/guider" },
   { key: "tilbud", label: "tilbud", href: "/tilbud" },
-  { key: "fordeler", label: "fordeler", href: "/fordeler" },
+  { key: "fordeler", label: "fordelsprogrammer", href: "/fordeler" },
   { key: "ordbok", label: "ordbok", href: "/ordbok" },
-  { key: "formuesbyggere", label: "profiler", href: "/formuesbyggere" },
+  { key: "formuesbyggere", label: "formuesbyggere", href: "/formuesbyggere" },
 ];
 
 export function HomeStats() {

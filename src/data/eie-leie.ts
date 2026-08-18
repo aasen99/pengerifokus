@@ -9,6 +9,10 @@ export const EIE_LEIE_INTRO_NOTE =
 export const EIE_LEIE_CASH_FLOW_NOTE =
   "Kalkulatoren sammenligner lik kontantstrøm måned for måned. Eier betaler terminbeløp, felleskostnader og vedlikehold. Leieren betaler husleie. Hvis eie koster mer enn leie, investerer leieren differansen. Hvis husleien er høyere, investerer eieren overskuddet. Avdrag er en utgift for eieren den måneden, men bygger egenkapital i boligen og investeres ikke på nytt.";
 
+export const INTEREST_DEDUCTION_RATE = 0.22;
+export const SHARE_GAIN_TAX_RATE = 0.3784;
+export const PROPERTY_GAIN_TAX_RATE = 0.22;
+
 export const DOCUMENT_FEE_RATE = 0.025;
 
 export const EIE_LEIE_TOOLTIPS = {
@@ -112,5 +116,9 @@ export function createDefaultEieLeieInput(): EieLeieInput {
     depositReturnPercent: 3,
     investmentReturnPercent: 6,
     investmentCostPercent: 0,
+    interestDeductionPercent: 22,
+    shareGainTaxPercent: 37.84,
+    assumeTaxFreeHomeSale: true,
+    propertyGainTaxPercent: 22,
   };
 }

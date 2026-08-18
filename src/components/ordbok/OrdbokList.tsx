@@ -1,19 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import type { OrdbokEntry } from "@/types/content";
 import { Tag } from "@/components/ui/Tag";
-import {
-  filterOrdbok,
-  getOrdbokCategories,
-  sortOrdbokEntries,
-} from "@/lib/ordbok";
+import { filterOrdbok, getOrdbokCategories } from "@/lib/ordbok";
 import { calculatorInputClassName } from "@/components/verktoy/calculator-ui";
 
 interface OrdbokListProps {
   entries: OrdbokEntry[];
+  initialQuery?: string;
 }
 
 function SearchIcon() {
@@ -35,44 +31,28 @@ function SearchIcon() {
   );
 }
 
-export function OrdbokList({ entries }: OrdbokListProps) {
-  const router = useRouter();
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-
-  const [query, setQuery] = useState("");
+export function OrdbokList({ entries, initialQuery = "" }: OrdbokListProps) {
+  const [query, setQuery] = useState(initialQuery);
   const [category, setCategory] = useState<string | null>(null);
-
-  const updateQueryInUrl = useCallback(
-    (nextQuery: string) => {
-      const params = new URLSearchParams(searchParams.toString());
-      const trimmed = nextQuery.trim();
-
-      if (trimmed) params.set("q", trimmed);
-      else params.delete("q");
-
-      const qs = params.toString();
-      router.replace(qs ? `${pathname}?${qs}` : pathname, { scroll: false });
-    },
-    [pathname, router, searchParams],
-  );
-
-  useEffect(() => {
-    setQuery(searchParams.get("q") ?? "");
-  }, [searchParams]);
 
   const categories = useMemo(() => getOrdbokCategories(entries), [entries]);
 
-  const filtered = useMemo(
-    () => sortOrdbokEntries(filterOrdbok(entries, query, category)),
+  const visibleIds = useMemo(
+    () => new Set(filterOrdbok(entries, query, category).map((entry) => entry.id)),
     [entries, query, category],
   );
 
+  const visibleCount = visibleIds.size;
   const hasFilters = query.trim().length > 0 || category !== null;
 
   return (
     <div className="space-y-5">
-      <div className="rounded-xl border border-stone-200 bg-white p-3.5">
+      <form
+        action="/ordbok"
+        method="get"
+        className="rounded-xl border border-stone-200 bg-white p-3.5"
+        onSubmit={(event) => event.preventDefault()}
+      >
         <label htmlFor="ordbok-search" className="sr-only">
           Søk i ordboken
         </label>
@@ -83,21 +63,16 @@ export function OrdbokList({ entries }: OrdbokListProps) {
           <input
             id="ordbok-search"
             type="search"
+            name="q"
             value={query}
-            onChange={(e) => {
-              setQuery(e.target.value);
-              updateQueryInUrl(e.target.value);
-            }}
+            onChange={(e) => setQuery(e.target.value)}
             placeholder="Søk begrep, forklaring eller emne…"
             className={`${calculatorInputClassName} pl-10 pr-10`}
           />
           {query && (
             <button
               type="button"
-              onClick={() => {
-                setQuery("");
-                updateQueryInUrl("");
-              }}
+              onClick={() => setQuery("")}
               className="absolute inset-y-0 right-3 text-sm font-medium text-stone-500 hover:text-stone-800"
               aria-label="Tøm søk"
             >
@@ -133,20 +108,25 @@ export function OrdbokList({ entries }: OrdbokListProps) {
             </button>
           ))}
         </div>
-      </div>
+      </form>
 
       <p className="text-sm text-stone-600">
-        {filtered.length} {filtered.length === 1 ? "begrep" : "begreper"}
+        {visibleCount} {visibleCount === 1 ? "begrep" : "begreper"}
         {hasFilters ? " funnet" : " i ordboken"}
       </p>
 
-      {filtered.length > 0 ? (
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {filtered.map((entry) => (
+      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {entries.map((entry) => {
+          const visible = visibleIds.has(entry.id);
+
+          return (
             <Link
               key={entry.id}
               href={`/ordbok/${entry.slug}`}
-              className="group rounded-xl border border-stone-200 bg-white p-3.5 transition-colors hover:border-orange-300"
+              hidden={!visible}
+              className={`group rounded-xl border border-stone-200 bg-white p-3.5 transition-colors hover:border-orange-300 ${
+                visible ? "" : "hidden"
+              }`}
             >
               <Tag>{entry.category}</Tag>
               <h2 className="mt-2 text-base font-semibold text-stone-900 group-hover:text-orange-700">
@@ -156,9 +136,11 @@ export function OrdbokList({ entries }: OrdbokListProps) {
                 {entry.definition}
               </p>
             </Link>
-          ))}
-        </div>
-      ) : (
+          );
+        })}
+      </div>
+
+      {visibleCount === 0 && (
         <div className="rounded-xl border border-dashed border-stone-300 bg-stone-50 px-6 py-10 text-center">
           <p className="font-medium text-stone-900">Ingen treff</p>
           <p className="mt-2 text-sm text-stone-600">
@@ -170,7 +152,6 @@ export function OrdbokList({ entries }: OrdbokListProps) {
               onClick={() => {
                 setQuery("");
                 setCategory(null);
-                updateQueryInUrl("");
               }}
               className="mt-4 text-sm font-semibold text-orange-600 hover:text-orange-700"
             >

@@ -48,7 +48,7 @@ export const coop: FordelArticleContent = {
     {
       heading: "Slik fungerer kjøpeutbytte",
       paragraphs: [
-        "Kjøpeutbytte er penger du får tilbake basert på handel i Coop. Coop beskriver det som en andel av kjøpesummen. Minimumssatsen er 1 %, og du opptjener når du handler og registrerer medlemskapet med Coop-appen, medlemskort eller løsninger som Coop Mastercard.",
+        "[Kjøpeutbytte](/ordbok/kjopeutbytte) er penger du får tilbake basert på handel i Coop. Coop beskriver det som en andel av kjøpesummen. Minimumssatsen er 1 %, og du opptjener når du handler og registrerer medlemskapet med Coop-appen, medlemskort eller løsninger som Coop Mastercard.",
         "Kjøpeutbytte settes inn på medlemskonto og overføres normalt én gang i året. Coop oppgir at kjøpeutbyttet blir tilgjengelig året etter opptjeningsåret. Flere samvirkelag godskriver i januar, mens Coop kundeservice også oppgir utbetaling i februar året etter.",
       ],
       bullets: [
@@ -132,7 +132,7 @@ export const coop: FordelArticleContent = {
       heading: "Coop Mastercard",
       paragraphs: [
         "Coop Mastercard fungerer som medlemskort og kredittkort. Coop oppgir 1 % medlemsbonus på alle kjøp i Coop sine butikker, med bonusgrense på 2 500 kr per år. Bonus gjelder ikke konkurrerende dagligvare- eller byggevareforretninger.",
-        "Kortet har ingen årsavgift og kan inkludere reiseforsikring når minst 50 % av reisens kostnader betales med kortet. Effektiv rente er oppgitt til 25,6 %. Coop skriver at kortet er mest lønnsomt når hele fakturaen betales ved forfall.",
+        "Kortet har ingen årsavgift og kan inkludere reiseforsikring når minst 50 % av reisens kostnader betales med kortet. [Effektiv rente](/ordbok/effektiv-rente) er oppgitt til 25,6 %. Coop skriver at kortet er mest lønnsomt når hele fakturaen betales ved forfall.",
       ],
       bullets: [
         "1 % medlemsbonus i Coop, maks 2 500 kr bonus per år",
@@ -260,5 +260,7 @@ export const coop: FordelArticleContent = {
     { label: "Se Coop-tilbud vi har samlet", href: "/tilbud?program=coop" },
     { label: "Trumf, bonusprogram hos NorgesGruppen", href: "/fordeler/trumf" },
     { label: "Kredittkortfordeler", href: "/fordeler/kredittkortfordeler" },
+    { label: "Kjøpeutbytte i ordboken", href: "/ordbok/kjopeutbytte" },
+    { label: "Emne: bonus og fordeler", href: "/emner/bonus-og-fordeler" },
   ],
 };

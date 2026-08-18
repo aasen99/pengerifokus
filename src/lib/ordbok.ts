@@ -1,8 +1,8 @@
 import type { OrdbokEntry } from "@/types/content";
-import { normalizeTilbudSearchText } from "@/lib/tilbud";
+import { normalizeSearchText } from "@/lib/normalize-search";
 
 function matchesOrdbokQuery(entry: OrdbokEntry, query: string): boolean {
-  const searchable = normalizeTilbudSearchText(
+  const searchable = normalizeSearchText(
     [
       entry.term,
       entry.definition,
@@ -11,7 +11,7 @@ function matchesOrdbokQuery(entry: OrdbokEntry, query: string): boolean {
     ].join(" "),
   );
 
-  const tokens = normalizeTilbudSearchText(query)
+  const tokens = normalizeSearchText(query)
     .split(/\s+/)
     .filter(Boolean);
 
