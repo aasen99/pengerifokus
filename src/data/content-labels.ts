@@ -5,5 +5,8 @@ export const TILBUD_TITLE = "Tilbud";
 export const FORDELSPROGRAMMER_INTRO =
   "Lær hva medlems- og bonusprogrammene er, og når de kan passe deg. Dette er ikke en liste over konkrete rabatter.";
 
+export const TILBUD_SEO_TITLE =
+  "Medlemsrabatter på tvers av fordelsprogrammer";
+
 export const TILBUD_INTRO =
-  "Konkrete rabatter og bonuser du kan bruke i dag. Filtrer etter fordelsprogram, kategori eller partner.";
+  "Konkrete rabatter og bonuser samlet på tvers av fordelsprogrammer. Vi utvider oversikten løpende. Filtrer etter program, kategori eller partner.";

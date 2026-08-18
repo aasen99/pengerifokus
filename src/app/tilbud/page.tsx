@@ -4,27 +4,32 @@ import { TilbudList } from "@/components/tilbud/TilbudList";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { HubCrossLinks } from "@/components/seo/HubCrossLinks";
 import { HubPageSeo } from "@/components/seo/HubPageSeo";
-import { TILBUD_INTRO, TILBUD_TITLE } from "@/data/content-labels";
+import {
+  TILBUD_INTRO,
+  TILBUD_SEO_TITLE,
+} from "@/data/content-labels";
 import { getFordeler, getTilbud } from "@/lib/content";
 import { createPageMetadata } from "@/lib/seo";
 
 const pageDescription =
-  "Medlemsrabatter og bonuser du kan bruke nå: OBOS, Trumf, Usbl, Klarna, EuroBonus, NAF og studentrabatter. Søk og filtrer etter fordelsprogram.";
+  "Samlet oversikt over rabatter og bonuser fra ulike fordelsprogrammer. Vi utvider listen løpende. Filtrer etter program, kategori eller partner.";
 
 export const metadata: Metadata = createPageMetadata({
-  title: TILBUD_TITLE,
+  title: TILBUD_SEO_TITLE,
   description: pageDescription,
   path: "/tilbud",
   keywords: [
+    "medlemsrabatter",
+    "tilbudsoversikt",
+    "fordelsprogrammer",
+    "medlemstilbud",
+    "medlemsfordeler",
+    "cashback",
     "OBOS rabatt",
     "Trumf netthandel",
-    "Trumf-bonus",
-    "Usbl medlemsfordeler",
-    "Klarna cashback",
     "EuroBonus tilbud",
-    "NAF rabatt",
+    "Klarna cashback",
     "studentrabatt",
-    "medlemstilbud",
   ],
 });
 
@@ -38,7 +43,7 @@ export default function TilbudPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-10">
       <HubPageSeo
-        name={TILBUD_TITLE}
+        name={TILBUD_SEO_TITLE}
         description={pageDescription}
         path="/tilbud"
         items={fordeler
@@ -52,7 +57,7 @@ export default function TilbudPage() {
           }))}
       />
 
-      <PageHeader title={TILBUD_TITLE} description={TILBUD_INTRO} />
+      <PageHeader title={TILBUD_SEO_TITLE} description={TILBUD_INTRO} />
 
       <Suspense
         fallback={
