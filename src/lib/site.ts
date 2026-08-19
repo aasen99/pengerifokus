@@ -170,4 +170,10 @@ export const publicRoutes: PublicRoute[] = [
   },
   ...formuesbyggerRoutes,
   ...emneRoutes,
+  {
+    path: "/om",
+    priority: 0.7,
+    changeFrequency: "yearly",
+    lastModified: "2026-08-19",
+  },
 ];

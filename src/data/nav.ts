@@ -17,6 +17,7 @@ export const secondaryNav: NavItem[] = [
 
 export const extraNav: NavItem[] = [
   { href: "/emner", label: "Emner" },
+  { href: "/om", label: "Om Penger i Fokus" },
 ];
 
 export const popularTools: NavItem[] = [

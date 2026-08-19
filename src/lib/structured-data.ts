@@ -202,6 +202,34 @@ export function getHowToJsonLd({
   };
 }
 
+export function getAboutPageJsonLd({
+  name,
+  description,
+  path,
+}: {
+  name: string;
+  description: string;
+  path: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    name,
+    description,
+    url: absoluteUrl(path),
+    inLanguage: siteConfig.language,
+    isPartOf: {
+      "@type": "WebSite",
+      name: siteConfig.name,
+      url: getSiteUrl(),
+    },
+    breadcrumb: getBreadcrumbJsonLd([
+      { name: "Start", path: "/" },
+      { name, path },
+    ]),
+  };
+}
+
 export function getCollectionPageJsonLd({
   name,
   description,

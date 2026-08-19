@@ -53,6 +53,7 @@ export function Footer() {
             {secondaryNav.map((item) => (
               <FooterLink key={item.href} href={item.href} label={item.label} />
             ))}
+            <FooterLink href="/om" label="Om Penger i Fokus" />
           </FooterColumn>
 
           <FooterColumn title="Populære verktøy">
@@ -67,6 +68,9 @@ export function Footer() {
             © {new Date().getFullYear()} Penger i Fokus. Informasjonen er
             veiledende og erstatter ikke individuell rådgivning.
           </p>
+          <Link href="/om" className="text-stone-600 hover:text-orange-600">
+            Om
+          </Link>
           <CookiePreferencesLink />
         </div>
       </div>
