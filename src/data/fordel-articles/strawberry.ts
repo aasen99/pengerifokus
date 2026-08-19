@@ -279,6 +279,7 @@ export const strawberry: FordelArticleContent = {
     },
     { label: "THON+: Gold, Platinum og Black", href: "/fordeler/thon-plus" },
     { label: "Spenn, felles poengvaluta", href: "/fordeler/spenn" },
+    { label: "LOfavør, hotellrabatt", href: "/fordeler/lofavor" },
     { label: "Norwegian Reward", href: "/fordeler/norwegian-reward" },
     { label: "EuroBonus, SAS sitt bonusprogram", href: "/fordeler/eurobonus" },
     { label: "Tilbud og rabatter", href: "/tilbud" },

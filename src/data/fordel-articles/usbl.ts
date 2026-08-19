@@ -131,6 +131,7 @@ export const usbl: FordelArticleContent = {
     { label: "Usbl-tilbud, oversikt", href: "/tilbud?program=usbl" },
     { label: "OBOS, medlemsfordeler", href: "/fordeler/obos" },
     { label: "NAF, medlemsfordeler", href: "/fordeler/naf" },
+    { label: "LOfavør", href: "/fordeler/lofavor" },
     { label: "Trumf, bonusprogram", href: "/fordeler/trumf" },
     { label: "Alle fordelsprogrammer", href: "/fordeler" },
     { label: "Emne: bolig", href: "/emner/bolig" },

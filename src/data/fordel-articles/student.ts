@@ -73,6 +73,7 @@ export const student: FordelArticleContent = {
       heading: "Fagforeninger for studenter",
       paragraphs: [
         "Mange fagforeninger har billige studentmedlemskap, for eksempel Tekna og NITO for teknologi- og ingeniørstudenter. Kontingenten er lav, og verdien ligger ofte i inkludert forsikring, juridisk bistand, kurs og karriere, ikke i shoppingrabatter.",
+        "Er du medlem i et LO-forbund, får du tilgang til [LOfavør](/fordeler/lofavor). Elevmedlemmer står ofte uten den kollektive innboforsikringen, mens studenter og lærlinger kan ha egne vilkår på hotell, Hertz og Mastercard Ung. Sjekk Min side før du regner med dekningen.",
         "Har du rett til medlemskap i et forbund knyttet til studieretningen din, er det verdt å regne på forsikringsverdien alene før du avviser kontingenten.",
       ],
     },
@@ -157,6 +158,7 @@ export const student: FordelArticleContent = {
   relatedLinks: [
     { label: "Studentrabatter, oversikt", href: "/tilbud?student=1" },
     { label: "Bankfordeler", href: "/fordeler/bankfordeler" },
+    { label: "LOfavør", href: "/fordeler/lofavor" },
     { label: "Klarna cashback", href: "/fordeler/klarna" },
     { label: "Trumf, bonusprogram", href: "/fordeler/trumf" },
     { label: "Alle fordelsprogrammer", href: "/fordeler" },

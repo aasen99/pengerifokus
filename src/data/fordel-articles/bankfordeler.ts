@@ -199,7 +199,7 @@ export const bankfordeler: FordelArticleContent = {
     {
       question: "Kan jeg få Nordea Premium via fagforening?",
       answer:
-        "Ja, enkelte fagforeningsmedlemskap kan gi tilgang til Premium eller Premium Next med bedre vilkår. Nordea oppgir blant annet NITO, YS, Unio og Finansforbundet som medlemsbanker.",
+        "Ja, enkelte fagforeningsmedlemskap kan gi tilgang til Premium eller Premium Next med bedre vilkår. Nordea oppgir blant annet NITO, YS, Unio og Finansforbundet som medlemsbanker. LO-medlemmer har et eget spor via [LOfavør](/fordeler/lofavor) og SpareBank 1.",
     },
     {
       question: "Er bankfordeler det samme som Trumf eller Coop?",
@@ -237,6 +237,7 @@ export const bankfordeler: FordelArticleContent = {
       href: "/guider/bankenes-fordelsprogrammer",
     },
     { label: "Kredittkortfordeler", href: "/fordeler/kredittkortfordeler" },
+    { label: "LOfavør", href: "/fordeler/lofavor" },
     { label: "Velg riktig kredittkort", href: "/guider/velg-riktig-kredittkort" },
     { label: "EuroBonus", href: "/fordeler/eurobonus" },
     { label: "Revolut", href: "/fordeler/revolut" },

@@ -4,7 +4,7 @@ const paths = [
   {
     href: "/tilbud",
     title: "Finn medlemsrabatter",
-    description: "OBOS, Trumf, Usbl, Klarna, EuroBonus og mer.",
+    description: "OBOS, Trumf, Usbl, LOfavør, Klarna, EuroBonus og mer.",
   },
   {
     href: "/verktoy",

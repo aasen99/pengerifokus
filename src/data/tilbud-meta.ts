@@ -3,7 +3,7 @@
  * Oppdateres når tilbud verifiseres eller endres hos partner.
  */
 export const tilbudListMeta = {
-  lastUpdated: "2026-08-18",
+  lastUpdated: "2026-08-19",
   sources: [
     "OBOS medlemsfordeler",
     "offisielle Trumf Netthandel-sider",
@@ -15,5 +15,6 @@ export const tilbudListMeta = {
     "Spenn Shopping (spenn.com)",
     "Usbl medlemsfordeler",
     "offisielle studentrabatter hos partnere",
+    "LOfavør medlemsfordeler",
   ],
 };

@@ -7,6 +7,7 @@ import { eurobonusTilbud } from "@/data/tilbud-eurobonus";
 import { spennTilbud } from "@/data/tilbud-spenn";
 import { usblTilbud } from "@/data/tilbud-usbl";
 import { studentTilbud } from "@/data/tilbud-student";
+import { lofavorTilbud } from "@/data/tilbud-lofavor";
 import { tilbudListMeta } from "@/data/tilbud-meta";
 
 export { tilbudListMeta };
@@ -546,4 +547,5 @@ export const tilbud: Tilbud[] = [
   ...spennTilbud,
   ...usblTilbud,
   ...studentTilbud,
+  ...lofavorTilbud,
 ];

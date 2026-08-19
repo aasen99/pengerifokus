@@ -51,7 +51,7 @@ export const bankenesFordelsprogrammer: GuideArticleContent = {
         "4. Legg til kostnad ved bytte: tid, dokumenter, eventuelt gebyr",
         "5. Bli bare hvis totalprisen, inkludert lojalitetskostnaden, er lavere",
       ],
-      tip: "Trenger du fakta om DNB Ung, Pluss, SAGA, Nordea Premium og fagforeningsavtaler, se den samlede oversikten under Bankfordeler. Denne guiden er beslutningsverktøyet, ikke katalogsiden.",
+      tip: "Trenger du fakta om DNB Ung, Pluss, SAGA, Nordea Premium, LOfavør og andre fagforeningsavtaler, se Bankfordeler og [LOfavør](/fordeler/lofavor). Denne guiden er beslutningsverktøyet, ikke katalogsiden.",
     },
     {
       heading: "Når fordelene likevel kan lønne seg",
@@ -81,6 +81,7 @@ export const bankenesFordelsprogrammer: GuideArticleContent = {
   ],
   relatedLinks: [
     { label: "Bankfordeler, full oversikt", href: "/fordeler/bankfordeler" },
+    { label: "LOfavør, SpareBank 1", href: "/fordeler/lofavor" },
     { label: "Velg riktig kredittkort", href: "/guider/velg-riktig-kredittkort" },
     { label: "Kredittkort eller debetkort?", href: "/guider/kredittkort-eller-debetkort" },
     { label: "Kredittkortfordeler", href: "/fordeler/kredittkortfordeler" },

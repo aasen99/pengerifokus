@@ -68,6 +68,19 @@ export const fordeler: Fordel[] = [
     updatedAt: "2026-07-02",
   },
   {
+    id: "fordel-18",
+    slug: "lofavor",
+    status: "published",
+    featured: true,
+    name: "LOfavør",
+    description:
+      "Fordelsprogrammet til LO-forbundene: innbo, bank og lån via SpareBank 1, strøm hos Fjordkraft, kredittkort og rabatter på reise og hotell.",
+    type: "Medlemsfordel",
+    useCase: "Fagforening, bank, forsikring og hverdagsrabatter",
+    createdAt: "2026-08-19",
+    updatedAt: "2026-08-19",
+  },
+  {
     id: "fordel-9",
     slug: "klarna",
     status: "published",

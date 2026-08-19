@@ -57,6 +57,7 @@ export const kredittkortfordeler: FordelArticleContent = {
       bullets: [
         "Trumf Kredittkort: opptil 2 % Trumf-bonus hos NorgesGruppen, 0 kr årsavgift, men høy rente ved saldo",
         "Coop Mastercard: medlemsbonus i Coop med årlig tak på opptjening",
+        "LOfavør Mastercard: ingen årsgebyr ifølge LOfavør, reise- og kjøpsforsikring, men høy rente ved saldo",
         "EuroBonus-kort: poeng på kjøp og fly, best verdi på bonusreiser",
         "Cashback-kort: enkel prosent tilbake, men sjekk unntak og maksimum",
       ],
@@ -64,7 +65,7 @@ export const kredittkortfordeler: FordelArticleContent = {
     {
       heading: "Forsikring og beskyttelse",
       paragraphs: [
-        "Mange kort inkluderer reiseforsikring når du betaler minst 50 % av reisen med kortet, men vilkårene varierer. Sjekk om du allerede har dekning gjennom jobb, OBOS, NAF eller annet medlemskap før du betaler for et kort bare for forsikringen.",
+        "Mange kort inkluderer reiseforsikring når du betaler minst 50 % av reisen med kortet, men vilkårene varierer. Sjekk om du allerede har dekning gjennom jobb, OBOS, NAF, LOfavør eller annet medlemskap før du betaler for et kort bare for forsikringen.",
       ],
       bullets: [
         "Reiseforsikring: dekker ofte avbestilling, sykdom og bagasje, med unntak",
@@ -105,7 +106,7 @@ export const kredittkortfordeler: FordelArticleContent = {
     {
       question: "Hvilket kredittkort gir mest bonus i Norge?",
       answer:
-        "Det avhenger av hvor du handler. Trumf Kredittkort er sterkt på dagligvarer hos NorgesGruppen. Coop Mastercard passer Coop-kunder. EuroBonus-kort passer hyppige SAS-flygere. Ingen kort er best for alle.",
+        "Det avhenger av hvor du handler. Trumf Kredittkort er sterkt på dagligvarer hos NorgesGruppen. Coop Mastercard passer Coop-kunder. LOfavør Mastercard passer LO-medlemmer som betaler hele fakturaen. EuroBonus-kort passer hyppige SAS-flygere. Ingen kort er best for alle.",
     },
     {
       question: "Er kredittkort med 0 kr årsavgift alltid best?",
@@ -149,6 +150,7 @@ export const kredittkortfordeler: FordelArticleContent = {
     },
     { label: "Velg riktig kredittkort", href: "/guider/velg-riktig-kredittkort" },
     { label: "Bankfordeler", href: "/fordeler/bankfordeler" },
+    { label: "LOfavør Mastercard", href: "/fordeler/lofavor" },
     { label: "Bonuskalkulator", href: "/verktoy/bonuskalkulator" },
     { label: "Trumf Kredittkort", href: "/fordeler/trumf" },
     { label: "Coop Mastercard", href: "/fordeler/coop" },

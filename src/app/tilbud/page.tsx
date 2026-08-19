@@ -43,6 +43,7 @@ export const metadata: Metadata = createPageMetadata({
     "EuroBonus tilbud",
     "Klarna cashback",
     "studentrabatt",
+    "LOfavør",
   ],
 });
 

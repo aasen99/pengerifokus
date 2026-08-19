@@ -6,6 +6,7 @@ import { eurobonus } from "./eurobonus";
 import { hotellbonus } from "./hotellbonus";
 import { klarna } from "./klarna";
 import { kredittkortfordeler } from "./kredittkortfordeler";
+import { lofavor } from "./lofavor";
 import { naf } from "./naf";
 import { obos } from "./obos";
 import { norwegianReward } from "./norwegian-reward";
@@ -37,6 +38,7 @@ const fordelArticles: Record<string, FordelArticleContent> = {
   hotellbonus: withReadTime(hotellbonus),
   klarna: withReadTime(klarna),
   kredittkortfordeler: withReadTime(kredittkortfordeler),
+  lofavor: withReadTime(lofavor),
   naf: withReadTime(naf),
   "norwegian-reward": withReadTime(norwegianReward),
   obos: withReadTime(obos),

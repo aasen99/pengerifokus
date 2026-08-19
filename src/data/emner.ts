@@ -422,7 +422,7 @@ export const emner: EmneHub[] = [
     slug: "bonus-og-fordeler",
     title: "Bonus og fordeler",
     description:
-      "Trumf, Coop, EuroBonus, Klarna cashback og studentrabatter. Oversikt over bonuspoeng, kjøpeutbytte og når programmene faktisk lønner seg.",
+      "Trumf, Coop, EuroBonus, Klarna cashback, LOfavør og studentrabatter. Oversikt over bonuspoeng, kjøpeutbytte og når programmene faktisk lønner seg.",
     keywords: [
       "bonus",
       "fordelsprogram",
@@ -430,6 +430,7 @@ export const emner: EmneHub[] = [
       "bonuspoeng",
       "trumf",
       "eurobonus",
+      "lofavor",
       "kjøpeutbytte",
     ],
     intro: [
@@ -472,7 +473,7 @@ export const emner: EmneHub[] = [
           {
             href: "/fordeler",
             label: "Alle fordelsprogrammer",
-            description: "Trumf, Coop, OBOS, EuroBonus, student og flere.",
+            description: "Trumf, Coop, OBOS, LOfavør, EuroBonus, student og flere.",
           },
           {
             href: "/tilbud",
@@ -538,6 +539,12 @@ export const emner: EmneHub[] = [
             href: "/fordeler/student",
             label: "Studentrabatter",
             description: "Bank, reise, programvare og hvordan du sjekker at rabatten er reell.",
+          },
+          {
+            href: "/fordeler/lofavor",
+            label: "LOfavør",
+            description:
+              "LO-forbundenes program: innbo, SpareBank 1, strøm og reiserabatter.",
           },
         ],
       },

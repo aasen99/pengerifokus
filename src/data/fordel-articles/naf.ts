@@ -110,6 +110,7 @@ export const naf: FordelArticleContent = {
   relatedLinks: [
     { label: "NAF-tilbud, oversikt", href: "/tilbud?program=naf" },
     { label: "OBOS, medlemsfordeler", href: "/fordeler/obos" },
+    { label: "LOfavør", href: "/fordeler/lofavor" },
     { label: "Lånets reelle verdi", href: "/verktoy/lanets-reelle-verdi" },
     { label: "Alle fordelsprogrammer", href: "/fordeler" },
   ],
