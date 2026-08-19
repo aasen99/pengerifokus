@@ -40,6 +40,18 @@ export const verktoy: Verktoy[] = [
     updatedAt: "2026-07-01",
   },
   {
+    id: "verktoy-20",
+    slug: "gjeldsbremsen",
+    status: "published",
+    featured: true,
+    name: "Gjeldsbremsen",
+    description:
+      "Se hvor mye gjelden faktisk faller når ny kreditt trekkes fra, og lag en plan for å unngå neste lån.",
+    category: "Gjeld",
+    createdAt: "2026-08-19",
+    updatedAt: "2026-08-19",
+  },
+  {
     id: "verktoy-6",
     slug: "sparekalkulator",
     status: "published",

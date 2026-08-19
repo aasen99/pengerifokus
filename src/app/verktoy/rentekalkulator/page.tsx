@@ -63,6 +63,7 @@ export default function RentekalkulatorPage() {
       <ToolRelatedGuides
         guides={[
           { label: "Betal ned dyr gjeld", href: "/guider/betal-ned-dyr-gjeld" },
+          { label: "Gjeldsbremsen", href: "/verktoy/gjeldsbremsen" },
           { label: "Nedbetalingskalkulator (flere lån)", href: "/verktoy/nedbetalingskalkulator" },
           { label: "Effektiv rente i ordboken", href: "/ordbok/effektiv-rente" },
           { label: "Emne: gjeld", href: "/emner/gjeld" },

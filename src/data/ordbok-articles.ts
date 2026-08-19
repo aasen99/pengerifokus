@@ -153,6 +153,7 @@ export const ordbokArticles: Record<string, OrdbokArticle> = {
         "Forbruksgjeld er selve gjelden. Refinansiering er å bytte den mot et billigere lån.",
     },
     relatedGuide: { label: "Betal ned dyr gjeld", href: "/guider/betal-ned-dyr-gjeld" },
+    relatedTool: { label: "Gjeldsbremsen", href: "/verktoy/gjeldsbremsen" },
     source: { label: "Finanstilsynet", url: finanstilsynet },
     lastVerified: "18. august 2026",
     lastModifiedIso: "2026-08-18",

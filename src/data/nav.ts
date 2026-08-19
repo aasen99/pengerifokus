@@ -21,6 +21,7 @@ export const extraNav: NavItem[] = [
 
 export const popularTools: NavItem[] = [
   { href: "/verktoy/okonomisk-rontgen", label: "Økonomisk røntgen" },
+  { href: "/verktoy/gjeldsbremsen", label: "Gjeldsbremsen" },
   { href: "/verktoy/eie-leie-kalkulator", label: "Eie vs. leie" },
   { href: "/verktoy/prosentkalkulator", label: "Prosentkalkulator" },
   { href: "/verktoy/sifo-kalkulator", label: "SIFO-kalkulator" },

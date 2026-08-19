@@ -113,6 +113,7 @@ export const betalNedDyrGjeld: GuideArticleContent = {
     },
   ],
   relatedLinks: [
+    { label: "Gjeldsbremsen", href: "/verktoy/gjeldsbremsen" },
     { label: "Nedbetalingskalkulator", href: "/verktoy/nedbetalingskalkulator" },
     { label: "Rentekalkulator", href: "/verktoy/rentekalkulator" },
     { label: "Kutt faste kostnader", href: "/guider/kutt-faste-kostnader" },

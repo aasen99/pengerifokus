@@ -58,6 +58,7 @@ export default function LanetsReelleVerdiPage() {
       <ToolRelatedGuides
         guides={[
           { label: "Inflasjon og gjeld", href: "/guider/inflasjon-og-gjeld" },
+          { label: "Gjeldsbremsen", href: "/verktoy/gjeldsbremsen" },
           { label: "Realrente i ordboken", href: "/ordbok/realrente" },
           { label: "Emne: gjeld", href: "/emner/gjeld" },
         ]}

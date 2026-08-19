@@ -210,6 +210,12 @@ export const emner: EmneHub[] = [
         heading: "Verktøy",
         links: [
           {
+            href: "/verktoy/gjeldsbremsen",
+            label: "Gjeldsbremsen",
+            description:
+              "Se reell gjeldsreduksjon og lag en plan for å unngå ny kreditt etter betaling.",
+          },
+          {
             href: "/verktoy/nedbetalingskalkulator",
             label: "Nedbetalingskalkulator",
             description:

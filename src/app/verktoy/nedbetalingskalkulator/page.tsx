@@ -69,6 +69,7 @@ export default function NedbetalingskalkulatorPage() {
       <ToolRelatedGuides
         guides={[
           { label: "Betal ned dyr gjeld", href: "/guider/betal-ned-dyr-gjeld" },
+          { label: "Gjeldsbremsen", href: "/verktoy/gjeldsbremsen" },
           { label: "Lavinemetode (ordbok)", href: "/ordbok/lavinemetode" },
           { label: "Snøballmetode (ordbok)", href: "/ordbok/snoballmetode" },
           { label: "Rentekalkulator (ett lån)", href: "/verktoy/rentekalkulator" },
