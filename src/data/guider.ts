@@ -168,6 +168,27 @@ export const guider: Guide[] = [
     updatedAt: "2026-08-17",
   },
   {
+    id: "guide-15",
+    slug: "stromregning-og-norgespris",
+    status: "published",
+    featured: true,
+    title: "Forstå strømregningen – og hvorfor Norgespris lønner seg",
+    description:
+      "Hva betyr nettleie, påslag og avgifter på strømregningen? Slik fungerer Norgespris, og hvorfor 50 øre/kWh ofte er smartere enn vanlig strømstøtte.",
+    category: "Budsjett",
+    tags: [
+      "strøm",
+      "strømregning",
+      "norgespris",
+      "nettleie",
+      "spotpris",
+      "strømstøtte",
+      "elavgift",
+    ],
+    createdAt: "2026-08-24",
+    updatedAt: "2026-08-24",
+  },
+  {
     id: "guide-12",
     slug: "prosentregning",
     status: "published",

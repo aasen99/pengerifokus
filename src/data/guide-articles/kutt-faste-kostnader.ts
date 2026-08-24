@@ -42,7 +42,7 @@ export const kuttFasteKostnader: GuideArticleContent = {
         "Streaming og media: behold én, pause resten",
         "Mobil og bredbånd: sammenlign abonnement, ofte billigere å bytte",
         "Forsikring: samme dekning finnes ofte billigere et annet sted",
-        "Strøm: fastpris vs. spot, sjekk om avtalen fortsatt er god",
+        "Strøm: sjekk Norgespris, påslag og om avtalen fortsatt er god – les guiden om strømregning og Norgespris",
         "Trening: bruker du medlemskapet? Hjemmetrening kan være nok",
         "Bank og kort: gebyrer og ubrukte tilleggstjenester",
         "Abonnementsbokser og apper: lett å abonnere, vanskelig å si opp",
@@ -91,6 +91,7 @@ export const kuttFasteKostnader: GuideArticleContent = {
     },
   ],
   relatedLinks: [
+    { label: "Strømregning og Norgespris", href: "/guider/stromregning-og-norgespris" },
     { label: "Betal ned dyr gjeld", href: "/guider/betal-ned-dyr-gjeld" },
     { label: "Bygg bufferkonto", href: "/guider/bygg-bufferkonto" },
     { label: "Sparekalkulator", href: "/verktoy/sparekalkulator" },
