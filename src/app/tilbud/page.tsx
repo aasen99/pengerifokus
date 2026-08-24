@@ -25,7 +25,7 @@ import {
 } from "@/lib/tilbud";
 
 const pageDescription =
-  "Samlet oversikt over rabatter og bonuser fra ulike fordelsprogrammer. Vi utvider listen løpende. Filtrer etter program, kategori eller partner.";
+  "Finn medlemsrabatter og cashback fra OBOS, Usbl, Trumf Netthandel, Klarna, EuroBonus, NAF, Coop og mer. Filtrer etter program, kategori eller partner.";
 
 export const metadata: Metadata = createPageMetadata({
   title: TILBUD_SEO_TITLE,
@@ -33,17 +33,27 @@ export const metadata: Metadata = createPageMetadata({
   path: "/tilbud",
   keywords: [
     "medlemsrabatter",
+    "medlemsrabatter norge",
+    "tilbud medlemskap",
     "tilbudsoversikt",
-    "fordelsprogrammer",
     "medlemstilbud",
     "medlemsfordeler",
-    "cashback",
+    "fordelsprogrammer rabatt",
+    "cashback norge",
     "OBOS rabatt",
+    "OBOS medlemsfordeler",
+    "Usbl rabatt",
     "Trumf netthandel",
-    "EuroBonus tilbud",
+    "Trumf bonus",
     "Klarna cashback",
+    "EuroBonus shopping",
+    "EuroBonus tilbud",
+    "NAF medlemsrabatt",
+    "Coop medlemsfordeler",
+    "Spenn tilbud",
+    "LOfavør rabatt",
     "studentrabatt",
-    "LOfavør",
+    "student tilbud",
   ],
 });
 
