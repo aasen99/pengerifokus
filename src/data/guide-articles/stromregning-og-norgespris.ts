@@ -180,6 +180,7 @@ export const stromregningOgNorgespris: Omit<
   conclusion:
     "Les regningen som tre deler. Lås kraftprisen med Norgespris hvis du vil ha forutsigbarhet. Optimaliser deretter påslag og nettleie – det er der du fortsatt har handlingsrom.",
   relatedLinks: [
+    { label: "Drivstoffpriser", href: "/guider/drivstoffpriser" },
     { label: "Kutt faste kostnader", href: "/guider/kutt-faste-kostnader" },
     { label: "Forstå økonomisk helse", href: "/guider/forstaa-okonomisk-helse" },
     { label: "SIFO-budsjett", href: "/guider/sifo-budsjett" },
