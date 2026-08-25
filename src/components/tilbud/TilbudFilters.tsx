@@ -1,10 +1,12 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import type { FormEvent } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { calculatorInputClassName } from "@/components/verktoy/calculator-ui";
 import {
   TILBUD_SORT_OPTIONS,
+  buildTilbudHref,
+  type TilbudFilterParams,
   type TilbudSortOption,
 } from "@/lib/tilbud-ui";
 
@@ -30,6 +32,8 @@ interface TilbudFiltersProps {
   partnerCount: number;
   offerCount: number;
 }
+
+const SEARCH_DEBOUNCE_MS = 300;
 
 function SearchIcon() {
   return (
@@ -62,31 +66,78 @@ export function TilbudFilters({
   offerCount,
 }: TilbudFiltersProps) {
   const router = useRouter();
+  const [searchInput, setSearchInput] = useState(query);
 
-  const submit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    const params = new URLSearchParams();
-    const nextQuery = String(data.get("q") ?? "").trim();
-    const nextProgram = String(data.get("program") ?? "");
-    const nextCategory = String(data.get("kategori") ?? "");
-    const nextStudent = data.get("student") === "1";
-    const nextSort = String(data.get("sortering") ?? "");
+  useEffect(() => {
+    setSearchInput(query);
+  }, [query]);
 
-    if (nextQuery) params.set("q", nextQuery);
-    if (nextProgram) params.set("program", nextProgram);
-    if (nextCategory) params.set("kategori", nextCategory);
-    if (nextStudent) params.set("student", "1");
-    if (nextSort && nextSort !== "rate-desc") params.set("sortering", nextSort);
+  const navigate = useCallback(
+    (overrides: Partial<TilbudFilterParams> = {}) => {
+      const nextQ =
+        overrides.q !== undefined ? overrides.q || undefined : query || undefined;
 
-    const qs = params.toString();
-    router.push(qs ? `/tilbud?${qs}` : "/tilbud");
+      router.replace(
+        buildTilbudHref({
+          q: nextQ,
+          program: overrides.program !== undefined ? overrides.program : program,
+          kategori:
+            overrides.kategori !== undefined ? overrides.kategori : category,
+          student:
+            overrides.student !== undefined ? overrides.student : includeStudent,
+          sortering:
+            overrides.sortering !== undefined ? overrides.sortering : sort,
+        }),
+      );
+    },
+    [router, query, program, category, includeStudent, sort],
+  );
+
+  useEffect(() => {
+    const trimmed = searchInput.trim();
+    if (trimmed === query) return;
+
+    const timer = window.setTimeout(() => {
+      router.replace(
+        buildTilbudHref({
+          q: trimmed || undefined,
+          program,
+          kategori: category,
+          student: includeStudent,
+          sortering: sort,
+        }),
+      );
+    }, SEARCH_DEBOUNCE_MS);
+
+    return () => window.clearTimeout(timer);
+  }, [
+    searchInput,
+    query,
+    program,
+    category,
+    includeStudent,
+    sort,
+    router,
+  ]);
+
+  const clearSearch = () => {
+    setSearchInput("");
+    router.replace(
+      buildTilbudHref({
+        program,
+        kategori: category,
+        student: includeStudent,
+        sortering: sort,
+      }),
+    );
   };
 
   const hasFilters = Boolean(query || program || category || includeStudent);
+  const isSearchPending = searchInput.trim() !== query;
+  const activeQuery = query.trim();
 
   return (
-    <form onSubmit={submit} className="space-y-5" action="/tilbud" method="get">
+    <div className="space-y-5">
       <div className="rounded-xl border border-stone-200 bg-white p-3 sm:p-4">
         <label htmlFor="tilbud-search" className="sr-only">
           Søk i tilbud
@@ -99,10 +150,22 @@ export function TilbudFilters({
             id="tilbud-search"
             type="search"
             name="q"
-            defaultValue={query}
+            value={searchInput}
+            onChange={(event) => setSearchInput(event.target.value)}
             placeholder="Søk partner, kategori eller medlemskap…"
-            className={`${calculatorInputClassName} pl-10`}
+            className={`${calculatorInputClassName} pl-10 pr-10`}
+            autoComplete="off"
           />
+          {searchInput && (
+            <button
+              type="button"
+              onClick={clearSearch}
+              className="absolute inset-y-0 right-3 text-sm font-medium text-stone-500 hover:text-stone-800"
+              aria-label="Tøm søk"
+            >
+              ✕
+            </button>
+          )}
         </div>
 
         <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-[1fr_1fr_auto]">
@@ -113,7 +176,13 @@ export function TilbudFilters({
             <select
               id="tilbud-program"
               name="program"
-              defaultValue={program ?? ""}
+              value={program ?? ""}
+              onChange={(event) =>
+                navigate({
+                  q: searchInput.trim() || undefined,
+                  program: event.target.value || null,
+                })
+              }
               className={`${calculatorInputClassName} w-full py-2 pr-8`}
             >
               <option value="">Alle programmer</option>
@@ -132,7 +201,13 @@ export function TilbudFilters({
             <select
               id="tilbud-category"
               name="kategori"
-              defaultValue={category ?? ""}
+              value={category ?? ""}
+              onChange={(event) =>
+                navigate({
+                  q: searchInput.trim() || undefined,
+                  kategori: event.target.value || null,
+                })
+              }
               className={`${calculatorInputClassName} w-full py-2 pr-8`}
               disabled={categories.length === 0}
             >
@@ -154,36 +229,50 @@ export function TilbudFilters({
               type="checkbox"
               name="student"
               value="1"
-              defaultChecked={includeStudent}
+              checked={includeStudent}
+              onChange={(event) =>
+                navigate({
+                  q: searchInput.trim() || undefined,
+                  student: event.target.checked,
+                })
+              }
               className="h-4 w-4 rounded border-stone-300 text-orange-600 focus:ring-orange-500"
             />
             Student
           </label>
         </div>
 
-        <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
-          <button
-            type="submit"
-            className="rounded-lg bg-orange-600 px-4 py-2 text-sm font-semibold text-white hover:bg-orange-700"
-          >
-            Vis tilbud
-          </button>
-          {hasFilters && (
+        {hasFilters && (
+          <div className="mt-3 flex justify-end">
             <a
               href="/tilbud"
               className="text-xs font-semibold text-orange-600 hover:text-orange-700"
             >
               Nullstill filter
             </a>
-          )}
-        </div>
+          </div>
+        )}
       </div>
 
       <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-        <p className="text-sm text-stone-600">
-          {partnerCount} {partnerCount === 1 ? "partner" : "partnere"}
-          {partnerCount < offerCount && (
-            <span className="text-stone-500"> ({offerCount} tilbud)</span>
+        <p className="text-sm text-stone-600" aria-live="polite" aria-atomic="true">
+          {isSearchPending ? (
+            <span className="text-stone-500">Søker…</span>
+          ) : activeQuery ? (
+            <>
+              {partnerCount} {partnerCount === 1 ? "treff" : "treff"} for «
+              {activeQuery}»
+              {partnerCount < offerCount && (
+                <span className="text-stone-500"> ({offerCount} tilbud)</span>
+              )}
+            </>
+          ) : (
+            <>
+              {partnerCount} {partnerCount === 1 ? "partner" : "partnere"}
+              {partnerCount < offerCount && (
+                <span className="text-stone-500"> ({offerCount} tilbud)</span>
+              )}
+            </>
           )}
         </p>
         <div className="flex items-center gap-2">
@@ -193,7 +282,13 @@ export function TilbudFilters({
           <select
             id="tilbud-sort"
             name="sortering"
-            defaultValue={sort}
+            value={sort}
+            onChange={(event) =>
+              navigate({
+                q: searchInput.trim() || undefined,
+                sortering: event.target.value as TilbudSortOption,
+              })
+            }
             className={`${calculatorInputClassName} w-auto min-w-[10rem] py-1.5 pr-8 text-sm`}
           >
             {TILBUD_SORT_OPTIONS.map((option) => (
@@ -204,6 +299,6 @@ export function TilbudFilters({
           </select>
         </div>
       </div>
-    </form>
+    </div>
   );
 }

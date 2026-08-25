@@ -1,21 +1,16 @@
 import type { OrdbokEntry } from "@/types/content";
-import { normalizeSearchText } from "@/lib/normalize-search";
+import { matchesSearchTokens } from "@/lib/normalize-search";
 
 function matchesOrdbokQuery(entry: OrdbokEntry, query: string): boolean {
-  const searchable = normalizeSearchText(
+  return matchesSearchTokens(
     [
       entry.term,
       entry.definition,
       entry.category,
       ...(entry.tags ?? []),
     ].join(" "),
+    query,
   );
-
-  const tokens = normalizeSearchText(query)
-    .split(/\s+/)
-    .filter(Boolean);
-
-  return tokens.every((token) => searchable.includes(token));
 }
 
 /** CMS/ADMIN: Søk og filtrering kan senere flyttes til server/database */

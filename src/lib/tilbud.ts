@@ -1,6 +1,6 @@
 import type { Tilbud } from "@/types/content";
 import { getFordelName } from "@/lib/fordeler";
-import { normalizeSearchText } from "@/lib/normalize-search";
+import { matchesSearchTokens, normalizeSearchText } from "@/lib/normalize-search";
 import { matchesTilbudCategoryGroup } from "@/lib/tilbud-categories";
 import {
   isTilbudOptInProgram,
@@ -21,7 +21,7 @@ export {
 function matchesTilbudQuery(entry: Tilbud, query: string): boolean {
   const fordelName = getFordelName(entry.fordelSlug);
 
-  const searchable = normalizeSearchText(
+  return matchesSearchTokens(
     [
       entry.title,
       entry.description,
@@ -32,13 +32,8 @@ function matchesTilbudQuery(entry: Tilbud, query: string): boolean {
       entry.warning ?? "",
       fordelName,
     ].join(" "),
+    query,
   );
-
-  const tokens = normalizeSearchText(query)
-    .split(/\s+/)
-    .filter(Boolean);
-
-  return tokens.every((token) => searchable.includes(token));
 }
 
 /** Normaliserer partnernavn for å finne like tilbud på tvers av programmer */

@@ -25,6 +25,31 @@ export const TILBUD_SORT_OPTIONS: { value: TilbudSortOption; label: string }[] =
   { value: "category-asc", label: "Kategori" },
 ];
 
+export interface TilbudFilterParams {
+  q?: string;
+  program?: string | null;
+  kategori?: string | null;
+  student?: boolean;
+  sortering?: TilbudSortOption;
+  side?: number;
+}
+
+/** Bygger /tilbud-URL med filter og paginering. */
+export function buildTilbudHref(params: TilbudFilterParams): string {
+  const search = new URLSearchParams();
+  const q = params.q?.trim();
+  if (q) search.set("q", q);
+  if (params.program) search.set("program", params.program);
+  if (params.kategori) search.set("kategori", params.kategori);
+  if (params.student) search.set("student", "1");
+  if (params.sortering && params.sortering !== "rate-desc") {
+    search.set("sortering", params.sortering);
+  }
+  if (params.side && params.side > 1) search.set("side", String(params.side));
+  const qs = search.toString();
+  return qs ? `/tilbud?${qs}` : "/tilbud";
+}
+
 export function formatTilbudDate(isoDate: string): string {
   return new Intl.DateTimeFormat("nb-NO", {
     day: "numeric",

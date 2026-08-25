@@ -8,6 +8,7 @@ import {
   paginateGruppertTilbud,
   parseOfferRate,
 } from "./tilbud";
+import { buildTilbudHref } from "./tilbud-ui";
 
 describe("parseOfferRate", () => {
   it("returns max percent for rabatt labels", () => {
@@ -52,6 +53,43 @@ describe("parseOfferRate", () => {
   it("ignores flat Spenn without purchase amount", () => {
     assert.equal(parseOfferRate("816 Spenn på kjøpet", "spenn"), null);
     assert.equal(parseOfferRate("1 680 Spenn på kjøpet", "spenn"), null);
+  });
+});
+
+describe("buildTilbudHref", () => {
+  it("builds query URLs and omits default sort", () => {
+    assert.equal(buildTilbudHref({ q: "hotell" }), "/tilbud?q=hotell");
+    assert.equal(
+      buildTilbudHref({
+        q: "hotell",
+        program: "obos",
+        kategori: "Reise og hotell",
+        student: true,
+        sortering: "name-asc",
+        side: 2,
+      }),
+      "/tilbud?q=hotell&program=obos&kategori=Reise+og+hotell&student=1&sortering=name-asc&side=2",
+    );
+  });
+});
+
+describe("filterTilbud search", () => {
+  const published = tilbud.filter((item) => item.status === "published");
+
+  it("does not match sko inside betalingskort boilerplate", () => {
+    const matches = filterTilbud(published, "sko", null, null, false);
+    assert.ok(!matches.some((item) => item.partner === "Wolt"));
+  });
+
+  it("matches partner names as word prefixes", () => {
+    const matches = filterTilbud(published, "sko", null, null, false);
+    assert.ok(matches.some((item) => item.partner === "Skousen"));
+  });
+
+  it("still matches multi-word queries", () => {
+    const matches = filterTilbud(published, "obos hotell", null, null, false);
+    assert.ok(matches.length > 0);
+    assert.ok(matches.every((item) => item.fordelSlug === "obos"));
   });
 });
 

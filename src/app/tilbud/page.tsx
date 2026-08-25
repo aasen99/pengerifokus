@@ -17,12 +17,12 @@ import { getTilbudCategoryGroupOptions } from "@/lib/tilbud-categories";
 import {
   filterTilbud,
   groupTilbudByPartner,
-  isTilbudOptInProgram,
   paginateGruppertTilbud,
   parseTilbudPage,
   sortGruppertTilbud,
   type TilbudSortOption,
 } from "@/lib/tilbud";
+import { buildTilbudHref, isTilbudOptInProgram } from "@/lib/tilbud-ui";
 
 const pageDescription =
   "Finn medlemsrabatter og cashback fra OBOS, Usbl, Trumf Netthandel, Klarna, EuroBonus, NAF, Coop og mer. Filtrer etter program, kategori eller partner.";
@@ -79,27 +79,6 @@ function isSortOption(value: string | undefined): value is TilbudSortOption {
     value === "programs-desc" ||
     value === "category-asc"
   );
-}
-
-function buildPageHref(
-  params: {
-    q?: string;
-    program: string | null;
-    kategori: string | null;
-    student: boolean;
-    sortering: TilbudSortOption;
-  },
-  page: number,
-): string {
-  const search = new URLSearchParams();
-  if (params.q) search.set("q", params.q);
-  if (params.program) search.set("program", params.program);
-  if (params.kategori) search.set("kategori", params.kategori);
-  if (params.student) search.set("student", "1");
-  if (params.sortering !== "rate-desc") search.set("sortering", params.sortering);
-  if (page > 1) search.set("side", String(page));
-  const qs = search.toString();
-  return qs ? `/tilbud?${qs}` : "/tilbud";
 }
 
 export default async function TilbudPage({ searchParams }: TilbudPageProps) {
@@ -211,7 +190,7 @@ export default async function TilbudPage({ searchParams }: TilbudPageProps) {
               return (
                 <Link
                   key={page}
-                  href={buildPageHref(filterState, page)}
+                  href={buildTilbudHref({ ...filterState, side: page })}
                   aria-current={current ? "page" : undefined}
                   className={`rounded-lg px-3 py-1.5 text-sm font-medium ${
                     current
