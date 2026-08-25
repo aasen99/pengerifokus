@@ -30,6 +30,7 @@ function matchesTilbudQuery(entry: Tilbud, query: string): boolean {
       entry.category,
       entry.terms ?? "",
       entry.warning ?? "",
+      ...(entry.searchTags ?? []),
       fordelName,
     ].join(" "),
     query,

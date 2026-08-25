@@ -69,6 +69,7 @@ const obosTilbud: Tilbud[] = [
     partner: "Anton Sport",
     fordelSlug: "obos",
     category: "Sport",
+    searchTags: ["sko"],
     terms: "Krever OBOS-medlemskap. Sjekk gjeldende vilkår hos OBOS.",
     createdAt: "2026-06-11",
     updatedAt: "2026-06-11",

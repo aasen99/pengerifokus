@@ -91,6 +91,11 @@ describe("filterTilbud search", () => {
     assert.ok(matches.length > 0);
     assert.ok(matches.every((item) => item.fordelSlug === "obos"));
   });
+
+  it("matches hidden searchTags", () => {
+    const matches = filterTilbud(published, "sko", null, null, false);
+    assert.ok(matches.some((item) => item.partner === "Anton Sport"));
+  });
 });
 
 describe("default tilbud grouping", () => {

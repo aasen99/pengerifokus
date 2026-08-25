@@ -88,5 +88,7 @@ export interface Tilbud extends BaseContent {
   sourceUrl?: string;
   /** Ekstra merknad, f.eks. sammenlign totalpris eller verifiser sats */
   warning?: string;
+  /** Skjulte søkeord – vises ikke på kort, brukes kun i tilbudssøk */
+  searchTags?: string[];
 }
 
