@@ -5,8 +5,7 @@ export const TILBUD_TITLE = "Tilbud";
 export const FORDELSPROGRAMMER_INTRO =
   "Lær hva medlems- og bonusprogrammene er, og når de kan passe deg. Dette er ikke en liste over konkrete rabatter.";
 
-export const TILBUD_SEO_TITLE =
-  "Medlemsrabatter og tilbud – OBOS, Trumf, Klarna og mer";
+export const TILBUD_SEO_TITLE = "Medlemsfordeler og rabatter i Norge";
 
 export const TILBUD_INTRO =
-  "Konkrete medlemsrabatter og cashback samlet fra OBOS, Usbl, Trumf Netthandel, Klarna, EuroBonus, NAF, Coop, Spenn, LOfavør og studentavtaler. Filtrer etter program, kategori eller partner – vi utvider listen løpende.";
+  "Finn tilbud, bonus og cashback fra OBOS, Trumf, Coop, NAF, EuroBonus, Spenn og flere. Søk eller filtrer etter program og kategori. Oversikten utvides løpende.";

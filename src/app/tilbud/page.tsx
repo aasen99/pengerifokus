@@ -25,7 +25,7 @@ import {
 import { buildTilbudHref, isTilbudOptInProgram } from "@/lib/tilbud-ui";
 
 const pageDescription =
-  "Finn medlemsrabatter og cashback fra OBOS, Usbl, Trumf Netthandel, Klarna, EuroBonus, NAF, Coop og mer. Filtrer etter program, kategori eller partner.";
+  "Finn tilbud, bonus og cashback fra OBOS, Trumf, Coop, NAF, EuroBonus, Spenn og flere. Søk eller filtrer etter program og kategori. Oversikten utvides løpende.";
 
 export const metadata: Metadata = createPageMetadata({
   title: TILBUD_SEO_TITLE,
