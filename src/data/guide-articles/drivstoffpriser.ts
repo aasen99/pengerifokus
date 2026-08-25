@@ -249,6 +249,7 @@ export const drivstoffpriser: Omit<GuideArticleContent, "readTimeMinutes"> = {
       label: "Strømregning og Norgespris",
       href: "/guider/stromregning-og-norgespris",
     },
+    { label: "Circle K Extra", href: "/fordeler/circle-k-extra" },
     { label: "Trumf", href: "/fordeler/trumf" },
     { label: "Coop", href: "/fordeler/coop" },
     { label: "NAF", href: "/fordeler/naf" },

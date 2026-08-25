@@ -14,7 +14,7 @@ import { getFordeler, getTilbudByFordel } from "@/lib/content";
 import { createPageMetadata } from "@/lib/seo";
 
 const pageDescription =
-  "Oversikt over Trumf, OBOS, Usbl, LOfavør, Spenn, Norwegian Reward, Strawberry, Scandic Friends, THON+, studentrabatter og andre fordelsprogrammer. Les guider om bonus, uttak og når programmene passer deg.";
+  "Oversikt over Trumf, OBOS, Usbl, LOfavør, Vipps VIP, Circle K Extra, IKEA Family, Spenn, MyPOWER, Elkjøp, XXL Reward og andre fordelsprogrammer. Les guider om bonus, uttak og når programmene passer deg.";
 
 export const metadata: Metadata = createPageMetadata({
   title: FORDELSPROGRAMMER_TITLE,
@@ -42,6 +42,19 @@ export const metadata: Metadata = createPageMetadata({
     "bankfordeler",
     "medlemsfordeler",
     "klarna cashback",
+    "mypower",
+    "power kundeklubb",
+    "elkjøp kundeklubb",
+    "elkjop medlemskap",
+    "xxl reward",
+    "xxl medlemskap",
+    "vipps vip",
+    "vipps tæpping",
+    "vipps belønning",
+    "circle k extra",
+    "circle k rabatt",
+    "ikea family",
+    "ikea medlemskap",
   ],
 });
 

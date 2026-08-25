@@ -1,12 +1,16 @@
 import type { FordelArticleContent } from "@/types/fordel-article";
 import { calculateFordelArticleReadTime } from "@/lib/read-time";
 import { bankfordeler } from "./bankfordeler";
+import { circleKExtra } from "./circle-k-extra";
 import { coop } from "./coop";
+import { elkjop } from "./elkjop";
 import { eurobonus } from "./eurobonus";
 import { hotellbonus } from "./hotellbonus";
+import { ikeaFamily } from "./ikea-family";
 import { klarna } from "./klarna";
 import { kredittkortfordeler } from "./kredittkortfordeler";
 import { lofavor } from "./lofavor";
+import { mypower } from "./mypower";
 import { naf } from "./naf";
 import { obos } from "./obos";
 import { norwegianReward } from "./norwegian-reward";
@@ -18,6 +22,8 @@ import { student } from "./student";
 import { thonPlus } from "./thon-plus";
 import { trumf } from "./trumf";
 import { usbl } from "./usbl";
+import { vippsVip } from "./vipps-vip";
+import { xxl } from "./xxl";
 
 function withReadTime(
   article: Omit<FordelArticleContent, "readTimeMinutes">,
@@ -33,12 +39,16 @@ function withReadTime(
  */
 const fordelArticles: Record<string, FordelArticleContent> = {
   bankfordeler: withReadTime(bankfordeler),
+  "circle-k-extra": withReadTime(circleKExtra),
   coop: withReadTime(coop),
+  elkjop: withReadTime(elkjop),
   eurobonus: withReadTime(eurobonus),
   hotellbonus: withReadTime(hotellbonus),
+  "ikea-family": withReadTime(ikeaFamily),
   klarna: withReadTime(klarna),
   kredittkortfordeler: withReadTime(kredittkortfordeler),
   lofavor: withReadTime(lofavor),
+  mypower: withReadTime(mypower),
   naf: withReadTime(naf),
   "norwegian-reward": withReadTime(norwegianReward),
   obos: withReadTime(obos),
@@ -50,6 +60,8 @@ const fordelArticles: Record<string, FordelArticleContent> = {
   "thon-plus": withReadTime(thonPlus),
   trumf: withReadTime(trumf),
   usbl: withReadTime(usbl),
+  "vipps-vip": withReadTime(vippsVip),
+  xxl: withReadTime(xxl),
 };
 
 export function getFordelArticle(slug: string): FordelArticleContent | undefined {
