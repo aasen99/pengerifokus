@@ -61,8 +61,9 @@ export function StepHistory({
           Tidligere lånerunder
         </h2>
         <p className="mt-1 text-sm text-stone-600">
-          Valgfritt, men anbefalt. Registrer de siste 3–10 rundene for å se om
-          gjelden faktisk faller.
+          En runde er én gang: du brukte kreditt, betalte, og kanskje tok opp
+          nytt like etter. Start med den siste runden du husker. Tre felt er
+          nok: hvor mye du fikk, hvor mye du betalte, og om du tok opp nytt.
         </p>
       </div>
 
@@ -102,18 +103,21 @@ export function StepHistory({
               <div className="grid gap-4 sm:grid-cols-2">
                 <DateField
                   label={copy.usedDate}
+                  hint="Når denne runden startet."
                   value={round.usedDate}
                   onChange={(value) => onChangeRound(round.id, "usedDate", value)}
                 />
                 <MoneyField
-                  label="Hovedstol eller beløp mottatt"
+                  label={copy.receivedAmount}
+                  hint={copy.receivedAmountHint}
                   value={round.principal}
                   onChange={(value) =>
                     onChangeRound(round.id, "principal", value)
                   }
                 />
                 <MoneyField
-                  label="Beløp tilbakebetalt"
+                  label={copy.repaidLabel}
+                  hint={copy.repaidHint}
                   value={round.repaid}
                   onChange={(value) => onChangeRound(round.id, "repaid", value)}
                 />
@@ -122,8 +126,8 @@ export function StepHistory({
                     label="Renter og gebyrer"
                     hint={
                       round.fees
-                        ? "Manuelt beløp"
-                        : `Beregnet ${formatCurrency(autoCost)}. Du kan overstyre.`
+                        ? "Manuelt beløp. La stå tomt hvis du vil bruke differansen mellom innbetalt og beløpet du fikk."
+                        : `La stå tomt hvis du ikke vet. Da bruker vi ${formatCurrency(autoCost)}.`
                     }
                     value={round.fees}
                     onChange={(value) => onChangeRound(round.id, "fees", value)}
@@ -138,6 +142,7 @@ export function StepHistory({
                 />
                 <MoneyField
                   label={copy.newCredit}
+                  hint={copy.newCreditHint}
                   value={round.newCredit}
                   onChange={(value) =>
                     onChangeRound(round.id, "newCredit", value)
@@ -145,6 +150,7 @@ export function StepHistory({
                 />
                 <DateField
                   label={copy.newCreditDate}
+                  hint="La stå tomt hvis du ikke tok opp nytt."
                   value={round.newCreditDate}
                   onChange={(value) =>
                     onChangeRound(round.id, "newCreditDate", value)

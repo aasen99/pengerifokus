@@ -2,6 +2,11 @@ import type { DebtType } from "@/types/gjeldsbremsen";
 
 export const gjeldsbremsenFaq = [
   {
+    question: "Hva skal jeg fylle inn i nåsituasjonen?",
+    answer:
+      "Start med tre tall: det du har på konto, andre utgifter frem til forfall, og det du skal betale på gjelden. Inntekter som kommer før forfall tar du med. Selve gjeldsbetalingen skal ikke ligge i utgiftsfeltet, den har et eget felt.",
+  },
+  {
     question: "Hva er reell gjeldsreduksjon?",
     answer:
       "Reell gjeldsreduksjon er hvor mye lavere gjelden er etter at eventuell ny kredittbruk er trukket fra.",
@@ -65,7 +70,13 @@ export interface DebtTypeCopy {
   principal: string;
   principalHint: string;
   amountDue: string;
+  amountDueHint: string;
+  receivedAmount: string;
+  receivedAmountHint: string;
+  repaidLabel: string;
+  repaidHint: string;
   newCredit: string;
+  newCreditHint: string;
   usedDate: string;
   repaidDate: string;
   newCreditDate: string;
@@ -73,60 +84,82 @@ export interface DebtTypeCopy {
 }
 
 const defaultCopy: DebtTypeCopy = {
-  principal: "Nåværende hovedstol",
-  principalHint: "Beløpet som er brukt eller utestående nå, uten renter og gebyrer",
-  amountDue: "Beløpet som skal betales",
-  newCredit: "Ny kredittbruk etter betalingen",
-  usedDate: "Dato kreditten eller lånet ble brukt",
-  repaidDate: "Dato tilbakebetalt",
-  newCreditDate: "Dato kreditten ble brukt igjen",
-  roundTitle: "Lånerunde",
+  principal: "Hva du skylder totalt nå",
+  principalHint:
+    "Hele utestående beløp. Ikke bare det som forfaller denne gangen.",
+  amountDue: "Hva du skal betale denne gangen",
+  amountDueHint:
+    "Forfallende beløp, eller det du faktisk planlegger å betale nå.",
+  receivedAmount: "Hvor mye du fikk eller brukte",
+  receivedAmountHint: "Selve låne- eller kredittbeløpet, uten renter.",
+  repaidLabel: "Hva du betalte tilbake",
+  repaidHint:
+    "Totalt innbetalt i denne runden, inkludert renter og gebyrer.",
+  newCredit: "Ny kreditt etter betalingen",
+  newCreditHint:
+    "0 hvis du ikke tok opp nytt. Dette viser om gjelden falt, eller bare ble flyttet.",
+  usedDate: "Når du fikk pengene eller brukte kreditten",
+  repaidDate: "Når du betalte",
+  newCreditDate: "Når du tok opp nytt",
+  roundTitle: "Runde",
 };
 
 const copyByType: Record<DebtType, DebtTypeCopy> = {
   kredittkort: {
     ...defaultCopy,
-    principal: "Benyttet kreditt nå",
-    principalHint: "Hvor mye av kredittrammen som er brukt nå",
-    amountDue: "Beløpet som skal betales inn",
-    newCredit: "Ny kredittbruk etter innbetalingen",
-    usedDate: "Dato kreditten ble brukt",
-    newCreditDate: "Dato kreditten ble brukt igjen",
+    principal: "Hvor mye av kreditten som er brukt nå",
+    principalHint: "Saldoen på kortet i dag, uten å telle med ubrukt ramme.",
+    amountDue: "Hva du skal betale inn denne gangen",
+    amountDueHint:
+      "Minimumsbeløpet, hele saldoen, eller det du planlegger å betale nå.",
+    receivedAmount: "Hvor mye du brukte på kortet",
+    receivedAmountHint: "Beløpet som ble belastet i denne perioden, uten renter.",
+    repaidLabel: "Hva du betalte inn",
+    newCredit: "Ny bruk på kortet etter innbetalingen",
+    newCreditHint:
+      "0 hvis kortet ble liggende. Dette viser om saldoen falt, eller bare ble bygget opp igjen.",
+    usedDate: "Når du brukte kreditten",
+    repaidDate: "Når du betalte inn",
+    newCreditDate: "Når du brukte kortet igjen",
     roundTitle: "Kredittperiode",
   },
   smalan: {
     ...defaultCopy,
-    principal: "Nåværende lånebeløp",
-    amountDue: "Beløpet som skal tilbakebetales",
+    principal: "Hva du skylder på lånet nå",
+    amountDue: "Hva du skal betale tilbake denne gangen",
+    receivedAmount: "Hvor mye du fikk utbetalt",
     newCredit: "Nytt lån etter tilbakebetalingen",
-    usedDate: "Dato lånet ble tatt opp",
-    newCreditDate: "Dato nytt lån ble tatt opp",
+    usedDate: "Når du tok opp lånet",
+    newCreditDate: "Når du tok opp nytt lån",
   },
   faktura: {
     ...defaultCopy,
-    principal: "Utestående beløp nå",
-    amountDue: "Beløpet som forfaller",
-    newCredit: "Ny faktura eller delbetaling etter betalingen",
-    usedDate: "Dato kreditten ble brukt",
-    newCreditDate: "Dato ny faktura eller delbetaling oppsto",
+    principal: "Hva som står ubetalt nå",
+    amountDue: "Hva som forfaller denne gangen",
+    receivedAmount: "Hvor mye kreditten gjaldt",
+    newCredit: "Ny faktura eller delbetaling etterpå",
+    usedDate: "Når kreditten oppsto",
+    newCreditDate: "Når ny faktura eller delbetaling oppsto",
   },
   kontokreditt: {
     ...defaultCopy,
-    principal: "Benyttet kontokreditt nå",
-    principalHint: "Hvor mye av rammen som er trukket nå",
-    amountDue: "Beløpet som skal betales inn",
+    principal: "Hvor mye av kontokreditten som er trukket nå",
+    principalHint: "Hvor mye av rammen som er brukt i dag.",
+    amountDue: "Hva du skal betale inn denne gangen",
+    receivedAmount: "Hvor mye du trakk",
     newCredit: "Nytt trekk etter innbetalingen",
-    usedDate: "Dato kreditten ble trukket",
-    newCreditDate: "Dato kreditten ble trukket igjen",
+    usedDate: "Når du trakk på kreditten",
+    newCreditDate: "Når du trakk på nytt",
     roundTitle: "Trekkperiode",
   },
   privat: {
     ...defaultCopy,
-    principal: "Nåværende lånebeløp",
-    amountDue: "Beløpet som skal tilbakebetales",
+    principal: "Hva du skylder nå",
+    amountDue: "Hva du skal betale tilbake denne gangen",
+    receivedAmount: "Hvor mye du fikk låne",
     newCredit: "Nytt lån etter tilbakebetalingen",
-    usedDate: "Dato lånet ble mottatt",
-    newCreditDate: "Dato nytt lån ble mottatt",
+    usedDate: "Når du fikk lånet",
+    newCreditDate: "Når du fikk nytt lån",
   },
   annet: defaultCopy,
 };
@@ -138,7 +171,7 @@ export function getDebtTypeCopy(type: DebtType | ""): DebtTypeCopy {
 
 export const WIZARD_STEPS = [
   { id: "type", title: "Gjeldstype", description: "Velg hva slags kreditt det gjelder" },
-  { id: "situation", title: "Nåsituasjonen", description: "Konto, forfall og inntekt" },
+  { id: "situation", title: "Nåsituasjonen", description: "Konto, utgifter og hva som skal betales" },
   { id: "history", title: "Tidligere runder", description: "Valgfritt, men anbefalt" },
   { id: "diagnosis", title: "Diagnose", description: "Reell utvikling i tre tall" },
   { id: "plan", title: "Bremseplan", description: "Fart, tiltak og sjekkpunkter" },
@@ -147,32 +180,32 @@ export const WIZARD_STEPS = [
 export const MEASURE_FIELDS = [
   {
     key: "reducedExpenses" as const,
-    label: "Reduserte utgifter",
-    hint: "Kutt du faktisk kan gjennomføre før forfall",
+    label: "Kutt i andre utgifter",
+    hint: "Hvor mye du kan kutte i husleie, mat, abonnementer og lignende. Ikke kutt som allerede er trukket fra i nåsituasjonen.",
   },
   {
     key: "extraIncome" as const,
     label: "Ekstra inntekt",
-    hint: "Ekstra arbeid eller annen sikker inntekt",
+    hint: "Ekstra jobb eller annen sikker inntekt som ikke allerede ligger i inntektsfeltet.",
   },
   {
     key: "expectedMoneyIn" as const,
     label: "Penger som allerede er ventet inn",
-    hint: "Beløp du vet kommer, uten ny gjeld",
+    hint: "Feriepenger, tilbakebetaling eller annet du vet kommer, som ikke er lagt inn fra før.",
   },
   {
     key: "assetSales" as const,
     label: "Salg av eiendeler",
-    hint: "Bare beløp du realistisk kan få inn i tide",
+    hint: "Bare beløp du realistisk kan få inn før forfall.",
   },
   {
     key: "otherNonDebtFinance" as const,
-    label: "Annen finansiering uten ny gjeld",
-    hint: "For eksempel gave eller oppsparte midler du kan bruke",
+    label: "Annen hjelp uten ny gjeld",
+    hint: "Gave, oppsparte midler eller annen finansiering som ikke er et nytt lån.",
   },
   {
     key: "paymentAgreement" as const,
     label: "Betalingsavtale",
-    hint: "Beløpet avtalen faktisk fjerner fra denne perioden",
+    hint: "Hvor mye av denne betalingen avtalen faktisk utsetter eller fjerner.",
   },
 ];

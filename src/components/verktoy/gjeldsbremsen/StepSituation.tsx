@@ -1,5 +1,6 @@
 "use client";
 
+import type { ReactNode } from "react";
 import { formatCurrency } from "@/lib/calculators/loan";
 import { financingGapMessage } from "@/lib/calculators/gjeldsbremsen";
 import type { DebtTypeCopy } from "@/data/gjeldsbremsen";
@@ -34,6 +35,21 @@ interface StepSituationProps {
   onNext: () => void;
 }
 
+function FieldGroup({
+  title,
+  children,
+}: {
+  title: string;
+  children: ReactNode;
+}) {
+  return (
+    <section>
+      <h3 className="mb-3 text-sm font-semibold text-stone-900">{title}</h3>
+      <div className="grid gap-4 sm:grid-cols-2">{children}</div>
+    </section>
+  );
+}
+
 export function StepSituation({
   copy,
   form,
@@ -47,36 +63,48 @@ export function StepSituation({
       <div>
         <h2 className="text-xl font-semibold text-stone-900">Nåsituasjonen</h2>
         <p className="mt-1 text-sm text-stone-600">
-          Finansieringsgapet oppdateres mens du fyller ut. Ingen felt sendes
-          videre fra nettleseren.
+          Vi regner slik: konto + inntekter før forfall − andre utgifter − det
+          du skal betale. Gjeldsbetalingen har eget felt og skal ikke ligge i
+          utgiftene.
         </p>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2">
+      <FieldGroup title="Penger du har og får inn">
         <MoneyField
-          label="Penger tilgjengelig på konto nå"
+          label="På konto nå"
+          hint="Det du kan bruke i dag, uten å trekke mer på kreditt."
           value={form.cashOnHand}
           onChange={(value) => onChange("cashOnHand", value)}
         />
         <MoneyField
+          label="Inntekter som kommer før forfall"
+          hint="Lønn og andre beløp du vet kommer inn før betalingsfristen. Usikre beløp hører ikke hjemme her."
+          value={form.incomeBeforeDue}
+          onChange={(value) => onChange("incomeBeforeDue", value)}
+        />
+      </FieldGroup>
+
+      <FieldGroup title="Andre utgifter, utenom gjelden">
+        <MoneyField
+          label="Utgifter frem til forfall"
+          hint="Husleie, mat, strøm og andre regninger. Ta ikke med selve gjeldsbetalingen. Den fyller du inn under."
+          value={form.expensesBeforeDue}
+          onChange={(value) => onChange("expensesBeforeDue", value)}
+        />
+      </FieldGroup>
+
+      <FieldGroup title="Gjelden">
+        <MoneyField
           label={copy.amountDue}
+          hint={copy.amountDueHint}
           value={form.amountDue}
           onChange={(value) => onChange("amountDue", value)}
         />
         <DateField
           label="Forfallsdato"
+          hint="Når beløpet over må være betalt."
           value={form.dueDate}
           onChange={(value) => onChange("dueDate", value)}
-        />
-        <MoneyField
-          label="Sikre inntekter før forfall"
-          value={form.incomeBeforeDue}
-          onChange={(value) => onChange("incomeBeforeDue", value)}
-        />
-        <MoneyField
-          label="Nødvendige utgifter før forfall"
-          value={form.expensesBeforeDue}
-          onChange={(value) => onChange("expensesBeforeDue", value)}
         />
         <MoneyField
           label={copy.principal}
@@ -85,21 +113,21 @@ export function StepSituation({
           onChange={(value) => onChange("currentPrincipal", value)}
         />
         <MoneyField
-          label="Forventede renter og gebyrer"
+          label="Renter og gebyrer denne gangen"
+          hint="Bare det som kommer i tillegg. Ligger rentene allerede i beløpet du skal betale, la feltet stå på 0."
           value={form.expectedFees}
           onChange={(value) => onChange("expectedFees", value)}
         />
+      </FieldGroup>
+
+      <FieldGroup title="Neste inntekt etterpå">
         <DateField
-          label="Neste sikre inntektsdato"
+          label="Når kommer neste sikre inntekt"
+          hint="Brukes til tidslinjen i bremseplanen. Kommer inntekten før forfall, før beløpet inn i inntektsfeltet over."
           value={form.nextIncomeDate}
           onChange={(value) => onChange("nextIncomeDate", value)}
         />
-        <MoneyField
-          label="Neste sikre inntektsbeløp"
-          value={form.nextIncomeAmount}
-          onChange={(value) => onChange("nextIncomeAmount", value)}
-        />
-      </div>
+      </FieldGroup>
 
       <div
         className={
@@ -107,7 +135,7 @@ export function StepSituation({
         }
       >
         <p className="text-xs font-semibold uppercase tracking-wider text-stone-500">
-          Finansieringsgap
+          Klarer du betalingen uten ny kreditt?
         </p>
         <p className="mt-1 text-2xl font-semibold tabular-nums text-stone-900">
           {gap < 0

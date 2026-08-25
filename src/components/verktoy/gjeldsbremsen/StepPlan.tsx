@@ -169,12 +169,14 @@ export function StepPlan({
             </select>
           </label>
           <MoneyField
-            label="Ønsket reduksjon per runde"
+            label="Hvor mye gjelden skal falle per runde"
+            hint="Hvor mye lavere utestående gjeld skal være etter hver runde."
             value={reductionPerRound}
             onChange={onReductionPerRoundChange}
           />
           <MoneyField
-            label="Forventede renter og gebyrer per runde"
+            label="Renter og gebyrer per runde"
+            hint="Kostnaden som kommer i tillegg hver gang. Tomt felt bruker beløpet fra nåsituasjonen."
             value={feesPerRound}
             onChange={onFeesPerRoundChange}
           />
@@ -185,13 +187,14 @@ export function StepPlan({
         <>
           <section className={calculatorPanelClassName}>
             <h3 className="text-sm font-semibold text-stone-900">
-              Tiltak for å fylle finansieringsgapet
+              Tiltak for å fylle gapet
             </h3>
             <p className="mt-1 text-sm text-stone-600">
-              Angi bare beløp du mener er realistiske. Ingenting fylles inn
-              automatisk.
+              Her legger du inn tiltak du kan gjøre nå, utover inntektene og
+              utgiftene du allerede har fylt inn. Ikke før inn samme lønn to
+              ganger.
               {livingBalance > 0
-                ? ` Etter nødvendige utgifter har du ${formatCurrency(livingBalance)} tilgjengelig.`
+                ? ` Etter andre utgifter har du ${formatCurrency(livingBalance)} tilgjengelig før gjeldsbetalingen.`
                 : ""}
             </p>
             <div className="mt-4 grid gap-4 sm:grid-cols-2">

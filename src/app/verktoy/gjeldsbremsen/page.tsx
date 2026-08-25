@@ -49,7 +49,7 @@ export default function GjeldsbremsenPage() {
             },
             {
               name: "Fyll inn nåsituasjonen",
-              text: "Oppgi konto, forfall, inntekter og utgifter. Finansieringsgapet vises med en gang.",
+              text: "Oppgi konto, inntekter før forfall og andre utgifter. Gjeldsbetalingen har eget felt og skal ikke ligge i utgiftene.",
             },
             {
               name: "Legg inn tidligere runder",

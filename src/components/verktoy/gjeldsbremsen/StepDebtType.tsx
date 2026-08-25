@@ -16,7 +16,8 @@ export function StepDebtType({ value, onChange, onNext }: StepDebtTypeProps) {
       <div>
         <h2 className="text-xl font-semibold text-stone-900">Velg gjeldstype</h2>
         <p className="mt-1 text-sm text-stone-600">
-          Valget tilpasser ordlyden. Beregningene er de samme for alle typene.
+          Velg den kreditten du vil bremse først. Valget endrer bare
+          ordlyden i feltene, ikke regnestykket.
         </p>
       </div>
 
