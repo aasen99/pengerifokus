@@ -497,12 +497,12 @@ const baseFormuesbyggere: Formuesbygger[] = [
     industry: "sport",
     buildType: "idrett-underholdning",
     tagline:
-      "Fotballspiller som omgjør ekstrem arbeidsinntekt til holdingselskaper, verdipapirer og eiendom.",
+      "Fotballspiller med anslått klubblønn, samlede inntekter og formue som tre ulike størrelser.",
     wealthEstimate: kapitalEstimate("4,1"),
     wealthContext:
-      "Kapital-anslag 2025. Formuen omfatter blant annet Pillage-strukturer, ikke lønn på konto. Forbes-inntektsanslag er en annen størrelse.",
+      "Lønn, samlet inntekt og formue er tre forskjellige størrelser. Kapital-anslag 2025. Forbes-inntektsanslag gjelder 2025–2026.",
     createdAt: "2026-08-11",
-    updatedAt: "2026-08-11",
+    updatedAt: "2026-08-27",
   },
   {
     id: "fb-n20",

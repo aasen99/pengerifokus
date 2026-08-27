@@ -13,6 +13,7 @@ import {
   buildFormuesbyggerFaq,
   buildFormuesbyggerKeywords,
   buildFormuesbyggerMetaDescription,
+  getFormuesbyggerSeoTitle,
 } from "@/lib/formuesbygger-seo";
 import { createPageMetadata } from "@/lib/seo";
 import {
@@ -40,7 +41,7 @@ export async function generateMetadata({
   if (!profile || !article) return {};
 
   return createPageMetadata({
-    title: article.seoAngle,
+    title: getFormuesbyggerSeoTitle(article),
     description: buildFormuesbyggerMetaDescription(profile, article),
     path: `/formuesbyggere/${slug}`,
     keywords: buildFormuesbyggerKeywords(profile, article),
@@ -74,7 +75,7 @@ export default async function FormuesbyggerPage({
       />
       <JsonLd
         data={getArticleJsonLd({
-          title: article.seoAngle,
+          title: getFormuesbyggerSeoTitle(article),
           description: metaDescription,
           path,
           datePublished: profile.createdAt,

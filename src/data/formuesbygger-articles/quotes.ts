@@ -195,7 +195,7 @@ export const formuesbyggerQuotes: Record<string, FormuesbyggerQuote[]> = {
       translation:
         "Jeg vil fortsette å utvikle meg, fortsette å jobbe for å bli bedre, og gjøre mitt beste for å hjelpe oss å oppnå mer suksess fremover.",
       sourceUrl:
-        "https://www.mancity.com/news/mens/erling-haaland-signs-new-contract-63859158",
+        "https://www.mancity.com/news/mens/erling-haaland-10-year-manchester-city-contract-63872694",
       sourceLabel: "Manchester City, kontraktsmelding 2025",
     },
   ],

@@ -30,6 +30,10 @@ function clipAnswer(text: string, maxLength = 320): string {
   return `${cut.trimEnd()}…`;
 }
 
+export function getFormuesbyggerSeoTitle(article: FormuesbyggerArticle): string {
+  return article.seoTitle ?? article.seoAngle;
+}
+
 /** Meta description: formuestall tidlig (søkeintent), deretter første setning. */
 export function buildFormuesbyggerMetaDescription(
   profile: Formuesbygger,

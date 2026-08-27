@@ -128,14 +128,50 @@ export type FormuesbyggerSourceTier =
   | "quaternary"
   | "trace";
 
+export interface FormuesbyggerFactCard {
+  label: string;
+  value: string;
+  note?: string;
+}
+
+export interface FormuesbyggerTable {
+  caption?: string;
+  headers?: string[];
+  rows: string[][];
+  footnote?: string;
+}
+
+export interface FormuesbyggerBodyCard {
+  title: string;
+  paragraphs?: string[];
+  bullets?: string[];
+}
+
+export interface FormuesbyggerBodySection {
+  heading: string;
+  paragraphs?: string[];
+  bullets?: string[];
+  table?: FormuesbyggerTable;
+  cards?: FormuesbyggerBodyCard[];
+}
+
 /** Fast artikkelmal, samme ni seksjoner på alle profiler */
 export interface FormuesbyggerArticle {
   slug: string;
   readTimeMinutes: number;
   /** SEO-vennlig vinkling, f.eks. «Hvordan ble X rik?» */
   seoAngle: string;
+  /** Overstyrer seoAngle som dokumenttittel. Layout legger til «| Penger i Fokus». */
+  seoTitle?: string;
+  /** Overstyrer profilnavn som H1 */
+  pageTitle?: string;
   /** Kort svar: hvordan ble personen rik (50–80 ord) */
   shortAnswer: string;
+  factCards?: FormuesbyggerFactCard[];
+  factCardsNote?: string;
+  bodySections?: FormuesbyggerBodySection[];
+  /** Standard: etter kort svar. late: før kilder, etter FAQ. */
+  timelinePlacement?: "default" | "late";
   /** Fire til seks daterte vendepunkter */
   timeline: FormuesbyggerTimelineEvent[];
   /** Fordeling: selskaper, aksjer, salg, royalty, arv */

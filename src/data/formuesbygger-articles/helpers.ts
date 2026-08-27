@@ -1,6 +1,8 @@
 import { calculateReadTimeFromTexts } from "@/lib/read-time";
 import type {
   FormuesbyggerArticle,
+  FormuesbyggerBodySection,
+  FormuesbyggerFactCard,
   FormuesbyggerMythReality,
   FormuesbyggerQuote,
   FormuesbyggerSource,
@@ -13,7 +15,13 @@ import { normalizeArticleSources } from "./source-tiers";
 export interface BuildArticleOptions {
   slug: string;
   seoAngle: string;
+  seoTitle?: string;
+  pageTitle?: string;
   shortAnswer: string;
+  factCards?: FormuesbyggerFactCard[];
+  factCardsNote?: string;
+  bodySections?: FormuesbyggerBodySection[];
+  timelinePlacement?: FormuesbyggerArticle["timelinePlacement"];
   timeline: FormuesbyggerTimelineEvent[];
   wealthSources: FormuesbyggerWealthSource[];
   ownershipVsControl?: string;
@@ -33,7 +41,30 @@ export interface BuildArticleOptions {
 function collectArticleTexts(
   article: Omit<FormuesbyggerArticle, "readTimeMinutes">,
 ): string[] {
-  const texts: string[] = [article.seoAngle, article.shortAnswer];
+  const texts: string[] = [
+    article.seoAngle,
+    ...(article.seoTitle ? [article.seoTitle] : []),
+    ...(article.pageTitle ? [article.pageTitle] : []),
+    article.shortAnswer,
+  ];
+
+  for (const card of article.factCards ?? []) {
+    texts.push(card.label, card.value, ...(card.note ? [card.note] : []));
+  }
+  if (article.factCardsNote) texts.push(article.factCardsNote);
+
+  for (const section of article.bodySections ?? []) {
+    texts.push(section.heading, ...(section.paragraphs ?? []), ...(section.bullets ?? []));
+    if (section.table) {
+      texts.push(...(section.table.headers ?? []));
+      texts.push(...section.table.rows.flat());
+      if (section.table.footnote) texts.push(section.table.footnote);
+      if (section.table.caption) texts.push(section.table.caption);
+    }
+    for (const card of section.cards ?? []) {
+      texts.push(card.title, ...(card.paragraphs ?? []), ...(card.bullets ?? []));
+    }
+  }
 
   for (const event of article.timeline) {
     texts.push(event.date, event.title, ...(event.description ? [event.description] : []));
@@ -52,6 +83,10 @@ function collectArticleTexts(
   }
 
   texts.push(...article.personalLessons);
+
+  for (const item of article.faq ?? []) {
+    texts.push(item.question, item.answer);
+  }
 
   for (const quote of article.quotes ?? []) {
     texts.push(quote.text);
@@ -77,7 +112,13 @@ export function buildFormuesbyggerArticle(
   const articleWithoutReadTime = {
     slug: options.slug,
     seoAngle: options.seoAngle,
+    seoTitle: options.seoTitle,
+    pageTitle: options.pageTitle,
     shortAnswer: options.shortAnswer,
+    factCards: options.factCards,
+    factCardsNote: options.factCardsNote,
+    bodySections: options.bodySections,
+    timelinePlacement: options.timelinePlacement,
     timeline: options.timeline,
     wealthSources: options.wealthSources,
     ownershipVsControl: options.ownershipVsControl,
