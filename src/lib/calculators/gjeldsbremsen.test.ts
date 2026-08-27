@@ -158,6 +158,34 @@ describe("finansieringsgap", () => {
     assert.equal(gap, 2_500);
     assert.match(financingGapMessage(gap), /uten ny kreditt/);
   });
+
+  it("teller neste inntekt med når den kommer før forfall", () => {
+    const gap = calculateFinancingGap({
+      ...emptySituation,
+      cashOnHand: 2_000,
+      expensesBeforeDue: 2_000,
+      amountDue: 2_500,
+      dueDate: "2026-08-25",
+      nextIncomeDate: "2026-08-20",
+      nextIncomeAmount: 1_500,
+    });
+
+    assert.equal(gap, -1_000);
+  });
+
+  it("teller ikke neste inntekt med når den kommer etter forfall", () => {
+    const gap = calculateFinancingGap({
+      ...emptySituation,
+      cashOnHand: 2_000,
+      expensesBeforeDue: 2_000,
+      amountDue: 2_500,
+      dueDate: "2026-08-25",
+      nextIncomeDate: "2026-08-31",
+      nextIncomeAmount: 4_000,
+    });
+
+    assert.equal(gap, -2_500);
+  });
 });
 
 describe("summarizeLoanRounds", () => {

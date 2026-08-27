@@ -304,9 +304,19 @@ export function Gjeldsbremsen() {
               currentPrincipal: state.currentPrincipal,
               expectedFees: state.expectedFees,
               nextIncomeDate: state.nextIncomeDate,
-              nextIncomeAmount: state.nextIncomeAmount,
+              nextIncomeAmount: state.nextIncomeAmount || state.incomeBeforeDue,
             }}
-            onChange={(key, value) => update(key, value)}
+            onChange={(key, value) => {
+              if (key === "nextIncomeAmount") {
+                setState((prev) => ({
+                  ...prev,
+                  nextIncomeAmount: value,
+                  incomeBeforeDue: "",
+                }));
+                return;
+              }
+              update(key, value);
+            }}
             gap={gap}
             onBack={() => goTo(1)}
             onNext={() => goTo(3)}

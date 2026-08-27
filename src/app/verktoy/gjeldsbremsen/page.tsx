@@ -49,7 +49,7 @@ export default function GjeldsbremsenPage() {
             },
             {
               name: "Fyll inn nåsituasjonen",
-              text: "Oppgi konto, inntekter før forfall og andre utgifter. Gjeldsbetalingen har eget felt og skal ikke ligge i utgiftene.",
+              text: "Oppgi konto, neste inntekt og andre utgifter. Gjeldsbetalingen har eget felt. Kommer inntekten etter forfall, teller den ikke med i denne betalingen.",
             },
             {
               name: "Legg inn tidligere runder",

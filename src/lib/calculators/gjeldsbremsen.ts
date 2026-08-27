@@ -198,10 +198,28 @@ export function summarizeLoanRounds(rounds: LoanRound[]): HistorySummary | null 
   };
 }
 
-/** Penger på konto + sikre inntekter − nødvendige utgifter − planlagt tilbakebetaling. */
+/** Penger på konto + inntekt som kommer i tide − andre utgifter. */
+export function incomeArrivesAfterDue(situation: CurrentSituation): boolean {
+  return Boolean(
+    situation.nextIncomeDate &&
+      situation.dueDate &&
+      situation.nextIncomeDate > situation.dueDate,
+  );
+}
+
+export function incomeAvailableForPayment(situation: CurrentSituation): number {
+  if (situation.nextIncomeAmount > 0) {
+    return incomeArrivesAfterDue(situation) ? 0 : situation.nextIncomeAmount;
+  }
+
+  return situation.incomeBeforeDue;
+}
+
 export function calculateLivingBalance(situation: CurrentSituation): number {
   return (
-    situation.cashOnHand + situation.incomeBeforeDue - situation.expensesBeforeDue
+    situation.cashOnHand +
+    incomeAvailableForPayment(situation) -
+    situation.expensesBeforeDue
   );
 }
 

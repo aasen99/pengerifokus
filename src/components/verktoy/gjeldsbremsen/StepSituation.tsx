@@ -58,14 +58,20 @@ export function StepSituation({
   onBack,
   onNext,
 }: StepSituationProps) {
+  const incomeAfterDue = Boolean(
+    form.nextIncomeDate &&
+      form.dueDate &&
+      form.nextIncomeDate > form.dueDate,
+  );
+
   return (
     <div className="space-y-6">
       <div>
         <h2 className="text-xl font-semibold text-stone-900">Nåsituasjonen</h2>
         <p className="mt-1 text-sm text-stone-600">
-          Vi regner slik: konto + inntekter før forfall − andre utgifter − det
-          du skal betale. Gjeldsbetalingen har eget felt og skal ikke ligge i
-          utgiftene.
+          Vi regner slik: konto + neste inntekt, hvis den kommer i tide, −
+          andre utgifter − det du skal betale. Gjeldsbetalingen har eget felt
+          og skal ikke ligge i utgiftene.
         </p>
       </div>
 
@@ -77,12 +83,24 @@ export function StepSituation({
           onChange={(value) => onChange("cashOnHand", value)}
         />
         <MoneyField
-          label="Inntekter som kommer før forfall"
-          hint="Lønn og andre beløp du vet kommer inn før betalingsfristen. Usikre beløp hører ikke hjemme her."
-          value={form.incomeBeforeDue}
-          onChange={(value) => onChange("incomeBeforeDue", value)}
+          label="Neste inntekt"
+          hint="Lønn og andre beløp du vet kommer. Har du flere, legg dem sammen."
+          value={form.nextIncomeAmount}
+          onChange={(value) => onChange("nextIncomeAmount", value)}
+        />
+        <DateField
+          label="Når inntekten kommer"
+          hint="Hvis datoen er etter forfall, teller inntekten ikke med i denne betalingen."
+          value={form.nextIncomeDate}
+          onChange={(value) => onChange("nextIncomeDate", value)}
         />
       </FieldGroup>
+      {incomeAfterDue && (
+        <p className="-mt-3 text-sm text-stone-600">
+          Inntekten kommer etter forfall, så den teller ikke med i denne
+          betalingen. Den brukes bare til tidslinjen i bremseplanen.
+        </p>
+      )}
 
       <FieldGroup title="Andre utgifter, utenom gjelden">
         <MoneyField
@@ -117,15 +135,6 @@ export function StepSituation({
           hint="Bare det som kommer i tillegg. Ligger rentene allerede i beløpet du skal betale, la feltet stå på 0."
           value={form.expectedFees}
           onChange={(value) => onChange("expectedFees", value)}
-        />
-      </FieldGroup>
-
-      <FieldGroup title="Neste inntekt etterpå">
-        <DateField
-          label="Når kommer neste sikre inntekt"
-          hint="Brukes til tidslinjen i bremseplanen. Kommer inntekten før forfall, før beløpet inn i inntektsfeltet over."
-          value={form.nextIncomeDate}
-          onChange={(value) => onChange("nextIncomeDate", value)}
         />
       </FieldGroup>
 

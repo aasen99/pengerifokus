@@ -4,7 +4,7 @@ export const gjeldsbremsenFaq = [
   {
     question: "Hva skal jeg fylle inn i nåsituasjonen?",
     answer:
-      "Start med tre tall: det du har på konto, andre utgifter frem til forfall, og det du skal betale på gjelden. Inntekter som kommer før forfall tar du med. Selve gjeldsbetalingen skal ikke ligge i utgiftsfeltet, den har et eget felt.",
+      "Start med det du har på konto, neste inntekt, andre utgifter frem til forfall, og det du skal betale på gjelden. Selve gjeldsbetalingen skal ikke ligge i utgiftsfeltet. Kommer neste inntekt etter forfall, teller den ikke med i denne betalingen.",
   },
   {
     question: "Hva er reell gjeldsreduksjon?",
