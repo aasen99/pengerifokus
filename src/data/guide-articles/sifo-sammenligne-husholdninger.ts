@@ -10,6 +10,7 @@ const familieDiff = familie - par;
 
 export const sifoSammenligneHusholdninger: GuideArticleContent = {
   slug: "sifo-sammenligne-husholdninger",
+  seoTitle: "SIFO: sammenligne husholdninger",
   intro:
     "SIFO-referansebudsjettet endrer seg mye når du flytter sammen, får barn eller endrer livssituasjon. Bolig og strøm er ikke med. Med to scenarioer i kalkulatoren ser du hvilke poster som går opp, ned eller slås sammen.",
   sections: [
@@ -49,6 +50,16 @@ export const sifoSammenligneHusholdninger: GuideArticleContent = {
         "Barnehage og AKS bruker eksempelpriser fra Oslo kommune",
         "Kollektivpriser er basert på Ruter i Oslo",
       ],
+    },
+  ],
+  sources: [
+    {
+      label: "OsloMet: SIFOs referansebudsjett og kalkulator",
+      url: "https://www.oslomet.no/om/sifo/referansebudsjettet",
+    },
+    {
+      label: "OsloMet: referansebudsjett 2026",
+      url: "https://www.oslomet.no/om/nyheter/sifo-sitt-referansebudsjett-2026-framleis-brei-prisauke",
     },
   ],
   relatedLinks: [

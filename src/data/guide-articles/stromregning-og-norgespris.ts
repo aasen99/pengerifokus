@@ -7,9 +7,9 @@ export const stromregningOgNorgespris: Omit<
   slug: "stromregning-og-norgespris",
   seoTitle: "Norgespris eller strømstøtte?",
   intro:
-    "Strømregningen består av strøm, nettleie og avgifter. Norgespris påvirker bare kraftprisen. Så langt har ordningen vært svært lønnsom for mange, særlig i Sør-Norge, men fremtidig lønnsomhet avhenger av prisområde, forbruk og hvordan spotprisene utvikler seg.",
+    "Strømregningen består av strøm, nettleie og avgifter. Norgespris påvirker bare kraftprisen. Fremtidig lønnsomhet avhenger av prisområde, forbruk og hvordan spotprisene utvikler seg.",
   shortAnswer:
-    "Norgespris gir en kraftpris på 50 øre/kWh inkludert merverdiavgift, eller 40 øre/kWh i områder uten merverdiavgift på strøm, ut 2026. Vanlig strømstøtte følger spotprisen og dekker 90 prosent av prisen over 96,25 øre/kWh inkludert merverdiavgift. [Ordningen videreføres til 2029](https://www.regjeringen.no/no/tema/energi/strom/sporsmal-og-svar-om-norgespris/id3089310/), men prisen justeres fra 1. januar 2027. Usikkerheten gjelder derfor først og fremst om det blir like lønnsomt å fornye avtalen.",
+    "Norgespris gir en kraftpris på 50 øre/kWh inkludert merverdiavgift, eller 40 øre/kWh i områder uten merverdiavgift på strøm, ut 2026. Vanlig strømstøtte følger spotprisen og dekker 90 prosent av prisen over 96,25 øre/kWh inkludert merverdiavgift.",
   sections: [
     {
       heading: "Dette betaler du uansett",

@@ -340,7 +340,8 @@ export const emner: EmneHub[] = [
           {
             href: "/guider/funfacts",
             label: "Funfacts om penger",
-            description: "Rentes rente og andre trekk ved sparing og psykologi.",
+            description:
+              "20 fakta om sparing, sedler, Oljefondet og norsk pengehistorie.",
           },
         ],
       },

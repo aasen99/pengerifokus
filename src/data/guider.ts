@@ -12,7 +12,7 @@ export const guider: Guide[] = [
     featured: true,
     title: "Bygg bufferkonto",
     description:
-      "Lær hvordan du bygger en nødfond som tåler uforutsette utgifter uten å måtte ta opp lån.",
+      "Lær hvordan du bygger et nødfond som tåler uforutsette utgifter uten å måtte ta opp lån.",
     category: "Sparing",
     tags: ["buffer", "nødfond", "grunnmur"],
     createdAt: "2026-06-11",
@@ -133,9 +133,9 @@ export const guider: Guide[] = [
     id: "guide-6",
     slug: "funfacts",
     status: "published",
-    title: "10 overraskende fakta om penger",
+    title: "20 overraskende fakta om penger",
     description:
-      "Se hva tid, renter og små beløp kan gjøre med økonomien, pluss noen overraskende fakta fra norsk pengehistorie.",
+      "Visste du at Norge nesten ikke bruker kontanter, at Oljefondet eier rundt 1,5 prosent av verdens børsnoterte aksjer, og at alle norske sedler har havet som tema?",
     category: "Innsikt",
     tags: ["funfacts", "sparing", "psykologi"],
     createdAt: "2026-06-11",
@@ -159,7 +159,7 @@ export const guider: Guide[] = [
     slug: "sifo-sammenligne-husholdninger",
     status: "published",
     featured: true,
-    title: "SIFO: Slik endrer utgiftene seg når du får barn eller flytter sammen",
+    title: "SIFO: sammenligne husholdninger",
     description:
       "Sammenlign to husholdningsscenarier med SIFO-referansebudsjett: alene vs. samboer, par vs. familie med barn, og forstå individ- vs. husholdningsposter.",
     category: "Budsjett",

@@ -54,7 +54,7 @@ export const drivstoffpriser: Omit<GuideArticleContent, "readTimeMinutes"> = {
       heading: "Hva betaler du egentlig for?",
       paragraphs: [
         "Drivkraft Norge deler pumpeprisen i avgifter, internasjonal innkjøpspris og selskapenes egne kostnader og margin. Andelene varierer kraftig over tid og mellom bensin og diesel.",
-        "Ifølge Skatteetaten er veibruksavgiften midlertidig satt til 0 kr per liter fra 1. april til 1. september 2026. Ordinære satser gjelder igjen fra 1. september 2026. Artikkelen må oppdateres når avgiften endres.",
+        "Ifølge Skatteetaten er veibruksavgiften midlertidig satt til 0 kr per liter fra 1. april til 1. september 2026. Ordinære satser gjelder igjen fra 1. september 2026.",
       ],
       bullets: [
         "Avgifter: veibruksavgift, CO₂-avgift og merverdiavgift",
