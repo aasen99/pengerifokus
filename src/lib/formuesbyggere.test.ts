@@ -1,6 +1,8 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
 import {
+  filterFormuesbyggere,
+  filterFormuesbyggerStories,
   getRelatedFormuesbyggerReason,
   getRelatedFormuesbyggere,
 } from "./formuesbyggere";
@@ -76,5 +78,45 @@ describe("getRelatedFormuesbyggerReason", () => {
       getRelatedFormuesbyggerReason(current, related),
       "Eiendom · Gründer",
     );
+  });
+});
+
+describe("filterFormuesbyggere", () => {
+  it("matches extra search terms", () => {
+    const haaland = {
+      ...profile("erling-haaland", "Erling Braut Haaland", "sport", "idrett-underholdning"),
+      searchTerms: ["Kygo Jo", "Flow Kingz"],
+    };
+    const matches = filterFormuesbyggere([haaland], "kygo jo", null, null, null);
+    assert.equal(matches.length, 1);
+  });
+});
+
+describe("filterFormuesbyggerStories", () => {
+  const story = {
+    id: "story-kygo-jo",
+    href: "/formuesbyggere/erling-haaland/kygo-jo",
+    title: "Kygo Jo",
+    description: "Historien om Kygo Jo",
+    region: "norsk" as const,
+    industries: ["musikk", "sport"] as const,
+    buildType: "idrett-underholdning" as const,
+    searchText: "Kygo Jo Flow Kingz Lyng Erling Haaland",
+  };
+
+  it("finds Kygo Jo by title", () => {
+    const matches = filterFormuesbyggerStories([story], "kygo jo", null, null, null);
+    assert.equal(matches.length, 1);
+  });
+
+  it("hides the story for unrelated industry filters", () => {
+    const matches = filterFormuesbyggerStories(
+      [story],
+      "",
+      null,
+      "eiendom",
+      null,
+    );
+    assert.equal(matches.length, 0);
   });
 });

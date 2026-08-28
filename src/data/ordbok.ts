@@ -664,4 +664,28 @@ export const ordbok: OrdbokEntry[] = [
     createdAt: "2026-07-25",
     updatedAt: "2026-07-25",
   },
+  {
+    id: "ord-56",
+    slug: "inntekt",
+    status: "published",
+    term: "Inntekt",
+    definition:
+      "Penger du mottar i en periode, for eksempel lønn, honorar, renter, utbytte eller royalties. Inntekt er ikke det samme som formue eller penger på konto.",
+    category: "Økonomi",
+    tags: ["lønn", "økonomi", "royalties"],
+    createdAt: "2026-08-28",
+    updatedAt: "2026-08-28",
+  },
+  {
+    id: "ord-57",
+    slug: "royalties",
+    status: "published",
+    term: "Royalties",
+    definition:
+      "Løpende betaling til rettighetshavere når et verk brukes, for eksempel når musikk strømmes. Satser og fordeling varierer mellom plattformer, avtaler og land.",
+    category: "Økonomi",
+    tags: ["musikk", "inntekt", "rettigheter"],
+    createdAt: "2026-08-28",
+    updatedAt: "2026-08-28",
+  },
 ];

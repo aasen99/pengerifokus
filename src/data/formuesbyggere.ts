@@ -501,6 +501,7 @@ const baseFormuesbyggere: Formuesbygger[] = [
     wealthEstimate: kapitalEstimate("4,1"),
     wealthContext:
       "Lønn, samlet inntekt og formue er tre forskjellige størrelser. Kapital-anslag 2025. Forbes-inntektsanslag gjelder 2025–2026.",
+    searchTerms: ["Kygo Jo", "Flow Kingz", "Lyng"],
     createdAt: "2026-08-11",
     updatedAt: "2026-08-27",
   },

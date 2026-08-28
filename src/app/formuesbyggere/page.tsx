@@ -8,6 +8,7 @@ import {
   FORMUESBYGGERE_TITLE,
 } from "@/data/formuesbyggere-labels";
 import { getFormuesbyggerSlugs } from "@/data/formuesbygger-articles";
+import { formuesbyggerStories } from "@/data/kygo-jo";
 import { getFormuesbyggere } from "@/lib/content";
 import { createPageMetadata } from "@/lib/seo";
 
@@ -41,17 +42,25 @@ export default function FormuesbyggerePage() {
         name={FORMUESBYGGERE_TITLE}
         description={pageDescription}
         path="/formuesbyggere"
-        items={entries.map((entry) => ({
-          name: entry.name,
-          path: `/formuesbyggere/${entry.slug}`,
-          description: entry.tagline,
-        }))}
+        items={[
+          ...entries.map((entry) => ({
+            name: entry.name,
+            path: `/formuesbyggere/${entry.slug}`,
+            description: entry.tagline,
+          })),
+          ...formuesbyggerStories.map((story) => ({
+            name: story.title,
+            path: story.href,
+            description: story.description,
+          })),
+        ]}
       />
 
       <PageHeader title={FORMUESBYGGERE_TITLE} description={FORMUESBYGGERE_INTRO} />
       <FormuesbyggerList
         entries={entries}
         articleSlugs={getFormuesbyggerSlugs()}
+        stories={formuesbyggerStories}
       />
 
       <HubCrossLinks

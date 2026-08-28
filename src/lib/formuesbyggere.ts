@@ -8,7 +8,7 @@ import type {
   FormuesbyggerIndustry,
   FormuesbyggerRegion,
 } from "@/types/formuesbygger";
-import type { Formuesbygger } from "@/types/formuesbygger";
+import type { Formuesbygger, FormuesbyggerStory } from "@/types/formuesbygger";
 import { formatWealthEstimate, getWealthSortValue } from "@/lib/wealth-estimate";
 import {
   formatLifecycleCompact,
@@ -68,11 +68,30 @@ export function filterFormuesbyggere(
       entry.region,
       formatLifecycleFull(entry) ?? "",
       formatLifecycleCompact(entry) ?? "",
+      ...(entry.searchTerms ?? []),
     ]
       .join(" ")
       .toLowerCase();
 
     return haystack.includes(normalizedQuery);
+  });
+}
+
+export function filterFormuesbyggerStories(
+  stories: FormuesbyggerStory[],
+  query: string,
+  region: FormuesbyggerRegion | null,
+  industry: FormuesbyggerIndustry | null,
+  buildType: FormuesbyggerBuildType | null,
+): FormuesbyggerStory[] {
+  const normalizedQuery = query.trim().toLowerCase();
+
+  return stories.filter((story) => {
+    if (region && story.region !== region) return false;
+    if (industry && !story.industries.includes(industry)) return false;
+    if (buildType && story.buildType !== buildType) return false;
+    if (!normalizedQuery) return true;
+    return story.searchText.toLowerCase().includes(normalizedQuery);
   });
 }
 

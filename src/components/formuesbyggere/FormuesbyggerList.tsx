@@ -5,6 +5,7 @@ import { useMemo, useState, type ReactNode } from "react";
 import { BUILD_TYPE_LABELS, FORMUE_DISCLAIMER, INDUSTRY_LABELS, REGION_LABELS } from "@/data/formuesbyggere-labels";
 import {
   filterFormuesbyggere,
+  filterFormuesbyggerStories,
   FORMUESBYGGER_SORT_OPTIONS,
   sortFormuesbyggere,
   type FormuesbyggerSortOption,
@@ -14,6 +15,7 @@ import type {
   FormuesbyggerBuildType,
   FormuesbyggerIndustry,
   FormuesbyggerRegion,
+  FormuesbyggerStory,
 } from "@/types/formuesbygger";
 import { Tag } from "@/components/ui/Tag";
 import { WealthEstimateCard } from "@/components/formuesbyggere/WealthEstimateCard";
@@ -22,6 +24,7 @@ import { calculatorInputClassName } from "@/components/verktoy/calculator-ui";
 interface FormuesbyggerListProps {
   entries: Formuesbygger[];
   articleSlugs: string[];
+  stories?: FormuesbyggerStory[];
 }
 
 function FilterChip({
@@ -51,6 +54,7 @@ function FilterChip({
 export function FormuesbyggerList({
   entries,
   articleSlugs,
+  stories = [],
 }: FormuesbyggerListProps) {
   const [query, setQuery] = useState("");
   const [region, setRegion] = useState<FormuesbyggerRegion | null>(null);
@@ -68,6 +72,10 @@ export function FormuesbyggerList({
         sort,
       ),
     [entries, query, region, industry, buildType, sort],
+  );
+  const filteredStories = useMemo(
+    () => filterFormuesbyggerStories(stories, query, region, industry, buildType),
+    [stories, query, region, industry, buildType],
   );
 
   const hasFilters =
@@ -98,7 +106,7 @@ export function FormuesbyggerList({
           type="search"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Søk etter navn, bransje eller type..."
+          placeholder="Søk etter navn, artikkel, bransje eller type..."
           className={calculatorInputClassName}
         />
 
@@ -214,8 +222,29 @@ export function FormuesbyggerList({
         </div>
       </div>
 
-      {filtered.length > 0 ? (
+      {filtered.length > 0 || filteredStories.length > 0 ? (
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {filteredStories.map((story) => (
+            <Link
+              key={story.id}
+              href={story.href}
+              className="group rounded-xl border border-stone-200 bg-white p-3.5 transition-colors hover:border-orange-300"
+            >
+              <div className="mb-2 flex flex-wrap gap-1.5">
+                <Tag variant="accent">{REGION_LABELS[story.region]}</Tag>
+                <Tag variant="muted">
+                  {INDUSTRY_LABELS[story.industries[0] ?? "musikk"]}
+                </Tag>
+                <Tag>Artikkel</Tag>
+              </div>
+              <h2 className="text-base font-semibold text-stone-900 group-hover:text-orange-700">
+                {story.title}
+              </h2>
+              <p className="mt-1 line-clamp-3 text-sm leading-snug text-stone-600">
+                {story.description}
+              </p>
+            </Link>
+          ))}
           {filtered.map((entry) => {
             const hasArticle = articleSlugSet.has(entry.slug);
             const card = (

@@ -35,7 +35,7 @@ export interface BuildArticleOptions {
   seoKeywords?: string[];
   faq?: { question: string; answer: string }[];
   quotes?: FormuesbyggerQuote[];
-  relatedLinks?: { label: string; href: string }[];
+  relatedLinks?: { label: string; href: string; description?: string }[];
 }
 
 function collectArticleTexts(

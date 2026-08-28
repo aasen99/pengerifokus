@@ -331,6 +331,48 @@ export const ordbokArticles: Record<string, OrdbokArticle> = {
     lastVerified: "18. august 2026",
     lastModifiedIso: "2026-08-18",
   },
+  inntekt: {
+    slug: "inntekt",
+    whyItMatters:
+      "Inntekt forteller hva som kommer inn i perioden, ikke hva du eier. Lønn, strømmeinntekter og formue måles hver for seg.",
+    example:
+      "En spiller kan ha høy årslønn uten at det sier noe om formuen. En låt med millioner av avspillinger kan gi inntekt, men beløpet avhenger av avtaler og fordeling.",
+    misconception:
+      "Mange behandler visningstall og strømmetall som om de var inntekt. Antall avspillinger er ikke det samme som penger på konto.",
+    versus: {
+      term: "Nettoformue",
+      slug: "nettoformue",
+      difference:
+        "Inntekt er en strøm i en periode. Nettoformue er det som er igjen av verdier minus gjeld.",
+    },
+    source: {
+      label: "Skatteetaten om inntekt",
+      url: "https://www.skatteetaten.no/person/skatt/hjelp-til-riktig-skatt/",
+    },
+    lastVerified: "28. august 2026",
+    lastModifiedIso: "2026-08-28",
+  },
+  royalties: {
+    slug: "royalties",
+    whyItMatters:
+      "Royalties er inntekt fra bruk av et verk, ikke fra lønn. I musikk deles pengene vanligvis mellom flere rettighetshavere.",
+    example:
+      "Når en låt strømmes på Spotify, går en del av inntekten til plateselskap, låtskrivere, artister og andre rettighetshavere. Satser per avspilling varierer.",
+    misconception:
+      "Du kan ikke gange avspillinger med en fast sats og kalle det artistens inntekt. Avtaler, lisenser og fordeling avgjør hvor mye som faktisk utbetales.",
+    versus: {
+      term: "Inntekt",
+      slug: "inntekt",
+      difference:
+        "Royalties er én type inntekt, knyttet til bruk av rettigheter. Inntekt omfatter også lønn, renter og andre inntektskilder.",
+    },
+    source: {
+      label: "Tono om opphavsrett og vederlag",
+      url: "https://www.tono.no/",
+    },
+    lastVerified: "28. august 2026",
+    lastModifiedIso: "2026-08-28",
+  },
 };
 
 export function getOrdbokArticle(slug: string): OrdbokArticle | undefined {

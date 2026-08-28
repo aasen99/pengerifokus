@@ -7,6 +7,7 @@ import { getEmneSlugs } from "@/data/emner";
 import { getFordelArticleSlugs } from "@/data/fordel-articles";
 import { getGuideArticleSlugs } from "@/data/guide-articles";
 import { getFormuesbyggerSlugs } from "@/data/formuesbygger-articles";
+import { kygoJoArticle } from "@/data/kygo-jo";
 import { fordeler } from "@/data/fordeler";
 import { guider } from "@/data/guider";
 import { ordbok } from "@/data/ordbok";
@@ -169,6 +170,12 @@ export const publicRoutes: PublicRoute[] = [
     lastModified: hubLastModified.formuesbyggere,
   },
   ...formuesbyggerRoutes,
+  {
+    path: kygoJoArticle.path,
+    priority: 0.8,
+    changeFrequency: "monthly",
+    lastModified: kygoJoArticle.publishedAt,
+  },
   ...emneRoutes,
   {
     path: "/om",

@@ -1,3 +1,4 @@
+import { haalandKygoJoRelatedLink } from "@/data/kygo-jo";
 import { buildFormuesbyggerArticle } from "./helpers";
 import { kapital400Source } from "./source-tiers";
 
@@ -481,6 +482,7 @@ Manchester City har ikke offentliggjort lønnen. Tallene bygger derfor på estim
   ],
   lastVerified: "2026-08-27",
   relatedLinks: [
+    haalandKygoJoRelatedLink,
     { label: "Cristiano Ronaldo", href: "/formuesbyggere/cristiano-ronaldo" },
     { label: "Michael Jordan", href: "/formuesbyggere/michael-jordan" },
     { label: "Nettoformue i ordboken", href: "/ordbok/nettoformue" },

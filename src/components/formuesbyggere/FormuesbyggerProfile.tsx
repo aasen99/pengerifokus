@@ -6,12 +6,6 @@ import {
   REGION_LABELS,
 } from "@/data/formuesbyggere-labels";
 import { WEALTH_SOURCE_LABELS } from "@/data/formuesbygger-articles/helpers";
-import {
-  groupSourcesByTier,
-  SOURCE_TIER_DESCRIPTIONS,
-  SOURCE_TIER_DISPLAY_ORDER,
-  SOURCE_TIER_LABELS,
-} from "@/data/formuesbygger-articles/source-tiers";
 import type { Formuesbygger } from "@/types/formuesbygger";
 import type { FormuesbyggerArticle } from "@/types/formuesbygger";
 import { Tag } from "@/components/ui/Tag";
@@ -22,6 +16,7 @@ import { FormuesbyggerFactCards } from "@/components/formuesbyggere/Formuesbygge
 import { FormuesbyggerBodySections } from "@/components/formuesbyggere/FormuesbyggerBodySections";
 import { FormuesbyggerLifecycle } from "@/components/formuesbyggere/FormuesbyggerLifecycle";
 import { RelatedFormuesbyggere } from "@/components/formuesbyggere/RelatedFormuesbyggere";
+import { ArticleSources } from "@/components/formuesbyggere/ArticleSources";
 import { getProfileQuotes } from "@/lib/sitater-filter";
 import { createOrdbokLinker } from "@/lib/ordbok-inline";
 import { renderTextWithLinks } from "@/lib/rich-text";
@@ -30,15 +25,6 @@ interface FormuesbyggerProfileProps {
   profile: Formuesbygger;
   article: FormuesbyggerArticle;
   related: Formuesbygger[];
-}
-
-function formatVerifiedDate(isoDate: string): string {
-  const date = new Date(`${isoDate}T12:00:00`);
-  return date.toLocaleDateString("nb-NO", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  });
 }
 
 function TimelineSection({
@@ -79,7 +65,6 @@ export function FormuesbyggerProfile({
   related,
 }: FormuesbyggerProfileProps) {
   const quotes = getProfileQuotes(article.quotes);
-  const sourcesByTier = groupSourcesByTier(article.sources);
   const linkOrdbok = createOrdbokLinker(3);
   const withTerms = (text: string) => renderTextWithLinks(linkOrdbok(text));
   const shortAnswerParagraphs = article.shortAnswer
@@ -284,78 +269,16 @@ export function FormuesbyggerProfile({
         </section>
       )}
 
-      <details className="group mt-10 rounded-xl border border-stone-200 bg-stone-50">
-        <summary className="cursor-pointer list-none px-4 py-2.5 [&::-webkit-details-marker]:hidden">
-          <div className="flex items-center justify-between gap-3">
-            <span className="text-sm text-stone-700">
-              <span className="font-semibold text-stone-900">
-                Kilder og sist kontrollert
-              </span>
-              <span className="text-stone-500">
-                {" "}
-                ·{" "}
-                <time dateTime={article.lastVerified}>
-                  {formatVerifiedDate(article.lastVerified)}
-                </time>
-                {" · "}
-                {article.sources.length}{" "}
-                {article.sources.length === 1 ? "kilde" : "kilder"}
-              </span>
-            </span>
-            <span
-              className="shrink-0 text-sm text-stone-400 transition-transform group-open:rotate-180"
-              aria-hidden="true"
-            >
-              ▾
-            </span>
-          </div>
-        </summary>
-
-        <div className="border-t border-stone-200 px-4 py-3">
-          <p className="text-xs leading-relaxed text-stone-600">
-            Vi prioriterer årsrapporter, SEC og Brønnøysund, deretter
-            børsmeldinger, før Kapital og andre medier. Wikipedia og
-            formueblogger brukes kun internt for å finne spor.
-          </p>
-          <div className="mt-4 space-y-5">
-            {SOURCE_TIER_DISPLAY_ORDER.map((tier) => {
-              const tierSources = sourcesByTier[tier];
-              if (!tierSources?.length) return null;
-
-              return (
-                <div key={tier}>
-                  <h3 className="text-sm font-semibold text-stone-800">
-                    {SOURCE_TIER_LABELS[tier]}
-                  </h3>
-                  <p className="text-xs text-stone-500">
-                    {SOURCE_TIER_DESCRIPTIONS[tier]}
-                  </p>
-                  <ul className="mt-2 space-y-2">
-                    {tierSources.map((source) => (
-                      <li key={source.url}>
-                        <a
-                          href={source.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-sm font-medium text-orange-600 hover:text-orange-700"
-                        >
-                          {source.label}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </details>
-
-      <RelatedFormuesbyggere current={profile} related={related} />
+      <ArticleSources
+        sources={article.sources}
+        lastVerified={article.lastVerified}
+      />
 
       {article.relatedLinks && article.relatedLinks.length > 0 && (
         <RelatedLinks links={article.relatedLinks} />
       )}
+
+      <RelatedFormuesbyggere current={profile} related={related} />
     </article>
   );
 }

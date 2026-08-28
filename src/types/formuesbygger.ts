@@ -49,6 +49,20 @@ export interface Formuesbygger extends BaseContent {
   wealthEstimate: WealthEstimate;
   /** Hva formuen hovedsakelig er knyttet til */
   wealthContext: string;
+  /** Ekstra søkeord som ikke vises på kortet */
+  searchTerms?: string[];
+}
+
+/** Relatert artikkelside som vises i formuesbygger-oversikten */
+export interface FormuesbyggerStory {
+  id: string;
+  href: string;
+  title: string;
+  description: string;
+  region: FormuesbyggerRegion;
+  industries: FormuesbyggerIndustry[];
+  buildType: FormuesbyggerBuildType;
+  searchText: string;
 }
 
 export type FormuesbyggerQuoteCategory = "sitat" | "motto";
@@ -197,5 +211,5 @@ export interface FormuesbyggerArticle {
   /** Valgfri FAQ (ellers bygges fra synlig artikkelinnhold) */
   faq?: { question: string; answer: string }[];
   quotes?: FormuesbyggerQuote[];
-  relatedLinks?: { label: string; href: string }[];
+  relatedLinks?: { label: string; href: string; description?: string }[];
 }
