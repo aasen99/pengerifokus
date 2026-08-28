@@ -67,8 +67,11 @@ export function getTilbudSourceLinkLabel(
   if (sourceUrl?.includes("onlineshopping.flysas.com")) {
     return "SAS Online Shopping ↗";
   }
-  if (sourceUrl?.includes("trumfnetthandel") || fordelSlug === "trumf") {
+  if (sourceUrl?.includes("trumfnetthandel")) {
     return "Trumf Netthandel ↗";
+  }
+  if (fordelSlug === "trumf") {
+    return "Trumf ↗";
   }
   if (fordelSlug === "student") return "Offisiell kilde ↗";
   return `${fordelName} ↗`;

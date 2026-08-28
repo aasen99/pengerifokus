@@ -497,4 +497,24 @@ export const trumfTilbud: Tilbud[] = [
     createdAt: "2026-07-02",
     updatedAt: trumfCheckedAt,
   },
+  {
+    id: "tilbud-trumf-35",
+    slug: "trumf-esso",
+    status: "published",
+    title: "Esso",
+    description:
+      "Trumf-medlemmer får 40 øre per liter i Trumf-bonus på bemannede Esso-stasjoner og 20 øre per liter på Esso Express. Bonusen er Trumf-kroner du kan ta ut eller bruke i NorgesGruppen.",
+    offerLabel: "40 / 20 øre/l",
+    partner: "Esso",
+    fordelSlug: "trumf",
+    category: "Drivstoff",
+    searchTags: ["bensin", "diesel", "drivstoff", "pumpe", "express"],
+    terms:
+      "Krever Trumf-medlemskap. Betal med Trumf-registrert debetkort eller Trumf-kort. Trumf oppgir at kredittkort ikke gir Trumf-bonus hos Esso. Gjelder ikke avgiftsfri diesel, HVO eller AdBlue, ifølge Trumf.",
+    sourceUrl: "https://www.trumf.no/fordeler/esso",
+    warning:
+      "Sammenlign nettopris: skiltpris minus Trumf-bonus. Bonusen er ikke nødvendigvis direkte fratrekk på pumpa.",
+    createdAt: "2026-08-28",
+    updatedAt: "2026-08-28",
+  },
 ];

@@ -101,6 +101,6 @@ export const circleKExtra: FordelArticleContent = {
     { label: "Coop Medlem", href: "/fordeler/coop" },
     { label: "NAF", href: "/fordeler/naf" },
     { label: "Trumf", href: "/fordeler/trumf" },
-    { label: "Se tilbud", href: "/tilbud" },
+    { label: "Se drivstofftilbud", href: "/tilbud?kategori=Bil" },
   ],
 };

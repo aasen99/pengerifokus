@@ -239,6 +239,7 @@ export const trumf: FordelArticleContent = {
   ],
   relatedLinks: [
     { label: "Se Trumf-tilbud vi har samlet", href: "/tilbud?program=trumf" },
+    { label: "Drivstoffpriser", href: "/guider/drivstoffpriser" },
     { label: "EuroBonus, flybonusprogram", href: "/fordeler/eurobonus" },
     { label: "Kredittkortfordeler", href: "/fordeler/kredittkortfordeler" },
     { label: "Cashback i ordboken", href: "/ordbok/cashback" },

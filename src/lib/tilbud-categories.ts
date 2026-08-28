@@ -4,7 +4,7 @@
  */
 export const TILBUD_CATEGORY_GROUPS = {
   "Reise og hotell": ["Reise", "Hotell", "Transport"],
-  "Bil": ["Bil"],
+  "Bil": ["Bil", "Drivstoff"],
   "Helse og velvære": ["Helse", "Optikk"],
   "Bolig": ["Interiør", "Bolig", "Byggevare", "Strøm"],
   "Elektronikk": ["Elektronikk", "Programvare"],

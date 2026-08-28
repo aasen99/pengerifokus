@@ -8,6 +8,7 @@ import { spennTilbud } from "@/data/tilbud-spenn";
 import { usblTilbud } from "@/data/tilbud-usbl";
 import { studentTilbud } from "@/data/tilbud-student";
 import { lofavorTilbud } from "@/data/tilbud-lofavor";
+import { circleKExtraTilbud } from "@/data/tilbud-circle-k-extra";
 import { tilbudListMeta } from "@/data/tilbud-meta";
 
 export { tilbudListMeta };
@@ -549,4 +550,5 @@ export const tilbud: Tilbud[] = [
   ...usblTilbud,
   ...studentTilbud,
   ...lofavorTilbud,
+  ...circleKExtraTilbud,
 ];

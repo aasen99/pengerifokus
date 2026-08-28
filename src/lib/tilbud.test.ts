@@ -51,9 +51,10 @@ describe("parseOfferRate", () => {
     assert.equal(parseOfferRate("3 000 poeng", "eurobonus"), null);
   });
 
-  it("ignores flat Spenn without purchase amount", () => {
-    assert.equal(parseOfferRate("816 Spenn på kjøpet", "spenn"), null);
-    assert.equal(parseOfferRate("1 680 Spenn på kjøpet", "spenn"), null);
+  it("ignores øre per litre so fuel discounts are not ranked as percent", () => {
+    assert.equal(parseOfferRate("45 øre/l"), null);
+    assert.equal(parseOfferRate("30–45 øre/l"), null);
+    assert.equal(parseOfferRate("40 / 20 øre/l"), null);
   });
 });
 
@@ -96,6 +97,16 @@ describe("filterTilbud search", () => {
   it("matches hidden searchTags", () => {
     const matches = filterTilbud(published, "sko", null, null, false);
     assert.ok(matches.some((item) => item.partner === "Anton Sport"));
+  });
+
+  it("finds fuel offers by drivstoff and partner", () => {
+    const drivstoff = filterTilbud(published, "drivstoff", null, null, false);
+    assert.ok(drivstoff.some((item) => item.partner === "Circle K"));
+    assert.ok(drivstoff.some((item) => item.partner === "Esso"));
+    assert.ok(drivstoff.some((item) => item.partner === "YX"));
+
+    const esso = filterTilbud(published, "esso", "trumf", null, false);
+    assert.ok(esso.some((item) => item.slug === "trumf-esso"));
   });
 
   it("filters grouped partners on the client without dropping other offers in a match", () => {

@@ -254,6 +254,6 @@ export const drivstoffpriser: Omit<GuideArticleContent, "readTimeMinutes"> = {
     { label: "Coop", href: "/fordeler/coop" },
     { label: "NAF", href: "/fordeler/naf" },
     { label: "Kutt faste kostnader", href: "/guider/kutt-faste-kostnader" },
-    { label: "Se tilbud", href: "/tilbud" },
+    { label: "Se drivstofftilbud", href: "/tilbud?kategori=Bil" },
   ],
 };

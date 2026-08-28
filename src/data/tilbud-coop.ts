@@ -65,4 +65,44 @@ export const coopTilbud: Tilbud[] = [
     createdAt: "2026-06-11",
     updatedAt: "2026-06-11",
   },
+  {
+    id: "tilbud-coop-5",
+    slug: "coop-drivstoff-circle-k",
+    status: "published",
+    title: "Circle K",
+    description:
+      "Coop-medlemmer får 45 øre per liter på betjent Circle K og 25 øre per liter på ubetjent Circle K. Rabatten trekkes på pumpa når medlemskapet er koblet i appen eller du betaler med Coop Mastercard.",
+    offerLabel: "45 / 25 øre/l",
+    partner: "Circle K",
+    fordelSlug: "coop",
+    category: "Drivstoff",
+    searchTags: ["bensin", "diesel", "drivstoff", "pumpe"],
+    terms:
+      "Krever Coop-medlemskap koblet i Coop-appen eller betaling med Coop Mastercard. 45 øre/l på betjent Circle K, 25 øre/l på ubetjent. Er du også Circle K Extra-medlem, kan du få ekstra rabatt hos Circle K. Sjekk gjeldende sats i appen.",
+    sourceUrl: "https://www.coop.no/medlemsfordeler/",
+    warning:
+      "Sammenlign nettopris: skiltpris minus rabatt. En dyr toppdag med Coop-rabatt kan fortsatt tape mot lav skiltpris et annet sted.",
+    createdAt: "2026-08-28",
+    updatedAt: "2026-08-28",
+  },
+  {
+    id: "tilbud-coop-6",
+    slug: "coop-drivstoff-yx",
+    status: "published",
+    title: "YX",
+    description:
+      "Coop-medlemmer får 45 øre per liter på betjent YX. Rabatten trekkes på pumpa når medlemskapet er koblet i appen eller du betaler med Coop Mastercard.",
+    offerLabel: "45 øre/l",
+    partner: "YX",
+    fordelSlug: "coop",
+    category: "Drivstoff",
+    searchTags: ["bensin", "diesel", "drivstoff", "pumpe"],
+    terms:
+      "Krever Coop-medlemskap koblet i Coop-appen eller betaling med Coop Mastercard. Gjelder betjent YX. Sjekk gjeldende vilkår hos Coop.",
+    sourceUrl: "https://www.coop.no/medlemsfordeler/",
+    warning:
+      "Sammenlign nettopris: skiltpris minus rabatt. En dyr toppdag med Coop-rabatt kan fortsatt tape mot lav skiltpris et annet sted.",
+    createdAt: "2026-08-28",
+    updatedAt: "2026-08-28",
+  },
 ];

@@ -3,11 +3,13 @@
  * Oppdateres når tilbud verifiseres eller endres hos partner.
  */
 export const tilbudListMeta = {
-  lastUpdated: "2026-08-19",
+  lastUpdated: "2026-08-28",
   sources: [
     "OBOS medlemsfordeler",
     "offisielle Trumf Netthandel-sider",
+    "Trumf Esso",
     "Coop medlemsfordeler",
+    "Circle K Extra",
     "NAF medlemsfordeler",
     "Klarna cashback",
     "SAS EuroBonus restaurant- og partnerprogram",

@@ -189,6 +189,10 @@ export function parseOfferRate(
     return null;
   }
 
+  if (/øre/i.test(offerLabel)) {
+    return null;
+  }
+
   const matches = offerLabel.match(/\d+[,.]?\d*/g);
   if (!matches?.length) return null;
 

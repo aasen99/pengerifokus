@@ -258,6 +258,7 @@ export const coop: FordelArticleContent = {
   ],
   relatedLinks: [
     { label: "Se Coop-tilbud vi har samlet", href: "/tilbud?program=coop" },
+    { label: "Drivstoffpriser", href: "/guider/drivstoffpriser" },
     { label: "Trumf, bonusprogram hos NorgesGruppen", href: "/fordeler/trumf" },
     { label: "Kredittkortfordeler", href: "/fordeler/kredittkortfordeler" },
     { label: "Kjøpeutbytte i ordboken", href: "/ordbok/kjopeutbytte" },

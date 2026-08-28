@@ -51,6 +51,11 @@ export const metadata: Metadata = createPageMetadata({
     "LOfavør rabatt",
     "studentrabatt",
     "student tilbud",
+    "drivstoffrabatt",
+    "bensinrabatt",
+    "Circle K Extra",
+    "Esso Trumf",
+    "Coop drivstoff",
   ],
 });
 
