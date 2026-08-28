@@ -167,6 +167,10 @@ export interface FormuesbyggerBodySection {
   bullets?: string[];
   table?: FormuesbyggerTable;
   cards?: FormuesbyggerBodyCard[];
+  callout?: {
+    title?: string;
+    text: string;
+  };
 }
 
 /** Fast artikkelmal, samme ni seksjoner på alle profiler */

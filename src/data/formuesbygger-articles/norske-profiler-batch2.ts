@@ -1,5 +1,6 @@
 import { buildFormuesbyggerArticle } from "./helpers";
 import { kapital400Source } from "./source-tiers";
+import { heleneSundtArticle } from "./helene-sundt";
 
 export const norskeProfilerBatch2 = {
   "torstein-hagen": buildFormuesbyggerArticle({
@@ -470,101 +471,7 @@ export const norskeProfilerBatch2 = {
     ],
   }),
 
-  "helene-sundt": buildFormuesbyggerArticle({
-    slug: "helene-sundt",
-    seoAngle: "Hva betyr arv for Norges rikeste kvinner?",
-    shortAnswer:
-      "Else Helene Sundt er arving etter skipsreder Petter C.G. Sundt og regnes som en av Norges rikeste kvinner. Da faren døde i 2007, overtok hun og broren Christian familieformuen, som forvaltes profesjonelt gjennom Sundt AS. Formuen kommer fra arv etter en skipsreder, men verdiutviklingen skjer gjennom langsiktig porteføljeforvaltning, finans, eiendom og diversifiserte investeringer. Det er ikke operativ gründerdrift eller én engangssum, men kontinuerlig forvaltning av arvet kapital over generasjoner. Familien er også engasjert i Bergesenstiftelsen.",
-    timeline: [
-      {
-        date: "1979",
-        title: "Født 3. desember",
-        description:
-          "Else Helene Sundt ble født 3. desember 1979, datter av skipsreder Petter C.G. Sundt.",
-      },
-      {
-        date: "2007",
-        title: "Arv etter Petter C.G. Sundt",
-        description:
-          "Da skipsreder Petter C.G. Sundt døde, overtok Else Helene og broren Christian familieformuen.",
-      },
-      {
-        date: "2007",
-        title: "Sundt AS forvalter formuen",
-        description:
-          "Sundt AS ble etablert som investeringsselskap for profesjonell forvaltning av arvet kapital.",
-      },
-      {
-        date: "2010-tallet",
-        title: "Diversifisert portefølje",
-        description:
-          "Formuen ble spredt over finansielle investeringer, eiendom og andre eiendeler, ikke konsentrert i shipping.",
-      },
-      {
-        date: "2025",
-        title: "Kapital 400, 11,5 mrd.",
-        description:
-          "Kapital estimerer formuen til om lag 11,5 milliarder kroner, forvaltet gjennom Sundt AS.",
-      },
-    ],
-    wealthSources: [
-      {
-        category: "arv",
-        description:
-          "Arv etter skipsreder Petter C.G. Sundt (2007), utgangspunktet for familieformuen.",
-      },
-      {
-        category: "aksjer",
-        description:
-          "Bred portefølje av finansielle investeringer og eiendom forvaltet gjennom Sundt AS.",
-      },
-    ],
-    decisiveMove:
-      "Profesjonell forvaltning via Sundt AS etter arven i 2007, i stedet for å motta én engangssum ble kapitalen investert langsiktig i diversifiserte eiendeler.",
-    whatCouldGoWrong: [
-      "Arv gir kapital, men ikke automatisk kompetanse, dårlig forvaltning kan erodere formue over generasjoner.",
-      "Konsentrasjon i få investeringer kan gi store tap hvis ett marked kollapser.",
-      "Familiekonflikter rundt arv og forvaltning kan splitte både formue og relasjoner.",
-      "Inflasjon og lav avkastning over tid kan spise arvens reelle verdi.",
-    ],
-    mythVsReality: [
-      {
-        myth: "Arvinger mottar én stor sjekk og er ferdig.",
-        reality:
-          "Sundt AS forvalter formuen aktivt over tid, arv er et utgangspunkt for langsiktig porteføljeforvaltning, ikke en engangssum.",
-      },
-      {
-        myth: "Arv betyr automatisk rikdom uten innsats.",
-        reality:
-          "Profesjonell forvaltning, diversifisering og langsiktighet er det som avgjør om arven vokser eller krymper over generasjoner.",
-      },
-    ],
-    personalLessons: [
-      "Mange av Norges største formuer er knyttet til arv og profesjonell forvaltning, ikke gründerdrift.",
-      "Sundt AS viser at arv kan forvaltes aktivt over generasjoner med riktig struktur.",
-      "Diversifisering reduserer avhengighet av én bransje, viktig når arven kommer fra shipping.",
-      "Arv gir eierskap, men forvaltningskompetanse avgjør om formuen vokser.",
-    ],
-    sources: [
-      {
-        label: "Sundt AS: Brønnøysundregistrene",
-        url: "https://virksomhet.brreg.no/nb/oppslag/enheter/974525836",
-        tier: "primary",
-      },
-      {
-        label: "Bergesenstiftelsen",
-        url: "https://bergensenstiftelsen.no/",
-        tier: "primary",
-      },
-      kapital400Source(),
-    ],
-    lastVerified: "2026-08-11",
-    relatedLinks: [
-      { label: "Caroline Hagen Kjos", href: "/formuesbyggere/caroline-hagen-kjos" },
-      { label: "Johan H. Andresen", href: "/formuesbyggere/johan-h-andresen" },
-      { label: "Gustav Magnar Witzøe", href: "/formuesbyggere/gustav-magnar-witzoe" },
-    ],
-  }),
+  "helene-sundt": heleneSundtArticle,
 
   "nicolai-tangen": buildFormuesbyggerArticle({
     slug: "nicolai-tangen",

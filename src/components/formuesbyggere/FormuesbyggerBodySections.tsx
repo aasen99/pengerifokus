@@ -101,6 +101,22 @@ export function FormuesbyggerBodySections({
               {withTerms(section.table.footnote)}
             </p>
           )}
+          {section.callout && (
+            <aside className="mt-4 rounded-xl border border-orange-200 bg-orange-50 px-4 py-3">
+              {section.callout.title && (
+                <p className="text-sm font-semibold text-stone-900">
+                  {section.callout.title}
+                </p>
+              )}
+              <p
+                className={`text-sm leading-relaxed text-stone-700 ${
+                  section.callout.title ? "mt-1" : ""
+                }`}
+              >
+                {withTerms(section.callout.text)}
+              </p>
+            </aside>
+          )}
           {section.cards && section.cards.length > 0 && (
             <div
               className={`mt-4 grid gap-3 ${

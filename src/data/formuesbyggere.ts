@@ -242,11 +242,13 @@ const baseFormuesbyggere: Formuesbygger[] = [
     region: "norsk",
     industry: "arv",
     buildType: "arv-videreutvikling",
-    tagline: "Arving og investor via Sundt AS, blant Norges rikeste kvinner.",
+    tagline:
+      "Arving etter Petter C.G. Sundt. Kapital anslo formuen til 11,5 milliarder kroner i 2025.",
     wealthEstimate: kapitalEstimate("11,5"),
-    wealthContext: "Arv etter Petter C.G. Sundt, forvaltet gjennom Sundt AS.",
+    wealthContext:
+      "Kapital-anslag 2025. Arv forvaltet videre gjennom Sundt AS, Helene Sundt AS og Pandox. Markedsformue og bokført egenkapital er ulike størrelser.",
     createdAt: "2026-06-11",
-    updatedAt: "2026-06-11",
+    updatedAt: "2026-08-28",
   },
   {
     id: "fb-n17",

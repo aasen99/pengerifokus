@@ -64,6 +64,10 @@ function collectArticleTexts(
     for (const card of section.cards ?? []) {
       texts.push(card.title, ...(card.paragraphs ?? []), ...(card.bullets ?? []));
     }
+    if (section.callout) {
+      if (section.callout.title) texts.push(section.callout.title);
+      texts.push(section.callout.text);
+    }
   }
 
   for (const event of article.timeline) {

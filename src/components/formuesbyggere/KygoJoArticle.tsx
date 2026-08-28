@@ -10,77 +10,6 @@ import {
 } from "@/data/kygo-jo";
 import { renderTextWithLinks } from "@/lib/rich-text";
 
-function KygoJoHero() {
-  return (
-    <div
-      className="mt-6 overflow-hidden rounded-xl border border-stone-200"
-      aria-hidden="true"
-    >
-      <svg
-        viewBox="0 0 800 220"
-        className="h-auto w-full"
-        xmlns="http://www.w3.org/2000/svg"
-        role="presentation"
-      >
-        <defs>
-          <linearGradient id="kygo-sky" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#0f766e" />
-            <stop offset="45%" stopColor="#ea580c" />
-            <stop offset="100%" stopColor="#f59e0b" />
-          </linearGradient>
-        </defs>
-        <rect width="800" height="220" fill="url(#kygo-sky)" />
-        <circle cx="640" cy="58" r="36" fill="#fde68a" opacity="0.9" />
-        <path
-          d="M40 168c40-28 80-28 120 0s80 28 120 0 80-28 120 0 80 28 120 0 80-28 120 0 80 28 120 0"
-          fill="none"
-          stroke="#ecfdf5"
-          strokeWidth="5"
-          opacity="0.55"
-        />
-        <path
-          d="M40 188c40-20 80-20 120 0s80 20 120 0 80-20 120 0 80 20 120 0 80-20 120 0 80 20 120 0"
-          fill="none"
-          stroke="#fff7ed"
-          strokeWidth="3"
-          opacity="0.4"
-        />
-        <g transform="translate(118 78)">
-          <circle cx="36" cy="36" r="34" fill="#fafaf9" />
-          <circle cx="36" cy="36" r="28" fill="none" stroke="#1c1917" strokeWidth="3" />
-          <path
-            d="M36 10c8 8 10 16 10 26s-2 18-10 26c-8-8-10-16-10-26s2-18 10-26z"
-            fill="none"
-            stroke="#1c1917"
-            strokeWidth="2"
-          />
-          <path
-            d="M10 36c8-8 16-10 26-10s18 2 26 10c-8 8-16 10-26 10s-18-2-26-10z"
-            fill="none"
-            stroke="#1c1917"
-            strokeWidth="2"
-          />
-          <polygon points="36,24 44,32 36,40 28,32" fill="#1c1917" />
-        </g>
-        <g transform="translate(248 86)" fill="none" stroke="#ecfdf5" strokeWidth="4">
-          <path d="M0 24c12-18 24-18 36 0" />
-          <path d="M8 24c8-10 16-10 24 0" />
-          <path d="M52 24c12-18 24-18 36 0" />
-          <path d="M60 24c8-10 16-10 24 0" />
-          <path d="M104 24c12-18 24-18 36 0" />
-          <path d="M112 24c8-10 16-10 24 0" />
-        </g>
-        <g transform="translate(470 72)">
-          <rect x="38" y="8" width="14" height="52" rx="7" fill="#fafaf9" />
-          <circle cx="45" cy="66" r="18" fill="#1c1917" />
-          <circle cx="45" cy="66" r="11" fill="#fb7185" />
-          <rect x="44" y="8" width="36" height="8" rx="4" fill="#fafaf9" />
-        </g>
-      </svg>
-    </div>
-  );
-}
-
 function Quote({ children }: { children: string }) {
   return (
     <blockquote className="mt-4 border-l-4 border-orange-400 bg-orange-50/60 px-4 py-3 text-stone-700 italic">
@@ -180,8 +109,6 @@ export function KygoJoArticle() {
           </time>
         </p>
       </header>
-
-      <KygoJoHero />
 
       <div className="mt-6 overflow-x-auto rounded-xl border border-stone-200 bg-white">
         <table className="w-full min-w-[20rem] text-left text-sm">
