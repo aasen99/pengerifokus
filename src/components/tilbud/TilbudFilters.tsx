@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback } from "react";
 import { calculatorInputClassName } from "@/components/verktoy/calculator-ui";
 import {
   TILBUD_SORT_OPTIONS,
@@ -23,6 +23,8 @@ interface CategoryOption {
 
 interface TilbudFiltersProps {
   query: string;
+  searchInput: string;
+  onSearchInputChange: (value: string) => void;
   program: string | null;
   category: string | null;
   includeStudent: boolean;
@@ -32,8 +34,6 @@ interface TilbudFiltersProps {
   partnerCount: number;
   offerCount: number;
 }
-
-const SEARCH_DEBOUNCE_MS = 300;
 
 function SearchIcon() {
   return (
@@ -56,6 +56,8 @@ function SearchIcon() {
 
 export function TilbudFilters({
   query,
+  searchInput,
+  onSearchInputChange,
   program,
   category,
   includeStudent,
@@ -66,16 +68,13 @@ export function TilbudFilters({
   offerCount,
 }: TilbudFiltersProps) {
   const router = useRouter();
-  const [searchInput, setSearchInput] = useState(query);
-
-  useEffect(() => {
-    setSearchInput(query);
-  }, [query]);
 
   const navigate = useCallback(
     (overrides: Partial<TilbudFilterParams> = {}) => {
       const nextQ =
-        overrides.q !== undefined ? overrides.q || undefined : query || undefined;
+        overrides.q !== undefined
+          ? overrides.q || undefined
+          : searchInput.trim() || undefined;
 
       router.replace(
         buildTilbudHref({
@@ -88,53 +87,20 @@ export function TilbudFilters({
           sortering:
             overrides.sortering !== undefined ? overrides.sortering : sort,
         }),
+        { scroll: false },
       );
     },
-    [router, query, program, category, includeStudent, sort],
+    [router, searchInput, program, category, includeStudent, sort],
   );
 
-  useEffect(() => {
-    const trimmed = searchInput.trim();
-    if (trimmed === query) return;
-
-    const timer = window.setTimeout(() => {
-      router.replace(
-        buildTilbudHref({
-          q: trimmed || undefined,
-          program,
-          kategori: category,
-          student: includeStudent,
-          sortering: sort,
-        }),
-      );
-    }, SEARCH_DEBOUNCE_MS);
-
-    return () => window.clearTimeout(timer);
-  }, [
-    searchInput,
-    query,
-    program,
-    category,
-    includeStudent,
-    sort,
-    router,
-  ]);
-
   const clearSearch = () => {
-    setSearchInput("");
-    router.replace(
-      buildTilbudHref({
-        program,
-        kategori: category,
-        student: includeStudent,
-        sortering: sort,
-      }),
-    );
+    onSearchInputChange("");
   };
 
-  const hasFilters = Boolean(query || program || category || includeStudent);
-  const isSearchPending = searchInput.trim() !== query;
-  const activeQuery = query.trim();
+  const hasFilters = Boolean(
+    searchInput.trim() || query || program || category || includeStudent,
+  );
+  const activeQuery = searchInput.trim();
 
   return (
     <div className="space-y-5">
@@ -151,7 +117,7 @@ export function TilbudFilters({
             type="search"
             name="q"
             value={searchInput}
-            onChange={(event) => setSearchInput(event.target.value)}
+            onChange={(event) => onSearchInputChange(event.target.value)}
             placeholder="Søk partner, kategori eller medlemskap…"
             className={`${calculatorInputClassName} pl-10 pr-10`}
             autoComplete="off"
@@ -256,9 +222,7 @@ export function TilbudFilters({
 
       <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-sm text-stone-600" aria-live="polite" aria-atomic="true">
-          {isSearchPending ? (
-            <span className="text-stone-500">Søker…</span>
-          ) : activeQuery ? (
+          {activeQuery ? (
             <>
               {partnerCount} {partnerCount === 1 ? "treff" : "treff"} for «
               {activeQuery}»

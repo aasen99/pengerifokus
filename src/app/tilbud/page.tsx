@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { HubCrossLinks } from "@/components/seo/HubCrossLinks";
 import { HubPageSeo } from "@/components/seo/HubPageSeo";
 import { TilbudDisclaimer } from "@/components/tilbud/TilbudDisclaimer";
-import { TilbudFilters } from "@/components/tilbud/TilbudFilters";
-import { TilbudGrid } from "@/components/tilbud/TilbudGrid";
+import { TilbudBrowser } from "@/components/tilbud/TilbudBrowser";
 import {
   FORDELSPROGRAMMER_TITLE,
   TILBUD_INTRO,
@@ -17,12 +15,11 @@ import { getTilbudCategoryGroupOptions } from "@/lib/tilbud-categories";
 import {
   filterTilbud,
   groupTilbudByPartner,
-  paginateGruppertTilbud,
   parseTilbudPage,
   sortGruppertTilbud,
   type TilbudSortOption,
 } from "@/lib/tilbud";
-import { buildTilbudHref, isTilbudOptInProgram } from "@/lib/tilbud-ui";
+import { isTilbudOptInProgram } from "@/lib/tilbud-ui";
 
 const pageDescription =
   "Finn tilbud, bonus og cashback fra OBOS, Trumf, Coop, NAF, EuroBonus, Spenn og flere. Søk eller filtrer etter program og kategori. Oversikten utvides løpende.";
@@ -100,15 +97,8 @@ export default async function TilbudPage({ searchParams }: TilbudPageProps) {
     ? (first(params.sortering) as TilbudSortOption)
     : "rate-desc";
 
-  const filtered = filterTilbud(
-    tilbud,
-    query,
-    program,
-    category,
-    includeStudent,
-  );
-  const grouped = sortGruppertTilbud(groupTilbudByPartner(filtered), sort);
-  const pagination = paginateGruppertTilbud(grouped, parseTilbudPage(params.side));
+  const scoped = filterTilbud(tilbud, "", program, category, includeStudent);
+  const grouped = sortGruppertTilbud(groupTilbudByPartner(scoped), sort);
 
   const programs = fordeler
     .filter(
@@ -123,16 +113,8 @@ export default async function TilbudPage({ searchParams }: TilbudPageProps) {
     }));
 
   const categoryOptions = getTilbudCategoryGroupOptions(
-    filterTilbud(tilbud, query, program, null, includeStudent),
+    filterTilbud(tilbud, "", program, null, includeStudent),
   );
-
-  const filterState = {
-    q: query || undefined,
-    program,
-    kategori: category,
-    student: includeStudent,
-    sortering: sort,
-  };
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-10">
@@ -160,50 +142,17 @@ export default async function TilbudPage({ searchParams }: TilbudPageProps) {
           showEurobonusShoppingNote={program === "eurobonus"}
         />
 
-        <TilbudFilters
+        <TilbudBrowser
+          groups={grouped}
           query={query}
           program={program}
           category={category}
           includeStudent={includeStudent}
           sort={sort}
+          page={parseTilbudPage(params.side)}
           programs={programs}
           categories={categoryOptions}
-          partnerCount={grouped.length}
-          offerCount={filtered.length}
         />
-
-        <TilbudGrid
-          groups={pagination.items}
-          activeProgram={program}
-          includeStudent={includeStudent}
-          categoryGroup={category}
-        />
-
-        {pagination.pageCount > 1 && (
-          <nav
-            aria-label="Sidene i tilbudsoversikten"
-            className="flex flex-wrap items-center justify-center gap-2"
-          >
-            {Array.from({ length: pagination.pageCount }, (_, index) => {
-              const page = index + 1;
-              const current = page === pagination.page;
-              return (
-                <Link
-                  key={page}
-                  href={buildTilbudHref({ ...filterState, side: page })}
-                  aria-current={current ? "page" : undefined}
-                  className={`rounded-lg px-3 py-1.5 text-sm font-medium ${
-                    current
-                      ? "bg-orange-600 text-white"
-                      : "border border-stone-200 bg-white text-stone-700 hover:border-orange-300"
-                  }`}
-                >
-                  {page}
-                </Link>
-              );
-            })}
-          </nav>
-        )}
 
         <TilbudDisclaimer />
       </div>

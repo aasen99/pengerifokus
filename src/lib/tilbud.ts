@@ -18,21 +18,23 @@ export {
   type TilbudSortOption,
 } from "@/lib/tilbud-ui";
 
-function matchesTilbudQuery(entry: Tilbud, query: string): boolean {
-  const fordelName = getFordelName(entry.fordelSlug);
+export function getTilbudSearchText(entry: Tilbud, fordelName: string): string {
+  return [
+    entry.title,
+    entry.description,
+    entry.offerLabel,
+    entry.partner,
+    entry.category,
+    entry.terms ?? "",
+    entry.warning ?? "",
+    ...(entry.searchTags ?? []),
+    fordelName,
+  ].join(" ");
+}
 
+function matchesTilbudQuery(entry: Tilbud, query: string): boolean {
   return matchesSearchTokens(
-    [
-      entry.title,
-      entry.description,
-      entry.offerLabel,
-      entry.partner,
-      entry.category,
-      entry.terms ?? "",
-      entry.warning ?? "",
-      ...(entry.searchTags ?? []),
-      fordelName,
-    ].join(" "),
+    getTilbudSearchText(entry, getFordelName(entry.fordelSlug)),
     query,
   );
 }
@@ -57,6 +59,7 @@ export interface TilbudProgramOffer {
   terms?: string;
   sourceUrl?: string;
   warning?: string;
+  searchText: string;
 }
 
 export interface GruppertTilbud {
@@ -93,17 +96,21 @@ export function groupTilbudByPartner(entries: Tilbud[]): GruppertTilbud[] {
     groups.push({
       key,
       partner: pickDisplayPartner(sorted),
-      offers: sorted.map((entry) => ({
-        tilbudId: entry.id,
-        fordelSlug: entry.fordelSlug,
-        fordelName: getFordelName(entry.fordelSlug),
-        offerLabel: entry.offerLabel,
-        description: entry.description,
-        category: entry.category,
-        terms: entry.terms,
-        sourceUrl: entry.sourceUrl,
-        warning: entry.warning,
-      })),
+      offers: sorted.map((entry) => {
+        const fordelName = getFordelName(entry.fordelSlug);
+        return {
+          tilbudId: entry.id,
+          fordelSlug: entry.fordelSlug,
+          fordelName,
+          offerLabel: entry.offerLabel,
+          description: entry.description,
+          category: entry.category,
+          terms: entry.terms,
+          sourceUrl: entry.sourceUrl,
+          warning: entry.warning,
+          searchText: getTilbudSearchText(entry, fordelName),
+        };
+      }),
       categories: [...new Set(sorted.map((entry) => entry.category))].sort((a, b) =>
         a.localeCompare(b, "nb"),
       ),

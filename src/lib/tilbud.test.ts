@@ -8,6 +8,7 @@ import {
   paginateGruppertTilbud,
   parseOfferRate,
 } from "./tilbud";
+import { filterGruppertTilbudByQuery } from "./tilbud-search";
 import { buildTilbudHref } from "./tilbud-ui";
 
 describe("parseOfferRate", () => {
@@ -95,6 +96,13 @@ describe("filterTilbud search", () => {
   it("matches hidden searchTags", () => {
     const matches = filterTilbud(published, "sko", null, null, false);
     assert.ok(matches.some((item) => item.partner === "Anton Sport"));
+  });
+
+  it("filters grouped partners on the client without dropping other offers in a match", () => {
+    const grouped = groupTilbudByPartner(published);
+    const matches = filterGruppertTilbudByQuery(grouped, "sko");
+    assert.ok(matches.some((group) => group.partner === "Skousen"));
+    assert.ok(!matches.some((group) => group.partner === "Wolt"));
   });
 });
 
