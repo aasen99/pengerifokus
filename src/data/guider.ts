@@ -219,9 +219,9 @@ export const guider: Guide[] = [
     slug: "laneramme-for-boligkjop",
     status: "published",
     featured: true,
-    title: "EK × 10 og lønn × 5: slik regner banken låneramme",
+    title: "Låneramme før boligkjøp",
     description:
-      "Hvorfor EK − gjeld er misvisende, og hvorfor det kan lønne seg å holde egenkapital på konto før boligkjøp.",
+      "Slik regner banken maks lån med egenkapital × 10 og lønn × 5, og når det lønner seg å holde igjen egenkapital.",
     category: "Bolig",
     tags: [
       "boligkjøp",

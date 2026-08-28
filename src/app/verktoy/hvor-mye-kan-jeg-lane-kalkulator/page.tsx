@@ -6,7 +6,7 @@ import { ToolPageSeo } from "@/components/seo/ToolPageSeo";
 import { createPageMetadata } from "@/lib/seo";
 
 const toolDescription =
-  "Gratis kalkulator: regn ut maks boliglån med EK × 10 − gjeld og lønn × 5 − gjeld.";
+  "Regn ut maks boliglån og kjøpesum ut fra egenkapital × 10 og lønn × 5, minus gjeld.";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Hvor mye kan jeg låne-kalkulator",
@@ -19,7 +19,6 @@ export const metadata: Metadata = createPageMetadata({
     "egenkapital",
     "gjeldsgrad",
     "5 ganger inntekt",
-    "EK ganger 10",
     "belåningsgrad",
   ],
 });
@@ -34,7 +33,7 @@ export default function HvorMyeKanJegLaneKalkulatorPage() {
       />
       <ToolPageHeader
         title="Hvor mye kan jeg låne-kalkulator"
-        description="Se maks boliglån og kjøpesum ut fra EK × 10 − gjeld og lønn × 5 − gjeld."
+        description="Et enkelt anslag på maks boliglån og kjøpesum, basert på egenkapital, gjeld og lønn."
       />
 
       <LaneKapasitetKalkulator />
@@ -42,7 +41,7 @@ export default function HvorMyeKanJegLaneKalkulatorPage() {
       <ToolRelatedGuides
         guides={[
           {
-            label: "EK × 10 og lønn × 5: låneramme før boligkjøp",
+            label: "Låneramme før boligkjøp",
             href: "/guider/laneramme-for-boligkjop",
           },
           { label: "Eie eller leie bolig", href: "/guider/eie-eller-leie-bolig" },

@@ -175,9 +175,9 @@ export function formatLaneKapasitetLimit(
 ): string {
   switch (factor) {
     case "inntekt":
-      return "inntektsregelen (lønn × 5 − gjeld)";
+      return "inntekt (lønn × 5 − gjeld)";
     case "egenkapital":
-      return "egenkapitalkravet (EK × 10 − gjeld)";
+      return "egenkapital (× 10 − gjeld)";
     case "gjeld":
       return "eksisterende gjeld";
     default:

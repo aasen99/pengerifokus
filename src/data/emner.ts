@@ -42,9 +42,9 @@ export const emner: EmneHub[] = [
         links: [
           {
             href: "/guider/laneramme-for-boligkjop",
-            label: "EK × 10 og lønn × 5",
+            label: "Låneramme før boligkjøp",
             description:
-              "Slik regner banken låneramme, og hvorfor ekstra egenkapital slår nedbetaling.",
+              "Egenkapital × 10 og lønn × 5, og når det lønner seg å holde igjen egenkapital.",
           },
           {
             href: "/guider/eie-eller-leie-bolig",
@@ -67,7 +67,7 @@ export const emner: EmneHub[] = [
             href: "/verktoy/hvor-mye-kan-jeg-lane-kalkulator",
             label: "Hvor mye kan jeg låne-kalkulator",
             description:
-              "EK × 10 − gjeld og lønn × 5 − gjeld for maks boliglån.",
+              "Egenkapital × 10 og lønn × 5, minus gjeld.",
           },
           {
             href: "/verktoy/eie-leie-kalkulator",
@@ -225,7 +225,7 @@ export const emner: EmneHub[] = [
             href: "/verktoy/hvor-mye-kan-jeg-lane-kalkulator",
             label: "Hvor mye kan jeg låne-kalkulator",
             description:
-              "Se hvor mye du kan låne ut fra EK × 10 − gjeld og lønn × 5 − gjeld.",
+              "Se maks lån ut fra egenkapital × 10 og lønn × 5, minus gjeld.",
           },
           {
             href: "/verktoy/gjeldsbremsen",

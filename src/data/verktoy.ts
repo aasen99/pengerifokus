@@ -228,7 +228,7 @@ export const verktoy: Verktoy[] = [
     featured: true,
     name: "Hvor mye kan jeg låne-kalkulator",
     description:
-      "Regn ut maks boliglån med EK × 10 − gjeld og lønn × 5 − gjeld.",
+      "Regn ut maks boliglån med egenkapital × 10 og lønn × 5, minus gjeld.",
     category: "Bolig",
     createdAt: "2026-08-28",
     updatedAt: "2026-08-28",
