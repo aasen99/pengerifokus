@@ -222,6 +222,18 @@ export const verktoy: Verktoy[] = [
     updatedAt: "2026-07-25",
   },
   {
+    id: "verktoy-21",
+    slug: "hvor-mye-kan-jeg-lane-kalkulator",
+    status: "published",
+    featured: true,
+    name: "Hvor mye kan jeg låne-kalkulator",
+    description:
+      "Regn ut EK − GJELD og se anslag på maks boliglån ut fra 5× inntekt og egenkapitalkrav.",
+    category: "Bolig",
+    createdAt: "2026-08-28",
+    updatedAt: "2026-08-28",
+  },
+  {
     id: "verktoy-19",
     slug: "sifo-kalkulator",
     status: "published",

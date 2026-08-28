@@ -58,6 +58,12 @@ export const emner: EmneHub[] = [
         heading: "Verktøy",
         links: [
           {
+            href: "/verktoy/hvor-mye-kan-jeg-lane-kalkulator",
+            label: "Hvor mye kan jeg låne-kalkulator",
+            description:
+              "EK − GJELD og anslag på maks boliglån ut fra inntekt og egenkapitalkrav.",
+          },
+          {
             href: "/verktoy/eie-leie-kalkulator",
             label: "Eie vs. leie-kalkulator",
             description:
@@ -209,6 +215,12 @@ export const emner: EmneHub[] = [
       {
         heading: "Verktøy",
         links: [
+          {
+            href: "/verktoy/hvor-mye-kan-jeg-lane-kalkulator",
+            label: "Hvor mye kan jeg låne-kalkulator",
+            description:
+              "Se hvor mye du kan låne ut fra EK − GJELD, inntekt og egenkapitalkrav.",
+          },
           {
             href: "/verktoy/gjeldsbremsen",
             label: "Gjeldsbremsen",

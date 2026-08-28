@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "npx tsx --test src/lib/calculators/gjeldsbremsen.test.ts src/lib/calculators/lanets-reelle-verdi.test.ts src/lib/calculators/sifo.test.ts src/lib/tilbud.test.ts src/lib/calculators/bsu.test.ts src/lib/calculators/eie-leie.test.ts src/lib/calculators/feriepenger.test.ts src/lib/calculators/utleiebolig.test.ts"
+    "test": "npx tsx --test src/lib/calculators/gjeldsbremsen.test.ts src/lib/calculators/lanets-reelle-verdi.test.ts src/lib/calculators/lane-kapasitet.test.ts src/lib/calculators/sifo.test.ts src/lib/tilbud.test.ts src/lib/calculators/bsu.test.ts src/lib/calculators/eie-leie.test.ts src/lib/calculators/feriepenger.test.ts src/lib/calculators/utleiebolig.test.ts"
   },
   "dependencies": {
     "next": "16.2.9",
