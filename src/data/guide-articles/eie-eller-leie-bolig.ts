@@ -8,7 +8,7 @@ export const eieEllerLeieBolig: GuideArticleContent = {
   intro:
     "Skal du kjøpe eller leie? Svaret handler sjelden bare om månedlig husleie mot terminbeløp. Tid, kjøpskostnader, vedlikehold og alternativ avkastning på egenkapitalen kan snu regnestykket fullstendig.",
   shortAnswer:
-    "Leie er ofte mest attraktivt når du skal bo kort, har en svært gunstig husleie eller trenger fleksibilitet. Eie kan lønne seg over tid fordi avdrag bygger [egenkapital](/ordbok/egenkapital) og boligen kan stige i verdi. Men renter, vedlikehold, kjøps- og salgskostnader og avkastningen du kunne fått på egenkapitalen kan endre svaret fullstendig. Derfor bør du regne med dine egne tall.",
+    "Leie passer ofte best når du skal bo kort eller trenger fleksibilitet. Eie kan bygge egenkapital over tid, men renter, vedlikehold, kjøpskostnader og alternativ avkastning må med. Sammenlign like boliger og bruk dine egne tall.",
   topCta: {
     heading: "Få svaret med dine egne tall",
     description:
@@ -22,7 +22,7 @@ export const eieEllerLeieBolig: GuideArticleContent = {
       heading: "Hvor lenge skal du bo der?",
       paragraphs: [
         "Kjøp og salg av bolig koster penger. [Dokumentavgift](/ordbok/dokumentavgift), megler, flytting og andre engangskostnader får stor betydning når du ser på kort tidshorisont.",
-        "På kort sikt trekker kjøps- og salgskostnader ofte i retning av leie. På lengre sikt får avdrag og eventuell boligprisvekst mer tid til å virke. Break-even kan imidlertid komme etter to, fem eller ti år – eller aldri – avhengig av tallene.",
+        "På kort sikt trekker kjøps- og salgskostnader ofte i retning av leie. På lengre sikt får avdrag og eventuell boligprisvekst mer tid til å virke. Break-even kan komme tidlig, sent eller ikke i det hele tatt, avhengig av tallene.",
         "Break-even er tidspunktet der det ene alternativet går forbi det andre målt i anslått nettoformue. Det finnes ingen fast regel som gjelder for alle boliger og alle markeder.",
       ],
     },
@@ -104,14 +104,6 @@ export const eieEllerLeieBolig: GuideArticleContent = {
           ],
         },
       ],
-      cta: {
-        heading: "Se hva som skjer etter 3, 5 og 10 år",
-        description:
-          "Bruk eie-versus-leie-kalkulatoren for å sammenligne anslått nettoformue med dine egne tall.",
-        buttonText: "Test regnestykket i kalkulatoren",
-        href: CALCULATOR_HREF,
-        analyticsEvent: "eie_leie_cta_example",
-      },
     },
     {
       heading: "Kostnader mange glemmer",
@@ -212,16 +204,9 @@ export const eieEllerLeieBolig: GuideArticleContent = {
     {
       heading: "Slik fungerer kalkulatoren",
       paragraphs: [
-        "Kalkulatoren sammenligner anslått [nettoformue](/ordbok/nettoformue), ikke bare husleie mot terminbeløp. Den bruker lik kontantstrøm måned for måned. Dersom eie koster mer, investerer leieren forskjellen. Dersom leie koster mer, investerer eieren forskjellen. Avdrag reduserer samtidig boliglånet og bygger egenkapital.",
-        "Resultatet er et estimat basert på forutsetningene du legger inn – ikke en prognose for boligmarkedet. Start enkelt med kjøpesum, egenkapital, rente og husleie. I avansert modus kan du legge til vedlikehold, salgskostnader, lønnsvekst og flere scenarioer.",
+        "Kalkulatoren sammenligner anslått [nettoformue](/ordbok/nettoformue), ikke bare husleie mot terminbeløp. Den bruker lik kontantstrøm måned for måned. Dersom eie koster mer, investerer leieren forskjellen. Dersom leie koster mer, investerer eieren forskjellen.",
+        "Resultatet viser beregnet verdi før skatt på eventuell fondsgevinst, med mindre du legger inn skatt i avansert modus. Det er et estimat basert på forutsetningene du legger inn, ikke en prognose for boligmarkedet.",
       ],
-      cta: {
-        heading: "Få svaret med dine egne tall",
-        description:
-          "Sammenlign anslått nettoformue, månedlig forskjell og break-even over 1–30 år.",
-        buttonText: "Regn ut om du bør eie eller leie",
-        href: CALCULATOR_HREF,
-      },
     },
     {
       heading: "Økonomi er ikke hele svaret",
@@ -291,7 +276,7 @@ export const eieEllerLeieBolig: GuideArticleContent = {
   bottomCta: {
     heading: "Sammenlign eie og leie med dine egne tall",
     description:
-      "Se anslått nettoformue, månedlig forskjell og break-even over tid.",
+      "Se beregnet verdi før skatt på eventuell fondsgevinst, månedlig forskjell og break-even over tid.",
     buttonText: "Åpne eie-versus-leie-kalkulatoren",
     href: CALCULATOR_HREF,
     analyticsEvent: "eie_leie_cta_bottom",

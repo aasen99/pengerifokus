@@ -6,65 +6,94 @@ export const lanerammeForBoligkjop: GuideArticleContent = {
   slug: "laneramme-for-boligkjop",
   seoTitle: "Hvor mye kan du låne til bolig?",
   intro:
-    "Banken bruker sjelden én enkel formel. For egen bolig er det to tommelfingerregler som oftest avgjør lånerammen: egenkapital multiplisert med ti, og lønn multiplisert med fem. Begge minus gjeld du allerede har.",
+    "Hvor mye du kan kjøpe bolig for, avgjøres vanligvis av tre ting: inntekten din, gjelden du allerede har og hvor mye egenkapital du har. Banken ser også på om du tåler høyere rente og vanlige levekostnader.",
   shortAnswer:
-    "Med 10 % egenkapital kan du grovt regne maks kjøpesum som egenkapital × 10 − gjeld, og maks lån som det laveste av det inntekten tillater (lønn × 5 − gjeld) og det egenkapitalen tillater.",
+    "Samlet gjeld kan normalt ikke være høyere enn fem ganger brutto årsinntekt. Boliglånet kan normalt dekke inntil 90 prosent av boligverdien. Banken kan likevel gi deg mindre hvis månedsøkonomien blir for stram.",
   topCta: {
     heading: "Regn med dine egne tall",
-    description: "Se maks lån og kjøpesum, og hvilken regel som begrenser deg.",
-    buttonText: "Åpne lånekalkulator",
+    description:
+      "Se hva som begrenser deg: inntekt, gjeld, egenkapital eller månedlig betalingsevne.",
+    buttonText: "Åpne lånekalkulatoren",
     href: CALCULATOR_HREF,
     analyticsEvent: "laneramme_cta_top",
   },
   sections: [
     {
-      heading: "De to reglene",
+      heading: "Inntekten setter en grense for samlet gjeld",
       paragraphs: [
-        "Det er lett å tro at banken bare ser på egenkapital minus gjeld. Det er misvisende. [Egenkapital](/ordbok/egenkapital) og [gjeldsgrad](/ordbok/gjeldsgrad) vurderes hver for seg.",
-        "For egen bolig med 10 % egenkapital kan du grovt regne slik:",
+        "Samlet gjeld kan som hovedregel ikke overstige fem ganger brutto årsinntekt. Her teller også gjeld du allerede har.",
       ],
       bullets: [
-        "Egenkapital × 10 − gjeld ≈ maks kjøpesum",
-        "Lønn × 5 − gjeld ≈ maks nytt lån",
+        "Brutto årsinntekt: 600 000 kr",
+        "Maksimal samlet gjeld: 3 000 000 kr",
+        "Studielån og annen gjeld: 200 000 kr",
+        "Mulig nytt boliglån etter femgangersregelen: 2 800 000 kr",
       ],
-      tip: "Banken tar det laveste av reglene, og ser også på betjeningsevne og rentestress. Dette er veiledende, ikke en garanti.",
+      tip: "En ubrukt kredittramme kan også påvirke bankens vurdering. Banken skal legge full bruk av samlede kredittrammer til grunn når den vurderer betjeningsevnen.",
     },
     {
-      heading: "Et enkelt eksempel",
+      heading: "Egenkapitalen setter en annen grense",
       paragraphs: [
-        "Du har 400 000 kr i egenkapital, 200 000 kr i gjeld og 600 000 kr i brutto lønn.",
+        "Et vanlig boliglån kan normalt dekke inntil 90 prosent av boligverdien. Det betyr at du vanligvis må ha minst 10 prosent [egenkapital](/ordbok/egenkapital).",
+        "Har du 400 000 kroner i tilgjengelig egenkapital, kan det isolert sett være nok til 10 prosent av en bolig til 4 millioner kroner.",
+        "Kjøpskostnader kommer i tillegg. For en selveier må du normalt også regne med dokumentavgift og tinglysingsgebyrer. Derfor kan ikke nødvendigvis hele egenkapitalen brukes som 10 prosent av kjøpesummen.",
+      ],
+    },
+    {
+      heading: "Banken bruker grensen som gir lavest kjøpesum",
+      paragraphs: [
+        "Med 600 000 kroner i lønn, 200 000 kroner i annen gjeld og 400 000 kroner i egenkapital får vi:",
       ],
       bullets: [
-        "Egenkapital × 10 − gjeld = 3 800 000 kr i maks kjøpesum",
-        "Lønn × 5 − gjeld = 2 800 000 kr i maks lån",
-        "Da er det inntekten som begrenser. Maks lån blir 2 800 000 kr, og maks kjøpesum blir 3 200 000 kr med egenkapitalen du har.",
+        "Mulig nytt boliglån: 2 800 000 kr",
+        "Egenkapital: 400 000 kr",
+        "Mulig kjøpesum ut fra inntekt og gjeld: 3 200 000 kr",
+        "Mulig kjøpesum ut fra 10 prosent egenkapital: 4 000 000 kr før kjøpskostnader",
       ],
+      tip: "Her er det inntekten og gjelden som begrenser. Grov maksimal kjøpesum blir 3,2 millioner kroner før kjøpskostnader. Banken kan fortsatt sette en lavere grense.",
     },
     {
-      heading: "Hold igjen egenkapital før boligkjøp",
+      heading: "Banken ser også på månedsøkonomien",
       paragraphs: [
-        "Når du nærmer deg boligkjøp, kan det være smart å la penger stå på konto som egenkapital i stedet for å betale ned billig gjeld.",
-        "Hver krone i egenkapital kan gi opptil ti kroner i kjøpekraft gjennom egenkapital-regelen. Hver krone du betaler ned i gjeld, frigir bare én krone i lånerom gjennom lønn × 5-regelen.",
+        "Fem ganger inntekt er en øvre grense, ikke et løfte. Banken skal kontrollere at du fortsatt har penger til normale utgifter når renten settes til minst 7 prosent eller 3 prosentpoeng over dagens nivå.",
       ],
-      tip: "Dette gjelder særlig billig gjeld som studielån. Dyr [forbruksgjeld](/ordbok/forbruksgjeld) bør du fortsatt prioritere å kvitte deg med.",
-    },
-    {
-      heading: "Det banken også ser på",
       bullets: [
-        "Betjeningsevne om renten stiger",
-        "Rentestress med høyere rente enn i dag",
-        "Type gjeld: boliglån, studielån og kredittkort veies ulikt",
-        "BSU og bankgaranti kan gi mer rom for unge førstegangskjøpere",
+        "Inntekt etter skatt",
+        "Renter og avdrag på all gjeld",
+        "Barn og andre faste utgifter",
+        "Kredittkort og kredittrammer",
+        "Fellesgjeld",
+        "Om inntekten er stabil og dokumenterbar",
       ],
+    },
+    {
+      heading: "Bør du betale ned gjeld eller beholde egenkapitalen?",
       paragraphs: [
-        "Bruk [kalkulatoren](/verktoy/hvor-mye-kan-jeg-lane-kalkulator) med dine tall, og snakk med banken når du er nær kjøp.",
+        "Det kommer an på hva som begrenser deg.",
+        "Mangler du egenkapital, kan det være viktig å beholde penger på konto frem mot boligkjøpet. Begrenses du av samlet gjeld eller høye månedsutgifter, kan nedbetaling hjelpe. Dyr [forbruksgjeld](/ordbok/forbruksgjeld) bør normalt ryddes bort før boligkjøpet. Billig gjeld som studielån må vurderes sammen med banken.",
+        "Betaler du 100 000 kroner av gjelden med 100 000 kroner fra egenkapitalen, får du omtrent 100 000 kroner mer i lånerom, men samtidig 100 000 kroner mindre å legge inn i boligen. Når inntektsgrensen er problemet, kan maksimal kjøpesum derfor bli omtrent uendret. Betjeningsevnen kan likevel bli bedre.",
       ],
     },
   ],
+  sources: [
+    {
+      label: "Finansdepartementet: veiledning til utlånsforskriften",
+      url: "https://www.regjeringen.no/no/tema/okonomi-og-budsjett/finansmarkedene/utlansforskriften2/id3077676/",
+    },
+  ],
+  conclusion:
+    "Regn først ut fem ganger inntekt og trekk fra annen gjeld. Legg deretter til egenkapitalen du faktisk kan bruke etter kjøpskostnader. Til slutt må banken kontrollere at du tåler renter og vanlige utgifter.",
+  bottomCta: {
+    heading: "Regn ut lånerammen",
+    description: "Se maks boliglån og kjøpesum med dine egne tall.",
+    buttonText: "Åpne lånekalkulatoren",
+    href: CALCULATOR_HREF,
+    analyticsEvent: "laneramme_cta_bottom",
+  },
   relatedLinks: [
     { label: "Hvor mye kan jeg låne-kalkulator", href: CALCULATOR_HREF },
     { label: "Eie eller leie bolig", href: "/guider/eie-eller-leie-bolig" },
-    { label: "BSU-kalkulator", href: "/verktoy/bsu-kalkulator" },
+    { label: "Betal ned dyr gjeld", href: "/guider/betal-ned-dyr-gjeld" },
     { label: "Egenkapital i ordboken", href: "/ordbok/egenkapital" },
     { label: "Gjeldsgrad i ordboken", href: "/ordbok/gjeldsgrad" },
   ],

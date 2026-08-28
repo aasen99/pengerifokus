@@ -16,8 +16,7 @@ export const inflasjonOgGjeld: GuideArticleContent = {
     {
       heading: "Hva er realrente?",
       paragraphs: [
-        "[Realrenten](/ordbok/realrente) er lånerenten etter at inflasjon er tatt med. Den viser omtrent hvor dyr gjeld er målt i reell kjøpekraft.",
-        "Har du 5 % nominell rente og 2,5 % inflasjon, er realrenten omtrent 2,4 %, ikke 2,5 %. Det skyldes at prisvekst og rente påvirker hverandre (Fisher-ligningen).",
+        "Realrenten viser omtrent hvor høy lånerenten er når prisveksten er tatt med. Med 5 prosent rente og 2,5 prosent inflasjon er realrenten omtrent 2,4 prosent. Du betaler fortsatt hele lånet i kroner, men gjelden kan bli mindre tung i forhold til priser og inntekt over tid.",
       ],
     },
     {
@@ -37,7 +36,7 @@ export const inflasjonOgGjeld: GuideArticleContent = {
       heading: "Inflasjon og lønnsvekst er ikke det samme",
       paragraphs: [
         "Inflasjon svekker pengenes verdi. Lønnsvekst øker den nominelle inntekten din. Noen år følger de hverandre, andre år ikke.",
-        "Hvis lønnen stiger raskere enn inflasjonen, kan du få mer å rutte med. Stiger prisene raskere enn lønnen, blir hverdagen strammere: uansett hva som skjer med gjeldens reelle verdi.",
+        "Hvis lønnen stiger raskere enn inflasjonen, kan du få mer å rutte med. Lønnsvekst kan gjøre lånet lettere å bære over tid, men lønnen følger ikke automatisk inflasjonen.",
       ],
     },
     {
@@ -66,7 +65,7 @@ export const inflasjonOgGjeld: GuideArticleContent = {
         "At gjeld «føles lettere» betyr ikke at du bør ta mer gjeld",
         "Høy inflasjon kan også øke rentene: banken justerer ofte etter tiden",
         "Realrente og modeller er forenklinger, ikke prognoser",
-        "Personlig rådgivning får du hos bank, rådgiver eller Nav, ikke fra en kalkulator",
+        "Personlig rådgivning får du hos banken eller en økonomisk rådgiver. Ved betalingsproblemer kan du kontakte NAVs gjeldsrådgivning.",
       ],
     },
   ],

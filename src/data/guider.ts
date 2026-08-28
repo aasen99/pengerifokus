@@ -16,7 +16,7 @@ export const guider: Guide[] = [
     category: "Sparing",
     tags: ["buffer", "nødfond", "grunnmur"],
     createdAt: "2026-06-11",
-    updatedAt: "2026-06-11",
+    updatedAt: "2026-08-28",
   },
   {
     id: "guide-2",
@@ -29,7 +29,7 @@ export const guider: Guide[] = [
     category: "Investering",
     tags: ["fond", "aksjesparing", "langsiktig"],
     createdAt: "2026-06-11",
-    updatedAt: "2026-06-11",
+    updatedAt: "2026-08-28",
   },
   {
     id: "guide-11",
@@ -41,19 +41,19 @@ export const guider: Guide[] = [
     category: "Bank",
     tags: ["bank", "boliglån", "lojalitet", "gebyrer", "kundeprogram"],
     createdAt: "2026-07-02",
-    updatedAt: "2026-07-02",
+    updatedAt: "2026-08-28",
   },
   {
     id: "guide-10",
     slug: "kredittkort-eller-debetkort",
     status: "published",
-    title: "Kredittkort får konkurranse fra betalte debetkort",
+    title: "Kredittkort eller debetkort?",
     description:
-      "Trenger du egentlig kredittkort? Slik sammenligner du betalte debetkort og premium-kredittkort på reise, bonus og pris.",
+      "Når passer debet, og når kan kredittkort gi mening? En enkel sammenligning uten produktprat.",
     category: "Kredittkort",
     tags: ["kredittkort", "debetkort", "revolut", "klarna", "reiseforsikring"],
     createdAt: "2026-07-02",
-    updatedAt: "2026-07-02",
+    updatedAt: "2026-08-28",
   },
   {
     id: "guide-3",
@@ -65,7 +65,7 @@ export const guider: Guide[] = [
     category: "Kredittkort",
     tags: ["kredittkort", "bonus", "cashback", "trumf", "eurobonus"],
     createdAt: "2026-06-11",
-    updatedAt: "2026-07-02",
+    updatedAt: "2026-08-28",
   },
   {
     id: "guide-4",
@@ -77,7 +77,7 @@ export const guider: Guide[] = [
     category: "Budsjett",
     tags: ["budsjett", "abonnement", "sparing"],
     createdAt: "2026-06-11",
-    updatedAt: "2026-06-11",
+    updatedAt: "2026-08-28",
   },
   {
     id: "guide-5",
@@ -89,7 +89,7 @@ export const guider: Guide[] = [
     category: "Gjeld",
     tags: ["gjeld", "rente", "nedbetaling"],
     createdAt: "2026-06-11",
-    updatedAt: "2026-06-11",
+    updatedAt: "2026-08-28",
   },
   {
     id: "guide-7",
@@ -102,7 +102,7 @@ export const guider: Guide[] = [
     category: "Økonomi",
     tags: ["økonomisk helse", "buffer", "gjeld", "sparing"],
     createdAt: "2026-06-11",
-    updatedAt: "2026-06-11",
+    updatedAt: "2026-08-28",
   },
   {
     id: "guide-8",
@@ -115,7 +115,7 @@ export const guider: Guide[] = [
     category: "Bolig",
     tags: ["eie", "leie", "boligkjøp", "egenkapital", "nettoformue"],
     createdAt: "2026-06-11",
-    updatedAt: "2026-08-17",
+    updatedAt: "2026-08-28",
   },
   {
     id: "guide-9",
@@ -127,19 +127,19 @@ export const guider: Guide[] = [
     category: "Gjeld",
     tags: ["inflasjon", "realrente", "boliglån", "lønnsvekst"],
     createdAt: "2026-06-11",
-    updatedAt: "2026-06-11",
+    updatedAt: "2026-08-28",
   },
   {
     id: "guide-6",
     slug: "funfacts",
     status: "published",
-    title: "Funfacts",
+    title: "10 overraskende fakta om penger",
     description:
-      "Morsomme og overraskende fakta om penger, fra rentes rente til norske særtrekk.",
+      "Se hva tid, renter og små beløp kan gjøre med økonomien, pluss noen overraskende fakta fra norsk pengehistorie.",
     category: "Innsikt",
     tags: ["funfacts", "sparing", "psykologi"],
     createdAt: "2026-06-11",
-    updatedAt: "2026-06-11",
+    updatedAt: "2026-08-28",
   },
   {
     id: "guide-13",
@@ -152,7 +152,7 @@ export const guider: Guide[] = [
     category: "Budsjett",
     tags: ["sifo", "referansebudsjett", "standardbudsjett", "forbruk", "2026"],
     createdAt: "2026-08-17",
-    updatedAt: "2026-08-17",
+    updatedAt: "2026-08-28",
   },
   {
     id: "guide-14",
@@ -165,16 +165,16 @@ export const guider: Guide[] = [
     category: "Budsjett",
     tags: ["sifo", "referansebudsjett", "husholdning", "barn", "samboer", "2026"],
     createdAt: "2026-08-17",
-    updatedAt: "2026-08-17",
+    updatedAt: "2026-08-28",
   },
   {
     id: "guide-15",
     slug: "stromregning-og-norgespris",
     status: "published",
     featured: true,
-    title: "Forstå strømregningen – og hvorfor Norgespris lønner seg",
+    title: "Norgespris eller strømstøtte: Hva passer for deg?",
     description:
-      "Hva betyr nettleie, påslag og avgifter på strømregningen? Slik fungerer Norgespris, og hvorfor 50 øre/kWh ofte er smartere enn vanlig strømstøtte.",
+      "Forstå strømregningen, sammenlign Norgespris med vanlig strømstøtte, og les hva som skjer når ordningen videreføres til 2029.",
     category: "Budsjett",
     tags: [
       "strøm",
@@ -186,7 +186,7 @@ export const guider: Guide[] = [
       "elavgift",
     ],
     createdAt: "2026-08-24",
-    updatedAt: "2026-08-24",
+    updatedAt: "2026-08-28",
   },
   {
     id: "guide-16",
@@ -212,16 +212,16 @@ export const guider: Guide[] = [
       "yx",
     ],
     createdAt: "2026-08-25",
-    updatedAt: "2026-08-25",
+    updatedAt: "2026-08-28",
   },
   {
     id: "guide-17",
     slug: "laneramme-for-boligkjop",
     status: "published",
     featured: true,
-    title: "Låneramme før boligkjøp",
+    title: "Hvor mye kan du låne til bolig?",
     description:
-      "Slik regner banken maks lån med egenkapital × 10 og lønn × 5, og når det lønner seg å holde igjen egenkapital.",
+      "Se hvordan inntekt, annen gjeld og egenkapital påvirker hvor mye du kan låne og kjøpe bolig for.",
     category: "Bolig",
     tags: [
       "boligkjøp",
@@ -251,6 +251,6 @@ export const guider: Guide[] = [
       "prosentformel",
     ],
     createdAt: "2026-07-25",
-    updatedAt: "2026-07-25",
+    updatedAt: "2026-08-28",
   },
 ];

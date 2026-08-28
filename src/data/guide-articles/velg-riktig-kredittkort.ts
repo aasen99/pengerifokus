@@ -1,170 +1,59 @@
 import type { GuideArticleContent } from "@/types/guide-article";
 
+const CALCULATOR_HREF = "/verktoy/bonuskalkulator";
+
 export const velgRiktigKredittkort: GuideArticleContent = {
   slug: "velg-riktig-kredittkort",
   intro:
-    "Denne guiden handler om hvordan du velger kort, ikke om å liste alle fordeler. Fakta om bonus, forsikring og gebyrer ligger under Kredittkortfordeler. Om du i det hele tatt trenger kreditt, eller om et betalt debetkort holder, tar vi i Kredittkort eller debetkort. Her er spørsmålet: gitt at du skal ha et kredittkort, hvilket passer forbruket og vanene dine?",
+    "Gitt at du skal ha kredittkort, handler valget om forbruk, gebyrer og om du faktisk betaler hele fakturaen. Detaljer om enkelte kort finner du under Kredittkortfordeler.",
   sections: [
     {
-      heading: "Først: Betaler du hele fakturaen?",
+      heading: "1. Betaler du alltid hele fakturaen?",
       paragraphs: [
-        "Dette er det viktigste spørsmålet. Hvis du alltid betaler hele fakturaen ved forfall, kan kredittkort være et smart verktøy. Da kan du få bonus, cashback, poeng, reiseforsikring og andre fordeler uten å betale renter.",
-        "Hvis du ofte lar saldo stå igjen, bør du være langt mer forsiktig. Da er lav [effektiv rente](/ordbok/effektiv-rente) og få gebyrer viktigere enn bonus, og [forbruksgjeld](/ordbok/forbruksgjeld) kan fort spise opp fordelen.",
-      ],
-      tip: "Bonus er bare interessant når den ikke blir spist opp av renter. Et kort som gir 1 % bonus hjelper lite hvis du betaler høy kredittkortrente på saldoen.",
-    },
-    {
-      heading: "To typer kredittkortbrukere",
-      paragraphs: [
-        "De fleste passer inn i én av to grupper.",
+        "Hvis nei, er bonus lite viktig. Vurder debetkort eller et kort med lavere effektiv rente. Bonus hjelper bare når du unngår renter ved å betale hele fakturaen ved forfall.",
       ],
     },
     {
-      heading: "1. Den enkle brukeren",
+      heading: "2. Hva bruker du penger på?",
       paragraphs: [
-        "Dette er deg som vil ha et kort som bare fungerer. Du trenger ikke makse alle bonuser, du trenger bare et kort som gir noe tilbake på kjøp du uansett gjør.",
-        "Hvis du handler fast hos NorgesGruppen, Coop eller REMA 1000, kan et kort eller fordelsprogram som passer dagligvarehandelen være mer nyttig enn et avansert reisekort.",
-      ],
-      bullets: [
-        "Litt cashback",
-        "Bonus på dagligvarer",
-        "Reiseforsikring inkludert",
-        "Ingen årsavgift",
-        "Oversiktlige vilkår",
-        "Lav risiko for gebyrer",
+        "Velg etter faktiske kjøp de siste månedene, ikke ønsket livsstil. Dagligvarer, reise, drivstoff og netthandel gir ulike korttyper mening.",
       ],
     },
     {
-      heading: "2. Bonusoptimalisatoren",
+      heading: "3. Hva koster kortet?",
       paragraphs: [
-        "Dette er deg som synes det er gøy å få mest mulig ut av hver krone. Da handler kredittkort ikke alene, kortet blir ett ledd i en lengre bonuskjede.",
-        "Eksempel: Du handler hos KIWI på Trippel-Trumf torsdag, får ekstra Trumf-bonus, betaler med et kredittkort som gir EuroBonus eller annen bonus, og overfører senere Trumf til EuroBonus hvis det passer strategien din.",
-        "Da kan samme kjøp gi verdi fra flere steder: butikkbonus, kampanjebonus, kredittkortbonus, overføring til flypoeng og eventuell ekstra verdi ved smart bruk av poengene.",
-      ],
-      tip: "Bonusjegere tenker ikke bare «hvilket kort er best?». De tenker heller: Hvordan kan jeg kombinere kort, butikk, kampanje og bonusprogram på samme kjøp? Dette er ikke nødvendig for folk flest, men for de mest interesserte er det her de store forskjellene kommer.",
-    },
-    {
-      heading: "Samle alt ett sted eller fordele bonusen?",
-      paragraphs: [
-        "Et viktig valg er om du skal samle bonusen i ett program, eller spre den på flere. Det finnes ikke ett riktig svar. Det kommer an på hvor du handler, hvor mye du følger med, og hva du faktisk vil bruke bonusen til.",
+        "Regn med årsavgift, valutapåslag og kontantuttaksgebyr som separate kostnader. De kan gjøre et «gratis» kort dyrt hvis du reiser eller tar ut kontanter ofte.",
       ],
     },
     {
-      heading: "Når det kan lønne seg å samle bonus",
+      heading: "4. Hva er bonusen verdt for deg?",
       paragraphs: [
-        "Å samle bonusen ett sted kan være smart hvis du har et tydelig mål. Fordelen er at bonusen vokser raskere og det er lettere å nå en belønning som faktisk betyr noe.",
-        "Ulempen er at du blir mer avhengig av ett program. Hvis vilkår endres, poeng mister verdi eller du slutter å bruke partnerne, kan strategien bli dårligere. Penger er penger. Poeng har verdi først når du faktisk får brukt dem.",
+        "Poeng du aldri bruker, er verdt null. Et kort med 1 200 kroner i årsavgift og 1 prosent bonus krever 120 000 kroner i kjøp bare for å tjene inn avgiften.",
       ],
-      bullets: [
-        "Du vil bygge opp EuroBonus-poeng til flyreiser",
-        "Du bruker Trumf aktivt",
-        "Du bor ofte på Strawberry-hotell",
-        "Du vil samle Spenn fra flere partnere",
-        "Du vil ha mest mulig bonus i ett system",
+      tip: "Bruk bonuskalkulatoren hvis du vil teste om kortet går i pluss med ditt forbruk.",
+    },
+    {
+      heading: "5. Gjør kortet økonomien enklere?",
+      paragraphs: [
+        "Flere kort gir bare verdi hvis du klarer å følge med på dem. For mange er ett enkelt kort med forutsigbare vilkår bedre enn å optimalisere hvert kjøp.",
       ],
     },
     {
-      heading: "Når det kan være bedre å fordele",
+      heading: "Oppsummert",
       paragraphs: [
-        "Å fordele bonusen kan passe bedre hvis du ikke har ett klart mål. Fordelen er fleksibilitet, du låser deg ikke like mye til ett system.",
-        "Ulempen er at bonusen kan bli for spredt. Små summer og poeng her og der kan føles bra, men aldri bli store nok til å gi særlig verdi.",
+        "Hele fakturaen ved forfall er grunnvilkåret. Deretter ser du på gebyrer, faktisk forbruk og om bonusen du får faktisk brukes.",
       ],
-      bullets: [
-        "Litt Trumf til dagligvarer",
-        "Litt cashback som penger tilbake",
-        "Litt Spenn fra REMA, Norwegian eller Strawberry",
-        "Et kort med reiseforsikring når du skal på tur",
-      ],
-      tip: "Samle bonus hvis du har et tydelig mål. Fordel bonus hvis du vil ha fleksibilitet. Velg enkelhet hvis du ikke gidder å følge med.",
-    },
-    {
-      heading: "De beste kredittkortene er ikke alltid gratis",
-      paragraphs: [
-        "Mange av kredittkortene med de beste fordelene koster penger. Det kan være årsavgift, månedsgebyr eller krav om høy kortbruk før fordelene faktisk lønner seg. Det betyr ikke at kortet er dårlig, det betyr bare at du må regne på det.",
-        "Et kort med årsavgift kan være bedre enn et gratis kort hvis du bruker fordelene nok. Men hvis du ikke har høy nok omsetning på kortet, kan årsavgiften spise opp hele bonusen.",
-        "Eksempel: Et kredittkort koster 1 200 kroner i året og gir 1 % bonus. Da må du bruke minst 120 000 kroner i året bare for å tjene inn årsavgiften. Bruker du 60 000 kroner, får du 600 kroner i bonus, fortsatt 600 kroner i minus. Bruker du 200 000 kroner, får du 2 000 kroner i bonus, og kortet kan være verdt det hvis bonusen faktisk er nyttig for deg.",
-      ],
-      tip: "Spør ikke bare «hvor høy bonus gir kortet?». Spør heller: «Hvor mye må jeg bruke før kortet faktisk lønner seg?»",
-    },
-    {
-      heading: "Bruk bonuskalkulatoren",
-      paragraphs: [
-        "Penger i Fokus har en bonuskalkulator som kan hjelpe deg å vurdere om bonus og poeng faktisk lønner seg, sammen med enkel regning på årsavgift og forventet kortbruk.",
-        "Dette er spesielt nyttig når du vurderer premiumkort, reisekort eller kort med høyere bonus og høyere kostnad. Noen kort ser best ut på papiret. Andre vinner først når du legger inn ditt eget forbruk.",
-      ],
-      bullets: [
-        "Årsavgift og forventet kortbruk",
-        "Bonusprosent og maksgrense for bonus",
-        "Verdi av cashback eller poeng",
-        "Hvor mye du må bruke før kortet går i pluss",
-      ],
-    },
-    {
-      heading: "Match korttypen til vanene dine, ikke til katalogen",
-      paragraphs: [
-        "Når du har svart på om du betaler hele fakturaen, og om du vil ha enkelhet eller optimalisering, er neste steg å matche korttypen til der pengene faktisk går. Selve oversikten over bonus, forsikring, valutapåslag og typiske norske kort ligger under Kredittkortfordeler.",
-      ],
-      bullets: [
-        "Hverdagskjøp og dagligvarer: ofte enklest med cashback eller kjedebonus",
-        "Mye reise: sjekk forsikringsvilkår og valutapåslag, ikke bare lounge",
-        "Fly- eller hotellpoeng: bare hvis du faktisk bruker poengene",
-        "Usikker på hva fordelene er verdt: les faktasiden og test med bonuskalkulatoren",
-      ],
-      tip: "Ikke velg kort ut fra en ønsket livsstil. Velg ut fra kvitteringene dine siste tre måneder.",
-    },
-    {
-      heading: "Vanlige feil når folk velger kredittkort",
-      paragraphs: [
-        "Den vanligste feilen er å jage bonus uten å regne på kostnaden. Bonus er bare en fordel når kjøpet uansett skulle vært gjort.",
-      ],
-      bullets: [
-        "Å betale renter for å få bonus",
-        "Å velge reisekort uten å reise nok",
-        "Å ignorere valutapåslag",
-        "Å ha flere kort enn man klarer å følge med på",
-        "Å glemme bonusgrenser",
-        "Å samle poeng man aldri bruker",
-        "Å kjøpe mer enn planlagt fordi man får bonus",
-        "Å overvurdere verdien av poeng",
-      ],
-    },
-    {
-      heading: "Slik velger du riktig kredittkort",
-      bullets: [
-        "1. Betaler du alltid hele fakturaen? Hvis nei, prioriter lav rente og færrest mulig gebyrer",
-        "2. Hvor bruker du mest penger? Velg kort etter faktisk forbruk, ikke ønsket livsstil",
-        "3. Vil du ha enkelhet eller optimalisering? Cashback og dagligvarebonus er enkelt, flypoeng krever mer",
-        "4. Har du ett tydelig bonusmål? Da kan det lønne seg å samle bonus",
-        "5. Hva koster kortet? Regn på årsavgift, bonusprosent, valutapåslag og gebyrer",
-        "6. Hvor mye må du bruke før kortet lønner seg? Bruk bonuskalkulatoren til å finne break-even",
-        "7. Har forsikringene faktisk verdi for deg? Ikke betal ekstra for det du allerede har",
-        "8. Gjør kortet økonomien enklere eller mer rotete? Det beste kortet er ikke verdt det hvis det får deg til å bruke mer enn planlagt",
-        "9. Trenger du kreditt i det hele tatt? Hvis nei, se guiden om kredittkort eller debetkort",
-      ],
-    },
-    {
-      heading: "Penger i Fokus-vurdering",
-      paragraphs: [
-        "Det beste kredittkortet er ikke nødvendigvis kortet med høyest bonus. Det beste kortet er det som passer forbruket ditt, målene dine og hvor mye du gidder å følge med.",
-        "For folk flest er enkelhet undervurdert. Et gratis kort med litt bonus, god oversikt og full betaling hver måned kan være mer enn godt nok.",
-        "For bonusjegere kan kredittkort være en del av en større strategi. Da kan det lønne seg å samle bonus i ett system, utnytte kampanjer og kombinere flere fordeler på samme kjøp.",
-        "Kort med årsavgift og premiumfordeler kan være gode, men bare hvis du bruker kortet nok til at regnestykket går opp.",
-      ],
-      tip: "Velg enkelhet hvis du vil ha minst mulig styr. Samle bonus hvis du har et tydelig mål. Bruk kalkulatoren hvis du vurderer et kort som koster penger. Les Kredittkortfordeler når du trenger fakta om gebyrer og dekning.",
     },
   ],
+  bottomCta: {
+    heading: "Test om kortet går i pluss",
+    description: "Legg inn årsavgift, forventet forbruk og bonus.",
+    buttonText: "Åpne bonuskalkulatoren",
+    href: CALCULATOR_HREF,
+  },
   relatedLinks: [
-    {
-      label: "Kredittkort eller debetkort?",
-      href: "/guider/kredittkort-eller-debetkort",
-    },
-    { label: "Bankfordeler", href: "/fordeler/bankfordeler" },
-    { label: "Bonuskalkulator", href: "/verktoy/bonuskalkulator" },
+    { label: "Kredittkort eller debetkort", href: "/guider/kredittkort-eller-debetkort" },
     { label: "Kredittkortfordeler", href: "/fordeler/kredittkortfordeler" },
-    { label: "Trumf", href: "/fordeler/trumf" },
-    { label: "EuroBonus", href: "/fordeler/eurobonus" },
-    { label: "Spenn", href: "/fordeler/spenn" },
-    { label: "Effektiv rente (ordbok)", href: "/ordbok/effektiv-rente" },
-    { label: "Betal ned dyr gjeld", href: "/guider/betal-ned-dyr-gjeld" },
+    { label: "Bonuskalkulator", href: CALCULATOR_HREF },
   ],
 };

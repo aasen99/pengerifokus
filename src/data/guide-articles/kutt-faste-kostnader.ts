@@ -9,7 +9,7 @@ export const kuttFasteKostnader: GuideArticleContent = {
       heading: "Hva er faste kostnader?",
       paragraphs: [
         "[Faste kostnader](/ordbok/fast-kostnad) er utgifter som kommer igjen med jevne mellomrom: husleie, strøm, forsikring, mobil, streaming, treningsmedlemskap og lån. De er forutsigbare, men de er også lette å glemme.",
-        "I motsetning til impulskjøp kan faste kostnader spise store deler av lønnen uten at du merker det. Én glemt abonnementstjeneste à 149 kr i måneden blir nesten 1 800 kr i året.",
+        "Én glemt abonnementstjeneste à 149 kr i måneden blir 1 788 kr i året.",
       ],
     },
     {
@@ -23,42 +23,20 @@ export const kuttFasteKostnader: GuideArticleContent = {
       tip: "Ganger månedlig besparelse med 12 før du vurderer om det «bare er noen hundrelapper». 400 kr i måneden er 4 800 kr i året.",
     },
     {
-      heading: "Slik går du gjennom økonomien",
-      paragraphs: [
-        "Sett av én time. Hent kontoutskrift fra de siste tre månedene. Da fanger du både månedlige og årlige trekk.",
-      ],
+      heading: "En enkel sjekkliste",
       bullets: [
-        "1. List alle faste trekk: abonnement, forsikring, lån, strøm, mobil",
-        "2. Marker hva du faktisk bruker, ikke bare hva du har hatt «lenge»",
-        "3. Finn overlapp (to musikktjenester, forsikring du ikke trenger)",
-        "4. Sjekk om du kan bytte til billigere alternativ",
-        "5. Si opp eller nedgrader det du ikke bruker",
-        "6. Sett en påminnelse om å gjøre dette igjen om 6 måneder",
+        "1. Se gjennom de siste 12 månedene",
+        "2. Finn alle gjentakende trekk",
+        "3. Marker det du ikke bruker",
+        "4. Sammenlign pris på mobil, forsikring, strøm og bredbånd",
+        "5. Si opp, nedgrader eller forhandle",
+        "6. Flytt det sparte beløpet automatisk til buffer, gjeld eller sparing",
       ],
     },
     {
-      heading: "Typiske steder å spare",
-      bullets: [
-        "Streaming og media: behold én, pause resten",
-        "Mobil og bredbånd: sammenlign abonnement, ofte billigere å bytte",
-        "Forsikring: samme dekning finnes ofte billigere et annet sted",
-        "Strøm: sjekk Norgespris, påslag og om avtalen fortsatt er god – les guiden om strømregning og Norgespris",
-        "Trening: bruker du medlemskapet? Hjemmetrening kan være nok",
-        "Bank og kort: gebyrer og ubrukte tilleggstjenester",
-        "Abonnementsbokser og apper: lett å abonnere, vanskelig å si opp",
-      ],
-      tip: "Mange banker viser abonnementer samlet i appen. Sjekk også e-post etter «fornyelse» og «kvittering»: der dukker skjulte trekk opp.",
-    },
-    {
-      heading: "Forhandle og bytt, ikke bare si opp",
+      heading: "Forhandle og bytt",
       paragraphs: [
-        "Du trenger ikke kutte alt. Noen ganger er det nok å ringe leverandøren og spørre om bedre pris: særlig mobil, bredbånd og forsikring.",
-        "Truende oppsigelse er ofte effektivt: «Jeg vurderer å bytte fordi jeg har fått et bedre tilbud.» Du mister ingenting på å spørre.",
-      ],
-      bullets: [
-        "Sammenlign minst to tilbydere før du fornyer avtale",
-        "Sjekk om du får rabatt ved å samle forsikringer ett sted",
-        "Årlige abonnementer kan se billige ut, men låser deg: vurder månedlig først",
+        "Be om et bedre tilbud og vær forberedt på å bytte. Skill mellom å si opp, nedgradere og reforhandle.",
       ],
     },
     {

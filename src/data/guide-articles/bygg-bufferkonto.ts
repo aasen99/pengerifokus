@@ -9,60 +9,41 @@ export const byggBufferkonto: GuideArticleContent = {
       heading: "Hva er en bufferkonto?",
       paragraphs: [
         "[Bufferkontoen](/ordbok/bufferkonto) er penger du setter til side for det du ikke planlegger: bil som ryker, tannlege, plutselig jobbtap eller en ødelagt vaskemaskin.",
-        "Pengene bør være lett tilgjengelige på en vanlig sparekonto, ikke låst i fond eller [BSU](/ordbok/bsu). Poenget er at du skal kunne bruke dem raskt uten å måtte selge investeringer eller ta opp [forbruksgjeld](/ordbok/forbruksgjeld).",
+        "Pengene bør være lett tilgjengelige på en vanlig sparekonto, ikke låst i fond eller [BSU](/ordbok/bsu).",
       ],
     },
     {
-      heading: "Hvor mye bør du ha?",
-      bullets: [
-        "Minimum er én måneds normale utgifter, bedre enn ingenting",
-        "Anbefalt: 3 måneders utgifter for de fleste",
-        "Tryggere: 6 måneder hvis du har uforutsigbar inntekt eller familie",
-        "Egen bolig med lån: vurder nærmere 3–6 måneder",
-      ],
-      tip: "Regn ut månedlige utgifter, ikke bare inntekt. Leie, mat, strøm, forsikring og lån teller. Streaming og takeaway kan du kutte i nød.",
-    },
-    {
-      heading: "Slik bygger du den steg for steg",
+      heading: "Et trinnvis mål",
       paragraphs: [
-        "Du trenger ikke spare alt på én gang. De fleste kommer dit ved å sette av fast beløp hver måned, akkurat som en regning.",
+        "Det finnes ingen universell riktig buffer. Beløpene under er eksempler. Velg et mål som passer egen risiko.",
       ],
       bullets: [
-        "1. Finn månedlige utgifter (se på kontoutskrift eller budsjett)",
-        "2. Sett et mål, f.eks. 3 × utgifter",
-        "3. Åpne en egen sparekonto (gjør det synlig at pengene har et formål)",
+        "Første mål: nok til den vanligste uventede regningen, for eksempel 5 000 til 15 000 kroner",
+        "Neste mål: omtrent én måneds nødvendige utgifter",
+        "Større sikkerhet: tre til seks måneder hvis inntekten er ustabil eller konsekvensene av inntektsbortfall er store",
+      ],
+      tip: "Bufferbehovet øker med bolig, bil, barn, ustabil inntekt og få forsikringer. Det kan være lavere med stabil inntekt, lave faste kostnader og god forsikringsdekning.",
+    },
+    {
+      heading: "Skill buffer fra planlagte utgifter",
+      paragraphs: [
+        "Bilservice, ferie og årlig forsikring bør ha egne kontoer hvis kostnaden er kjent. Bufferen er for det du ikke vet når kommer.",
+      ],
+    },
+    {
+      heading: "Slik bygger du den",
+      bullets: [
+        "1. Finn månedlige utgifter",
+        "2. Sett et realistisk mål",
+        "3. Åpne en egen sparekonto",
         "4. Sett opp fast trekk på lønningsdag",
-        "5. Fyll på igjen etter at du har måttet bruke bufferen",
-      ],
-    },
-    {
-      heading: "Hvor skal pengene ligge?",
-      paragraphs: [
-        "Bufferen hører hjemme på en sparekonto med god rente og ingen binding. Du skal ikke jage høy avkastning her: trygghet og tilgjengelighet er viktigst.",
-        "Ikke bland buffer med daglig bruk. Mange oppretter en egen konto med navn som «Buffer» eller «Nødfond» for å unngå å bruke pengene på hverdagskjøp.",
-      ],
-    },
-    {
-      heading: "Vanlige feil",
-      bullets: [
-        "Bruke bufferen til ferie eller TV. Da er det ikke en buffer",
-        "Investere bufferen i aksjer: risikerer å måtte selge med tap når du trenger pengene",
-        "Vente med å starte til du «har råd», selv 500 kr i måneden hjelper",
-        "Glemme å fylle på etter bruk",
-      ],
-    },
-    {
-      heading: "Når er du ferdig?",
-      paragraphs: [
-        "Når bufferen er på plass, kan du med god samvittighet prioritere annet: nedbetale dyr gjeld, BSU, fond eller ekstra innbetaling på boliglån.",
-        "Bufferen er grunnmuren. Resten av økonomien blir lettere å bygge når den står.",
+        "5. Fyll på igjen etter bruk",
       ],
     },
   ],
   relatedLinks: [
     { label: "Sparekalkulator", href: "/verktoy/sparekalkulator" },
-    { label: "BSU-kalkulator", href: "/verktoy/bsu-kalkulator" },
+    { label: "Betal ned dyr gjeld", href: "/guider/betal-ned-dyr-gjeld" },
     { label: "Bufferkonto i ordboken", href: "/ordbok/bufferkonto" },
-    { label: "Emne: sparing og investering", href: "/emner/sparing-og-investering" },
   ],
 };

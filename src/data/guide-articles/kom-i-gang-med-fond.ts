@@ -9,28 +9,22 @@ export const komIGangMedFond: GuideArticleContent = {
       heading: "Hva er et fond?",
       paragraphs: [
         "Et fond er en kurv av mange investeringer: ofte aksjer og obligasjoner, forvaltet av et selskap. Når du kjøper andeler i fondet, eier du en liten bit av hele kurven.",
-        "Fordelen er spredning, du risikerer ikke alt på én enkelt aksje. Et [indeksfond](/ordbok/indeksfond) kan for eksempel følge hundrevis av selskaper i ett kjøp.",
+        "Fordelen er spredning. Et [indeksfond](/ordbok/indeksfond) kan for eksempel følge hundrevis av selskaper i ett kjøp. Indeksfond har ofte lave kostnader. Aktivt forvaltede fond prøver å slå markedet, men har ofte høyere gebyr.",
       ],
     },
     {
-      heading: "Indeksfond vs. aktivt forvaltet",
-      bullets: [
-        "Indeksfond følger en markedsindeks og har ofte lave kostnader",
-        "Aktivt forvaltede fond prøver å slå markedet: ofte med høyere gebyr",
-        "For de fleste nybegynnere er brede, billige indeksfond et godt utgangspunkt",
+      heading: "Risiko og tidshorisont",
+      paragraphs: [
+        "Verdien kan gå ned. Fond er ikke garantert avkastning, og historisk avkastning sier lite om fremtiden.",
+        "Aksjefond passer normalt best når pengene kan stå i minst fem år. Kortsiktige penger bør ikke settes i risikable fond bare for å jage avkastning.",
       ],
       tip: "Se på årlig kostnad (termingebyr). Forskjellen på 0,2 % og 1,0 % kan bli mye penger over 20 år.",
     },
     {
-      heading: "ASK: aksjesparekonto",
+      heading: "Hva er en aksjesparekonto?",
       paragraphs: [
-        "[ASK](/ordbok/ask) er en skattegunstig konto for aksjer og fond i Norge. Du betaler skatt når du tar ut gevinst, ikke underveis.",
-        "Du kan flytte penger inn og ut av aksjer/fond på kontoen uten å utløse skatt, så lenge pengene blir værende på ASK. Det gjør den fleksibel for langsiktig sparing.",
-      ],
-      bullets: [
-        "Passer for langsiktig sparing (5+ år)",
-        "Skatt ved uttak av gevinst",
-        "Begrensninger ved uttak til annet enn investeringer: sjekk gjeldende regler",
+        "En [aksjesparekonto](/ordbok/ask), ofte kalt ASK, lar deg kjøpe og selge godkjente aksjer og aksjefond uten å betale skatt for hvert salg. Skatten kommer først når du tar ut mer enn du har satt inn, etter eventuell skjerming.",
+        "Du kan ikke ha alle aksjer og fond på ASK. Kontoen kan blant annet brukes til børsnoterte aksjer i selskaper hjemmehørende i EØS og aksjefond med mer enn 80 prosent aksjer. Rene rentefond kan ikke stå på ASK.",
       ],
     },
     {
@@ -38,25 +32,9 @@ export const komIGangMedFond: GuideArticleContent = {
       bullets: [
         "1. Sørg for [bufferkonto](/ordbok/bufferkonto) først: fond er for langsiktige penger",
         "2. Velg bank eller plattform med lave fondskostnader",
-        "3. Start med ett bredt indeksfond (verden eller Norden)",
-        "4. Sett opp fast månedlig sparing: «dollar cost averaging»",
+        "3. Start med ett bredt og billig globalt indeksfond som utgangspunkt",
+        "4. Sett opp fast månedlig sparing",
         "5. Ikke sjekk kontoen hver dag: fond er langsiktig",
-      ],
-    },
-    {
-      heading: "Hvor mye og hvor lenge?",
-      paragraphs: [
-        "Det finnes ingen magisk sum. Start med et beløp du klarer å spare hver måned, også når markedet faller.",
-        "Tid i markedet slår ofte timing av markedet. De som lykkes best er gjerne de som sparer jevnt over mange år, ikke de som venter på «riktig tidspunkt».",
-      ],
-    },
-    {
-      heading: "Risiko du bør kjenne til",
-      bullets: [
-        "Verdien kan gå ned: noen år betyr det minus på kontoen",
-        "Fond er ikke garantert avkastning",
-        "Kortsiktige penger (under 3–5 år) hører sjelden hjemme i aksjefond",
-        "Høyere avkastning over tid kommer med svingninger underveis",
       ],
     },
     {
@@ -66,11 +44,16 @@ export const komIGangMedFond: GuideArticleContent = {
       ],
     },
   ],
+  sources: [
+    {
+      label: "Skatteetaten om aksjesparekonto",
+      url: "https://www.skatteetaten.no/person/skatt/hjelp-til-riktig-skatt/aksjer-og-verdipapirer/om/aksjesparekonto-ask/",
+    },
+  ],
   relatedLinks: [
     { label: "Sparekalkulator", href: "/verktoy/sparekalkulator" },
     { label: "Bygg bufferkonto", href: "/guider/bygg-bufferkonto" },
     { label: "ASK i ordboken", href: "/ordbok/ask" },
-    { label: "Rentes rente i ordboken", href: "/ordbok/rentes-rente" },
     { label: "Emne: sparing og investering", href: "/emner/sparing-og-investering" },
   ],
 };

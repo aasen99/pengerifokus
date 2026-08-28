@@ -37,11 +37,13 @@ const baseFormuesbyggere: Formuesbygger[] = [
     region: "norsk",
     industry: "shipping",
     buildType: "grunder",
-    tagline: "Shippingmagnat som bygde en global formue på tank og offshore.",
+    tagline:
+      "Bygde et globalt system av børsnoterte selskaper innen tank, rigg, skipsutleie, gass og oppdrett.",
     wealthEstimate: kapitalEstimate("262"),
-    wealthContext: "Global shipping, offshore og maritime investeringer.",
+    wealthContext:
+      "Kapital 400, 2025. Frontline, Mowi og maritime holdingselskaper. Forbes anslo rundt 22 mrd. USD i august 2026.",
     createdAt: "2026-06-11",
-    updatedAt: "2026-06-11",
+    updatedAt: "2026-08-28",
   },
   {
     id: "fb-n3",
@@ -112,12 +114,13 @@ const baseFormuesbyggere: Formuesbygger[] = [
     region: "norsk",
     industry: "sjomat",
     buildType: "arv-videreutvikling",
-    tagline: "Unge arving som overtok eierskap i lakseindustri og investerer videre.",
+    tagline:
+      "Arvet eierskapet bak SalMar og gikk i 2026 inn som daglig leder i familiens toppselskap Kvarv.",
     wealthEstimate: kapitalEstimate("44,3"),
     wealthContext:
-      "Far og sønn regnes samlet på Kapitals liste. Eierskap i SalMar og videre investeringer.",
+      "Kapital 400, 2025 (familieanslag). Indirekte eierskap i SalMar via Kvarv/Kverva. Skattbar formue 29,9 mrd. i 2024.",
     createdAt: "2026-06-11",
-    updatedAt: "2026-06-11",
+    updatedAt: "2026-08-28",
   },
   {
     id: "fb-n8",
@@ -231,11 +234,13 @@ const baseFormuesbyggere: Formuesbygger[] = [
     region: "norsk",
     industry: "shipping",
     buildType: "investor",
-    tagline: "Shippinginvestor og industrimann med lang maritim karriere.",
+    tagline:
+      "Andre generasjons skipsreder som reiste seg etter Kosmos-fiaskoen og bygde nye verdier i Songa-systemet.",
     wealthEstimate: kapitalEstimate("11,8"),
-    wealthContext: "Shipping, oppkjøp og industrielle investeringer.",
+    wealthContext:
+      "Kapital 400, 2025. Shipping, børsnoteringer og sammenslåinger. Gruppens eiendeler er ikke det samme som privat nettoformue.",
     createdAt: "2026-06-11",
-    updatedAt: "2026-06-11",
+    updatedAt: "2026-08-28",
   },
   {
     id: "fb-n16",
@@ -609,6 +614,95 @@ const baseFormuesbyggere: Formuesbygger[] = [
     wealthContext:
       "Bokført egenkapital i Magnuschess AS (128,2 mill.). Carlsen eier 87,5 %. Play Magnus ble solgt til Chess.com i 2022 og inngår ikke som uavhengig selskapsverdi.",
     searchTerms: ["Magnuschess", "Play Magnus", "sjakk"],
+    createdAt: "2026-08-28",
+    updatedAt: "2026-08-28",
+  },
+  {
+    id: "fb-n25",
+    slug: "bjorn-daehlie",
+    status: "published",
+    name: "Bjørn Dæhlie",
+    region: "norsk",
+    industry: "sport",
+    buildType: "idrett-underholdning",
+    tagline:
+      "Gjorde idrettsnavnet om til merkevare, eiendom og investeringer gjennom Sisa Invest.",
+    wealthEstimate: documentedNokMillEstimate(
+      "782,8",
+      "2025",
+      "Sisa Invest-regnskap (Brønnøysund/Proff)",
+      "https://virksomhet.brreg.no/nb/oppslag/enheter/882585182",
+    ),
+    wealthContext:
+      "Bokført egenkapital i Sisa Invest (782,8 mill.), ikke samlet privat markedsformue. OL-karrieren skapte merkevaren; kapitalen sitter i investeringsselskapet.",
+    searchTerms: ["Bjørn Erlend Dæhlie", "Sisa Invest", "Dæhlie Sportswear"],
+    createdAt: "2026-08-28",
+    updatedAt: "2026-08-28",
+  },
+  {
+    id: "fb-n26",
+    slug: "petter-northug",
+    status: "published",
+    name: "Petter Northug",
+    region: "norsk",
+    industry: "sport",
+    buildType: "idrett-underholdning",
+    tagline:
+      "Gjorde en særegen idrettsprofil om til merkevare, medieinntekter, eget skilag og investeringer.",
+    wealthEstimate: documentedNokMillEstimate(
+      "22,5",
+      "2025",
+      "Petter Northug Holding-regnskap (Proff)",
+      "https://www.proff.no/selskap/petter-northug-holding-as/mosvik/utleie-og-leasing/IGHY35W01TD",
+    ),
+    wealthContext:
+      "Bokført egenkapital i Petter Northug Holding (22,5 mill.). Skattbar formue over 12 mill. i 2024. Ikke et komplett markedsanslag på alt han eier.",
+    searchTerms: ["Petter Northug jr.", "Team Northug", "Northug AS"],
+    createdAt: "2026-08-28",
+    updatedAt: "2026-08-28",
+  },
+  {
+    id: "fb-n27",
+    slug: "alan-walker",
+    status: "published",
+    featured: true,
+    name: "Alan Walker",
+    region: "norsk",
+    industry: "musikk",
+    buildType: "merkevare",
+    tagline:
+      "Gjorde «Faded» om til et globalt system for musikk, konserter, rettigheter og World of Walker.",
+    wealthEstimate: documentedNokMillEstimate(
+      "96,7",
+      "2025",
+      "Alan Walker AS-regnskap (Proff/E24)",
+      "https://www.proff.no/selskap/alan-walker-as/oslo/musikk/IF5E3XP07S0",
+    ),
+    wealthContext:
+      "Bokført egenkapital i Alan Walker AS (96,7 mill.). World of Walker-konsernet omsatte for 224,2 mill. i 2025. Ikke samlet privat nettoformue.",
+    searchTerms: ["Alan Olav Walker", "World of Walker", "Faded"],
+    createdAt: "2026-08-28",
+    updatedAt: "2026-08-28",
+  },
+  {
+    id: "fb-n28",
+    slug: "magnus-midtbo",
+    status: "published",
+    name: "Magnus Midtbø",
+    region: "norsk",
+    industry: "sport",
+    buildType: "idrett-underholdning",
+    tagline:
+      "Fra nisjeidrett til global YouTube-kanal, Rúngne og investeringer i klatrebransjen.",
+    wealthEstimate: documentedNokMillEstimate(
+      "16,8",
+      "2025",
+      "Midtbø Invest-regnskap (Proff)",
+      "https://www.proff.no/selskap/midtb%C3%B8-invest-as/oslo/treningssentre-og-andre-sportsaktiviteter/IFBWPNI10L8",
+    ),
+    wealthContext:
+      "Bokført egenkapital i Midtbø Invest (16,8 mill.). Eier 66,95 % av Rúngne Apparel. YouTube-kanalen er hovedmotoren; unotert eierverdi er illikvid.",
+    searchTerms: ["Magnus Rognan Midtbø", "Rúngne", "Midtbø Invest"],
     createdAt: "2026-08-28",
     updatedAt: "2026-08-28",
   },

@@ -6,7 +6,7 @@ import { ToolPageSeo } from "@/components/seo/ToolPageSeo";
 import { createPageMetadata } from "@/lib/seo";
 
 const toolDescription =
-  "Regn ut maks boliglån og kjøpesum ut fra egenkapital × 10 og lønn × 5, minus gjeld.";
+  "Regn ut maks boliglån og kjøpesum ut fra inntekt, gjeld og egenkapital.";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Hvor mye kan jeg låne-kalkulator",

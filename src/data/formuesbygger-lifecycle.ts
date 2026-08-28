@@ -4,7 +4,12 @@ export const formuesbyggerLifecycle: Record<
   { birthDate: string; deathDate?: string }
 > = {
   "kjell-inge-rokke": { birthDate: "1958-07-13" },
-  "john-fredriksen": { birthDate: "1944-05-10" },
+  "john-fredriksen": { birthDate: "1944-05-11" },
+  "arne-blystad": { birthDate: "1955-01-18" },
+  "bjorn-daehlie": { birthDate: "1967-06-19" },
+  "petter-northug": { birthDate: "1986-01-06" },
+  "alan-walker": { birthDate: "1997-08-24" },
+  "magnus-midtbo": { birthDate: "1988-09-18" },
   "stein-erik-hagen": { birthDate: "1956-05-14", deathDate: "2026-05-04" },
   "petter-stordalen": { birthDate: "1962-11-29" },
   "olav-thon": { birthDate: "1923-06-29", deathDate: "2024-11-17" },

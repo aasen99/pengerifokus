@@ -3,7 +3,7 @@ import { describe, it } from "node:test";
 import { calculateLaneKapasitet } from "./lane-kapasitet";
 
 describe("calculateLaneKapasitet", () => {
-  it("bruker EK × 10 − gjeld for maks kjøpesum og lønn × 5 − gjeld for maks lån", () => {
+  it("bruker EK × 10 for maks kjøpesum og lønn × 5 − gjeld for maks lån", () => {
     const result = calculateLaneKapasitet({
       equity: 400_000,
       existingDebt: 200_000,
@@ -12,11 +12,11 @@ describe("calculateLaneKapasitet", () => {
     });
 
     assert.ok(result);
-    assert.equal(result.maxPurchaseFromEquity, 3_800_000);
-    assert.equal(result.maxLoanFromEquity, 3_400_000);
+    assert.equal(result.maxPurchaseFromEquity, 4_000_000);
+    assert.equal(result.maxLoanFromEquity, 3_600_000);
     assert.equal(result.maxLoanFromIncome, 5_800_000);
-    assert.equal(result.maxLoan, 3_400_000);
-    assert.equal(result.maxPurchase, 3_800_000);
+    assert.equal(result.maxLoan, 3_600_000);
+    assert.equal(result.maxPurchase, 4_000_000);
     assert.equal(result.limitingFactor, "egenkapital");
   });
 
@@ -29,15 +29,15 @@ describe("calculateLaneKapasitet", () => {
     });
 
     assert.ok(result);
-    assert.equal(result.maxPurchaseFromEquity, 9_500_000);
-    assert.equal(result.maxLoanFromEquity, 8_500_000);
+    assert.equal(result.maxPurchaseFromEquity, 10_000_000);
+    assert.equal(result.maxLoanFromEquity, 9_000_000);
     assert.equal(result.maxLoanFromIncome, 2_500_000);
     assert.equal(result.maxLoan, 2_500_000);
     assert.equal(result.maxPurchase, 3_500_000);
     assert.equal(result.limitingFactor, "inntekt");
   });
 
-  it("gir mer låneramme når ekstra penger holdes som EK fremfor nedbetaling", () => {
+  it("holder kjøpesum uendret når inntekt begrenser og gjeld betales med egenkapital", () => {
     const keepEquity = calculateLaneKapasitet({
       equity: 400_000,
       existingDebt: 500_000,
@@ -53,8 +53,9 @@ describe("calculateLaneKapasitet", () => {
 
     assert.ok(keepEquity);
     assert.ok(payDebt);
-    assert.ok(keepEquity.maxPurchase > payDebt.maxPurchase);
-    assert.ok(keepEquity.maxLoan >= payDebt.maxLoan);
+    assert.equal(keepEquity.maxPurchase, 2_900_000);
+    assert.equal(payDebt.maxPurchase, 2_900_000);
+    assert.ok(payDebt.maxLoan > keepEquity.maxLoan);
   });
 
   it("bruker lavere multiplikator for sekundærbolig", () => {
@@ -67,9 +68,9 @@ describe("calculateLaneKapasitet", () => {
 
     assert.ok(result);
     assert.equal(result.equityPurchaseMultiplier, 1 / 0.15);
-    assert.equal(result.maxPurchaseFromEquity, 1_900_000);
-    assert.equal(result.maxLoanFromEquity, 1_600_000);
-    assert.equal(result.maxLoan, 1_600_000);
+    assert.equal(result.maxPurchaseFromEquity, 2_000_000);
+    assert.equal(result.maxLoanFromEquity, 1_700_000);
+    assert.equal(result.maxLoan, 1_700_000);
     assert.equal(result.limitingFactor, "egenkapital");
   });
 

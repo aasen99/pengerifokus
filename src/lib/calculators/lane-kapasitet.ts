@@ -60,22 +60,18 @@ export function getEquityLoanMultiplier(isPrimaryHome: boolean): number {
 
 export function calculateMaxPurchaseFromEquity(
   equity: number,
-  existingDebt: number,
   isPrimaryHome: boolean,
 ): number {
   if (equity <= 0) return 0;
-  return roundKr(
-    equity * getEquityPurchaseMultiplier(isPrimaryHome) - existingDebt,
-  );
+  return roundKr(equity * getEquityPurchaseMultiplier(isPrimaryHome));
 }
 
 export function calculateMaxLoanFromEquity(
   equity: number,
-  existingDebt: number,
   isPrimaryHome: boolean,
 ): number {
   if (equity <= 0) return 0;
-  return roundKr(equity * getEquityLoanMultiplier(isPrimaryHome) - existingDebt);
+  return roundKr(equity * getEquityLoanMultiplier(isPrimaryHome));
 }
 
 export function calculateMaxLoanFromIncome(
@@ -117,12 +113,10 @@ export function calculateLaneKapasitet(
 
   const maxPurchaseFromEquity = calculateMaxPurchaseFromEquity(
     equity,
-    existingDebt,
     input.isPrimaryHome,
   );
   const maxLoanFromEquity = calculateMaxLoanFromEquity(
     equity,
-    existingDebt,
     input.isPrimaryHome,
   );
 
@@ -177,7 +171,7 @@ export function formatLaneKapasitetLimit(
     case "inntekt":
       return "inntekt (lønn × 5 − gjeld)";
     case "egenkapital":
-      return "egenkapital (× 10 − gjeld)";
+      return "egenkapital (10 % krav)";
     case "gjeld":
       return "eksisterende gjeld";
     default:
@@ -187,11 +181,10 @@ export function formatLaneKapasitetLimit(
 
 export function formatEquityPurchaseFormula(
   equity: number,
-  existingDebt: number,
   multiplier: number,
   result: number,
 ): string {
-  return `${formatCurrency(equity)} × ${formatMultiplier(multiplier)} − ${formatCurrency(existingDebt)} = ${formatCurrency(result)}`;
+  return `${formatCurrency(equity)} × ${formatMultiplier(multiplier)} = ${formatCurrency(result)}`;
 }
 
 export function formatIncomeLoanFormula(

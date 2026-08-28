@@ -44,7 +44,6 @@ export const prosentregning: Omit<GuideArticleContent, "readTimeMinutes"> = {
         "Å blande «15 % av 899» med «899 redusert med 15 %» (andel vs. ny pris)",
         "Å dele på ny verdi i stedet for gammel verdi ved endring",
         "Å legge sammen prosentpoeng feil (2 % + 3 % er ikke alltid 5 % effekt)",
-        "Å glemme at feriepenger og lignende har egne satser, ikke bare «litt prosent»",
       ],
     },
     {
@@ -53,7 +52,14 @@ export const prosentregning: Omit<GuideArticleContent, "readTimeMinutes"> = {
         "15 % rabatt på 899 kr = 134,85 kr i avslag",
         "15 000 kr tillegg på 500 000 kr lønn = 3 % lønnsøkning",
         "12 % feriepenger av 500 000 kr grunnlag = 60 000 kr",
-        "Boligiutgift på 12 000 kr av 40 000 kr inntekt = 30 %",
+        "Boligutgift på 12 000 kr av 40 000 kr inntekt = 30 %",
+      ],
+    },
+    {
+      heading: "Prosent og prosentpoeng",
+      paragraphs: [
+        "Prosent og prosentpoeng er ikke det samme. Går en rente fra 4 til 5 prosent, har den økt med 1 prosentpoeng. Målt i prosent er økningen 25 prosent, fordi 1 er 25 prosent av 4.",
+        "15 prosent ned og deretter 15 prosent opp gir ikke samme startverdi. En pris på 1 000 kroner faller først til 850 kroner. Øker den deretter med 15 prosent, blir den 977,50 kroner.",
       ],
     },
     {

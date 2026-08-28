@@ -176,13 +176,18 @@ export function LaneKapasitetKalkulator() {
               </h2>
               <dl className="mt-3 space-y-2">
                 <RuleRow
-                  label={`Egenkapital: × ${purchaseMultiplierLabel} − gjeld → kjøpesum`}
+                  label={`Egenkapital: × ${purchaseMultiplierLabel} → kjøpesum`}
                   value={formatCurrency(result.maxPurchaseFromEquity)}
                   active={result.limitingFactor === "egenkapital"}
                 />
                 <RuleRow
                   label={`Inntekt: lønn × ${INCOME_DEBT_MULTIPLIER} − gjeld → lån`}
                   value={formatCurrency(result.maxLoanFromIncome)}
+                  active={result.limitingFactor === "inntekt"}
+                />
+                <RuleRow
+                  label="Inntekt + egenkapital → kjøpesum"
+                  value={formatCurrency(result.maxPurchaseFromIncome)}
                   active={result.limitingFactor === "inntekt"}
                 />
               </dl>
@@ -193,13 +198,13 @@ export function LaneKapasitetKalkulator() {
             </div>
 
             <p className="text-sm text-stone-600">
-              Nærmer du deg boligkjøp, kan det lønne seg å la penger stå som
-              egenkapital fremfor å betale ned billig gjeld.{" "}
+              Annen gjeld reduserer lånerommet gjennom femgangersregelen, ikke
+              egenkapitalgrensen.{" "}
               <Link
                 href="/guider/laneramme-for-boligkjop"
                 className="font-medium text-orange-600 hover:text-orange-700"
               >
-                Les hvorfor
+                Les mer
               </Link>
             </p>
           </>

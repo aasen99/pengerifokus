@@ -4,6 +4,7 @@ import { norskeFormuesbyggerArtikler } from "./norske";
 import { norskeProfilerBatch2 } from "./norske-profiler-batch2";
 import { norskeProfilerBatch3 } from "./norske-profiler-batch3";
 import { norskeProfilerBatch4 } from "./norske-profiler-batch4";
+import { norskeProfilerPakke1 } from "./norske-profiler-pakke-1";
 
 const allArticles: Record<string, FormuesbyggerArticle> = {
   ...norskeFormuesbyggerArtikler,
@@ -11,6 +12,7 @@ const allArticles: Record<string, FormuesbyggerArticle> = {
   ...norskeProfilerBatch3,
   ...norskeProfilerBatch4,
   ...internasjonaleFormuesbyggerArtikler,
+  ...norskeProfilerPakke1,
 };
 
 export function getFormuesbyggerArticle(
