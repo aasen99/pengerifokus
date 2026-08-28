@@ -7,8 +7,11 @@ export type FormuesbyggerIndustry =
   | "eiendom"
   | "sport"
   | "musikk"
+  | "media-underholdning"
   | "handel"
   | "industri"
+  | "shipping"
+  | "sjomat"
   | "investering"
   | "arv";
 
@@ -188,6 +191,8 @@ export interface FormuesbyggerArticle {
   factCards?: FormuesbyggerFactCard[];
   factCardsNote?: string;
   bodySections?: FormuesbyggerBodySection[];
+  /** Skjul mal-seksjonene når bodySections dekker samme innhold */
+  hideStandardSections?: boolean;
   /** Standard: etter kort svar. late: før kilder, etter FAQ. */
   timelinePlacement?: "default" | "late";
   /** Fire til seks daterte vendepunkter */

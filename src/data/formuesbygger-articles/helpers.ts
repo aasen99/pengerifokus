@@ -21,6 +21,7 @@ export interface BuildArticleOptions {
   factCards?: FormuesbyggerFactCard[];
   factCardsNote?: string;
   bodySections?: FormuesbyggerBodySection[];
+  hideStandardSections?: boolean;
   timelinePlacement?: FormuesbyggerArticle["timelinePlacement"];
   timeline: FormuesbyggerTimelineEvent[];
   wealthSources: FormuesbyggerWealthSource[];
@@ -74,19 +75,21 @@ function collectArticleTexts(
     texts.push(event.date, event.title, ...(event.description ? [event.description] : []));
   }
 
-  for (const source of article.wealthSources) {
-    texts.push(source.category, source.description);
+  if (!article.hideStandardSections) {
+    for (const source of article.wealthSources) {
+      texts.push(source.category, source.description);
+    }
+
+    if (article.ownershipVsControl) texts.push(article.ownershipVsControl);
+    texts.push(article.decisiveMove);
+    texts.push(...article.whatCouldGoWrong);
+
+    for (const pair of article.mythVsReality) {
+      texts.push(pair.myth, pair.reality);
+    }
+
+    texts.push(...article.personalLessons);
   }
-
-  if (article.ownershipVsControl) texts.push(article.ownershipVsControl);
-  texts.push(article.decisiveMove);
-  texts.push(...article.whatCouldGoWrong);
-
-  for (const pair of article.mythVsReality) {
-    texts.push(pair.myth, pair.reality);
-  }
-
-  texts.push(...article.personalLessons);
 
   for (const item of article.faq ?? []) {
     texts.push(item.question, item.answer);
@@ -122,6 +125,7 @@ export function buildFormuesbyggerArticle(
     factCards: options.factCards,
     factCardsNote: options.factCardsNote,
     bodySections: options.bodySections,
+    hideStandardSections: options.hideStandardSections,
     timelinePlacement: options.timelinePlacement,
     timeline: options.timeline,
     wealthSources: options.wealthSources,

@@ -73,6 +73,7 @@ export function FormuesbyggerProfile({
     .filter(Boolean);
   const showFactCards = Boolean(article.factCards?.length);
   const lateTimeline = article.timelinePlacement === "late";
+  const showStandardSections = !article.hideStandardSections;
 
   return (
     <article>
@@ -132,100 +133,104 @@ export function FormuesbyggerProfile({
 
         {!lateTimeline && <TimelineSection article={article} />}
 
-        <section>
-          <h2 className="text-lg font-semibold text-stone-900">
-            Hvor kom formuen fra?
-          </h2>
-          <dl className="mt-4 space-y-4">
-            {article.wealthSources.map((source) => (
-              <div key={source.category}>
-                <dt className="text-sm font-semibold text-stone-900">
-                  {WEALTH_SOURCE_LABELS[source.category]}
-                </dt>
-                <dd className="mt-1 leading-relaxed text-stone-600">
-                  {withTerms(source.description)}
-                </dd>
-              </div>
-            ))}
-          </dl>
-        </section>
+        {showStandardSections && (
+          <>
+            <section>
+              <h2 className="text-lg font-semibold text-stone-900">
+                Hvor kom formuen fra?
+              </h2>
+              <dl className="mt-4 space-y-4">
+                {article.wealthSources.map((source) => (
+                  <div key={source.category}>
+                    <dt className="text-sm font-semibold text-stone-900">
+                      {WEALTH_SOURCE_LABELS[source.category]}
+                    </dt>
+                    <dd className="mt-1 leading-relaxed text-stone-600">
+                      {withTerms(source.description)}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </section>
 
-        {article.ownershipVsControl && (
-          <section>
-            <h2 className="text-lg font-semibold text-stone-900">
-              Eierskap versus kontroll
-            </h2>
-            <p className="mt-3 leading-relaxed text-stone-600">
-              {withTerms(article.ownershipVsControl)}
-            </p>
-          </section>
+            {article.ownershipVsControl && (
+              <section>
+                <h2 className="text-lg font-semibold text-stone-900">
+                  Eierskap versus kontroll
+                </h2>
+                <p className="mt-3 leading-relaxed text-stone-600">
+                  {withTerms(article.ownershipVsControl)}
+                </p>
+              </section>
+            )}
+
+            <section className="rounded-xl border border-stone-200 bg-stone-50 px-4 py-4 sm:px-5">
+              <h2 className="text-lg font-semibold text-stone-900">
+                Det avgjørende grepet
+              </h2>
+              <p className="mt-3 leading-relaxed text-stone-700">
+                {withTerms(article.decisiveMove)}
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-lg font-semibold text-stone-900">
+                Hva kunne gått galt?
+              </h2>
+              <ul className="mt-4 space-y-2">
+                {article.whatCouldGoWrong.map((item) => (
+                  <li
+                    key={item}
+                    className="flex gap-3 leading-relaxed text-stone-600"
+                  >
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-orange-500" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="text-lg font-semibold text-stone-900">
+                Myte mot virkelighet
+              </h2>
+              <div className="mt-4 space-y-4">
+                {article.mythVsReality.map((pair) => (
+                  <div
+                    key={pair.myth}
+                    className="rounded-xl border border-stone-200 px-4 py-3"
+                  >
+                    <p className="text-sm font-medium text-stone-500">Myte</p>
+                    <p className="mt-1 text-stone-700">{pair.myth}</p>
+                    <p className="mt-3 text-sm font-medium text-stone-500">
+                      Virkelighet
+                    </p>
+                    <p className="mt-1 leading-relaxed text-stone-700">
+                      {withTerms(pair.reality)}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            <section className="rounded-xl border border-orange-200 bg-orange-50 px-4 py-4">
+              <h2 className="text-lg font-semibold text-stone-900">
+                Hva kan en vanlig person faktisk lære?
+              </h2>
+              <ul className="mt-4 space-y-2">
+                {article.personalLessons.map((lesson) => (
+                  <li
+                    key={lesson}
+                    className="flex gap-3 leading-relaxed text-stone-700"
+                  >
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-orange-500" />
+                    <span>{withTerms(lesson)}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          </>
         )}
-
-        <section className="rounded-xl border border-stone-200 bg-stone-50 px-4 py-4 sm:px-5">
-          <h2 className="text-lg font-semibold text-stone-900">
-            Det avgjørende grepet
-          </h2>
-          <p className="mt-3 leading-relaxed text-stone-700">
-            {withTerms(article.decisiveMove)}
-          </p>
-        </section>
-
-        <section>
-          <h2 className="text-lg font-semibold text-stone-900">
-            Hva kunne gått galt?
-          </h2>
-          <ul className="mt-4 space-y-2">
-            {article.whatCouldGoWrong.map((item) => (
-              <li
-                key={item}
-                className="flex gap-3 leading-relaxed text-stone-600"
-              >
-                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-orange-500" />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-lg font-semibold text-stone-900">
-            Myte mot virkelighet
-          </h2>
-          <div className="mt-4 space-y-4">
-            {article.mythVsReality.map((pair) => (
-              <div
-                key={pair.myth}
-                className="rounded-xl border border-stone-200 px-4 py-3"
-              >
-                <p className="text-sm font-medium text-stone-500">Myte</p>
-                <p className="mt-1 text-stone-700">{pair.myth}</p>
-                <p className="mt-3 text-sm font-medium text-stone-500">
-                  Virkelighet
-                </p>
-                <p className="mt-1 leading-relaxed text-stone-700">
-                  {withTerms(pair.reality)}
-                </p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="rounded-xl border border-orange-200 bg-orange-50 px-4 py-4">
-          <h2 className="text-lg font-semibold text-stone-900">
-            Hva kan en vanlig person faktisk lære?
-          </h2>
-          <ul className="mt-4 space-y-2">
-            {article.personalLessons.map((lesson) => (
-              <li
-                key={lesson}
-                className="flex gap-3 leading-relaxed text-stone-700"
-              >
-                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-orange-500" />
-                <span>{withTerms(lesson)}</span>
-              </li>
-            ))}
-          </ul>
-        </section>
 
         {article.faq && article.faq.length > 0 && (
           <section id="vanlige-sporsmal">

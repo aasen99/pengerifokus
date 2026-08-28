@@ -17,7 +17,7 @@ export const formuesbyggerLifecycle: Record<
   "ivar-erik-tollefsen": { birthDate: "1961-04-03" },
   "helene-sundt": { birthDate: "1979-12-03" },
   "nicolai-tangen": { birthDate: "1966-07-24" },
-  "trond-mohn": { birthDate: "1943-10-03" },
+  "trond-mohn": { birthDate: "1943-04-03" },
   "erling-haaland": { birthDate: "2000-07-21" },
   "oystein-stray-spetalen": { birthDate: "1962-06-17" },
   "johan-johannson": { birthDate: "1967-01-25" },

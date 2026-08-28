@@ -581,93 +581,132 @@ export const norskeProfilerBatch2 = {
   "trond-mohn": buildFormuesbyggerArticle({
     slug: "trond-mohn",
     seoAngle: "Hva kan vi lære av Trond Mohn?",
+    seoTitle: "Trond Mohn: Arv, Framo og filantropi",
+    metaDescription:
+      "Trond Mohn videreutviklet familiebedriften Frank Mohn (Framo) og solgte den til Alfa Laval for 13 milliarder kroner i 2014. Se arv, industri og filantropi.",
+    seoKeywords: [
+      "Trond Mohn formue",
+      "Frank Mohn",
+      "Framo",
+      "Alfa Laval",
+      "Trond Mohn Stiftelse",
+      "filantropi Bergen",
+    ],
     shortAnswer:
-      "Trond Mohn bygde formue gjennom industriell gründerdrift, Frank Mohn ble over tiår en global leverandør av pumper og maritim teknologi. Formuen kom fra produksjon, eksport og langsiktig eierskap i eget selskap, ikke fra fondsforvaltning eller arv. Mohn har gitt betydelige beløp til Trond Mohn Stiftelse for forskning, utdanning og idrett i Vestland, filantropi finansiert av industriformuen over tid. Mønsteret er likt Thon og Gates: bygge formue operativt, deretter kanalisere overskudd til allmennyttige formål via stiftelse.",
+      "Trond Mohn overtok ikke et selskap fra null. Faren, Frank Mohn, grunnla Frank Mohn AS i 1938, og Trond kom inn i familiebedriften etter utdanning i Tyskland. Som administrerende direktør fra 1986 videreutviklet han Framo til en global leverandør av skipspumper og offshore-teknologi, før selskapet ble solgt til Alfa Laval for 13 milliarder kroner i 2014. Formuen kom fra arv og langsiktig industriell eierskap. Etter salget har Mohn vært blant Norges mest betydelige filantroper, med milliardgaver til forskning, utdanning og idrett i Vestland.",
     timeline: [
       {
-        date: "1943",
-        title: "Født 3. oktober",
+        date: "3. apr. 1943",
+        title: "Født i Buckie, Skottland",
         description:
-          "Trond Mohn ble født 3. oktober 1943 i Bergen og startet karrieren i maritim industri.",
+          "Trond Mohn ble født 3. april 1943 under foreldrenes opphold i Skottland under andre verdenskrig, men vokste opp i Fana.",
       },
       {
-        date: "1960–1970-tallet",
-        title: "Frank Mohn grunnlegges",
+        date: "1970",
+        title: "Inn i familiebedriften",
         description:
-          "Mohn startet Frank Mohn og begynte produksjon av pumper og maritim teknologi i Bergen-regionen.",
+          "Etter siviløkonomutdanning i Mannheim begynte Mohn i Frank Mohn AS, som faren hadde grunnlagt i 1938.",
       },
       {
-        date: "1980–2000-tallet",
-        title: "Global ekspansjon",
+        date: "1986",
+        title: "Overtar som daglig leder",
         description:
-          "Frank Mohn vokste til internasjonal leverandør gjennom eksport og langsiktig industriell utvikling.",
+          "Trond Mohn ble administrerende direktør og ledet videre internasjonaliseringen av Framo-pumpene.",
       },
       {
-        date: "2000-tallet",
-        title: "Trond Mohn Stiftelse",
+        date: "Apr. 2014",
+        title: "Solgt til Alfa Laval for 13 mrd.",
         description:
-          "Mohn etablerte stiftelsen og begynte omfattende filantropi innen forskning, utdanning og idrett i Vestland.",
+          "Familien solgte Frank Mohn AS til svenske Alfa Laval for 13 milliarder kroner kontant på gjeldfri basis.",
       },
       {
         date: "2025",
         title: "Kapital 400, 8,45 mrd.",
         description:
-          "Kapital estimerer formuen til om lag 8,45 milliarder kroner, hovedsakelig Frank Mohn og stiftelsesgaver.",
+          "Kapital estimerer formuen til om lag 8,45 milliarder kroner, hovedsakelig fra Framo-salget og etterfølgende investeringer.",
       },
     ],
     wealthSources: [
       {
-        category: "selskaper",
+        category: "arv",
         description:
-          "Eierskap i Frank Mohn, global leverandør av pumper og maritim teknologi, bygget over tiår.",
+          "Arv og videreutvikling av familiebedriften Frank Mohn AS, grunnlagt av faren Frank Mohn i 1938. Trond Mohn kom inn i selskapet etter utdanning og ledet det fra 1986.",
       },
       {
         category: "salg",
         description:
-          "Løpende gaver til Trond Mohn Stiftelse finansiert av industriformuen, ikke full overføring, men bevisst filantropi.",
+          "Salg av Frank Mohn AS til Alfa Laval i april 2014 for 13 milliarder kroner kontant. Selskapet omsatte for 3,4 milliarder kroner og hadde ordreinngang på 6,1 milliarder i 2013.",
+      },
+      {
+        category: "selskaper",
+        description:
+          "Formue etter industrisalget, investert og kanalisert gjennom holdingselskaper og omfattende gaver til Trond Mohn Stiftelse og andre formål i Vestland.",
       },
     ],
+    ownershipVsControl:
+      "Trond Mohn ledet familiebedriften som administrerende direktør og styreleder, men eierskapet lå i familieselskaper som Wimoh AS og Framo Developments. Ved salget i 2014 eide han majoriteten i Framo Developments sammen med søsteren Marit og sønnen Frederik, som hadde ulike syn på salget.",
     decisiveMove:
-      "Byggingen av Frank Mohn fra lokal pumpeprodusent til global maritim teknologileverandør, langsiktig industriell gründerdrift over femti år som skapte grunnlaget for både formue og filantropi.",
+      "Å videreutvikle Framo fra familiebedrift til global markedsleder i skipspumper og offshore-teknologi, og realisere verdien gjennom salg til Alfa Laval i 2014 for 13 milliarder kroner kontant.",
     whatCouldGoWrong: [
-      "Industriell gründerdrift binder kapital i produksjon, lav konjunktur kan presse marginer og formue.",
-      "Konsentrasjon i ett selskap gir ingen diversifisering hvis markedet snur.",
-      "Generasjonsskifte i familieselskap kan skape konflikter om eierskap og strategi.",
-      "Stiftelsesgaver reduserer personlig formue, det er en bevisst valg, ikke automatisk.",
+      "Konsentrasjon i ett familieselskap gir ingen diversifisering hvis shipping- eller offshoremarkedet snur.",
+      "Generasjonsskifte i familiebedrifter kan skape konflikter om eierskap, strategi og salg, som da Frederik Mohn gikk av som konsernsjef i 2012.",
+      "Industriell formue sitter i produksjon og ordrer, ikke kontanter. Lav konjunktur kan presse marginer lenge før et salg.",
+      "Store filantropiske gaver reduserer personlig formue. Det er et bevisst valg, ikke en automatisk konsekvens av rikdom.",
     ],
     mythVsReality: [
       {
-        myth: "Mohn ga bort hele formuen til stiftelsen, som Thon.",
+        myth: "Trond Mohn grunnla Frank Mohn.",
         reality:
-          "Trond Mohn Stiftelse mottar løpende gaver finansiert av industriformuen, det er filantropi over tid, ikke nødvendigvis full overføring av eierskap.",
+          "Selskapet ble etablert av faren Frank Mohn i 1938. Trond kom inn etter utdanning i 1970 og tok over som administrerende direktør i 1986.",
       },
       {
         myth: "Industriell formue er rask og enkel å bygge.",
         reality:
-          "Frank Mohn tok tiår å bli global, produksjon, eksport og langsiktig eierskap i eget selskap er langsomt, men stabilt.",
+          "Framo tok flere tiår å bli global. Produksjon, eksport og langsiktig eierskap i familiebedriften er langsomt, men kan gi store utslag ved et salg.",
+      },
+      {
+        myth: "Mohn ga bort hele formuen til stiftelsen, som Thon.",
+        reality:
+          "Trond Mohn Stiftelse mottar løpende gaver finansiert av formuen. Kapital har anslått at han har gitt over 5 milliarder kroner til forskning, utdanning og idrett over tre tiår.",
       },
     ],
     personalLessons: [
-      "Industriell gründerdrift kan bygge stor formue over generasjoner, men krever produksjon, ikke spekulasjon.",
-      "Stiftelsesgaver kanaliserer industriformue til samfunnsnytte uten å ofre selskapets drift.",
-      "Langsiktig eierskap i eget selskap slår jobbhopping for formuebygging.",
-      "Filantropi og næringsliv kan henge tett sammen regionalt, Bergen er et eksempel.",
+      "Arv er et utgangspunkt, ikke en ferdig formue. Trond Mohn videreutviklet det faren bygde, han startet ikke selskapet selv.",
+      "Langsiktig eierskap i én industri kan gi enorm verdi, men krever tiår med ekspansjon og produktutvikling.",
+      "Et salg kan være det avgjørende grepet. Framo ble verdt 13 milliarder kroner da familien solgte til Alfa Laval i 2014.",
+      "Filantropi kan følge industriformue over tid. Mohn har gitt milliarder til forskning, idrett og utdanning i Vestland uten å være en tradisjonell gründerhistorie.",
     ],
     sources: [
       {
-        label: "Frank Mohn AS",
-        url: "https://www.frankmohn.com/",
+        label: "Framo: historien fra 1938",
+        url: "https://www.framo.com/about-framo/history/",
+        tier: "primary",
+      },
+      {
+        label: "Store norske leksikon: Trond Mohn",
+        url: "https://snl.no/Trond_Mohn",
+        tier: "primary",
+      },
+      {
+        label: "Store norske leksikon: Frank Mohn",
+        url: "https://snl.no/Frank_Mohn",
+        tier: "primary",
+      },
+      {
+        label: "Alfa Laval: oppkjøp av Frank Mohn AS (2014)",
+        url: "https://news.cision.com/alfa-laval/r/alfa-laval-acquires-frank-mohn-as--a-leader-in-marine-and-offshore-pumping-systems--and-strengthens-,c9564574",
         tier: "primary",
       },
       {
         label: "Trond Mohn Stiftelse",
         url: "https://www.trondmohnstiftelse.no/",
-        tier: "primary",
+        tier: "secondary",
       },
       kapital400Source(),
     ],
-    lastVerified: "2026-08-11",
+    lastVerified: "2026-08-28",
     relatedLinks: [
+      { label: "Johan H. Andresen", href: "/formuesbyggere/johan-h-andresen" },
       { label: "Bill Gates", href: "/formuesbyggere/bill-gates" },
       { label: "Bygg bufferkonto", href: "/guider/bygg-bufferkonto" },
     ],

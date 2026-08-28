@@ -32,8 +32,11 @@ export const INDUSTRY_LABELS: Record<FormuesbyggerIndustry, string> = {
   eiendom: "Eiendom",
   sport: "Sport",
   musikk: "Musikk",
+  "media-underholdning": "Media og underholdning",
   handel: "Handel",
   industri: "Industri",
+  shipping: "Shipping",
+  sjomat: "Sjømat",
   investering: "Investering",
   arv: "Arv",
 };

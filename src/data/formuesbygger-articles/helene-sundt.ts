@@ -63,6 +63,7 @@ I 2025 anslo [Kapital](${KAPITAL_E24}) formuen hennes til omtrent 11,5 milliarde
 
 Historien hennes er først og fremst en historie om arv. Den er samtidig et tydelig eksempel på hvor stor forskjell langsiktig eierskap, profesjonell forvaltning og flere tiår med reinvestering kan gjøre etter at en formue er overtatt.`,
   timelinePlacement: "late",
+  hideStandardSections: true,
   bodySections: [
     {
       heading: "Kort fortalt",

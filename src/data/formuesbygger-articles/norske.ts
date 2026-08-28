@@ -720,198 +720,236 @@ export const norskeFormuesbyggerArtikler = {
   }),
   "odd-reitan": buildFormuesbyggerArticle({
     slug: "odd-reitan",
-    seoAngle: "Hvordan bygde Odd Reitan handelsimperiet?",
+    seoAngle: "Hvordan skapte Odd Reitan Rema 1000?",
+    seoTitle: "Odd Reitan: Rema 1000, lavpris og franchise",
+    metaDescription:
+      "Odd Reitan grunnla Rema 1000 i 1979 etter inspirasjon fra ALDI i Tyskland. Les om lavprismodellen, franchise og grepene som skalerte kjeden.",
+    seoKeywords: [
+      "Odd Reitan",
+      "Rema 1000 historie",
+      "lavpriskjede",
+      "franchise dagligvare",
+      "ALDI inspirasjon",
+    ],
     shortAnswer:
-      "Odd Reitan bygde Reitan-gruppen fra foreldrenes butikk i 1948 til Rema 1000 og en av Nordens største dagligvare- og servicenetverk. Han åpnet første Rema 1000 i 1979, inspirert av tysk franchisehandel, en modell der andre driver butikker under Rema-konseptet mens Reitan eier merkevare, logistikk og innkjøp. Formuen sitter i eierskap av konsernet, ikke i lønn.",
+      "Odd Reitan vokste opp i foreldrenes butikk i Trondheim og åpnet sin egen handel i 1972. Etter en studietur til Tyskland i 1977, der han studerte ALDIs lavprismodell, åpnet han første Rema-butikk på Bromstad 15. februar 1979. Konseptet bygget på enkelt utvalg, lave kostnader og lave priser. Franchise gjorde at lokale kjøpmenn kunne drive butikkene, mens Reitan eide merkevare, innkjøp og logistikk. Det var disse grepene, ikke familieeierskapet i dag, som gjorde Rema 1000 til Norges største lavpriskjede.",
     timeline: [
       {
         date: "1948",
-        title: "Foreldrenes butikk",
+        title: "Vokser opp i butikken",
         description:
-          "Reitan Retail oppgir at foreldrene Odd Reitan og hans søsken vokste opp med startet butikken i 1948.",
+          "Faren Ole Reitan åpnet butikk i Nonnegata i Trondheim. Odd vokste opp i handelsmiljøet som la grunnlaget for hans egen karriere.",
       },
       {
-        date: "1970-tallet",
-        title: "Rema 1000-konseptet",
+        date: "1972",
+        title: "Åpner Sjokkpris",
         description:
-          "Odd Reitan utviklet lavpriskonseptet Rema 1000 med fokus på effektiv logistikk og lave priser.",
+          "Etter handelsutdanning startet Odd Reitan sin første egen butikk, Sjokkpris, i Trondheim. Far og sønn drev sammen og åpnet flere butikker i løpet av 1970-årene.",
       },
       {
-        date: "1979",
-        title: "Første Rema 1000",
+        date: "1977",
+        title: "Studietur til Tyskland",
         description:
-          "Han åpnet første Rema 1000-butikk i 1979, inspirert av tysk franchisehandel, starten på skalering via franchise.",
+          "Reitan besøkte ALDI i Tyskland og ble overbevist om at lavprismodellen kunne oversettes til norske forhold.",
       },
       {
-        date: "1980–2000-tallet",
-        title: "Franchise og vekst",
+        date: "15. feb. 1979",
+        title: "Første Rema-butikk",
         description:
-          "Rema 1000 vokste til tusenvis av butikker i Norden via franchise-modellen, supplert med Narvesen og andre konsepter.",
+          "Rema 600 åpnet på Bromstad i Trondheim med ALDI som forbilde. Navnet ble Rema 1000 da utvalget vokste til tusen varelinjer.",
       },
       {
-        date: "2000–2020-tallet",
-        title: "Familiekontrollert konsern",
+        date: "1980-årene",
+        title: "Franchise skalerer kjeden",
         description:
-          "Reitan-gruppen ble en av Nordens største handelsgrupper, fortsatt familieeid med Odd som sentral skikkelse.",
+          "Franchising ble motoren for veksten. Lokale kjøpmenn drev butikkene, mens Reitan standardiserte konsept, innkjøp og markedsføring.",
       },
     ],
     wealthSources: [
       {
         category: "selskaper",
         description:
-          "Eierskap i Reitan Convenience og tilknyttede selskaper, franchise-system, logistikk og merkevare.",
+          "Grunnlegger og langsiktig eier av Rema 1000-konseptet, som i dag kontrolleres gjennom Reitan-konsernet.",
       },
       {
         category: "royalty",
         description:
-          "Franchise-inntekter fra Rema 1000 og andre konsepter der butikkeiere driver under Reitan-merkevaren.",
+          "Franchise-inntekter fra butikker drevet av selvstendige kjøpmenn under Rema-merkevaren, bygget på volum og effektiv logistikk.",
       },
     ],
     decisiveMove:
-      "Å åpne første Rema 1000 i 1979 med franchise-modell inspirert av tysk handel, skalere lavpris uten å eie og drive hver enkelt butikk.",
+      "Å oversette ALDIs lavprismodell til Norge og åpne første Rema-butikk i 1979, deretter skalere via franchise uten å eie og drive hver enkelt butikk selv.",
     whatCouldGoWrong: [
-      "Dagligvare har tynne marginer, feil i logistikk eller prising kan spise overskuddet i skala.",
-      "Franchise-modellen avhenger av butikkeieres lønnsomhet; dårlige butikker skader merkevaren.",
-      "Konkurranse fra andre lavpriskjeder og netthandel presser priser og krever kontinuerlig effektivisering.",
+      "Dagligvare har tynne marginer. Feil i logistikk, innkjøp eller prising kan spise overskuddet selv med tusenvis av butikker.",
+      "Franchise-modellen avhenger av butikkeieres lønnsomhet. Dårlige butikker skader merkevaren for hele kjeden.",
+      "Lavpris krever disiplin over tiår. Konkurrenter som Coop, NorgesGruppen og netthandel presser prisene kontinuerlig.",
+      "Vekstfasen kan koste privatliv og helse. Reitan har selv beskrevet 1980-årene som ti år der butikker og kontrakter tok alt.",
     ],
     mythVsReality: [
       {
         myth: "Reitan eier og driver alle Rema-butikker.",
         reality:
-          "Franchise-modellen betyr at butikkeiere driver lokalt; Reitan eier konsept, innkjøp og logistikk.",
+          "Franchise-modellen betyr at lokale kjøpmenn driver butikkene. Reitan eier konsept, innkjøp, logistikk og merkevare.",
       },
       {
         myth: "Dagligvareformue kommer fra høy margin.",
         reality:
-          "Marginene er tynne, formuen er bygget på volum, effektivitet og skala over tusenvis av butikker.",
+          "Marginene er tynne. Formuen er bygget på volum, effektiv drift og skala over tusenvis av butikker, ikke høye påslag.",
       },
       {
-        myth: "Odd Reitan startet fra null alene.",
+        myth: "Rema 1000 var et plutselig gjennombrudd.",
         reality:
-          "Foreldrenes butikk fra 1948 var utgangspunktet; Rema 1000 i 1979 var vendepunktet for skalering.",
+          "Reitan testet butikkdrift i årevis før 1979, med Sjokkpris og flere butikker sammen med faren, før lavpriskonseptet slo gjennom.",
       },
     ],
     personalLessons: [
-      "Franchise lar deg skalere dagligvare uten å eie hver butikk, butikkeieren tar driftsrisikoen.",
-      "Lavpris krever volum og effektiv logistikk; små forskjeller i kostnad blir store i skala.",
-      "Kultur og verdier i familieeide selskaper kan være konkurransefortrinn over generasjoner.",
-      "Start smått, tenk skala: én butikk i 1948 ble til et konsern via riktig modell i 1979.",
+      "Se på modeller utenfor Norge. Reitans Tyskland-tur i 1977 ble vendepunktet for Rema 1000.",
+      "Franchise lar deg skalere dagligvare uten å eie hver butikk. Kjøpmannen tar lokal driftsrisiko.",
+      "Lavpris krever kuttisme: enkel butikk, begrenset utvalg og logistikk som tåler tynne marginer.",
+      "Erfaring i familiens butikk er ikke det samme som å starte fra null, men det er heller ikke automatisk suksess.",
     ],
     sources: [
+      {
+        label: "Rema 1000: historien fra 1979",
+        url: "https://www.rema.no/om-oss/historien/",
+        tier: "primary",
+      },
+      {
+        label: "Store norske leksikon: Odd Reitan",
+        url: "https://snl.no/Odd_Reitan",
+        tier: "primary",
+      },
       kapital400Source(),
-      {
-        label: "Brønnøysundregistrene: Reitan Retail AS",
-        url: "https://www.brreg.no/bedrift/organisasjon/914526647/",
-        tier: "primary",
-      },
-      {
-        label: "Reitan Retail: historie",
-        url: "https://reitanretail.com/about-us/our-history/",
-        tier: "primary",
-      },
     ],
-    lastVerified: "2026-08-11",
+    lastVerified: "2026-08-28",
     relatedLinks: [
-      { label: "Reitan-familien", href: "/formuesbyggere/reitan-familien" },
+      {
+        label: "Reitan-familien",
+        href: "/formuesbyggere/reitan-familien",
+        description: "Eierstruktur, sønner og samlet familieformue",
+      },
       { label: "Johan Johannson", href: "/formuesbyggere/johan-johannson" },
       { label: "Kutt faste kostnader", href: "/guider/kutt-faste-kostnader" },
     ],
   }),
   "reitan-familien": buildFormuesbyggerArticle({
     slug: "reitan-familien",
-    seoAngle: "Hvordan bygde Reitan-familien formue?",
+    seoAngle: "Hvordan er Reitan-familiens formue organisert?",
+    seoTitle: "Reitan-familien: Eierskap, sønner og Reitan Retail",
+    metaDescription:
+      "Reitan-familiens formue ligger i Reitan AS, fordelt mellom Odd Reitan og sønnene. Se eierstruktur, Reitan Retail, generasjonsskifte og samlet familieformue.",
+    seoKeywords: [
+      "Reitan-familien formue",
+      "Reitan AS eierskap",
+      "Reitan Retail",
+      "Ole Robert Reitan",
+      "Magnus Reitan",
+      "generasjonsskifte",
+    ],
     shortAnswer:
-      "Reitan-familien bygde formue fra foreldrenes butikk i 1948 via Odd Reitans Rema 1000 i 1979 til et konsern med tusenvis av butikker i Norden. Formuen er kollektivt familieeierskap i Reitan Convenience og tilknyttede selskaper, ikke én persons lønn eller aksjer. Neste generasjon har tatt større operativt ansvar, mens eierskapet forblir samlet i familien.",
+      "Reitan-familiens formue er kollektiv, ikke én persons lønn. Morselskapet Reitan AS eies med omtrent 33,3 prosent hver av Odd Reitan, Ole Robert Reitan og Magnus Reitan gjennom holdingselskapene Odd Reitan Private Holding, ORR Invest og MVK Capital. Odd har kontroll via A-aksjer. Konsernet er delt i tre områder: Reitan Retail (handel, inkludert Rema 1000), Reitan Kapital (investeringer) og Reitan Eiendom. Neste generasjon har tatt operativt ansvar, og Magnus har begynt å overføre verdier til barna Kristoffer og Viktoria.",
     timeline: [
       {
-        date: "1948",
-        title: "Foreldrenes butikk",
+        date: "Nov. 2020",
+        title: "Reitangruppen blir Reitan AS",
         description:
-          "Familien startet med butikkdrift i 1948, grunnlaget for det som ble Reitan-gruppen.",
+          "Konsernet forenklet navn og struktur. Morselskapet Reitan AS ble navnet på familieholdingselskapet.",
       },
       {
-        date: "1979",
-        title: "Første Rema 1000",
+        date: "Jan. 2021",
+        title: "Tre forretningsområder",
         description:
-          "Odd Reitan åpnet første Rema 1000, og franchise-modellen ble motoren for videre vekst.",
+          "Konsernet ble organisert i Reitan Retail, Reitan Kapital og Reitan Eiendom som selvstendige områder under Reitan AS.",
       },
       {
-        date: "1980–2000-tallet",
-        title: "Ekspansjon i Norden",
+        date: "2021",
+        title: "Ole Robert leder Reitan Retail",
         description:
-          "Rema 1000, Narvesen og andre konsepter vokste til en av Nordens største handelsgrupper.",
+          "Ole Robert Reitan ble administrerende direktør i Reitan Retail, som samler handelsvirksomheter som Rema 1000, Narvesen og Uno-X.",
       },
       {
-        date: "2000–2010-tallet",
-        title: "Neste generasjon inn",
+        date: "2022",
+        title: "Magnus overfører til neste generasjon",
         description:
-          "Odd Reitans sønner og andre familiemedlemmer tok større operativt ansvar i konsernet.",
+          "Magnus Reitan overførte store verdier i MVK Capital til barna Kristoffer og Viktoria, men beholdt kontroll via A-aksjer.",
       },
       {
-        date: "2020-tallet",
-        title: "Kollektivt familieeierskap",
+        date: "2025",
+        title: "Kapital 400: ca. 120 mrd.",
         description:
-          "Formuen er samlet i familieeid konsern med operativt ansvar fordelt mellom generasjoner.",
+          "Kapital anslår samlet familieformue til om lag 120 milliarder kroner, fordelt mellom Odd og sønnene via Reitan AS.",
       },
     ],
     wealthSources: [
       {
         category: "selskaper",
         description:
-          "Samlet familieeierskap i Reitan Convenience, Rema 1000-systemet og tilknyttede selskaper.",
+          "Samlet eierskap i Reitan AS, som kontrollerer Reitan Retail, Reitan Kapital og Reitan Eiendom. Odd, Ole Robert og Magnus eier omtrent 33,3 prosent hver.",
       },
       {
         category: "royalty",
         description:
-          "Franchise-inntekter fra tusenvis av butikker drevet av franchisee-er under Reitan-konseptene.",
+          "Inntekter fra franchise-systemet i Reitan Retail, der tusenvis av butikker drives av selvstendige kjøpmenn under familiens konsepter.",
       },
     ],
+    ownershipVsControl:
+      "Reitan AS eies med omtrent lik andel av Odd Reitan Private Holding, ORR Invest (Ole Robert) og MVK Capital (Magnus), men Odd har kontroll via A-aksjer mens sønnene har B-aksjer. Magnus har videre overført mesteparten av MVK Capital til barna Kristoffer og Viktoria, men beholder kontrollstemmen gjennom egne A-aksjer.",
     decisiveMove:
-      "Å holde eierskapet samlet i familien gjennom generasjonsskifte, operativt ansvar fordeles, men konsernet forblir familieeid.",
+      "Å holde eierskapet samlet i Reitan AS gjennom restrukturering i 2020–2021 og gradvis generasjonsskifte, operativt ansvar fordeles mellom sønnene, men konsernet forblir familieeid.",
     whatCouldGoWrong: [
-      "Generasjonsskifte uten tydelige regler kan skape konflikt om eierskap, ledelse og verdier.",
-      "Kollektivt eierskap gjør det vanskelig å lese «hvem eier hva», formueslister er samlet estimat.",
-      "Dagligvaremarginer er tynne; konsernet er avhengig av skala og effektivitet over tid.",
+      "Generasjonsskifte uten tydelige regler kan skape konflikt om eierskap, ledelse og verdier, særlig når kontroll og økonomisk eierskap skilles.",
+      "Kollektivt familieeierskap gjør det vanskelig å lese «hvem eier hva». Kapitals tall på 120 milliarder er et samlet anslag, ikke én persons formue.",
+      "A- og B-aksjer gir kontroll til én part med mindre økonomisk andel. Strukturen kan skape spenning mellom generasjoner.",
+      "Dagligvaremarginer er tynne. Hele familiens formue er avhengig av skala og effektivitet i Reitan Retail over tid.",
     ],
     mythVsReality: [
       {
         myth: "Reitan-familiens formue er Odd Reitans alene.",
         reality:
-          "Kapital-estimatet gjelder samlet familieeierskap inkludert Odd og arvinger, kollektiv, ikke individuell.",
+          "Kapital-estimatet på om lag 120 milliarder gjelder samlet familieeierskap. Odds individuelle anslag er lavere, rundt 77 milliarder.",
       },
       {
         myth: "Generasjonsskifte skjer på én dag.",
         reality:
-          "Reitan har fordelt operativt ansvar gradvis over mange år, en prosess, ikke ett arrangement.",
+          "Ole Robert tok over Reitan Retail i 2021, Magnus leder Reitan Kapital, og overføring til barnebarna startet gradvis i 2022.",
       },
       {
-        myth: "Familieeide selskaper tenker kortsiktig.",
+        myth: "Familieeierskap betyr at alle bestemmer likt.",
         reality:
-          "Franchise og lavpris krever langsiktighet i logistikk, merkevare og butikkeier-relasjoner.",
+          "Odd har kontroll via A-aksjer i Reitan AS. Sønnene har lik økonomisk andel, men ulikt operativt ansvar.",
       },
     ],
     personalLessons: [
-      "Familieformue er ofte kollektiv: flere eier, færre kontrollerer operativt, les eierstrukturen.",
-      "Generasjonsskifte fungerer best som gradvis prosess, ikke plutselig maktovertakelse.",
-      "Kultur og verdier overføres sammen med aksjer, det er en del av konkurransefortrinnet.",
-      "Dagligvare gir forutsigbar etterspørsel, men tynn margin krever skala og disiplin over tiår.",
+      "Familieformue er ofte kollektiv. Les eierstrukturen før du tolker formueslister og rangeringer.",
+      "Kontroll og økonomisk eierskap kan skilles med ulike aksjeklasser, som i Reitan AS og MVK Capital.",
+      "Generasjonsskifte fungerer best som gradvis prosess med tydelige roller, ikke som plutselig maktovertakelse.",
+      "For detaljer om Rema 1000 og lavprismodellen, se profilen om Odd Reitan som grunnlegger.",
     ],
     sources: [
+      {
+        label: "Store norske leksikon: Reitan-konsernet",
+        url: "https://snl.no/Reitan_-_konsern",
+        tier: "primary",
+      },
+      {
+        label: "Brønnøysundregistrene: Reitan AS",
+        url: "https://www.brreg.no/bedrift/organisasjon/912609987/",
+        tier: "primary",
+      },
+      {
+        label: "Reitan Retail: om konsernet",
+        url: "https://reitanretail.com/about-us/",
+        tier: "primary",
+      },
       kapital400Source(),
-      {
-        label: "Brønnøysundregistrene: Reitan Retail AS",
-        url: "https://www.brreg.no/bedrift/organisasjon/914526647/",
-        tier: "primary",
-      },
-      {
-        label: "Reitan Retail: historie",
-        url: "https://reitanretail.com/about-us/our-history/",
-        tier: "primary",
-      },
     ],
-    lastVerified: "2026-08-11",
+    lastVerified: "2026-08-28",
     relatedLinks: [
-      { label: "Odd Reitan", href: "/formuesbyggere/odd-reitan" },
+      {
+        label: "Odd Reitan",
+        href: "/formuesbyggere/odd-reitan",
+        description: "Grunnleggeren, Rema 1000 og lavprismodellen",
+      },
       { label: "Fordelsprogrammer", href: "/fordeler" },
     ],
   }),
