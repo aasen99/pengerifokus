@@ -1,11 +1,13 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import { formatCurrency } from "@/lib/calculators/loan";
 import {
   calculateLaneKapasitet,
+  formatEquityPurchaseFormula,
+  formatIncomeLoanFormula,
   formatLaneKapasitetLimit,
-  formatNetPositionFormula,
   INCOME_DEBT_MULTIPLIER,
 } from "@/lib/calculators/lane-kapasitet";
 import { formatIntegerInput } from "@/lib/format/number";
@@ -51,14 +53,20 @@ export function LaneKapasitetKalkulator() {
   }, [equity, existingDebt, grossAnnualIncome, isPrimaryHome]);
 
   const equityPercentLabel = isPrimaryHome ? "10 %" : "15 %";
+  const equityPurchaseMultiplierLabel = isPrimaryHome
+    ? "10"
+    : result?.equityPurchaseMultiplier.toFixed(1).replace(".", ",") ?? "6,7";
+  const equityLoanMultiplierLabel = isPrimaryHome
+    ? "9"
+    : result?.equityLoanMultiplier.toFixed(1).replace(".", ",") ?? "5,7";
 
   return (
     <div className="grid gap-8 lg:grid-cols-2">
       <section className={calculatorPanelClassName}>
         <h2 className="text-lg font-semibold text-stone-900">Dine tall</h2>
         <p className="mt-1 text-sm text-stone-600">
-          Start med egenkapital og gjeld. Deretter sjekker vi inntektsregelen og
-          egenkapitalkravet for boligkjøp.
+          Banken vurderer egenkapital og inntekt hver for seg. Begge reglene
+          trekker fra gjeld du allerede har.
         </p>
 
         <div className="mt-6 space-y-5">
@@ -85,7 +93,7 @@ export function LaneKapasitetKalkulator() {
           </CalculatorField>
 
           <CalculatorField
-            label="Brutto årsinntekt"
+            label="Brutto årsinntekt (LØNN)"
             hint="Samlet bruttoinntekt i husstanden før skatt."
           >
             <FormattedNumberInput
@@ -113,7 +121,7 @@ export function LaneKapasitetKalkulator() {
                     Egen bolig
                   </span>
                   <span className="mt-0.5 block text-xs text-stone-500">
-                    Minst 10 % egenkapital
+                    EK × 10 − gjeld
                   </span>
                 </span>
               </label>
@@ -144,20 +152,42 @@ export function LaneKapasitetKalkulator() {
           <>
             <div className={calculatorPanelClassName}>
               <h2 className="text-lg font-semibold text-stone-900">
-                EK − GJELD
+                De to reglene
               </h2>
-              <p className="mt-2 font-mono text-sm text-stone-700">
-                {formatNetPositionFormula(
-                  parseIntegerInput(equity) || 0,
-                  parseIntegerInput(existingDebt) || 0,
-                  result.netPosition,
-                )}
-              </p>
-              <p className="mt-3 text-sm text-stone-600">
-                Dette er netto posisjonen før vi ser på inntekt og
-                egenkapitalkrav. Negativt tall betyr at gjelden er høyere enn
-                egenkapitalen du har lagt inn.
-              </p>
+              <dl className="mt-5 space-y-4">
+                <div>
+                  <dt className="text-sm font-medium text-stone-900">
+                    EK × {equityPurchaseMultiplierLabel} − gjeld
+                  </dt>
+                  <dd className="mt-1 font-mono text-sm text-stone-700">
+                    {formatEquityPurchaseFormula(
+                      parseIntegerInput(equity) || 0,
+                      parseIntegerInput(existingDebt) || 0,
+                      result.equityPurchaseMultiplier,
+                      result.maxPurchaseFromEquity,
+                    )}
+                  </dd>
+                  <dd className="mt-1 text-xs text-stone-500">
+                    Maks kjøpesum ut fra egenkapital ({equityPercentLabel}{" "}
+                    krav)
+                  </dd>
+                </div>
+                <div>
+                  <dt className="text-sm font-medium text-stone-900">
+                    Lønn × {INCOME_DEBT_MULTIPLIER} − gjeld
+                  </dt>
+                  <dd className="mt-1 font-mono text-sm text-stone-700">
+                    {formatIncomeLoanFormula(
+                      parseIntegerInput(grossAnnualIncome) || 0,
+                      parseIntegerInput(existingDebt) || 0,
+                      result.maxLoanFromIncome,
+                    )}
+                  </dd>
+                  <dd className="mt-1 text-xs text-stone-500">
+                    Maks nytt lån ut fra inntekt
+                  </dd>
+                </div>
+              </dl>
             </div>
 
             <div className="rounded-xl border border-orange-200 bg-orange-50 p-4">
@@ -188,23 +218,23 @@ export function LaneKapasitetKalkulator() {
 
             <div className={calculatorMutedPanelClassName}>
               <h3 className="text-sm font-semibold text-stone-900">
-                Slik er regnestykket
+                Slik henger det sammen
               </h3>
               <dl className="mt-4 space-y-3 text-sm">
                 <div className="flex items-baseline justify-between gap-4">
                   <dt className="text-stone-600">
-                    Fra inntekt ({INCOME_DEBT_MULTIPLIER} × brutto inntekt − gjeld)
+                    Maks lån fra EK (× {equityLoanMultiplierLabel} − gjeld)
                   </dt>
                   <dd className="font-medium text-stone-900">
-                    {formatCurrency(result.maxLoanFromIncome)}
+                    {formatCurrency(result.maxLoanFromEquity)}
                   </dd>
                 </div>
                 <div className="flex items-baseline justify-between gap-4">
                   <dt className="text-stone-600">
-                    Fra egenkapital ({equityPercentLabel} krav)
+                    Maks lån fra lønn (× {INCOME_DEBT_MULTIPLIER} − gjeld)
                   </dt>
                   <dd className="font-medium text-stone-900">
-                    {formatCurrency(result.maxLoanFromEquity)}
+                    {formatCurrency(result.maxLoanFromIncome)}
                   </dd>
                 </div>
                 {result.debtToIncomeRatioAfter !== null && result.maxLoan > 0 && (
@@ -220,6 +250,20 @@ export function LaneKapasitetKalkulator() {
                 )}
               </dl>
             </div>
+
+            <aside className="rounded-xl border border-stone-200 bg-white p-4">
+              <p className="text-sm leading-relaxed text-stone-700">
+                Nærmer du deg boligkjøp, kan det lønne seg å holde penger på
+                konto som egenkapital fremfor å betale ned billig gjeld. EK × 10
+                gir mer kjøpekraft per krone enn lønn × 5.
+              </p>
+              <Link
+                href="/guider/laneramme-for-boligkjop"
+                className="mt-3 inline-block text-sm font-medium text-orange-600 hover:text-orange-700"
+              >
+                Les mer om låneramme før boligkjøp →
+              </Link>
+            </aside>
           </>
         ) : (
           <div className={`${calculatorPanelClassName} text-sm text-stone-600`}>
@@ -228,10 +272,10 @@ export function LaneKapasitetKalkulator() {
         )}
 
         <p className="text-xs leading-relaxed text-stone-500">
-          Beregningen er veiledende og følger Finanstilsynets hovedregler om{" "}
-          {INCOME_DEBT_MULTIPLIER} ganger bruttoinntekt og minst {equityPercentLabel}{" "}
-          egenkapital. Banken vurderer også betjeningsevne, rentestress og
-          individuelle unntak. BSU og bankgaranti kan gi mer rom i praksis.
+          Beregningen er veiledende og følger Finanstilsynets hovedregler om lønn
+          × {INCOME_DEBT_MULTIPLIER} og minst {equityPercentLabel} egenkapital.
+          Banken vurderer også betjeningsevne, rentestress og individuelle
+          unntak. BSU og bankgaranti kan gi mer rom i praksis.
         </p>
       </section>
     </div>

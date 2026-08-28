@@ -16,6 +16,7 @@ import { sifoBudsjett } from "./sifo-budsjett";
 import { sifoSammenligneHusholdninger } from "./sifo-sammenligne-husholdninger";
 import { stromregningOgNorgespris } from "./stromregning-og-norgespris";
 import { drivstoffpriser } from "./drivstoffpriser";
+import { lanerammeForBoligkjop } from "./laneramme-for-boligkjop";
 
 function withReadTime(
   article: Omit<GuideArticleContent, "readTimeMinutes">,
@@ -47,6 +48,7 @@ const guideArticles: Record<string, GuideArticleContent> = {
   "sifo-sammenligne-husholdninger": withReadTime(sifoSammenligneHusholdninger),
   "stromregning-og-norgespris": withReadTime(stromregningOgNorgespris),
   drivstoffpriser: withReadTime(drivstoffpriser),
+  "laneramme-for-boligkjop": withReadTime(lanerammeForBoligkjop),
 };
 
 export function getGuideArticle(slug: string): GuideArticleContent | undefined {

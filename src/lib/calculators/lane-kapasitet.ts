@@ -23,14 +23,14 @@ export interface LaneKapasitetInput {
 }
 
 export interface LaneKapasitetResult {
-  netPosition: number;
+  equityPurchaseMultiplier: number;
+  equityLoanMultiplier: number;
   equityRequirementPercent: number;
   maxTotalDebtFromIncome: number;
-  remainingDebtRoomFromIncome: number;
+  maxLoanFromIncome: number;
+  maxPurchaseFromIncome: number;
   maxPurchaseFromEquity: number;
   maxLoanFromEquity: number;
-  maxPurchaseFromIncome: number;
-  maxLoanFromIncome: number;
   maxPurchase: number;
   maxLoan: number;
   limitingFactor: LaneKapasitetLimitingFactor;
@@ -47,8 +47,44 @@ export function getEquityRequirementPercent(isPrimaryHome: boolean): number {
     : SECONDARY_HOME_EQUITY_REQUIREMENT;
 }
 
-export function calculateNetPosition(equity: number, existingDebt: number): number {
-  return equity - existingDebt;
+/** EK × 10 ved 10 % egenkapital, tilsvarende for sekundærbolig. */
+export function getEquityPurchaseMultiplier(isPrimaryHome: boolean): number {
+  return 1 / getEquityRequirementPercent(isPrimaryHome);
+}
+
+/** EK × 9 ved 10 % egenkapital: maks lån hvis egenkapitalen er det som begrenser. */
+export function getEquityLoanMultiplier(isPrimaryHome: boolean): number {
+  const requirement = getEquityRequirementPercent(isPrimaryHome);
+  return (1 - requirement) / requirement;
+}
+
+export function calculateMaxPurchaseFromEquity(
+  equity: number,
+  existingDebt: number,
+  isPrimaryHome: boolean,
+): number {
+  if (equity <= 0) return 0;
+  return roundKr(
+    equity * getEquityPurchaseMultiplier(isPrimaryHome) - existingDebt,
+  );
+}
+
+export function calculateMaxLoanFromEquity(
+  equity: number,
+  existingDebt: number,
+  isPrimaryHome: boolean,
+): number {
+  if (equity <= 0) return 0;
+  return roundKr(equity * getEquityLoanMultiplier(isPrimaryHome) - existingDebt);
+}
+
+export function calculateMaxLoanFromIncome(
+  grossAnnualIncome: number,
+  existingDebt: number,
+): number {
+  return roundKr(
+    grossAnnualIncome * INCOME_DEBT_MULTIPLIER - existingDebt,
+  );
 }
 
 export function calculateLaneKapasitet(
@@ -67,21 +103,28 @@ export function calculateLaneKapasitet(
   }
 
   const equityRequirementPercent = getEquityRequirementPercent(input.isPrimaryHome);
-  const netPosition = calculateNetPosition(equity, existingDebt);
+  const equityPurchaseMultiplier = getEquityPurchaseMultiplier(input.isPrimaryHome);
+  const equityLoanMultiplier = getEquityLoanMultiplier(input.isPrimaryHome);
 
   const maxTotalDebtFromIncome = roundKr(
     grossAnnualIncome * INCOME_DEBT_MULTIPLIER,
   );
-  const remainingDebtRoomFromIncome = roundKr(
-    maxTotalDebtFromIncome - existingDebt,
+  const maxLoanFromIncome = calculateMaxLoanFromIncome(
+    grossAnnualIncome,
+    existingDebt,
   );
-
-  const maxPurchaseFromEquity =
-    equity > 0 ? roundKr(equity / equityRequirementPercent) : 0;
-  const maxLoanFromEquity = roundKr(maxPurchaseFromEquity - equity);
-
-  const maxLoanFromIncome = remainingDebtRoomFromIncome;
   const maxPurchaseFromIncome = roundKr(maxLoanFromIncome + equity);
+
+  const maxPurchaseFromEquity = calculateMaxPurchaseFromEquity(
+    equity,
+    existingDebt,
+    input.isPrimaryHome,
+  );
+  const maxLoanFromEquity = calculateMaxLoanFromEquity(
+    equity,
+    existingDebt,
+    input.isPrimaryHome,
+  );
 
   let maxLoan = 0;
   let maxPurchase = 0;
@@ -89,15 +132,13 @@ export function calculateLaneKapasitet(
 
   if (grossAnnualIncome <= 0) {
     limitingFactor = "inntekt";
-  } else if (remainingDebtRoomFromIncome <= 0) {
+  } else if (maxLoanFromIncome <= 0) {
     limitingFactor = "gjeld";
   } else if (equity <= 0) {
-    maxLoan = 0;
-    maxPurchase = 0;
     limitingFactor = "egenkapital";
   } else {
     maxLoan = Math.min(maxLoanFromIncome, maxLoanFromEquity);
-    maxPurchase = roundKr(maxLoan + equity);
+    maxPurchase = Math.min(maxPurchaseFromEquity, maxPurchaseFromIncome);
 
     if (maxLoanFromEquity < maxLoanFromIncome) {
       limitingFactor = "egenkapital";
@@ -114,14 +155,14 @@ export function calculateLaneKapasitet(
       : null;
 
   return {
-    netPosition,
+    equityPurchaseMultiplier,
+    equityLoanMultiplier,
     equityRequirementPercent,
     maxTotalDebtFromIncome,
-    remainingDebtRoomFromIncome,
+    maxLoanFromIncome,
+    maxPurchaseFromIncome,
     maxPurchaseFromEquity,
     maxLoanFromEquity,
-    maxPurchaseFromIncome,
-    maxLoanFromIncome,
     maxPurchase,
     maxLoan,
     limitingFactor,
@@ -134,9 +175,9 @@ export function formatLaneKapasitetLimit(
 ): string {
   switch (factor) {
     case "inntekt":
-      return "inntektsregelen (5 × brutto inntekt)";
+      return "inntektsregelen (lønn × 5 − gjeld)";
     case "egenkapital":
-      return "egenkapitalkravet";
+      return "egenkapitalkravet (EK × 10 − gjeld)";
     case "gjeld":
       return "eksisterende gjeld";
     default:
@@ -144,10 +185,27 @@ export function formatLaneKapasitetLimit(
   }
 }
 
-export function formatNetPositionFormula(
+export function formatEquityPurchaseFormula(
   equity: number,
   existingDebt: number,
-  netPosition: number,
+  multiplier: number,
+  result: number,
 ): string {
-  return `${formatCurrency(equity)} − ${formatCurrency(existingDebt)} = ${formatCurrency(netPosition)}`;
+  return `${formatCurrency(equity)} × ${formatMultiplier(multiplier)} − ${formatCurrency(existingDebt)} = ${formatCurrency(result)}`;
+}
+
+export function formatIncomeLoanFormula(
+  grossAnnualIncome: number,
+  existingDebt: number,
+  result: number,
+): string {
+  return `${formatCurrency(grossAnnualIncome)} × ${INCOME_DEBT_MULTIPLIER} − ${formatCurrency(existingDebt)} = ${formatCurrency(result)}`;
+}
+
+function formatMultiplier(value: number): string {
+  if (Number.isInteger(value)) {
+    return String(value);
+  }
+
+  return value.toFixed(1).replace(".", ",");
 }

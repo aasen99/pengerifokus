@@ -215,6 +215,26 @@ export const guider: Guide[] = [
     updatedAt: "2026-08-25",
   },
   {
+    id: "guide-17",
+    slug: "laneramme-for-boligkjop",
+    status: "published",
+    featured: true,
+    title: "EK × 10 og lønn × 5: slik regner banken låneramme",
+    description:
+      "Hvorfor EK − gjeld er misvisende, og hvorfor det kan lønne seg å holde egenkapital på konto før boligkjøp.",
+    category: "Bolig",
+    tags: [
+      "boligkjøp",
+      "boliglån",
+      "egenkapital",
+      "gjeldsgrad",
+      "låneramme",
+      "hvor mye kan jeg låne",
+    ],
+    createdAt: "2026-08-28",
+    updatedAt: "2026-08-28",
+  },
+  {
     id: "guide-12",
     slug: "prosentregning",
     status: "published",
