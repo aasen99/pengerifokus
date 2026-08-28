@@ -1,5 +1,9 @@
 import type { Formuesbygger } from "@/types/formuesbygger";
-import { forbesEstimate, kapitalEstimate } from "@/lib/wealth-estimate";
+import {
+  documentedNokMillEstimate,
+  forbesEstimate,
+  kapitalEstimate,
+} from "@/lib/wealth-estimate";
 import { formuesbyggerLifecycle } from "@/data/formuesbygger-lifecycle";
 
 /**
@@ -49,9 +53,10 @@ const baseFormuesbyggere: Formuesbygger[] = [
     buildType: "grunder",
     tagline: "Bygde Rimi, og ble senere investor med bl.a. Orkla-eierskap via Canica.",
     wealthEstimate: kapitalEstimate("33,1"),
-    wealthContext: "Canica, Orkla-eierskap og bred investeringsportefølje.",
+    wealthContext:
+      "Canica, Orkla-eierskap og bred investeringsportefølje. Kapital 2025. Døde 4. mai 2026; se også Caroline Hagen Kjos.",
     createdAt: "2026-06-11",
-    updatedAt: "2026-08-11",
+    updatedAt: "2026-08-28",
   },
   {
     id: "fb-n4",
@@ -539,6 +544,68 @@ const baseFormuesbyggere: Formuesbygger[] = [
     updatedAt: "2026-08-11",
   },
   {
+    id: "fb-n22",
+    slug: "caroline-hagen-kjos",
+    status: "published",
+    name: "Caroline Hagen Kjos",
+    region: "norsk",
+    industry: "handel",
+    buildType: "arv-videreutvikling",
+    tagline:
+      "Arving med majoritet i Canica-sfæren. Kapital tilordnet faren; Forbes anslår henne separat.",
+    wealthEstimate: forbesEstimate("2,6", "2026"),
+    wealthContext:
+      "Forbes-anslag knyttet til Canica/Orkla. Kapital 2025 tilordnet 33,1 mrd. til Stein Erik Hagen via samme sfære. Tallene må ikke summeres.",
+    searchTerms: ["Canica", "Orkla", "Tvist 1", "Hagen Kjos"],
+    createdAt: "2026-08-28",
+    updatedAt: "2026-08-28",
+  },
+  {
+    id: "fb-n23",
+    slug: "kygo",
+    status: "published",
+    name: "Kygo",
+    region: "norsk",
+    industry: "musikk",
+    buildType: "merkevare",
+    tagline:
+      "DJ og produsent med dokumentert egenkapital i Kygo AS, og separat selskapsverdi i Palm Tree Crew.",
+    wealthEstimate: documentedNokMillEstimate(
+      "154",
+      "2025",
+      "Kygo AS-regnskap (E24)",
+      "https://e24.no/naeringsliv/i/vr924p/kygo-tok-ut-29-millioner-i-utbytte",
+    ),
+    wealthContext:
+      "Bokført egenkapital i Kygo AS (153,8 mill.), ikke samlet privat formue. Palm Tree Crew ble verdsatt til 215 mill. USD i 2025; det er selskapsverdi, ikke hans eierandel.",
+    searchTerms: ["Kyrre Gørvell-Dahll", "Kyrre", "Palm Tree Crew", "Kygo Jo"],
+    createdAt: "2026-08-28",
+    updatedAt: "2026-08-28",
+  },
+  {
+    id: "fb-n24",
+    slug: "magnus-carlsen",
+    status: "published",
+    featured: true,
+    name: "Magnus Carlsen",
+    region: "norsk",
+    industry: "sport",
+    buildType: "idrett-underholdning",
+    tagline:
+      "Sjakkspiller med dokumentert egenkapital i Magnuschess AS, ikke et offentlig milliardanslag.",
+    wealthEstimate: documentedNokMillEstimate(
+      "128",
+      "2025",
+      "Magnuschess AS-regnskap (TV2/E24)",
+      "https://e24.no/naeringsliv/i/oE1kX7/sjakkongen-doblet-resultatet",
+    ),
+    wealthContext:
+      "Bokført egenkapital i Magnuschess AS (128,2 mill.). Carlsen eier 87,5 %. Play Magnus ble solgt til Chess.com i 2022 og inngår ikke som uavhengig selskapsverdi.",
+    searchTerms: ["Magnuschess", "Play Magnus", "sjakk"],
+    createdAt: "2026-08-28",
+    updatedAt: "2026-08-28",
+  },
+  {
     id: "fb-i16",
     slug: "steve-jobs",
     status: "published",
@@ -587,6 +654,40 @@ const baseFormuesbyggere: Formuesbygger[] = [
       "Forbes-estimat basert i stor grad på private selskapsverdier i Fenty Beauty og Savage X Fenty.",
     createdAt: "2026-08-11",
     updatedAt: "2026-08-11",
+  },
+  {
+    id: "fb-i19",
+    slug: "lionel-messi",
+    status: "published",
+    featured: true,
+    name: "Lionel Messi",
+    region: "internasjonal",
+    industry: "sport",
+    buildType: "idrett-underholdning",
+    tagline:
+      "Karriereinntekt, formue og en opsjon på Inter Miami-eierskap er tre ulike størrelser.",
+    wealthEstimate: forbesEstimate("1,1", "2026"),
+    wealthContext:
+      "Forbes-anslag juni 2026. Karriereinntekter ca. 1,8 mrd. USD før skatt og agent. Inter Miami-opsjon er ikke realisert eierskap.",
+    createdAt: "2026-08-28",
+    updatedAt: "2026-08-28",
+  },
+  {
+    id: "fb-i20",
+    slug: "lebron-james",
+    status: "published",
+    featured: true,
+    name: "LeBron James",
+    region: "internasjonal",
+    industry: "sport",
+    buildType: "idrett-underholdning",
+    tagline:
+      "Første aktive NBA-milliardær. Mer enn 1 mrd. USD utenfor banen, og eierskap i merkevarer, ikke bare reklame.",
+    wealthEstimate: forbesEstimate("1,4", "2026"),
+    wealthContext:
+      "Forbes-anslag. Lønn før skatt, inntekter utenfor banen og nettoformue er tre ulike tall. Eierskap i merkevarer (bl.a. Beats) er nøkkelen.",
+    createdAt: "2026-08-28",
+    updatedAt: "2026-08-28",
   },
 ];
 

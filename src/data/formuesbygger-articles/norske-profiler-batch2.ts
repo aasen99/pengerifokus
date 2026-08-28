@@ -560,6 +560,7 @@ export const norskeProfilerBatch2 = {
     ],
     lastVerified: "2026-08-11",
     relatedLinks: [
+      { label: "Caroline Hagen Kjos", href: "/formuesbyggere/caroline-hagen-kjos" },
       { label: "Johan H. Andresen", href: "/formuesbyggere/johan-h-andresen" },
       { label: "Gustav Magnar Witzøe", href: "/formuesbyggere/gustav-magnar-witzoe" },
     ],

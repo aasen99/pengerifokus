@@ -1459,9 +1459,10 @@ export const internasjonaleFormuesbyggerArtikler = {
     ],
     lastVerified: "2026-08-11",
     relatedLinks: [
+      { label: "Lionel Messi", href: "/formuesbyggere/lionel-messi" },
       { label: "Erling Braut Haaland", href: "/formuesbyggere/erling-haaland" },
       { label: "Michael Jordan", href: "/formuesbyggere/michael-jordan" },
-      { label: "Rihanna", href: "/formuesbyggere/rihanna" },
+      { label: "LeBron James", href: "/formuesbyggere/lebron-james" },
       { label: "Nettoformue i ordboken", href: "/ordbok/nettoformue" },
     ],
   }),
@@ -1565,6 +1566,7 @@ export const internasjonaleFormuesbyggerArtikler = {
     ],
     lastVerified: "2026-08-11",
     relatedLinks: [
+      { label: "LeBron James", href: "/formuesbyggere/lebron-james" },
       { label: "Cristiano Ronaldo", href: "/formuesbyggere/cristiano-ronaldo" },
       { label: "Erling Braut Haaland", href: "/formuesbyggere/erling-haaland" },
       { label: "Egenkapital i ordboken", href: "/ordbok/egenkapital" },
@@ -1994,6 +1996,255 @@ export const internasjonaleFormuesbyggerArtikler = {
       { label: "Taylor Swift", href: "/formuesbyggere/taylor-swift" },
       { label: "Jay-Z", href: "/formuesbyggere/jay-z" },
       { label: "Oprah Winfrey", href: "/formuesbyggere/oprah-winfrey" },
+      { label: "Kygo", href: "/formuesbyggere/kygo" },
+      { label: "Egenkapital i ordboken", href: "/ordbok/egenkapital" },
+    ],
+  }),
+
+  "lionel-messi": buildFormuesbyggerArticle({
+    slug: "lionel-messi",
+    seoAngle:
+      "Lionel Messi formue: Karriereinntekt, milliardformue og Inter Miami-opsjonen",
+    metaDescription:
+      "Forbes anslår Lionel Messis formue til 1,1 mrd. USD. Karriereinntekter ca. 1,8 mrd. før skatt. Inter Miami-eierskap er en opsjon, ikke realisert aksjepost.",
+    seoKeywords: [
+      "Lionel Messi formue",
+      "Messi milliardær",
+      "Messi vs Ronaldo formue",
+      "Messi Inter Miami eierandel",
+      "Messi Adidas",
+      "hvor mye tjener Messi",
+      "Messi alder",
+    ],
+    shortAnswer:
+      "Lionel Messi ble milliardær først og fremst ved å akkumulere lønn, bonuser og sponsorater over to tiår, ikke ved å eie en klubb i dag. Forbes anslo formuen til 1,1 milliarder dollar i juni 2026, og karriereinntektene til om lag 1,8 milliarder dollar før skatt og agent. Inntekter er ikke formue: skatt, forbruk og agent tar en stor del. Han har en livstidsavtale med Adidas. Forbes peker også på en opsjon på eierandel i Inter Miami etter at han legger opp, det er en rett, ikke en bokført aksjepost i dag. Han er én av fire aktive idrettsutøvere Forbes regnet som milliardærer, sammen med Cristiano Ronaldo, LeBron James og Tiger Woods.",
+    timeline: [
+      {
+        date: "24. juni 1987",
+        title: "Født i Rosario, Argentina",
+        description:
+          "Karrieren ble bygd i FC Barcelonas akademi. Klubbhistorikken er inntektsgrunnlaget, ikke formuesinstrumentet alene.",
+      },
+      {
+        date: "2000-tallet–2021",
+        title: "Barcelona som inntektsmotor",
+        description:
+          "Lønn, bonuser og merkevare ble bygd i La Liga. En stor del av karriereinntektene kom her, før skatt i Spania.",
+      },
+      {
+        date: "2021–2023",
+        title: "PSG, deretter MLS",
+        description:
+          "Kortere Paris-opphold, deretter Inter Miami. Forbes: han takket nei til høyere lønn i Saudi-Arabia og tok en lavere MLS-lønn mot kommersiell plattform i USA.",
+      },
+      {
+        date: "2023–2026",
+        title: "Inter Miami og kommersiell skala",
+        description:
+          "Klubbens første MLS-tittel i 2025 økte den kommersielle verdien av flyttet. Forbes anslo 70 mill. USD på banen og 70 mill. utenfor i sesongen inn mot 2026.",
+      },
+      {
+        date: "juni 2026",
+        title: "Forbes: 1,1 mrd. USD i formue",
+        description:
+          "Hovedsakelig oppsparte midler og merkevare, pluss opsjon på Inter Miami-eierskap etter karriereslutt. Ikke det samme som 1,8 mrd. i karriereinntekt.",
+      },
+    ],
+    wealthSources: [
+      {
+        category: "lonn",
+        description:
+          "Klubblønn og bonuser gjennom Barcelona, PSG og Inter Miami, den største dokumenterte inntektsstrømmen over tid.",
+      },
+      {
+        category: "royalty",
+        description:
+          "Livstidsavtale med Adidas og øvrige sponsorater. Forbes skilte 70 mill. USD utenfor banen i den siste sesongen som ble målt.",
+      },
+      {
+        category: "selskaper",
+        description:
+          "Opsjon på eierandel i Inter Miami etter karriereslutt, ifølge Forbes. Opsjon er ikke det samme som dagens aksjepost eller klubbens hele verdi.",
+      },
+    ],
+    ownershipVsControl:
+      "Messi er ansatt og ansikt utad i Inter Miami, ikke dokumentert som kontrollerende eier i dag. Forbes beskriver en opsjon som kan utløses etter at han legger opp. David Beckham og øvrige eiere kontrollerer klubben. En opsjon kan bli verdifull eller verdiløs avhengig av klubbverdi, utvanning og om den faktisk utøves.",
+    decisiveMove:
+      "Å velge MLS og en mulig eieropsjon i Inter Miami fremfor den høyeste tilgjengelige klubblønnen, slik at en del av verdien kan sitte i klubben etter karrieren, ikke bare i årets lønnsslipp.",
+    whatCouldGoWrong: [
+      "Karriereinntekt før skatt er et markedsføringstall, ikke nettoformue.",
+      "En eieropsjon som aldri utøves, eller utøves på dårlige vilkår, gir null i eierskap.",
+      "Konsentrasjon i personlig merkevare og én klubb gjør inntektene sårbare for skade og omdømme.",
+      "Valuta, skatt i flere land og agenthonorar gjør at 1,8 mrd. aldri blir 1,8 mrd. på konto.",
+    ],
+    mythVsReality: [
+      {
+        myth: "Messi er rikere enn Ronaldo fordi han er den bedre spilleren.",
+        reality:
+          "Forbes 2026: Messi ca. 1,1 mrd. USD, Ronaldo ca. 1,2 mrd. USD. Rangering på banen og formuesanslag er ulike lister.",
+      },
+      {
+        myth: "Han eier Inter Miami.",
+        reality:
+          "Forbes omtaler en opsjon etter karriereslutt, ikke en kontrollpost i dag.",
+      },
+      {
+        myth: "1,8 milliarder dollar i karriereinntekt er det han har i formue.",
+        reality:
+          "Formuen er anslått til 1,1 milliarder. Differansen er skatt, forbruk, agent og timing.",
+      },
+    ],
+    personalLessons: [
+      "Lønn over mange år kan bli formue hvis den spares. De fleste idrettsinntekter blir brukt opp.",
+      "Høyeste årsinntekt er ikke alltid beste formuesgrep; eierskap etter karrieren kan veie tyngre.",
+      "Sponsorlivstid er merkevare, men royalty uten eierskap slutter når merkevaren slutter å selge.",
+      "Sammenlign alltid formue med formue, og inntekt med inntekt, ikke på tvers.",
+    ],
+    sources: [
+      {
+        label: "Forbes: How Lionel Messi Became A Billionaire (juni 2026)",
+        url: "https://www.forbes.com/sites/hanktucker/2026/06/05/how-lionel-messi-became-a-billionaire/",
+        tier: "tertiary",
+      },
+      {
+        label: "Forbes: Lionel Messi-profil",
+        url: "https://www.forbes.com/profile/lionel-messi/",
+        tier: "tertiary",
+      },
+      forbesBillionairesSource(),
+      {
+        label: "Inter Miami: offisiell klubbside",
+        url: "https://www.intermiamicf.com/",
+        tier: "primary",
+      },
+    ],
+    lastVerified: "2026-08-28",
+    relatedLinks: [
+      { label: "Cristiano Ronaldo", href: "/formuesbyggere/cristiano-ronaldo" },
+      { label: "Erling Braut Haaland", href: "/formuesbyggere/erling-haaland" },
+      { label: "LeBron James", href: "/formuesbyggere/lebron-james" },
+      { label: "Nettoformue i ordboken", href: "/ordbok/nettoformue" },
+    ],
+  }),
+
+  "lebron-james": buildFormuesbyggerArticle({
+    slug: "lebron-james",
+    seoAngle:
+      "LeBron James formue: Første aktive NBA-milliardær, eierskap fremfor reklame",
+    metaDescription:
+      "Forbes anslår LeBron James til 1,4 mrd. USD. Over 1 mrd. utenfor banen. Beats-eierskap og SpringHill viser forskjellen på honorar og egenkapital.",
+    seoKeywords: [
+      "LeBron James formue",
+      "LeBron milliardær",
+      "LeBron Nike",
+      "LeBron Beats eierandel",
+      "SpringHill Company verdi",
+      "LeBron Fenway Sports Group",
+      "LeBron alder",
+    ],
+    shortAnswer:
+      "LeBron James er ifølge Forbes den første aktive NBA-spilleren som ble milliardær. Formuen ble anslått til 1,4 milliarder dollar (sist oppdatert 22. mai 2026). Forbes anslår over 500 millioner dollar i lønn før skatt fra Cleveland, Miami og Los Angeles, og mer enn 1 milliard dollar før skatt utenfor banen. Nøkkelen er eierskap, ikke bare reklame: han tok eierandeler i merkevarer han frontet, blant annet Beats by Dre. I 2021 solgte han en minoritetspost i produksjonsselskapet SpringHill Company til en verdsettelse på 725 millioner dollar. Det er selskapsverdi, ikke kontanter til ham alene. Han eier også en andel i Fenway Sports Group.",
+    timeline: [
+      {
+        date: "30. des. 1984",
+        title: "Født i Akron, Ohio",
+        description:
+          "Draftet av Cleveland Cavaliers i 2003. Forbes beskriver en oppvekst med ustabil bosituasjon før NBA-kontrakten.",
+      },
+      {
+        date: "2003–",
+        title: "NBA-lønn som grunnkapital",
+        description:
+          "Cavaliers, Miami Heat og Los Angeles Lakers. Forbes: over 500 mill. USD i lønn før skatt, startkapital, ikke formuestaket.",
+      },
+      {
+        date: "2010-tallet",
+        title: "Eierskap i Beats og andre merkevarer",
+        description:
+          "Forbes: nøkkelen til milliardærstatus var å ta egenkapital i merkevarer han frontet, ikke bare honorar, med Beats by Dre som eksempel.",
+      },
+      {
+        date: "2021",
+        title: "SpringHill verdsatt til 725 mill. USD",
+        description:
+          "Forbes: minoritetspost solgt til investorer til 725 mill. USD i selskapsverdi. Salgssummen til James personlig er ikke offentlig som et enkeltbeløp.",
+      },
+      {
+        date: "mai 2026",
+        title: "Forbes: 1,4 mrd. USD",
+        description:
+          "Første aktive NBA-milliardær. Senere i 2026 signerte han med Philadelphia 76ers; bytte av klubb endrer lønn, ikke automatisk formuesanslaget fra mai.",
+      },
+    ],
+    wealthSources: [
+      {
+        category: "lonn",
+        description:
+          "NBA-kontrakter over to tiår, anslått til over 500 mill. USD før skatt. Nødvendig, men ikke tilstrekkelig for milliardformuen.",
+      },
+      {
+        category: "selskaper",
+        description:
+          "Eierskap i merkevarer (Beats), SpringHill Company og andel i Fenway Sports Group (baseball, fotball og hockey).",
+      },
+      {
+        category: "royalty",
+        description:
+          "Nike og øvrige sponsorater. En del av de mer enn 1 mrd. USD Forbes anslår utenfor banen før skatt.",
+      },
+    ],
+    ownershipVsControl:
+      "Fenway Sports Group-andelen gir medeierskap i flere klubber, ikke kontroll over NBA. James har sagt offentlig at han ønsker å eie et NBA-lag en dag; det er ambisjon, ikke en gjennomført transaksjon. SpringHill-verdsettelsen på 725 millioner dollar gjelder selskapet, og han solgte en minoritet. Nike-avtalen er i hovedsak inntekt, Beats var eierskap som kunne realiseres ved salg.",
+    decisiveMove:
+      "Å ta eierandeler i merkevarer han allerede frontet, særlig Beats, slik at en exit hos eierne ble egenkapitalgevinst, ikke bare et avsluttet reklamehonorar.",
+    whatCouldGoWrong: [
+      "Inntekter før skatt på 1 milliard utenfor banen er ikke 1 milliard i formue.",
+      "Private selskapsverdier (SpringHill) kan falle mellom runder.",
+      "Minoritetsandeler i sportsfranchise er illikvide og avhengige av ligaens regler.",
+      "Personlig merkevare kan både løfte og svekke flere selskaper samtidig.",
+    ],
+    mythVsReality: [
+      {
+        myth: "NBA-lønnen alene gjorde ham til milliardær.",
+        reality:
+          "Forbes peker på inntekter utenfor banen og eierskap i merkevarer som det som løftet ham over 1 milliard i formue.",
+      },
+      {
+        myth: "SpringHill er verdt 725 millioner dollar til James personlig.",
+        reality:
+          "725 millioner var selskapsverdien da en minoritetspost ble solgt i 2021.",
+      },
+      {
+        myth: "Han eier et NBA-lag.",
+        reality:
+          "Han eier andeler via Fenway Sports Group i andre idretter og har uttrykt ønske om NBA-eierskap.",
+      },
+    ],
+    personalLessons: [
+      "Reklamehonorar gir inntekt. Eierandel gir andel av selskapsverdien, og nedsiderisiko.",
+      "Høy lønn over 20 år er startkapital. Allokeringen avgjør om den blir formue.",
+      "Å eie en bit av plattformen du allerede gjør verdifull, er Jordan-leksen i en ny utgave.",
+      "Selskapsverdi ved en kapitalrunde er ikke det samme som penger på konto.",
+    ],
+    sources: [
+      {
+        label: "Forbes: LeBron James-profil",
+        url: "https://www.forbes.com/profile/lebron-james/",
+        tier: "tertiary",
+      },
+      forbesBillionairesSource(),
+      {
+        label: "NBA: spillerinformasjon",
+        url: "https://www.nba.com/player/2544/lebron-james",
+        tier: "primary",
+      },
+    ],
+    lastVerified: "2026-08-28",
+    relatedLinks: [
+      { label: "Michael Jordan", href: "/formuesbyggere/michael-jordan" },
+      { label: "Cristiano Ronaldo", href: "/formuesbyggere/cristiano-ronaldo" },
+      { label: "Lionel Messi", href: "/formuesbyggere/lionel-messi" },
+      { label: "Erling Braut Haaland", href: "/formuesbyggere/erling-haaland" },
       { label: "Egenkapital i ordboken", href: "/ordbok/egenkapital" },
     ],
   }),

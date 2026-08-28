@@ -36,6 +36,23 @@ export function forbesEstimate(amount: string, asOf = "2025"): WealthEstimate {
   };
 }
 
+/** Dokumentert bokført egenkapital i et norsk selskap, ikke et Kapital-anslag. */
+export function documentedNokMillEstimate(
+  amount: string,
+  asOf: string,
+  source: string,
+  sourceUrl: string,
+): WealthEstimate {
+  return {
+    amount,
+    unit: "mill",
+    currency: "NOK",
+    asOf,
+    source,
+    sourceUrl,
+  };
+}
+
 /** Trekker ut høyeste tall fra amount, f.eks. «12–15» → 15 */
 export function parseWealthAmount(amount: string): number {
   const matches = amount.match(/\d+[,.]?\d*/g);

@@ -5,7 +5,7 @@ export const formuesbyggerLifecycle: Record<
 > = {
   "kjell-inge-rokke": { birthDate: "1958-07-13" },
   "john-fredriksen": { birthDate: "1944-05-10" },
-  "stein-erik-hagen": { birthDate: "1956-05-14" },
+  "stein-erik-hagen": { birthDate: "1956-05-14", deathDate: "2026-05-04" },
   "petter-stordalen": { birthDate: "1962-11-29" },
   "olav-thon": { birthDate: "1923-06-29", deathDate: "2024-11-17" },
   "johan-h-andresen": { birthDate: "1961-06-13" },
@@ -21,6 +21,8 @@ export const formuesbyggerLifecycle: Record<
   "erling-haaland": { birthDate: "2000-07-21" },
   "oystein-stray-spetalen": { birthDate: "1962-06-17" },
   "johan-johannson": { birthDate: "1967-01-25" },
+  "kygo": { birthDate: "1991-09-11" },
+  "magnus-carlsen": { birthDate: "1990-11-30" },
   "warren-buffett": { birthDate: "1930-08-30" },
   "steve-jobs": { birthDate: "1955-02-24", deathDate: "2011-10-05" },
   "george-lucas": { birthDate: "1944-05-14" },
@@ -39,4 +41,6 @@ export const formuesbyggerLifecycle: Record<
   "taylor-swift": { birthDate: "1989-12-13" },
   "cristiano-ronaldo": { birthDate: "1985-02-05" },
   "michael-jordan": { birthDate: "1963-02-17" },
+  "lionel-messi": { birthDate: "1987-06-24" },
+  "lebron-james": { birthDate: "1984-12-30" },
 };

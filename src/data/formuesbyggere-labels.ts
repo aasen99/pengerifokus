@@ -12,7 +12,7 @@ export const FORMUE_DISCLAIMER =
   "Formueanslagene er omtrentlige markedsverdier, ikke skattemessig ligningsformue. Norske profiler følger i hovedsak Kapital 400 (publiseres årlig). Internasjonale profiler følger Forbes Billionaires List. Tallene svinger med aksjekurser og eiendomspriser, og skal ikke behandles som fasit.";
 
 export const FORMUE_ESTIMATE_SOURCE =
-  "Norske profiler: Kapital 400. Internasjonale: Forbes Billionaires List og tilsvarende medieestimater.";
+  "Norske profiler: Kapital 400, eller dokumentert selskapsegenkapital når et Kapital-anslag mangler. Internasjonale: Forbes Billionaires List og tilsvarende medieestimater.";
 
 export const KAPITAL_400_SOURCE = "Kapital 400";
 export const KAPITAL_400_URL =

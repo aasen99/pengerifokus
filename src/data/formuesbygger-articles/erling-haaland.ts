@@ -483,9 +483,10 @@ Manchester City har ikke offentliggjort lønnen. Tallene bygger derfor på estim
   lastVerified: "2026-08-27",
   relatedLinks: [
     haalandKygoJoRelatedLink,
+    { label: "Kygo", href: "/formuesbyggere/kygo" },
+    { label: "Lionel Messi", href: "/formuesbyggere/lionel-messi" },
     { label: "Cristiano Ronaldo", href: "/formuesbyggere/cristiano-ronaldo" },
     { label: "Michael Jordan", href: "/formuesbyggere/michael-jordan" },
     { label: "Nettoformue i ordboken", href: "/ordbok/nettoformue" },
-    { label: "Kom i gang med fond", href: "/guider/kom-i-gang-med-fond" },
   ],
 });

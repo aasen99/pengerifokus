@@ -235,10 +235,10 @@ export const norskeFormuesbyggerArtikler = {
           "Canica bygde en bred portefølje med Orkla som hovedpost og andre industrielle og finansielle eierskap.",
       },
       {
-        date: "2020-tallet",
-        title: "Langsiktig investor",
+        date: "2020–2026",
+        title: "Langsiktig investor frem til 2026",
         description:
-          "Hagen er en av Norges mest profilerte private investorer, med fokus på langsiktige eierskap og samfunnsengasjement.",
+          "Hagen var en av Norges mest profilerte private investorer, med fokus på langsiktige eierskap. Han døde 4. mai 2026. Datteren Caroline Hagen Kjos tok deretter indirekte kontroll over Canica.",
       },
     ],
     wealthSources: [
@@ -250,7 +250,7 @@ export const norskeFormuesbyggerArtikler = {
       {
         category: "aksjer",
         description:
-          "Canicas eierskap i Orkla og andre børsnoterte selskaper utgjør hoveddelen av formuen i dag.",
+          "Canicas eierskap i Orkla og andre børsnoterte selskaper utgjorde hoveddelen av den tilordnede formuen.",
       },
       {
         category: "selskaper",
@@ -306,8 +306,9 @@ export const norskeFormuesbyggerArtikler = {
         tier: "primary",
       },
     ],
-    lastVerified: "2026-08-11",
+    lastVerified: "2026-08-28",
     relatedLinks: [
+      { label: "Caroline Hagen Kjos", href: "/formuesbyggere/caroline-hagen-kjos" },
       { label: "Johan Johannson", href: "/formuesbyggere/johan-johannson" },
       { label: "Kutt faste kostnader", href: "/guider/kutt-faste-kostnader" },
       { label: "Kom i gang med fond", href: "/guider/kom-i-gang-med-fond" },
