@@ -57,6 +57,25 @@ export function FordelArticle({ fordel, article, tilbud }: FordelArticleProps) {
         </p>
       </header>
 
+      {article.shortAnswer && (
+        <div className="mt-6 rounded-xl border border-stone-200 bg-stone-50 px-4 py-4 text-sm leading-relaxed text-stone-700">
+          <p>
+            <strong className="text-stone-900">Kort svar: </strong>
+            {renderTextWithLinks(article.shortAnswer)}
+          </p>
+          {article.introCta && (
+            <p className="mt-3">
+              <Link
+                href={article.introCta.href}
+                className="inline-flex items-center rounded-lg bg-orange-600 px-4 py-2 text-sm font-medium text-white hover:bg-orange-700"
+              >
+                {article.introCta.label}
+              </Link>
+            </p>
+          )}
+        </div>
+      )}
+
       {showTableOfContents && (
         <nav aria-label="Innhold på siden" className="mt-6">
           <h2 className="text-sm font-semibold uppercase tracking-wider text-stone-500">
@@ -119,6 +138,46 @@ export function FordelArticle({ fordel, article, tilbud }: FordelArticleProps) {
                     </li>
                   ))}
                 </ul>
+              )}
+              {section.table && (
+                <div className="mt-4 overflow-x-auto rounded-xl border border-stone-200 bg-white">
+                  <table className="w-full min-w-[28rem] text-left text-sm">
+                    <thead>
+                      <tr className="border-b border-stone-200 bg-stone-50">
+                        {section.table.headers.map((header) => (
+                          <th
+                            key={header}
+                            scope="col"
+                            className="px-3 py-2.5 font-medium text-stone-900 first:text-left last:text-right [&:not(:first-child):not(:last-child)]:text-center"
+                          >
+                            {header}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {section.table.rows.map((row) => (
+                        <tr
+                          key={row[0]}
+                          className="border-b border-stone-100 last:border-0"
+                        >
+                          {row.map((cell, index) => (
+                            <td
+                              key={`${row[0]}-${index}`}
+                              className={`px-3 py-2.5 text-stone-600 ${
+                                index === 0
+                                  ? "font-normal text-stone-700"
+                                  : "text-right tabular-nums"
+                              }`}
+                            >
+                              {renderTextWithLinks(cell)}
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               )}
               {section.tip && (
                 <div className="mt-4 rounded-xl border border-orange-200 bg-orange-50 px-4 py-3 text-sm text-stone-700">

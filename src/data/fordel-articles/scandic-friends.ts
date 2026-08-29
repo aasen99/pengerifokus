@@ -260,7 +260,7 @@ export const scandicFriends: FordelArticleContent = {
       label: "Beste hotellbonus: Strawberry, Scandic eller Thon?",
       href: "/fordeler/hotellbonus",
     },
-    { label: "THON+: Gold, Platinum og Black", href: "/fordeler/thon-plus" },
+    { label: "THON+: nivåer og bonuspoeng", href: "/fordeler/thon-plus" },
     { label: "Strawberry-medlemskap", href: "/fordeler/strawberry" },
     { label: "SAS EuroBonus", href: "/fordeler/eurobonus" },
   ],

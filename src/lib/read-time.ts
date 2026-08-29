@@ -33,7 +33,11 @@ interface ReadableArticleSections {
     paragraphs?: string[];
     bullets?: string[];
     tip?: string;
-    table?: { caption?: string; rows: { label: string; value: string }[] };
+    table?: {
+      caption?: string;
+      headers?: string[];
+      rows: { label: string; value: string }[] | string[][];
+    };
     cta?: { heading: string; description: string; buttonText: string };
     factBox?: string[];
     subsections?: {
@@ -57,8 +61,13 @@ function collectReadableArticleTexts(article: ReadableArticleSections): string[]
     texts.push(...(section.bullets ?? []));
     if (section.tip) texts.push(section.tip);
     if (section.table?.caption) texts.push(section.table.caption);
+    if (section.table?.headers) texts.push(...section.table.headers);
     for (const row of section.table?.rows ?? []) {
-      texts.push(row.label, row.value);
+      if (Array.isArray(row)) {
+        texts.push(...row);
+      } else {
+        texts.push(row.label, row.value);
+      }
     }
     if (section.cta) {
       texts.push(

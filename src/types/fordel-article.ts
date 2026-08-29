@@ -1,8 +1,14 @@
+export interface FordelArticleTable {
+  headers: string[];
+  rows: string[][];
+}
+
 export interface FordelArticleSection {
   heading: string;
   paragraphs?: string[];
   bullets?: string[];
   tip?: string;
+  table?: FordelArticleTable;
 }
 
 export interface FordelArticleSource {
@@ -22,6 +28,10 @@ export interface FordelArticleContent {
   /** Beregnes fra innhold ved visning hvis utelatt i kildefil */
   readTimeMinutes?: number;
   intro: string;
+  /** Vises i boks rett under ingressen, før innholdsfortegnelsen. */
+  shortAnswer?: string;
+  /** Valgfri knapp under kort svar, f.eks. lenke til tilbudsoversikten. */
+  introCta?: { label: string; href: string };
   lastVerified: string;
   /** ISO-dato for structured data og sitemap, f.eks. 2026-07-02 */
   lastModifiedIso: string;

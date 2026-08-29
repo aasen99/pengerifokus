@@ -277,7 +277,7 @@ export const strawberry: FordelArticleContent = {
       label: "Scandic Friends: nivåer og poeng",
       href: "/fordeler/scandic-friends",
     },
-    { label: "THON+: Gold, Platinum og Black", href: "/fordeler/thon-plus" },
+    { label: "THON+: nivåer og bonuspoeng", href: "/fordeler/thon-plus" },
     { label: "Spenn, felles poengvaluta", href: "/fordeler/spenn" },
     { label: "LOfavør, hotellrabatt", href: "/fordeler/lofavor" },
     { label: "Norwegian Reward", href: "/fordeler/norwegian-reward" },

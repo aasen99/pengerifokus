@@ -245,7 +245,7 @@ export const eurobonus: FordelArticleContent = {
       label: "Scandic Friends: nivåer og poeng",
       href: "/fordeler/scandic-friends",
     },
-    { label: "THON+: Gold, Platinum og Black", href: "/fordeler/thon-plus" },
+    { label: "Thon-medlemskap og THON+", href: "/fordeler/thon-plus" },
     { label: "Strawberry-medlemskap", href: "/fordeler/strawberry" },
     { label: "Trumf: bonus og uttak", href: "/fordeler/trumf" },
     { label: "Spenn: poeng på reise og i hverdagen", href: "/fordeler/spenn" },

@@ -36,6 +36,8 @@ export const metadata: Metadata = createPageMetadata({
     "strawberry medlemskap",
     "scandic friends",
     "thon+",
+    "thon medlemskap",
+    "thon bonus",
     "hotellbonus",
     "studentrabatt",
     "eurobonus",

@@ -115,7 +115,7 @@ export const hotellbonus: FordelArticleContent = {
       label: "Scandic Friends: nivåer og poeng",
       href: "/fordeler/scandic-friends",
     },
-    { label: "THON+: Gold, Platinum og Black", href: "/fordeler/thon-plus" },
+    { label: "THON+: nivåer og bonuspoeng", href: "/fordeler/thon-plus" },
     { label: "Strawberry-medlemskap", href: "/fordeler/strawberry" },
     { label: "Spenn, felles poengvaluta", href: "/fordeler/spenn" },
     { label: "Norwegian Reward", href: "/fordeler/norwegian-reward" },

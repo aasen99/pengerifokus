@@ -160,11 +160,11 @@ export const fordeler: Fordel[] = [
     status: "published",
     name: "THON+",
     description:
-      "Gold, Platinum og Black hos Thon Hotels. 1 000–1 500 poeng per natt, bonusopphold og valget mellom THON+- og EuroBonus-poeng.",
+      "Thon-medlemskap med Gold, Platinum og Black. 1 000–1 500 bonuspoeng per natt, bonusopphold og valget mellom THON+- og EuroBonus-poeng.",
     type: "Hotellmedlemskap",
     useCase: "Hotell og reise",
     createdAt: "2026-08-11",
-    updatedAt: "2026-08-11",
+    updatedAt: "2026-08-29",
   },
   {
     id: "fordel-17",
