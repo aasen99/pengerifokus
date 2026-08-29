@@ -5,7 +5,8 @@ import { FordelDetail } from "@/components/fordeler/FordelDetail";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { FORDELSPROGRAMMER_TITLE } from "@/data/content-labels";
 import { getFordelArticle } from "@/data/fordel-articles";
-import { getFordelBySlug, getFordeler, getTilbudByFordel } from "@/lib/content";
+import { STUDENT_FEATURED_TILBUD_SLUGS } from "@/data/student-featured";
+import { getFordelBySlug, getFordeler, getTilbudByFordel, getTilbudBySlugs } from "@/lib/content";
 import { createPageMetadata } from "@/lib/seo";
 import { getArticleJsonLd, getBreadcrumbJsonLd, getFaqPageJsonLd } from "@/lib/structured-data";
 
@@ -51,6 +52,10 @@ export default async function FordelPage({ params }: FordelPageProps) {
 
   const article = getFordelArticle(slug);
   const tilbud = getTilbudByFordel(fordel.slug);
+  const featuredTilbud =
+    slug === "student"
+      ? getTilbudBySlugs([...STUDENT_FEATURED_TILBUD_SLUGS])
+      : undefined;
   const path = `/fordeler/${fordel.slug}`;
 
   return (
@@ -78,7 +83,12 @@ export default async function FordelPage({ params }: FordelPageProps) {
         </>
       )}
       {article ? (
-        <FordelArticle fordel={fordel} article={article} tilbud={tilbud} />
+        <FordelArticle
+          fordel={fordel}
+          article={article}
+          tilbud={tilbud}
+          featuredTilbud={featuredTilbud}
+        />
       ) : (
         <FordelDetail fordel={fordel} tilbud={tilbud} />
       )}

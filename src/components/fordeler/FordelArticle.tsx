@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Tag } from "@/components/ui/Tag";
 import { RelatedLinks } from "@/components/ui/RelatedLinks";
+import { StudentFeaturedTilbud } from "@/components/fordeler/StudentFeaturedTilbud";
 import { renderTextWithLinks } from "@/lib/rich-text";
 import {
   FORDELSPROGRAMMER_TITLE,
@@ -14,6 +15,7 @@ interface FordelArticleProps {
   fordel: Fordel;
   article: FordelArticleContent;
   tilbud: Tilbud[];
+  featuredTilbud?: Tilbud[];
 }
 
 function sectionAnchorId(heading: string): string {
@@ -28,7 +30,7 @@ function sectionAnchorId(heading: string): string {
     .replace(/^-|-$/g, "");
 }
 
-export function FordelArticle({ fordel, article, tilbud }: FordelArticleProps) {
+export function FordelArticle({ fordel, article, tilbud, featuredTilbud }: FordelArticleProps) {
   const showTableOfContents = article.sections.length >= 5;
 
   return (
@@ -57,6 +59,17 @@ export function FordelArticle({ fordel, article, tilbud }: FordelArticleProps) {
         </p>
       </header>
 
+      {article.introCta && !article.shortAnswer ? (
+        <p className="mt-4">
+          <Link
+            href={article.introCta.href}
+            className="inline-flex items-center rounded-lg bg-orange-600 px-4 py-2 text-sm font-medium text-white hover:bg-orange-700"
+          >
+            {article.introCta.label}
+          </Link>
+        </p>
+      ) : null}
+
       {article.shortAnswer && (
         <div className="mt-6 rounded-xl border border-stone-200 bg-stone-50 px-4 py-4 text-sm leading-relaxed text-stone-700">
           <p>
@@ -75,6 +88,10 @@ export function FordelArticle({ fordel, article, tilbud }: FordelArticleProps) {
           )}
         </div>
       )}
+
+      {featuredTilbud && featuredTilbud.length > 0 ? (
+        <StudentFeaturedTilbud tilbud={featuredTilbud} />
+      ) : null}
 
       {showTableOfContents && (
         <nav aria-label="Innhold på siden" className="mt-6">

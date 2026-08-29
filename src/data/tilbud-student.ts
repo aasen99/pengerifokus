@@ -1,6 +1,6 @@
-import type { Tilbud } from "@/types/content";
+import type { PublishStatus, Tilbud } from "@/types/content";
 
-const studentCheckedAt = "2026-07-17";
+const studentCheckedAt = "2026-08-29";
 const studentBaseTerms =
   "Krever gyldig studentstatus etter partnerens regler. Ha studentbevis og legitimasjon tilgjengelig. Satser og vilkår kan endres. Sjekk alltid hos partneren før kjøp.";
 
@@ -14,12 +14,14 @@ function studentOffer(
   options?: {
     terms?: string;
     sourceUrl?: string;
+    expiresAt?: string;
+    status?: PublishStatus;
   },
 ): Tilbud {
   return {
     id: `tilbud-student-${id}`,
     slug: `student-${slug}`,
-    status: "published",
+    status: options?.status ?? "published",
     title: partner,
     description,
     offerLabel,
@@ -28,12 +30,13 @@ function studentOffer(
     category,
     terms: options?.terms ?? studentBaseTerms,
     sourceUrl: options?.sourceUrl,
+    expiresAt: options?.expiresAt,
     createdAt: studentCheckedAt,
     updatedAt: studentCheckedAt,
   };
 }
 
-/** Studentrabatter hos store selskaper. Sjekket 17. juli 2026. */
+/** Studentrabatter hos store selskaper. Sist kontrollert 29. august 2026. */
 export const studentTilbud: Tilbud[] = [
   studentOffer(
     "ruter",
@@ -158,7 +161,7 @@ export const studentTilbud: Tilbud[] = [
     "Emirates",
     "Studentpris",
     "Emirates tilbyr egne studentpriser og kan inkludere ekstra bagasje på kvalifiserende flyreiser.",
-    "Reise",
+    "Transport",
     {
       terms:
         "Gjelder normalt heltidsstudenter. Aldersgrense og rabatt varierer etter kampanje og marked. Studentkode og studentbevis kan kreves.",
@@ -170,7 +173,7 @@ export const studentTilbud: Tilbud[] = [
     "Widerøe",
     "Student-/ungdomspris",
     "Widerøe tilbyr rabatterte priser for unge og studenter på utvalgte flyreiser.",
-    "Reise",
+    "Transport",
     {
       terms:
         "Pris og tilgjengelighet varierer etter strekning og avgang. Aldersgrense eller studentbevis kan gjelde.",
@@ -183,7 +186,7 @@ export const studentTilbud: Tilbud[] = [
     "KILROY",
     "Student-/ungdomspris",
     "KILROY tilbyr student- og ungdomspriser på utvalgte flybilletter, reiser og opplevelser.",
-    "Reise",
+    "Transport",
     {
       terms:
         "Rabatten varierer etter flyselskap, destinasjon og produkt. Studentbevis eller aldersgrense kan gjelde.",
@@ -191,16 +194,94 @@ export const studentTilbud: Tilbud[] = [
     },
   ),
   studentOffer(
+    "ark",
+    "ark",
+    "ARK",
+    "20 % på norske bøker",
+    "20 % på norske pensumbøker og 10 % på engelske fagbøker hos ARK.",
+    "Pensum",
+    {
+      terms:
+        "Gjelder ikke bøker utgitt de siste 12 månedene, e-bøker eller lydbøker. Kampanjen varer til 27. september 2026.",
+      sourceUrl: "https://www.ark.no/pensum",
+      expiresAt: "2026-09-27",
+    },
+  ),
+  studentOffer(
+    "onecall",
+    "onecall",
+    "OneCall",
+    "30 GB for 279 kr",
+    "StudentPakka gir 30 GB for 279 kr per måned uten bindingstid.",
+    "Mobil og abonnement",
+    {
+      terms:
+        "279 kr per måned. Ingen månedsavgift i juli og desember. Ingen bindingstid. Krever studentstatus og norsk personnummer. OneCalls egen side har en motstridende FAQ som fortsatt nevner 15 GB. Bruk 30 GB fra produktkortet, men kontroller ved neste oppdatering.",
+      sourceUrl: "https://onecall.no/mobilabonnement/studentpakka",
+    },
+  ),
+  studentOffer(
     "apple",
     "apple",
     "Apple",
     "5–10 % utdanningsrabatt",
-    "Studenter kan få rabatt på Mac og iPad gjennom Apples student- og utdanningstilbud. StudentTorget oppgir blant annet 10 % på Mac og 5 % på iPad.",
-    "Elektronikk",
+    "Studenter kan få rabatt på Mac og iPad gjennom Apples student- og utdanningstilbud.",
+    "PC og elektronikk",
     {
       terms:
-        "Gjelder kvalifiserte studenter. Kan kreve verifisering av studentstatus. Produkter, rabatt og kampanjer kan endres. Apple har egne utdanningspriser som kan avvike fra StudentTorget-tilbudet.",
-      sourceUrl: "https://www.apple.com/no/store",
+        "Gjelder kvalifiserte studenter. Kan kreve verifisering av studentstatus. Produkter, rabatt og kampanjer kan endres.",
+      sourceUrl: "https://www.apple.com/no-edu/store",
+    },
+  ),
+  studentOffer(
+    "apple-music",
+    "apple-music",
+    "Apple Music",
+    "Studentabonnement",
+    "Egen studentpris på Apple Music. Apple TV er inkludert uten ekstra kostnad.",
+    "Mobil og abonnement",
+    {
+      terms:
+        "Studentstatus må bekreftes. Bruk ikke et fast kronebeløp uten ny priskontroll.",
+      sourceUrl: "https://www.apple.com/no-edu/store",
+    },
+  ),
+  studentOffer(
+    "samsung",
+    "samsung",
+    "Samsung",
+    "Fra 15 % rabatt",
+    "Studentportalen viser blant annet 20 % på Galaxy, fra 15 % på TV og skjermer og fra 25 % på hvitevarer.",
+    "PC og elektronikk",
+    {
+      terms:
+        "Krever Samsung-konto og godkjent studentadresse. Utvalg og rabatt kan endres.",
+      sourceUrl: "https://www.samsung.com/no/offer/student-discounts/",
+    },
+  ),
+  studentOffer(
+    "dell",
+    "dell",
+    "Dell",
+    "Opptil 10 % rabatt",
+    "Studenter kan hente en kupong som gir opptil 10 % rabatt på kvalifiserte produkter.",
+    "PC og elektronikk",
+    {
+      terms: "Studentstatus må verifiseres. Unntak gjelder.",
+      sourceUrl: "https://www.dell.com/no-no/lp/students",
+    },
+  ),
+  studentOffer(
+    "eplehuset",
+    "eplehuset",
+    "Eplehuset",
+    "Studentpris på Mac og iPad",
+    "Spar fra 1 000 kr på MacBook og få 5 % på andre Mac- og iPad-modeller.",
+    "PC og elektronikk",
+    {
+      terms:
+        "Gjelder i butikk og på nett. Kontroller modellutvalget ved oppdatering.",
+      sourceUrl: "https://eplehuset.no/pages/studenter",
     },
   ),
   studentOffer(
@@ -230,12 +311,76 @@ export const studentTilbud: Tilbud[] = [
     },
   ),
   studentOffer(
+    "github",
+    "github",
+    "GitHub",
+    "Student Developer Pack · gratis",
+    "Gratis tilgang til profesjonelle utviklerverktøy og partnertilbud.",
+    "Programvare",
+    {
+      terms:
+        "Krever skoleadresse eller dokumentasjon på aktiv utdanning.",
+      sourceUrl: "https://github.com/education/students",
+    },
+  ),
+  studentOffer(
+    "notion",
+    "notion",
+    "Notion",
+    "Education Plan · gratis",
+    "Gratis utdanningsplan for én bruker.",
+    "Programvare",
+    {
+      terms:
+        "Krever godkjent høyskole eller universitet og skoleadresse. Studentstatus kontrolleres årlig.",
+      sourceUrl: "https://www.notion.com/help/notion-for-education",
+    },
+  ),
+  studentOffer(
+    "figma",
+    "figma",
+    "Figma",
+    "Education Plan · gratis",
+    "Figma og profesjonelle designverktøy er gratis for kvalifiserte studenter og undervisere.",
+    "Programvare",
+    {
+      terms: "Studentstatus må verifiseres.",
+      sourceUrl: "https://www.figma.com/education/higher-education/",
+    },
+  ),
+  studentOffer(
+    "jetbrains",
+    "jetbrains",
+    "JetBrains",
+    "Student Pack · gratis",
+    "Gratis tilgang til JetBrains-verktøy for kvalifiserte studenter.",
+    "Programvare",
+    {
+      terms:
+        "Krever studentverifisering. Utdanningslisensen kan ikke brukes kommersielt.",
+      sourceUrl: "https://www.jetbrains.com/academy/student-pack/",
+    },
+  ),
+  studentOffer(
+    "autodesk",
+    "autodesk",
+    "Autodesk",
+    "Education · gratis i ett år",
+    "Gratis ettårstilgang til Autodesk-programmer for kvalifiserte studenter.",
+    "Programvare",
+    {
+      terms:
+        "Kan fornyes årlig. Bare til utdanning og forskning, ikke kommersiell bruk.",
+      sourceUrl: "https://www.autodesk.com/education/edu-software/overview",
+    },
+  ),
+  studentOffer(
     "spotify",
     "spotify",
     "Spotify Premium Student",
     "Studentpris",
     "Studenter ved kvalifiserte utdanningsinstitusjoner får rabattert pris på Spotify Premium.",
-    "Abonnement",
+    "Mobil og abonnement",
     {
       terms:
         "Gjelder kvalifiserte studenter ved høyere utdanning. Studentstatus må verifiseres regelmessig. Rabatten gjelder i en begrenset totalperiode.",
@@ -248,22 +393,125 @@ export const studentTilbud: Tilbud[] = [
     "YouTube Premium Student",
     "Studentpris",
     "Studenter kan få rabattert pris på YouTube Premium og YouTube Music Premium.",
-    "Abonnement",
+    "Mobil og abonnement",
     {
       terms:
         "Krever bekreftet studentstatus. Studentstatus må verifiseres på nytt med jevne mellomrom.",
     },
   ),
   studentOffer(
-    "schibsted",
-    "schibsted",
-    "Schibsted-aviser",
-    "Opptil 50 % rabatt",
-    "Flere store Schibsted-aviser tilbyr rabatterte digitale abonnementer til studenter og unge, blant annet Aftenposten, BT, Aftenbladet og Adresseavisen.",
-    "Abonnement",
+    "egon",
+    "egon",
+    "EGON",
+    "Buffet fra 147 kr",
+    "Egen studentmeny for studenter ved universitet og høyskole.",
+    "Mat og restaurant",
     {
       terms:
-        "Flere Schibsted-aviser tilbyr redusert pris til studenter eller personer under en bestemt alder. Enkelte tilbud gir første måned til svært lav pris. Deretter kan rabatten være opptil 50 %. Aldersgrense kan brukes i stedet for studentstatus. Pris varierer mellom avisene.",
+        "Pizzabuffet koster 147 kr hele søndag og mandag og fram til kl. 18 andre dager. Gyldig studentbevis må vises.",
+      sourceUrl: "https://egon.no/studentmeny",
+    },
+  ),
+  studentOffer(
+    "peppes",
+    "peppes",
+    "Peppes Pizza",
+    "20 % rabatt",
+    "20 % på mat og drikke for studenter og vernepliktige.",
+    "Mat og restaurant",
+    {
+      terms:
+        "Vis gyldig studentbevis. Sjekk om alkohol, levering eller andre tilbud er unntatt.",
+      sourceUrl: "https://live.peppes.no/about/student-discount",
+    },
+  ),
+  studentOffer(
+    "dominos",
+    "dominos",
+    "Domino's",
+    "20 % rabatt",
+    "20 % på pizza, sideretter og drikke hele året med koden STUD2026.",
+    "Mat og restaurant",
+    {
+      terms: "Gyldig studentbevis må vises ved henting.",
+      sourceUrl: "https://www.dominos.no/side/studentrabatt",
+    },
+  ),
+  studentOffer(
+    "pizzabakeren",
+    "pizzabakeren",
+    "Pizzabakeren",
+    "20 % på pizza",
+    "Bestill på nett eller i app med koden studentrabatt.",
+    "Mat og restaurant",
+    {
+      terms:
+        "Gjelder universitet, høyskole, fagskole og krigsskole, men ikke videregående. Studentbevis og legitimasjon kreves. Kan ikke kombineres med andre tilbud.",
+      sourceUrl: "https://www.pizzabakeren.no/studentrabatt",
+    },
+  ),
+  studentOffer(
+    "sabrura",
+    "sabrura",
+    "Sabrura",
+    "Buffet og 10 % takeaway",
+    "Buffet til 219 kr før kl. 14 på hverdager og 249 kr ellers. 10 % på takeaway bestilt på telefon eller i kassen.",
+    "Mat og restaurant",
+    {
+      terms: "Gyldig studentbevis kreves.",
+      sourceUrl: "https://www.sabrurasushi.no/student/",
+    },
+  ),
+  studentOffer(
+    "jordbaerpikene",
+    "jordbaerpikene",
+    "Jordbærpikene",
+    "15 % rabatt",
+    "15 % studentrabatt på mat og drikke.",
+    "Mat og restaurant",
+    {
+      terms:
+        "Vis gyldig studentbevis. Kontroller lokale unntak før du bruker tilbudet.",
+      sourceUrl: "https://www.jordbaerpikene.no/",
+    },
+  ),
+  studentOffer(
+    "isushi",
+    "isushi",
+    "iSushi",
+    "15 % rabatt",
+    "15 % på mat og drikke ved henting og levering med koden Student26.",
+    "Mat og restaurant",
+    {
+      terms:
+        "Koden må legges inn på nytt hvert semester. Tilgjengeligheten følger iSushis leveringsområder.",
+      sourceUrl: "https://www.isushi.no/studentrabatt/",
+    },
+  ),
+  studentOffer(
+    "sats",
+    "sats",
+    "SATS",
+    "20 % fast rabatt",
+    "Studenter får normalt 20 % av ordinær medlemspris. Studentstatus må dokumenteres og fornyes årlig.",
+    "Trening og helse",
+    {
+      terms: "Studentstatus må dokumenteres og fornyes årlig.",
+      sourceUrl: "https://www.sats.no/student",
+    },
+  ),
+  studentOffer(
+    "sats-kampanje",
+    "sats-kampanje",
+    "SATS",
+    "40 % for nye medlemmer",
+    "Kampanje gir 40 % rabatt for nye medlemmer med 12 måneders binding til og med 31. august 2026.",
+    "Trening og helse",
+    {
+      terms:
+        "Gjelder nye medlemmer med 12 måneders binding. Studentstatus må dokumenteres.",
+      sourceUrl: "https://www.sats.no/student",
+      expiresAt: "2026-08-31",
     },
   ),
   studentOffer(
@@ -272,7 +520,7 @@ export const studentTilbud: Tilbud[] = [
     "Dr.Dropin",
     "15 % rabatt",
     "Studenter får 15 % rabatt på flere typer fysiske konsultasjoner hos Dr.Dropin. Studentmedlemskapet koster 50 kr per år.",
-    "Helse",
+    "Trening og helse",
     {
       terms:
         "Krever studentmedlemskap (oppgitt til 50 kr for 12 måneder) og gyldig studentbevis. Rabatten gjelder fysiske konsultasjoner, blant annet allmennlege, hudlege, gynekolog, psykolog, psykiater, fysioterapeut, kiropraktor, øyelege og øre-nese-hals. Tilgjengelig i flere norske byer og digitalt.",
@@ -280,27 +528,67 @@ export const studentTilbud: Tilbud[] = [
     },
   ),
   studentOffer(
-    "cutters",
-    "cutters",
-    "Cutters",
-    "20 % rabatt",
-    "Studenter får 20 % rabatt hos Cutters, og nye studentkunder kan få første klipp til 199 kr.",
-    "Helse",
+    "nito",
+    "nito",
+    "NITO",
+    "350 kr for studietiden",
+    "350 kr for hele studietiden for fulltidsstudenter på bachelor- eller mastergrad innen ingeniør- og teknologifag.",
+    "Medlemskap",
     {
       terms:
-        "20 % rabatt på ordinær klipp. Bestilling og betaling skjer i Cutters-appen. Rabattkode kreves. Førstegangstilbud (199 kr) gjelder nye studentkunder via StudentTorget. Oppgitt ordinær studentpris: 343 kr, vanlig pris: 429 kr.",
+        "Reiseforsikring og Tryg Legehjelp er inkludert etter gjeldende vilkår.",
+      sourceUrl: "https://www.nito.no/bli-medlem/",
     },
   ),
   studentOffer(
-    "los-tacos",
-    "los-tacos",
-    "Los Tacos",
-    "20 % rabatt",
-    "Studenter får 20 % rabatt på mat hos Los Tacos. Rabatten gjelder ikke alkohol.",
-    "Restaurant",
+    "tekna",
+    "tekna",
+    "Tekna",
+    "150 kr per semester",
+    "For studenter som tar eller planlegger en teknisk-naturvitenskapelig mastergrad.",
+    "Medlemskap",
     {
       terms:
-        "Gjelder ikke alkohol. Gyldig studentbevis kan kreves. Sjekk om alle avdelinger deltar.",
+        "Forsikringer, arrangementer, karrierehjelp og juridisk hjelp er inkludert etter gjeldende vilkår.",
+      sourceUrl: "https://www.tekna.no/student/",
+    },
+  ),
+  studentOffer(
+    "nordea",
+    "nordea",
+    "Nordea",
+    "Gratis dagligbank",
+    "Gratis dagligbank med bankkort for studenter fra 18 til 33 år.",
+    "Bank og forsikring",
+    {
+      terms:
+        "Krever brukskonto i Nordea. Elev, lærling og førstegangstjeneste kan også kvalifisere.",
+      sourceUrl:
+        "https://www.nordea.no/privat/vare-produkter/kundekonsepter/student.html",
+    },
+  ),
+  studentOffer(
+    "studentkortet",
+    "studentkortet",
+    "Studentkortet",
+    "Over 250 rabatter · gratis",
+    "Gratis medlemskap for studenter, elever, lærlinger og personer under utdanning i Forsvaret.",
+    "Rabattportaler",
+    {
+      terms: "Hvert partnertilbud har egne vilkår.",
+      sourceUrl: "https://studentkortet.no/sider/om/studentkortet",
+    },
+  ),
+  studentOffer(
+    "unidays",
+    "unidays",
+    "UNiDAYS",
+    "Rabatter fra ulike merker",
+    "Gratis portal med tilbud fra norske og internasjonale merker.",
+    "Rabattportaler",
+    {
+      terms: "Krever studentverifisering. Tilbudene endres ofte.",
+      sourceUrl: "https://www.myunidays.com/NO/nb-NO",
     },
   ),
   studentOffer(
@@ -346,11 +634,38 @@ export const studentTilbud: Tilbud[] = [
     "Den Norske Turistforening",
     "Ungdoms-/medlemspris",
     "Studenter og unge kan få redusert medlemspris og lavere overnattingspris på DNT-hytter.",
-    "Sport",
+    "Underholdning",
     {
       terms:
         "DNT bruker hovedsakelig aldersbaserte medlemskategorier. Fordelen er derfor ikke alltid en ren studentrabatt. Medlemspris på overnatting på DNT-hytter, samt rabatter på enkelte kurs og aktiviteter.",
       sourceUrl: "https://www.dnt.no/",
     },
+  ),
+  studentOffer(
+    "cutters",
+    "cutters",
+    "Cutters",
+    "20 % rabatt",
+    "Skjult: aktiv studentrabatt kunne ikke bekreftes på Cutters' egen side per 29. august 2026.",
+    "Trening og helse",
+    { status: "draft" },
+  ),
+  studentOffer(
+    "los-tacos",
+    "los-tacos",
+    "Los Tacos",
+    "20 % rabatt",
+    "Skjult: 20 % studentrabatt kunne ikke bekreftes hos kjeden per 29. august 2026.",
+    "Mat og restaurant",
+    { status: "draft" },
+  ),
+  studentOffer(
+    "schibsted",
+    "schibsted",
+    "Schibsted-aviser",
+    "Opptil 50 % rabatt",
+    "Skjult: generelt kort uten konkret pris og kilde per avis per 29. august 2026.",
+    "Mobil og abonnement",
+    { status: "draft" },
   ),
 ];

@@ -77,7 +77,19 @@ export function getFeaturedFormuesbyggere(): Formuesbygger[] {
 }
 
 export function getTilbud(): Tilbud[] {
-  return tilbud.filter(isPublished);
+  const today = new Date().toISOString().slice(0, 10);
+  return tilbud.filter(
+    (entry) =>
+      isPublished(entry) &&
+      (!entry.expiresAt || entry.expiresAt >= today),
+  );
+}
+
+export function getTilbudBySlugs(slugs: string[]): Tilbud[] {
+  const bySlug = new Map(getTilbud().map((entry) => [entry.slug, entry]));
+  return slugs
+    .map((slug) => bySlug.get(slug))
+    .filter((entry): entry is Tilbud => Boolean(entry));
 }
 
 export function getTilbudByFordel(fordelSlug: string): Tilbud[] {

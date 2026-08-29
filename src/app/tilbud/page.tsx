@@ -11,12 +11,13 @@ import {
 } from "@/data/content-labels";
 import { getFordeler, getTilbud } from "@/lib/content";
 import { createPageMetadata } from "@/lib/seo";
-import { getTilbudCategoryGroupOptions } from "@/lib/tilbud-categories";
+import { getTilbudCategoryGroupOptions, getStudentTilbudCategoryOptions } from "@/lib/tilbud-categories";
 import {
   filterTilbud,
   groupTilbudByPartner,
   parseTilbudPage,
   sortGruppertTilbud,
+  sortStudentTilbud,
   type TilbudSortOption,
 } from "@/lib/tilbud";
 import { isTilbudOptInProgram } from "@/lib/tilbud-ui";
@@ -89,9 +90,10 @@ export default async function TilbudPage({ searchParams }: TilbudPageProps) {
   const fordeler = getFordeler();
 
   let program = first(params.program) || null;
+  const studentProgramView = program === "student";
   const studentParam = first(params.student);
   let includeStudent = studentParam === "1" || studentParam === "true";
-  if (program === "student") {
+  if (studentProgramView) {
     includeStudent = true;
     program = null;
   }
@@ -103,7 +105,11 @@ export default async function TilbudPage({ searchParams }: TilbudPageProps) {
     : "rate-desc";
 
   const scoped = filterTilbud(tilbud, "", program, category, includeStudent);
-  const grouped = sortGruppertTilbud(groupTilbudByPartner(scoped), sort);
+  const sortedEntries = studentProgramView ? sortStudentTilbud(scoped) : scoped;
+  const grouped = sortGruppertTilbud(
+    groupTilbudByPartner(sortedEntries),
+    sort,
+  );
 
   const programs = fordeler
     .filter(
@@ -117,9 +123,13 @@ export default async function TilbudPage({ searchParams }: TilbudPageProps) {
       count: tilbud.filter((item) => item.fordelSlug === fordel.slug).length,
     }));
 
-  const categoryOptions = getTilbudCategoryGroupOptions(
-    filterTilbud(tilbud, "", program, null, includeStudent),
-  );
+  const categoryOptions = studentProgramView
+    ? getStudentTilbudCategoryOptions(
+        filterTilbud(tilbud, "", program, null, includeStudent),
+      )
+    : getTilbudCategoryGroupOptions(
+        filterTilbud(tilbud, "", program, null, includeStudent),
+      );
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-10">

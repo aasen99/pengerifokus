@@ -76,3 +76,43 @@ export function getTilbudCategoryGroupOptions(
     }))
     .sort((a, b) => a.group.localeCompare(b.group, "nb"));
 }
+
+/** Kategorier brukt direkte på studenttilbud (filtrering på /tilbud?program=student). */
+export const STUDENT_TILBUD_CATEGORIES = [
+  "Mat og restaurant",
+  "Transport",
+  "Mobil og abonnement",
+  "PC og elektronikk",
+  "Programvare",
+  "Pensum",
+  "Trening og helse",
+  "Bank og forsikring",
+  "Medlemskap",
+  "Rabattportaler",
+  "Netthandel",
+  "Underholdning",
+] as const;
+
+export type StudentTilbudCategory = (typeof STUDENT_TILBUD_CATEGORIES)[number];
+
+export function isStudentTilbudCategory(
+  category: string,
+): category is StudentTilbudCategory {
+  return (STUDENT_TILBUD_CATEGORIES as readonly string[]).includes(category);
+}
+
+export function getStudentTilbudCategoryOptions(
+  entries: Array<{ category: string }>,
+): { group: string; count: number }[] {
+  const counts = new Map<string, number>();
+  for (const entry of entries) {
+    if (!isStudentTilbudCategory(entry.category)) continue;
+    counts.set(entry.category, (counts.get(entry.category) ?? 0) + 1);
+  }
+  return STUDENT_TILBUD_CATEGORIES.filter((category) => counts.has(category)).map(
+    (group) => ({
+      group,
+      count: counts.get(group)!,
+    }),
+  );
+}

@@ -1,7 +1,7 @@
 import type { Tilbud } from "@/types/content";
 import { getFordelName } from "@/lib/fordeler";
 import { matchesSearchTokens, normalizeSearchText } from "@/lib/normalize-search";
-import { matchesTilbudCategoryGroup } from "@/lib/tilbud-categories";
+import { matchesTilbudCategoryGroup, isStudentTilbudCategory } from "@/lib/tilbud-categories";
 import {
   isTilbudOptInProgram,
   type TilbudSortOption,
@@ -235,6 +235,23 @@ export function sortGruppertTilbud(
   }
 }
 
+function getStudentSortTier(entry: Tilbud): number {
+  if (entry.expiresAt) return 1;
+  if (/gratis/i.test(`${entry.offerLabel} ${entry.description}`)) return 2;
+  if (/%/.test(entry.offerLabel)) return 3;
+  if (/studentpris|kr/i.test(entry.offerLabel)) return 4;
+  return 5;
+}
+
+/** Standard sortering for studentfilteret: tidsbegrenset, gratis, prosent, pris, lokalt. */
+export function sortStudentTilbud(entries: Tilbud[]): Tilbud[] {
+  return [...entries].sort((a, b) => {
+    const tierDiff = getStudentSortTier(a) - getStudentSortTier(b);
+    if (tierDiff !== 0) return tierDiff;
+    return a.partner.localeCompare(b.partner, "nb");
+  });
+}
+
 export function filterTilbud(
   entries: Tilbud[],
   query: string,
@@ -259,7 +276,8 @@ export function filterTilbud(
 
     if (
       categoryGroup &&
-      !matchesTilbudCategoryGroup(entry.category, categoryGroup)
+      !matchesTilbudCategoryGroup(entry.category, categoryGroup) &&
+      !(isStudentTilbudCategory(entry.category) && entry.category === categoryGroup)
     ) {
       return false;
     }

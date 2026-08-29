@@ -90,5 +90,7 @@ export interface Tilbud extends BaseContent {
   warning?: string;
   /** Skjulte søkeord – vises ikke på kort, brukes kun i tilbudssøk */
   searchTags?: string[];
+  /** ISO-dato (YYYY-MM-DD). Tilbudet skjules automatisk etter denne datoen. */
+  expiresAt?: string;
 }
 

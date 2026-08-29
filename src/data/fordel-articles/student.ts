@@ -2,14 +2,18 @@ import type { FordelArticleContent } from "@/types/fordel-article";
 
 export const student: FordelArticleContent = {
   slug: "student",
-  title: "Studentrabatter: slik sparer du som student",
+  title: "Studentrabatter 2026",
   intro:
-    "Studentrabatter finnes overalt: i butikk, på nett, i banken, hos forsikringsselskaper og gjennom fagforeninger. Denne siden gir en generell oversikt over de viktigste typene studentfordeler i Norge, hva som kreves for å få dem, og hvordan du vurderer om rabatten faktisk er verdt det.",
-  lastVerified: "17. juli 2026",
-  lastModifiedIso: "2026-07-17",
-  seoTitle: "Studentrabatter i Norge: oversikt, tips og store tilbud",
+    "Som student kan du spare penger på blant annet transport, mat, mobil, trening, pensum og programvare. Her finner du rabattene og de viktigste vilkårene samlet på ett sted.",
+  introCta: {
+    label: "Se alle studenttilbud",
+    href: "/tilbud?program=student",
+  },
+  lastVerified: "29. august 2026",
+  lastModifiedIso: "2026-08-29",
+  seoTitle: "Studentrabatter 2026: mat, transport, mobil og mer",
   seoDescription:
-    "Guide til studentrabatter i Norge: studentbevis, bank, forsikring, kollektivtransport, Adobe, Spotify, Dr.Dropin og hvordan du vurderer om rabatten lønner seg.",
+    "Se studentrabatter på mat, transport, mobil, trening, pensum og programvare. Vi samler tilbudene og viser vilkårene enkelt.",
   seoKeywords: [
     "studentrabatt",
     "studentfordeler",
@@ -156,7 +160,7 @@ export const student: FordelArticleContent = {
     },
   ],
   relatedLinks: [
-    { label: "Studentrabatter, oversikt", href: "/tilbud?student=1" },
+    { label: "Studentrabatter, oversikt", href: "/tilbud?program=student" },
     { label: "Bankfordeler", href: "/fordeler/bankfordeler" },
     { label: "LOfavør", href: "/fordeler/lofavor" },
     { label: "Klarna cashback", href: "/fordeler/klarna" },

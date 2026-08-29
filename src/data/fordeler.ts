@@ -99,11 +99,11 @@ export const fordeler: Fordel[] = [
     status: "published",
     name: "Student",
     description:
-      "Generell oversikt over studentrabatter: studentbevis, bank, forsikring, fagforening, netthandel og hvordan du vurderer om rabatten lønner seg.",
+      "Studentrabatter 2026 på mat, transport, mobil, trening, pensum og programvare. Populære tilbud og vilkår samlet på ett sted.",
     type: "Studentrabatt",
     useCase: "Studier, bank og hverdagsrabatter",
     createdAt: "2026-07-17",
-    updatedAt: "2026-07-17",
+    updatedAt: "2026-08-29",
   },
   {
     id: "fordel-3",
