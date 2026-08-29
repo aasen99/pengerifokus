@@ -6,7 +6,7 @@ export const funfacts: GuideArticleContent = {
   slug: "funfacts",
   seoTitle: "20 overraskende fakta om penger",
   intro:
-    "Små beløp kan bli store, og norske penger har en merkelig historie. Her er 20 fakta som er enkle å forstå og mulige å kontrollere.",
+    "Små beløp kan bli store, og norske penger har en merkelig historie. Her er 20 fakta som er enkle å forstå og lette å huske.",
   sections: [
     {
       heading: "Små beløp og store forskjeller",
