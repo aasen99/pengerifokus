@@ -11,7 +11,7 @@ const pageDescription =
   "Praktiske økonomiguider for sparing, investering, gjeld, bolig og hverdagsøkonomi. Steg-for-steg hjelp uten bankjargong.";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Guider",
+  title: "Økonomiguider for hverdagen",
   description: pageDescription,
   path: "/guider",
   keywords: [

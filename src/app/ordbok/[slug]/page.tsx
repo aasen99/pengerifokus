@@ -28,7 +28,9 @@ export async function generateMetadata({
 
   return createPageMetadata({
     title:
-      slug === "regel-72" ? "Hva er Regel 72? Enkel forklaring" : entry.term,
+      slug === "regel-72"
+        ? "Hva er Regel 72? Enkel forklaring"
+        : `Hva er ${entry.term}?`,
     description: `${entry.term}: ${entry.definition}`,
     path: `/ordbok/${slug}`,
     keywords: [entry.term, entry.category, ...(entry.tags ?? [])],

@@ -21,7 +21,7 @@ export async function generateMetadata({
   if (!emne) return {};
 
   return createPageMetadata({
-    title: emne.title,
+    title: emne.seoTitle ?? emne.title,
     description: emne.description,
     path: `/emner/${slug}`,
     keywords: emne.keywords,

@@ -12,6 +12,8 @@ export interface EmneSection {
 export interface EmneHub {
   slug: string;
   title: string;
+  /** SEO-tittel i <title>; faller tilbake til title hvis utelatt */
+  seoTitle?: string;
   description: string;
   intro: string[];
   keywords: string[];
@@ -22,6 +24,7 @@ export const emner: EmneHub[] = [
   {
     slug: "bolig",
     title: "Bolig",
+    seoTitle: "Boligøkonomi: eie, leie, BSU og lån",
     description:
       "Eie eller leie, BSU, boliglån, egenkapital og fellesgjeld. Guider, kalkulatorer og ordbok for boligøkonomi i Norge.",
     keywords: [
@@ -180,6 +183,7 @@ export const emner: EmneHub[] = [
   {
     slug: "gjeld",
     title: "Gjeld",
+    seoTitle: "Gjeld: nedbetaling, rente og refinansiering",
     description:
       "Betal ned dyr gjeld, sammenlign effektiv rente og refinansiering, og bruk lavine eller snøball. Guider, kalkulatorer og ordbok.",
     keywords: [
@@ -308,6 +312,7 @@ export const emner: EmneHub[] = [
   {
     slug: "sparing-og-investering",
     title: "Sparing og investering",
+    seoTitle: "Sparing og investering: fond, ASK og buffer",
     description:
       "Bufferkonto, fond, ASK, BSU og rentes rente. Guider, kalkulatorer, ordbok og profiler av investorer.",
     keywords: [
@@ -440,6 +445,7 @@ export const emner: EmneHub[] = [
   {
     slug: "bonus-og-fordeler",
     title: "Bonus og fordeler",
+    seoTitle: "Bonus og fordeler: Trumf, cashback og mer",
     description:
       "Trumf, Coop, EuroBonus, Klarna cashback, LOfavør og studentrabatter. Oversikt over bonuspoeng, kjøpeutbytte og når programmene faktisk lønner seg.",
     keywords: [
@@ -572,6 +578,7 @@ export const emner: EmneHub[] = [
   {
     slug: "budsjett",
     title: "Budsjett",
+    seoTitle: "Budsjett: SIFO, faste kostnader og oversikt",
     description:
       "SIFO-referansebudsjett, faste kostnader og økonomisk helse. Guider og verktøy for oversikt over inntekt og utgifter.",
     keywords: [

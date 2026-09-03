@@ -6,7 +6,7 @@ import { getAllSitater } from "@/lib/sitater";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Sitater",
+  title: "Sitater om penger og formue",
   description:
     "Sitater og mottoer om penger, investering og formue fra formuesbyggerne, med kilde og lenke til profilen.",
   path: "/ordbok/sitater",

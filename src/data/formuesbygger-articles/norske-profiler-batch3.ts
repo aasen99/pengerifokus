@@ -9,7 +9,8 @@ export const norskeProfilerBatch3 = {
   "oystein-stray-spetalen": buildFormuesbyggerArticle({
     slug: "oystein-stray-spetalen",
     seoAngle:
-      "Øystein Stray Spetalen: Slik bygget han formuen gjennom aksjer, oppkjøp og kontroll",
+      "Øystein Stray Spetalen: Aksjer, oppkjøp og kontroll",
+    seoTitle: "Øystein Stray Spetalen: Aksjer, oppkjøp og kontroll",
     metaDescription:
       "Omtrentlig formue ca. 5,5 mrd. NOK (Kapital 2025, før gavene). Spetalen, Ferncliff, Tycoon og skillet mellom eierskap, stemmer og kontroll.",
     seoKeywords: [
@@ -157,8 +158,8 @@ export const norskeProfilerBatch3 = {
 
   "johan-johannson": buildFormuesbyggerArticle({
     slug: "johan-johannson",
-    seoAngle:
-      "Johan Johannson og NorgesGruppen: Formuen bak Norges største dagligvarehus",
+    seoAngle: "Johan Johannson: Formuen bak NorgesGruppen",
+    seoTitle: "Johan Johannson: Formuen bak NorgesGruppen",
     metaDescription:
       "Omtrentlig formue ca. 59 mrd. NOK (Kapital 2025, tilordnet). Johannson-familien og NorgesGruppen: skala, lave marginer og familieeierskap vs personlig eierandel.",
     seoKeywords: [

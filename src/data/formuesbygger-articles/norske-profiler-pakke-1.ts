@@ -845,8 +845,8 @@ Det finnes ikke et ferskt og etterprøvbart anslag på Dæhlies samlede private 
 
   "petter-northug": buildFormuesbyggerArticle({
     slug: "petter-northug",
-    seoAngle: "Petter Northug formue: Selskapene og pengene etter skikarrieren",
-    seoTitle: "Petter Northug formue: Selskapene og pengene etter skikarrieren",
+    seoAngle: "Petter Northug formue: Selskaper etter skikarrieren",
+    seoTitle: "Petter Northug formue: Selskaper etter skikarrieren",
     metaDescription:
       "Petter Northug tjener penger på merkevare, TV, skilag og investeringer. Se formuen, selskapene og risikoen bak Northug-navnet.",
     seoKeywords: [
@@ -1032,8 +1032,8 @@ Northug hadde over 12 millioner kroner i skattbar formue i 2024. Holdingselskape
 
   "alan-walker": buildFormuesbyggerArticle({
     slug: "alan-walker",
-    seoAngle: "Alan Walker formue: Selskapene bak 100 milliarder strømminger",
-    seoTitle: "Alan Walker formue: Selskapene bak 100 milliarder strømminger",
+    seoAngle: "Alan Walker formue: Bak 100 milliarder streams",
+    seoTitle: "Alan Walker formue: Bak 100 milliarder streams",
     metaDescription:
       "Alan Walker har bygget en omfattende selskapsstruktur rundt musikk, konserter og rettigheter. Se inntektene og selskapene bak.",
     seoKeywords: [

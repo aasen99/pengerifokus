@@ -10,7 +10,7 @@ const pageDescription =
   "Temaside for bolig, gjeld, sparing, bonus og budsjett. Guider, kalkulatorer, ordbok og formuesbyggere samlet etter emne.";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Emner",
+  title: "Emner innen personlig økonomi",
   description: pageDescription,
   path: "/emner",
   keywords: ["emner", "bolig", "gjeld", "sparing", "bonus", "budsjett"],

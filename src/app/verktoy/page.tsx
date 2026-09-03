@@ -11,7 +11,7 @@ const pageDescription =
   "Gratis kalkulatorer for personlig økonomi: prosent, sparing, rente, bolig, feriepenger, BSU, bonuspoeng og mer. Uten regneark.";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Verktøy",
+  title: "Gratis økonomikalkulatorer",
   description: pageDescription,
   path: "/verktoy",
   keywords: [

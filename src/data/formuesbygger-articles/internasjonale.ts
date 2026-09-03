@@ -1261,8 +1261,8 @@ export const internasjonaleFormuesbyggerArtikler = {
 
   "cristiano-ronaldo": buildFormuesbyggerArticle({
     slug: "cristiano-ronaldo",
-    seoAngle:
-      "Cristiano Ronaldo formue og lønn: Slik bygde han CR7-imperiet",
+    seoAngle: "Cristiano Ronaldo formue: CR7-imperiet forklart",
+    seoTitle: "Cristiano Ronaldo formue: CR7-imperiet forklart",
     metaDescription:
       "Forbes anslår Cristiano Ronaldos formue til 1,2 milliarder dollar. Se hva han tjener på Al-Nassr, Nike, CR7-hoteller og egne selskaper.",
     seoKeywords: [
@@ -1575,8 +1575,8 @@ export const internasjonaleFormuesbyggerArtikler = {
 
   "steve-jobs": buildFormuesbyggerArticle({
     slug: "steve-jobs",
-    seoAngle:
-      "Steve Jobs formue: Hvorfor Pixar betydde mer enn Apple for rikdommen",
+    seoAngle: "Steve Jobs formue: Pixar betydde mer enn Apple",
+    seoTitle: "Steve Jobs formue: Pixar betydde mer enn Apple",
     metaDescription:
       "Omtrentlig formue ca. 6,5–7 mrd. USD ved dødsfallet (Forbes 2011). Pixar/Disney-aksjer var viktigere for Jobs' privatformue enn mange tror.",
     seoKeywords: [
@@ -1717,7 +1717,8 @@ export const internasjonaleFormuesbyggerArtikler = {
 
   "george-lucas": buildFormuesbyggerArticle({
     slug: "george-lucas",
-    seoAngle: "George Lucas formue: Slik ble Star Wars til en forretningsmaskin",
+    seoAngle: "George Lucas formue: Star Wars som forretning",
+    seoTitle: "George Lucas formue: Star Wars som forretning",
     metaDescription:
       "Omtrentlig formue ca. 5,2 mrd. USD (Forbes 2026). Lucas solgte Lucasfilm til Disney for 4,05 mrd. USD, med lisensiering og IP utenfor kinobilletten.",
     seoKeywords: [
@@ -1855,8 +1856,8 @@ export const internasjonaleFormuesbyggerArtikler = {
 
   "rihanna": buildFormuesbyggerArticle({
     slug: "rihanna",
-    seoAngle:
-      "Rihanna formue: Hvordan Fenty Beauty ble større enn musikkinntektene",
+    seoAngle: "Rihanna formue: Fenty Beauty vs musikkinntekter",
+    seoTitle: "Rihanna formue: Fenty Beauty vs musikkinntekter",
     metaDescription:
       "Omtrentlig formue ca. 1 mrd. USD (Forbes 2026). Rihanna ble milliardær på medeierskap i Fenty Beauty, ikke bare musikkinntekter eller reklamehonorar.",
     seoKeywords: [
@@ -2003,8 +2004,8 @@ export const internasjonaleFormuesbyggerArtikler = {
 
   "lionel-messi": buildFormuesbyggerArticle({
     slug: "lionel-messi",
-    seoAngle:
-      "Lionel Messi formue: Karriereinntekt, milliardformue og Inter Miami-opsjonen",
+    seoAngle: "Lionel Messi formue: Karriereinntekt og Inter Miami",
+    seoTitle: "Lionel Messi formue: Karriereinntekt og Inter Miami",
     metaDescription:
       "Forbes anslår Lionel Messis formue til 1,1 mrd. USD. Karriereinntekter ca. 1,8 mrd. før skatt. Inter Miami-eierskap er en opsjon, ikke realisert aksjepost.",
     seoKeywords: [
@@ -2129,8 +2130,8 @@ export const internasjonaleFormuesbyggerArtikler = {
 
   "lebron-james": buildFormuesbyggerArticle({
     slug: "lebron-james",
-    seoAngle:
-      "LeBron James formue: Første aktive NBA-milliardær, eierskap fremfor reklame",
+    seoAngle: "LeBron James formue: NBA-milliardær via eierskap",
+    seoTitle: "LeBron James formue: NBA-milliardær via eierskap",
     metaDescription:
       "Forbes anslår LeBron James til 1,4 mrd. USD. Over 1 mrd. utenfor banen. Beats-eierskap og SpringHill viser forskjellen på honorar og egenkapital.",
     seoKeywords: [

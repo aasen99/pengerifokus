@@ -5,8 +5,8 @@ import { forbesBillionairesSource, kapital400Source } from "./source-tiers";
 export const norskeProfilerBatch4 = {
   "caroline-hagen-kjos": buildFormuesbyggerArticle({
     slug: "caroline-hagen-kjos",
-    seoAngle:
-      "Caroline Hagen Kjos og Canica: Eierskap, kontroll og arv etter Stein Erik Hagen",
+    seoAngle: "Caroline Hagen Kjos: Canica, eierskap og arv",
+    seoTitle: "Caroline Hagen Kjos: Canica, eierskap og arv",
     metaDescription:
       "Forbes anslår Caroline Hagen Kjos til ca. 2,6 mrd. USD. Kapital tilordnet Canica-formuen til faren. Slik skiller eierskap, stemmer og familiesfære seg etter 2026.",
     seoKeywords: [
@@ -148,8 +148,8 @@ export const norskeProfilerBatch4 = {
 
   kygo: buildFormuesbyggerArticle({
     slug: "kygo",
-    seoAngle:
-      "Kygo formue: Kygo AS-regnskapet og Palm Tree Crew er ikke samme tall",
+    seoAngle: "Kygo formue: Kygo AS vs Palm Tree Crew",
+    seoTitle: "Kygo formue: Kygo AS vs Palm Tree Crew",
     metaDescription:
       "Kygo AS hadde 153,8 mill. kr i egenkapital i 2025. Palm Tree Crew ble verdsatt til 215 mill. USD. Slik skiller utbytte, selskapsverdi og privat formue seg.",
     seoKeywords: [
@@ -274,8 +274,8 @@ export const norskeProfilerBatch4 = {
 
   "magnus-carlsen": buildFormuesbyggerArticle({
     slug: "magnus-carlsen",
-    seoAngle:
-      "Magnus Carlsen formue: Magnuschess-regnskapet er ikke hele privatøkonomien",
+    seoAngle: "Magnus Carlsen formue: Magnuschess er ikke alt",
+    seoTitle: "Magnus Carlsen formue: Magnuschess er ikke alt",
     metaDescription:
       "Magnuschess AS hadde 128,2 mill. kr i egenkapital i 2025. Carlsen eier 87,5 %. Play Magnus ble solgt til Chess.com. Slik skiller sjakkinntekt og selskapsverdi seg.",
     seoKeywords: [

@@ -13,7 +13,7 @@ const pageDescription =
   "Norsk økonomiordbok med forklaringer på begreper som realrente, nettoformue, BSU, inflasjon, egenkapital, prosent og annuitetslån.";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Ordbok",
+  title: "Økonomiordbok: begreper forklart",
   description: pageDescription,
   path: "/ordbok",
   keywords: [

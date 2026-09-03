@@ -7,7 +7,7 @@ export const strawberry: FordelArticleContent = {
     "Strawberry-medlemskapet er gratis og gir medlemspris, Spenn og hotellfordeler fra første dag. Forskjellen mellom Blue, Silver, Gold og Platinum er større, og mer komplisert, enn nivånavnene antyder. Her er hvilke netter som teller, hva poengene kan brukes til, og hvilke fordeler som faktisk er garantert.",
   lastVerified: "11. august 2026",
   lastModifiedIso: "2026-08-11",
-  seoTitle: "Strawberry-medlemskap: Blue, Silver, Gold og Platinum forklart",
+  seoTitle: "Strawberry-medlemskap: Blue, Silver, Gold, Platinum",
   seoDescription:
     "Se hva Blue, Silver, Gold og Platinum gir, hvor mange Spenn du tjener, hvilke netter som teller, og hva du mister ved å bestille via Booking.com.",
   seoKeywords: [
