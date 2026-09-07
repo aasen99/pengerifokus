@@ -75,6 +75,7 @@ export const trumf: FordelArticleContent = {
       paragraphs: [
         "Trippel-Trumf er utvalgte dager der medlemmer får 3 % Trumf-bonus. Trumf beskriver dette som 1 % grunnbonus pluss 2 % ekstra Trippel-Trumf-bonus.",
         "Trippel-Trumf gjelder normalt hos flere dagligvarekjeder tilknyttet Trumf. Hvilke dager som gjelder, varierer og bør sjekkes hos Trumf.",
+        "Se [oversikten over Trippel-Trumf-datoer i 2026](/guider/trippel-trumf) for kommende og gjennomførte torsdager.",
       ],
     },
     {
@@ -238,6 +239,7 @@ export const trumf: FordelArticleContent = {
     },
   ],
   relatedLinks: [
+    { label: "Trippel-Trumf 2026: datoer", href: "/guider/trippel-trumf" },
     { label: "Se Trumf-tilbud vi har samlet", href: "/tilbud?program=trumf" },
     { label: "Drivstoffpriser", href: "/guider/drivstoffpriser" },
     { label: "EuroBonus, flybonusprogram", href: "/fordeler/eurobonus" },

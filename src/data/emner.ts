@@ -473,6 +473,12 @@ export const emner: EmneHub[] = [
               "Bonusjeger eller enkel bruker: velg etter forbruk og om du betaler hele fakturaen.",
           },
           {
+            href: "/guider/trippel-trumf",
+            label: "Trippel-Trumf 2026",
+            description:
+              "Kommende og gjennomførte Trippel-Trumf-datoer, bonus og tips.",
+          },
+          {
             href: "/guider/bankenes-fordelsprogrammer",
             label: "Bankenes fordelsprogrammer",
             description:
