@@ -44,6 +44,24 @@ export const emner: EmneHub[] = [
         heading: "Guider",
         links: [
           {
+            href: "/guider/rentemote-september-2026",
+            label: "Rentemøte 24. september 2026",
+            description:
+              "Hva beslutningen og rentebanen kan bety for boliglånet ditt.",
+          },
+          {
+            href: "/guider/bsu-eller-fond",
+            label: "BSU eller fond?",
+            description:
+              "Sammenlign skattefradrag, risiko og tidshorisont før boligkjøpet.",
+          },
+          {
+            href: "/guider/spare-i-fond-eller-betale-ned-boliglan",
+            label: "Fond eller ekstra avdrag?",
+            description:
+              "Sikker rentebesparelse mot usikker langsiktig fondsavkastning.",
+          },
+          {
             href: "/guider/laneramme-for-boligkjop",
             label: "Låneramme før boligkjøp",
             description:
@@ -203,6 +221,18 @@ export const emner: EmneHub[] = [
         heading: "Guider",
         links: [
           {
+            href: "/guider/rentemote-september-2026",
+            label: "Rentemøte 24. september 2026",
+            description:
+              "Regn ut hva 0,25 prosentpoeng kan bety for lånekostnaden.",
+          },
+          {
+            href: "/guider/spare-i-fond-eller-betale-ned-boliglan",
+            label: "Fond eller ekstra avdrag?",
+            description:
+              "Vurder rentebesparelse, fondsrisiko, skatt og likviditet samlet.",
+          },
+          {
             href: "/guider/betal-ned-dyr-gjeld",
             label: "Betal ned dyr gjeld",
             description:
@@ -332,6 +362,18 @@ export const emner: EmneHub[] = [
       {
         heading: "Guider",
         links: [
+          {
+            href: "/guider/bsu-eller-fond",
+            label: "BSU eller fond?",
+            description:
+              "Velg mellom skattefordel til bolig og fri, langsiktig fondssparing.",
+          },
+          {
+            href: "/guider/spare-i-fond-eller-betale-ned-boliglan",
+            label: "Fond eller ekstra avdrag?",
+            description:
+              "Sammenlign forventet avkastning med sikker rentebesparelse.",
+          },
           {
             href: "/guider/bygg-bufferkonto",
             label: "Bygg bufferkonto",
@@ -466,6 +508,12 @@ export const emner: EmneHub[] = [
       {
         heading: "Guider",
         links: [
+          {
+            href: "/guider/trumf-vs-coop",
+            label: "Trumf eller Coop?",
+            description:
+              "Bonus, kjøpeutbytte og hvorfor handlekurvprisen betyr mest.",
+          },
           {
             href: "/guider/velg-riktig-kredittkort",
             label: "Velg riktig kredittkort",
@@ -603,6 +651,18 @@ export const emner: EmneHub[] = [
       {
         heading: "Guider",
         links: [
+          {
+            href: "/guider/statsbudsjettet-2027",
+            label: "Statsbudsjettet 2027",
+            description:
+              "Følg forslagene som kan påvirke skatt, fradrag, ytelser og priser.",
+          },
+          {
+            href: "/guider/halv-skatt",
+            label: "Halv skatt før jul",
+            description:
+              "November eller desember, hva som får fullt trekk, og hva ordningen betyr.",
+          },
           {
             href: "/guider/sifo-budsjett",
             label: "SIFO-referansebudsjettet",

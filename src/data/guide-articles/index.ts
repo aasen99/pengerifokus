@@ -18,6 +18,12 @@ import { stromregningOgNorgespris } from "./stromregning-og-norgespris";
 import { drivstoffpriser } from "./drivstoffpriser";
 import { lanerammeForBoligkjop } from "./laneramme-for-boligkjop";
 import { trippelTrumf } from "./trippel-trumf";
+import { rentemoteSeptember2026 } from "./rentemote-september-2026";
+import { statsbudsjettet2027 } from "./statsbudsjettet-2027";
+import { halvSkatt } from "./halv-skatt";
+import { bsuEllerFond } from "./bsu-eller-fond";
+import { spareIFondEllerBetaleNedBoliglan } from "./spare-i-fond-eller-betale-ned-boliglan";
+import { trumfVsCoop } from "./trumf-vs-coop";
 
 function withReadTime(
   article: Omit<GuideArticleContent, "readTimeMinutes">,
@@ -33,6 +39,14 @@ function withReadTime(
  * Nye artikler legges til i guideArticles og får egen slug.
  */
 const guideArticles: Record<string, GuideArticleContent> = {
+  "rentemote-september-2026": withReadTime(rentemoteSeptember2026),
+  "statsbudsjettet-2027": withReadTime(statsbudsjettet2027),
+  "halv-skatt": withReadTime(halvSkatt),
+  "bsu-eller-fond": withReadTime(bsuEllerFond),
+  "spare-i-fond-eller-betale-ned-boliglan": withReadTime(
+    spareIFondEllerBetaleNedBoliglan,
+  ),
+  "trumf-vs-coop": withReadTime(trumfVsCoop),
   "bankenes-fordelsprogrammer": withReadTime(bankenesFordelsprogrammer),
   "bygg-bufferkonto": withReadTime(byggBufferkonto),
   "kom-i-gang-med-fond": withReadTime(komIGangMedFond),
