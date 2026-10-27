@@ -6,7 +6,7 @@ export const spenn: FordelArticleContent = {
   intro:
     "Spenn er en felles poengvaluta som kobles til eksisterende fordelsprogrammer hos blant annet Norwegian, Strawberry og REMA 1000. Poeng samles i Spenn-appen og kan tjenes og brukes på tvers av flere merkevarer, men verdien er ikke fast i kroner som Trumf eller Coop.",
   lastVerified: "18. august 2026",
-  lastModifiedIso: "2026-08-18",
+  lastModifiedIso: "2026-10-27",
   seoTitle: "Spenn: opptjening, bruk og verdi hos Norwegian og REMA 1000",
   seoDescription:
     "Forstå Spenn: hvordan du tjener poeng hos Norwegian, Strawberry, REMA 1000 og Spenn Shopping, hva de kan brukes til, og hvorfor verdien varierer.",
@@ -57,15 +57,15 @@ export const spenn: FordelArticleContent = {
     {
       heading: "Spenn Shopping og tilbudsoversikten vår",
       paragraphs: [
-        "Spenn Shopping fungerer som en netthandelsportal der opptjening kan variere per butikk, kampanjeperiode og kundetype (for eksempel ny vs. eksisterende kunde).",
-        "For å gjøre det enklere å sammenligne har vi en løpende oversikt over kjente Spenn-tilbud på tvers av butikker. Der kan du filtrere på partner og kategori, og se hvilke satser som er oppgitt nå.",
+        "Du finner aktuelle netthandelspartnere og opptjening i Spenn-appen. Opptjening kan variere per butikk, kampanjeperiode og kundetype (for eksempel ny vs. eksisterende kunde).",
+        "I tilbudsoversikten kan du filtrere på partner og kategori. Tidligere innhentede Spenn-satser er merket som ikke verifisert og må kontrolleres i Spenn-appen før kjøp.",
       ],
       bullets: [
-        "Satser i portalen kan endres uten varsel",
+        "Satser og partnere i appen kan endres uten varsel",
         "«Opptil»-satser gjelder ikke nødvendigvis hele handlekurven",
         "Faste poengkampanjer er vanskeligere å sammenligne direkte med prosent",
       ],
-      tip: "Bruk alltid satsen i Spenn-portalen i kjøpsøyeblikket som fasit.",
+      tip: "Bruk alltid satsen og vilkårene i Spenn-appen i kjøpsøyeblikket som fasit.",
     },
     {
       heading: "Slik bruker du Spenn",
@@ -160,10 +160,6 @@ export const spenn: FordelArticleContent = {
     {
       label: "Spenn til REMA 1000",
       url: "https://spenngroup.com/nb-NO/articles/spenn-til-rema-1000",
-    },
-    {
-      label: "Spenn Shopping",
-      url: "https://www.spenn.com/no/shopping",
     },
     {
       label: "Norwegian, Om Spenn",

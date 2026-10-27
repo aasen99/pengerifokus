@@ -7,6 +7,7 @@ import {
   groupTilbudByPartner,
   paginateGruppertTilbud,
   parseOfferRate,
+  sortGruppertTilbud,
 } from "./tilbud";
 import { filterGruppertTilbudByQuery } from "./tilbud-search";
 import { buildTilbudHref } from "./tilbud-ui";
@@ -55,6 +56,16 @@ describe("parseOfferRate", () => {
     assert.equal(parseOfferRate("45 øre/l"), null);
     assert.equal(parseOfferRate("30–45 øre/l"), null);
     assert.equal(parseOfferRate("40 / 20 øre/l"), null);
+  });
+
+  it("does not mistake purchase prices, fixed savings or guarantee years for percentages", () => {
+    for (const label of ["Apple TV til 499 kr", "460 kr", "300 kr rabatt", "Gratis tinglysningsgebyr (545 kr)", "2 års skadegaranti"]) {
+      assert.equal(parseOfferRate(label), null, label);
+    }
+    assert.equal(parseOfferRate("7,8 % / 195 kr Trumf-bonus"), 7.8);
+    assert.equal(parseOfferRate("6 uker gratis + 5 % bonus"), 5);
+    assert.equal(parseOfferRate("Halv pris"), 50);
+    assert.equal(parseOfferRate("2 for 1"), 50);
   });
 });
 
@@ -126,6 +137,21 @@ describe("default tilbud grouping", () => {
   it("has partner cards on the default grouping", () => {
     assert.ok(grouped.length > 0);
     assert.ok(grouped.every((group) => group.offers.length > 0));
+  });
+
+  it("ranks a percentage benefit before a fixed-price promotion", () => {
+    const telia = grouped.find((group) => group.partner === "Telia")!;
+    const kid = grouped.find((group) => group.partner === "Kid Interiør")!;
+    assert.ok(telia && kid);
+    const sorted = sortGruppertTilbud([telia, kid], "rate-desc");
+    assert.equal(sorted[0].partner, "Kid Interiør");
+  });
+
+  it("keeps Scandic membership alternatives together with official sources", () => {
+    const scandic = grouped.filter((group) => /scandic/i.test(group.partner));
+    assert.equal(scandic.length, 1);
+    assert.deepEqual(scandic[0].offers.map((offer) => offer.fordelSlug).sort(), ["klarna", "lofavor", "trumf"]);
+    assert.ok(grouped.flatMap((group) => group.offers).every((offer) => offer.sourceUrl?.startsWith("https://")));
   });
 
   it("paginates default grouping instead of returning every card", () => {

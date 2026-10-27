@@ -15,12 +15,14 @@ function usblOffer(
     terms?: string;
     warning?: string;
     sourceUrl?: string;
+    updatedAt?: string;
+    status?: Tilbud["status"];
   },
 ): Tilbud {
   return {
     id: `tilbud-usbl-${id}`,
     slug: `usbl-${slug}`,
-    status: "published",
+    status: options?.status ?? "published",
     title: partner,
     description,
     offerLabel,
@@ -33,7 +35,7 @@ function usblOffer(
       "https://www.usbl.no/medlemskap/medlemsfordeler",
     warning: options?.warning,
     createdAt: usblCheckedAt,
-    updatedAt: usblCheckedAt,
+    updatedAt: options?.updatedAt ?? usblCheckedAt,
   };
 }
 
@@ -157,8 +159,9 @@ export const usblTilbud: Tilbud[] = [
     "Usbl-medlemmer får 5 % bonus hos BestDrive, 10 % rabatt på utvalgte verkstedtjenester og 500 kr rabatt på første sesong dekkhotell.",
     "Bil",
     {
+      updatedAt: "2026-10-27",
       terms:
-        "Avtalen gjelder ikke hos alle BestDrive-partnere. Rabatt gjelder ikke allerede nedsatte varer. Verkstedtjenester gjelder kun utvalgte avdelinger. Medlemsbevis for rabatt. Bonus krever bankkort registrert i Bonabo. Dekkhotell: 500 kr første sesong + 5 % bonus, 15 % andre sesong + 5 % bonus.",
+        "Avtalen gjelder ikke hos alle BestDrive-partnere. Rabatt gjelder ikke allerede nedsatte varer. Verkstedtjenester gjelder kun utvalgte avdelinger. Medlemsbevis for rabatt. Bonus krever bankkort registrert i Bonabo. Dekkhotell: 500 kr rabatt første sesong + 5 % bonus, 15 % rabatt andre sesong + 5 % bonus.",
       warning: "Gjelder ikke alle BestDrive-partnere. Sjekk din lokale avdeling.",
       sourceUrl: "https://www.usbl.no/medlemskap/medlemsfordeler/bestdrive",
     },
@@ -208,13 +211,12 @@ export const usblTilbud: Tilbud[] = [
     "nextory",
     "Nextory",
     "6 uker gratis + 5 % bonus",
-    "Usbl-medlemmer får ordinært 6 uker gratis prøveabonnement og 5 % bonus hos Nextory. Kampanje: 10 uker gratis til og med 31. august 2026.",
+    "Usbl-medlemmer får 6 uker gratis prøveabonnement og 5 % bonus på abonnement hos Nextory.",
     "Underholdning",
     {
+      updatedAt: "2026-10-27",
       terms:
-        "Krever innlogging og medlemsnummer. Betalingskort må være registrert i Bonabo for bonus. Ordinært tilbud: 6 uker gratis. Kampanje 10 uker gratis gjelder til 31. august 2026.",
-      warning:
-        "Kampanjen med 10 uker gratis gjelder til og med 31. august 2026. Deretter gjelder ordinært 6 uker gratis.",
+        "Krever innlogging og medlemsnummer. Hent medlemsnummer og bestillingslenke i Bonabo. Betalingskort må være registrert i Bonabo for 5 % bonus på abonnementsprisen hver måned.",
       sourceUrl: "https://www.usbl.no/medlemskap/medlemsfordeler/nextory",
     },
   ),
@@ -239,6 +241,8 @@ export const usblTilbud: Tilbud[] = [
     "Usbl-medlemmer får opptil 25 % rabatt på datofestede billetter til TusenFryd.",
     "Opplevelser",
     {
+      updatedAt: "2026-10-27",
+      status: "draft",
       terms:
         "Gjelder datofestede billetter over 120 cm. Kan ikke kombineres med andre tilbud. Alle attraksjoner unntatt SkyCoaster og The Dungeon er inkludert. Rabattkode hentes i Bonabo.",
       sourceUrl: "https://www.usbl.no/medlemskap/medlemsfordeler/tusenfryd",
@@ -252,6 +256,8 @@ export const usblTilbud: Tilbud[] = [
     "Usbl-medlemmer får 20–30 % rabatt på billetter til Bø Sommarland, og 50 % rabatt på Cabana i juni og august.",
     "Opplevelser",
     {
+      updatedAt: "2026-10-27",
+      status: "draft",
       terms:
         "Sesongbasert tilbud for 2026: 30 % på billetter i juni og august, 20 % i juli. 50 % på Cabana i juni og august.",
       warning: "Sesongtilbud for 2026. Sjekk at det fortsatt gjelder før du booker.",
@@ -321,10 +327,12 @@ export const usblTilbud: Tilbud[] = [
     "piknik-i-parken",
     "Piknik i Parken",
     "20 % rabatt",
-    "Usbl-medlemmer får 20 % rabatt på Piknik i Parken.",
+    "Usbl-medlemmer får 20 % rabatt på dags- og festivalpass til Piknik i Parken i 2026 og 2027.",
     "Kultur",
     {
-      warning: "Festival-/sesongtilbud. Sjekk at det fortsatt gjelder.",
+      updatedAt: "2026-10-27",
+      sourceUrl: "https://www.usbl.no/medlemskap/medlemsfordeler/piknik-i-parken",
+      terms: "Maks to billetter per medlemskap. Hent rabattkode i Bonabo og bestill via Ticketmaster. Medlemsbevis må kunne vises ved henting av festivalbånd.",
     },
   ),
   usblOffer(
@@ -346,10 +354,15 @@ export const usblTilbud: Tilbud[] = [
   usblOffer(
     "kinoklubben",
     "kinoklubben",
-    "Kinoklubben",
-    "Halv pris",
-    "Usbl-medlemmer kan bli medlem i Kinoklubben og få halv pris på flere kinofilmer.",
+    "Kinoklubb",
+    "99 kr første år · halv pris på utvalgte filmer",
+    "Usbl-medlemmer får medlemskap i Kinoklubb til 99 kr første år, med halv pris på minst 12 utvalgte filmer i året.",
     "Underholdning",
+    {
+      updatedAt: "2026-10-27",
+      sourceUrl: "https://www.usbl.no/medlemskap/medlemsfordeler/kinoklubben",
+      terms: "Hent rabattkode i Bonabo. Medlemskapet gjelder ett år og fornyes årlig til 179 kr. Fornyelse kan kanselleres på Min side hos kinoklubb.no. Halv pris gjelder utvalgte filmer; medlemskapet gir også 10 % rabatt på kinogavekort.",
+    },
   ),
   usblOffer(
     "alpinco",

@@ -1,10 +1,10 @@
 import type { Tilbud } from "@/types/content";
 
 const spennOnlineShoppingBase =
-  "Kjøp via Spenn Shopping-portalen og vær innlogget i samme økt. Spenn-opptjening kan endres og kan variere mellom nye og eksisterende kunder.";
+  "Finn partneren i Spenn-appen og følg gjeldende bestillingslenke og vilkår der. Opptjening kan variere etter kampanje, vare og kundetype. Sjekk at partneren fortsatt deltar før kjøp.";
 
-const spennCheckedAt = "2026-08-18";
-const spennSourceUrl = "https://www.spenn.com/no/shopping";
+const spennUpdatedAt = "2026-10-27";
+const spennSourceUrl = "https://spenngroup.com/nb-NO/home";
 
 function spennShoppingOffer(
   id: string,
@@ -19,16 +19,16 @@ function spennShoppingOffer(
     slug: `spenn-${id}`,
     status: "published",
     title: partner,
-    description,
-    offerLabel,
+    description: `Tidligere oppgitt: ${description}`,
+    offerLabel: "Sjekk sats i appen",
     partner,
     fordelSlug: "spenn",
     category,
     terms: options?.terms ?? spennOnlineShoppingBase,
     sourceUrl: spennSourceUrl,
-    warning: options?.warning,
+    warning: `Satsen er ikke verifisert på nytt. Tidligere oppgitt: ${offerLabel}. Sjekk gjeldende opptjening i Spenn-appen før kjøp.`,
     createdAt: "2026-08-18",
-    updatedAt: spennCheckedAt,
+    updatedAt: spennUpdatedAt,
   };
 }
 

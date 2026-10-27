@@ -12,6 +12,23 @@ export function isTilbudOptInProgram(fordelSlug: string): boolean {
   return (TILBUD_OPT_IN_PROGRAMS as readonly string[]).includes(fordelSlug);
 }
 
+/** Offisiell programoversikt når tilbudet ikke har en egen kildelenke. */
+export function getTilbudProgramSourceUrl(fordelSlug: string): string | undefined {
+  const sources: Record<string, string> = {
+    obos: "https://www.obos.no/medlem/medlemsfordeler",
+    trumf: "https://trumfnetthandel.no/kategori",
+    coop: "https://www.coop.no/medlem/fordeler",
+    naf: "https://www.naf.no/medlemskap/medlemsfordeler",
+    klarna: "https://www.klarna.com/no/store/",
+    eurobonus: "https://onlineshopping.flysas.com/nb-NO/",
+    spenn: "https://spenngroup.com/nb-NO/home",
+    usbl: "https://www.usbl.no/medlemskap/medlemsfordeler",
+    lofavor: "https://www.lofavor.no/ferie-og-fritid",
+    "circle-k-extra": "https://www.circlek.no/extra",
+  };
+  return sources[fordelSlug];
+}
+
 export type TilbudSortOption =
   | "name-asc"
   | "rate-desc"

@@ -1,4 +1,4 @@
-﻿import type { Tilbud } from "@/types/content";
+import type { Tilbud } from "@/types/content";
 
 const coopTerms =
   "Krever Coop-medlemskap. Sjekk gjeldende vilkår og bestilling hos Coop.";
@@ -70,39 +70,33 @@ export const coopTilbud: Tilbud[] = [
     slug: "coop-drivstoff-circle-k",
     status: "published",
     title: "Circle K",
-    description:
-      "Coop-medlemmer får 45 øre per liter på betjent Circle K og 25 øre per liter på ubetjent Circle K. Rabatten trekkes på pumpa når medlemskapet er koblet i appen eller du betaler med Coop Mastercard.",
-    offerLabel: "45 / 25 øre/l",
+    description: "Coop-medlemmer får 45 øre per liter i medlemsbonus på betjente Circle K-stasjoner og 25 øre per liter på ubetjente. Bonusen registreres hos Coop og trekkes ikke direkte fra prisen på pumpen.",
+    offerLabel: "45 / 25 øre/l bonus",
     partner: "Circle K",
     fordelSlug: "coop",
     category: "Drivstoff",
     searchTags: ["bensin", "diesel", "drivstoff", "pumpe"],
-    terms:
-      "Krever Coop-medlemskap koblet i Coop-appen eller betaling med Coop Mastercard. 45 øre/l på betjent Circle K, 25 øre/l på ubetjent. Er du også Circle K Extra-medlem, kan du få ekstra rabatt hos Circle K. Sjekk gjeldende sats i appen.",
-    sourceUrl: "https://www.coop.no/medlemsfordeler/",
-    warning:
-      "Sammenlign nettopris: skiltpris minus rabatt. En dyr toppdag med Coop-rabatt kan fortsatt tape mot lav skiltpris et annet sted.",
+    terms: "Registrer Coop-medlemskortet ved pumpen eller skann medlemskort/QR-kode i Coop-appen før betaling i kassen hos Circle K. Med Coop Mastercard registreres medlemskapet automatisk. Se bonusen i Coop-appen eller på Min side.",
+    sourceUrl: "https://www.coop.no/medlem/fordeler/circlek",
+    warning: "Sammenlign skiltpris minus medlemsbonus med andre stasjoner. Bonusen utbetales gjennom Coop og er ikke et direkte prisavslag.",
     createdAt: "2026-08-28",
-    updatedAt: "2026-08-28",
+    updatedAt: "2026-10-27",
   },
   {
     id: "tilbud-coop-6",
     slug: "coop-drivstoff-yx",
     status: "published",
     title: "YX",
-    description:
-      "Coop-medlemmer får 45 øre per liter på betjent YX. Rabatten trekkes på pumpa når medlemskapet er koblet i appen eller du betaler med Coop Mastercard.",
-    offerLabel: "45 øre/l",
+    description: "Coop-medlemmer får 45 øre per liter i medlemsbonus hos YX. Bonusen registreres hos Coop og trekkes ikke direkte fra prisen på pumpen.",
+    offerLabel: "45 øre/l bonus",
     partner: "YX",
     fordelSlug: "coop",
     category: "Drivstoff",
     searchTags: ["bensin", "diesel", "drivstoff", "pumpe"],
-    terms:
-      "Krever Coop-medlemskap koblet i Coop-appen eller betaling med Coop Mastercard. Gjelder betjent YX. Sjekk gjeldende vilkår hos Coop.",
-    sourceUrl: "https://www.coop.no/medlemsfordeler/",
-    warning:
-      "Sammenlign nettopris: skiltpris minus rabatt. En dyr toppdag med Coop-rabatt kan fortsatt tape mot lav skiltpris et annet sted.",
+    terms: "Registrer Coop-medlemskortet ved pumpen eller skann medlemskort/QR-kode i Coop-appen før betaling i kassen hos YX. Med Coop Mastercard registreres medlemskapet automatisk. Se bonusen i Coop-appen eller på Min side.",
+    sourceUrl: "https://www.coop.no/medlem/fordeler/yx",
+    warning: "Sammenlign skiltpris minus medlemsbonus med andre stasjoner. Bonusen utbetales gjennom Coop og er ikke et direkte prisavslag.",
     createdAt: "2026-08-28",
-    updatedAt: "2026-08-28",
+    updatedAt: "2026-10-27",
   },
 ];

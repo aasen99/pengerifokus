@@ -15,12 +15,14 @@ function lofavorOffer(
     terms?: string;
     warning?: string;
     sourceUrl?: string;
+    updatedAt?: string;
+    status?: Tilbud["status"];
   },
 ): Tilbud {
   return {
     id: `tilbud-lofavor-${id}`,
     slug: `lofavor-${slug}`,
-    status: "published",
+    status: options?.status ?? "published",
     title: partner,
     description,
     offerLabel,
@@ -31,7 +33,7 @@ function lofavorOffer(
     sourceUrl: options?.sourceUrl ?? "https://www.lofavor.no/",
     warning: options?.warning,
     createdAt: lofavorCheckedAt,
-    updatedAt: lofavorCheckedAt,
+    updatedAt: options?.updatedAt ?? lofavorCheckedAt,
   };
 }
 
@@ -67,12 +69,15 @@ export const lofavorTilbud: Tilbud[] = [
     "tusenfryd",
     "tusenfryd",
     "TusenFryd",
-    "15–25 % rabatt",
-    "LO-medlemmer får 25 % rabatt på TusenFryd i april–juni og august–oktober, og 15 % i juli. Gjelder inntil 5 datofestede billetter.",
+    "30 % rabatt",
+    "LO-medlemmer får 30 % rabatt på inntil fem datofestede dagsbilletter til TusenFryd ut 2026-sesongen.",
     "Opplevelser",
     {
+      status: "draft",
+      updatedAt: "2026-10-27",
+      warning: "Gjelder ut 2026-sesongen. Sjekk parkens åpningskalender før bestilling.",
       terms:
-        "Forhåndsbestill på nett og oppgi rabattkoden fra lofavor.no. Juli har egen kode. Velg datert dagsbillett. Rabatten trekkes fra lukepris og gjelder billetter over 120 cm. Barn under 95 cm er gratis. Medlemskort vises ved inngang. Kan ikke kombineres med andre tilbud. SkyCoaster og The Dungeon koster ekstra.",
+        "Forhåndsbestill på nett via LOfavør og oppgi koden LOFAV26TUS. Gjelder inntil fem datofestede dagsbilletter over 120 cm. Rabatten trekkes fra lukepris, oppgitt til 619 kr. Barn under 95 cm er gratis. Medlemskort vises ved inngang. Kan ikke kombineres med andre tilbud. SkyCoaster og The Dungeon koster ekstra.",
       sourceUrl: "https://www.lofavor.no/ferie-og-opplevelser/tusenfryd",
     },
   ),
@@ -80,12 +85,13 @@ export const lofavorTilbud: Tilbud[] = [
     "strawberry",
     "strawberry",
     "Strawberry",
-    "15 % rabatt",
-    "LO-medlemmer får 15 % rabatt på Strawberry-hoteller i Norge, Sverige, Danmark og Baltikum.",
+    "15–20 % rabatt",
+    "LO-medlemmer får 15 % rabatt på én natt og 20 % ved to eller flere netter på fleksible priser hos Strawberry. 20 %-rabatten gjelder ikke tirsdag og onsdag.",
     "Hotell",
     {
+      updatedAt: "2026-10-27",
       terms:
-        "Book via LOfavør. Gjelder Comfort, Quality og Clarion. Gjelder ikke frittstående hoteller. Kan sjelden stables med Strawberry-medlemspris på samme booking.",
+        "Book via LOfavør. 15 % gjelder én natt alle dager. 20 % gjelder to eller flere netter på fleksible priser, unntatt tirsdag og onsdag. Gjelder Comfort, Quality og Clarion i Skandinavia og Baltikum, ikke frittstående hoteller. Kredittkort må oppgis som garanti ved nettbestilling.",
       sourceUrl: "https://www.lofavor.no/ferie-og-fritid/strawberry",
     },
   ),
@@ -93,12 +99,13 @@ export const lofavorTilbud: Tilbud[] = [
     "hurtigruten",
     "hurtigruten",
     "Hurtigruten",
-    "5–10 % rabatt",
-    "LO-medlemmer får 10 % rabatt for seg og familien på Hurtigrutens reiser langs norskekysten, og 5 % på ekspedisjonsreiser.",
+    "10 % rabatt",
+    "LO-medlemmer får 10 % rabatt for seg og familien på reiser langs norskekysten når de bestiller sammen.",
     "Reise",
     {
+      updatedAt: "2026-10-27",
       terms:
-        "10 % gjelder kystreisen. 5 % gjelder ekspedisjonsreiser. Oppgi LOfavør-tilhørighet ved bestilling, ellers faller rabatten bort. Bekreft ekspedisjonsrabatten når du booker. LOfavør oppgir at rabatten ofte kan kombineres med andre Hurtigruten-tilbud, men ikke fly, utflukter, hotell og transport. Bestill via LOfavør eller lofavor@hurtigruten.com.",
+        "Gjelder reiser mellom 24 timer og fem døgn langs norskekysten. Oppgi LOfavør-tilhørighet ved bestilling, ellers faller rabatten bort. Gjelder også familien ved felles bestilling. Bestill hos Hurtigruten på 800 24 932 eller lofavor@hurtigruten.com. Kan med enkelte unntak kombineres med andre rabatter og kampanjer; se LOfavørs vilkår.",
       sourceUrl: "https://www.lofavor.no/ferie-og-opplevelser/hurtigruten",
     },
   ),

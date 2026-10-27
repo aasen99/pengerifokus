@@ -4,6 +4,7 @@ import { matchesSearchTokens, normalizeSearchText } from "@/lib/normalize-search
 import { matchesTilbudCategoryGroup, isStudentTilbudCategory } from "@/lib/tilbud-categories";
 import {
   isTilbudOptInProgram,
+  getTilbudProgramSourceUrl,
   type TilbudSortOption,
 } from "@/lib/tilbud-ui";
 
@@ -106,7 +107,7 @@ export function groupTilbudByPartner(entries: Tilbud[]): GruppertTilbud[] {
           description: entry.description,
           category: entry.category,
           terms: entry.terms,
-          sourceUrl: entry.sourceUrl,
+          sourceUrl: entry.sourceUrl ?? getTilbudProgramSourceUrl(entry.fordelSlug),
           warning: entry.warning,
           searchText: getTilbudSearchText(entry, fordelName),
         };
@@ -157,7 +158,7 @@ function parseOfferNumber(raw: string): number {
   return parseFloat(raw.replace(/\s/g, "").replace(",", "."));
 }
 
-/** Trekker ut sammenlignbart tall fra offerLabel, f.eks. «15–20 %» → 20 eller «3,8 Spenn / 10 kr» → 3,8 (ca. kr-verdi ved Spenn) */
+/** Prosentfordel eller anslått poengverdi per 100 kr. Priser og faste beløp er ikke sammenlignbare. */
 export function parseOfferRate(
   offerLabel: string,
   fordelSlug?: string,
@@ -193,10 +194,18 @@ export function parseOfferRate(
     return null;
   }
 
-  const matches = offerLabel.match(/\d+[,.]?\d*/g);
-  if (!matches?.length) return null;
+  const percentages = [...offerLabel.matchAll(
+    /(\d+(?:[,.]\d+)?)(?:\s*[–-]\s*(\d+(?:[,.]\d+)?))?\s*%/g,
+  )];
+  if (percentages.length) {
+    return Math.max(...percentages.flatMap((match) =>
+      [match[1], match[2]].filter(Boolean).map(parseOfferNumber),
+    ));
+  }
 
-  return Math.max(...matches.map((match) => parseOfferNumber(match)));
+  if (/halv\s*pris|2\s+for\s+1/i.test(offerLabel)) return 50;
+
+  return null;
 }
 
 function getGroupBestRate(group: GruppertTilbud): number {

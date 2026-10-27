@@ -1,4 +1,4 @@
-﻿import type { Tilbud } from "@/types/content";
+import type { Tilbud } from "@/types/content";
 
 const klarnaTerms =
   "Cashback via Klarna. Krever betaling/handling gjennom Klarna. Sjekk gjeldende vilkår hos Klarna.";
@@ -46,7 +46,7 @@ const klarnaCashback: Array<{ partner: string; rate: string }> = [
   { partner: "24mx", rate: "5" },
   { partner: "Polarn O. Pyret", rate: "5,5" },
   { partner: "ARKET", rate: "7" },
-  { partner: "scandic", rate: "3" },
+  { partner: "Scandic Hotels", rate: "3" },
   { partner: "Disney+", rate: "10,5" },
   { partner: "Vila", rate: "7" },
   { partner: "Tiger of Sweden", rate: "8,5" },

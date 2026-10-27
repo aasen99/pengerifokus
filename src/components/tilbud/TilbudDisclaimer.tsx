@@ -45,6 +45,11 @@ export function TilbudDisclaimer({
             varsel. Vi oppdaterer listen fortløpende, men garanterer ikke at
             alle rabatter er gjeldende akkurat nå.
           </p>
+          <p>
+            Oppdateringsdatoen gjelder listen. Den betyr ikke at alle satser
+            er kontrollert på samme dato. Tilbud som trenger ny kontroll, er
+            merket på kortet.
+          </p>
           {showTrumfNetthandelNote && (
             <p>
               <span className="font-semibold text-stone-800">
