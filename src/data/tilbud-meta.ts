@@ -9,7 +9,7 @@ export const tilbudListMeta = {
     "offisielle Trumf Netthandel-sider",
     "Trumf Esso",
     "Coop medlemsfordeler",
-    "Circle K Extra",
+    "Circle K Extra (nivåer og belønninger kontrollert 11. november 2026)",
     "NAF medlemsfordeler",
     "Klarna cashback",
     "SAS EuroBonus restaurant- og partnerprogram",
