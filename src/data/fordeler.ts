@@ -111,11 +111,11 @@ export const fordeler: Fordel[] = [
     status: "published",
     name: "Spenn",
     description:
-      "Felles poengvaluta hos Norwegian, Strawberry og REMA 1000. Slik tjener og bruker du Spenn, og hvorfor verdien varierer.",
+      "Felles poengvaluta hos Norwegian, Strawberry, REMA 1000 og Uno-X. Les om 2–4 Spenn per liter drivstoff, opptjening og variabel poengverdi.",
     type: "Lojalitetsprogram",
-    useCase: "Reise, hotell og dagligvarer",
+    useCase: "Reise, hotell, dagligvarer og drivstoff",
     createdAt: "2026-07-02",
-    updatedAt: "2026-07-02",
+    updatedAt: "2026-11-11",
   },
   {
     id: "fordel-11",
