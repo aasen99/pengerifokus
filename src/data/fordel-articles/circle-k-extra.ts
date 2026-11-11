@@ -4,12 +4,12 @@ export const circleKExtra: FordelArticleContent = {
   slug: "circle-k-extra",
   title: "Circle K Extra",
   intro:
-    "Circle K Extra er det gratis fordelsprogrammet i Circle K-appen. Du får rabatt på drivstoff og lading etter hvor ofte du besøker stasjonen, faste medlemspriser i butikk, belønninger etter besøk – og ekstra rabatt hvis du også er Coop- eller NAF-medlem.",
-  lastVerified: "25. august 2026",
-  lastModifiedIso: "2026-08-25",
+    "Circle K Extra er et gratis fordelsprogram med besøksbasert rabatt på drivstoff og lading: 30, 40 eller 45 øre etter antall besøk siste 90 dager. Du kan også velge en belønning etter hvert femte besøk. Andre medlemsfordeler må vurderes separat – rabatter kan ikke uten videre legges sammen.",
+  lastVerified: "11. november 2026",
+  lastModifiedIso: "2026-11-11",
   seoTitle: "Circle K Extra: drivstoffrabatt, lading og medlemsfordeler",
   seoDescription:
-    "Slik fungerer Circle K Extra: 30–45 øre/l etter besøk, laderabatt, butikkfordeler, Coop/NAF-kombinasjon og velkomsttilbud forklart.",
+    "Circle K Extra 2026: 30/40/45 øre per liter eller kWh, nivåer ved 8 og 15 besøk siste 90 dager og belønning etter hvert 5. besøk. Sammenlign Coop-bonus og nettopris.",
   seoKeywords: [
     "Circle K Extra",
     "Circle K medlemskap",
@@ -30,30 +30,31 @@ export const circleKExtra: FordelArticleContent = {
     {
       heading: "Drivstoff- og laderabatt etter besøk",
       paragraphs: [
-        "Circle K har lagt om til et besøksbasert nivåsystem. Rabatten styres av hvor mange ganger du har besøkt Circle K de siste 90 dagene. Samme nivå gjelder typisk både drivstoff og lading.",
-        "Besøk telles uansett hva du kjøper – også is, kaffe eller andre butikkvarer. Du trenger ikke fylle drivstoff for å bygge opp høyere nivå.",
+        "Circle K Extra bruker et nivåsystem der antall tellende besøk siste 90 dager styrer rabatten. Det er en rullerende periode: antallet kan både øke og falle fra dag til dag. Appen viser din gjeldende rabatt.",
+        "Ett besøk er ett kjøp: fylling, lading, bilvask eller handel i butikken teller. Én kvittering er ett besøk, med maksimalt fem tellende besøk per kalenderdag. Drivstoffrabatten på 30–45 øre/l gjelder på bemannede Circle K-stasjoner. Følg appen for gjeldende ladesats og hvilke stasjoner som omfattes.",
       ],
       bullets: [
-        "Grunnnivå: 30 øre/l (og tilsvarende på lading)",
-        "8+ besøk siste 90 dager: 40 øre/l",
-        "15+ besøk siste 90 dager: 45 øre/l",
-        "Registrer medlemskap/betaling i appen – ellers telles ikke besøket",
+        "Nivå 1 (0–7 besøk): 30 øre per liter drivstoff og 30 øre/kWh lading",
+        "Nivå 2 (8–14 besøk): 40 øre per liter drivstoff og 40 øre/kWh lading",
+        "Nivå 3 (15 eller flere besøk): 45 øre per liter drivstoff og 45 øre/kWh lading",
+        "Besøkene telles i rullerende 90 dager – nivået kan gå både opp og ned",
+        "Drivstoffrabatten gjelder bemannede Circle K-stasjoner; sjekk alltid din sats og tilknyttede betalingskort i appen",
       ],
       tip: "Sjekk alltid nettopris: skiltpris minus rabatt. En «dyr» toppdag med god Extra-rabatt kan fortsatt tape mot lav skiltpris et annet sted.",
     },
     {
       heading: "Coop, NAF og andre medlemskap",
       paragraphs: [
-        "Circle K Extra kan kombineres med enkelte andre medlemskap. Coop-medlemmer får for eksempel 45 øre/l på betjent Circle K og YX, og 25 øre/l på ubetjent Circle K – og kan få ekstra rabatt når Extra også er koblet.",
-        "NAF og enkelte andre organisasjoner har egne satser hos Circle K. Satser endres, så sjekk Circle K-appen og partneren før du fyller.",
+        "Coop-medlemmer får normalt 45 øre/l i medlemsbonus på bemannede Circle K-stasjoner og 25 øre/l på ubetjente Circle K-stasjoner. Dette er opptjent medlemsbonus, ikke nødvendigvis avslag direkte ved pumpen. Coops vilkår sier at medlemsbonusen ikke kan kombineres med andre rabatter. En høyere Coop-sats skal derfor ikke automatisk legges oppå Extra-rabatten.",
+        "Coop har også omtalt et eget introduksjonstilbud på 75 øre/l i 30 dager ved kobling gjennom Coop-appen. Dette er en særskilt kampanje, ikke en permanent kombinasjonsrabatt. Coop opplyser samtidig om en midlertidig teknisk begrensning for nye koblinger mellom Coop og Circle K EXTRA. Bruk Coop-kort eller app som Coop beskriver dersom du ønsker medlemsbonus. Andre medlemsavtaler, inkludert NAF, må kontrolleres separat mot gjeldende vilkår.",
       ],
       tip: "Les også drivstoffguiden vår for oversikt over Coop, Trumf (Esso) og Circle K Extra side om side.",
     },
     {
       heading: "Butikkfordeler og belønninger",
       paragraphs: [
-        "Som Extra-medlem får du faste medlemspriser på utvalgte varer (for eksempel drikke, snacks og enkle måltider) og kampanjer i appen. Circle K beskriver også belønninger du kan velge etter et visst antall besøk.",
-        "Nye medlemmer kan få velkomsttilbud med høyere drivstoff- og laderabatt i en begrenset periode – sjekk appen for gjeldende vilkår.",
+        "Som Extra-medlem får du medlemspriser og tilbud i butikk. Etter hvert femte tellende besøk får du velge én belønning fra en meny i Circle K-appen, for eksempel mat, drikke eller bilprodukter. Dette er et eget belønningsspor og må ikke forveksles med rabattnivåene ved 8 og 15 besøk.",
+        "Når belønningsmenyen blir tilgjengelig, må du velge kupong innen 90 dager. En aktivert kupong har egen utløpsdato, vanligvis 30 dager. Sjekk appen for valgene og fristene som gjelder deg. Introduksjonstilbud kan forekomme, men er tidsbegrensede og skal ikke forveksles med fast rabatt.",
       ],
     },
     {
@@ -73,7 +74,22 @@ export const circleKExtra: FordelArticleContent = {
     {
       question: "Teller is og kaffe som besøk?",
       answer:
-        "Ja. Besøk telles typisk uansett kjøp – også små butikkjøp. Unntak kan gjelde enkelte produkttyper; sjekk Circle Ks vilkår.",
+        "Ja. Circle K teller ett kjøp som ett besøk, også i butikk. Én kvittering er ett besøk, og maksimalt fem besøk kan telle per kalenderdag. Rabattnivået beregnes fra siste 90 dager.",
+    },
+    {
+      question: "Når får jeg bedre rabatt i Circle K Extra?",
+      answer:
+        "Du får 30 øre/l og 30 øre/kWh ved 0–7 besøk, 40 øre ved 8–14 besøk og 45 øre ved 15 eller flere besøk siste 90 dager. Drivstoffrabatten gjelder bemannede Circle K-stasjoner. Antall besøk er rullerende, så nivået kan også gå ned.",
+    },
+    {
+      question: "Når får jeg velge en belønning?",
+      answer:
+        "Etter hvert femte tellende besøk kan du velge én belønning i Circle K-appen. Du må velge kupong innen 90 dager, og deretter gjelder kupongens egen utløpsfrist.",
+    },
+    {
+      question: "Kan jeg få både Coop-bonus og Circle K Extra-rabatt på drivstoff?",
+      answer:
+        "Ikke regn med å legge sammen rabattene. Coop sier at medlemsbonusen ikke kan kombineres med andre rabatter. Coop gir normalt 45 øre/l i medlemsbonus på betjente og 25 øre/l på ubetjente Circle K-stasjoner. Sammenlign vilkårene og faktisk nettopris før du fyller.",
     },
     {
       question: "Gir Extra rabatt på YX?",
@@ -94,6 +110,18 @@ export const circleKExtra: FordelArticleContent = {
     {
       label: "Circle K – Extra-fordeler",
       url: "https://www.circlek.no/extra/fordeler",
+    },
+    {
+      label: "Circle K – Vilkår for belønninger",
+      url: "https://www.circlek.no/extra/betingelser",
+    },
+    {
+      label: "Coop – Circle K og medlemsbonus",
+      url: "https://www.coop.no/medlem/fordeler/circlek",
+    },
+    {
+      label: "Coop – betingelser for medlemsbonus",
+      url: "https://www.coop.no/medlem/fordeler/circlek/betingelser",
     },
   ],
   relatedLinks: [
