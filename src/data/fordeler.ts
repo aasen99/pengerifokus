@@ -271,11 +271,11 @@ export const fordeler: Fordel[] = [
     featured: true,
     name: "Circle K Extra",
     description:
-      "Gratis fordelsprogram med 30–45 øre/l etter besøk, laderabatt, butikkpriser og kombinasjon med Coop/NAF.",
+      "Gratis fordelsprogram med 30/40/45 øre/l eller øre/kWh etter 0–7, 8–14 og 15+ besøk på 90 dager, pluss belønning etter hvert femte besøk. Coop-bonus må vurderes separat.",
     type: "Kundeklubb",
     useCase: "Drivstoff, lading og stasjonsbutikk",
     createdAt: "2026-08-25",
-    updatedAt: "2026-08-25",
+    updatedAt: "2026-11-11",
   },
   {
     id: "fordel-24",
