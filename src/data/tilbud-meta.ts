@@ -3,7 +3,7 @@
  * Oppdateres når tilbud verifiseres eller endres hos partner.
  */
 export const tilbudListMeta = {
-  lastUpdated: "2026-10-27",
+  lastUpdated: "2026-11-11",
   sources: [
     "OBOS medlemsfordeler",
     "offisielle Trumf Netthandel-sider",
@@ -15,6 +15,7 @@ export const tilbudListMeta = {
     "SAS EuroBonus restaurant- og partnerprogram",
     "SAS Online Shopping (onlineshopping.flysas.com)",
     "Spenn, offisiell nettside og app (spenngroup.com)",
+    "Uno-X Spenn, drivstoffsatser og kortregistrering (unox.no/spenn/)",
     "Usbl medlemsfordeler",
     "offisielle studentrabatter hos partnere",
     "LOfavør medlemsfordeler",
