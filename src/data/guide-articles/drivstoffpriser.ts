@@ -44,11 +44,11 @@ export const drivstoffpriser: Omit<GuideArticleContent, "readTimeMinutes"> = {
           },
           {
             label: "Circle K EXTRA",
-            value: "30–45 øre/l drivstoff · laderabatt i øre/kWh etter besøk",
+            value: "0–7 besøk: 30 øre/l · 8–14: 40 øre/l · 15+: 45 øre/l på bemannede stasjoner; tilsvarende 30/40/45 øre/kWh lading",
           },
         ],
       },
-      tip: "Coop beskriver 45/25 øre som medlemsbonus i fordelsregnskapet, ikke nødvendigvis direkte avslag på pumpa. Trumf-bonus hos Esso er Trumf-kroner, ikke alltid fratrekk på literprisen.",
+      tip: "Coop beskriver 45/25 øre som medlemsbonus i fordelsregnskapet, ikke nødvendigvis direkte avslag på pumpa, og bonusen kan ikke kombineres med andre rabatter. Circle K Extra teller ett kjøp som ett besøk (maks fem per dag), bruker en rullerende 90-dagersperiode og gir valgfri belønning etter hvert 5. besøk. Extra-satsene og besøksreglene er kontrollert 11. november 2026. Trumf-bonus hos Esso er Trumf-kroner, ikke alltid fratrekk på literprisen.",
     },
     {
       heading: "Hva betaler du egentlig for?",
