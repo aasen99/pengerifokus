@@ -33,6 +33,26 @@ function spennShoppingOffer(
 }
 
 export const spennTilbud: Tilbud[] = [
+  {
+    id: "tilbud-spenn-uno-x-drivstoff",
+    slug: "spenn-uno-x-drivstoff",
+    status: "published",
+    title: "Uno-X drivstoff",
+    description:
+      "Tjen 2 Spenn per liter bensin eller diesel på selvbetjente Uno-X-stasjoner, eller 4 Spenn per liter hos Uno-X 7-Eleven.",
+    offerLabel: "2–4 Spenn per liter",
+    partner: "Uno-X",
+    fordelSlug: "spenn",
+    category: "Bil",
+    terms:
+      "Koble Uno-X-kontoen til Spenn og legg betalingskortet du bruker inn i Uno-X-appen. Kjøp på pumpen med et registrert kort gir automatisk Spenn-opptjening. 2 Spenn/l på selvbetjent Uno-X og 4 Spenn/l hos Uno-X 7-Eleven.",
+    sourceUrl: "https://unox.no/spenn/",
+    warning:
+      "Spenn er ikke en direkte pumpeprisrabatt og har ingen fast kroneverdi. Sammenlign faktisk literpris før du fyller; selvbetjente stasjoner kan være billigere selv om de gir færre Spenn. Sats kontrollert 11. november 2026.",
+    searchTags: ["bensin", "diesel", "drivstoff", "fylle", "bensinstasjon", "pumpepris", "7-eleven"],
+    createdAt: "2026-11-11",
+    updatedAt: "2026-11-11",
+  },
   spennShoppingOffer(
     "wolt",
     "Wolt",
