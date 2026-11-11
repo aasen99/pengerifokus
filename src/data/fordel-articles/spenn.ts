@@ -6,7 +6,7 @@ export const spenn: FordelArticleContent = {
   intro:
     "Spenn er en felles poengvaluta som kobles til eksisterende fordelsprogrammer hos blant annet Norwegian, Strawberry og REMA 1000. Poeng samles i Spenn-appen og kan tjenes og brukes på tvers av flere merkevarer, men verdien er ikke fast i kroner som Trumf eller Coop.",
   lastVerified: "18. august 2026",
-  lastModifiedIso: "2026-10-27",
+  lastModifiedIso: "2026-11-11",
   seoTitle: "Spenn: opptjening, bruk og verdi hos Norwegian og REMA 1000",
   seoDescription:
     "Forstå Spenn: hvordan du tjener poeng hos Norwegian, Strawberry, REMA 1000 og Spenn Shopping, hva de kan brukes til, og hvorfor verdien varierer.",
@@ -49,10 +49,27 @@ export const spenn: FordelArticleContent = {
         "Norwegian: 1 Spenn per 10 kr på LowFare, 2 på LowFare+ og 5 på Flex. Gjelder Norwegian- og kommersielle Widerøe-flyvninger",
         "Strawberry: 3 Spenn per 10 kr (eller per 1 EUR) på Blue, totalt 4/5/6 Spenn på Silver/Gold/Platinum (+1/+2/+3 medlemsboost)",
         "REMA 1000: 10 % bonus på frukt og grønt utbetalt i Spenn når Spenn er aktivert i REMA-appen",
-        "Narvesen, 7-Eleven og Uno-X: inngår i Spenn-økosystemet, sjekk gjeldende satser i appen",
+        "Uno-X: 2 Spenn per liter bensin eller diesel på selvbetjente stasjoner, 4 Spenn per liter hos Uno-X 7-Eleven. Betalingskortet må være registrert i Uno-X-appen",
+        "Narvesen og 7-Eleven: sjekk gjeldende opptjening på butikkjøp i appen",
         "Spenn Shopping: nettbutikker med satser som ofte oppgis som «Spenn per 10 kr» eller faste kampanjepoeng",
       ],
       tip: "Strawberry oppgir at opptjente Spenn er gyldige i 36 måneder fra måneden de tjenes inn.",
+    },
+    {
+      heading: "Spenn hos Uno-X: bonus på bensin og diesel",
+      paragraphs: [
+        "Uno-X gir 2 Spenn per liter bensin eller diesel på selvbetjente Uno-X-stasjoner og 4 Spenn per liter hos Uno-X 7-Eleven. Satsene er kontrollert mot Uno-X 11. november 2026. Det er poengopptjening, ikke et direkte avslag i pumpeprisen.",
+        "For å få poengene må du koble Uno-X-kontoen til Spenn og registrere betalingskortet du bruker i Uno-X-appen. Da knyttes betaling på pumpen automatisk til kontoen. Du kan legge til flere kort. For bankkort med BankAxept anbefaler Uno-X tilknytning via Vipps; kredittkort kan registreres for fysisk kort og mobilbetaling, avhengig av betalingsmåte.",
+        "På en fylling på 40 liter gir dette 80 Spenn ved selvbetjent Uno-X eller 160 Spenn hos Uno-X 7-Eleven. Spenn har ikke en fast kroneverdi, så det er misvisende å omtale poengene som en bestemt rabatt per liter.",
+        "Uno-X har som mål å konkurrere på lav pumpepris, særlig ved selvbetjente stasjoner. Det er likevel den faktiske literprisen på stasjonen du skal bruke som teller. Sammenlign pumpepris minus den reelle verdien du selv får av poengene: en lavere pris uten bonus kan være bedre enn en høyere pris med flere Spenn.",
+      ],
+      bullets: [
+        "Selvbetjent Uno-X: 2 Spenn per liter",
+        "Uno-X 7-Eleven: 4 Spenn per liter",
+        "Registrer betalingskort i Uno-X-appen og koble kontoen til Spenn før du fyller",
+        "Sjekk også aktuell pumpepris. Flere Spenn betyr ikke nødvendigvis billigere drivstoff",
+      ],
+      tip: "Pris slår poeng: Hvis en stasjon er 1 kr billigere per liter, sparer du 40 kr på en 40-liters fylling. De ekstra poengene ved en dyrere stasjon må være verdt mer enn prisforskjellen for at det skal lønne seg.",
     },
     {
       heading: "Spenn Shopping og tilbudsoversikten vår",
@@ -138,6 +155,11 @@ export const spenn: FordelArticleContent = {
         "Ja. Spenn kan brukes på flyvninger og tilleggstjenester som bagasje og setevalg, men ikke til skatter og avgifter. Norwegian oppgir ingen blackout-datoer eller minimumsforbruk på egne flyvninger.",
     },
     {
+      question: "Hvor mange Spenn får jeg på bensin og diesel hos Uno-X?",
+      answer:
+        "Du får 2 Spenn per liter på selvbetjente Uno-X-stasjoner og 4 Spenn per liter hos Uno-X 7-Eleven. Koble Uno-X-appen til Spenn, registrer betalingskortet du betaler med og sammenlign alltid pumpepris før du fyller. Spenn har ikke en fast kroneverdi.",
+    },
+    {
       question: "Utløper Spenn-poeng?",
       answer:
         "Ja, poeng kan utløpe. Strawberry oppgir at Spenn tjent hos dem er gyldige i 36 måneder fra måneden de tjenes inn. Sjekk vilkår hos andre partnere i Spenn-appen.",
@@ -149,6 +171,10 @@ export const spenn: FordelArticleContent = {
     },
   ],
   sources: [
+    {
+      label: "Uno-X, tjen Spenn på drivstoff og bilvask (kontrollert 11. november 2026)",
+      url: "https://unox.no/spenn/",
+    },
     {
       label: "Spenn, Slik fungerer det",
       url: "https://spenngroup.com/nb-NO/how-it-works",
