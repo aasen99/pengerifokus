@@ -6,6 +6,28 @@
  */
 export const guider: Guide[] = [
   {
+    id: "guide-25",
+    slug: "penni-den-store-utfordreren",
+    status: "published",
+    featured: true,
+    title: "Penni – den store utfordreren?",
+    description:
+      "Penni utfordrer storbankene med høy sparerente, rente på brukskonto og månedlig renteutbetaling. Men lønner det seg når bankkortet koster 300 kroner?",
+    category: "Bank",
+    tags: [
+      "Penni",
+      "Eika Digitalbank",
+      "sparekonto",
+      "brukskonto",
+      "bankkort",
+      "innskuddsrente",
+      "månedlig renteutbetaling",
+    ],
+    createdAt: "2026-11-13",
+    updatedAt: "2026-11-13",
+  },
+
+  {
     id: "guide-19",
     slug: "rentemote-september-2026",
     status: "published",
