@@ -24,6 +24,7 @@ import { halvSkatt } from "./halv-skatt";
 import { bsuEllerFond } from "./bsu-eller-fond";
 import { spareIFondEllerBetaleNedBoliglan } from "./spare-i-fond-eller-betale-ned-boliglan";
 import { trumfVsCoop } from "./trumf-vs-coop";
+import { penniDenStoreUtfordreren } from "./penni-den-store-utfordreren";
 
 function withReadTime(
   article: Omit<GuideArticleContent, "readTimeMinutes">,
@@ -39,6 +40,7 @@ function withReadTime(
  * Nye artikler legges til i guideArticles og får egen slug.
  */
 const guideArticles: Record<string, GuideArticleContent> = {
+  "penni-den-store-utfordreren": withReadTime(penniDenStoreUtfordreren),
   "rentemote-september-2026": withReadTime(rentemoteSeptember2026),
   "statsbudsjettet-2027": withReadTime(statsbudsjettet2027),
   "halv-skatt": withReadTime(halvSkatt),
