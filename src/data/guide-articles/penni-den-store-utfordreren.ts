@@ -52,6 +52,8 @@ export const penniDenStoreUtfordreren: Omit<
       paragraphs: [
         "Pennis ordinære bankkort koster 300 kroner i året for voksne. Kortkjøp er oppført med 0 kroner i gebyr, men valutapåslaget ved betaling i utenlandsk valuta er 1,95 prosent.",
         "Tenk deg at alternativet er en gratis brukskonto uten renter, og at saldoen er omtrent uendret gjennom hele året. Da blir effekten av Pennis 3,04 prosent effektive brukskontorente slik:",
+        "I dette forenklede tilfellet må du holde omtrent 12 650 kroner i gjennomsnitt på brukskontoen for at renteinntektene etter skatt skal dekke kortavgiften. Det er ikke en universell grense for når Penni lønner seg: Har du allerede et kort som koster penger, eller en brukskonto med renter, blir sammenligningen annerledes.",
+        "Husk også alternativkostnaden. Penger du ikke trenger til betalinger kunne i stedet stått på Pennis sparekonto med høyere rente. Derfor bør du ikke fylle brukskontoen med unødvendig mye penger bare for å «tjene inn» bankkortet.",
       ],
       table: {
         caption: "Illustrasjon: renter på brukskonto, fratrukket 22 % skatt og 300 kr kortavgift",
@@ -63,10 +65,6 @@ export const penniDenStoreUtfordreren: Omit<
           { label: "30 000 kr gjennomsnittlig saldo", value: "912 kr renter før skatt → ca. +411 kr netto" },
         ],
       },
-      paragraphs: [
-        "I dette forenklede tilfellet må du holde omtrent 12 650 kroner i gjennomsnitt på brukskontoen for at renteinntektene etter skatt skal dekke kortavgiften. Det er ikke en universell grense for når Penni lønner seg: Har du allerede et kort som koster penger, eller en brukskonto med renter, blir sammenligningen annerledes.",
-        "Husk også alternativkostnaden. Penger du ikke trenger til betalinger kunne i stedet stått på Pennis sparekonto med høyere rente. Derfor bør du ikke fylle brukskontoen med unødvendig mye penger bare for å «tjene inn» bankkortet.",
-      ],
       tip:
         "Kortavgiften skal bare trekkes fra hvis du faktisk bestiller og betaler for kortet. Regneeksemplene er avrundet og forutsetter uendret saldo og rente gjennom ett år.",
     },
@@ -181,7 +179,7 @@ export const penniDenStoreUtfordreren: Omit<
     { label: "Eika Gruppen: Penni gir hele rentehevingen videre 24. september", url: "https://kommunikasjon.ntb.no/pressemelding/19080450/penni-gir-hele-rentehevingen-videre-til-sparekundene?lang=no&publisherId=90104" },
     { label: "DNB: endrede renter fra september/november 2026", url: "https://news.cision.com/no/dnb-bank-asa/r/dnb-oker-renten-pa-boliglan-og-innskudd,c4401421" },
     { label: "Nordea: informasjon om renteendringer", url: "https://www.nordea.no/privat/vare-produkter/priser/varsel-om-renteendring.html" },
-    { label: "Lovdata: finansavtaleloven § 3-13", url: "https://lovdata.no/lov/2020-12-18-146/§3-13" },
+    { label: "Lovdata: finansavtaleloven § 3-13", url: "https://lovdata.no/dokument/NL/lov/2020-12-18-146/KAPITTEL_3-2" },
     { label: "Finanstilsynet: forbrukernes situasjon i innskuddsmarkedet", url: "https://www.finanstilsynet.no/contentassets/8765573deb55464dafb59acb2210b6ec/forbrukernes-situasjon-i-innskuddsmarkedet.pdf" },
   ],
   conclusion:
