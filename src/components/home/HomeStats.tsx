@@ -6,7 +6,7 @@ const statLabels: {
   label: string;
   href: string;
 }[] = [
-  { key: "tools", label: "kalkulatorer", href: "/verktoy" },
+  { key: "tools", label: "verktøy", href: "/verktoy" },
   { key: "guides", label: "guider", href: "/guider" },
   { key: "tilbud", label: "tilbud", href: "/tilbud" },
   { key: "fordeler", label: "fordelsprogrammer", href: "/fordeler" },

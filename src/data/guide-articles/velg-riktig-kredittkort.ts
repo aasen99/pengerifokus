@@ -52,6 +52,7 @@ export const velgRiktigKredittkort: GuideArticleContent = {
     href: CALCULATOR_HREF,
   },
   relatedLinks: [
+    { label: "Hvor kan du bruke Amex?", href: "/verktoy/amex-brukersteder" },
     { label: "Kredittkort eller debetkort", href: "/guider/kredittkort-eller-debetkort" },
     { label: "Kredittkortfordeler", href: "/fordeler/kredittkortfordeler" },
     { label: "Bonuskalkulator", href: CALCULATOR_HREF },
