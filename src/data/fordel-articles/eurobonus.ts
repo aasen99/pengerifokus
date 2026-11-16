@@ -239,6 +239,7 @@ export const eurobonus: FordelArticleContent = {
     },
   ],
   relatedLinks: [
+    { label: "Hvor kan du bruke Amex?", href: "/verktoy/amex-brukersteder" },
     { label: "EuroBonus-tilbud", href: "/tilbud?program=eurobonus" },
     { label: "Norwegian Reward", href: "/fordeler/norwegian-reward" },
     {

@@ -6,6 +6,18 @@ import type { Verktoy } from "@/types/content";
  */
 export const verktoy: Verktoy[] = [
   {
+    id: "verktoy-amex-brukersteder",
+    slug: "amex-brukersteder",
+    status: "published",
+    featured: true,
+    name: "Amex brukersteder",
+    description:
+      "Søk etter butikker, nettbutikker og abonnementer. Se Amex-status for butikk, nett og app, med kilder og forbehold.",
+    category: "Fordeler",
+    createdAt: "2026-11-16",
+    updatedAt: "2026-11-16",
+  },
+  {
     id: "verktoy-1",
     slug: "tid-er-penger",
     status: "published",
