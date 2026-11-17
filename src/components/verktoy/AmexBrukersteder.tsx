@@ -11,7 +11,8 @@ import {
 } from "@/data/amex-brukersteder";
 
 const channelOptions: AmexChannel[] = ["store", "online", "app", "onboard"];
-const statusOptions: AmexStatus[] = ["yes", "reported", "conditional", "no", "unknown"];
+const allStatuses: AmexStatus[] = ["yes", "reported", "conditional", "no", "unknown"];
+const statusOptions = allStatuses.filter((status) => amexMerchants.some((item) => item.channels.some((entry) => entry.status === status)));
 const categories = [...new Set(amexMerchants.map((item) => item.category))]
   .sort((a, b) => a.localeCompare(b, "nb"));
 const merchants = [...amexMerchants].sort((a, b) => a.name.localeCompare(b.name, "nb"));
@@ -147,13 +148,14 @@ export function AmexBrukersteder() {
       <div id="amex-results" className="divide-y divide-stone-200 overflow-hidden rounded-2xl border border-stone-200 bg-white">
         {filtered.map((item) => {
           const visibleChannels = item.channels.filter((entry) => channel === "all" || entry.type === channel);
+          const visibleSources = item.sources.filter((source) => !source.channels || visibleChannels.some((entry) => source.channels?.includes(entry.type)));
           return (
             <details key={item.id} id={"amex-" + item.id} className="group scroll-mt-6">
               <summary className="cursor-pointer list-none px-4 py-4 transition-colors hover:bg-stone-50 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-orange-600 [&::-webkit-details-marker]:hidden sm:px-5">
                 <div className="flex items-start justify-between gap-3">
                   <div className="min-w-0">
                     <h2 className="text-base font-semibold text-stone-900">{item.name}</h2>
-                    <p className="mt-0.5 text-xs text-stone-500">{item.category}</p>
+                    <p className="mt-0.5 text-xs text-stone-500">{item.category}{visibleSources.some((source) => source.kind === "reader") ? " · Med leseropplysning" : ""}</p>
                   </div>
                   <span className="mt-0.5 flex shrink-0 items-center gap-1 text-xs text-stone-500">
                     <span className="hidden sm:inline">Detaljer</span>
@@ -180,27 +182,31 @@ export function AmexBrukersteder() {
                     </div>
                   ))}
                 </dl>
-                {item.sources.length > 0 ? (
+                {visibleSources.length > 0 ? (
                   <div className="mt-4 border-t border-stone-200 pt-3">
                     <p className="text-xs font-semibold uppercase tracking-wide text-stone-500">Grunnlag og kilder</p>
                     <ul className="mt-2 space-y-2">
-                      {item.sources.map((source) => (
-                        <li key={source.url} className="text-xs leading-relaxed">
-                          <a href={source.url} target="_blank" rel="noopener noreferrer" className="font-medium text-orange-700 underline decoration-orange-200 underline-offset-2 hover:decoration-orange-600">
-                            {source.label}<span className="sr-only"> (åpnes i ny fane)</span>
-                          </a>
+                      {visibleSources.map((source) => (
+                        <li key={source.url ?? source.label} className="text-xs leading-relaxed">
+                          {source.url ? (
+                            <a href={source.url} target="_blank" rel="noopener noreferrer" className="font-medium text-orange-700 underline decoration-orange-200 underline-offset-2 hover:decoration-orange-600">
+                              {source.label}<span className="sr-only"> (åpnes i ny fane)</span>
+                            </a>
+                          ) : (
+                            <span className="font-medium text-stone-800">{source.label}</span>
+                          )}
                           <span className="mt-0.5 block text-stone-500">
-                            {source.kind === "official" ? "Selskapets egen informasjon" : "Uavhengig brukerstedsoversikt"}
-                            {" · Kilde sjekket "}
+                            {source.kind === "official" ? "Selskapets egen informasjon · Kilde sjekket " : "Opplysning fra leser · Mottatt "}
                             <time dateTime={source.checkedOn}>{sourceDate(source.checkedOn)}</time>
+                            {source.channels && " · " + source.channels.map((value) => amexChannelLabels[value]).join(", ")}
                           </span>
                         </li>
                       ))}
                     </ul>
-                    <p className="mt-3 text-xs text-stone-500">Datoen gjelder kilden. Den er ikke dato for en gjennomført betaling.</p>
+                    <p className="mt-3 text-xs text-stone-500">Datoen gjelder kildekontroll eller mottatt leseropplysning. Den bekrefter ikke en gjennomført betaling.</p>
                   </div>
                 ) : (
-                  <p className="mt-4 text-xs text-stone-500">Avventer en kilde som bekrefter betalingsstøtten.</p>
+                  <p className="mt-4 text-xs text-stone-500">Avventer en selvstendig bekreftelse på betalingsstøtten.</p>
                 )}
               </div>
             </details>

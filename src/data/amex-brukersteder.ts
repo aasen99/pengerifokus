@@ -3,9 +3,11 @@ export type AmexStatus = "yes" | "reported" | "conditional" | "no" | "unknown";
 
 export interface AmexSource {
   label: string;
-  url: string;
-  kind: "official" | "directory";
-  /** Date the source was reviewed; never a payment-confirmation date. */
+  url?: string;
+  kind: "official" | "reader";
+  /** Limit evidence to the channels it actually covers. Omitted means the merchant note describes its scope. */
+  channels?: AmexChannel[];
+  /** Source-review date, or receipt date for a reader statement; never a payment-confirmation date. */
   checkedOn: string;
 }
 
@@ -22,7 +24,7 @@ export interface AmexMerchant {
   sources: AmexSource[];
 }
 
-export const amexUpdatedOn = "2026-11-16";
+export const amexUpdatedOn = "2026-11-17";
 
 export const amexChannelLabels: Record<AmexChannel, string> = {
   store: "I butikk",
@@ -41,7 +43,8 @@ export const amexStatusLabels: Record<AmexStatus, string> = {
 
 /**
  * Acceptance is scoped to each channel. Missing channels are NOT a rejection.
- * "reported" identifies a secondary directory, not a Penger i Fokus user report.
+ * "reported" is reserved for directly received positive reader reports.
+ * Other directories may provide research leads, never acceptance evidence.
  * Company guidance may cover a chain without guaranteeing each branch.
  */
 export const amexMerchants: AmexMerchant[] = [
@@ -231,18 +234,11 @@ export const amexMerchants: AmexMerchant[] = [
     "channels": [
       {
         "type": "store",
-        "status": "reported",
-        "note": "Oppført som Amex-brukersted hos AMEXguiden. Lokale unntak kan forekomme. Dette bekrefter ikke Coopay."
+        "status": "unknown",
+        "note": "Vi mangler en selvstendig bekreftelse på Amex i den aktuelle kjeden. Coopays støttede kort sier ikke hvilke kort som tas i butikkterminalen. Sjekk med butikken."
       }
     ],
-    "sources": [
-      {
-        "label": "AMEXguiden: Extra",
-        "url": "https://amexguiden.no/sted/coop-extra",
-        "kind": "directory",
-        "checkedOn": "2026-11-16"
-      }
-    ]
+    "sources": []
   },
   {
     "id": "coop-mega",
@@ -255,18 +251,11 @@ export const amexMerchants: AmexMerchant[] = [
     "channels": [
       {
         "type": "store",
-        "status": "reported",
-        "note": "Oppført som Amex-brukersted hos AMEXguiden. Lokale unntak kan forekomme. Dette bekrefter ikke Coopay."
+        "status": "unknown",
+        "note": "Vi mangler en selvstendig bekreftelse på Amex i den aktuelle kjeden. Coopays støttede kort sier ikke hvilke kort som tas i butikkterminalen. Sjekk med butikken."
       }
     ],
-    "sources": [
-      {
-        "label": "AMEXguiden: Coop Mega",
-        "url": "https://amexguiden.no/sted/coop-mega",
-        "kind": "directory",
-        "checkedOn": "2026-11-16"
-      }
-    ]
+    "sources": []
   },
   {
     "id": "obs",
@@ -279,16 +268,21 @@ export const amexMerchants: AmexMerchant[] = [
     "channels": [
       {
         "type": "store",
-        "status": "reported",
-        "note": "Oppført som Amex-brukersted hos AMEXguiden. Lokale unntak kan forekomme. Dette bekrefter ikke Coopay."
+        "status": "unknown",
+        "note": "Obs bekrefter kortbetaling i varehus, men betalingsinformasjonen navngir ikke Amex. Vi har ikke en selvstendig bekreftelse på Amex i butikk."
+      },
+      {
+        "type": "online",
+        "status": "unknown",
+        "note": "Obs.no omtaler Visa og Mastercard, men bekrefter ikke Amex. Nettbutikk og fysisk varehus vurderes hver for seg."
       }
     ],
     "sources": [
       {
-        "label": "AMEXguiden: Obs",
-        "url": "https://amexguiden.no/sted/coop-obs",
-        "kind": "directory",
-        "checkedOn": "2026-11-16"
+        "label": "Obs: betalingsalternativer i butikk og på nett",
+        "url": "https://www.obs.no/kundeservice/betalingsalternativer",
+        "kind": "official",
+        "checkedOn": "2026-11-17"
       }
     ]
   },
@@ -303,18 +297,11 @@ export const amexMerchants: AmexMerchant[] = [
     "channels": [
       {
         "type": "store",
-        "status": "reported",
-        "note": "Oppført som Amex-brukersted hos AMEXguiden. Lokale unntak kan forekomme. Dette bekrefter ikke Coopay."
+        "status": "unknown",
+        "note": "Vi mangler en selvstendig bekreftelse på Amex i den aktuelle kjeden. Coopays støttede kort sier ikke hvilke kort som tas i butikkterminalen. Sjekk med butikken."
       }
     ],
-    "sources": [
-      {
-        "label": "AMEXguiden: Coop Prix",
-        "url": "https://amexguiden.no/sted/coop-prix",
-        "kind": "directory",
-        "checkedOn": "2026-11-16"
-      }
-    ]
+    "sources": []
   },
   {
     "id": "rema-1000",
@@ -593,21 +580,21 @@ export const amexMerchants: AmexMerchant[] = [
     "channels": [
       {
         "type": "store",
-        "status": "reported",
-        "note": "Fysisk handel er oppført hos AMEXguiden. Bekreft med den aktuelle butikken."
+        "status": "unknown",
+        "note": "Vi har ikke en selvstendig bekreftelse på Amex i fysiske butikker. Kontakt den aktuelle butikken."
       },
       {
         "type": "online",
-        "status": "reported",
-        "note": "Netthandel er oppført hos AMEXguiden. Velg kortbetaling og kontroller i kassen."
+        "status": "unknown",
+        "note": "Anton Sport oppgir kort, faktura og Vipps, men den tilgjengelige kjøpsinformasjonen navngir ikke Amex. Kontroller betalingsvalget i nettbutikkens kasse."
       }
     ],
     "sources": [
       {
-        "label": "AMEXguiden: Anton Sport",
-        "url": "https://amexguiden.no/sted/anton-sport",
-        "kind": "directory",
-        "checkedOn": "2026-11-16"
+        "label": "Anton Sport: kjøpsinformasjon",
+        "url": "https://www.antonsport.no/kjopsinformasjon",
+        "kind": "official",
+        "checkedOn": "2026-11-17"
       }
     ]
   },
@@ -623,21 +610,30 @@ export const amexMerchants: AmexMerchant[] = [
     "channels": [
       {
         "type": "store",
-        "status": "reported",
-        "note": "Butikkbetaling er oppført hos AMEXguiden."
+        "status": "unknown",
+        "note": "Jernias generelle betalingsinformasjon gir ikke en selvstendig bekreftelse på Amex i hver butikk. Spør den aktuelle butikken."
       },
       {
         "type": "online",
-        "status": "reported",
-        "note": "Netthandel er oppført hos AMEXguiden. Kontroller betalingsvalget før kjøp."
+        "status": "unknown",
+        "note": "Jernias kortveiledning omtaler Visa og Mastercard. En annen betalingsside omtaler Walley. Amex er ikke bekreftet i disse kildene; sjekk dagens kasse."
       }
     ],
     "sources": [
       {
-        "label": "AMEXguiden: Jernia",
-        "url": "https://amexguiden.no/sted/jernia",
-        "kind": "directory",
-        "checkedOn": "2026-11-16"
+        "label": "Jernia: betalingsmuligheter",
+        "url": "https://www.jernia.no/betaling",
+        "kind": "official",
+        "checkedOn": "2026-11-17"
+      },
+      {
+        "label": "Jernia: kortbetaling i nettbutikken",
+        "url": "https://www.jernia.no/kundeservice/bestilling-og-kjop/kan-jeg-betale-med-kredittkort",
+        "kind": "official",
+        "checkedOn": "2026-11-17",
+        "channels": [
+          "online"
+        ]
       }
     ]
   },
@@ -654,16 +650,16 @@ export const amexMerchants: AmexMerchant[] = [
     "channels": [
       {
         "type": "store",
-        "status": "reported",
-        "note": "Oppført som fysisk brukersted hos AMEXguiden. Oppføringen bekrefter ikke alle pumper, apper eller ladeløsninger."
+        "status": "conditional",
+        "note": "Circle K oppgir at Amex kan brukes gjennom Apple Pay og andre støttede betalingsapper på stasjonene. Bekreft den aktuelle terminalen; dette er ikke en bekreftelse på alle kort-, app- og ladeløsninger."
       }
     ],
     "sources": [
       {
-        "label": "AMEXguiden: Circle K",
-        "url": "https://amexguiden.no/sted/circle-k",
-        "kind": "directory",
-        "checkedOn": "2026-11-16"
+        "label": "Circle K: betalingsapper og Amex",
+        "url": "https://www.circlek.no/extra/betalingsapper",
+        "kind": "official",
+        "checkedOn": "2026-11-17"
       }
     ]
   },
@@ -679,16 +675,16 @@ export const amexMerchants: AmexMerchant[] = [
     "channels": [
       {
         "type": "store",
-        "status": "reported",
-        "note": "Oppført hos AMEXguiden. Dette er informasjon om kjeden, ikke en bekreftelse på hver restaurant."
+        "status": "yes",
+        "note": "Egon beskriver på sin egen EuroBonus-side at du kan betale med EuroBonus Amex og tjene kortpoeng. Dette gjelder betaling på restauranten."
       }
     ],
     "sources": [
       {
-        "label": "AMEXguiden: Egon",
-        "url": "https://amexguiden.no/sted/egon",
-        "kind": "directory",
-        "checkedOn": "2026-11-16"
+        "label": "Egon: EuroBonus og betaling med Amex",
+        "url": "https://egon.no/egoneurobonus",
+        "kind": "official",
+        "checkedOn": "2026-11-17"
       }
     ]
   },
@@ -828,8 +824,8 @@ export const amexMerchants: AmexMerchant[] = [
       },
       {
         "type": "app",
-        "status": "unknown",
-        "note": "Vys nyere appinformasjon oppgir Visa og Mastercard, mens eldre veiledning også nevner Amex. Vi har ikke bekreftet gjeldende støtte."
+        "status": "no",
+        "note": "Leseropplysning mottatt 17. november 2026: Amex kan ikke brukes som betalingskort i Vy-appen. Opplysningen gjelder appen, ikke vy.no eller andre salgskanaler."
       }
     ],
     "sources": [
@@ -837,19 +833,36 @@ export const amexMerchants: AmexMerchant[] = [
         "label": "Vy: nyere billettinformasjon",
         "url": "https://www.vy.no/kundeservice/sporsmal-og-svar/sporsmal-og-svar-om-tog/billetter-og-setereservasjon",
         "kind": "official",
-        "checkedOn": "2026-11-16"
+        "checkedOn": "2026-11-16",
+        "channels": [
+          "online"
+        ]
       },
       {
         "label": "Vy: betalingsmuligheter i appen",
         "url": "https://www.vy.no/kundeservice/sporsmal-og-svar/hvilke-betalingsmuligheter-har-jeg-i-vy-appen",
         "kind": "official",
-        "checkedOn": "2026-11-16"
+        "checkedOn": "2026-11-16",
+        "channels": [
+          "app"
+        ]
       },
       {
         "label": "Vy: eldre betalingsveiledning",
         "url": "https://www.vy.no/kundeservice/sporsmal-og-svar/hvordan-kjoper-jeg-billett-og-hvordan-betaler-jeg",
         "kind": "official",
-        "checkedOn": "2026-11-16"
+        "checkedOn": "2026-11-16",
+        "channels": [
+          "online"
+        ]
+      },
+      {
+        "label": "Leseropplysning til Penger i Fokus",
+        "kind": "reader",
+        "checkedOn": "2026-11-17",
+        "channels": [
+          "app"
+        ]
       }
     ]
   },
@@ -1030,22 +1043,16 @@ export const amexMerchants: AmexMerchant[] = [
     "channels": [
       {
         "type": "online",
-        "status": "reported",
-        "note": "Oppført hos AMEXguiden. Spotify viser de faktiske betalingsvalgene for landet og abonnementet ditt i kassen."
+        "status": "unknown",
+        "note": "Spotify viser betalingsalternativene for landet og abonnementet ditt i kassen. Vi mangler en selvstendig bekreftelse på Amex for en norsk konto."
       }
     ],
     "sources": [
       {
-        "label": "Spotify: betalingsmåter",
+        "label": "Spotify: godkjente betalingsmåter",
         "url": "https://support.spotify.com/no-nb/article/payment-methods/",
         "kind": "official",
-        "checkedOn": "2026-11-16"
-      },
-      {
-        "label": "AMEXguiden: Spotify",
-        "url": "https://amexguiden.no/sted/spotify",
-        "kind": "directory",
-        "checkedOn": "2026-11-16"
+        "checkedOn": "2026-11-17"
       }
     ]
   },
@@ -1063,22 +1070,16 @@ export const amexMerchants: AmexMerchant[] = [
     "channels": [
       {
         "type": "app",
-        "status": "reported",
-        "note": "Oppført hos AMEXguiden. Apples norske oversikt sier «de fleste kreditt- og debetkort» uten å navngi Amex; kontroller egen Apple-konto."
+        "status": "unknown",
+        "note": "Apples norske betalingsoversikt sier at de fleste kreditt- og debetkort godtas, men navngir ikke Amex. Vi har ikke bekreftet Amex særskilt for norsk Apple-konto."
       }
     ],
     "sources": [
       {
-        "label": "Apple: betalingsmåter i Norge",
+        "label": "Apple: betalingsmåter for Apple-kontoen i Norge",
         "url": "https://support.apple.com/no-no/111741",
         "kind": "official",
-        "checkedOn": "2026-11-16"
-      },
-      {
-        "label": "AMEXguiden: Apple",
-        "url": "https://amexguiden.no/sted/apple",
-        "kind": "directory",
-        "checkedOn": "2026-11-16"
+        "checkedOn": "2026-11-17"
       }
     ]
   },
@@ -1097,11 +1098,20 @@ export const amexMerchants: AmexMerchant[] = [
     "channels": [
       {
         "type": "online",
-        "status": "unknown",
-        "note": "Vi mangler en bekreftet opplysning om direkte Amex-betaling. Abonnement via en TV-leverandør må vurderes separat."
+        "status": "reported",
+        "note": "Leseropplysning mottatt 17. november 2026: Amex kunne legges inn som nytt betalingskort for direkteabonnement hos TV 2 Play. Opplysningen gjelder registrering av kortet; den dokumenterer ikke et gjennomført abonnementstrekk. Betaling gjennom en TV-leverandør vurderes separat."
       }
     ],
-    "sources": []
+    "sources": [
+      {
+        "label": "Leseropplysning til Penger i Fokus",
+        "kind": "reader",
+        "checkedOn": "2026-11-17",
+        "channels": [
+          "online"
+        ]
+      }
+    ]
   },
   {
     "id": "telia",

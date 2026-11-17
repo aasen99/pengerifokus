@@ -15,7 +15,7 @@ export const verktoy: Verktoy[] = [
       "Søk etter butikker, nettbutikker og abonnementer. Se Amex-status for butikk, nett og app, med kilder og forbehold.",
     category: "Fordeler",
     createdAt: "2026-11-16",
-    updatedAt: "2026-11-16",
+    updatedAt: "2026-11-17",
   },
   {
     id: "verktoy-1",
