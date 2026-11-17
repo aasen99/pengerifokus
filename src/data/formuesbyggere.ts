@@ -5,6 +5,7 @@ import {
   kapitalEstimate,
 } from "@/lib/wealth-estimate";
 import { formuesbyggerLifecycle } from "@/data/formuesbygger-lifecycle";
+import { novemberFormuesbyggere } from "@/data/formuesbyggere-november-2026";
 
 /**
  * CMS/ADMIN: Metadata for formuesbygger-profiler.
@@ -792,7 +793,7 @@ const baseFormuesbyggere: Formuesbygger[] = [
   },
 ];
 
-export const formuesbyggere: Formuesbygger[] = baseFormuesbyggere.map(
+export const formuesbyggere: Formuesbygger[] = [...baseFormuesbyggere, ...novemberFormuesbyggere].map(
   (profile) => ({
     ...profile,
     ...formuesbyggerLifecycle[profile.slug],
