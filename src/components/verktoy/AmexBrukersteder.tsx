@@ -50,9 +50,10 @@ export function AmexBrukersteder() {
   const [category, setCategory] = useState("all");
   const [channel, setChannel] = useState<AmexChannel | "all">("all");
   const [status, setStatus] = useState<AmexStatus | "all">("all");
+  const [showNo, setShowNo] = useState(false);
 
   const words = normalize(query).trim().split(/\s+/).filter(Boolean);
-  const filtered = merchants.filter((item) => {
+  const matching = merchants.filter((item) => {
     const text = searchableText(item);
     return (category === "all" || item.category === category)
       && words.every((word) => text.includes(word))
@@ -60,13 +61,21 @@ export function AmexBrukersteder() {
         (channel === "all" || entry.type === channel)
         && (status === "all" || entry.status === status));
   });
-  const hasFilters = query !== "" || category !== "all" || channel !== "all" || status !== "all";
+  function isNoOnly(item: AmexMerchant) {
+    const scopedChannels = item.channels.filter((entry) => channel === "all" || entry.type === channel);
+    return scopedChannels.length > 0 && scopedChannels.every((entry) => entry.status === "no");
+  }
+
+  const hiddenNoCount = matching.filter(isNoOnly).length;
+  const filtered = showNo ? matching : matching.filter((item) => !isNoOnly(item));
+  const hasFilters = query !== "" || category !== "all" || channel !== "all" || status !== "all" || showNo;
 
   function reset() {
     setQuery("");
     setCategory("all");
     setChannel("all");
     setStatus("all");
+    setShowNo(false);
   }
 
   const fieldClass = "mt-1 w-full min-w-0 rounded-lg border border-stone-300 bg-white px-3 py-2.5 text-sm text-stone-900 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-200";
@@ -111,12 +120,36 @@ export function AmexBrukersteder() {
           </label>
           <label htmlFor="amex-status" className="min-w-0 text-xs font-medium text-stone-600">
             Betalingsstatus
-            <select id="amex-status" value={status} onChange={(event) => setStatus(event.target.value as AmexStatus | "all")} className={fieldClass} aria-controls="amex-results">
+            <select id="amex-status" value={status} onChange={(event) => {
+              const value = event.target.value as AmexStatus | "all";
+              setStatus(value);
+              if (value === "no") setShowNo(true);
+            }} className={fieldClass} aria-controls="amex-results">
               <option value="all">Alle statuser</option>
               {statusOptions.map((value) => <option key={value} value={value}>{amexStatusLabels[value]}</option>)}
             </select>
           </label>
         </div>
+
+        <label htmlFor="amex-show-no" className="mt-4 flex cursor-pointer items-start gap-3 rounded-lg border border-stone-200 px-3 py-3 text-sm text-stone-700">
+          <input
+            id="amex-show-no"
+            type="checkbox"
+            checked={showNo}
+            onChange={(event) => {
+              const checked = event.target.checked;
+              setShowNo(checked);
+              if (!checked && status === "no") setStatus("all");
+            }}
+            aria-controls="amex-results"
+            aria-describedby="amex-show-no-help"
+            className="mt-0.5 h-4 w-4 shrink-0 accent-orange-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600"
+          />
+          <span>
+            <span className="font-medium text-stone-900">Vis også steder som ikke tar Amex</span>
+            <span id="amex-show-no-help" className="mt-0.5 block text-xs leading-relaxed text-stone-500">Ta med oppføringer med «Nei». Steder med ulik støtte i butikk, på nett eller i app vises fortsatt der Amex kan brukes.</span>
+          </span>
+        </label>
 
         <div className="mt-4 flex flex-wrap gap-2" aria-label="Hurtigvalg">
           {["Dagligvarer", "Abonnement", "Reise og transport"].map((name) => (
@@ -137,6 +170,9 @@ export function AmexBrukersteder() {
         <p role="status" aria-live="polite" aria-atomic="true" className="text-sm text-stone-600">
           <strong className="font-semibold tabular-nums text-stone-900">{filtered.length}</strong>
           {" av " + merchants.length + " oppføringer"}
+          {!showNo && hiddenNoCount > 0 && (
+            <span className="mt-1 block text-xs text-stone-500">{hiddenNoCount} oppføringer med «Nei» er skjult. Huk av over for å se dem.</span>
+          )}
         </p>
         {hasFilters && (
           <button type="button" onClick={reset} className="rounded px-2 py-1 text-sm font-medium text-orange-700 hover:underline focus-visible:outline-2 focus-visible:outline-orange-600">
@@ -216,10 +252,15 @@ export function AmexBrukersteder() {
           <div className="px-5 py-10 text-center">
             <h2 className="font-semibold text-stone-900">Ingen treff med disse filtrene</h2>
             <p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-stone-600">
-              Prøv et annet butikknavn eller fjern et filter. En butikk som mangler i listen, kan fortsatt ta Amex.
+              {!showNo && hiddenNoCount > 0
+                ? "Vi har oppføringer som passer søket, men de er merket «Nei» og er skjult. Huk av for å vise dem."
+                : "Prøv et annet butikknavn eller fjern et filter. En butikk som mangler i listen, kan fortsatt ta Amex."}
             </p>
-            <button type="button" onClick={reset} className="mt-4 rounded-lg bg-stone-900 px-4 py-2.5 text-sm font-medium text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600">
-              Vis hele oversikten
+            <button type="button" onClick={() => {
+              if (!showNo && hiddenNoCount > 0) setShowNo(true);
+              else reset();
+            }} className="mt-4 rounded-lg bg-stone-900 px-4 py-2.5 text-sm font-medium text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600">
+              {!showNo && hiddenNoCount > 0 ? "Vis nei-oppføringene" : "Nullstill filtre"}
             </button>
           </div>
         )}
