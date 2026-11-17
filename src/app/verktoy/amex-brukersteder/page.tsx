@@ -24,7 +24,7 @@ const faqs = [
   },
   {
     question: "Hva betyr «rapportert ja» og «uavklart»?",
-    answer: "Rapportert ja bygger på en navngitt, uavhengig brukerstedsoversikt. Det er ikke en betaling testet av Penger i Fokus. Uavklart betyr at vi mangler tilstrekkelig informasjon, eller at kildene spriker. Det betyr ikke at butikken avviser Amex.",
+    answer: "Rapportert ja er forbeholdt positive opplysninger vi har mottatt direkte fra lesere. Slike opplysninger merkes med dato og betalingskanal, og er ikke en bekreftelse fra selskapet. Uavklart betyr at vi mangler tilstrekkelig informasjon, eller at kildene spriker. Det betyr ikke at butikken avviser Amex.",
   },
   {
     question: "Gjør Apple Pay at Amex fungerer overalt?",
@@ -36,7 +36,7 @@ const faqs = [
   },
   {
     question: "Er kontroll-datoen siste gang noen betalte med Amex?",
-    answer: "Nei. Datoen viser når vi sjekket den oppgitte kilden. Vi viser ikke dette som en vellykket betaling. Oversikten gjelder oppførte kjeder og tjenester, og er ikke et register over alle enkeltbutikker i Norge.",
+    answer: "Nei. Datoen viser når vi sjekket en kilde eller mottok en leseropplysning. Disse merkes forskjellig og vises ikke som en betaling testet av Penger i Fokus. Oversikten gjelder oppførte kjeder og tjenester, og er ikke et register over alle enkeltbutikker i Norge.",
   },
 ];
 
@@ -58,7 +58,7 @@ export default function AmexBrukerstederPage() {
         </p>
         <p className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-stone-500">
           <span>{amexMerchants.length} kjeder og tjenester</span>
-          <span>Oppdatert <time dateTime={amexUpdatedOn}>16. november 2026</time></span>
+          <span>Oppdatert <time dateTime={amexUpdatedOn}>{new Date(amexUpdatedOn + "T12:00:00Z").toLocaleDateString("nb-NO", { day: "numeric", month: "long", year: "numeric" })}</time></span>
           <span>Gratis · Ingen annonselenker</span>
         </p>
       </header>
@@ -67,12 +67,12 @@ export default function AmexBrukerstederPage() {
         <summary className="cursor-pointer text-sm font-medium text-stone-700">Slik leser du statusene</summary>
         <dl className="mt-3 grid gap-3 text-xs leading-relaxed sm:grid-cols-2">
           <div><dt className="font-semibold text-emerald-900">Ja</dt><dd className="mt-1 text-stone-600">Selskapet oppgir Amex-støtte for denne betalingskanalen.</dd></div>
-          <div><dt className="font-semibold text-sky-900">Rapportert ja</dt><dd className="mt-1 text-stone-600">Oppført i en uavhengig brukerstedsoversikt. Kilden er navngitt.</dd></div>
+          <div><dt className="font-semibold text-sky-900">Rapportert ja</dt><dd className="mt-1 text-stone-600">Positiv opplysning mottatt direkte fra en leser. Merket med dato og betalingskanal.</dd></div>
           <div><dt className="font-semibold text-amber-900">Med forbehold</dt><dd className="mt-1 text-stone-600">For eksempel lokale unntak, landbegrensning eller betalingsgebyr. Les detaljene.</dd></div>
-          <div><dt className="font-semibold text-rose-900">Nei</dt><dd className="mt-1 text-stone-600">Den oppgitte betalingsløsningen støtter ikke Amex.</dd></div>
+          <div><dt className="font-semibold text-rose-900">Nei</dt><dd className="mt-1 text-stone-600">Kilden eller en mottatt leseropplysning sier at betalingsløsningen ikke støtter Amex. Les grunnlaget i detaljene.</dd></div>
           <div><dt className="font-semibold text-stone-700">Uavklart</dt><dd className="mt-1 text-stone-600">Mangler bekreftelse, eller kildene spriker. Dette er ikke et nei.</dd></div>
         </dl>
-        <p className="mt-3 text-xs leading-relaxed text-stone-500">Kjedestatus bekrefter ikke hver filial. Datoen i detaljene gjelder kildekontroll, ikke en gjennomført betaling.</p>
+        <p className="mt-3 text-xs leading-relaxed text-stone-500">Kjedestatus bekrefter ikke hver filial. Grunnlaget er selskapets egne opplysninger eller informasjon vi har mottatt direkte fra lesere. Datoene gjelder kildekontroll eller mottatt opplysning, ikke en betaling testet av oss.</p>
       </details>
 
       <AmexBrukersteder />
