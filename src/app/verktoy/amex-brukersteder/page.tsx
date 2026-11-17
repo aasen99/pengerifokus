@@ -77,6 +77,12 @@ export default function AmexBrukerstederPage() {
 
       <AmexBrukersteder />
 
+      <div className="mt-6 rounded-xl border border-stone-200 bg-white p-4">
+        <h2 className="text-sm font-semibold text-stone-900">Skal du betale en faktura?</h2>
+        <p className="mt-1 text-sm leading-relaxed text-stone-600">Vi har en egen oversikt over fakturabetaling med Visa, Mastercard og Amex, med gebyrer og konkrete kortforsøk.</p>
+        <Link href="/verktoy/faktura-med-kort" className="mt-2 inline-block text-sm font-medium text-orange-700 underline underline-offset-2">Se faktura med kort →</Link>
+      </div>
+
       <aside className="mt-6 rounded-xl border border-orange-200 bg-orange-50 p-4 sm:p-5">
         <h2 className="font-semibold text-stone-900">Sjekk ekstra bonus før du handler</h2>
         <p className="mt-2 text-sm leading-relaxed text-stone-700">
