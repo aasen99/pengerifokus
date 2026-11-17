@@ -1115,28 +1115,45 @@ export const amexMerchants: AmexMerchant[] = [
   },
   {
     "id": "telia",
-    "name": "Telia",
+    "name": "Telia · fakturabetaling",
     "category": "Abonnement",
     "keywords": [
       "mobil",
       "bredbånd",
       "faktura",
       "TV",
-      "Viaplay"
+      "Viaplay",
+      "Telia",
+      "Nets",
+      "Visa",
+      "Mastercard",
+      "Lunar",
+      "Bank Norwegian"
     ],
     "channels": [
       {
         "type": "online",
-        "status": "unknown",
-        "note": "Telia oppgir Visa og Mastercard for kortbetaling av faktura. Amex er ikke bekreftet. Dette gjelder fakturabetaling, ikke alle kjøp i Telia-butikker."
+        "status": "no",
+        "note": "En leser opplyste 17. november 2026 at Amex ikke kunne legges inn i Telias løsning for kortbetaling av faktura. Bank Norwegian fungerte, mens et Lunar-forsøk ga en uavklart feil. Opplysningen gjelder denne fakturaløsningen."
       }
     ],
     "sources": [
       {
-        "label": "Telia: faktura og betaling",
+        "label": "Telia: faktura og betaling med Visa/Mastercard",
         "url": "https://www.telia.no/hjelp/faktura/",
         "kind": "official",
-        "checkedOn": "2026-11-16"
+        "checkedOn": "2026-11-17",
+        "channels": [
+          "online"
+        ]
+      },
+      {
+        "label": "Leseropplysning til Penger i Fokus",
+        "kind": "reader",
+        "checkedOn": "2026-11-17",
+        "channels": [
+          "online"
+        ]
       }
     ]
   },
@@ -1226,6 +1243,46 @@ export const amexMerchants: AmexMerchant[] = [
         "checkedOn": "2026-11-17",
         "channels": [
           "store"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "skyttelpass",
+    "name": "SkyttelPASS · korttrekk",
+    "category": "Reise og transport",
+    "keywords": [
+      "Skyttelpass",
+      "Nets",
+      "bompenger",
+      "ferje",
+      "faktura",
+      "Visa",
+      "Mastercard"
+    ],
+    "channels": [
+      {
+        "type": "online",
+        "status": "no",
+        "note": "En leser opplyser at kortregistreringen hos SkyttelPASS tilbyr Visa og Mastercard, og at Amex ikke kunne legges inn. SkyttelPASS bekrefter automatisk korttrekk på Min Side; dette er en annen løsning enn en vanlig bankoverføring av faktura."
+      }
+    ],
+    "sources": [
+      {
+        "label": "SkyttelPASS: betaling og faktura",
+        "url": "https://skyttelpass.no/kundeservice/betaling-og-faktura/",
+        "kind": "official",
+        "checkedOn": "2026-11-17",
+        "channels": [
+          "online"
+        ]
+      },
+      {
+        "label": "Leseropplysning til Penger i Fokus",
+        "kind": "reader",
+        "checkedOn": "2026-11-17",
+        "channels": [
+          "online"
         ]
       }
     ]

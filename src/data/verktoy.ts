@@ -6,6 +6,18 @@ import type { Verktoy } from "@/types/content";
  */
 export const verktoy: Verktoy[] = [
   {
+    id: "verktoy-faktura-med-kort",
+    slug: "faktura-med-kort",
+    status: "published",
+    featured: true,
+    name: "Faktura med kort",
+    description:
+      "Finn leverandører med kortbetaling av faktura. Se kortstøtte, faktiske kortforsøk, gebyrer og hva som er avklart om bonus.",
+    category: "Fordeler",
+    createdAt: "2026-11-17",
+    updatedAt: "2026-11-17",
+  },
+  {
     id: "verktoy-amex-brukersteder",
     slug: "amex-brukersteder",
     status: "published",
