@@ -11,6 +11,7 @@ export type FormuesbyggerIndustry =
   | "handel"
   | "industri"
   | "shipping"
+  | "luftfart"
   | "sjomat"
   | "investering"
   | "arv";

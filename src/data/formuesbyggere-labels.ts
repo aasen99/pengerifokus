@@ -36,6 +36,7 @@ export const INDUSTRY_LABELS: Record<FormuesbyggerIndustry, string> = {
   handel: "Handel",
   industri: "Industri",
   shipping: "Shipping",
+  luftfart: "Luftfart",
   sjomat: "Sjømat",
   investering: "Investering",
   arv: "Arv",

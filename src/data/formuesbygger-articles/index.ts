@@ -5,6 +5,7 @@ import { norskeProfilerBatch2 } from "./norske-profiler-batch2";
 import { norskeProfilerBatch3 } from "./norske-profiler-batch3";
 import { norskeProfilerBatch4 } from "./norske-profiler-batch4";
 import { norskeProfilerPakke1 } from "./norske-profiler-pakke-1";
+import { novemberFormuesbyggerArtikler } from "./november-2026";
 
 const allArticles: Record<string, FormuesbyggerArticle> = {
   ...norskeFormuesbyggerArtikler,
@@ -13,6 +14,7 @@ const allArticles: Record<string, FormuesbyggerArticle> = {
   ...norskeProfilerBatch4,
   ...internasjonaleFormuesbyggerArtikler,
   ...norskeProfilerPakke1,
+  ...novemberFormuesbyggerArtikler,
 };
 
 export function getFormuesbyggerArticle(
