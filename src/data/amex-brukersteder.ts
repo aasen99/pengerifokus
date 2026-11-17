@@ -1286,5 +1286,102 @@ export const amexMerchants: AmexMerchant[] = [
         ]
       }
     ]
+  },
+  {
+    "id": "vg-pluss",
+    "name": "VG+",
+    "category": "Abonnement",
+    "keywords": [
+      "VG",
+      "VG pluss",
+      "VG+",
+      "Verdens Gang",
+      "Schibsted",
+      "Schibsted-konto",
+      "Visa",
+      "Mastercard",
+      "avisabonnement"
+    ],
+    "channels": [
+      {
+        "type": "online",
+        "status": "no",
+        "note": "Leseropplysning mottatt 17. november 2026: Direkte kortbetaling av abonnement godtar bare Visa og Mastercard, ikke Amex. Opplysningen gjelder abonnementets egen kortbetalingsløsning."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Leseropplysning til Penger i Fokus",
+        "kind": "reader",
+        "checkedOn": "2026-11-17",
+        "channels": [
+          "online"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "e24",
+    "name": "E24",
+    "category": "Abonnement",
+    "keywords": [
+      "E24+",
+      "E24 pluss",
+      "økonominyheter",
+      "Schibsted",
+      "Schibsted-konto",
+      "Visa",
+      "Mastercard",
+      "avisabonnement"
+    ],
+    "channels": [
+      {
+        "type": "online",
+        "status": "no",
+        "note": "Leseropplysning mottatt 17. november 2026: Direkte kortbetaling av abonnement godtar bare Visa og Mastercard, ikke Amex. Opplysningen gjelder abonnementets egen kortbetalingsløsning."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Leseropplysning til Penger i Fokus",
+        "kind": "reader",
+        "checkedOn": "2026-11-17",
+        "channels": [
+          "online"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "aftenposten",
+    "name": "Aftenposten",
+    "category": "Abonnement",
+    "keywords": [
+      "Aftenposten+",
+      "avis",
+      "nyheter",
+      "Schibsted",
+      "Schibsted-konto",
+      "Visa",
+      "Mastercard",
+      "avisabonnement"
+    ],
+    "channels": [
+      {
+        "type": "online",
+        "status": "no",
+        "note": "Leseropplysning mottatt 17. november 2026: Direkte kortbetaling av abonnement godtar bare Visa og Mastercard, ikke Amex. Opplysningen gjelder abonnementets egen kortbetalingsløsning."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Leseropplysning til Penger i Fokus",
+        "kind": "reader",
+        "checkedOn": "2026-11-17",
+        "channels": [
+          "online"
+        ]
+      }
+    ]
   }
 ];
