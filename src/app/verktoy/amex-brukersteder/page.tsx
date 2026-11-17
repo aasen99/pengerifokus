@@ -77,6 +77,16 @@ export default function AmexBrukerstederPage() {
 
       <AmexBrukersteder />
 
+      <aside className="mt-6 rounded-xl border border-stone-200 bg-stone-50 p-4">
+        <h2 className="text-sm font-semibold text-stone-900">Ser du etter flere Amex-brukersteder?</h2>
+        <p className="mt-1 text-sm leading-relaxed text-stone-600">
+          AMEXguiden har en egen, brukerdrevet oversikt med flere enkeltbutikker og lokale brukersteder. Den kan være et nyttig supplement når du vil sjekke et bestemt sted.
+        </p>
+        <a href="https://amexguiden.no/" target="_blank" rel="noopener noreferrer" className="mt-2 inline-block text-sm font-medium text-orange-700 underline underline-offset-2">
+          Se flere brukersteder hos AMEXguiden →<span className="sr-only"> (åpnes i ny fane)</span>
+        </a>
+      </aside>
+
       <div className="mt-6 rounded-xl border border-stone-200 bg-white p-4">
         <h2 className="text-sm font-semibold text-stone-900">Skal du betale en faktura?</h2>
         <p className="mt-1 text-sm leading-relaxed text-stone-600">Vi har en egen oversikt over fakturabetaling med Visa, Mastercard og Amex, med gebyrer og konkrete kortforsøk.</p>
