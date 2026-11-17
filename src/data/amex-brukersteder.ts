@@ -298,7 +298,7 @@ export const amexMerchants: AmexMerchant[] = [
       {
         "type": "store",
         "status": "unknown",
-        "note": "Vi mangler en selvstendig bekreftelse på Amex i den aktuelle kjeden. Coopays støttede kort sier ikke hvilke kort som tas i butikkterminalen. Sjekk med butikken."
+        "note": "Coop Prix ved Oslo S har en egen oppføring med rapportert Amex-betaling. Vi mangler en selvstendig bekreftelse for kjeden som helhet; opplysningen fra Oslo S gjelder bare den butikken."
       }
     ],
     "sources": []
@@ -1196,6 +1196,37 @@ export const amexMerchants: AmexMerchant[] = [
         "url": "https://help.vippsmobilepay.com/en-NO/articles/tap-with-mastercard",
         "kind": "official",
         "checkedOn": "2026-11-16"
+      }
+    ]
+  },
+  {
+    "id": "coop-prix-oslo-s",
+    "name": "Coop Prix · Oslo S",
+    "category": "Dagligvarer",
+    "keywords": [
+      "Coop",
+      "Prix",
+      "Oslo",
+      "Oslo S",
+      "Oslo Sentralstasjon",
+      "Jernbanetorget",
+      "mat"
+    ],
+    "channels": [
+      {
+        "type": "store",
+        "status": "reported",
+        "note": "En leser opplyste 17. november 2026 at betaling med Amex fungerte på Coop Prix ved Oslo S. Opplysningen gjelder denne butikken. Det er ikke oppgitt om betalingen ble gjort med chip, kontaktløst kort eller mobil."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Leseropplysning til Penger i Fokus",
+        "kind": "reader",
+        "checkedOn": "2026-11-17",
+        "channels": [
+          "store"
+        ]
       }
     ]
   }
