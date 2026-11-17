@@ -13,7 +13,7 @@ const toolDescription =
   "Betaler du gjeld, men må bruke kreditt igjen? Gjeldsbremsen viser den reelle nedbetalingen og lager en plan for å bryte lånespiralen.";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Gjeldsbremsen – stopp lånespiralen",
+  title: "Gjeldsbremsen: Stopp lånespiralen",
   description: toolDescription,
   path: "/verktoy/gjeldsbremsen",
   keywords: [
@@ -64,7 +64,7 @@ export default function GjeldsbremsenPage() {
       />
       <ToolPageHeader
         title="Gjeldsbremsen"
-        description="Finn ut hvor mye gjelden faktisk faller – og hva som skal til for å unngå neste lån."
+        description="Finn ut hvor mye gjelden faktisk faller, og hva som skal til for å unngå neste lån."
       />
 
       <Gjeldsbremsen />

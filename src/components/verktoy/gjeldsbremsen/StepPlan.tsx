@@ -263,7 +263,7 @@ export function StepPlan({
                 label="Planlagt lånefri dato"
                 value={
                   strategy === "stop-growth"
-                    ? "Ikke satt — veksten stanses først"
+                    ? "Ikke satt. Veksten stanses først."
                     : loanFreeLabel || "Sett neste inntektsdato"
                 }
               />

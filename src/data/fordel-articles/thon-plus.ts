@@ -87,7 +87,7 @@ export const thonPlus: FordelArticleContent = {
         "Ordinære priser og mange bedrifts- og organisasjonspriser kvalifiserer. Blant unntakene er dagrom, gratisnetter, bonusnetter, enkelte særavtaler og opphold bestilt gjennom tredjepart der Thon ikke er selger.",
       ],
       bullets: [
-        "1 500 poeng per natt ved utvalgte hoteller – se listen under",
+        "1 500 poeng per natt ved utvalgte hoteller, se listen under",
         "1 000 poeng per natt ved de fleste øvrige kvalifiserende hoteller",
         "500 poeng per natt på kvalifiserende studentpris, slik medlemsvilkårene beskriver",
       ],

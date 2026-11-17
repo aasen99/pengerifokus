@@ -103,7 +103,7 @@ export const stromregningOgNorgespris: Omit<
       url: "https://www.nve.no/reguleringsmyndigheten/kunde/stroem/dette-er-norgespris/",
     },
     {
-      label: "Elhub – Min side",
+      label: "Elhub: Min side",
       url: "https://minside.elhub.no",
     },
   ],

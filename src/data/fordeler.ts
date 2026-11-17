@@ -232,7 +232,7 @@ export const fordeler: Fordel[] = [
     status: "published",
     name: "Elkjøp",
     description:
-      "Elkjøps kundeklubb: 50 dagers åpent kjøp, klubbpriser, Elsjansen og partnerfordeler – gratis medlemskap.",
+      "Elkjøps kundeklubb: 50 dagers åpent kjøp, klubbpriser, Elsjansen og partnerfordeler. Medlemskapet er gratis.",
     type: "Kundeklubb",
     useCase: "Elektronikk og hvitevarer",
     createdAt: "2026-08-25",

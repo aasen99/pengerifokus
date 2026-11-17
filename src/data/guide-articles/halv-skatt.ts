@@ -4,7 +4,7 @@ export const halvSkatt: Omit<GuideArticleContent, "readTimeMinutes"> = {
   slug: "halv-skatt",
   seoTitle: "Halv skatt 2026: November eller desember?",
   intro:
-    "Mange får halvt skattetrekk på vanlig lønn før jul. Det betyr ikke at lønnen er beskattet lavere for året – bare at forskuddstrekket er fordelt annerledes. Her ser du hvilken måned det kan komme, hva som vanligvis omfattes, og hvordan du unngår å bruke hele forskjellen ved en feil.",
+    "Mange får halvt skattetrekk på vanlig lønn før jul. Årsskatten blir ikke lavere, men forskuddstrekket fordeles annerledes. Her ser du hvilken måned det kan komme, hva som vanligvis omfattes, og hvordan du unngår å bruke hele forskjellen ved en feil.",
   shortAnswer:
     "Arbeidsgiver kan legge halvt skattetrekk på vanlig lønn i november eller desember. Overtid, bonus og spesielle honorarer har normalt fullt skattetrekk. Ordningen gir ikke lavere årsskatt: du trekkes litt mer de øvrige månedene for å få lavere trekk før jul.",
   sections: [

@@ -16,7 +16,7 @@ export function EieLeieKalkulatorSeoContent() {
             nettoformue
           </Link>{" "}
           over tid: hva du sitter igjen med ved å kjøpe bolig mot å leie. Den
-          holder kontantstrømmen lik måned for måned — hvis eie koster mer enn
+          holder kontantstrømmen lik måned for måned. Hvis eie koster mer enn
           leie, investerer leieren differansen, og omvendt. Avdrag bygger{" "}
           <Link
             href="/ordbok/egenkapital"
@@ -31,7 +31,7 @@ export function EieLeieKalkulatorSeoContent() {
             Start med kjøpesum, egenkapital, boliglånsrente og husleie
           </li>
           <li>
-            Se break-even — når eie «går forbi» leie økonomisk
+            Se når eie «går forbi» leie økonomisk (break-even)
           </li>
           <li>
             Utvid med vedlikehold, salgskostnader og lønnsvekst i avansert

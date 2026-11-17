@@ -33,7 +33,7 @@ export default function UtleieboligKalkulatorPage() {
       />
       <ToolPageHeader
         title="Utleiebolig-kalkulator"
-        description="Se om leieinntekten dekker lån og driftskostnader, hva du tjener på egenkapitalen, og få en vurdering med fordeler, ulemper og risiko. Bolig vs. fond viser ofte sterk effekt fordi du er gearet med lån — både oppside og nedsiden forsterkes."
+        description="Se om leieinntekten dekker lån og driftskostnader, hva du tjener på egenkapitalen, og få en vurdering med fordeler, ulemper og risiko. Bolig vs. fond viser ofte sterk effekt fordi du er gearet med lån. Både oppsiden og nedsiden forsterkes."
       />
 
       <UtleieboligKalkulator />

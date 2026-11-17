@@ -62,7 +62,7 @@ export function openPrintReport(options: {
   ${escapedSubtitle ? `<p class="subtitle">${escapedSubtitle}</p>` : ""}
   <p class="meta">Penger i Fokus · ${escapeHtml(new Date().toLocaleDateString("nb-NO"))}</p>
   ${bodyHtml}
-  <p class="muted">Veiledende beregning — erstatter ikke profesjonell rådgivning.</p>
+  <p class="muted">Beregningen er veiledende og erstatter ikke profesjonell rådgivning.</p>
   <script>
     window.addEventListener("load", () => {
       setTimeout(() => window.print(), 150);

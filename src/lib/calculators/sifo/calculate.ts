@@ -469,7 +469,7 @@ export function buildCohabitationInsight(
     const highlights: string[] = [];
     if (collectiveMonthlySavings > 0) {
       highlights.push(
-        `Samlet økning er ${fmtPct(increasePercent)} % — under 100 %. Dere sparer ${formatKrAmount(collectiveMonthlySavings)}/mnd sammenlignet med to separate enslighusholdninger.`,
+        `Samlet økning er ${fmtPct(increasePercent)} %. Det er under 100 %. Dere sparer ${formatKrAmount(collectiveMonthlySavings)}/mnd sammenlignet med to separate enslighusholdninger.`,
       );
       highlights.push(
         `Per person: ${formatKrAmount(perPersonCoupled)}/mnd mot ${formatKrAmount(singleMonthly)} alene (spar ${formatKrAmount(perPersonSavings)}/mnd hver).`,
@@ -479,7 +479,7 @@ export function buildCohabitationInsight(
       );
     } else {
       highlights.push(
-        `Samlet økning er ${fmtPct(increasePercent)} % — høyere enn to separate enslighusholdninger (${formatKrAmount(2 * singleMonthly)}/mnd).`,
+        `Samlet økning er ${fmtPct(increasePercent)} %. Det er høyere enn to separate enslighusholdninger (${formatKrAmount(2 * singleMonthly)}/mnd).`,
       );
     }
 
@@ -510,7 +510,7 @@ export function buildCohabitationInsight(
     ];
     if (collectiveMonthlySavings > 0) {
       highlights.push(
-        `To separate enslighusholdninger ville koste ${formatKrAmount(2 * singleMonthly)}/mnd totalt — ${formatKrAmount(collectiveMonthlySavings)}/mnd mer enn dere bruker sammen.`,
+        `To separate enslighusholdninger ville koste ${formatKrAmount(2 * singleMonthly)}/mnd totalt, ${formatKrAmount(collectiveMonthlySavings)}/mnd mer enn dere bruker sammen.`,
       );
     }
 

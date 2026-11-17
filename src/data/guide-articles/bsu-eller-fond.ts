@@ -150,7 +150,7 @@ export const bsuEllerFond: Omit<GuideArticleContent, "readTimeMinutes"> = {
     },
   ],
   conclusion:
-    "BSU er ofte vanskelig å slå når du får hele skattefradraget og sparer til bolig. Fond vinner på fleksibilitet og langsiktig vekstmulighet. Velg etter formål og tid – og kombiner gjerne når økonomien tillater det.",
+    "BSU er ofte vanskelig å slå når du får hele skattefradraget og sparer til bolig. Fond vinner på fleksibilitet og langsiktig vekstmulighet. Velg etter formål og tid, og kombiner gjerne når økonomien tillater det.",
   bottomCta: {
     heading: "Hvor mye får du i BSU-fradrag?",
     description:

@@ -45,9 +45,9 @@ export const emner: EmneHub[] = [
         links: [
           {
             href: "/guider/rentemote-september-2026",
-            label: "Rentemøte 24. september 2026",
+            label: "Rentemøtet i september: Renten økte til 4,5 prosent",
             description:
-              "Hva beslutningen og rentebanen kan bety for boliglånet ditt.",
+              "Hva renteøkningen og den senere novemberbeslutningen betyr for boliglånet ditt.",
           },
           {
             href: "/guider/bsu-eller-fond",
@@ -213,7 +213,7 @@ export const emner: EmneHub[] = [
       "annuitetslån",
     ],
     intro: [
-      "Dyr gjeld koster mer jo lenger den står. Kredittkort og forbrukslån har ofte høy effektiv rente, mens boliglån typisk er billigere – men større. Første steg er oversikt: restgjeld, rente og minimum per lån.",
+      "Dyr gjeld koster mer jo lenger den står. Kredittkort og forbrukslån har ofte høy effektiv rente, mens boliglån typisk er billigere, men større. Første steg er oversikt: restgjeld, rente og minimum per lån.",
       "Her finner du en nedbetalingsplan, kalkulatorer for ett eller flere lån, og ordbokforklaringer av effektiv rente, annuitet, refinansiering og rentefradrag. Inflasjon kan gjøre nominell gjeld lettere over tid, men den ettergir ikke det du skylder.",
     ],
     sections: [
@@ -222,7 +222,7 @@ export const emner: EmneHub[] = [
         links: [
           {
             href: "/guider/rentemote-september-2026",
-            label: "Rentemøte 24. september 2026",
+            label: "Rentemøtet i september: Renten økte til 4,5 prosent",
             description:
               "Regn ut hva 0,25 prosentpoeng kan bety for lånekostnaden.",
           },
@@ -356,7 +356,7 @@ export const emner: EmneHub[] = [
     ],
     intro: [
       "Sparing starter med en buffer, slik at uforutsette utgifter ikke blir til dyr gjeld. Deretter kan langsiktige penger gå i fond, BSU eller annen investering. Rentes rente gjør at jevn sparing over tid slår sporadiske hopp når markedet «ser billig ut».",
-      "Her ligger innføringen i fond og ASK, sparekalkulatorer, og ordboktermer som indeksfond, avkastning og aksjesparekonto. Formuesbyggerne viser hvordan eierskap og reinvestering – ikke lønn alene – bygger store formuer.",
+      "Her ligger innføringen i fond og ASK, sparekalkulatorer, og ordboktermer som indeksfond, avkastning og aksjesparekonto. Formuesbyggerne viser hvordan eierskap og reinvestering bygger store formuer. Lønn alene forklarer ikke disse verdiene.",
     ],
     sections: [
       {
@@ -644,7 +644,7 @@ export const emner: EmneHub[] = [
       "buffer",
     ],
     intro: [
-      "Et budsjett er ikke et forbud – det er oversikt. Når du vet hva som går ut hver måned, blir det lettere å bygge buffer, kutte det du ikke bruker, og se om inntekten tåler et uhell. SIFOs referansebudsjett er et nøkternt sammenligningsgrunnlag, ikke et komplett livsopphold: bolig og strøm kommer i tillegg.",
+      "Et budsjett gir deg oversikt. Når du vet hva som går ut hver måned, blir det lettere å bygge buffer, kutte det du ikke bruker, og se om inntekten tåler et uhell. SIFOs referansebudsjett er et nøkternt sammenligningsgrunnlag, ikke et komplett livsopphold: bolig og strøm kommer i tillegg.",
       "Her finner du SIFO-guider og kalkulator, gjennomgang av faste kostnader, og en rask sjekk av økonomisk helse. Ordboken forklarer budsjett, likviditet og disponibel inntekt uten bankjargong.",
     ],
     sections: [

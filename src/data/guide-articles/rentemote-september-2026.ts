@@ -5,11 +5,11 @@ export const rentemoteSeptember2026: Omit<
   "readTimeMinutes"
 > = {
   slug: "rentemote-september-2026",
-  seoTitle: "Rentemøte 24. september 2026: Hva betyr det for lånet?",
+  seoTitle: "Rentemøtet i september 2026: Renten økte til 4,5 prosent",
   intro:
-    "Norges Bank publiserer ny rentebeslutning og Pengepolitisk rapport torsdag 24. september 2026 klokken 10. Styringsrenten er 4,25 prosent før møtet. Her ser du hva en renteendring kan bety for boliglånet, og hva du bør sjekke når banken følger opp.",
+    "Norges Bank hevet styringsrenten fra 4,25 til 4,5 prosent i september 2026. Beslutningen ble publisert 24. september. Ved novemberbeslutningen ble renten holdt uendret. Her ser du hva renteøkningen kan bety for boliglånet, og hva du bør sjekke hos banken.",
   shortAnswer:
-    "En renteendring på 0,25 prosentpoeng tilsvarer omtrent 2 500 kroner i endrede årlige renter per million i lån, eller rundt 163 kroner i måneden etter 22 prosent rentefradrag. Har du 3 millioner i lån, er den forenklede effekten cirka 488 kroner i måneden etter fradraget. Banken bestemmer boliglånsrenten din og kan bruke tid på å endre den.",
+    "Styringsrenten økte med 0,25 prosentpoeng i september og var fortsatt 4,5 prosent ved beslutningen publisert 5. november. Hvis banken øker boliglånsrenten din like mye, koster et lån på 3 millioner kroner omtrent 7 500 kroner mer i årlige renter før skatt. Med full skatteverdi av rentefradraget på 22 prosent blir det rundt 488 kroner mer per måned. Dette er en forenklet renteeffekt, ikke en beregning av nytt terminbeløp.",
   topCta: {
     heading: "Regn på ditt eget lån",
     description:
@@ -20,16 +20,16 @@ export const rentemoteSeptember2026: Omit<
   },
   sections: [
     {
-      heading: "Når kommer rentebeslutningen?",
+      heading: "Hva ble besluttet i september?",
       paragraphs: [
-        "Rentebeslutningen og Pengepolitisk rapport 3/26 publiseres torsdag 24. september klokken 10. Rapportmøtene er ekstra interessante fordi Norges Bank samtidig legger frem nye prognoser for rente, prisvekst og norsk økonomi.",
-        "På rentemøtet i august ble styringsrenten holdt uendret på 4,25 prosent. Det sier likevel ikke sikkert hva som skjer i september. Les selve beslutningen og rentebanen, ikke bare overskriften om opp, ned eller uendret rente.",
+        "På møtet 23. september besluttet Norges Bank å øke styringsrenten fra 4,25 til 4,5 prosent. Beslutningen og Pengepolitisk rapport 3/26 ble publisert 24. september klokken 10. Den nye renten gjaldt fra 25. september.",
+        "I septemberprognosen ventet Norges Bank at renten ville ligge nær dette nivået en tid før den etter hvert avtar noe. Rentebanen er et anslag, ikke en garanti for hva banken din vil tilby.",
       ],
       factBox: [
-        "Dato: torsdag 24. september 2026",
-        "Tid: klokken 10.00",
-        "Før møtet: styringsrente på 4,25 prosent",
-        "Neste rentemøte etter september: 5. november 2026",
+        "Beslutningen ble publisert: 24. september 2026 klokken 10.00",
+        "Styringsrente før økningen: 4,25 prosent",
+        "Styringsrente etter økningen: 4,5 prosent",
+        "Endring: 0,25 prosentpoeng",
       ],
     },
     {
@@ -65,24 +65,24 @@ export const rentemoteSeptember2026: Omit<
       tip: "Regnestykket forutsetter at du får full skatteverdi av rentefradraget på 22 prosent. En renteoppgang gir høyere kostnad; et rentekutt gir tilsvarende lavere kostnad.",
     },
     {
-      heading: "Tre mulige utfall",
+      heading: "Hvordan følger banken opp?",
       subsections: [
         {
-          subheading: "Styringsrenten holdes uendret",
+          subheading: "Boliglånsrenten din kan være uendret",
           paragraphs: [
-            "Boliglånsrenten trenger ikke endre seg med en gang. Se i stedet etter om rentebanen peker mot senere endringer, og om bankenes finansieringskostnader har flyttet seg.",
+            "En økning i styringsrenten betyr ikke at alle boliglån blir dyrere samtidig. Sjekk bankens rentevarsel og avtalen din for å se om renten er endret, og fra hvilken dato.",
           ],
         },
         {
-          subheading: "Styringsrenten settes opp",
+          subheading: "Banken øker boliglånsrenten",
           paragraphs: [
             "Bankene kan øke utlånsrentene, men størrelsen og tidspunktet varierer. Banken skal varsle renteendringer etter reglene som gjelder for avtalen din.",
           ],
         },
         {
-          subheading: "Styringsrenten settes ned",
+          subheading: "Du kan fortsatt sammenligne og forhandle",
           paragraphs: [
-            "Et kutt kan gi lavere boliglånsrente, men det er ikke garantert at banken kutter like mye eller samtidig. Sammenlign renten din med andre tilbud når endringen er varslet.",
+            "Bankenes priser varierer også når styringsrenten står stille. Sammenlign effektiv rente og gebyrer på lån med tilsvarende belåningsgrad, og spør egen bank om den kan gi et bedre tilbud.",
           ],
         },
       ],
@@ -99,21 +99,24 @@ export const rentemoteSeptember2026: Omit<
       tip: "Vent ikke på et rentemøte for å forhandle. En reduksjon på 0,20 prosentpoeng på et lån på 3 millioner kroner er omtrent 6 000 kroner i lavere årlige renter før skatt.",
     },
     {
-      heading: "Oppdatering etter rentemøtet",
+      heading: "Siste beslutning og neste rentemøte",
       paragraphs: [
-        "Denne delen oppdateres etter at Norges Bank publiserer beslutningen 24. september klokken 10. Da legger vi inn resultatet, den nye rentebanen og et oppdatert regneeksempel for boliglån.",
+        "På møtet 4. november holdt Norges Bank styringsrenten uendret på 4,5 prosent. Beslutningen ble publisert 5. november. Banken la ikke frem nye prognoser denne gangen.",
+        "Neste rentebeslutning og Pengepolitisk rapport 4/26 publiseres 17. desember 2026. Utfallet er ikke kjent. Sammenlign derfor lånet med gjeldende tilbud, og bruk mulige renteendringer som scenarioer når du planlegger budsjettet.",
       ],
       factBox: [
-        "Status: beslutningen er ikke publisert ennå",
-        "Sist oppdatert: 22. september 2026",
+        "Siste publiserte beslutning: 5. november 2026",
+        "Styringsrente: 4,5 prosent",
+        "Neste rentebeslutning: 17. desember 2026",
+        "Sist kontrollert: 17. november 2026",
       ],
     },
   ],
   faq: [
     {
-      question: "Når er rentemøtet i september 2026?",
+      question: "Hva ble renten etter møtet i september 2026?",
       answer:
-        "Norges Bank publiserer rentebeslutningen og Pengepolitisk rapport torsdag 24. september 2026 klokken 10.",
+        "Norges Bank økte styringsrenten fra 4,25 til 4,5 prosent. Beslutningen ble publisert 24. september, og renten gjaldt fra 25. september. Ved novemberbeslutningen var renten uendret på 4,5 prosent.",
     },
     {
       question: "Følger boliglånsrenten styringsrenten direkte?",
@@ -126,12 +129,20 @@ export const rentemoteSeptember2026: Omit<
         "Den enkle renteeffekten er 7 500 kroner i året eller 625 kroner i måneden før skatt. Med full skatteverdi av rentefradraget blir det omtrent 488 kroner i måneden etter skatt.",
     },
     {
-      question: "Bør jeg binde renten før møtet?",
+      question: "Bør jeg binde renten før neste møte?",
       answer:
         "Ikke baser valget på ett rentemøte alene. Fastrente er først og fremst en forsikring mot renteendringer og bør vurderes ut fra hvor mye forutsigbarhet du trenger, bindingstid og vilkår for å avslutte avtalen.",
     },
   ],
   sources: [
+    {
+      label: "Norges Bank: rentebeslutningen i september 2026",
+      url: "https://www.norges-bank.no/tema/pengepolitikk/Rentemoter/2026/september-2026",
+    },
+    {
+      label: "Norges Bank: rentebeslutningen i november 2026 og neste møtedato",
+      url: "https://www.norges-bank.no/tema/pengepolitikk/Rentemoter/2026/november-2026",
+    },
     {
       label: "Norges Bank: kalender for rentemøter",
       url: "https://www.norges-bank.no/aktuelt/kalender/rentemoter/",
