@@ -10,7 +10,7 @@ import { getFaqPageJsonLd } from "@/lib/structured-data";
 const path = "/verktoy/faktura-med-kort";
 const description = "Hvor kan du betale faktura med Visa, Mastercard eller Amex? Se leverandører, betalingsmåte, kortforsøk og gebyrer. Skill kortbetaling fra regningsbetaling i banken.";
 export const metadata: Metadata = createPageMetadata({
-  title: "Betale faktura med kort – leverandører, gebyrer og bonus",
+  title: "Betale faktura med kort: leverandører, gebyrer og bonus",
   description,
   path,
   keywords: ["betale faktura med kort", "faktura Visa Mastercard", "Telia kortbetaling", "SkyttelPASS kort", "faktura EuroBonus", "Spenn kortbetaling"],

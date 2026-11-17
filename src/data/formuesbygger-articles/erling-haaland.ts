@@ -107,7 +107,7 @@ Manchester City har ikke offentliggjort lønnen. Tallene bygger derfor på estim
         {
           title: "Fast klubblønn",
           paragraphs: [
-            `Anslått til £525 000 per uke, eller £27,3 millioner per år – omtrent 339 millioner kroner før bonuser. Beløpet er ikke offentlig bekreftet av Manchester City. Kilde: [E24](${E24_SALARY}) / Capology.`,
+            `Anslått til £525 000 per uke, eller £27,3 millioner per år, omtrent 339 millioner kroner før bonuser. Beløpet er ikke offentlig bekreftet av Manchester City. Kilde: [E24](${E24_SALARY}) / Capology.`,
           ],
         },
         {

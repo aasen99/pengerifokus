@@ -4,7 +4,7 @@ export const circleKExtra: FordelArticleContent = {
   slug: "circle-k-extra",
   title: "Circle K Extra",
   intro:
-    "Circle K Extra er et gratis fordelsprogram med besøksbasert rabatt på drivstoff og lading: 30, 40 eller 45 øre etter antall besøk siste 90 dager. Du kan også velge en belønning etter hvert femte besøk. Andre medlemsfordeler må vurderes separat – rabatter kan ikke uten videre legges sammen.",
+    "Circle K Extra er et gratis fordelsprogram med besøksbasert rabatt på drivstoff og lading: 30, 40 eller 45 øre etter antall besøk siste 90 dager. Du kan også velge en belønning etter hvert femte besøk. Andre medlemsfordeler må vurderes separat. Rabatter kan ikke uten videre legges sammen.",
   lastVerified: "11. november 2026",
   lastModifiedIso: "2026-11-11",
   seoTitle: "Circle K Extra: drivstoffrabatt, lading og medlemsfordeler",
@@ -24,7 +24,7 @@ export const circleKExtra: FordelArticleContent = {
       heading: "Hva er Circle K Extra?",
       paragraphs: [
         "Circle K Extra er Circle Ks kundeklubb. Medlemskapet er gratis via Circle K-appen. Du får medlemsrabatt på drivstoff og hurtiglading, faste medlemspriser på utvalgte butikkvarer, personlige tilbud og belønninger etter besøk.",
-        "Programmet er laget for bilister og elbilister som bruker Circle K ofte – men også for deg som bare stikker innom for kaffe eller snacks. Besøk telles på mer enn bare fylling.",
+        "Programmet er laget for bilister og elbilister som bruker Circle K ofte, men også for deg som bare stikker innom for kaffe eller snacks. Besøk telles på mer enn bare fylling.",
       ],
     },
     {
@@ -37,7 +37,7 @@ export const circleKExtra: FordelArticleContent = {
         "Nivå 1 (0–7 besøk): 30 øre per liter drivstoff og 30 øre/kWh lading",
         "Nivå 2 (8–14 besøk): 40 øre per liter drivstoff og 40 øre/kWh lading",
         "Nivå 3 (15 eller flere besøk): 45 øre per liter drivstoff og 45 øre/kWh lading",
-        "Besøkene telles i rullerende 90 dager – nivået kan gå både opp og ned",
+        "Besøkene telles i rullerende 90 dager, så nivået kan gå både opp og ned",
         "Drivstoffrabatten gjelder bemannede Circle K-stasjoner; sjekk alltid din sats og tilknyttede betalingskort i appen",
       ],
       tip: "Sjekk alltid nettopris: skiltpris minus rabatt. En «dyr» toppdag med god Extra-rabatt kan fortsatt tape mot lav skiltpris et annet sted.",
@@ -94,33 +94,33 @@ export const circleKExtra: FordelArticleContent = {
     {
       question: "Gir Extra rabatt på YX?",
       answer:
-        "Coop-rabatt gjelder Circle K og YX. Extra er Circle Ks eget program – sjekk appen for hvilke stasjoner og satser som gjelder for deg.",
+        "Coop-rabatt gjelder Circle K og YX. Extra er Circle Ks eget program. Sjekk appen for hvilke stasjoner og satser som gjelder for deg.",
     },
     {
       question: "Hva med Circle K Extra Mastercard?",
       answer:
-        "Kredittkortet har egne satser og fordeler i tillegg til Extra-medlemskapet. Det er et separat produkt med egne vilkår – vurder årsavgift, rente og om du faktisk betaler kortet i tide.",
+        "Kredittkortet har egne satser og fordeler i tillegg til Extra-medlemskapet. Det er et separat produkt med egne vilkår. Vurder årsavgift, rente og om du faktisk betaler kortet i tide.",
     },
   ],
   sources: [
     {
-      label: "Circle K – Extra",
+      label: "Circle K: Extra",
       url: "https://www.circlek.no/extra",
     },
     {
-      label: "Circle K – Extra-fordeler",
+      label: "Circle K: Extra-fordeler",
       url: "https://www.circlek.no/extra/fordeler",
     },
     {
-      label: "Circle K – Vilkår for belønninger",
+      label: "Circle K: Vilkår for belønninger",
       url: "https://www.circlek.no/extra/betingelser",
     },
     {
-      label: "Coop – Circle K og medlemsbonus",
+      label: "Coop: Circle K og medlemsbonus",
       url: "https://www.coop.no/medlem/fordeler/circlek",
     },
     {
-      label: "Coop – betingelser for medlemsbonus",
+      label: "Coop: betingelser for medlemsbonus",
       url: "https://www.coop.no/medlem/fordeler/circlek/betingelser",
     },
   ],

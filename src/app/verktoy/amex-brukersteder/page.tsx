@@ -11,7 +11,7 @@ const path = "/verktoy/amex-brukersteder";
 const description = "Hvor kan du bruke American Express? Søk etter butikker, nettbutikker og abonnementer. Se egen Amex-status for butikk, nett og app, med kilder og forbehold.";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Amex brukersteder i Norge – søk etter butikk og abonnement",
+  title: "Amex brukersteder i Norge: søk etter butikk og abonnement",
   description,
   path,
   keywords: ["Amex brukersteder", "hvor kan jeg bruke Amex", "American Express butikker", "Amex nettbutikk", "Amex abonnement", "Amex Extra", "Amex Viaplay"],

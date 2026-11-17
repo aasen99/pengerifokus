@@ -10,7 +10,7 @@ export const guider: Guide[] = [
     slug: "penni-den-store-utfordreren",
     status: "published",
     featured: true,
-    title: "Penni – den store utfordreren?",
+    title: "Penni: Den store utfordreren?",
     description:
       "Penni utfordrer storbankene med høy sparerente, rente på brukskonto og månedlig renteutbetaling. Men lønner det seg når bankkortet koster 300 kroner?",
     category: "Bank",
@@ -28,13 +28,32 @@ export const guider: Guide[] = [
   },
 
   {
+    id: "guide-21",
+    slug: "halv-skatt",
+    status: "published",
+    featured: true,
+    title: "Halv skatt i november eller desember?",
+    description:
+      "Se når halvt skattetrekk kommer i 2026, hvorfor det ikke er lavere årsskatt, og hvilke utbetalinger som får fullt trekk.",
+    category: "Skatt",
+    tags: [
+      "halv skatt",
+      "halvt skattetrekk",
+      "november",
+      "desember",
+      "lønn",
+      "skatt 2026",
+    ],
+    createdAt: "2026-09-22",
+    updatedAt: "2026-11-17",
+  },
+  {
     id: "guide-19",
     slug: "rentemote-september-2026",
     status: "published",
-    featured: true,
-    title: "Rentemøte 24. september 2026",
+    title: "Rentemøtet i september 2026: Renten økte til 4,5 prosent",
     description:
-      "Se når Norges Bank publiserer beslutningen, hva 0,25 prosentpoeng betyr for boliglånet, og hva du bør sjekke hos banken.",
+      "Styringsrenten økte fra 4,25 til 4,5 prosent i september og ble holdt uendret i november. Se hva det betyr for boliglånet, og når neste beslutning kommer.",
     category: "Bolig",
     tags: [
       "rentemøte",
@@ -45,7 +64,7 @@ export const guider: Guide[] = [
       "september 2026",
     ],
     createdAt: "2026-09-22",
-    updatedAt: "2026-09-22",
+    updatedAt: "2026-11-17",
   },
   {
     id: "guide-20",
@@ -62,25 +81,6 @@ export const guider: Guide[] = [
       "skatt",
       "fradrag",
       "privatøkonomi",
-    ],
-    createdAt: "2026-09-22",
-    updatedAt: "2026-09-22",
-  },
-  {
-    id: "guide-21",
-    slug: "halv-skatt",
-    status: "published",
-    title: "Halv skatt i november eller desember?",
-    description:
-      "Se når halvt skattetrekk kommer i 2026, hvorfor det ikke er lavere årsskatt, og hvilke utbetalinger som får fullt trekk.",
-    category: "Skatt",
-    tags: [
-      "halv skatt",
-      "halvt skattetrekk",
-      "november",
-      "desember",
-      "lønn",
-      "skatt 2026",
     ],
     createdAt: "2026-09-22",
     updatedAt: "2026-09-22",
@@ -119,7 +119,7 @@ export const guider: Guide[] = [
     id: "guide-24",
     slug: "trumf-vs-coop",
     status: "published",
-    title: "Trumf eller Coop – hva lønner seg?",
+    title: "Trumf eller Coop: Hva lønner seg?",
     description:
       "Sammenlign Trumf-bonus, Coop-kjøpeutbytte og hva prisforskjellen på handlekurven betyr i praksis.",
     category: "Bonus",
@@ -238,7 +238,7 @@ export const guider: Guide[] = [
     slug: "eie-eller-leie-bolig",
     status: "published",
     featured: true,
-    title: "Eie eller leie bolig – hva lønner seg for deg?",
+    title: "Eie eller leie bolig: Hva lønner seg for deg?",
     description:
       "Sammenlign kostnader og nettoformue ved å eie eller leie bolig. Se regneeksempel og bruk gratis kalkulator med dine egne tall.",
     category: "Bolig",
@@ -275,7 +275,7 @@ export const guider: Guide[] = [
     slug: "sifo-budsjett",
     status: "published",
     featured: true,
-    title: "SIFO budsjett – referansebudsjettet 2026",
+    title: "SIFO budsjett: referansebudsjettet 2026",
     description:
       "Hva SIFOs referansebudsjett måler, hva det utelater, og hvordan du bruker det sammen med eget budsjett.",
     category: "Budsjett",
@@ -322,7 +322,7 @@ export const guider: Guide[] = [
     slug: "drivstoffpriser",
     status: "published",
     featured: true,
-    title: "Drivstoffpriser – hva du betaler for, og hvordan du sparer",
+    title: "Drivstoffpriser: hva du betaler for, og hvordan du sparer",
     description:
       "Hvorfor bensin og diesel svinger så mye, hva avgifter og oljepris faktisk betyr, og hvordan du fyller billigere uten å spekulere.",
     category: "Budsjett",

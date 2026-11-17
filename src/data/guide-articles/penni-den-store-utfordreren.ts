@@ -5,9 +5,9 @@ export const penniDenStoreUtfordreren: Omit<
   "readTimeMinutes"
 > = {
   slug: "penni-den-store-utfordreren",
-  seoTitle: "Penni – den store utfordreren? Renter, kortgebyr og bankenes ventetid",
+  seoTitle: "Penni: Den store utfordreren? Renter, kortgebyr og bankenes ventetid",
   intro:
-    "Penni gir rente også på brukskonto, betaler ut renter hver måned og økte sparerenten samme dag som Norges Bank hevet styringsrenten. Men et bankkort til 300 kroner i året gjør at regnestykket ikke er like enkelt for alle. Vi undersøker hva du faktisk tjener – og hvorfor storbankenes sparekunder må vente på bedre rente.",
+    "Penni gir rente også på brukskonto, betaler ut renter hver måned og økte sparerenten samme dag som Norges Bank hevet styringsrenten. Men et bankkort til 300 kroner i året gjør at regnestykket ikke er like enkelt for alle. Vi undersøker hva du faktisk tjener, og hvorfor storbankenes sparekunder må vente på bedre rente.",
   shortAnswer:
     "Penni oppgir 3,04 % effektiv rente på brukskonto, 4,70 % på ordinær sparekonto og 4,91 % på høyrentekonto med 31 dagers uttaksvarsel. Har du bare penger stående, er den fleksible sparekontoen normalt mer relevant enn en brukskonto uten kort. Brukskontoen er for betalinger, og kortavgiften på 300 kr må vurderes mot gevinsten.",
   sections: [
@@ -33,7 +33,7 @@ export const penniDenStoreUtfordreren: Omit<
       heading: "Hvorfor ha brukskonto uten kort når sparekontoen gir høyere rente?",
       paragraphs: [
         "Det korte svaret: Hvis pengene bare skal stå der, har det liten hensikt. Penni tilbyr en ordinær sparekonto uten bindingstid, gebyrer eller uttaksbegrensninger, og renten er betydelig høyere enn på brukskontoen.",
-        "En brukskonto uten bankkort kan likevel være nyttig som regningskonto dersom du bruker den til lønn, eFaktura, AvtaleGiro eller andre betalinger. Du kan da skille faste trekk fra forbruk uten å betale kortavgift. Men det er betalingsfunksjonen – ikke sparerenten – som gir kontoen en oppgave.",
+        "En brukskonto uten bankkort kan likevel være nyttig som regningskonto dersom du bruker den til lønn, eFaktura, AvtaleGiro eller andre betalinger. Du kan da skille faste trekk fra forbruk uten å betale kortavgift. Men det er betalingsfunksjonen som gir kontoen en oppgave, ikke sparerenten.",
         "Den praktiske løsningen kan være å ha mest mulig av pengene på en fleksibel sparekonto, og bare beløpet du trenger til kommende betalinger på brukskontoen. Du kan også beholde et rimelig eller gratis kort i en annen bank. Det er ingen grunn til å kjøpe et nytt kort bare for å få rente på penger du egentlig ikke skal bruke.",
       ],
       table: {
@@ -74,7 +74,7 @@ export const penniDenStoreUtfordreren: Omit<
         "Penni legger opptjente renter over én krone til kontoen den første dagen hver måned. Rentene begynner deretter selv å tjene renter. Det kalles månedlig kapitalisering og gir en liten renters rente-effekt.",
         "På ordinær sparekonto er den nominelle renten 4,60 prosent. Med tolv like kapitaliseringsperioder blir et forenklet årsregnestykke: (1 + 0,046 / 12)^12 − 1 ≈ 4,698 prosent. Det samsvarer med bankens avrundede effektive rente på 4,70 prosent.",
         "Har du 100 000 kroner stående uendret gjennom et helt år, tilsvarer det omtrent 4 698 kroner før skatt. Med den samme nominelle renten og bare én årlig rentekapitalisering ville beløpet vært 4 600 kroner. Differansen er rundt 98 kroner.",
-        "Det er hyggelig, men ikke magi. Sammenlign effektive renter mellom banker – da er kapitaliseringshyppigheten allerede tatt hensyn til. Og hvis du bruker opp de utbetalte rentene hver måned, får du ikke den samme renters rente-effekten.",
+        "Det er hyggelig, men ikke magi. Sammenlign effektive renter mellom banker. Da er kapitaliseringshyppigheten allerede tatt hensyn til. Og hvis du bruker opp de utbetalte rentene hver måned, får du ikke den samme renters rente-effekten.",
       ],
       factBox: [
         "Brukskonto: 3,00 % nominell blir ca. 3,04 % effektiv.",
@@ -84,7 +84,7 @@ export const penniDenStoreUtfordreren: Omit<
       ],
     },
     {
-      heading: "Penni økte renten samme dag – også for eksisterende kunder",
+      heading: "Penni økte renten samme dag, også for eksisterende kunder",
       paragraphs: [
         "24. september 2026 hevet Norges Bank styringsrenten fra 4,25 til 4,50 prosent. Samme dag kunngjorde Penni at renten på den ordinære sparekontoen økte fra 4,35 til 4,60 prosent, mens høyrentekontoen økte fra 4,55 til 4,80 prosent.",
         "Hele renteøkningen på 0,25 prosentpoeng ble videreført til disse spareproduktene, med virkning fra samme dag både for nye og eksisterende kunder. Det er en handling som fortjener oppmerksomhet.",
@@ -124,7 +124,7 @@ export const penniDenStoreUtfordreren: Omit<
       ],
     },
     {
-      heading: "Vår vurdering: viktig konkurranse – men ikke kjøp feil produkt",
+      heading: "Vår vurdering: viktig konkurranse, men ikke kjøp feil produkt",
       paragraphs: [
         "Penni utfordrer etablerte banker på flere områder: Høy rente også på brukskonto, månedlig renteutbetaling og rask renteøkning for eksisterende sparekunder. Det er bra for konkurransen.",
         "Samtidig bør ingen velge en brukskonto uten kort bare for å parkere sparepenger når samme bank tilbyr høyere rente på en fleksibel sparekonto. Skal kontoen brukes til regninger, er situasjonen annerledes. Skal den brukes med bankkort, må kortavgiften inn i regnestykket.",
@@ -187,7 +187,7 @@ export const penniDenStoreUtfordreren: Omit<
   relatedLinks: [
     { label: "Hva koster banklojalitet?", href: "/guider/bankenes-fordelsprogrammer" },
     { label: "Bygg bufferkonto", href: "/guider/bygg-bufferkonto" },
-    { label: "Effektiv rente – hva betyr det?", href: "/ordbok/effektiv-rente" },
+    { label: "Effektiv rente: Hva betyr det?", href: "/ordbok/effektiv-rente" },
     { label: "Rentekalkulator", href: "/verktoy/rentekalkulator" },
   ],
 };

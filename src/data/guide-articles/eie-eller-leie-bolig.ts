@@ -4,7 +4,7 @@ const CALCULATOR_HREF = "/verktoy/eie-leie-kalkulator";
 
 export const eieEllerLeieBolig: GuideArticleContent = {
   slug: "eie-eller-leie-bolig",
-  seoTitle: "Eie eller leie bolig – hva lønner seg?",
+  seoTitle: "Eie eller leie bolig: Hva lønner seg?",
   intro:
     "Skal du kjøpe eller leie? Svaret handler sjelden bare om månedlig husleie mot terminbeløp. Tid, kjøpskostnader, vedlikehold og alternativ avkastning på egenkapitalen kan snu regnestykket fullstendig.",
   shortAnswer:
@@ -38,7 +38,7 @@ export const eieEllerLeieBolig: GuideArticleContent = {
         "Tilsvarende tilgang til parkering, bod og uteareal",
         "Tilsvarende reisevei til jobb, skole og kollektiv",
       ],
-      tip: "Dersom kjøpsalternativet er større eller bedre enn leieboligen, sammenligner du både eieform og to forskjellige livsstiler – ikke bare to like alternativer.",
+      tip: "Dersom kjøpsalternativet er større eller bedre enn leieboligen, sammenligner du både eieform og to forskjellige livsstiler, ikke bare to like alternativer.",
     },
     {
       heading: "Terminbeløp er ikke det samme som kostnad",
@@ -50,7 +50,7 @@ export const eieEllerLeieBolig: GuideArticleContent = {
     {
       heading: "Alternativkostnaden ved å binde egenkapital",
       paragraphs: [
-        "[Egenkapitalen](/ordbok/egenkapital) du legger i bolig, kunne også vært investert i fond eller annet. Hvis boligen stiger lite og fondene gjør det bra, kan leie pluss sparing teoretisk slå eie – og omvendt.",
+        "[Egenkapitalen](/ordbok/egenkapital) du legger i bolig, kunne også vært investert i fond eller annet. Hvis boligen stiger lite og fondene gjør det bra, kan leie pluss sparing teoretisk slå eie, og omvendt.",
         `Ingen vet fremtiden. Poenget er å være bevisst på at egenkapital har en [alternativkostnad](/ordbok/alternativkostnad), og at du bør teste flere realistiske antagelser i [eie-versus-leie-kalkulatoren](${CALCULATOR_HREF}).`,
       ],
     },
@@ -58,7 +58,7 @@ export const eieEllerLeieBolig: GuideArticleContent = {
       heading: "Konkret regneeksempel",
       subheading: "Eksempel: Bolig til 4 millioner eller leie til 18 000 kroner?",
       paragraphs: [
-        "Tabellen under viser første måned for en selveierbolig til 4 000 000 kr med 400 000 kr i egenkapital, 5 % nominell rente over 25 år, og leie til 18 000 kr per måned. Tallene er illustrative – ikke en prognose.",
+        "Tabellen under viser første måned for en selveierbolig til 4 000 000 kr med 400 000 kr i egenkapital, 5 % nominell rente over 25 år, og leie til 18 000 kr per måned. Tallene er eksempler, ikke en prognose.",
       ],
       bullets: [
         "Kjøpesum: 4 000 000 kr",
@@ -108,7 +108,7 @@ export const eieEllerLeieBolig: GuideArticleContent = {
     {
       heading: "Kostnader mange glemmer",
       paragraphs: [
-        "Et godt regnestykke inkluderer kostnader som ofte glemmes i en rask sammenligning. Husk at strøm normalt betales av både leiere og eiere, og at et ordinært depositum er bundet kapital – ikke en kostnad dersom det tilbakebetales.",
+        "Et godt regnestykke inkluderer kostnader som ofte glemmes i en rask sammenligning. Husk at strøm normalt betales av både leiere og eiere, og at et ordinært depositum er bundet kapital, ikke en kostnad dersom det tilbakebetales.",
       ],
       subsections: [
         {
@@ -148,7 +148,7 @@ export const eieEllerLeieBolig: GuideArticleContent = {
     {
       heading: "Hva påvirker resultatet mest?",
       paragraphs: [
-        "Små endringer i antatt boligprisvekst eller fondsavkastning kan gi store utslag over mange år. Derfor bør du teste minst tre scenarioer: forsiktig, normalt og optimistisk – slik [kalkulatoren](/verktoy/eie-leie-kalkulator) også lar deg gjøre.",
+        "Små endringer i antatt boligprisvekst eller fondsavkastning kan gi store utslag over mange år. Derfor bør du teste minst tre scenarioer: forsiktig, normalt og optimistisk, slik [kalkulatoren](/verktoy/eie-leie-kalkulator) også lar deg gjøre.",
       ],
       bullets: [
         "Tidshorisont",

@@ -77,7 +77,7 @@ export const spareIFondEllerBetaleNedBoliglan: Omit<
       heading: "Du kan dele beløpet",
       paragraphs: [
         "Valget trenger ikke være binært. Har du 4 000 kroner ekstra hver måned, kan du for eksempel bruke 2 000 kroner på lånet og 2 000 kroner i fond. Du får både garantert rentebesparelse og markedsdeltakelse.",
-        "En annen modell er å øke avdragene når renten er høy, og fortsette et mindre fast fondsbeløp for å beholde vanen. Det viktigste er at fordelingen passer risikoen og målene dine – ikke at den er matematisk perfekt i ettertid.",
+        "En annen modell er å øke avdragene når renten er høy, og fortsette et mindre fast fondsbeløp for å beholde vanen. Det viktigste er at fordelingen passer risikoen og målene dine, ikke at den er matematisk perfekt i ettertid.",
       ],
     },
   ],

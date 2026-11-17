@@ -23,14 +23,14 @@ export const elkjop: FordelArticleContent = {
     {
       heading: "Hva er Elkjøps kundeklubb?",
       paragraphs: [
-        "Elkjøps kundeklubb er det gratis medlemsprogrammet til Elkjøp – en av Norges største elektronikk- og hvitevarekjeder. Medlemskap krever norsk adresse, og du må samtykke til markedsføring for full tilgang til fordeler.",
+        "Elkjøps kundeklubb er det gratis medlemsprogrammet til Elkjøp, en av Norges største elektronikk- og hvitevarekjeder. Medlemskap krever norsk adresse, og du må samtykke til markedsføring for full tilgang til fordeler.",
         "Klubben gir både faste medlemsrabatter på utvalgte produktgrupper og tidsbegrensede klubbtilbud som varierer gjennom året.",
       ],
     },
     {
       heading: "Hovedfordeler",
       paragraphs: [
-        "Ifølge Elkjøp får klubbmedlemmer flere fordeler enn vanlige kunder – særlig på retur og tilbud.",
+        "Ifølge Elkjøp får klubbmedlemmer flere fordeler enn vanlige kunder, særlig på retur og tilbud.",
       ],
       bullets: [
         "50 dagers åpent kjøp på produkter solgt av Elkjøp (vanlige kunder har 30 dager)",
@@ -39,7 +39,7 @@ export const elkjop: FordelArticleContent = {
         "Elsjansen: automatisk deltakelse ved kjøp over 500 kr (gavekort trekkes månedlig)",
         "Kvittering på e-post og invitasjoner til klubbhelger/VIP-shopping",
       ],
-      tip: "Åpent kjøp gjelder produkter solgt av Elkjøp – ikke Marketplace-partnere på elkjop.no.",
+      tip: "Åpent kjøp gjelder produkter solgt av Elkjøp, ikke Marketplace-partnere på elkjop.no.",
     },
     {
       heading: "Elsjansen",
@@ -51,13 +51,13 @@ export const elkjop: FordelArticleContent = {
     {
       heading: "Faste medlemsrabatter",
       paragraphs: [
-        "Elkjøp oppgir faste rabatter på utvalgte produktgrupper for medlemmer – for eksempel prosentavslag på tilbehør, spill, kaffeprodukter og startkit til hvitevarer. Satser og produkter endres, så sjekk alltid gjeldende klubbtilbud på elkjop.no.",
+        "Elkjøp oppgir faste rabatter på utvalgte produktgrupper for medlemmer, for eksempel prosentavslag på tilbehør, spill, kaffeprodukter og startkit til hvitevarer. Satser og produkter endres, så sjekk alltid gjeldende klubbtilbud på elkjop.no.",
       ],
     },
     {
       heading: "Er kundeklubben verdt det?",
       paragraphs: [
-        "Medlemskapet er gratis og 50 dagers åpent kjøp alene kan være verdifullt på større elektronikkkjøp – du får mer tid til å teste produktet.",
+        "Medlemskapet er gratis og 50 dagers åpent kjøp alene kan være verdifullt på større elektronikkkjøp. Du får mer tid til å teste produktet.",
         "Ikke la klubbpriser lokke til impulskjøp. Sammenlign med Power, nettbutikker og medlemsrabatter du allerede har via OBOS, Trumf eller bank.",
       ],
     },
@@ -81,11 +81,11 @@ export const elkjop: FordelArticleContent = {
   ],
   sources: [
     {
-      label: "Elkjøp – Kundeklubb",
+      label: "Elkjøp: Kundeklubb",
       url: "https://www.elkjop.no/kundeklubb",
     },
     {
-      label: "Elkjøp – Elsjansen vilkår",
+      label: "Elkjøp: Elsjansen vilkår",
       url: "https://www.elkjop.no/kundeklubb/elsjansen-vinn-gavekort-hver-maned/elsjansen-konkuransevilkar",
     },
   ],

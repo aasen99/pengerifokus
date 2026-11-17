@@ -3,7 +3,7 @@ import type { FordelArticleContent } from "@/types/fordel-article";
 export const hotellbonus: FordelArticleContent = {
   "slug": "hotellbonus",
   "title": "Beste hotellbonus i Norge: Strawberry, Scandic eller Thon?",
-  "intro": "Hvor mange overnattinger må du ha før hotellmedlemskapet gir romoppgradering, restaurantkuponger eller andre fordeler av verdi? Vi sammenligner Strawberry, Scandic Friends og THON+ på tvers av selskapene – og ser hvordan SAS EuroBonus og Norwegian Reward påvirker regnestykket.",
+  "intro": "Hvor mange overnattinger må du ha før hotellmedlemskapet gir romoppgradering, restaurantkuponger eller andre fordeler av verdi? Vi sammenligner Strawberry, Scandic Friends og THON+ på tvers av selskapene, og ser hvordan SAS EuroBonus og Norwegian Reward påvirker regnestykket.",
   "shortAnswer": "THON+ gir mulighet for romoppgradering etter 10 tellende netter. Strawberry krever normalt 30 netter for Gold og 60 for Platinum, som gir gratis hotelltrening også uten overnatting. Scandic bruker hovedsakelig kvalifiserende poeng; SAS EuroBonus-status kan gjøre Scandic spesielt verdifullt. Det beste programmet er det som gir deg fordeler på opphold du uansett ville kjøpt.",
   "lastVerified": "5. november 2026",
   "lastModifiedIso": "2026-11-05",
@@ -89,7 +89,7 @@ export const hotellbonus: FordelArticleContent = {
       "tip": "*Scandic-eksempelet er en beregning, ikke en offisiell nattgrense. Nivå 1–3 gir 2 poeng per krone ekskl. mva., nivå 4–5 gir 2,5 og nivå 6–7 gir 3. Opptjeningsraten øker først etter at et nytt nivå er registrert. Nivå 7 kan dessuten oppnås ved 100 kvalifiserende netter. Scandic har normalt ikke nattkrav for nivå 2–6."
     },
     {
-      "heading": "Romoppgradering, frokost og trening – hvem gir mest?",
+      "heading": "Romoppgradering, frokost og trening: Hvem gir mest?",
       "paragraphs": [
         "Tabellen sammenligner utvalgte etterspurte fordeler. Hotellene kan ha lokale unntak. Oppgradering og sen utsjekk avhenger ofte av kapasitet, og gratis frokost er ikke det samme som frokost inkludert i romprisen."
       ],
@@ -141,7 +141,7 @@ export const hotellbonus: FordelArticleContent = {
         "Strawberry samler blant annet Clarion, Quality, Comfort og Home Hotel. Medlemskapet er gratis og nivåene bestemmes normalt av kvalifiserende netter i din personlige tolvmånedersperiode.",
         "Allerede som Blue får du medlemspris, en vanlig kaffe eller te daglig med påfyll på deltakende hotell, og muligheten Monday Breakfast (to frokoster for prisen av én). På utvalgte Clarion-, Quality- og frittstående hotell får du også en restaurantkupong på 35 kroner per kvalifiserende natt.",
         "Silver krever 5 netter og gir blant annet sen utsjekk til klokken 14 ved tilgjengelighet og en restaurantkupong på 75 kroner. Gold krever 30 netter og gir blant annet mulig romoppgradering, sen utsjekk til klokken 15 og kupong på 125 kroner.",
-        "Platinum krever 60 kvalifiserende netter. I tillegg til Gold-fordelene får du blant annet mulighet for utsjekk klokken 16, én brus eller mineralvann per hotellnatt og gratis adgang til treningsrom på kjedehoteller som har eget treningsrom – også når du ikke bor der. Du må vise Platinum-nivået i appen. Treningsrom som krever eget abonnement, er unntatt.",
+        "Platinum krever 60 kvalifiserende netter. I tillegg til Gold-fordelene får du blant annet mulighet for utsjekk klokken 16, én brus eller mineralvann per hotellnatt og gratis adgang til treningsrom på kjedehoteller som har eget treningsrom, også når du ikke bor der. Du må vise Platinum-nivået i appen. Treningsrom som krever eget abonnement, er unntatt.",
         "Regneeksempel: 60 netter til 1 200 kroner tilsvarer 72 000 kroner i hotellkostnader. Det er ikke en pris man bør betale for å oppnå gymfordelen; poenget er at fordelen kan være nyttig hvis hotellnettene allerede er nødvendige."
       ],
       "table": {
@@ -383,7 +383,7 @@ export const hotellbonus: FordelArticleContent = {
       },
       "paragraphs": [
         "THON+ har den korteste ordinære veien til mulighet for romoppgradering, Strawberry tilbyr konkrete lavnivåfordeler og et tydelig Spenn-økosystem, mens Scandic kan være særlig sterkt for aktive SAS-kunder.",
-        "Konklusjonen i Penger i Fokus: Velg program ut fra overnattingene du uansett skal ha – ikke bestill flere netter bare for å få et høyere navn på medlemskortet."
+        "Konklusjonen i Penger i Fokus: Velg program ut fra overnattingene du uansett skal ha. Ikke bestill flere netter bare for å få et høyere navn på medlemskortet."
       ]
     }
   ],

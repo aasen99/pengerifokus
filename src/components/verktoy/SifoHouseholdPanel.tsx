@@ -378,7 +378,7 @@ export function SifoHouseholdPanel({
             </CalculatorField>
 
             {state.barnehageBarn > 0 && (
-              <CalculatorField label="Barnehage – inntektsnivå">
+              <CalculatorField label="Barnehage: inntektsnivå">
                 <select
                   value={state.barnehageInntekt}
                   onChange={(e) =>
@@ -421,7 +421,7 @@ export function SifoHouseholdPanel({
 
             {state.aksBarn > 0 && (
               <>
-                <CalculatorField label="AKS – plass">
+                <CalculatorField label="AKS: plass">
                   <select
                     value={state.aksPlass}
                     onChange={(e) =>
@@ -436,7 +436,7 @@ export function SifoHouseholdPanel({
                     </option>
                   </select>
                 </CalculatorField>
-                <CalculatorField label="AKS – inntektsnivå">
+                <CalculatorField label="AKS: inntektsnivå">
                   <select
                     value={state.aksInntekt}
                     onChange={(e) =>

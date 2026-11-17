@@ -11,7 +11,7 @@ export function Hero() {
         {siteConfig.tagline}
       </h1>
       <p className="mt-4 max-w-xl text-base text-stone-600 sm:text-lg">
-        Guider, kalkulatorer og tilbud for personlig økonomi i Norge — uten
+        Guider, kalkulatorer og tilbud for personlig økonomi i Norge, uten
         bankjargong.
       </p>
       <div className="mt-6">

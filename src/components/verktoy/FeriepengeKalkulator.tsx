@@ -361,7 +361,7 @@ export function FeriepengeKalkulator() {
                 blir trekket {result.holidayDays}/{workingDaysPerMonthLabel} av
                 månedslønnen
                 {result.holidayDeduction > result.monthlySalary
-                  ? " — altså mer enn én månedslønn, fordi fem uker er lengre enn juni"
+                  ? ", altså mer enn én månedslønn, fordi fem uker er lengre enn juni"
                   : ""}
                 . Formelen: feriepenger + månedslønn − trekk.
               </p>

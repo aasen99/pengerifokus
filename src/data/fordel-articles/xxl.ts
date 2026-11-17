@@ -24,7 +24,7 @@ export const xxl: FordelArticleContent = {
     {
       heading: "Hva er XXL Reward?",
       paragraphs: [
-        "XXL Reward er lojalitetsprogrammet til XXL – Nordens store sport- og villmarks kjede. Medlemskapet er gratis, personlig og forbeholdt privatpersoner over 16 år med norsk adresse og telefonnummer.",
+        "XXL Reward er lojalitetsprogrammet til XXL, en nordisk kjede for sport og friluftsliv. Medlemskapet er gratis, personlig og forbeholdt privatpersoner over 16 år med norsk adresse og telefonnummer.",
         "Du kan melde deg inn i butikk eller på xxl.no. I butikk registreres kjøp med telefonnummer; på nett må du være innlogget.",
       ],
     },
@@ -32,7 +32,7 @@ export const xxl: FordelArticleContent = {
       heading: "Poeng og bonussjekker",
       paragraphs: [
         "Ifølge XXL samler du poeng på kjøp i varehus og på xxl.no. Poengene konverteres til bonussjekker omtrent én gang i måneden. Unntak inkluderer frakt, gavekort, plastposer og kjøp betalt med bonus.",
-        "Noen ganger i året har XXL medlemsdager med doble eller triple poeng – da lønner det seg ekstra å konsolidere planlagte innkjøp.",
+        "Noen ganger i året har XXL medlemsdager med doble eller triple poeng. Da lønner det seg ekstra å konsolidere planlagte innkjøp.",
       ],
       bullets: [
         "Poeng på de fleste kjøp",
@@ -50,7 +50,7 @@ export const xxl: FordelArticleContent = {
         "28 dagers åpent kjøp",
         "Tre gratis returer til nettbutikk per 12 måneder (ikke-medlemmer betaler returporto)",
         "Digitale kvitteringer på Mine sider",
-        "XXL Pay – betal neste måned eller del opp (krever kredittvurdering)",
+        "XXL Pay: betal neste måned eller del opp (krever kredittvurdering)",
         "Prismatch i kjøpsøyeblikket (gjelder identisk vare hos norsk aktør)",
       ],
       tip: "Bonussjekker og personlige tilbud gjelder normalt ordinær pris og kan ikke alltid kombineres med andre kampanjer.",
@@ -59,7 +59,7 @@ export const xxl: FordelArticleContent = {
       heading: "Er XXL Reward verdt det?",
       paragraphs: [
         "Ja, hvis du handler sport og friluft hos XXL uansett. Gratis medlemskap, poeng og bedre retur er ren upside på planlagte kjøp.",
-        "Nei, hvis du handler mer enn du trenger for å «tjene» bonussjekker. Poeng er en liten rabatt – ikke en inntekt.",
+        "Nei, hvis du handler mer enn du trenger for å «tjene» bonussjekker. Poeng er en liten rabatt, ikke en inntekt.",
       ],
     },
   ],
@@ -87,15 +87,15 @@ export const xxl: FordelArticleContent = {
   ],
   sources: [
     {
-      label: "XXL – Reward",
+      label: "XXL: Reward",
       url: "https://www.xxl.no/reward",
     },
     {
-      label: "XXL – Medlemsvilkår",
+      label: "XXL: Medlemsvilkår",
       url: "https://www.xxl.no/faq/medlemsvilkar",
     },
     {
-      label: "XXL – Kundefordeler",
+      label: "XXL: Kundefordeler",
       url: "https://www.xxl.no/faq/xxl-garantier",
     },
   ],

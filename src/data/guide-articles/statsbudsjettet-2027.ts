@@ -7,7 +7,7 @@ export const statsbudsjettet2027: Omit<
   slug: "statsbudsjettet-2027",
   seoTitle: "Statsbudsjettet 2027: Dette kan endre lommeboka",
   intro:
-    "Regjeringen legger frem forslaget til statsbudsjett for 2027 onsdag 7. oktober 2026. På denne siden samler vi endringene som kan merkes i privatøkonomien – fra skatt og fradrag til strøm, transport, studiestøtte og ytelser.",
+    "Regjeringen legger frem forslaget til statsbudsjett for 2027 onsdag 7. oktober 2026. På denne siden samler vi endringene som kan merkes i privatøkonomien, fra skatt og fradrag til strøm, transport, studiestøtte og ytelser.",
   shortAnswer:
     "Statsbudsjettet for 2027 legges frem 7. oktober 2026. Det som presenteres er regjeringens forslag, ikke det endelige budsjettet. Stortinget behandler forslaget gjennom høsten, og vedtak kan derfor bli annerledes enn de første overskriftene.",
   sections: [
@@ -28,7 +28,7 @@ export const statsbudsjettet2027: Omit<
       heading: "Dette følger vi for privatøkonomien",
       bullets: [
         "Skatt på lønn, formue, aksjer og andre inntekter",
-        "Fradrag, grenser og satser – blant annet BSU og reisefradrag",
+        "Fradrag, grenser og satser, blant annet BSU og reisefradrag",
         "Barnetrygd, trygd, pensjon, studiestøtte og andre ytelser",
         "Strøm, drivstoff, kollektivtransport og andre husholdningskostnader",
         "Bolig, lån og tiltak som påvirker kjøpere, eiere og leietakere",
@@ -68,7 +68,7 @@ export const statsbudsjettet2027: Omit<
       heading: "Slik finner du din egen kroneeffekt",
       bullets: [
         "Noter hvilke forslag som faktisk gjelder inntekten, boligen og husholdningen din",
-        "Sammenlign nye satser med 2026-satsene – ikke bare med tidligere politiske mål",
+        "Sammenlign nye satser med 2026-satsene, ikke bare med tidligere politiske mål",
         "Regn helårseffekten og del på 12 hvis du vil se en omtrentlig månedsvirkning",
         "Ta med både skatt, ytelser og prisendringer før du summerer",
         "Vent med permanente budsjettgrep til du vet hva Stortinget vedtar",

@@ -24,13 +24,13 @@ export const ikeaFamily: FordelArticleContent = {
       heading: "Hva er IKEA Family?",
       paragraphs: [
         "IKEA Family er IKEAs gratis lojalitetsprogram for privatpersoner. Du melder deg inn på ikea.com eller i varehuset og får tilgang til medlemspriser, tilbud og tjenester med en gang.",
-        "Programmet er laget for deg som innreder, oppgraderer eller jevnlig handler hos IKEA – ikke for spekulanter. Verdi kommer når du allerede planlegger kjøp.",
+        "Programmet er laget for deg som innreder, oppgraderer eller jevnlig handler hos IKEA. Verdi kommer når du allerede planlegger kjøp.",
       ],
     },
     {
       heading: "Medlemspriser og Family-tilbud",
       paragraphs: [
-        "IKEA merker medlemsvarer med blå IKEA Family-tilbud – både i varehus og på nett. Satser og produkter endres løpende, så sjekk alltid gjeldende tilbud før du handler.",
+        "IKEA merker medlemsvarer med blå IKEA Family-tilbud, både i varehus og på nett. Satser og produkter endres løpende, så sjekk alltid gjeldende tilbud før du handler.",
         "Som medlem får du også typisk lavere medlemspris på henting og levering, og medlemspris på interiørdesigner (ofte med første rådgivning gratis).",
       ],
       bullets: [
@@ -44,22 +44,22 @@ export const ikeaFamily: FordelArticleContent = {
       heading: "Poeng og belønninger",
       paragraphs: [
         "IKEA har innført poeng/belønninger for Family-medlemmer. Du kan få poeng når du handler, logger inn, lager huskeliste, deltar på arrangementer og andre aktiviteter. Jo flere poeng, jo flere belønninger låses opp.",
-        "Belønninger innløses typisk med en kode i profilen. Eksakte satser og belønninger endres – sjekk IKEA Family-profilen din.",
+        "Belønninger innløses typisk med en kode i profilen. Eksakte satser og belønninger endres. Sjekk IKEA Family-profilen din.",
       ],
     },
     {
       heading: "Oops-forsikring og digitale kvitteringer",
       paragraphs: [
-        "Når du logger inn / registrerer Family ved betaling, får du ifølge IKEA automatisk 14 dagers Oops-forsikring. Den dekker uhell under transport eller montering – IKEA bytter da varen gratis etter egne vilkår.",
+        "Når du logger inn / registrerer Family ved betaling, får du ifølge IKEA automatisk 14 dagers Oops-forsikring. Den dekker uhell under transport eller montering. IKEA bytter da varen gratis etter egne vilkår.",
         "Kvitteringer lagres digitalt på profilen. Det forenkler retur, reservedeler og reklamasjon.",
       ],
-      tip: "Oops-forsikringen er en av de mest undervurderte Family-fordelene på større møbelkjøp – husk å være innlogget når du betaler.",
+      tip: "Oops-forsikringen er en av de mest undervurderte Family-fordelene på større møbelkjøp. Husk å være innlogget når du betaler.",
     },
     {
       heading: "Er IKEA Family verdt det?",
       paragraphs: [
         "Ja, nesten alltid hvis du handler hos IKEA. Medlemskapet er gratis, og medlemspris + Oops + digitale kvitteringer er ren upside uten ekstra kostnad.",
-        "Nei, hvis Family-tilbudet lokker deg til å kjøpe mer enn du trenger. En «god» medlemspris er fortsatt en utgift – ikke en inntekt.",
+        "Nei, hvis Family-tilbudet lokker deg til å kjøpe mer enn du trenger. En «god» medlemspris er fortsatt en utgift, ikke en inntekt.",
       ],
     },
   ],
@@ -72,7 +72,7 @@ export const ikeaFamily: FordelArticleContent = {
     {
       question: "Må jeg ha medlemskap for å handle?",
       answer:
-        "Nei. Family gir tilgang til medlemspriser og ekstra tjenester – alle kan handle til ordinær pris uten medlemskap.",
+        "Nei. Family gir tilgang til medlemspriser og ekstra tjenester. Alle kan handle til ordinær pris uten medlemskap.",
     },
     {
       question: "Gjelder Family-tilbud på nett?",
@@ -91,7 +91,7 @@ export const ikeaFamily: FordelArticleContent = {
       url: "https://www.ikea.com/no/no/ikea-family/",
     },
     {
-      label: "IKEA Family – medlemsfordeler",
+      label: "IKEA Family: medlemsfordeler",
       url: "https://www.ikea.com/no/no/ikea-family/benefits/",
     },
   ],

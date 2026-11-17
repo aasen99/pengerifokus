@@ -4,7 +4,7 @@ export const trumfVsCoop: Omit<GuideArticleContent, "readTimeMinutes"> = {
   slug: "trumf-vs-coop",
   seoTitle: "Trumf eller Coop i 2026: Hvilket program lønner seg?",
   intro:
-    "Trumf gir bonus hos NorgesGruppens kjeder, mens Coop-medlemmer får kjøpeutbytte og medlemsfordeler gjennom samvirkelaget sitt. Begge kan være lønnsomme – men butikkpris, handlemønster og hvor raskt du faktisk bruker fordelen betyr mer enn logoen på medlemskortet.",
+    "Trumf gir bonus hos NorgesGruppens kjeder, mens Coop-medlemmer får kjøpeutbytte og medlemsfordeler gjennom samvirkelaget sitt. Begge kan være lønnsomme, men butikkpris, handlemønster og hvor raskt du faktisk bruker fordelen betyr mer enn logoen på medlemskortet.",
   shortAnswer:
     "Trumf gir normalt 1 prosent grunnbonus på kvalifiserende dagligvarer og 1 prosent ekstra med Trumf Pay. Coop oppgir minst 1 prosent kjøpeutbytte, men sats og vilkår følger samvirkelaget. Velg først den butikken som gir lavest total handlekurv; en bonus på 1–2 prosent redder ikke et merkbart dyrere kjøp.",
   sections: [
@@ -87,7 +87,7 @@ export const trumfVsCoop: Omit<GuideArticleContent, "readTimeMinutes"> = {
         "Sammenlign prisen på varene du faktisk kjøper ofte",
         "Ta med avstand, transport og tidsbruk dersom butikkene ligger ulikt til",
         "Regn bare bonus på kjøp som faktisk kvalifiserer",
-        "Verdsett kuponger ut fra det du ellers ville kjøpt – ikke pålydende rabatt",
+        "Verdsett kuponger ut fra det du ellers ville kjøpt, ikke pålydende rabatt",
         "Sjekk om bonusen brukes eller bare blir stående",
         "Bruk gjerne begge medlemskap dersom du handler naturlig i begge kjeder",
       ],
