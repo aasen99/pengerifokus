@@ -24,7 +24,7 @@ export interface AmexMerchant {
   sources: AmexSource[];
 }
 
-export const amexUpdatedOn = "2026-11-17";
+export const amexUpdatedOn = "2026-11-25";
 
 export const amexChannelLabels: Record<AmexChannel, string> = {
   store: "I butikk",
@@ -1378,6 +1378,54 @@ export const amexMerchants: AmexMerchant[] = [
         "label": "Leseropplysning til Penger i Fokus",
         "kind": "reader",
         "checkedOn": "2026-11-17",
+        "channels": [
+          "online"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sas-eurobonus-shop",
+    "name": "SAS EuroBonus Shop",
+    "category": "Netthandel",
+    "keywords": [
+      "SAS",
+      "EuroBonus",
+      "Rituals",
+      "gavekort",
+      "bonuspoeng",
+      "nettbutikk"
+    ],
+    "channels": [
+      {
+        "type": "online",
+        "status": "reported",
+        "note": "En leser rapporterte 25. november 2026 at betaling med Amex fungerte ved kjøp av Rituals-julekalendere i EuroBonus Shop. Den engelske kundeservicesiden nevner også Amex som betalingsalternativ, mens den norske siden bare nevner Visa og Mastercard. Sjekk kortvalget i kassen, særlig ved gavekort."
+      }
+    ],
+    "sources": [
+      {
+        "label": "EuroBonus Shop: kundeservice (engelsk)",
+        "url": "https://www.saseurobonusshop.com/en/customer-service",
+        "kind": "official",
+        "checkedOn": "2026-11-25",
+        "channels": [
+          "online"
+        ]
+      },
+      {
+        "label": "EuroBonus Shop: kundeservice (norsk)",
+        "url": "https://www.saseurobonusshop.com/no/customer-service",
+        "kind": "official",
+        "checkedOn": "2026-11-25",
+        "channels": [
+          "online"
+        ]
+      },
+      {
+        "label": "Leseropplysning til Penger i Fokus",
+        "kind": "reader",
+        "checkedOn": "2026-11-25",
         "channels": [
           "online"
         ]
