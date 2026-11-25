@@ -6,7 +6,7 @@ export const eurobonus: FordelArticleContent = {
   intro:
     "EuroBonus er SAS sitt lojalitetsprogram. Medlemskapet er gratis, men poeng er ikke penger på konto: verdi og regler avhenger av hvordan du tjener og bruker dem. Her får du en praktisk oversikt basert på offisielle kilder fra SAS, SkyTeam-partnere, Trumf og Widerøe, med særskilt oppmerksomhet på endringene etter SkyTeam-overgangen og Widerøe-bruddet.",
   lastVerified: "8. august 2026",
-  lastModifiedIso: "2026-08-08",
+  lastModifiedIso: "2026-11-25",
   seoTitle: "SAS EuroBonus: poeng, nivåer, SkyTeam og verdi i praksis",
   seoDescription:
     "EuroBonus forklart med offisielle kilder: bonuspoeng vs. nivåpoeng, medlemsnivåer, SkyTeam, Trumf-overføring, Widerøe-endringen og når poeng faktisk gir mening for vanlige reisende.",
@@ -22,6 +22,7 @@ export const eurobonus: FordelArticleContent = {
     "EuroBonus kredittkort",
     "EuroBonus verdi",
     "SAS Online Shopping",
+    "SAS EuroBonus Shop",
     "EuroBonus netthandel",
   ],
   sections: [
@@ -71,6 +72,7 @@ export const eurobonus: FordelArticleContent = {
         "EuroBonus-kort: SAS oppgir for eksempel 10–25 bonuspoeng per 100 kr avhengig av kort, pluss velkomstbonuser og i noen tilfeller nivåpoeng (SAS betalingskort-side). Års- eller månedsgebyr kommer i tillegg",
         "Trumf: 1 kr Trumf-bonus = 10 EuroBonus-poeng ved engangsoverføring, eller 13,5 poeng ved automatisk overføring (Trumf)",
         "SAS Online Shopping: poeng hos nettbutikker via onlineshopping.flysas.com. Du må starte handelen via portalen, på samme måte som Trumf Netthandel. Satser varierer per butikk og kan ha midlertidige kampanjer",
+        "SAS EuroBonus Shop: kjøp varer direkte i nettbutikken og tjen bonuspoeng ved betaling med penger. Sjekk satsen på hver vare",
         "Hotell og andre partnere: satser varierer. SAS oppgir for eksempel 70 bonuspoeng og 35 nivåpoeng per 100 kr på utvalgte Scandic-bestillinger. Sjekk partnerens side før kjøp",
       ],
       tip: "Vurdering: Kredittkort, Trumf-overføring og Online Shopping kan gi poeng uten flyreise, men gebyrer, alternativkostnad og krav om å gå via portalen bør regnes inn før du maksimerer.",
@@ -88,6 +90,21 @@ export const eurobonus: FordelArticleContent = {
         "Kampanjer kan gi ekstra eller doble poeng midlertidig",
       ],
       tip: "Vurdering: Online Shopping er mest verdifullt på kjøp du uansett skulle gjort. Sammenlign poengverdien med Trumf Netthandel eller vanlig cashback før du velger portal.",
+    },
+    {
+      heading: "SAS EuroBonus Shop: tjen poeng når du handler",
+      paragraphs: [
+        "SAS EuroBonus Shop er en egen nettbutikk, ikke det samme som SAS Online Shopping. Du kan kjøpe blant annet elektronikk, kjøkkenutstyr, skjønnhetsprodukter og gavekort. Det interessante er at mange varer også gir bonuspoeng når du betaler med penger.",
+        "Ved kontroll 25. november 2026 var Rituals Classic Advent Calendar 2026 oppført til 1 012 kr eller 32 650 poeng, med opptjening på 1 013 poeng ved kjøp for penger. Det tilsvarer omtrent 100 poeng per 100 kr. Innløsning av poeng på den samme varen tilsvarer derimot bare rundt 3,1 øre per poeng.",
+        "Med SAS Amex Premium, som gir 15 bonuspoeng per 100 kr på kvalifiserende kortkjøp, kan en vare med denne opptjeningen gi til sammen omtrent 115 bonuspoeng per 100 kr. Ved et varekjøp på 1 000 kr med tilsvarende sats blir det rundt 1 150 poeng. Verdsettes poengene til 10 øre stykket, tilsvarer det 115 kr i mulig fremtidig reiseverdi, ikke en kontantrabatt.",
+      ],
+      bullets: [
+        "Logg inn med EuroBonus-kontoen og sjekk opptjeningen på den konkrete varen.",
+        "Velg betaling med penger hvis målet er å tjene poeng. Kontroller at kortet og kjøpet kvalifiserer til kortopptjening.",
+        "Gavekort kan ha andre poengsatser og vilkår enn vanlige varer. Sjekk hver valør og eventuell kortopptjening separat.",
+        "Sammenlign totalpris inkludert frakt med andre butikker. Butikken oppgir at opptjente poeng normalt blir tilgjengelige etter omtrent én måned.",
+      ],
+      tip: "Vurdering: EuroBonus Shop kan være mer interessant for opptjening enn for innløsning. Kjøp bare det du uansett trenger, og betal hele kredittkortregningen ved forfall. Sjekk også [Amex-brukersteder](/verktoy/amex-brukersteder) og [Bonuskalkulatoren](/verktoy/bonuskalkulator).",
     },
     {
       heading: "Widerøe, Spenn og andre programmer",
@@ -169,7 +186,7 @@ export const eurobonus: FordelArticleContent = {
     {
       question: "Hvordan tjener jeg EuroBonus via netthandel?",
       answer:
-        "Via SAS Online Shopping (onlineshopping.flysas.com). Du må starte handelen via portalen og være innlogget med EuroBonus. Går du direkte til butikken utenom portalen, får du normalt ikke poengene.",
+        "Via SAS Online Shopping må du starte handelen via portalen og være innlogget med EuroBonus. Du kan også handle direkte i SAS EuroBonus Shop, der mange varer gir poeng når du betaler med penger. Opptjening varierer.",
     },
     {
       question: "Kan jeg overføre Trumf-bonus til EuroBonus?",
@@ -229,6 +246,10 @@ export const eurobonus: FordelArticleContent = {
       label: "SAS Online Shopping",
       url: "https://onlineshopping.flysas.com/nb-NO/",
     },
+    { label: "SAS EuroBonus Shop: produktutvalg og opptjening", url: "https://www.saseurobonusshop.com/no" },
+    { label: "SAS EuroBonus Shop: Rituals (priseksempel kontrollert 25. november 2026)", url: "https://www.saseurobonusshop.com/no/brand/Rituals" },
+    { label: "SAS EuroBonus Shop: kundeservice og vilkår", url: "https://www.saseurobonusshop.com/no/customer-service" },
+    { label: "American Express: opptjening av poeng", url: "https://www.americanexpress.com/nb-no/fordeler/oppdag-fordelene/poeng/index.html/" },
     {
       label: "Trumf: overføring til EuroBonus",
       url: "https://www.trumf.no/fordeler/sas-eurobonus",
