@@ -70,7 +70,7 @@ function eurobonusShoppingOffer(
   };
 }
 
-/** Restaurant- og partnerprogram (kort/sted), pluss SAS Online Shopping. */
+/** Restaurant- og partnerprogram (kort/sted), SAS EuroBonus Shop og SAS Online Shopping. */
 export const eurobonusTilbud: Tilbud[] = [
   eurobonusOffer("wolt", "wolt", "Wolt", 10, "Matlevering"),
   eurobonusOffer("egon", "egon", "EGON", 50, "Restaurant"),
@@ -123,6 +123,23 @@ export const eurobonusTilbud: Tilbud[] = [
     50,
     "Bil",
   ),
+
+  {
+    id: "tilbud-eurobonus-shop",
+    slug: "eurobonus-shop",
+    status: "published",
+    title: "SAS EuroBonus Shop",
+    description: "Tjen rundt 100 EuroBonus-poeng per 100 kr på mange varer i SAS sin egen nettbutikk, blant annet utvalgte Rituals-produkter. Med SAS Amex Premium kan kvalifiserende kjøp gi rundt 115 poeng per 100 kr totalt.",
+    offerLabel: "Ca. 100 poeng / 100 kr",
+    partner: "SAS EuroBonus Shop",
+    fordelSlug: "eurobonus",
+    category: "Netthandel",
+    terms: "Logg inn med EuroBonus-kontoen, sjekk opptjeningen på varen og velg betaling med penger. Satsen er et eksempel fra vareutvalget, ikke en generell garanti. Poeng blir normalt tilgjengelige etter omtrent én måned.",
+    sourceUrl: "https://www.saseurobonusshop.com/no",
+    warning: "Gavekort kan ha andre satser og vilkår. Sammenlign totalpris inkludert frakt, og sjekk kortopptjeningen før kjøp. Ikke kjøp ekstra bare for poengene.",
+    createdAt: "2026-11-25",
+    updatedAt: "2026-11-25",
+  },
 
   // SAS Online Shopping (må gå via portalen, som Trumf Netthandel)
   eurobonusShoppingOffer("adidas", "Adidas", "25 poeng / 100 kr", "Tjen 25 EuroBonus-poeng per 100 kr hos Adidas via SAS Online Shopping.", "Sport"),
