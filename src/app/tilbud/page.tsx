@@ -69,7 +69,7 @@ interface TilbudPageProps {
     student?: string | string[];
     sortering?: string | string[];
     side?: string | string[];
-    netthandel?: string; flere?: string; kontrollert?: string;
+    funn?: string; netthandel?: string; flere?: string; kontrollert?: string;
     eb?: string; spenn?: string; trumf?: string; belop?: string; frakt?: string; mva?: string; kunde?: string;
   }>;
 }
@@ -89,7 +89,9 @@ function isSortOption(value: string | undefined): value is TilbudSortOption {
 
 export default async function TilbudPage({ searchParams }: TilbudPageProps) {
   const params = await searchParams;
-  const tilbud = getTilbud();
+  const showFindings = first(params.funn) === "1";
+  const catalogue = getTilbud();
+  const tilbud = catalogue.filter(item => showFindings || !item.shopping || item.shopping.verification === "verified");
   const fordeler = getFordeler();
   const bounded = (raw: string | undefined, fallback: number, min: number, max: number) => {
     const n = raw === undefined ? fallback : Number(raw);
@@ -149,14 +151,14 @@ export default async function TilbudPage({ searchParams }: TilbudPageProps) {
       );
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-10">
+    <div className="mx-auto max-w-6xl px-4 py-4 sm:px-6 sm:py-10">
       <HubPageSeo
         name={TILBUD_SEO_TITLE}
         description={pageDescription}
         path="/tilbud"
         items={fordeler
           .filter((fordel) =>
-            tilbud.some((item) => item.fordelSlug === fordel.slug),
+            catalogue.some((item) => item.fordelSlug === fordel.slug),
           )
           .map((fordel) => ({
             name: `${fordel.name}: tilbud`,
@@ -168,18 +170,8 @@ export default async function TilbudPage({ searchParams }: TilbudPageProps) {
       <PageHeader title={TILBUD_SEO_TITLE} description={TILBUD_INTRO} />
 
       <div className="space-y-5">
-        <TilbudDisclaimer
-          variant="banner"
-          showTrumfNetthandelNote={program === "trumf"}
-          showEurobonusShoppingNote={program === "eurobonus"}
-        />
-
-        <p className="text-sm leading-relaxed text-stone-600">
-          Netthandel: {tilbud.filter(t => t.shopping?.channel === "trumf-netthandel" && t.shopping.verification === "verified").length} Trumf-butikker og {tilbud.filter(t => t.shopping?.channel === "klarna" && t.shopping.verification === "verified").length} Klarna-butikker har kontrollerte satser.
-          {" "}SAS- og Spenn-oversiktene inneholder også uavklarte kartleggingsfunn. Full katalog og alle satser kunne ikke kontrolleres der. Se status ved hvert tilbud.
-        </p>
-
         <TilbudBrowser
+          showFindings={showFindings}
           groups={grouped}
           query={query}
           program={program}
@@ -196,7 +188,17 @@ export default async function TilbudPage({ searchParams }: TilbudPageProps) {
           checkedNow={checkedNow}
         />
 
-        <TilbudDisclaimer />
+        <TilbudDisclaimer
+          variant="banner"
+          showTrumfNetthandelNote={program === "trumf"}
+          showEurobonusShoppingNote={program === "eurobonus"}
+        >
+          <p>
+            Ved siste gjennomgang ble satsene kontrollert hos {catalogue.filter(t => t.shopping?.channel === "trumf-netthandel" && t.shopping.verification === "verified").length} Trumf-butikker
+            {" "}og {catalogue.filter(t => t.shopping?.channel === "klarna" && t.shopping.verification === "verified").length} Klarna-butikker.
+            For SAS og Spenn er dekningen ufullstendig. Under avanserte filtre kan du også se ubekreftede partnerskap og tidligere registrerte satser.
+          </p>
+        </TilbudDisclaimer>
       </div>
 
       <HubCrossLinks

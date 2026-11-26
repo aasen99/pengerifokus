@@ -8,13 +8,13 @@ export function BonusSettings({ value, onChange, online, multiple, verified, onF
   online: boolean; multiple: boolean; verified: boolean;
   onFilter: (key: "online" | "multiple" | "verified", value: boolean) => void;
 }) {
-  return <section className="rounded-xl border border-orange-200 bg-orange-50/50 p-4" aria-label="Sammenlign netthandel">
+  return <section className="py-1" aria-label="Sammenlign netthandel">
     <div className="flex flex-wrap gap-x-5 gap-y-3 text-sm text-stone-800">
       {([{ key: "online", label: "Kun netthandel", checked: online }, { key: "multiple", label: "Flere bonusprogrammer", checked: multiple }, { key: "verified", label: "Kun kontrollerte satser", checked: verified }] as const).map(f =>
         <label key={f.key} className="flex cursor-pointer items-center gap-2"><input type="checkbox" checked={f.checked} onChange={e => onFilter(f.key, e.target.checked)} className="h-4 w-4 accent-orange-600" />{f.label}</label>)}
     </div>
     <details className="mt-3 group">
-      <summary className="cursor-pointer text-sm font-semibold text-orange-800">Tilpass poengverdi og kjøp</summary>
+      <summary className="cursor-pointer text-sm font-semibold text-orange-800">Tilpass poengverdi og kjøpsbeløp</summary>
       <p className="mt-2 text-sm text-stone-600">EuroBonus {value.euroOre} øre · Spenn {value.spennOre} øre · Trumf {value.trumf === "cash" ? "i kroner" : value.trumf === "auto" ? "automatisk til EuroBonus" : "engang til EuroBonus"}</p>
       <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {([{ key: "euroOre", label: "EuroBonus, øre per poeng", max: 100 }, { key: "spennOre", label: "Spenn, øre per poeng", max: 100 }, { key: "amount", label: "Totalpris inkl. mva og frakt (kr)", max: 1000000 }, { key: "shipping", label: "Frakt inkludert i totalpris (kr)", max: value.amount }] as const).map(f =>

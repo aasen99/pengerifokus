@@ -2,6 +2,7 @@ import { tilbudListMeta } from "@/data/tilbud-meta";
 import { formatTilbudDate } from "@/lib/tilbud-ui";
 
 interface TilbudDisclaimerProps {
+  children?: React.ReactNode;
   variant?: "banner" | "footer";
   showTrumfNetthandelNote?: boolean;
   showEurobonusShoppingNote?: boolean;
@@ -14,6 +15,7 @@ function formatSources(sources: readonly string[]): string {
 }
 
 export function TilbudDisclaimer({
+  children,
   variant = "footer",
   showTrumfNetthandelNote = false,
   showEurobonusShoppingNote = false,
@@ -27,9 +29,7 @@ export function TilbudDisclaimer({
         <summary className="cursor-pointer list-none px-4 py-2.5 [&::-webkit-details-marker]:hidden">
           <div className="flex items-center justify-between gap-3">
             <p className="text-xs leading-snug sm:text-sm">
-              <span className="font-semibold text-stone-800">Viktig: </span>
-              Tilbud kan endres av partner uten varsel. Oppdatert {lastUpdated}.
-            </p>
+              Om datagrunnlaget</p>
             <span
               className="shrink-0 text-sm text-stone-400 transition-transform group-open:rotate-180"
               aria-hidden="true"
@@ -50,6 +50,8 @@ export function TilbudDisclaimer({
             er kontrollert på samme dato. Tilbud som trenger ny kontroll, er
             merket på kortet.
           </p>
+          {children}
+          <p>Sist oppdatert {lastUpdated}.</p>
           {showTrumfNetthandelNote && (
             <p>
               <span className="font-semibold text-stone-800">

@@ -8,4 +8,4 @@ export const FORDELSPROGRAMMER_INTRO =
 export const TILBUD_SEO_TITLE = "Medlemsfordeler og rabatter i Norge";
 
 export const TILBUD_INTRO =
-  "Finn tilbud, bonus og cashback fra OBOS, Trumf, Coop, NAF, EuroBonus, Spenn og flere. Søk eller filtrer etter program og kategori. Oversikten utvides løpende.";
+  "Søk etter en butikk og sammenlign medlemsrabatter, cashback og bonus på kjøpet ditt.";

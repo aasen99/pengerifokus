@@ -31,6 +31,7 @@ interface CategoryOption {
 }
 
 interface TilbudBrowserProps {
+  showFindings: boolean;
   groups: GruppertTilbud[];
   query: string;
   program: string | null;
@@ -50,6 +51,7 @@ interface TilbudBrowserProps {
 const URL_SYNC_MS = 400;
 
 export function TilbudBrowser({
+  showFindings,
   groups,
   query,
   program,
@@ -71,10 +73,10 @@ export function TilbudBrowser({
   const [online, setOnline] = useState(initialOnline);
   const [multiple, setMultiple] = useState(initialMultiple);
   const [verified, setVerified] = useState(initialVerified);
-  const comparisonParams = useMemo(() => ({ netthandel: online, flere: multiple, kontrollert: verified,
+  const comparisonParams = useMemo(() => ({ funn: showFindings, netthandel: online, flere: multiple, kontrollert: verified,
     eb: settings.euroOre, spenn: settings.spennOre, trumf: settings.trumf,
     belop: settings.amount, frakt: settings.shipping, mva: settings.vat, kunde: settings.customer,
-  }), [online, multiple, verified, settings]);
+  }), [showFindings, online, multiple, verified, settings]);
 
   useEffect(() => {
     setSearchInput(query);
@@ -156,9 +158,21 @@ export function TilbudBrowser({
         partnerCount={filteredGroups.length}
         offerCount={offerCount}
         comparisonParams={comparisonParams}
-      />
-
-      <BonusSettings value={settings} onChange={value => { setSettings(value); setPage(1); }} online={online} multiple={multiple} verified={verified} onFilter={(key, value) => { if (key === "online") setOnline(value); if (key === "multiple") setMultiple(value); if (key === "verified") setVerified(value); setPage(1); }} />
+      >
+        <BonusSettings
+          value={settings}
+          onChange={value => { setSettings(value); setPage(1); }}
+          online={online}
+          multiple={multiple}
+          verified={verified}
+          onFilter={(key, value) => {
+            if (key === "online") setOnline(value);
+            if (key === "multiple") setMultiple(value);
+            if (key === "verified") setVerified(value);
+            setPage(1);
+          }}
+        />
+      </TilbudFilters>
 
       <TilbudGrid
         groups={pagination.items}

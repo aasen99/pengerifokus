@@ -1,35 +1,69 @@
+import { Tag } from "@/components/ui/Tag";
 import type { TilbudProgramOffer } from "@/lib/tilbud";
-import { applicableRates, calculateShoppingBonus, CHANNEL_NAMES, formatBonusRange, shoppingRateLabel, type BonusSettings } from "@/lib/netthandel";
+import { applicableRates, calculateShoppingBonus, CHANNEL_NAMES, formatBonusRange, hasCurrentVerifiedRate, rateIsCurrent, shoppingRateLabel, type BonusSettings } from "@/lib/netthandel";
 import { formatTilbudDate } from "@/lib/tilbud-ui";
+import type { ShoppingDetails } from "@/types/content";
 
-export function ShoppingOffer({ offer, settings, now, best }: { offer: TilbudProgramOffer; settings: BonusSettings; now: string; best: boolean }) {
+const names: Record<ShoppingDetails["channel"], string> = {
+  "sas-online": "EuroBonus", "trumf-netthandel": "Trumf", klarna: "Klarna",
+  spenn: "Spenn", "spenn-direct": "Spenn", "eurobonus-shop": "EuroBonus Shop",
+  "eurobonus-shop-giftcard": "EuroBonus gavekort",
+};
+
+interface Props {
+  offer: TilbudProgramOffer;
+  settings: BonusSettings;
+  now: string;
+}
+
+function rateSummary({ offer, settings, now }: Props): string {
+  const d = offer.shopping!;
+  if (d.verification === "ended") return "Utgått";
+  if (d.verification !== "verified") {
+    return d.previousLabel && /\d/.test(d.previousLabel)
+      ? `Tidligere ${d.previousLabel} · partner uavklart`
+      : "Sats uavklart · ubekreftet partner";
+  }
+  if (!d.rates.length) return offer.offerLabel;
+  const rates = applicableRates(d, settings, now);
+  if (!rates.length) return d.rates.every(r => !rateIsCurrent(r, now)) ? "Kampanje utløpt" : "Ingen sats for valgt kunde";
+  const labels = [...new Set(rates.map(r => r.unit))].map(unit => {
+    const tier = rates.filter(r => r.unit === unit);
+    const low = Math.min(...tier.map(r => r.value));
+    const high = Math.max(...tier.map(r => r.value));
+    const suffix = shoppingRateLabel({ ...tier[0], value: 0 }, d.channel).slice(2);
+    return formatBonusRange(low, high, suffix);
+  });
+  const label = labels.join(" / ");
+  if (!hasCurrentVerifiedRate(d, settings, now)) return `Tidligere ${label} · ikke nylig kontrollert`;
+  return rates.some(r => r.kind === "campaign") ? `${label} · kampanje` : label;
+}
+
+export function ShoppingTag(props: Props & { best: boolean }) {
+  const d = props.offer.shopping!;
+  return <a href={props.offer.sourceUrl} target="_blank" rel="noopener noreferrer" className="rounded-full hover:underline">
+    <Tag variant={props.best ? "accent" : d.verification === "verified" ? "default" : "muted"}>
+      {names[d.channel]} · {rateSummary(props)}
+    </Tag>
+  </a>;
+}
+
+export function ShoppingOffer({ offer, settings, now, best }: Props & { best: boolean }) {
   const d = offer.shopping!;
   const value = calculateShoppingBonus(d, settings, now);
-  const rates = applicableRates(d, settings, now);
-  const campaign = rates.some(r => r.kind === "campaign");
-  const stale = d.checkedAt && Date.parse(now) - Date.parse(d.checkedAt) > 14 * 86400000;
-  const status = d.verification === "app-required" ? "Sats må sjekkes i appen" : d.verification === "not-listed" ? "Ikke funnet i nyeste katalog" : "Trenger ny kontroll";
-  return <div className="rounded-lg border border-stone-200 px-3 py-2.5 text-sm">
-    <div className="flex flex-wrap items-baseline justify-between gap-1">
-      <a href={offer.sourceUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-orange-700 hover:underline">{CHANNEL_NAMES[d.channel]}</a>
-      {best && <span className="rounded bg-green-50 px-2 py-0.5 text-sm font-medium text-green-800">Høyest av kontrollerte</span>}
-    </div>
-    <p className="mt-1 font-medium text-stone-900">{d.verification === "verified" && rates.length ? <>{campaign ? "Kampanje: " : "Publisert sats: "}{offer.offerLabel}</> : d.verification === "verified" && !d.rates.length ? offer.offerLabel : status}</p>
-    {stale && <p className="mt-1 text-amber-800">Satsen trenger ny kontroll. Den inngår ikke i beregningen.</p>}
-    {value && <p className="mt-1 text-stone-700">Beregnet verdi <strong>{formatBonusRange(value.minPct, value.maxPct, "%")}</strong><span className="block text-stone-600">{formatBonusRange(value.min, value.max, "kr")} ved ditt kjøp på {settings.amount.toLocaleString("nb-NO")} kr, {settings.customer === "new" ? "ny" : "eksisterende"} kunde</span></p>}
-    {d.verification === "verified" && d.rates.length > 0 && !rates.length && <p className="mt-1 text-amber-800">Ingen gjeldende sats for valgt kundetype. Kampanjen kan være utløpt. Sjekk ny sats hos programmet.</p>}
-    {d.checkedAt && <p className="mt-1 text-sm text-stone-500">{d.verification === "verified" ? "Sats kontrollert" : "Kilde gjennomgått"} {formatTilbudDate(d.checkedAt)}</p>}
-    <details className="mt-2">
-      <summary className="cursor-pointer text-stone-600 hover:text-stone-900">Satser, grunnlag og vilkår</summary>
-      <div className="mt-2 space-y-2 leading-relaxed text-stone-600">
-        {d.rates.map((r, i) => <p key={i}>{r.label}: {shoppingRateLabel(r, d.channel)}. {r.kind === "campaign" ? "Kampanje." : r.kind === "ordinary" ? "Ordinær sats." : "Publisert sats; ordinær sats/kampanje er ikke særskilt oppgitt."} {r.regularValue !== undefined && <>Tidligere vist: {r.regularValue.toLocaleString("nb-NO")} %. </>}{r.endsAt && <>Utløper {new Intl.DateTimeFormat("nb-NO", { dateStyle: "medium", timeStyle: "short", timeZone: "Europe/Oslo" }).format(new Date(r.endsAt.length === 10 ? `${r.endsAt}T23:59:59+01:00` : r.endsAt))} (Oslo).</>}</p>)}
-        <p>{d.basisNote ?? (d.basis === "ex-vat" ? "Bonus beregnes uten mva, frakt og gebyrer." : d.basis === "incl-vat" ? "Bonusgrunnlag inkluderer mva." : "Mva-grunnlag er uavklart. Verdiintervallet viser grunnlag med og uten mva. Frakt er trukket fra; øvrige unntak må sjekkes.")}</p>
-        <p>{offer.terms}</p>
-        {offer.warning && <p className="text-amber-900">{offer.warning}</p>}
-        {d.previousLabel && d.verification !== "verified" && <p>Tidligere registrert, ikke bekreftet nå: {d.previousLabel}. Inngår ikke i beregningen.</p>}
-        {d.sourceKind === "discovery" && <p>Butikken er et kartleggingsfunn. Aktiv deltakelse og sats må bekreftes hos programmet.{d.discoveryUrl && <> <a className="underline" href={d.discoveryUrl} target="_blank" rel="noopener noreferrer">Kartleggingskilde</a>.</>}</p>}
-        {d.verification !== "verified" && <p>Kontroll forsøkt {formatTilbudDate(d.attemptedAt)}.</p>}
-      </div>
-    </details>
-  </div>;
+  return <section className="space-y-1">
+    <a href={offer.sourceUrl} className="font-semibold text-orange-800 underline" target="_blank" rel="noopener noreferrer">{CHANNEL_NAMES[d.channel]}</a>
+    {value && <p>{best && <strong>Høyest av kontrollerte. </strong>}Beregnet verdi {formatBonusRange(value.minPct, value.maxPct, "%")} ({formatBonusRange(value.min, value.max, "kr")} ved kjøp på {settings.amount.toLocaleString("nb-NO")} kr).</p>}
+    {d.rates.map((r, i) => <p key={i}>{r.label} · {shoppingRateLabel(r, d.channel)}
+      {r.kind === "campaign" && " · kampanje"}{r.kind === "ordinary" && " · ordinær sats"}
+      {r.endsAt && <> · {rateIsCurrent(r, now) ? "utløper" : "utløpt"} {r.endsAt.length === 10 ? formatTilbudDate(r.endsAt) : new Intl.DateTimeFormat("nb-NO", {dateStyle:"medium", timeStyle:"short", timeZone:"Europe/Oslo"}).format(new Date(r.endsAt))}</>}
+      {r.regularValue !== undefined && <> · tidligere {shoppingRateLabel({...r, value:r.regularValue}, d.channel)}</>}
+    </p>)}
+    {d.verification !== "verified" && <p>{d.verification === "ended" ? "Tilbudet er bekreftet utgått." : d.verification === "not-listed" ? "Mangler i siste katalog. Aktivt partnerskap er uavklart." : "Aktivt partnerskap og sats er ubekreftet."} {d.previousLabel && /\d/.test(d.previousLabel) && <>Tidligere registrert sats var {d.previousLabel}. </>}Kontroll forsøkt {formatTilbudDate(d.attemptedAt)}.</p>}
+    {d.checkedAt && <p>Sist kontrollert {formatTilbudDate(d.checkedAt)}.</p>}
+    {d.rates.length > 0 && <p>{d.basisNote ?? (d.basis === "ex-vat" ? "Grunnlaget er uten mva og frakt." : d.basis === "incl-vat" ? "Grunnlaget inkluderer mva." : "Mva-grunnlaget er uavklart. Intervallet viser beregning med og uten mva.")}</p>}
+    <p>{offer.terms}</p>
+    {offer.warning && <p>{offer.warning}</p>}
+    {d.discoveryUrl && <a href={d.discoveryUrl} target="_blank" rel="noopener noreferrer" className="underline">Kartleggingskilde</a>}
+  </section>;
 }

@@ -107,7 +107,7 @@ export interface ShoppingRate {
 
 export interface ShoppingDetails {
   channel: "sas-online" | "trumf-netthandel" | "klarna" | "spenn" | "spenn-direct" | "eurobonus-shop" | "eurobonus-shop-giftcard";
-  verification: "verified" | "needs-review" | "app-required" | "not-listed";
+  verification: "verified" | "needs-review" | "app-required" | "not-listed" | "ended";
   checkedAt?: string;
   attemptedAt: string;
   sourceKind: "official" | "discovery";

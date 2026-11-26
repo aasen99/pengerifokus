@@ -30,6 +30,7 @@ export function reconcileNetthandel(entries: Tilbud[]): Tilbud[] {
   const result = entries.map(entry => {
     const channel = legacyChannel(entry);
     if (!channel) return entry;
+    const previousLabel = entry.warning?.match(/Tidligere oppgitt: (.+?)\. Sjekk gjeldende opptjening/)?.[1] ?? entry.offerLabel;
     const key = `${channel}:${normalizePartnerKey(entry.partner)}`;
     const row = lookup.get(key);
     if (row) {
@@ -37,13 +38,13 @@ export function reconcileNetthandel(entries: Tilbud[]): Tilbud[] {
       return { ...entry, offerLabel: row.offerLabel, description: `Bonus hos ${entry.partner}. Se gjeldende opptjening, kontrollstatus og vilkår.`,
         category: row.category === "Netthandel" ? entry.category : row.category,
         sourceUrl: row.sourceUrl, terms: row.terms, warning: undefined, updatedAt: checkedAt,
-        shopping: { ...row.shopping, previousLabel: entry.offerLabel, amex: amexFor(entry.partner) } };
+        shopping: { ...row.shopping, previousLabel, amex: amexFor(entry.partner) } };
     }
     const missing = channel === "klarna" || channel === "trumf-netthandel";
     return { ...entry, offerLabel: missing ? "Ikke funnet i nyeste katalog" : "Sats ikke bekreftet",
       description: `Tidligere registrert hos ${entry.partner}. Aktiv deltakelse og sats må kontrolleres.`, warning: undefined,
       shopping: { channel, verification: missing ? "not-listed" : channel === "spenn" ? "app-required" : "needs-review",
-        attemptedAt: checkedAt, sourceKind: "official", rates: [], basis: "unknown", previousLabel: entry.offerLabel, amex: amexFor(entry.partner) } as ShoppingDetails };
+        attemptedAt: checkedAt, sourceKind: "official", rates: [], basis: "unknown", previousLabel, amex: amexFor(entry.partner) } as ShoppingDetails };
   });
   for (const [key, row] of lookup) {
     if (used.has(key)) continue;

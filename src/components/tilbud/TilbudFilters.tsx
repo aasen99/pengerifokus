@@ -33,6 +33,7 @@ interface TilbudFiltersProps {
   categories: CategoryOption[];
   partnerCount: number;
   offerCount: number;
+  children: React.ReactNode;
   comparisonParams?: Partial<TilbudFilterParams>;
 }
 
@@ -67,7 +68,7 @@ export function TilbudFilters({
   categories,
   partnerCount,
   offerCount,
-  comparisonParams,
+  comparisonParams, children,
 }: TilbudFiltersProps) {
   const router = useRouter();
 
@@ -81,6 +82,7 @@ export function TilbudFilters({
       router.replace(
         buildTilbudHref({
           ...comparisonParams,
+          funn: overrides.funn ?? comparisonParams?.funn,
           q: nextQ,
           program: overrides.program !== undefined ? overrides.program : program,
           kategori:
@@ -101,12 +103,12 @@ export function TilbudFilters({
   };
 
   const hasFilters = Boolean(
-    searchInput.trim() || query || program || category || includeStudent,
+    searchInput.trim() || query || program || category || includeStudent || comparisonParams?.funn || comparisonParams?.flere || comparisonParams?.netthandel || comparisonParams?.kontrollert,
   );
   const activeQuery = searchInput.trim();
 
   return (
-    <div className="space-y-5">
+    <div className="space-y-2">
       <div className="rounded-xl border border-stone-200 bg-white p-3 sm:p-4">
         <label htmlFor="tilbud-search" className="sr-only">
           Søk i tilbud
@@ -137,7 +139,7 @@ export function TilbudFilters({
           )}
         </div>
 
-        <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-[1fr_1fr_auto]">
+        <div className="mt-2 grid grid-cols-2 gap-2 lg:grid-cols-[1fr_1fr_auto]">
           <div>
             <label htmlFor="tilbud-program" className="sr-only">
               Fordelsprogram
@@ -152,9 +154,9 @@ export function TilbudFilters({
                   program: event.target.value || null,
                 })
               }
-              className={`${calculatorInputClassName} w-full py-2 pr-8`}
+              className={`${calculatorInputClassName} w-full min-w-0 truncate py-2 pr-6`}
             >
-              <option value="">Alle programmer</option>
+              <option value="">Program</option>
               {programs.map((item) => (
                 <option key={item.slug} value={item.slug}>
                   {item.name} ({item.count})
@@ -177,10 +179,10 @@ export function TilbudFilters({
                   kategori: event.target.value || null,
                 })
               }
-              className={`${calculatorInputClassName} w-full py-2 pr-8`}
+              className={`${calculatorInputClassName} w-full min-w-0 truncate py-2 pr-6`}
               disabled={categories.length === 0}
             >
-              <option value="">Alle kategorier</option>
+              <option value="">Kategori</option>
               {categories.map((option) => (
                 <option key={option.group} value={option.group}>
                   {option.group} ({option.count})
@@ -191,7 +193,7 @@ export function TilbudFilters({
 
           <label
             htmlFor="tilbud-student"
-            className="flex cursor-pointer items-center gap-2 rounded-lg border border-stone-200 px-3 py-2 text-sm text-stone-700 transition-colors hover:border-stone-300 has-[:checked]:border-orange-300 has-[:checked]:bg-orange-50"
+            className="flex w-fit cursor-pointer items-center gap-2 px-1 py-1 text-sm text-stone-700 transition-colors hover:border-stone-300 has-[:checked]:border-orange-300 has-[:checked]:bg-orange-50"
           >
             <input
               id="tilbud-student"
@@ -211,6 +213,14 @@ export function TilbudFilters({
           </label>
         </div>
 
+        <details className="mt-2 border-t border-stone-100 text-sm">
+          <summary className="cursor-pointer py-2 font-medium text-stone-700">Avanserte filtre og poengverdi</summary>
+          {children}
+          <label className="mt-2 flex items-center gap-2 pb-2">
+            <input type="checkbox" checked={Boolean(comparisonParams?.funn)} onChange={e => navigate({ funn: e.target.checked })} className="h-4 w-4 accent-orange-600" />
+            Vis også ubekreftede og utgåtte tilbud
+          </label>
+        </details>
         {hasFilters && (
           <div className="mt-3 flex justify-end">
             <a
@@ -223,7 +233,7 @@ export function TilbudFilters({
         )}
       </div>
 
-      <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+      <div className="flex flex-wrap items-center justify-between gap-2">
         <p className="text-sm text-stone-600" aria-live="polite" aria-atomic="true">
           {activeQuery ? (
             <>

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Tag } from "@/components/ui/Tag";
 import type { GruppertTilbud } from "@/lib/tilbud";
 import { getTilbudSourceLinkLabel, isTilbudOptInProgram } from "@/lib/tilbud-ui";
-import { ShoppingOffer } from "./ShoppingOffer";
+import { ShoppingOffer, ShoppingTag } from "./ShoppingOffer";
 import { calculateShoppingBonus, type BonusSettings } from "@/lib/netthandel";
 
 interface TilbudGridProps {
@@ -52,37 +52,22 @@ export function TilbudGrid({
   }
 
   return (
-    <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="grid items-start gap-2 sm:grid-cols-2 lg:grid-cols-3">
       {groups.map((group) => {
         const shopping = group.offers.filter(o => o.shopping);
         const ordinary = group.offers.filter(o => !o.shopping);
         const values = shopping.map(o => ({ id: o.tilbudId, value: calculateShoppingBonus(o.shopping!, settings, checkedNow) })).filter(x => x.value !== null);
         const best = values.length >= 2 ? values.find(x => values.every(y => y.id === x.id || x.value!.minPct > y.value!.maxPct))?.id : undefined;
         const amex = shopping.find(o => o.shopping?.amex)?.shopping?.amex;
-        const amexLabels = { yes: "Bekreftet ja", reported: "Rapportert ja", conditional: "Med forbehold", no: "Nei", unknown: "Uavklart" };
-        const uniqueTerms = [
-          ...new Set(
-            ordinary
-              .map((offer) => offer.terms?.trim())
-              .filter((terms): terms is string => Boolean(terms)),
-          ),
-        ];
-        const sourceLinks = [
-          ...new Map(
-            ordinary
-              .filter((offer) => offer.sourceUrl)
-              .map((offer) => [`${offer.fordelSlug}|${offer.sourceUrl}`, offer]),
-          ).values(),
-        ];
-        const warnings = ordinary.filter((offer) => offer.warning);
-
+        const amexLabels = { yes: "Amex", reported: "Amex rapportert", conditional: "Amex med forbehold", no: "Tar ikke Amex", unknown: "Uavklart" };
         return (
           <article
             key={group.key}
-            className="flex h-full flex-col rounded-xl border border-stone-200 bg-white p-3.5 transition-colors hover:border-orange-300"
+            className="min-w-0 rounded-xl border border-stone-200 bg-white p-3 transition-colors hover:border-orange-300"
           >
             <h2 className="text-base font-semibold text-stone-900">
               {group.partner}
+              {amex && amex.status !== "unknown" && <span className="ml-2 inline-block text-xs font-normal text-stone-500">{amexLabels[amex.status]}</span>}
             </h2>
 
             <div className="mt-2 flex flex-wrap items-center gap-1.5">
@@ -104,20 +89,8 @@ export function TilbudGrid({
                   </Tag>
                 </Link>
               ))}
+              {shopping.map(offer => <ShoppingTag key={offer.tilbudId} offer={offer} settings={settings} now={checkedNow} best={best === offer.tilbudId} />)}
             </div>
-
-            {shopping.length > 0 && <div className="mt-2 space-y-2">{shopping.map(offer => <ShoppingOffer key={offer.tilbudId} offer={offer} settings={settings} now={checkedNow} best={best === offer.tilbudId} />)}</div>}
-
-            {shopping.length > 0 && <details className="mt-3 text-sm text-stone-600">
-              <summary className="cursor-pointer font-medium">Amex på nett: {amex ? amexLabels[amex.status] : "Uavklart"}</summary>
-              <div className="mt-2 space-y-2 leading-relaxed"><p>{amex?.note ?? "Ingen dokumentert nettaksept i Amex-registeret. Sjekk betalingsvalgene hos butikken."}</p>
-                {amex?.sources.map((s, i) => <p key={i}>{s.url ? <a className="underline" href={s.url} target="_blank" rel="noopener noreferrer">{s.label}</a> : s.label} · kontrollert {s.checkedOn}</p>)}
-                <p>SAS Amex Premium gir 15 EuroBonus-poeng per 100 kr på kvalifiserende kortkjøp. Det tilsvarer {(15 * settings.euroOre / 100).toLocaleString("nb-NO")} % med din poengverdi. Kortbonus vises separat og krever at både kort- og programvilkår er oppfylt.</p>
-                {shopping.some(o => o.shopping!.channel === "klarna") && <p>Klarna krever betaling med Klarna. Kombinasjon med Amex er ikke dokumentert.</p>}
-                {shopping.some(o => o.shopping!.channel.startsWith("spenn")) && <p>Spenn: sjekk tilbudets kombinasjonsvilkår. Lensways kontokobling kan ikke kombineres med andre tilbud.</p>}
-                <Link href="/verktoy/amex-brukersteder" className="inline-block text-orange-700 underline">Åpne Amex-registeret</Link>
-              </div>
-            </details>}
 
             {!categoryGroup && group.categories.length > 0 && (
               <p className="mt-1.5 text-xs text-stone-500">
@@ -125,48 +98,25 @@ export function TilbudGrid({
               </p>
             )}
 
-            {warnings.map((offer) => (
-              <p
-                key={`${offer.tilbudId}-warning`}
-                className="mt-2 rounded-lg border border-amber-200 bg-amber-50 px-2.5 py-1.5 text-xs leading-snug text-amber-900"
-              >
-                {offer.warning}
-              </p>
-            ))}
-
-            {(sourceLinks.length > 0 || uniqueTerms.length > 0) && (
-              <div className="mt-auto mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 border-t border-stone-100 pt-2.5">
-                {sourceLinks.map((offer) => (
-                  <a
-                    key={`${offer.tilbudId}-source`}
-                    href={offer.sourceUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs font-medium text-orange-600 hover:text-orange-700"
-                  >
-                    {getTilbudSourceLinkLabel(offer.fordelSlug, offer.sourceUrl, offer.fordelName)}
-                  </a>
-                ))}
-                {uniqueTerms.length > 0 && (
-                  <details className="group/terms">
-                    <summary className="cursor-pointer list-none text-xs font-medium text-stone-500 hover:text-stone-700 [&::-webkit-details-marker]:hidden">
-                      Vilkår
-                      <span
-                        className="ml-1 inline-block transition-transform group-open/terms:rotate-180"
-                        aria-hidden="true"
-                      >
-                        ▾
-                      </span>
-                    </summary>
-                    <div className="mt-1.5 space-y-2 text-xs leading-relaxed text-stone-500">
-                      {uniqueTerms.map((terms) => (
-                        <p key={terms}>{terms}</p>
-                      ))}
-                    </div>
-                  </details>
-                )}
+            <details className="mt-2 text-xs text-stone-600">
+              <summary className="w-fit cursor-pointer py-1 font-medium hover:text-orange-700">Vilkår og detaljer</summary>
+              <div className="mt-1 space-y-3 border-t border-stone-100 pt-2 leading-relaxed">
+                {ordinary.map(o => <section key={o.tilbudId}>
+                  <strong>{o.fordelName}</strong>
+                  <p>{o.terms ?? o.description}</p>
+                  {o.warning && <p>{o.warning}</p>}
+                  {o.sourceUrl && <a href={o.sourceUrl} target="_blank" rel="noopener noreferrer" className="text-orange-800 underline">{getTilbudSourceLinkLabel(o.fordelSlug, o.sourceUrl, o.fordelName)}</a>}
+                </section>)}
+                {shopping.map(offer => <ShoppingOffer key={offer.tilbudId} offer={offer} settings={settings} now={checkedNow} best={best === offer.tilbudId} />)}
+                {amex && amex.status !== "unknown" && <section>
+                  <strong>Amex på nett</strong>
+                  <p>{amex.note}</p>
+                  {amex.sources.map((source, i) => <p key={i}>{source.url ? <a className="underline" href={source.url} target="_blank" rel="noopener noreferrer">{source.label}</a> : source.label} · {source.checkedOn}</p>)}
+                  <p>Kortopptjening avhenger av betalingsmåte og vilkår. Beregningen viser portalbonusen alene.</p>
+                  <Link href="/verktoy/amex-brukersteder" className="underline">Se Amex-registeret</Link>
+                </section>}
               </div>
-            )}
+            </details>
           </article>
         );
       })}

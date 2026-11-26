@@ -51,6 +51,7 @@ export interface TilbudFilterParams {
   side?: number;
   netthandel?: boolean;
   flere?: boolean;
+  funn?: boolean;
   kontrollert?: boolean;
   eb?: number;
   spenn?: number;
@@ -73,7 +74,7 @@ export function buildTilbudHref(params: TilbudFilterParams): string {
     search.set("sortering", params.sortering);
   }
   if (params.side && params.side > 1) search.set("side", String(params.side));
-  for (const key of ["netthandel", "flere", "kontrollert"] as const) if (params[key]) search.set(key, "1");
+  for (const key of ["netthandel", "flere", "kontrollert", "funn"] as const) if (params[key]) search.set(key, "1");
   const defaults = { eb: 10, spenn: 10, trumf: "cash", belop: 1000, frakt: 0, mva: 25, kunde: "existing" };
   for (const key of Object.keys(defaults) as (keyof typeof defaults)[]) {
     if (params[key] !== undefined && params[key] !== defaults[key]) search.set(key, String(params[key]));
