@@ -33,6 +33,7 @@ interface TilbudFiltersProps {
   categories: CategoryOption[];
   partnerCount: number;
   offerCount: number;
+  comparisonParams?: Partial<TilbudFilterParams>;
 }
 
 function SearchIcon() {
@@ -66,6 +67,7 @@ export function TilbudFilters({
   categories,
   partnerCount,
   offerCount,
+  comparisonParams,
 }: TilbudFiltersProps) {
   const router = useRouter();
 
@@ -78,6 +80,7 @@ export function TilbudFilters({
 
       router.replace(
         buildTilbudHref({
+          ...comparisonParams,
           q: nextQ,
           program: overrides.program !== undefined ? overrides.program : program,
           kategori:
@@ -90,7 +93,7 @@ export function TilbudFilters({
         { scroll: false },
       );
     },
-    [router, searchInput, program, category, includeStudent, sort],
+    [router, searchInput, program, category, includeStudent, sort, comparisonParams],
   );
 
   const clearSearch = () => {

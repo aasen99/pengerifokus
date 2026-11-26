@@ -3,7 +3,7 @@
  * Oppdateres når tilbud verifiseres eller endres hos partner.
  */
 export const tilbudListMeta = {
-  lastUpdated: "2026-11-11",
+  lastUpdated: "2026-11-26",
   sources: [
     "OBOS medlemsfordeler",
     "offisielle Trumf Netthandel-sider",
@@ -11,10 +11,11 @@ export const tilbudListMeta = {
     "Coop medlemsfordeler",
     "Circle K Extra (nivåer og belønninger kontrollert 11. november 2026)",
     "NAF medlemsfordeler",
-    "Klarna cashback",
+    "Klarna cashback (hele den offentlige katalogen kontrollert 26. november 2026)",
     "SAS EuroBonus restaurant- og partnerprogram",
-    "SAS Online Shopping (onlineshopping.flysas.com)",
-    "Spenn, offisiell nettside og app (spenngroup.com)",
+    "SAS Online Shopping (butikkildene var utilgjengelige ved kontroll 26. november 2026)",
+    "Spenn, offisielle nettsider (full katalog og satser krever app)",
+    "Rabo og Perks (kun kartleggingsfunn uten publiserte satser)",
     "Uno-X Spenn, drivstoffsatser og kortregistrering (unox.no/spenn/)",
     "Usbl medlemsfordeler",
     "offisielle studentrabatter hos partnere",

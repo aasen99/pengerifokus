@@ -1,5 +1,6 @@
 import { matchesSearchTokens } from "@/lib/normalize-search";
 import type { GruppertTilbud } from "@/lib/tilbud";
+import { normalizePartnerKey } from "./partner-key";
 
 /** Filtrerer ferdig grupperte tilbud uten å gå via serveren. */
 export function filterGruppertTilbudByQuery(
@@ -8,6 +9,9 @@ export function filterGruppertTilbudByQuery(
 ): GruppertTilbud[] {
   const normalizedQuery = query.trim();
   if (!normalizedQuery) return groups;
+  // A merchant name (including a known alias) returns every channel together.
+  const exact = groups.filter(group => group.key === normalizePartnerKey(normalizedQuery));
+  if (exact.length) return exact;
 
   const next: GruppertTilbud[] = [];
 

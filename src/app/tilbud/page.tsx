@@ -21,6 +21,7 @@ import {
   type TilbudSortOption,
 } from "@/lib/tilbud";
 import { isTilbudOptInProgram } from "@/lib/tilbud-ui";
+import { DEFAULT_BONUS_SETTINGS } from "@/lib/netthandel";
 
 const pageDescription =
   "Finn tilbud, bonus og cashback fra OBOS, Trumf, Coop, NAF, EuroBonus, Spenn og flere. Søk eller filtrer etter program og kategori. Oversikten utvides løpende.";
@@ -68,6 +69,8 @@ interface TilbudPageProps {
     student?: string | string[];
     sortering?: string | string[];
     side?: string | string[];
+    netthandel?: string; flere?: string; kontrollert?: string;
+    eb?: string; spenn?: string; trumf?: string; belop?: string; frakt?: string; mva?: string; kunde?: string;
   }>;
 }
 
@@ -88,6 +91,18 @@ export default async function TilbudPage({ searchParams }: TilbudPageProps) {
   const params = await searchParams;
   const tilbud = getTilbud();
   const fordeler = getFordeler();
+  const bounded = (raw: string | undefined, fallback: number, min: number, max: number) => {
+    const n = raw === undefined ? fallback : Number(raw);
+    return Number.isFinite(n) && n >= min && n <= max ? n : fallback;
+  };
+  const settings = { ...DEFAULT_BONUS_SETTINGS,
+    euroOre: bounded(first(params.eb), 10, 0, 100), spennOre: bounded(first(params.spenn), 10, 0, 100),
+    amount: bounded(first(params.belop), 1000, 1, 1000000), shipping: bounded(first(params.frakt), 0, 0, 1000000),
+    vat: bounded(first(params.mva), 25, 0, 100),
+    trumf: params.trumf === "auto" ? "auto" as const : params.trumf === "once" ? "once" as const : "cash" as const,
+    customer: params.kunde === "new" ? "new" as const : "existing" as const,
+  };
+  const checkedNow = new Date().toISOString();
 
   let program = first(params.program) || null;
   const studentProgramView = program === "student";
@@ -109,6 +124,8 @@ export default async function TilbudPage({ searchParams }: TilbudPageProps) {
   const grouped = sortGruppertTilbud(
     groupTilbudByPartner(sortedEntries),
     sort,
+    settings,
+    checkedNow,
   );
 
   const programs = fordeler
@@ -157,6 +174,11 @@ export default async function TilbudPage({ searchParams }: TilbudPageProps) {
           showEurobonusShoppingNote={program === "eurobonus"}
         />
 
+        <p className="text-sm leading-relaxed text-stone-600">
+          Netthandel: {tilbud.filter(t => t.shopping?.channel === "trumf-netthandel" && t.shopping.verification === "verified").length} Trumf-butikker og {tilbud.filter(t => t.shopping?.channel === "klarna" && t.shopping.verification === "verified").length} Klarna-butikker har kontrollerte satser.
+          {" "}SAS- og Spenn-oversiktene inneholder også uavklarte kartleggingsfunn. Full katalog og alle satser kunne ikke kontrolleres der. Se status ved hvert tilbud.
+        </p>
+
         <TilbudBrowser
           groups={grouped}
           query={query}
@@ -167,6 +189,11 @@ export default async function TilbudPage({ searchParams }: TilbudPageProps) {
           page={parseTilbudPage(params.side)}
           programs={programs}
           categories={categoryOptions}
+          initialSettings={settings}
+          online={params.netthandel === "1"}
+          multiple={params.flere === "1"}
+          verified={params.kontrollert === "1"}
+          checkedNow={checkedNow}
         />
 
         <TilbudDisclaimer />

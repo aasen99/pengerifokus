@@ -1,4 +1,7 @@
-import type { Tilbud } from "@/types/content";
+import type { Tilbud, ShoppingDetails } from "@/types/content";
+import { normalizePartnerKey } from "./partner-key";
+import { calculateShoppingBonus, hasCurrentVerifiedRate, DEFAULT_BONUS_SETTINGS, type BonusSettings } from "./netthandel";
+export { normalizePartnerKey } from "./partner-key";
 import { getFordelName } from "@/lib/fordeler";
 import { matchesSearchTokens, normalizeSearchText } from "@/lib/normalize-search";
 import { matchesTilbudCategoryGroup, isStudentTilbudCategory } from "@/lib/tilbud-categories";
@@ -41,14 +44,6 @@ function matchesTilbudQuery(entry: Tilbud, query: string): boolean {
 }
 
 /** Normaliserer partnernavn for å finne like tilbud på tvers av programmer */
-export function normalizePartnerKey(partner: string): string {
-  return partner
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/\.(com|no|se|dk)$/i, "")
-    .replace(/[^a-z0-9]/g, "");
-}
 
 export interface TilbudProgramOffer {
   tilbudId: string;
@@ -61,6 +56,7 @@ export interface TilbudProgramOffer {
   sourceUrl?: string;
   warning?: string;
   searchText: string;
+  shopping?: ShoppingDetails;
 }
 
 export interface GruppertTilbud {
@@ -109,6 +105,7 @@ export function groupTilbudByPartner(entries: Tilbud[]): GruppertTilbud[] {
           terms: entry.terms,
           sourceUrl: entry.sourceUrl ?? getTilbudProgramSourceUrl(entry.fordelSlug),
           warning: entry.warning,
+          shopping: entry.shopping,
           searchText: getTilbudSearchText(entry, fordelName),
         };
       }),
@@ -122,6 +119,12 @@ export function groupTilbudByPartner(entries: Tilbud[]): GruppertTilbud[] {
 }
 
 export const TILBUD_PAGE_SIZE = 30;
+
+export function filterShoppingGroups(groups: GruppertTilbud[], flags: { online: boolean; multiple: boolean; verified: boolean }, settings: BonusSettings, now: string): GruppertTilbud[] {
+  return groups.map(group => ({ ...group, offers: group.offers.filter(offer =>
+    (!flags.online || Boolean(offer.shopping)) && (!flags.verified || Boolean(offer.shopping && hasCurrentVerifiedRate(offer.shopping, settings, now))))
+  })).filter(group => group.offers.length > 0 && (!flags.multiple || new Set(group.offers.filter(o => o.shopping).map(o => o.fordelSlug)).size >= 2));
+}
 
 export function parseTilbudPage(raw?: string | string[] | null): number {
   const value = Array.isArray(raw) ? raw[0] : raw;
@@ -208,9 +211,9 @@ export function parseOfferRate(
   return null;
 }
 
-function getGroupBestRate(group: GruppertTilbud): number {
+function getGroupBestRate(group: GruppertTilbud, settings: BonusSettings, today: string): number {
   const rates = group.offers
-    .map((offer) => parseOfferRate(offer.offerLabel, offer.fordelSlug))
+    .map((offer) => offer.shopping ? calculateShoppingBonus(offer.shopping, settings, today)?.minPct ?? null : parseOfferRate(offer.offerLabel, offer.fordelSlug))
     .filter((rate): rate is number => rate !== null);
 
   return rates.length ? Math.max(...rates) : -1;
@@ -219,13 +222,15 @@ function getGroupBestRate(group: GruppertTilbud): number {
 export function sortGruppertTilbud(
   groups: GruppertTilbud[],
   sort: TilbudSortOption,
+  settings: BonusSettings = DEFAULT_BONUS_SETTINGS,
+  today = new Date().toISOString().slice(0, 10),
 ): GruppertTilbud[] {
   const sorted = [...groups];
 
   switch (sort) {
     case "rate-desc":
       return sorted.sort((a, b) => {
-        const diff = getGroupBestRate(b) - getGroupBestRate(a);
+        const diff = getGroupBestRate(b, settings, today) - getGroupBestRate(a, settings, today);
         return diff !== 0 ? diff : a.partner.localeCompare(b.partner, "nb");
       });
     case "programs-desc":

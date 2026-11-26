@@ -1,0 +1,5198 @@
+{
+  "source": "https://trumfnetthandel.no/kategori",
+  "checkedAt": "2026-11-26",
+  "complete": true,
+  "stores": [
+    {
+      "partner": "AEG",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/aeg-trumf",
+      "headline": "3,1 %",
+      "upTo": false,
+      "category": "Elektronikk",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,1 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "a41e7b421ed5293a01ce61a630bbf0735107b21096bc980bfad1d5d07b071309",
+      "reviewRequired": false
+    },
+    {
+      "partner": "AEG Reservedeler og Tilbehør",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/aeg-reservedeler-og-tilbehor-trumf",
+      "headline": "7,8 %",
+      "upTo": false,
+      "category": "Elektronikk",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "7,8 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "6ecb8185d898cb24c58e90bd95dea448db6634d66f7748db77e74534dcae3cd8",
+      "reviewRequired": false
+    },
+    {
+      "partner": "AIM'N",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/aimn-trumf",
+      "headline": "7,8 %",
+      "upTo": false,
+      "category": "Sport",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "7,8 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "6b90812de547b07c91c9c8c968e532e6d0df90960ad48dcdf3403c2c89e17554",
+      "reviewRequired": false
+    },
+    {
+      "partner": "ASICS",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/asics-trumf",
+      "headline": "3,1 %",
+      "upTo": false,
+      "category": "Sport",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,1 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "4578ff56d27dd772e23db6cdf79d1a5ccb244627fbfdb59620f72e9618738b2c",
+      "reviewRequired": false
+    },
+    {
+      "partner": "ASICS Outlet",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/asics-outlet-trumf",
+      "headline": "2,3 %",
+      "upTo": false,
+      "category": "Sport",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "2,3 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "2232f597d276ef0a32a103b75608c298186576427e88ebe76e24f025767af852",
+      "reviewRequired": false
+    },
+    {
+      "partner": "AVAST Software",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/avast-software-trumf",
+      "headline": "23,4 %",
+      "upTo": false,
+      "category": "Elektronikk",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "23,4 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "c710553da0413d65567ffd582396839275f4f3411b944243a287e8045b48d7e5",
+      "reviewRequired": false
+    },
+    {
+      "partner": "AVIS",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/avis-trumf-1",
+      "headline": "9,3 %",
+      "upTo": true,
+      "category": "Reise",
+      "rates": [
+        {
+          "label": "For leieforhold i Storbritannia, Fastlands-Frankrike og Italia",
+          "text": "9,3 %"
+        },
+        {
+          "label": "Øvrige land",
+          "text": "7,8 %"
+        }
+      ],
+      "restrictions": [
+        "Ved bestilling av leiebil vil kjøpet ditt bli behandlet 90 dager etter at leien er gjennomført. Vær oppmerksom på at denne forhandleren ikke gir Trumf-bonus om du benytter ditt AWD rabattnummer når du gjennomfører en bestilling. Leie av bil i land som ikke er listet opp her er ikke bonusberettiget og vil derfor ikke gi bonus: Albania, Algeria, Andorra, Angola, Armenia, Austria, Azerbaijan, Bahrain, Belgium, Bosnia and Herzegovina, Botswana, Bulgaria, Burundi, Cameroon, Central African Republic, Congo, Congo, Côte d'Ivoire, Croatia, Cyprus, Czechia, Denmark, Egypt, Eritrea, Estonia, Eswatini, Ethiopia, Faroe Islands, Finland, France (fastlands-Frankrike), Gabon, Gambia, Georgia, Germany, Ghana, Gibraltar, Greece, Guernsey, Guinea, Guinea-Bissau, Holy See, Hungary, Iceland, Iran, Iraq, Ireland, Israel, Italy, Jordan, Kazakhstan, Kenya, Kuwait, Kyrgyzstan, Latvia, Lebanon, Lesotho, Liberia, Libya, Liechtenstein, Lithuania, Luxembourg, Madagascar, Malawi, Malaysia, Mali, Malta, Mauritius, Mayotte, Moldova, Montenegro, Morocco, Mozambique, Myanmar, Namibia, Nauru, Netherlands, Nigeria, North Macedonia, Norway, Oman, Poland, Portugal, Qatar, Reunion Island, Romania, Rwanda, Saint Martin, San Marino, Sao Tome and Principe, Saudi Arabia, Senegal, Serbia, Seychelles, Sierra Leone, Singapore, Slovakia, Slovenia, Somalia, South Africa, Spain, Sudan, Sweden, Switzerland, Syria, Sarawak, Tajikistan, Tanzania, Thailand, Togo, Tunisia, Turkey, Turkmenistan, Uganda, Ukraine, United Arab Emirates, United Kingdom, Uzbekistan, Zambia, Zimbabwe."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "bd7de4625427049b663573a7250f5a0af73d169dc6094203e72f7c982df6104a",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Acer",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/acer-trumf",
+      "headline": "3,9 %",
+      "upTo": false,
+      "category": "Elektronikk",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,9 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "473a91e0538644fd5fefda53ae21ed8a8ff5f1972f14e657c44178a93bb6b6fe",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Adidas",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/adidas-trumfs",
+      "headline": "7,8 %",
+      "upTo": false,
+      "category": "Sport",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "7,8 %"
+        }
+      ],
+      "restrictions": [
+        "Dersom ditt kjøp hos Adidas ikke blir registrert på Trumf Netthandel er det dessverre ikke mulig å legge inn en henvendelse på dette. Dette er en bestemmelse som er gjort av nettbutikken. Det gis ikke Trumf-bonus ved bruk av kuponger og rabattkoder."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "67c29e688e3dfee3c4ca87d79ec960aee5aa7aba618dc7941959be7e57f42945",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Albert",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/albert-trumf",
+      "headline": "75 kr",
+      "upTo": false,
+      "category": "Tjenester",
+      "rates": [
+        {
+          "label": "Til nye kunder",
+          "text": "75 kr"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke Trumf-bonus på kjøpet dersom abonnementet sies opp i prøveperioden."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "97437f07d0364cdaecb21db7fef16cb1635661875ec843e7c5395b11ace0daf5",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Amisol",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/amisol-trumfs",
+      "headline": "2,3 %",
+      "upTo": false,
+      "category": "Reise",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "2,3 %"
+        }
+      ],
+      "restrictions": [
+        "Kjøpet bekreftes innen 90 dager etter fullført opphold. Kjøpet vil endres til «Overført til Trumf» omtrent 90 dager etter at kjøpet har fått statusen «Bekreftet». Endring av booking gjort utenfor Trumf Netthandel vil føre til avisning av ditt kjøp. Ombooking må gjennomføres via Trumf Netthandel for at kjøpet skal være bonusberettiget. Ved kansellering av booking vil kjøpet bli avvist. Det gis ikke Trumf-bonus ved bruk av Amisol sin app. OBS: Dersom kjøpet ikke registreres eller kjøpet avvises kan du melde inn dette gjennom vårt kontaktskjema. Vi gjør oppmerksom på at henvendelsen kan meldes inn først etter endt reise."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "0cfc48b03563f6479c098c2d1666b4baba741634b33fe7b474dd244ed8a812c3",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Apotekhjem",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/apotekhjem-trumf",
+      "headline": "5,4 %",
+      "upTo": false,
+      "category": "Helse",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "5,4 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "5a6cb5e8bc8b05dee3cd10771be39c137e1dcacf3c6aa793d4e9df7faf5c0146",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Apple",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/trumfapple-store",
+      "headline": "2,7 %",
+      "upTo": false,
+      "category": "Elektronikk",
+      "rates": [
+        {
+          "label": "Hele nettbutikken (med noen unntak)",
+          "text": "2,7 %"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke bonus på kjøp gjort i denne forhandlerens app. Trumf-bonus tildeles av Trumf Netthandel etter godkjent kjøp fra forhandler. For å kvalifisere for Trumf-bonus, må du fullføre kjøpet i samme økt som du starter kjøpet uten å forlate nettleseren. Å åpne en ny fane eller returnere senere vil kunne resultere i at kjøpet ikke kan spores. Produkter som ikke er kvalifisert for Trumf-bonus er: MacBook Pro PROLED XDR Display iMac MacBook Pro 14\" (M6) iPad Mini Apple HomeView Apple TV 4K HomePod mini 2 iPhone 18 Pro iPhone 18 Pro Max AirPods 5 Apple Watch Series 12 iPhone Duo Apple Watch Ultra 4 Mac mini Mac Studio MacBook Neo iPhone 17e iPhone 17 Studio Display XDR og Studio Display Apple Vision Pro Apple Vision Pro-tilbehør, Apple Pro Display XDR Gavekort Programvare og tjenester: Microsoft Office-pakken for Mac, Apple Developer Programs og Apple One AppleCare+ månedlig abonnement og frakt. Apple selger og sender produkter kun til sluttbrukerkunder; kjøp for videresalg er ikke tillatt. Vær oppmerksom på at det ikke gis Trumf-bonus på nylanserte Apple produkter. Hvilke nylanserte produkter det ikke gis Trumf-bonus på vil bli oppført ovenfor innen 48 timer etter produktet er lansert. Du kan kun motta Trumf-bonus for et begrenset antall produkter innen ulike kategorier: Maks seks (6) enheter: Iphone, Mac, Watch, Vission Apple-TV og Homepod. Maks trettito (32) enheter: AirTag 1-pakning og AirTag-tilbehør. Maks åtte (8) enheter: AirTag 4-pakning. Maks ti (10) enheter: AirPods og annet kvalifisert tilbehør. Denne begrensningen gjelder for alle kjøp du foretar på Apple Store sin nettbutikk. Trumf-bonus vil ikke bli tildelt dersom maksgrensen er nådd for for et produkt."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "1a15db090adab9a08a8c99fa9abd1fea9c028640c085153ff9bb0359b35e5b82",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Askeladden Navnelapper",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/askeladden-navnelapper",
+      "headline": "9,3 %",
+      "upTo": false,
+      "category": "Barn",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "9,3 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "71b0db465c451c8be026edebb3f455d98f9cb7f331ed5e5782fcca6481dacd7d",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Auto Europe no",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/auto-europe-notrumf",
+      "headline": "4,6 %",
+      "upTo": false,
+      "category": "Reise",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "4,6 %"
+        }
+      ],
+      "restrictions": [
+        "Ved bestilling av flyturer, leiebil og overnatting vil kjøpet ditt bli behandlet 90 dager etter at oppholdet er gjennomført. Endring av booking gjort utenfor Trumf Netthandel vil føre til avisning av ditt kjøp. Ombooking må gjennomføres via Trumf Netthandel for at kjøpet skal være bonusberettiget. Ved kansellering av booking vil kjøpet bli avvist."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "4d6224ca7dbf623f30b0b06eeb29cab73352d5c50e22ef78d158545e810dddfb",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Autodeler",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/autodeler-trumf",
+      "headline": "6,2 %",
+      "upTo": true,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Ny Kunde",
+          "text": "6,2 %"
+        },
+        {
+          "label": "Dekk",
+          "text": "0,7 %"
+        },
+        {
+          "label": "Eksisterende Kunde",
+          "text": "3,1 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "a9f7ce9d25d1f5be4877cc91bf78dd0652567d1035709616bfbf0b49a0a40a3a",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Autodoc",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/autodoc-trumf",
+      "headline": "6,2 %",
+      "upTo": true,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Dekk",
+          "text": "0,7 %"
+        },
+        {
+          "label": "Eksisterende Kunde",
+          "text": "3,1 %"
+        },
+        {
+          "label": "Ny Kunde",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "269c629672e10e83a4db7ec576b5bf4a61a59c1f53c3ab72ed4038240d3f86bf",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Autodude",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/autodude-trumf",
+      "headline": "7,8 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "7,8 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "d3a2c1db213305177b878de0f73f532f84c2d136b66bcd20efea4ed6c7be61b9",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Babybanden",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/babybanden-trumf",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Barn",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "e96cb803bf61fd6278bcf11e477c5800d225e63c26dd5371e588cfda97e0926b",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Babyshop",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/babyshop-trumf",
+      "headline": "2,3 %",
+      "upTo": false,
+      "category": "Barn",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "2,3 %"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke bonus på kjøp gjort i denne forhandlerens app."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "fbb4ad0bbb64ff0ae0f9bfbd44092d2a94e304082dab1a71ac8369e3d827b68e",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Babysjarm",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/babysjarm-trumf",
+      "headline": "15,6 %",
+      "upTo": false,
+      "category": "Barn",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "15,6 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "2de206bf57a800451171c93fa28c595c7c607c3e32262bb4e9e9a579df96daca",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Backe i Grensen",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/backe-i-grensen-trumf",
+      "headline": "4,6 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "4,6 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "a2fbfa1f455f9135c23353ff7565895f17428b5b02e10363632d175719c62258",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Bad & Stil",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/bad-and-stil-trumf",
+      "headline": "2,3 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "2,3 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "91dcbfc1b062bcc88de41952b16638d3724c47101a13d12e362adb3980c7b61b",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Bad.no",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/bad-trumf",
+      "headline": "5 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "5 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "b85e253848041a85be657ab8e214bb27495146016a8fda840e4bd51c88d82f49",
+      "reviewRequired": false
+    },
+    {
+      "partner": "BagBrokers",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/bagbrokers-trumf",
+      "headline": "3,9 %",
+      "upTo": false,
+      "category": "Sport",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,9 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "702e87435cc868c8f1e4b59e1056e33881d4d5d95fe8146bb8f50da89b1a71ec",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Bakeren og Kokken",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/bakeren-og-kokken-trumf",
+      "headline": "3,1 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,1 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "bf4f42b5b19673b9a72aa9f7ab7a3d276708427e912ef05fc961b8d0f50de67f",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Barbershop",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/barbershop-trumf",
+      "headline": "1,9 %",
+      "upTo": false,
+      "category": "Helse",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "1,9 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "4e54d97f9175a6f454396510e53fb917f3bc6094a9470006c3d22662aa4d5a6e",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Batteriexperten",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/batteriexperten-trumf",
+      "headline": "7,8 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "7,8 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "6aea78b5a75cb799febd72c7c09996c2c6ea9c31869e8ef757c388a4ff8d3662",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Beauty Mall",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/beauty-mall",
+      "headline": "9,3 %",
+      "upTo": false,
+      "category": "Helse",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "9,3 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "21b0988d7291d3285e4c934e81dc1019a282b87eb1361c0f7ccae29e8d6461ee",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Beautycos",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/beautycos-trumf",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Helse",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "9a537ffdf0bfac0636711b77cd32336bd705a891d8db18a8a772d04d74a5d1ae",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Beckmann",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/beckmann-trumf",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Barn",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "3416972980c4dc84ff3df3033d771cd102e7cbdb9612bd94775f7ca007a85d02",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Bemz",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/bemz-trumf",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbuitkken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "4b8a795057a272922fe3a8c74ef6b77f896314eaa115f8f89a7504c6cd4e4693",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Berg Watches",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/berg-watches-trumf",
+      "headline": "15 %",
+      "upTo": false,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Hele nettbuitkken",
+          "text": "15 %"
+        }
+      ],
+      "restrictions": [
+        "Brann-klokkene er lisensierte produkter. Det beregnes derfor ikke bonus på disse."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "bf120e33a653440e97f6b026d15f9ab7465c34d0b8118ee590463fdad3c28d84",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Bik Bok",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/bik-bok-trumf",
+      "headline": "4,6 %",
+      "upTo": false,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "4,6 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "622eb06381db62162ec098d11de1210af5952837b13604a023cba2ae2b9d938c",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Bildeler",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/bildeler-trumf",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "f8d1cde0216b4878deb7d570127420e3be84c3b50bc7e754550632c0519a491c",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Bilxtra",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/bilxtra-trumf",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "b13265267bbf7505315df285c4717152a342bb25609d1899999388f3d2734f29",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Björn Borg",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/trumfbj%C3%B6rn-borg",
+      "headline": "7 %",
+      "upTo": false,
+      "category": "Sport",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "7 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "d30d0aee7e97d63941e766dcf806347179b29ed013cb9f51421377b99c35efa6",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Bladkongen",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/trumfbladkongen",
+      "headline": "7,8 %",
+      "upTo": false,
+      "category": "Underholdning",
+      "rates": [
+        {
+          "label": "Hele nettbutikken (Dersom det bestilles et abonnement vil kun første betaling være bonusberettiget)",
+          "text": "7,8 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "fd653b89a83ac4a02dbbfa2962c14a785e601d12476d91b2a507bb1f2b24b476",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Blivakker",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/blivakker-trumf",
+      "headline": "4,6 %",
+      "upTo": false,
+      "category": "Helse",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "4,6 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "a8c3cd310d84c1a47b47a668d40b1939d0fec773d5ce70df25b874361aa03f66",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Bodystore",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/bodystore-trumf",
+      "headline": "4,6 %",
+      "upTo": true,
+      "category": "Helse",
+      "rates": [
+        {
+          "label": "Ny Kunde",
+          "text": "4,6 %"
+        },
+        {
+          "label": "Eksisterende Kunde",
+          "text": "2,3 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "728bb0f1f8eac69b5d67345b5d5e1c24c6ab38ebc8ec663a276e310671fbb9ef",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Bokia",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/bokia-trumf",
+      "headline": "11,7 %",
+      "upTo": false,
+      "category": "Underholdning",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "11,7 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "d153020815ecc99bb0470c8ad27fa7ccde207e72416776127a1ddf3b275839ae",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Bonprix",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/bonprix-trumf",
+      "headline": "4,6 %",
+      "upTo": false,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "4,6 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "419400a3ba99f58e56e50767176c14e55395ba8bdfb5b09fb18c49b9de174aa8",
+      "reviewRequired": false
+    },
+    {
+      "partner": "BookBeat",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/bookbeat-trumf",
+      "headline": "75 kr",
+      "upTo": false,
+      "category": "Tjenester",
+      "rates": [
+        {
+          "label": "Prøv gratis 90 dager. Ved innmelding til nye kunder (Dersom det bestilles et abonnement vil kun første betaling være bonusberettiget)",
+          "text": "75 kr"
+        }
+      ],
+      "restrictions": [
+        "Nye kunde tilsvarer 1 kjøp per. 360 dager."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "8c53b4e45714f551f3e27d710328532dd9c75fd58e304317661267a6d7c95064",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Bosch",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/bosch-trumf1",
+      "headline": "11,7 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "11,7 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "074572826d6d21019071233f08de6ce188ad6f8874177c7f8703aec7a05888ba",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Brilleland",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/brilleland-trumf",
+      "headline": "4,6 %",
+      "upTo": false,
+      "category": "Helse",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "4,6 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "cad50d91bd580641e2fe0cff7ed6dfd20dda87b8af473aef9753fcc91dab3181",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Bubbleroom",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/trumfbubbleroom",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "78b0983d8f4ba5a5f69fe15a8082027f2e418bfee0ec5f0ca9ba3bba91954aa4",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Budget",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/budget-trumf",
+      "headline": "9,3 %",
+      "upTo": true,
+      "category": "Reise",
+      "rates": [
+        {
+          "label": "Øvrige land",
+          "text": "7,8 %"
+        },
+        {
+          "label": "For leieforhold i Storbritannia, Fastlands-Frankrike og Italia",
+          "text": "9,3 %"
+        }
+      ],
+      "restrictions": [
+        "Ved bestilling av leiebil vil kjøpet ditt bli behandlet 90 dager etter at leien er gjennomført. Vær oppmerksom på at denne forhandleren ikke gir Trumf-bonus om du benytter ditt AWD rabattnummer når du gjennomfører en bestilling. Leie av bil i land som ikke er listet opp her er ikke bonusberettiget og vil derfor ikke gi bonus: Albania, Algeria, Andorra, Angola, Armenia, Austria, Azerbaijan, Bahrain, Belgium, Bosnia and Herzegovina, Botswana, Bulgaria, Burundi, Cameroon, Central African Republic, Congo, Congo, Côte d'Ivoire, Croatia, Cyprus, Czechia, Denmark, Egypt, Eritrea, Estonia, Eswatini, Ethiopia, Faroe Islands, Finland, France (fastlands-Frankrike), Gabon, Gambia, Georgia, Germany, Ghana, Gibraltar, Greece, Guernsey, Guinea, Guinea-Bissau, Holy See, Hungary, Iceland, Iran, Iraq, Ireland, Israel, Italy, Jordan, Kazakhstan, Kenya, Kuwait, Kyrgyzstan, Latvia, Lebanon, Lesotho, Liberia, Libya, Liechtenstein, Lithuania, Luxembourg, Madagascar, Malawi, Malaysia, Mali, Malta, Mauritius, Mayotte, Moldova, Montenegro, Morocco, Mozambique, Myanmar, Namibia, Nauru, Netherlands, Nigeria, North Macedonia, Norway, Oman, Poland, Portugal, Qatar, Reunion Island, Romania, Rwanda, Saint Martin, San Marino, Sao Tome and Principe, Saudi Arabia, Senegal, Serbia, Seychelles, Sierra Leone, Singapore, Slovakia, Slovenia, Somalia, South Africa, Spain, Sudan, Sweden, Switzerland, Syria, Sarawak, Tajikistan, Tanzania, Thailand, Togo, Tunisia, Turkey, Turkmenistan, Uganda, Ukraine, United Arab Emirates, United Kingdom, Uzbekistan, Zambia, Zimbabwe."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "2ecdd6a86b886e70f7fe290926293de6c57af8966b59c5bb1fb665b679f10d75",
+      "reviewRequired": false
+    },
+    {
+      "partner": "C'est normal",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/cest-normal-trumf",
+      "headline": "4,6 %",
+      "upTo": false,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "4,6 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "da85fd6649bf4cc7527baf8ad1e6dd72411cd7e2e099405a50bdcbc0cca78549",
+      "reviewRequired": false
+    },
+    {
+      "partner": "CS MEGASTORE",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/cs-megastore-trumf",
+      "headline": "1,5 %",
+      "upTo": false,
+      "category": "Elektronikk",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "1,5 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "6acf4491b7b0be8df777215a116ba4ea116b70ee98c6e32ed2e576a18f5d4da4",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Campanyon",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/campanyon-trumf",
+      "headline": "5,4 %",
+      "upTo": false,
+      "category": "Reise",
+      "rates": [
+        {
+          "label": "Hele nettbuitkken",
+          "text": "5,4 %"
+        }
+      ],
+      "restrictions": [
+        "Ved bestilling av flyturer, leiebil og overnatting vil kjøpet ditt bli behandlet 90 dager etter at oppholdet er gjennomført. Endring av booking gjort utenfor Trumf Netthandel vil føre til avisning av ditt kjøp. Ombooking må gjennomføres via Trumf Netthandel for at kjøpet skal være bonusberettiget. Ved kansellering av booking vil kjøpet bli avvist."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "5216785e47e43202ed810458e86751eb1b508b9930cc301958d5cd2de5c7c7c4",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Chicastore",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/chicastore-trumf",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Helse",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "13043ca9dfb799f11197dd7285cb0ec2098e80b7ada645230ff4ceecedd2e741",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Christiania Glasmagasin",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/christiania-glasmagasintrumf",
+      "headline": "3,9 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,9 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "0887ac80f919ef78b00ba9e08231fbc030a2be887852cc7aa8966b84935e6404",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Click&Boat",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/click-and-boat-trumf",
+      "headline": "4,6 %",
+      "upTo": true,
+      "category": "Reise",
+      "rates": [
+        {
+          "label": "Eksisterende Kunde",
+          "text": "2,3 %"
+        },
+        {
+          "label": "Ny Kunde",
+          "text": "4,6 %"
+        }
+      ],
+      "restrictions": [
+        "Kjøpet bekreftes innen 90 dager etter fullført opphold. Kjøpet vil endres til «Overført til Trumf» omtrent 90 dager etter at kjøpet har fått statusen «Bekreftet». Endring av booking gjort utenfor Trumf Netthandel vil føre til avisning av ditt kjøp. Ombooking må gjennomføres via Trumf Netthandel for at kjøpet skal være bonusberettiget. Ved kansellering av booking vil kjøpet bli avvist."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "14a3806a3b7dffc552ad07c66e266049cbcbc4898ba61a51d66e33553f607647",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Comforth Scandinavia",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/comforth-scandinavia-trumf",
+      "headline": "17,1 %",
+      "upTo": false,
+      "category": "Helse",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "17,1 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "82e4da32428b148516e9c5c34d6ce1da430bce09118b0408ceb44b115a81ea21",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Daniel Wellington",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/daniel-wellington-trumf",
+      "headline": "12,4 %",
+      "upTo": false,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "12,4 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "ac897bf741373cd23de09e01719699f48bee211d51dea94d7aaffffd0c94f1d1",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Db",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/db-trumf1",
+      "headline": "4,6 %",
+      "upTo": false,
+      "category": "Sport",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "4,6 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "bb08afe0b3eebcce2b669b84df90116b4232d2bb7ea977899ce0f3e4e2f0b236",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Dekk.eu",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/dekkeu-trumf",
+      "headline": "3,1 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,1 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "e9eb36e747a116d30c604e9d1d5b421423c55f21ff4106227a9e70262ebbe31d",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Dentaworks",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/dentaworks",
+      "headline": "19,5 %",
+      "upTo": false,
+      "category": "Helse",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "19,5 %"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke bonus på kjøp gjort i denne forhandlerens app."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "5cfa50a5ed0665d981d446f9d58129ffeef82465ad6b25565a8bed309a710848",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Dentway",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/dentway-trumfs",
+      "headline": "100 kr",
+      "upTo": true,
+      "category": "Helse",
+      "rates": [
+        {
+          "label": "Tannkrem",
+          "text": "25 kr"
+        },
+        {
+          "label": "Dentway Refill Kit",
+          "text": "75 kr"
+        },
+        {
+          "label": "Dentway White Strips",
+          "text": "90 kr"
+        },
+        {
+          "label": "Dentway Starter Kit",
+          "text": "100 kr"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "d2ee1dc90e1e788dad76415a696f7203529c50ef2cfa569f73910cf439f93e1b",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Devold",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/devold-trumf",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Sport",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "efde1f77994b5b4b0b1c9477aa3e577b9c84f2f144896681254d209950cb983e",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Didriksons",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/didriksons-trumf",
+      "headline": "4,6 %",
+      "upTo": false,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "4,6 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "f6faa6ecb2bd8c1922b0c01d34cc5d7280380d0ed10674ecca1c5be5afdb5999",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Direct Ferries",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/direct-ferries-trumf",
+      "headline": "3,1 %",
+      "upTo": true,
+      "category": "Reise",
+      "rates": [
+        {
+          "label": "Eksisterende Kunde",
+          "text": "2,3 %"
+        },
+        {
+          "label": "Ny Kunde",
+          "text": "3,1 %"
+        },
+        {
+          "label": "Corsica Ferries",
+          "text": "0,7 %"
+        }
+      ],
+      "restrictions": [
+        "Ved bestilling av båtreise vil behandlingen på 90+ 90 dager starte først etter endt reise. Endring av booking gjort utenfor Trumf Netthandel vil føre til avisning av ditt kjøp. Ombooking må gjennomføres via Trumf Netthandel for at kjøpet skal være bonusberettiget. Ved kansellering av booking vil kjøpet bli avvist. Det gis ikke bonus på kjøp gjort i denne forhandlerens app, og det gis ikke bonus på kjøp av tilleggstjenester som f.eks avbestillingsforsikring."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "06149c45e8144486bc21696179876abc9eadba541fdb965bbf1af0da0aac0b91",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Disney+",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/disney-trumfa",
+      "headline": "195 kr",
+      "upTo": true,
+      "category": "Tjenester",
+      "rates": [
+        {
+          "label": "Månedlig - (Standard med reklame)",
+          "text": "5 kr"
+        },
+        {
+          "label": "Månedlig - (Standard)",
+          "text": "15 kr"
+        },
+        {
+          "label": "Månedlig - (Premium)",
+          "text": "20 kr"
+        },
+        {
+          "label": "6 månedersperiode - (Standard med reklame)",
+          "text": "35 kr"
+        },
+        {
+          "label": "Årlig - (Premium)",
+          "text": "195 kr"
+        },
+        {
+          "label": "Årlig - (Standard)",
+          "text": "115 kr"
+        },
+        {
+          "label": "6 månedersperiode - (Standard)",
+          "text": "60 kr"
+        },
+        {
+          "label": "6 månedersperiode - (Premium)",
+          "text": "75 kr"
+        }
+      ],
+      "restrictions": [
+        "Dersom det bestilles et abonnement vil kun første betaling være bonusberettiget.",
+        "Dersom det bestilles et abonnement vil kun første betaling være bonusberettiget.",
+        "Dersom det bestilles et abonnement vil kun første betaling være bonusberettiget.",
+        "Dersom det bestilles et abonnement vil kun første betaling være bonusberettiget.",
+        "Ved innmelding til nye kunder på Disney + årsabonnement",
+        "Dersom det bestilles et abonnement vil kun første betaling være bonusberettiget.",
+        "Dersom det bestilles et abonnement vil kun første betaling være bonusberettiget."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "cfc5145f273277a8d4037ff11fcfbbe8804c0e02a1923ec72569b63f7edfbf10",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Drømmerom",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/drommerom-trumf",
+      "headline": "11,7 %",
+      "upTo": false,
+      "category": "Barn",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "11,7 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "b001eb0d2b5aeb6c833d205730fc0b865088cecb6a474fb6e82dc436acad733b",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Dyrekassen",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/dyrekassen-trumf",
+      "headline": "6,2 %",
+      "upTo": true,
+      "category": "Dyretilbehør",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "1,5 %"
+        },
+        {
+          "label": "Bestillinger over 999 kr",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke bonus på kjøp gjort i denne forhandlerens app."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "fb08c9821b04164730f92ecb3f0c3ba3dd73558667dcc709aec7b62bad81019e",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Dyson",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/dyson-trumf",
+      "headline": "3,1 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,1 %"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke Trumf-bonus på Dyson-tilbehør eller reservedeler, eller på kjøp gjort i denne forhandlerens app."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "f4c2a983c9dc35e9bde198add8f83b8631faaaa072e8416753cb0f0d0592c691",
+      "reviewRequired": false
+    },
+    {
+      "partner": "E-Wheels",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/e-wheels-trumf",
+      "headline": "2,3 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "2,3 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "d8943c094ed2edf406b7961b7ae7fa39661d803357cb2fce728a2413b9ad96b1",
+      "reviewRequired": false
+    },
+    {
+      "partner": "EMP",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/emp-trumf",
+      "headline": "5,4 %",
+      "upTo": true,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Ny Kunde",
+          "text": "5,4 %"
+        },
+        {
+          "label": "Eksisterende Kunde",
+          "text": "3,1 %"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke bonus på kjøp gjort i denne forhandlerens app."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "508361870b30bbbeab123134096682a2d403e2ad0ced3edd888b454eecbe2c20",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Edblad",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/edblad-trumf",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "eb8daa24a58359d06aaee3093daea4036ff8a328c958a5eeef4fbe7222d527c3",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Ekstralys",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/trumfekstralys",
+      "headline": "7 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "7 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "07e5ed9e9e295a55efe6c806e252333af4db6f4eee5c929ee333c28561c91877",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Electrolux",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/electrolux-trumf",
+      "headline": "3,1 %",
+      "upTo": false,
+      "category": "Elektronikk",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,1 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "e4e1c3695156032151e948be0b99dca13bb068c7679c0d385d26d275ee85e772",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Electrolux Reservedeler og Tilbehør",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/electrolux-reservedeler-og-tilbehor-trumf",
+      "headline": "7,8 %",
+      "upTo": false,
+      "category": "Elektronikk",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "7,8 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "0756eee316929d1c31a90a1ffe7ea575b8b314090a040d990f8796f1d1e3978a",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Elektroimportøren",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/elektroimportoren-trumf",
+      "headline": "3,9 %",
+      "upTo": false,
+      "category": "Tjenester",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,9 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "7ac439883700bf5a9fbf411df73c191e6404e69198e1570269aff77b7682d2ea",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Elite Hotels of Sweden",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/elite-hotels-of-sweden-trumf",
+      "headline": "3,9 %",
+      "upTo": false,
+      "category": "Reise",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,9 %"
+        }
+      ],
+      "restrictions": [
+        "Kjøpet bekreftes innen 90 dager etter fullført opphold. Kjøpet vil endres til «Overført til Trumf» omtrent 90 dager etter at kjøpet har fått statusen «Bekreftet». Trumf-bonus utbetales kun på summen for overnatting. Endring av booking gjort utenfor Trumf Netthandel vil føre til avisning av ditt kjøp. Ombooking må gjennomføres via Trumf Netthandel for at kjøpet skal være bonusberettiget. Ved kansellering av booking vil kjøpet bli avvist."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "93e67ac54a5f1f0e120df155b0598aac51f05fe61af01fcb48964796b8b74796",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Ellos NO",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/ellos",
+      "headline": "9,3 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "9,3 %"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke bonus på kjøp gjort i denne forhandlerens app."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "4c084390cd1acf5a05d645762edd45d97f1c84f4872c941ab9bc2567a32376c7",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Elon",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/elon-trumf",
+      "headline": "3,9 %",
+      "upTo": true,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Lyd & Bilde, Telefon & GPS og Datamaskiner & Nettbrett",
+          "text": "1,7 %"
+        },
+        {
+          "label": "Hvitevarer",
+          "text": "2,9 %"
+        },
+        {
+          "label": "Hjem & Hage, Personlig pleie, Belysning, Inneklima og Smarthjem",
+          "text": "3,9 %"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke Trumf-bonus på kjøp av produkter og/eller tjenester fra Nordanro Kjøkken."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "90b27a9cf3fe79ff7b19f525fa2e691c0fc34225168c7ced325a4c8586256c84",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Engrospris",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/engrospris-trumf",
+      "headline": "15,6 %",
+      "upTo": true,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "7 %"
+        },
+        {
+          "label": "KIMOLA drikkeflaske og grill matte",
+          "text": "11,4 %"
+        },
+        {
+          "label": "Refleksvester",
+          "text": "15,6 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "1b4515417dba1338078e2007ee6beebfa1544843eb4095952b2edb64e5b3e65c",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Eurodel",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/eurodel-trumf",
+      "headline": "3,9 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,9 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "fe2077671fe1a8732a5a3b59bafb49dad2d4a222d06b63e04417edde4fb2b8ce",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Evoride",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/evoride-trumf",
+      "headline": "7,8 %",
+      "upTo": false,
+      "category": "Sport",
+      "rates": [
+        {
+          "label": "Hele nettbutkken",
+          "text": "7,8 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "84ce3ef75f89f1398efa10a0d2135f2e18a2aa64f98ed8cdc6b59bc1929f895c",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Expedia",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/trumfexpedia-eu",
+      "headline": "3,1 %",
+      "upTo": true,
+      "category": "Reise",
+      "rates": [
+        {
+          "label": "Leiebil",
+          "text": "2,3 %"
+        },
+        {
+          "label": "Hotell",
+          "text": "3,1 %"
+        },
+        {
+          "label": "Fly + Hotell",
+          "text": "1,5 %"
+        },
+        {
+          "label": "Fly + Leiebil",
+          "text": "1,5 %"
+        },
+        {
+          "label": "Aktiviteter",
+          "text": "3,1 %"
+        }
+      ],
+      "restrictions": [
+        "Legg til hotellovernatting på en eksisterende fly booking inntil dagen før avreise og få 1,5 % Trumf-bonus på din bestilling. Kjøpet bekreftes innen 90 dager etter fullført opphold. Kjøpet vil endres til «Overført til Trumf» omtrent 90 dager etter at kjøpet har fått statusen «Bekreftet». Endring av booking gjort utenfor Trumf Netthandel vil føre til avisning av ditt kjøp. Ombooking må gjennomføres via Trumf Netthandel for at kjøpet skal være bonusberettiget. Ved kansellering av booking vil kjøpet bli avvist.",
+        "Legg til leiebil på en eksisterende fly booking inntil dagen før avreise og få 1,5 % Trumf-bonus på din bestilling"
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "c15e9245a6b50eda99eaa7a1d478c59a2d659c1d0786e6350a920e5ab39bb301",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Fabel",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/fabel-trumf",
+      "headline": "35 kr",
+      "upTo": false,
+      "category": "Tjenester",
+      "rates": [
+        {
+          "label": "Ved innmelding til nye kunder (Dersom det bestilles et abonnement vil kun første betaling være bonusberettiget)",
+          "text": "35 kr"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "39043242bae2e28dcc8c785307cc61379e24ff347e9f3110f7bc09e19d927e50",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Farfetch",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/farfetch-trumf",
+      "headline": "3,1 %",
+      "upTo": false,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,1 %"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke Trumf-bonus på Fendi og Gucci."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "45a1ab962cd2b59e8f25964a7fd728cffa8fbff0c6b2f240bdce488f0ac5eb06",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Fjord Line",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/fjord-line-trumf",
+      "headline": "3,1 %",
+      "upTo": false,
+      "category": "Reise",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,1 %"
+        }
+      ],
+      "restrictions": [
+        "Ved bestilling av båtreise vil behandlingen på 90+ 90 dager starte først etter endt reise. Endring av booking gjort utenfor Trumf Netthandel vil føre til avisning av ditt kjøp. Ombooking må gjennomføres via Trumf Netthandel for at kjøpet skal være bonusberettiget. Ved kansellering av booking vil kjøpet bli avvist. Det gis ikke bonus på kjøp gjort i denne forhandlerens app, og det gis ikke bonus på kjøp av tilleggstjenester som f.eks avbestillingsforsikring."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "925749b79847458e7904d8dc4d16531bb05b2ab3a9bd69130faf892093cde2b5",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Floyd",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/floyd-trumf",
+      "headline": "7,8 %",
+      "upTo": false,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "7,8 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "88012f62c23165d3a9fa3c2b8a384c15ac591fa31897d1c6301780a2a7c808f7",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Follestad",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/follestad-trumf",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "04ad32da9e0b5b632cebdf04c7dbb0419986da64132cb8071b614fae1a3a5e7b",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Foodstuff",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/foodstuff-trumf",
+      "headline": "7,8 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "7,8 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "d9b1789cd19ccc1b8ba4ca8bfabb49fa030225b0da9baf0070564c2d5098e1f3",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Foss Sport",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/foss-sport-trumf",
+      "headline": "3,9 %",
+      "upTo": true,
+      "category": "Sport",
+      "rates": [
+        {
+          "label": "Elektronikk, Sykler og Elsykler",
+          "text": "1,3 %"
+        },
+        {
+          "label": "Hele nettbuitkken",
+          "text": "3,9 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "1a88196a297e28da21495ac6b69820dba696bc718b57f347ac098c15bbaa509e",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Foto.no",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/fotono-trumf",
+      "headline": "4,6 %",
+      "upTo": true,
+      "category": "Elektronikk",
+      "rates": [
+        {
+          "label": "Foto, Video og Annet",
+          "text": "2,3 %"
+        },
+        {
+          "label": "Tilbehør",
+          "text": "4,6 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "4ee70f47791970e0a2be346e2543eb94299ad30d6ad5a65ba2c316bad90d8544",
+      "reviewRequired": false
+    },
+    {
+      "partner": "FotoKnudsen",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/trumffotoknudsen",
+      "headline": "9,3 %",
+      "upTo": true,
+      "category": "Tjenester",
+      "rates": [
+        {
+          "label": "Ny Kunde",
+          "text": "9,3 %"
+        },
+        {
+          "label": "Eksisterende Kunde",
+          "text": "4,6 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "a6e013d2132f810604cdc60795d6e7eac860e676fe7eb3d935fa2d0587217038",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Framsport",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/framsport-trumf",
+      "headline": "7,8 %",
+      "upTo": false,
+      "category": "Sport",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "7,8 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "04ea13562a03d949cd7bdfc8b4ef6eda71d4dae59738d02845d88f493a44e9c2",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Fredrik & Louisa",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/fredrik-and-louisa-trumf",
+      "headline": "2,3 %",
+      "upTo": false,
+      "category": "Helse",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "2,3 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "ae7424cfdd503051ca7f496c9a794dbbe4499a5c85d32633f2e2a15cecddae56",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Fyrklövern",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/fyrklovern-trumf",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "de3c6507c2361a2785ae01aab7e1a5a20c0ef5debada048af272640cd5062b10",
+      "reviewRequired": false
+    },
+    {
+      "partner": "G-Star",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/g-star-raw-trumf",
+      "headline": "6,2 %",
+      "upTo": true,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Eksisterende Kunde (salgsprodukter)",
+          "text": "1,1 %"
+        },
+        {
+          "label": "Ny Kunde (Fullpriser)",
+          "text": "6,2 %"
+        },
+        {
+          "label": "Ny Kunde (salgsprodukter)",
+          "text": "4,6 %"
+        },
+        {
+          "label": "Eksisterende Kunde (Fullpriser)",
+          "text": "3,9 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "e80e0e67fa258830a6683fe1c112e49de8f7076b7a1694081b7714dae4bd4066",
+      "reviewRequired": false
+    },
+    {
+      "partner": "GetYourGuide",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/getyourguide-trumf",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Reise",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "42e5651b03de3c8850cd316a8e7ee7556a6ab1a173e05c9fe28302a56f37956c",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Gina Tricot",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/gina-tricot-trumf",
+      "headline": "4,6 %",
+      "upTo": false,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "4,6 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "fffe750e559fb37f059abad29d6a3b57a0de6e0533580f9a793f0dcc7df3f00b",
+      "reviewRequired": false
+    },
+    {
+      "partner": "GlowID",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/glowid-trumf",
+      "headline": "7,8 %",
+      "upTo": false,
+      "category": "Helse",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "7,8 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "ff5b8ade43a020426fdef8a10221c75152092463c4ad7dce748d8d05b7cefaf0",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Go City",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/go-city-trumf",
+      "headline": "3,9 %",
+      "upTo": false,
+      "category": "Reise",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,9 %"
+        }
+      ],
+      "restrictions": [
+        "Endring av booking gjort utenfor Trumf Netthandel vil føre til avisning av ditt kjøp. Ombooking må gjennomføres via Trumf Netthandel for at kjøpet skal være bonusberettiget. Ved kansellering av booking vil kjøpet bli avvist."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "ca3a352e1fbfc26260d641cda03712d2b6cc98d48dd327ad9301dfd889cdfdbc",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Go Nordic Cruiseline",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/go-nordic-cruiseline-trumf",
+      "headline": "3,7 %",
+      "upTo": false,
+      "category": "Reise",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,7 %"
+        }
+      ],
+      "restrictions": [
+        "Endring av bestillingen gjort utenfor Trumf Netthandel vil føre til avvisning av kjøpet ditt. Ombestilling må gjøres via Trumf Netthandel for at kjøpet skal være kvalifisert for bonuser. Hvis bestillingen kanselleres, vil kjøpet bli avvist. Det gis ingen bonuser for kjøp gjort i denne forhandlerens app, og det gis ingen bonuser for kjøp av tilleggstjenester som avbestillingsforsikring."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "c90c479f7213de8a8760fa3b96e5c814aeacb811dd6fc10de8cddf62d3a0e2ca",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Grønt Fokus",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/gront-fokus-trumf",
+      "headline": "1,5 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "1,5 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "c90869f09eb606161626aee783f1382aca5cb5b335b6b21dc99aa8758d12f1b0",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Gullfunn",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/gullfunn-trumf",
+      "headline": "9,3 %",
+      "upTo": false,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "9,3 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "47642fc3bd21474ffc8295b31d8ad54d1d2cd0766236c111fc89af334eef3e24",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Guttelus",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/guttelus-trumf",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Barn",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "5be52de421368f739d0143ade531b535cfa8980ea78546a98281e64bfb914a29",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Gymgrossisten",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/trumfgymgrossisten",
+      "headline": "9,3 %",
+      "upTo": true,
+      "category": "Helse",
+      "rates": [
+        {
+          "label": "Eksisterende Kunde",
+          "text": "4,6 %"
+        },
+        {
+          "label": "Ny Kunde",
+          "text": "9,3 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "b79d1710486426c3401cc838304e5abfe93a6bddd173e1d965e6f8d6768e67d4",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Haglöfs",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/haglofs-trumf",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Sport",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "06ebb6b4a9505c4bba59dbd738d9efc9ee2cae6e2addb58b3967ef239282073f",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Harman Kardon",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/harman-kardon-trumf",
+      "headline": "3,1 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,1 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "b08fc93126fedf6136cf0307633822b94c1decf80af4c6d8a284729a3a50063d",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Hattehuset",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/hattehuset-trumf",
+      "headline": "4,2 %",
+      "upTo": false,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "4,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "619ab8c615ed3e9ea50095b63d91560ea0d5355ad68aeb9b4d447992325ca1e2",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Havila Kystruten",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/havila-voyages-trumf",
+      "headline": "4,9 %",
+      "upTo": false,
+      "category": "Reise",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "4,9 %"
+        }
+      ],
+      "restrictions": [
+        "Bonusen registreres innen 90 dager etter gjennomført reise. Bonus gjelder kun bestillinger gjort innen 48 timer. Det gis ikke bonus på havn-til-havn-bestillinger. Trumf-bonus gjelder på opprinnelig bestilling, ikke på senere tillegg eller endringer. Kansellerte reiser gir ikke bonus."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "62101463edca3d1cefdfc48c4d264f54359ea7b29011ba744c146e35b7fea671",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Helly Hansen",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/helly-hansen-trumf",
+      "headline": "6,2 %",
+      "upTo": true,
+      "category": "Sport",
+      "rates": [
+        {
+          "label": "Eksisterende Kunde",
+          "text": "3,9 %"
+        },
+        {
+          "label": "Ny Kunde",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [
+        "Kjøp av produkter gjennom Helly Hansen Pro Program gir ikke bonus. Det gis ikke bonus på kjøp gjort i denne forhandlerens app."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "df07d1b173548a3b990592647dbe62e661963a9341e210ed3025672a9523f32b",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Holidu",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/holidu-trumf",
+      "headline": "3,9 %",
+      "upTo": false,
+      "category": "Reise",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,9 %"
+        }
+      ],
+      "restrictions": [
+        "Kjøpet bekreftes innen 90 dager etter fullført opphold. Kjøpet vil endres til «Overført til Trumf» omtrent 90 dager etter at kjøpet har fått statusen «Bekreftet». Endring av booking gjort utenfor Trumf Netthandel vil føre til avisning av ditt kjøp. Ombooking må gjennomføres via Trumf Netthandel for at kjøpet skal være bonusberettiget. Ved kansellering av booking vil kjøpet bli avvist."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "8cbf6658c75af39af5576cc7125f4248ab3461ce61d6d951b23a7d6ca90e2138",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Holzweiler",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/holzweiler-trumf",
+      "headline": "11,7 %",
+      "upTo": false,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Hele nettbutiken",
+          "text": "11,7 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "78915734fef782a624e828ce4259da3780750436f47ed289dc11e9900e7bd38c",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Hotels.com",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/trumfhotels-no",
+      "headline": "4,6 %",
+      "upTo": true,
+      "category": "Reise",
+      "rates": [
+        {
+          "label": "Overnatting",
+          "text": "4,6 %"
+        },
+        {
+          "label": "Leiebil",
+          "text": "1,1 %"
+        }
+      ],
+      "restrictions": [
+        "Kjøpet bekreftes innen 90 dager etter fullført opphold. Kjøpet vil endres til «Overført til Trumf» omtrent 90 dager etter at kjøpet har fått statusen «Bekreftet». Trumf-bonus utbetales kun på summen for overnatting. Da enten fra hotell eller annet overnattingssted. Det utbetales ikke Trumf-bonus på andre komponenter som flyreiser, attraksjoner, og andre ting du kan bestille tilgjengelig via nettstedet. Det gis ikke Trumf-bonus ved kjøp av pakkereiser. Endring av booking gjort utenfor Trumf Netthandel vil føre til avisning av ditt kjøp. Ombooking må gjennomføres via Trumf Netthandel for at kjøpet skal være bonusberettiget. Ved kansellering av booking vil kjøpet bli avvist."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "15381e19d39fcae6bc82bf3a4d06d251c5244dea42ca5d4ff5eddbe4a1125618",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Hudprodukter",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/hudprodukter",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Helse",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "ced87210525fa6abe2c17c501336b30889bbda10565e5443adc60aaa4275c667",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Hulténs",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/hultens-trumf",
+      "headline": "5,4 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "5,4 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "b8fa96271db3f82099a64c13d8ae42ee1738cc0539fb8d8cc38d8025db0dbb2a",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Hunkemoller",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/hunkemoller-trumf",
+      "headline": "5,4 %",
+      "upTo": false,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "5,4 %"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke bonus på kjøp gjort i denne forhandlerens app."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "db4dcda4e0a2fe83e4c0aeb20a53ed4d43ffadc6a15a45ccfff2570dc0e9b7a1",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Husqvarna",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/husqvarna-trumf",
+      "headline": "3,9 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,9 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "d2063111210e0e82abc327ecbfd8ed091085831ac611fa68d59bd290fd920031",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Høie",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/hoie-trumf",
+      "headline": "8,1 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "8,1 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "efc7d3692cf988bdebd51f91b50a7c91a687efa0add2f63223051e5b69c8b634",
+      "reviewRequired": false
+    },
+    {
+      "partner": "I Love Dogs",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/i-love-dogs-trumf",
+      "headline": "5,4 %",
+      "upTo": false,
+      "category": "Dyretilbehør",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "5,4 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "1012e09a4fd5d481c5f38042becf06011bddc92fde637e347ecee48f533b8ebe",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Iberostar Hotels and Resorts",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/iberostar-trumf",
+      "headline": "4,5 %",
+      "upTo": false,
+      "category": "Reise",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "4,5 %"
+        }
+      ],
+      "restrictions": [
+        "Kjøpet bekreftes innen 90 dager etter fullført opphold. Kjøpet vil endres til «Overført til Trumf» omtrent 90 dager etter at kjøpet har fått statusen «Bekreftet». Endring av booking gjort utenfor Trumf Netthandel vil føre til avisning av ditt kjøp. Ombooking må gjennomføres via Trumf Netthandel for at kjøpet skal være bonusberettiget. Ved kansellering av booking vil kjøpet bli avvist."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "e4d912452bd1f9744a0b250263dce97d2b4831d040aa5a33cbbc814e1f4ae236",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Ideal of Sweden",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/ideal-of-sweden-trumf",
+      "headline": "6,2 %",
+      "upTo": true,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Bestillinger over 400 kr",
+          "text": "6,2 %"
+        },
+        {
+          "label": "Bestillinger under 400 kr",
+          "text": "3,1 %"
+        }
+      ],
+      "restrictions": [
+        "Vi minner om at Trumf-bonusen beregnes uten mva. Dersom summen blir lavere enn 400kr med mva trukket fra vil bonusen på 3.1 % være gjeldene. Det gis ikke bonus på kjøp gjort i denne forhandlerens app."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "b52cf8d7c77b898e26401343a633763528e28920b94d58acf2a12b3956502a6b",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Inkmann",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/inkmann-trumf",
+      "headline": "9,3 %",
+      "upTo": false,
+      "category": "Netthandel",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "9,3 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "062d11fd2e609f2291e79106eb6e865a2ff5dae6d35ca6055748ca29c732e482",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Interhome",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/interhome-trumf",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Reise",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [
+        "Ved bestilling av flyturer, leiebil og overnatting vil kjøpet ditt bli behandlet 90 dager etter at oppholdet er gjennomført. Endring av booking gjort utenfor Trumf Netthandel vil føre til avisning av ditt kjøp. Ombooking må gjennomføres via Trumf Netthandel for at kjøpet skal være bonusberettiget. Ved kansellering av booking vil kjøpet bli avvist."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "e8efd07629b1e206949f534493e7940e498a205ad9bf21f3bd9267ff35ebfda5",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Interoptik",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/interoptik-trumf",
+      "headline": "4,6 %",
+      "upTo": false,
+      "category": "Helse",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "4,6 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "f6105b28cac139be9f9259d19780b20e79c113245e2e3c830571a24814481c2f",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Inzpero",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/inzpero-trumf",
+      "headline": "9,3 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "9,3 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "e49ecf85e1aa60464267a98656de26a20985d33368eef29b53ac66170b27d0aa",
+      "reviewRequired": false
+    },
+    {
+      "partner": "J.Lindeberg",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/jlindeberg-trumf",
+      "headline": "4,6 %",
+      "upTo": false,
+      "category": "Sport",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "4,6 %"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke bonus på kjøp gjort i denne forhandlerens app."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "9b70fce04d4fec4918f7bef0f6c95b39584a6ca8fb32308b07b8a0d01a091d09",
+      "reviewRequired": false
+    },
+    {
+      "partner": "JBL",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/jbl-trumf",
+      "headline": "3,9 %",
+      "upTo": false,
+      "category": "Elektronikk",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,9 %"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke bonus på kjøp gjort i denne forhandlerens app."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "b78217b54339a7b2a512e92d864675095056725fa39a37be3c4e5d0cb1ef1bfd",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Jakt og Friluft",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/jakt-og-friluft",
+      "headline": "4,6 %",
+      "upTo": false,
+      "category": "Sport",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "4,6 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "4dee55d5c92a6c951834606df1182c6a2d15ddbef250bfd68f563b47192dec13",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Jotex",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/jotex-trumf",
+      "headline": "3,9 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,9 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "1beb33135cfc95828bf5a501fa3914b8c784661db8c2a5fb90f27436606f2dfb",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Junkyard",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/junkyard-trumf",
+      "headline": "6,2 %",
+      "upTo": true,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Sko",
+          "text": "3,9 %"
+        },
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "63da3a528fa3b90383f9109fc47f200fd86cecb6656499b2326bbe628c00647b",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Kajakk og Fritid",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/kajakk-og-fritid-trumf",
+      "headline": "2,3 %",
+      "upTo": false,
+      "category": "Sport",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "2,3 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "8cb6854ee582cd3cfcd023b12bb77f175e3d37d3e497af22f40969a7823bb92c",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Karma",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/karma-trumf",
+      "headline": "7,8 %",
+      "upTo": false,
+      "category": "Barn",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "7,8 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "ca1224660e74784b93d51105550c368402c98b9f9edd548e6d88b5993476b4bc",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Kayani",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/kayani-trumf",
+      "headline": "10,1 %",
+      "upTo": false,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "10,1 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "13143628552336613a44e7319f5fb0d5bea5976e45eb42ae57d22cef158a2f09",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Kicks",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/kicks-trumf",
+      "headline": "5,4 %",
+      "upTo": false,
+      "category": "Helse",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "5,4 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "e0f322fd2b2c83c71ca1378fc7bbc243a9873952c43f092abe4111906e7a1567",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Kinoklubben",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/kinoklubben-trumf",
+      "headline": "35 kr",
+      "upTo": false,
+      "category": "Tjenester",
+      "rates": [
+        {
+          "label": "Hele nettbutikken (Dersom det bestilles et abonnement vil kun første betaling være bonusberettiget)",
+          "text": "35 kr"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "3fa5807d2f87cb91b3d23f5cd8930f82b13c10c47368aed50c47cadf469150ea",
+      "reviewRequired": false
+    },
+    {
+      "partner": "KitchenTime",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/kitchentimetrumf",
+      "headline": "2,3 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "2,3 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "89f2a0486fce93282046664113d652607964ecc8a926b8b7d18e373abaed4de5",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Kitchn",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/kitchn-trumf",
+      "headline": "3,1 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,1 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "22794d5aa63ee15e15dfc3775f6640ce3721d475cb9b98a94905d5b4000fcb7a",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Kjell & Co",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/kjell-and-co-trumf",
+      "headline": "4,6 %",
+      "upTo": false,
+      "category": "Elektronikk",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "4,6 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "b738f8d46a2de39107097224ecc9143149c14286f4b6dbc4f8f602ac4fd56aad",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Kondomeriet",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/kondomeriet-trumf",
+      "headline": "11,7 %",
+      "upTo": true,
+      "category": "Helse",
+      "rates": [
+        {
+          "label": "Womanizer, We-Vibe og Fleshlight",
+          "text": "7,8 %"
+        },
+        {
+          "label": "Hele nettbutikken",
+          "text": "11,7 %"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke Trumf-bonus på Harm & Hegseth kolleksjonen og We-Vibe Melt by Iselin Guttormsen."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "8931ffac15be8d967dd53709ff11bb6eeea59e936546246be8e8d4a77d1595bd",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Kost1",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/kost1-trumf",
+      "headline": "7,8 %",
+      "upTo": false,
+      "category": "Helse",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "7,8 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "dfa781e5c7f0025294d83e74dbe24535f66ebd1a2672f5e3cf843f02d5b21852",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Kouture",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/kouture-trumf",
+      "headline": "4,6 %",
+      "upTo": false,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "4,6 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "ae4bdda42c950f2d2808b0d2e3d56a2412efca8d486854fb4de6bb3b1853dff2",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Kärcher",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/karcher-trumf",
+      "headline": "8,5 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "8,5 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "96412cde6f163fd829dc601032d69f201b44f244f992cd84514833466b59831e",
+      "reviewRequired": false
+    },
+    {
+      "partner": "L'Occitane",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/loccitane-trumf",
+      "headline": "8,5 %",
+      "upTo": false,
+      "category": "Helse",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "8,5 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "9530852e3dbbf7af134d7fec0d916f8fcbd99671753fd3e34629c6429c6aeb8b",
+      "reviewRequired": false
+    },
+    {
+      "partner": "LEGO",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/lego-trumf",
+      "headline": "2,3 %",
+      "upTo": false,
+      "category": "Barn",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "2,3 %"
+        }
+      ],
+      "restrictions": [
+        "Trumf-bonus gis ikke på kjøp betalt med LEGO® Insiders-poeng, og dersom du bruker Insiders-poeng til å betale hele eller deler av kjøpet, opptjenes bonus kun på beløpet som betales med penger. Det gis ikke Trumf-bonus på følgende produkter: Snack Shack (6471992 og 6471993) Parisian Street (6471997 og 6471996) Old Train Engine Shed (6471999 og 6471998) Mountain Fortress (6471991 og 6471990) General Store (6471995 og 6471994) Brick Cross (6483624) Logging Railway (6483625) Ocean House (6483626) Mushroom House (6483627) Ominous Isle (7483628)"
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "86d977fbef432c6f41b46baa0c7dc648efef3cb60867d184e268d59b9694de5e",
+      "reviewRequired": false
+    },
+    {
+      "partner": "LYKO",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/lyko-trumf",
+      "headline": "7 %",
+      "upTo": false,
+      "category": "Helse",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "7 %"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke bonus på kjøp gjort i denne forhandlerens app."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "f614324379c909e88de72b120fe2cb2e7b6a38181830f6be59bac8b6fd67491b",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Lampegiganten",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/trumflampegiganten",
+      "headline": "7,8 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "7,8 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "4f6b405e5ab4051841d56a91723999927735a5eda4173746a701caaa6f743cb0",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Lampemesteren",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/lampemesteren-trumf",
+      "headline": "6,2 %",
+      "upTo": true,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Med Rabattkode",
+          "text": "3,9 %"
+        },
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "ff213976a969cde11ba7dbf6802b2eb604468cff29bc61bff507c7c959c429b5",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Lappeliten",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/lappeliten-trumf",
+      "headline": "12,4 %",
+      "upTo": false,
+      "category": "Barn",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "12,4 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "7ca68b54105e2aaeaf71112793ed732d45e6bbd0eacbd691f4c4a2fa916c88bc",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Lekmer",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/trumflekmer",
+      "headline": "2,3 %",
+      "upTo": false,
+      "category": "Barn",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "2,3 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "a5550269f06b19d58e3fdec8c9792c7c59f668b9d3893ac5f33f8a958b7b45dd",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Lenovo",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/lenovo-trumf",
+      "headline": "2,3 %",
+      "upTo": false,
+      "category": "Elektronikk",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "2,3 %"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke bonus på kjøp gjort i denne forhandlerens app."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "3bbcb57c6758535e30478199ccfd7b87f26dab57d0a94e531042b91273b915b0",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Lenson",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/lenson-trumf",
+      "headline": "3,5 %",
+      "upTo": false,
+      "category": "Helse",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,5 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "d28c0866e2180a448bdd7606b8b1466d0833197b0458a517b7312c192134d3ce",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Lensway",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/lensway-trumf",
+      "headline": "8,5 %",
+      "upTo": false,
+      "category": "Helse",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "8,5 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "4699f32520eb86fafb462dae24c2b59bad94857b1e46b133330e06e4c57a2543",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Lexington",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/lexington",
+      "headline": "3,9 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbuitkken",
+          "text": "3,9 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "d1815f87e8e9e2d04926c3e487710fbe66cae6ebb15ed39e95729d2cb8e7963c",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Libresse",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/libresse-trumf",
+      "headline": "7,8 %",
+      "upTo": false,
+      "category": "Helse",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "7,8 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "688dea08afa2dd6af556213ffd6e0f132893412ffc22a6b86ed4d3c65b188d27",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Lindex",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/lindex-trumf",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Barn",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke bonus på kjøp gjort i denne forhandlerens app."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "5e55edcd2a8b3f4624c7250d8bfd1ac74c38a5ef3d6b87e32704ab39330d7802",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Lufthansa",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/lufthansa-trumf1",
+      "headline": "1,1 %",
+      "upTo": false,
+      "category": "Reise",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "1,1 %"
+        }
+      ],
+      "restrictions": [
+        "Ved bestilling av flyturer, leiebil og overnatting vil kjøpet ditt bli behandlet 90 dager etter at oppholdet er gjennomført. Endring av booking gjort utenfor Trumf Netthandel vil føre til avisning av ditt kjøp. Ombooking må gjennomføres via Trumf Netthandel for at kjøpet skal være bonusberettiget. Ved kansellering av booking vil kjøpet bli avvist."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "2c0ff3b54d7252359c7df76289cea50c6534df1f32b5956436f609f9aa788bf2",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Lunehjem",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/lunehjem-trumf",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "965484dde9b5b130a08d07607b569f3d30d3ea96146e58128260f8900124f9be",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Løpeshop",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/lopeshop-trumf",
+      "headline": "2,3 %",
+      "upTo": false,
+      "category": "Sport",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "2,3 %"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke bonus på Garmin produkter."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "4898fbf4b291dbe05f9f13e6d683eef4b130f7beb71a489ca1e531fa126b55fc",
+      "reviewRequired": false
+    },
+    {
+      "partner": "MAXA",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/maxa-trumf",
+      "headline": "3,1 %",
+      "upTo": false,
+      "category": "Sport",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,1 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "82baa499ad2800c153a9ba1da89733e14e3df60925d758710b192e4723a3a222",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Makeup Mekka",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/makeup-mekka-trumf",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Helse",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "29030be5a3f18bd5bb3317af31415a1136cbf283cd186c9241c56de4f22a63cd",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Match.com",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/match-trumf",
+      "headline": "15,6 %",
+      "upTo": false,
+      "category": "Tjenester",
+      "rates": [
+        {
+          "label": "Abonnement",
+          "text": "15,6 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "bb016412d8267b33ee068a2ced66e9692ee0139462ae62538adb839dc3ab547f",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Miinto",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/trumfsmiinto",
+      "headline": "10,1 %",
+      "upTo": false,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "10,1 %"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke bonus på kjøp gjort i denne forhandlerens app."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "858bafea5c096db21a91646e7eb347463a9dfcce2359a1728bc7256690bd3cbc",
+      "reviewRequired": false
+    },
+    {
+      "partner": "MiniFinder",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/minifinder-trumf",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Elektronikk",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "0aa88a233b85398a0e6edd41cfa3dd3d54b2b8031daf660e78cabf805f345342",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Moniker",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/moniker-trumf",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [
+        "For at kjøp på Moniker.no skal gi Trumf-bonus, må du fullføre kjøpet på Moniker.no etter at du har klikket deg inn via Trumf Netthandel. Dersom du går videre til Moniker Man eller Moniker Sport før du gjennomfører kjøpet, brytes sporingen, og kjøpet vil ikke være bonusberettiget."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "107bc4fdc491226e2c5be6b242546af166b94e71e84d424d308308f892f8f6ae",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Moniker Man",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/moniker-man-trumf",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [
+        "For å opptjene Trumf-bonus på kjøp hos Monikerman.no, må du fullføre kjøpet på nettstedet etter å ha klikket deg videre via Trumf Netthandel. Hvis du navigerer til Moniker eller Monikersport før du fullfører kjøpet, vil sporingslenken brytes, og kjøpet vil ikke kvalifisere til bonus."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "8171ec7da25906a93ed66774ddd952fddda3f28d5bb9c7d86efb7f2764927ef1",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Myprotein",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/myprotein-trumf",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Helse",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "690972a397d051dcf7c438b62670beea143aa01670ecee09ef68485472bfb7be",
+      "reviewRequired": false
+    },
+    {
+      "partner": "NLY MAN",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/trumfnly-man",
+      "headline": "2,3 %",
+      "upTo": false,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "2,3 %"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke bonus på kjøp gjort i denne forhandlerens app."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "c0ac0b66dbf986d33a69e5f0d11dfe32971593b74a43354abc70d552ba453b25",
+      "reviewRequired": false
+    },
+    {
+      "partner": "NOR-WAY Bussekspress",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/nor-way-bussekspress-trumf",
+      "headline": "2,8 %",
+      "upTo": false,
+      "category": "Reise",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "2,8 %"
+        }
+      ],
+      "restrictions": [
+        "Endring av booking gjort utenfor Trumf Netthandel vil føre til avisning av ditt kjøp. Ombooking må gjennomføres via Trumf Netthandel for at kjøpet skal være bonusberettiget. Ved kansellering av booking vil kjøpet bli avvist. Ved bestilling av flyturer, leiebil og overnatting vil kjøpet ditt bli behandlet 90 dager etter at oppholdet er gjennomført."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "49bc3391787892e82c8dd4cb92edff154491fbd3cfe097b640643f9c9915d9f2",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Nazar",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/nazar-trumf",
+      "headline": "1,5 %",
+      "upTo": false,
+      "category": "Reise",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "1,5 %"
+        }
+      ],
+      "restrictions": [
+        "Kjøpet bekreftes innen 90 dager etter fullført opphold. Kjøpet vil endres til «Overført til Trumf» omtrent 90 dager etter at kjøpet har fått statusen «Bekreftet». Endring av booking gjort utenfor Trumf Netthandel vil føre til avisning av ditt kjøp. Ombooking må gjennomføres via Trumf Netthandel for at kjøpet skal være bonusberettiget. Ved kansellering av booking vil kjøpet bli avvist. Det gis ikke Trumf-bonus ved bruk av Nazar sin app. OBS: Dersom kjøpet ikke registreres eller kjøpet avvises kan du melde inn dette gjennom vårt kontaktskjema. Vi gjør oppmerksom på at henvendelsen kan meldes inn først etter endt reise."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "ee4af721f4765b11b7fd240ba7cef891da42117cb8eb24ec3b96582f6c41af0f",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Nelly",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/trumfnelly-no",
+      "headline": "2,3 %",
+      "upTo": false,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "2,3 %"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke bonus på kjøp gjort i denne forhandlerens app."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "b5a293f64c776c19c374b79a9eae693df7e9c8bf2f77f5c7533bdfe05808549c",
+      "reviewRequired": false
+    },
+    {
+      "partner": "New Balance",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/new-balance-trumf",
+      "headline": "7,8 %",
+      "upTo": false,
+      "category": "Sport",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "7,8 %"
+        }
+      ],
+      "restrictions": [
+        "OBS: Behandlingstiden hos New Balance starter først 45 dager etter kjøp grunnet returrett. Dette er en bestemmelse gjort av forhandler. Det gis ikke bonus på kjøp gjort i denne forhandlerens app."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "7b126a6d11e8aeab2a2b1df041137b134c39e3d1938c8fb77a117c68b377e915",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Newport",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/newport-home-trumf",
+      "headline": "7 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "7 %"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke bonus på kjøp gjort i denne forhandlerens app."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "419a1ef25b7d4e3ac0ed9f8a4958c0fea345d156981fd2ed7f57a91e998809ff",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Nextory",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/nextory-trumfs",
+      "headline": "35 kr",
+      "upTo": false,
+      "category": "Tjenester",
+      "rates": [
+        {
+          "label": "Til nye kunder (Dersom det bestilles et abonnement vil kun første betaling være bonusberettiget)",
+          "text": "35 kr"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke Trumf-bonus på kjøpet dersom abonnementet sies opp i prøveperioden."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "14afe1c563d6091e99fcfa9f78690bbde8e3131c14bbd958d1a60877e70544f1",
+      "reviewRequired": false
+    },
+    {
+      "partner": "NiceBeauty",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/nicebeauty-trumf",
+      "headline": "5,4 %",
+      "upTo": false,
+      "category": "Helse",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "5,4 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "8fd8cee6faf62541038308831c4c97b6f2768aec486d402fbd71b7990bacec18",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Nordic Nest",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/nordic-nest-trumf",
+      "headline": "1,5 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "1,5 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "fe3da376e2bc567382503f865d940cbc3c10767d324f72632c1cccbf7613caa8",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Nordic Print",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/nordic-print-trumf",
+      "headline": "15,6 %",
+      "upTo": false,
+      "category": "Netthandel",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "15,6 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "1bb9a4d54f896b6e9beb48d11b581ed1aae80a9659be4c12966c26635b0400fa",
+      "reviewRequired": false
+    },
+    {
+      "partner": "NordicFeel",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/trumfnordic-feel",
+      "headline": "4,6 %",
+      "upTo": false,
+      "category": "Helse",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "4,6 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "4a6b08d6581034538ef9a4d98ec58d87623aead276c70f3bb438097491a7a7f3",
+      "reviewRequired": false
+    },
+    {
+      "partner": "North Trampoline",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/north-trampoline-trumf",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "580b253d3bef293350b314e28b40aec39ee0d3a048aecbc843699d0b2297004a",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Nytelse",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/nytelse-trumf",
+      "headline": "35,4 %",
+      "upTo": true,
+      "category": "Helse",
+      "rates": [
+        {
+          "label": "KURS",
+          "text": "35,4 %"
+        },
+        {
+          "label": "Julekalender",
+          "text": "280 kr"
+        },
+        {
+          "label": "Hele nettbutikken",
+          "text": "15,7 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "3a25abf89de4be26b6d08cf5cc5e9cafe358a87806bea0b74b523f805bf565dc",
+      "reviewRequired": false
+    },
+    {
+      "partner": "ONYX Cookware",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/onyx-cookware-trumf",
+      "headline": "4,6 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "4,6 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "ae8f82b1aa80f89a7831f2e23dc2f3c0f730c1fec01a9a7017f071e4f6a41ad2",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Oakley",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/oakley-trumf",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Helse",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "92d99762d18332f4eddee9afd48425331896d547ea11f754426284d14a86dc3c",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Omio",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/omio-trumf",
+      "headline": "4,6 %",
+      "upTo": true,
+      "category": "Reise",
+      "rates": [
+        {
+          "label": "Eksisterende Kunde",
+          "text": "2,3 %"
+        },
+        {
+          "label": "Ny Kunde",
+          "text": "4,6 %"
+        }
+      ],
+      "restrictions": [
+        "Endring av booking gjort utenfor Trumf Netthandel vil føre til avisning av ditt kjøp. Ombooking må gjennomføres via Trumf Netthandel for at kjøpet skal være bonusberettiget. Ved kansellering av booking vil kjøpet bli avvist."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "95f38c97b37cf5d580601c03206781dfa8de698b05905460d485f026cbd69660",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Oslo Skin Lab",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/oslo-skin-lab",
+      "headline": "5,4 %",
+      "upTo": false,
+      "category": "Helse",
+      "rates": [
+        {
+          "label": "Hele nettbutikken (Dersom det bestilles et abonnement vil kun første betaling være bonusberettiget)",
+          "text": "5,4 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "cdc1fb51146035750daeb59c304bb67659dd3afe587b70a9aad00c557393a70a",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Outnorth",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/trumfoutnorth",
+      "headline": "7,8 %",
+      "upTo": true,
+      "category": "Sport",
+      "rates": [
+        {
+          "label": "Elektronikk, transport & lagring",
+          "text": "2,3 %"
+        },
+        {
+          "label": "Hele nettbutikken",
+          "text": "7,8 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "8d72e4cde2cc7073de25c8450c0c47ea5c56353a0f7d698b41f708c1def9ae22",
+      "reviewRequired": false
+    },
+    {
+      "partner": "P.Lindberg",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/p-lindberg-trumf",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "0ecf0bbd63fe1fa35dcc9bb2a962a9abc123ac95d9a5f81fa61f89ef5f183826",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Pergolux",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/pergolux-trumf",
+      "headline": "2,3 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "2,3 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "1968a9198b072775495c2f749a135084b5af10008f070e39928504aa3bd7de0c",
+      "reviewRequired": false
+    },
+    {
+      "partner": "PetXL",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/petxl-trumf",
+      "headline": "6,2 %",
+      "upTo": true,
+      "category": "Netthandel",
+      "rates": [
+        {
+          "label": "Bestillinger over 999 kr",
+          "text": "6,2 %"
+        },
+        {
+          "label": "Hele nettbutikken",
+          "text": "1,5 %"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke bonus på kjøp gjort i denne forhandlerens app."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "bbd85bc16a6522d42904c3f60aaa94faa8faa81887094a9c8977cc37b2bbdaac",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Philips Home Appliances",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/philips-home-applicances-trumf",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "e8b69514942bd53680725fe6f5a315614e0c582ed9221b8e3df1dc97f1532d35",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Philips Hue",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/philips-hue-trumf",
+      "headline": "9,3 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "9,3 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "141f8e1d07db09498a39c5b3c23f201052a73f7de29ea570a2282e7c37f9a422",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Pilgrim",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/pilgrim-trumf",
+      "headline": "7,8 %",
+      "upTo": false,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "7,8 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "8b9bc4445d8171f218b7084dbce4893c3fab18fa5e443090c2c51cbcd8346cee",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Polarn O. Pyret",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/trumfpolarn-o-pyretno",
+      "headline": "9,3 %",
+      "upTo": false,
+      "category": "Barn",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "9,3 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "6f8dc8902f331b8f1efe546d6acd3aa958b2382fb4cd4633fb29c682f7d6f892",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Prime Video",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/prime-video-trumf",
+      "headline": "25 kr",
+      "upTo": false,
+      "category": "Tjenester",
+      "rates": [
+        {
+          "label": "Nye abonnement",
+          "text": "25 kr"
+        }
+      ],
+      "restrictions": [
+        "Kansellering av abonnement i løpet av de første to månedene gir ikke rett til Trumf-bonus."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "fb6fcbb573f5536bd9a420feb562c7bb8dacd64076b07a4f5e79f56d974a6619",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Proshop",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/proshop-trumf",
+      "headline": "3,7 %",
+      "upTo": true,
+      "category": "Elektronikk",
+      "rates": [
+        {
+          "label": "Annet og Telefon og GPS",
+          "text": "1,1 %"
+        },
+        {
+          "label": "Foto og video",
+          "text": "1,7 %"
+        },
+        {
+          "label": "Salg, IT, Hus og hage og Barn og leketøy",
+          "text": "2,4 %"
+        },
+        {
+          "label": "TV og HiFI",
+          "text": "2,9 %"
+        },
+        {
+          "label": "Hvitevarer og Husholdning",
+          "text": "3,5 %"
+        },
+        {
+          "label": "Spill",
+          "text": "3,7 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "ed1b2e07d4166400429e617bedf3821d284b08df19282f7b63dbdd16ade8f2a8",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Proteinfabrikken",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/trumfproteinfabrikken",
+      "headline": "4,6 %",
+      "upTo": true,
+      "category": "Helse",
+      "rates": [
+        {
+          "label": "Ny Kunde",
+          "text": "4,6 %"
+        },
+        {
+          "label": "Eksisterende Kunde",
+          "text": "2,3 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "db680c91e0b10bd3586178991a5e2eb3acca0c38e8b5dcb39e8a78e450c92711",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Puma",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/puma-trumf",
+      "headline": "3,1 %",
+      "upTo": false,
+      "category": "Sport",
+      "rates": [
+        {
+          "label": "Hele nettbuitkken",
+          "text": "3,1 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "2796e2ee3ec36902e3fe7eeb9bc9f69b12eb2bd2a81ffb642722a11649e6857c",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Pyret og Snäckan",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/pyret-and-snackan-trumf",
+      "headline": "3,1 %",
+      "upTo": false,
+      "category": "Barn",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,1 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "85cc761cec39d814ef3afd5fcb4d65eb5b1da078768a38207da3c28d107a2161",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Qatar Airways",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/qatar-airways-notrumf",
+      "headline": "1,5 %",
+      "upTo": false,
+      "category": "Reise",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "1,5 %"
+        }
+      ],
+      "restrictions": [
+        "Ved bestilling av flyturer, leiebil og overnatting vil kjøpet ditt bli behandlet 90 dager etter at oppholdet er gjennomført. Endring av booking gjort utenfor Trumf Netthandel vil føre til avisning av ditt kjøp. Ombooking må gjennomføres via Trumf Netthandel for at kjøpet skal være bonusberettiget. Ved kansellering av booking vil kjøpet bli avvist. Det gis ikke bonus på kjøp gjort i denne forhandlerens app."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "fc21063ccff21baee1a851261d7ddee61b7db2ab413c264ab6347fbae6f03fca",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Racketspesialisten",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/racketspesialisten",
+      "headline": "7,8 %",
+      "upTo": false,
+      "category": "Sport",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "7,8 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "87446a520e620ef76ce1fcbbe2bc1c49752af69f88d0e2e4f8d7c9a4efc9d9d7",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Radisson Hotels",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/trumfradissonhotels",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Reise",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [
+        "Kjøpet bekreftes innen 90 dager etter fullført opphold. Kjøpet vil endres til «Overført til Trumf» omtrent 90 dager etter at kjøpet har fått statusen «Bekreftet». Endring av booking gjort utenfor Trumf Netthandel vil føre til avisning av ditt kjøp. Ombooking må gjennomføres via Trumf Netthandel for at kjøpet skal være bonusberettiget. Ved kansellering av booking vil kjøpet bli avvist. Det gis ikke Trumf-bonus på hotellbestillinger utenfor Europa, Midtøsten og Afrika. Det gis ikke Trumf-bonus på spesialpriser fra reisebyrå, Radisson Hotels ansattpriser eller familie- og vennepriser."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "6b77ddcf034260c6b97b214aab4a6890e132d6f57ce511547f907aabb814598b",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Risskov Bilferie",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/risskov-bilferietrumf",
+      "headline": "3,9 %",
+      "upTo": false,
+      "category": "Reise",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,9 %"
+        }
+      ],
+      "restrictions": [
+        "Ved bestilling av flyturer, leiebil og overnatting vil kjøpet ditt bli behandlet 90 dager etter at oppholdet er gjennomført. Endring av booking gjort utenfor Trumf Netthandel vil føre til avisning av ditt kjøp. Ombooking må gjennomføres via Trumf Netthandel for at kjøpet skal være bonusberettiget. Ved kansellering av booking vil kjøpet bli avvist. Det gis ikke bonus på kjøp gjort i denne forhandlerens app."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "661901f64061336cab9d4d502a152203680f1b64266410d3a09dc73e95b5acff",
+      "reviewRequired": false
+    },
+    {
+      "partner": "SACKit",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/sackit-trumf",
+      "headline": "9,3 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "9,3 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "07744e7de06c8d589dd9bb47e5e1b33f6ed9b045bf9bb7d598c15f2ceef5b0b3",
+      "reviewRequired": false
+    },
+    {
+      "partner": "SF Anytime",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/sf-anytime-trumf",
+      "headline": "5 kr",
+      "upTo": false,
+      "category": "Tjenester",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "5 kr"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke Trumf-bonus på kjøp av gavekort hos SF Anytime."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "67bbc414354148a970749928b9c43095893bfb71d182c1d5ff19e7bec6ab0572",
+      "reviewRequired": false
+    },
+    {
+      "partner": "STIGA Sports",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/stiga-sports-trumf",
+      "headline": "7,8 %",
+      "upTo": false,
+      "category": "Sport",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "7,8 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "7e8f351ef617c785c820e9ea638258dada83294c608a35f55da8841a5878484b",
+      "reviewRequired": false
+    },
+    {
+      "partner": "SWIMS",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/swims-trumf",
+      "headline": "7,8 %",
+      "upTo": false,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "7,8 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "376319e4dec487d6a3fd6a549a24fb3bb038c3caabb71179e0ff7d32996dde22",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Safira",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/safira-trumf",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "b9359bd725569bfbe08bcd257db666111ce30ef5ba17a4ed0c8b90f70b22ea70",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Scandic Hotels",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/scandic-hotels-trumf",
+      "headline": "3,1 %",
+      "upTo": false,
+      "category": "Reise",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,1 %"
+        }
+      ],
+      "restrictions": [
+        "Kjøpet bekreftes innen 90 dager etter fullført opphold. Kjøpet vil endres til «Overført til Trumf» omtrent 90 dager etter at kjøpet har fått statusen «Bekreftet». Endring av booking gjort utenfor Trumf Netthandel vil føre til avisning av ditt kjøp. Ombooking må gjennomføres via Trumf Netthandel for at kjøpet skal være bonusberettiget. Ved kansellering av booking vil kjøpet bli avvist. Det gis ikke Trumf-bonus på spesialpriser fra reisebyrå, Scandic Hotels ansattpriser eller Scandic Employee familie- og vennepriser, Rewards Rates og Scandic Corporate Rates"
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "f05165c49cb748680bb67e1327be72c5da627299d500c38a3fb3abeac60b37ef",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Sembo",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/sembo-trumf",
+      "headline": "5,4 %",
+      "upTo": true,
+      "category": "Reise",
+      "rates": [
+        {
+          "label": "Feriehus",
+          "text": "3,9 %"
+        },
+        {
+          "label": "Ferje",
+          "text": "3,9 %"
+        },
+        {
+          "label": "Pakkereise",
+          "text": "5,4 %"
+        },
+        {
+          "label": "Hotell",
+          "text": "3,9 %"
+        },
+        {
+          "label": "Aktiviteter",
+          "text": "0,7 %"
+        }
+      ],
+      "restrictions": [
+        "Kjøpet bekreftes innen 90 dager etter fullført opphold. Kjøpet vil endres til «Overført til Trumf» omtrent 90 dager etter at kjøpet har fått statusen «Bekreftet». Det utbetales ikke Trumf-bonus på flyreiser. Endring av booking gjort utenfor Trumf Netthandel vil føre til avisning av ditt kjøp. Ombooking må gjennomføres via Trumf Netthandel for at kjøpet skal være bonusberettiget. Ved kansellering av booking vil kjøpet bli avvist."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "fee2c8c1ac88d41552c3e57c1fcae77698ca22472c1edd7102f9edb865f02202",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Sephora",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/sephora-trumf",
+      "headline": "14 %",
+      "upTo": true,
+      "category": "Helse",
+      "rates": [
+        {
+          "label": "Sephora Collection",
+          "text": "14 %"
+        },
+        {
+          "label": "Kjøp i forhandlerens app",
+          "text": "1,5 %"
+        },
+        {
+          "label": "Hele nettbutikken",
+          "text": "7,8 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "f476ee8c6bd18d6d17487ffd4f086bcf268e552ca03532da491841613f8a2e72",
+      "reviewRequired": false
+    },
+    {
+      "partner": "SharkNinja",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/sharkninja-trumf",
+      "headline": "3,9 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,9 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "95d933ef6a4bafc5e226d49c5461472604c6767648fbc4d43652fab71db70b36",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Siemens Home",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/siemens-trumf",
+      "headline": "9,3 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "9,3 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "094ee99e8fb4918528390f1179f6a557a504130fb3c706b9ce4e850424239fb5",
+      "reviewRequired": false
+    },
+    {
+      "partner": "SillySanta",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/sillysanta-trumf",
+      "headline": "9,3 %",
+      "upTo": false,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "9,3 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "74bf22da812135cf291871aa6d66647cb003fec103de11592dc4f3e7cd55a370",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Skeidar",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/skeidar-trumf",
+      "headline": "3,9 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,9 %"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke bonus på kjøp gjort i denne forhandlerens fysiske butikker."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "2d150c74a95cdd416ef89dc35d0cf9ad8eec0ba44921bee705a0687956924568",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Skogstad Sport",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/skogstad-sport-trumf",
+      "headline": "5,4 %",
+      "upTo": false,
+      "category": "Barn",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "5,4 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "96cbc7b2da01b24a1eb47214e7006f389ddcb89b58f5b188c5da2192a2c9aed8",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Skruvat",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/trumfskruvat",
+      "headline": "7 %",
+      "upTo": true,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "7 %"
+        },
+        {
+          "label": "Dekk og felg",
+          "text": "1,5 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "199b7051ca72d06853b29d88f4372be1f5214f1407efa17ec8272ff30cb9bef7",
+      "reviewRequired": false
+    },
+    {
+      "partner": "SkyShowtime",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/skyshowtime-trumf",
+      "headline": "130 kr",
+      "upTo": true,
+      "category": "Tjenester",
+      "rates": [
+        {
+          "label": "Månedlig abonnement",
+          "text": "45 kr"
+        },
+        {
+          "label": "Årlig abonnement",
+          "text": "130 kr"
+        }
+      ],
+      "restrictions": [
+        "Dersom det bestilles et abonnement vil kun første betaling være bonusberettiget."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "873f17e08bb0f55b5cee5b6878d1a5921fef1fad24abca62df956486a1063b2e",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Slikkepott",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/slikkepott-trumf",
+      "headline": "6,2 %",
+      "upTo": true,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        },
+        {
+          "label": "Utvalgte merker",
+          "text": "3,1 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "3404871da1ca4a4c7e4418715d7c2053ce3b76dd608b6dccaa0bfc687346b830",
+      "reviewRequired": false
+    },
+    {
+      "partner": "SmartaSaker",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/smartasaker-trumf",
+      "headline": "7,8 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "7,8 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "1c80bd7c31d26097678a14e3f4fffb2e8259bda52bcb1573ae428b094614b73b",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Smartphoto",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/smartphoto-trumf",
+      "headline": "9,3 %",
+      "upTo": true,
+      "category": "Tjenester",
+      "rates": [
+        {
+          "label": "Eksisterende Kunde",
+          "text": "5,4 %"
+        },
+        {
+          "label": "Ny Kunde",
+          "text": "9,3 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "37f41741609b802eaeff01fb7f76952144480994d4ff589327a6270764de138b",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Småungene",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/smaungene-trumf",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Barn",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "2936f035da8655611e7aa460fd682a910235385040c3ecfa9cb73eed3347c5ab",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Sofas and More",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/sofas-and-more-trumf",
+      "headline": "7,8 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "7,8 %"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke bonus på kjøp gjort i denne forhandlerens app."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "5c169fabccda02a4326e498e6c90ef6ab0115af92e9f5c1e2bc04cab1e1f72ec",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Sportmann",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/sportmann-trumf",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Sport",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "ae1f8c6029609751a9c29a6c5db04b18ba889cb237be3f828f466e390a7d543c",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Sportsmagasinet",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/sportsmagasinet-trumf",
+      "headline": "9,3 %",
+      "upTo": false,
+      "category": "Sport",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "9,3 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "bb98cc48960847e3459b4841a2217391d15330554511eaf0c40659f74ee530bb",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Staypro",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/staypro-trumf",
+      "headline": "2,3 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "2,3 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "aee647cebd51a2f2236a0b52d61ab65383b149176de34ce6acec29d43caf19ec",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Stille",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/stille-trumf",
+      "headline": "7,8 %",
+      "upTo": false,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "7,8 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "e6f32a89ea9c77f68ec7beb50c78a41586906f01c889e19c06cedbfad6a47092",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Stormberg",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/stormberg-trumf",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Sport",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "bf62d097c90908c02f0dd25372ec1da7708e0866aa5bca4bff3ad816dccd62a7",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Storytel",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/storytel-trumf",
+      "headline": "50 kr",
+      "upTo": false,
+      "category": "Tjenester",
+      "rates": [
+        {
+          "label": "Til nye kunder (Dersom det bestilles et abonnement vil kun første betaling være bonusberettiget)",
+          "text": "50 kr"
+        }
+      ],
+      "restrictions": [
+        "Nye kunde tilsvarer 1 kjøp per. 360 dager."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "f559ba490e40f695540fdd70ef0c9a96d266d478a6fce3fe75ad61ce4b64a054",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Strawberry",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/strawberry-trumf",
+      "headline": "3,9 %",
+      "upTo": false,
+      "category": "Reise",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,9 %"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke Trumf-bonus på bestillinger av opphold som starter samme dag som bestillingen gjennomføres. Kjøpet bekreftes innen 90 dager etter fullført opphold. Kjøpet vil endres til «Overført til Trumf» omtrent 90 dager etter at kjøpet har fått statusen «Bekreftet» Det gis ikke Trumf bonus ved kjøp av strawberry gavekort, eller ved bruk av gavekort. Det gis ikke Trumf-bonus på frittstående hoteller, følgende hoteller regnes som frittstående: Admiral Hotel, Amerikalinjen, Aronsborgs Konferenshotell, At Six, Avalon Hotel, Copperhill Mountain Lodge, Dalen Hotel, Farris Bad, Festningen Hotel & Resort, Frösö Park Hotel, Funken lodge, Hernö Gin Hotell, Hobo Copenhagen, Hobo Helsinki, Hobo Oslo, Hobo Stockholm, Hotel AX, Hotel Brosundet, Hotel C, Hotel Christiania Teater, Hotel F6, Hotel Fabian, Hotel Fratelli, Hotel Føroyar, Hotel Haven, Hotel Klaus K, Hotel Kämp, Hotel Lilla Roberts, Hotel No. 13, Hotel Odeon, Hotel Oleana, Hotel Riviera, Hotel St. George, ICEHOTEL, Jørgensens Hotel, KG Hotel, Klaus K Hotel, Lily Country Club, Nordic Light, Norefjell Ski & Spa, Oscarsborg Festning, Reenskaug Hotel, Riddergaarden Mountain Lodge, Selma Spa, Skarsnuten Mountain Resort & Spa, Sommerro, Son Spa, Stenungsbaden Yacht Club, Strömstad SPA & Resort, The Dock, The Thief, Torreby Slott, Villa Copenhagen, Villa Nord (åpner i 2027), Vox hotel, Wood Hotel Bodø, Yasuragi Hasseludden Endring av booking gjort utenfor Trumf Netthandel vil føre til avisning av ditt kjøp. Ombooking må gjennomføres via Trumf Netthandel for at kjøpet skal være bonusberettiget. Ved kansellering av booking vil kjøpet bli avvist."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "17ee58b6918b38cde5b074feb2480a5c49c9ed06681ba085d1615e214c9384f5",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Strikkia",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/strikkia-trumf",
+      "headline": "7,8 %",
+      "upTo": false,
+      "category": "Netthandel",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "7,8 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "3333083fa2ebcd8d2a9a3d57d1aac6fe01f09ae60753d5b75d742214f44320cf",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Strim",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/strim-trumf",
+      "headline": "270 kr",
+      "upTo": true,
+      "category": "Tjenester",
+      "rates": [
+        {
+          "label": "Strim",
+          "text": "195 kr"
+        },
+        {
+          "label": "Strim + TV2 Play Sport",
+          "text": "230 kr"
+        },
+        {
+          "label": "Strim + Viaplay Total",
+          "text": "230 kr"
+        },
+        {
+          "label": "Strim + TV2 Play Sport + Viaplay Total",
+          "text": "270 kr"
+        }
+      ],
+      "restrictions": [
+        "Dersom det bestilles et abonnement vil kun første betaling være bonusberettiget. Tilbudet gjelder nye kunder. Det gis ikke Trumf-bonus på kjøpet dersom abonnementet sies opp i prøveperioden."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "c2423b4fb44780ca95c8775ffe70d90f43803167d2d6890ad13674030b694f97",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Superdry",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/trumfsuperdry-no",
+      "headline": "4,6 %",
+      "upTo": false,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "4,6 %"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke Trumf-bonus ved kjøp eller bruk av gavekort."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "308cf04b284d88b5695a882461606b9d1a2c32a17c1e3046d60cc81fffaa0972",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Superkul",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/trumfsuperkul",
+      "headline": "5,4 %",
+      "upTo": false,
+      "category": "Netthandel",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "5,4 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "41688e483c1be0c964623c0a41b4d6f0e4239ce2967d75f480864d132a49f6cf",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Teknikmagasinet",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/teknikmagasinet-trumf",
+      "headline": "2,3 %",
+      "upTo": false,
+      "category": "Underholdning",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "2,3 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "b3178ddf4fb42e88cd592df9db3ccce117c0e2462cb9b24ddc48504fba37e1b0",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Tempur",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/tempur-trumf",
+      "headline": "7,8 %",
+      "upTo": true,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "På utsalgsvarer",
+          "text": "3,9 %"
+        },
+        {
+          "label": "På rabatterte varer under tilbud",
+          "text": "5,4 %"
+        },
+        {
+          "label": "På fullprisvarer",
+          "text": "7,8 %"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke bonus på kjøp gjort i denne forhandlerens app."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "e5e54f16763af815085386e72b43b11b6e27e6bcd52b17169cfdc9779c39be13",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Tiger of Sweden",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/tiger-of-sweden-trumf",
+      "headline": "7,8 %",
+      "upTo": false,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "7,8 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "247ca28c5ec6b4bed7bebbb834516919b28cd7498283062779156e9d7f14e329",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Tilbords",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/tilbords-trumf",
+      "headline": "3,1 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,1 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "350ada674b6887dafeb024b767a8a3917a0b33389e3da613dcdd44b6f89180e9",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Timarco",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/timarcotrumf",
+      "headline": "10,1 %",
+      "upTo": false,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "10,1 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "65ba048fc5ecb20f7d24e2d092da55bbe6061c80489689b1dd109389f5d23c67",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Tirendo",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/tirendo-trumf",
+      "headline": "3,1 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,1 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "3997fa087af56d6bf44a1e63e5dc3f5e0ae23bfb27049b164ac739e2ba1aab46",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Trendcarpet",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/trendcarpet-trumf",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "9702090da58090a56ba7d7996c3258e8a41513db59afc5d4c9a600f3cdc9ca69",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Treningspartner",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/trumftreningspartner",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Helse",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [
+        "OBS: Behandlingstiden på kjøp fra Treningspartner starter først etter returretten på 90 dager. Dette er en bestemmelse gjort av forhandler."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "8eeb9df68f5d0a6bdef9015d9b0fa03a7eafc80cec446ab58af1702f3351d799",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Trip",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/trip-trumf",
+      "headline": "4,2 %",
+      "upTo": true,
+      "category": "Reise",
+      "rates": [
+        {
+          "label": "Hotell",
+          "text": "4,2 %"
+        },
+        {
+          "label": "Turer og aktiviteter",
+          "text": "3,9 %"
+        },
+        {
+          "label": "Flyplasstransport",
+          "text": "3,9 %"
+        },
+        {
+          "label": "Leiebil",
+          "text": "3,9 %"
+        },
+        {
+          "label": "Cruisereiser",
+          "text": "3,1 %"
+        },
+        {
+          "label": "Innenriks tog i Kina",
+          "text": "1,5 %"
+        },
+        {
+          "label": "Fly + hotell",
+          "text": "1,9 %"
+        },
+        {
+          "label": "Billetter",
+          "text": "1,9 %"
+        },
+        {
+          "label": "Tog",
+          "text": "1,5 %"
+        },
+        {
+          "label": "Fly",
+          "text": "0,7 %"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke Trumf-bonus på kjøp gjort helt eller delvis med gavekort. Flybilletter for barn og spedbarn, oljeavgifter, flyskatter, kuponger og Trip Coins er ekskludert fra provisjonen. Kjøpet bekreftes innen 90 dager etter fullført opphold. Kjøpet vil endres til «Overført til Trumf» omtrent 90 dager etter at kjøpet har fått statusen «Bekreftet». Det gis ikke Trumf-bonus på reisepakker - Det gis ikke Trumf-bonus på togreiser bestilt med Ctrip - Det gis ikke Trumf-bonus på gavekort. Endring av booking gjort utenfor Trumf Netthandel vil føre til avisning av ditt kjøp. Ombooking må gjennomføres via Trumf Netthandel for at kjøpet skal være bonusberettiget. Ved kansellering av booking vil kjøpet bli avvist."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "5b918cedd330ab408bc3a78e5137c232937c97562657a069ec587ecd791b82dd",
+      "reviewRequired": false
+    },
+    {
+      "partner": "TripX",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/tripx-trumf",
+      "headline": "3,9 %",
+      "upTo": false,
+      "category": "Reise",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,9 %"
+        }
+      ],
+      "restrictions": [
+        "Hvis du har brukt en annen reisemetasøkemotor til å sammenligne priser på flybiletter, hoteller og leiebiler eller andre reiserelaterte tjenester fra ulike leverandører (f. eks Trivago eller Momondo) og har akseptert informasjonskapsler der, kan kjøp du foretar på Trumf Netthandel innenfor informasjonskapselens varighet dessverre bli avvist: Finn.no Restplass.no dinreise.no storbyferie.no reiseguiden.no reise.letsdeal.no Dette skyldes i tekniske begrensninger i sporing av transaksjoner etter samtykke til informasjonskapsler fra slike sider. Ved bestilling av flyturer, leiebil og overnatting vil kjøpet ditt bli behandlet 90 dager etter at oppholdet er gjennomført. Endring av booking via telefon vil føre til at bookingen din blir slettet fra Trumf Netthandel. Ombookingen må gjennomføres gjennom Trumf Netthandel for at bookingen skal bli registrert med Trumf-bonus. Ved kansellering av booking vil Trumf-bonus bli avvist."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "c2af6901ba844bd8fef9ae550d1234d29e281beeee06e38d0a38cf1dd2d164f6",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Tønnesen",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/tonnesen-trumf",
+      "headline": "5,4 %",
+      "upTo": false,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "5,4 %"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke bonus på kjøp gjort i denne forhandlerens app."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "8cd83d55b5fd53702c92353864f5a109f06a63df7bf656b970017dd7e5ff7bf9",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Uppababy",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/uppababy-trumf",
+      "headline": "14 %",
+      "upTo": false,
+      "category": "Barn",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "14 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "f48e86b8dd5ca2fcd1be73c1df51d9289007f58ce07fb640642dd6c73f6c2e76",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Urban Pioneers",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/urban-pioneers-trumf",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "c1d89255d143966a5040606e316feb4bf90ddbdcbfcb2966348e1fbc68d65e49",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Urban Pioneers Concept Store",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/urban-pioneers-concept-store-trumf",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "ca240aadca33f754740cb97021f09cd60956504178bddae6e37c95e0ed5eaf71",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Urverket",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/urverket-trumf",
+      "headline": "3,1 %",
+      "upTo": false,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,1 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "b3d0bd2b14d7590bbb448059ea81934651542145b52bc6966d515a95221a148e",
+      "reviewRequired": false
+    },
+    {
+      "partner": "VPG",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/vpg-trumf",
+      "headline": "6,2 %",
+      "upTo": true,
+      "category": "Sport",
+      "rates": [
+        {
+          "label": "Elektronikk og sykler: Klokker, solceller og lading, nødsendere og GPS",
+          "text": "1,5 %"
+        },
+        {
+          "label": "Premium merker (Dynafit, 7 Mesh, Blue Ice, Evoc, Arva, Evolve, Singing Rock, Wild Country, Komperdell, Reusch og Salewa)",
+          "text": "6,2 %"
+        },
+        {
+          "label": "Andre produkter",
+          "text": "3,1 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "e3468f3f99d0942e432c0c7e0e62ddfecf6b94879c2c729711eeccff40666bbe",
+      "reviewRequired": false
+    },
+    {
+      "partner": "VY Express",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/vy-trumf",
+      "headline": "2,7 %",
+      "upTo": false,
+      "category": "Reise",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "2,7 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "53e61232c0a17e251f0bc1e7e74fde5fa61fa9596635f77574f90a3e93224b06",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Vakre Vene",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/vakre-vene-trumf",
+      "headline": "5,4 %",
+      "upTo": false,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "5,4 %"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke bonus på kjøp gjort i denne forhandlerens app."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "f4f4942c6daa439e7db4186e037005ac7c0741292938035da5a46acbd19494b1",
+      "reviewRequired": false
+    },
+    {
+      "partner": "VetZoo",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/vetzoo-trumf",
+      "headline": "4,6 %",
+      "upTo": false,
+      "category": "Dyretilbehør",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "4,6 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "9423d29f59887f3a879d84f6bfb6786bd3cac64326692e8071427a47501ef70f",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Viaplay",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/viaplay-trumf",
+      "headline": "295 kr",
+      "upTo": true,
+      "category": "Tjenester",
+      "rates": [
+        {
+          "label": "Viaplay Total",
+          "text": "295 kr"
+        },
+        {
+          "label": "Viaplay Film & Serier",
+          "text": "60 kr"
+        },
+        {
+          "label": "Viaplay Total Pluss",
+          "text": "290 kr"
+        },
+        {
+          "label": "Viaplay Medium",
+          "text": "155 kr"
+        },
+        {
+          "label": "Viaplay Film & Serier med reklame",
+          "text": "30 kr"
+        }
+      ],
+      "restrictions": [
+        "Dersom det bestilles et abonnement vil kun første betaling være bonusberettiget."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "43f3a26245d7b58f85b8664bebfd78923cac624eebbd37a757131f2cbd74047b",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Viator",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/viator-trumf",
+      "headline": "3,1 %",
+      "upTo": false,
+      "category": "Reise",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,1 %"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke Trumf-bonus på fornøyelsesparker. Endring av booking gjort utenfor Trumf Netthandel vil føre til avisning av ditt kjøp. Ombooking må gjennomføres via Trumf Netthandel for at kjøpet skal være bonusberettiget. Ved kansellering av booking vil kjøpet bli avvist. Det gis ikke Trumf-bonus ved kjøp i Viator sin egen app. Kjøpet må foregå på nettstedet."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "eeffc2a6b00b4a31ba59e6bb28183553a3a8aed1e92d4afce4bb83a65c8fb421",
+      "reviewRequired": false
+    },
+    {
+      "partner": "VidaXL",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/vidaxl-trumf2",
+      "headline": "3,9 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,9 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "4dea2b0e095925b1cf913fccbc05c12c7a5ab36d6de69d471cd1e39bf0b2b50e",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Viking Footwear",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/viking-footwear",
+      "headline": "5,8 %",
+      "upTo": false,
+      "category": "Barn",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "5,8 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "85168ecabb297ad6cf129853709e5e40e2df74df504699aab1a5030e27d601be",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Vistaprint",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/trumfvistaprint",
+      "headline": "6,2 %",
+      "upTo": true,
+      "category": "Tjenester",
+      "rates": [
+        {
+          "label": "Ny Kunde",
+          "text": "6,2 %"
+        },
+        {
+          "label": "Eksisterende Kunde",
+          "text": "1,9 %"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke bonus på kjøp gjort i denne forhandlerens app."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "68607c0d302a36fd1b54dc956e208020070c2f80d34083baa9199c2f2f69ef1f",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Vita",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/trumfvita",
+      "headline": "4 %",
+      "upTo": false,
+      "category": "Helse",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "4 %"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke bonus på klikk og hent ordre."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "4f7180414b9823360c1772cda768f7ff5623f809cb89741ccdf578cb121f8325",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Vivara",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/vivara-trumf",
+      "headline": "4,8 %",
+      "upTo": true,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Ny Kunde",
+          "text": "4,8 %"
+        },
+        {
+          "label": "Eksisterende kunde",
+          "text": "1,7 %"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke bonus på kjøp gjort i denne forhandlerens app."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "92f4c6ea54519a9118bac2073d8cb0a93a8e4e5b122bb95a46e0a0c989f649e2",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Vrbo",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/vrbo-trumf",
+      "headline": "2,3 %",
+      "upTo": false,
+      "category": "Reise",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "2,3 %"
+        }
+      ],
+      "restrictions": [
+        "Kjøpet bekreftes innen 90 dager etter fullført opphold. Kjøpet vil endres til «Overført til Trumf» omtrent 90 dager etter at kjøpet har fått statusen «Bekreftet». Endring av booking gjort utenfor Trumf Netthandel vil føre til avisning av ditt kjøp. Ombooking må gjennomføres via Trumf Netthandel for at kjøpet skal være bonusberettiget. Ved kansellering av booking vil kjøpet bli avvist."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "453f99a5ccd239b64e0365e5af59207256b480a65ba02f803e5755501b287389",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Wakakuu",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/wakakuu-trumf",
+      "headline": "7,8 %",
+      "upTo": false,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "7,8 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "af8f960a47d2698386b1f3bad526e63a9fc86ec615371dbc9c162cabe76ce081",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Watery",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/watery-trumf",
+      "headline": "9,3 %",
+      "upTo": true,
+      "category": "Sport",
+      "rates": [
+        {
+          "label": "Paddleboards og Salg",
+          "text": "4,2 %"
+        },
+        {
+          "label": "Hele nettbutikken",
+          "text": "9,3 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "4c021da40503fa7ae3e31a85feff69bde3bf1707b07562d51b0f86ae0eddaf12",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Weekday",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/weekday-trumf",
+      "headline": "7,8 %",
+      "upTo": false,
+      "category": "Mote",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "7,8 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "1f1c900b41f3ecbeb928dbae782021bcd7449753bb7ccc24f92e0be4cef3bac0",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Xplora",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/xplora-trumf",
+      "headline": "195 kr",
+      "upTo": true,
+      "category": "Barn",
+      "rates": [
+        {
+          "label": "Bestillinger over 1000 kr",
+          "text": "195 kr"
+        },
+        {
+          "label": "Bestillinger under 1000 kr",
+          "text": "7,8 %"
+        }
+      ],
+      "restrictions": [
+        "Vi minner om at Trumf-bonusen beregnes uten mva. Dersom summen blir lavere enn 1000kr med mva trukket fra vil bonusen på 7,8 % være gjeldene."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "3cb979c0c0d0b43685da8470196edc152272057a125435c014c4862b1bf1d4f5",
+      "reviewRequired": false
+    },
+    {
+      "partner": "YouWish",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/youwish",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Underholdning",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "95b46c8501738c734cc3e931887a9467eadeb5792f24dc93f64d846b0b869d8f",
+      "reviewRequired": false
+    },
+    {
+      "partner": "YourSurprise",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/yoursurprise-trumf",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Tjenester",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "77a1582bbd8335c3dbec1e300fee4a27b25d1b91e4202c872f95b9fdeccaed0c",
+      "reviewRequired": false
+    },
+    {
+      "partner": "ZOO",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/zoo-trumfs",
+      "headline": "6,2 %",
+      "upTo": true,
+      "category": "Dyretilbehør",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "1,5 %"
+        },
+        {
+          "label": "Bestillinger over 999 kr",
+          "text": "4,6 %"
+        },
+        {
+          "label": "Ny Kunde",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [
+        "Vi minner om at Trumf-bonusen beregnes uten mva. Dersom summen blir lavere enn 999kr med mva trukket fra vil bonusen på 1.5 % være gjeldene. Det gis ikke bonus på kjøp gjort i denne forhandlerens app."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "72a63576cfa86032d837292cdfa80523cd29fd57c4ce3f9913c66b2cdabcee58",
+      "reviewRequired": false
+    },
+    {
+      "partner": "Zooplus",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/zooplus",
+      "headline": "6,2 %",
+      "upTo": true,
+      "category": "Dyretilbehør",
+      "rates": [
+        {
+          "label": "Ny Kunde",
+          "text": "6,2 %"
+        },
+        {
+          "label": "Ny kunde (2 og 3 kjøp)",
+          "text": "4,6 %"
+        },
+        {
+          "label": "Eksisterende kunde",
+          "text": "1,5 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "652a2efa9b2d692871e8f7a8112e54b2688463aaa3c363485ac7071aaf26bd85",
+      "reviewRequired": false
+    },
+    {
+      "partner": "dekkonline.com",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/trumfdekkonline",
+      "headline": "3,1 %",
+      "upTo": false,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,1 %"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke bonus på kjøp gjort i denne forhandlerens app."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "0fa22158ae6ff3cadb6de8dab46b9d6099ed97b5ac9dc562da4a5225b069f5d1",
+      "reviewRequired": false
+    },
+    {
+      "partner": "eBay",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/ebay-trumfno",
+      "headline": "1 %",
+      "upTo": false,
+      "category": "Netthandel",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "1 %"
+        }
+      ],
+      "restrictions": [
+        "Hos denne nettbutikken kan du ikke sende inn en henvendelse etter kjøp. Det gjelder også ved feil på varer eller manglende Trumf-bonus. Det utbetales opptil 800 kr i Trumf-bonus ved kjøp fra kategoriene eBay Motors, US Motors og Real Estate Det utbetales opptil 1800 kr i Trumf-bonus ved kjøp fra kategorien Business & Industrial Det utbetales opptil 4400 kr i Trumf-bonus ved kjøp fra øvrige kategorier"
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "4535452f50510c2f86561a58c7a16540b486c7e996664dfe3ee3e5fbff18cc47",
+      "reviewRequired": false
+    },
+    {
+      "partner": "eStore",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/estore-trumf",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Elektronikk",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "b8d22e0eb4786c11d30806d6390847ca9cad856927c6c7bf2f0da7e3210b5d43",
+      "reviewRequired": false
+    },
+    {
+      "partner": "homeroom",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/homeroom-trumf",
+      "headline": "3,9 %",
+      "upTo": true,
+      "category": "Hus og hjem",
+      "rates": [
+        {
+          "label": "Hjemmeelektronikk",
+          "text": "1,5 %"
+        },
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,9 %"
+        },
+        {
+          "label": "Alle Møbler",
+          "text": "1,5 %"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke bonus på kjøp gjort i denne forhandlerens app."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "cf888b5d2bec86e4f2d297ae4aab6a5334368be315c0c78bfdcaaec4bdf982de",
+      "reviewRequired": false
+    },
+    {
+      "partner": "inkClub.com",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/trumfinkclub-no",
+      "headline": "11,7 %",
+      "upTo": false,
+      "category": "Tjenester",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "11,7 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "4ca7a1b00216aa2970922cd5dab635ae24b2298072d3a6da66d882ad4a5cc335",
+      "reviewRequired": false
+    },
+    {
+      "partner": "kinogavekort",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/kinogavekort-trumf",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Tjenester",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "27eab6ce69b3fd966fa86c5785c2e6446a80a2425393c8a70bd57ffe66090f9f",
+      "reviewRequired": false
+    },
+    {
+      "partner": "lastminute.com",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/lastminute-trumf",
+      "headline": "3,9 %",
+      "upTo": true,
+      "category": "Reise",
+      "rates": [
+        {
+          "label": "Hotell",
+          "text": "3,9 %"
+        },
+        {
+          "label": "Fly",
+          "text": "0,7 %"
+        },
+        {
+          "label": "Fly + hotell",
+          "text": "2,3 %"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke bonus på kjøp gjort i denne forhandlerens app. Kjøpet bekreftes innen 90 dager etter fullført opphold. Kjøpet vil endres til «Overført til Trumf» omtrent 90 dager etter at kjøpet har fått statusen «Bekreftet». Endring av booking gjort utenfor Trumf Netthandel vil føre til avisning av ditt kjøp. Ombooking må gjennomføres via Trumf Netthandel for at kjøpet skal være bonusberettiget. Ved kansellering av booking vil kjøpet bli avvist."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "0c98ff073154f1aafbfb3e246e690bd02e304beaa48ac1ee51b46b36c973c143",
+      "reviewRequired": false
+    },
+    {
+      "partner": "mimmis",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/mimmistrumf",
+      "headline": "3,1 %",
+      "upTo": false,
+      "category": "Barn",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "3,1 %"
+        }
+      ],
+      "restrictions": [],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "6f59f911a1a96f312c976bfe1d81679395f8c8eaac5032212349b7001275163e",
+      "reviewRequired": false
+    },
+    {
+      "partner": "weloveholidays",
+      "sourceUrl": "https://trumfnetthandel.no/cashback/weloveholidays-trumf",
+      "headline": "6,2 %",
+      "upTo": false,
+      "category": "Reise",
+      "rates": [
+        {
+          "label": "Hele nettbutikken",
+          "text": "6,2 %"
+        }
+      ],
+      "restrictions": [
+        "Det gis ikke bonus på kjøp gjort i denne forhandlerens app. Kjøpet bekreftes innen 90 dager etter fullført opphold. Kjøpet vil endres til «Overført til Trumf» omtrent 90 dager etter at kjøpet har fått statusen «Bekreftet». Det utbetales ikke Trumf-bonus på flyreiser. Endring av booking gjort utenfor Trumf Netthandel vil føre til avisning av ditt kjøp. Ombooking må gjennomføres via Trumf Netthandel for at kjøpet skal være bonusberettiget. Ved kansellering av booking vil kjøpet bli avvist."
+      ],
+      "checkedAt": "2026-11-26",
+      "evidenceSha256": "66fedb1422454c6e30fbffcd07ad96ff06374b259e0ac958fc94530241a20d31",
+      "reviewRequired": false
+    }
+  ]
+}

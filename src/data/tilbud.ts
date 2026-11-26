@@ -10,6 +10,7 @@ import { studentTilbud } from "@/data/tilbud-student";
 import { lofavorTilbud } from "@/data/tilbud-lofavor";
 import { circleKExtraTilbud } from "@/data/tilbud-circle-k-extra";
 import { tilbudListMeta } from "@/data/tilbud-meta";
+import { reconcileNetthandel } from "@/data/netthandel/reconcile";
 
 export { tilbudListMeta };
 
@@ -543,7 +544,7 @@ const obosTilbud: Tilbud[] = [
   },
 ];
 
-export const tilbud: Tilbud[] = [
+export const tilbud: Tilbud[] = reconcileNetthandel([
   ...klarnaTilbud,
   ...obosTilbud,
   ...trumfTilbud,
@@ -555,4 +556,4 @@ export const tilbud: Tilbud[] = [
   ...studentTilbud,
   ...lofavorTilbud,
   ...circleKExtraTilbud,
-];
+]);

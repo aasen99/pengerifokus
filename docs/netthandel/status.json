@@ -1,0 +1,4359 @@
+{
+  "checkedAt": "2026-11-26",
+  "originalOffers": 437,
+  "totalOffers": 1038,
+  "originalIdsAndSlugsPreserved": true,
+  "programs": {
+    "eurobonus": {
+      "registered": 286,
+      "currentRateVerified": 0,
+      "missingFromCurrentCatalogue": 0
+    },
+    "trumf": {
+      "registered": 274,
+      "currentRateVerified": 272,
+      "missingFromCurrentCatalogue": 2
+    },
+    "klarna": {
+      "registered": 126,
+      "currentRateVerified": 106,
+      "missingFromCurrentCatalogue": 20
+    },
+    "spenn": {
+      "registered": 155,
+      "currentRateVerified": 1,
+      "missingFromCurrentCatalogue": 0
+    }
+  },
+  "uniqueRegisteredOnlineMerchants": 478,
+  "uniqueWithVerifiedCurrentRates": 329,
+  "allShoppingGroupsIncludingShopAndGiftcards": 484,
+  "overlapRegistered": {
+    "2": 111,
+    "3": 84,
+    "4": 28
+  },
+  "overlapVerified": {
+    "2": 48,
+    "3": 1,
+    "4": 0
+  },
+  "addedOffers": 601,
+  "addedVerifiedOffers": 256,
+  "updatedHeadlineRates": 102,
+  "confirmedRemovedOffers": 0,
+  "flaggedMissing": 22,
+  "campaigns": 8,
+  "newOffers": [
+    {
+      "id": "tilbud-nett-trumf-netthandel-aeg",
+      "partner": "AEG",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-aegreservedelerogtilbehor",
+      "partner": "AEG Reservedeler og Tilbehør",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-aimn",
+      "partner": "AIM'N",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-asics",
+      "partner": "ASICS",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-asicsoutlet",
+      "partner": "ASICS Outlet",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-avastsoftware",
+      "partner": "AVAST Software",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-acer",
+      "partner": "Acer",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-adidas",
+      "partner": "Adidas",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-albert",
+      "partner": "Albert",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-amisol",
+      "partner": "Amisol",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-apple",
+      "partner": "Apple",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-askeladdennavnelapper",
+      "partner": "Askeladden Navnelapper",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-autoeuropeno",
+      "partner": "Auto Europe no",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-autodeler",
+      "partner": "Autodeler",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-autodoc",
+      "partner": "Autodoc",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-autodude",
+      "partner": "Autodude",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-babybanden",
+      "partner": "Babybanden",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-babyshop",
+      "partner": "Babyshop",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-babysjarm",
+      "partner": "Babysjarm",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-backeigrensen",
+      "partner": "Backe i Grensen",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-badstil",
+      "partner": "Bad & Stil",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-bad",
+      "partner": "Bad.no",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-bagbrokers",
+      "partner": "BagBrokers",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-barbershop",
+      "partner": "Barbershop",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-batteriexperten",
+      "partner": "Batteriexperten",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-beautymall",
+      "partner": "Beauty Mall",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-beautycos",
+      "partner": "Beautycos",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-beckmann",
+      "partner": "Beckmann",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-bemz",
+      "partner": "Bemz",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-bergwatches",
+      "partner": "Berg Watches",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-bikbok",
+      "partner": "Bik Bok",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-bildeler",
+      "partner": "Bildeler",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-bilxtra",
+      "partner": "Bilxtra",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-bjornborg",
+      "partner": "Björn Borg",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-bladkongen",
+      "partner": "Bladkongen",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-bodystore",
+      "partner": "Bodystore",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-bokia",
+      "partner": "Bokia",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-bonprix",
+      "partner": "Bonprix",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-bookbeat",
+      "partner": "BookBeat",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-bosch",
+      "partner": "Bosch",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-brilleland",
+      "partner": "Brilleland",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-bubbleroom",
+      "partner": "Bubbleroom",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-budget",
+      "partner": "Budget",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-cestnormal",
+      "partner": "C'est normal",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-csmegastore",
+      "partner": "CS MEGASTORE",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-campanyon",
+      "partner": "Campanyon",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-chicastore",
+      "partner": "Chicastore",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-christianiaglasmagasin",
+      "partner": "Christiania Glasmagasin",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-clickboat",
+      "partner": "Click&Boat",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-comforthscandinavia",
+      "partner": "Comforth Scandinavia",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-danielwellington",
+      "partner": "Daniel Wellington",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-db",
+      "partner": "Db",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-dekkeu",
+      "partner": "Dekk.eu",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-dentaworks",
+      "partner": "Dentaworks",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-dentway",
+      "partner": "Dentway",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-devold",
+      "partner": "Devold",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-didriksons",
+      "partner": "Didriksons",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-directferries",
+      "partner": "Direct Ferries",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-disney",
+      "partner": "Disney+",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-drommerom",
+      "partner": "Drømmerom",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-dyrekassen",
+      "partner": "Dyrekassen",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-dyson",
+      "partner": "Dyson",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-ewheels",
+      "partner": "E-Wheels",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-emp",
+      "partner": "EMP",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-edblad",
+      "partner": "Edblad",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-ekstralys",
+      "partner": "Ekstralys",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-electrolux",
+      "partner": "Electrolux",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-electroluxreservedelerogtilbehor",
+      "partner": "Electrolux Reservedeler og Tilbehør",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-elitehotelsofsweden",
+      "partner": "Elite Hotels of Sweden",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-ellosno",
+      "partner": "Ellos NO",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-elon",
+      "partner": "Elon",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-engrospris",
+      "partner": "Engrospris",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-evoride",
+      "partner": "Evoride",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-expedia",
+      "partner": "Expedia",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-fabel",
+      "partner": "Fabel",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-farfetch",
+      "partner": "Farfetch",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-fjordline",
+      "partner": "Fjord Line",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-floyd",
+      "partner": "Floyd",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-follestad",
+      "partner": "Follestad",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-foodstuff",
+      "partner": "Foodstuff",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-fosssport",
+      "partner": "Foss Sport",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-foto",
+      "partner": "Foto.no",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-fotoknudsen",
+      "partner": "FotoKnudsen",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-framsport",
+      "partner": "Framsport",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-fyrklovern",
+      "partner": "Fyrklövern",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-gstar",
+      "partner": "G-Star",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-glowid",
+      "partner": "GlowID",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-gocity",
+      "partner": "Go City",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-gonordiccruiseline",
+      "partner": "Go Nordic Cruiseline",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-grontfokus",
+      "partner": "Grønt Fokus",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-gullfunn",
+      "partner": "Gullfunn",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-guttelus",
+      "partner": "Guttelus",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-haglofs",
+      "partner": "Haglöfs",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-harmankardon",
+      "partner": "Harman Kardon",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-hattehuset",
+      "partner": "Hattehuset",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-havilakystruten",
+      "partner": "Havila Kystruten",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-hellyhansen",
+      "partner": "Helly Hansen",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-holidu",
+      "partner": "Holidu",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-holzweiler",
+      "partner": "Holzweiler",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-hudprodukter",
+      "partner": "Hudprodukter",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-hultens",
+      "partner": "Hulténs",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-hunkemoller",
+      "partner": "Hunkemoller",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-husqvarna",
+      "partner": "Husqvarna",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-hoie",
+      "partner": "Høie",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-ilovedogs",
+      "partner": "I Love Dogs",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-iberostarhotelsandresorts",
+      "partner": "Iberostar Hotels and Resorts",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-idealofsweden",
+      "partner": "Ideal of Sweden",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-inkmann",
+      "partner": "Inkmann",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-interhome",
+      "partner": "Interhome",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-interoptik",
+      "partner": "Interoptik",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-inzpero",
+      "partner": "Inzpero",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-jlindeberg",
+      "partner": "J.Lindeberg",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-jbl",
+      "partner": "JBL",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-jaktogfriluft",
+      "partner": "Jakt og Friluft",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-jotex",
+      "partner": "Jotex",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-junkyard",
+      "partner": "Junkyard",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-kajakkogfritid",
+      "partner": "Kajakk og Fritid",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-karma",
+      "partner": "Karma",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-kayani",
+      "partner": "Kayani",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-kinoklubben",
+      "partner": "Kinoklubben",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-kitchentime",
+      "partner": "KitchenTime",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-kjellco",
+      "partner": "Kjell & Co",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-kondomeriet",
+      "partner": "Kondomeriet",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-kost1",
+      "partner": "Kost1",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-kouture",
+      "partner": "Kouture",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-karcher",
+      "partner": "Kärcher",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-loccitane",
+      "partner": "L'Occitane",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-lego",
+      "partner": "LEGO",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-lampemesteren",
+      "partner": "Lampemesteren",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-lappeliten",
+      "partner": "Lappeliten",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-lekmer",
+      "partner": "Lekmer",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-lenovo",
+      "partner": "Lenovo",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-lenson",
+      "partner": "Lenson",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-lexington",
+      "partner": "Lexington",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-libresse",
+      "partner": "Libresse",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-lufthansa",
+      "partner": "Lufthansa",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-lunehjem",
+      "partner": "Lunehjem",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-lopeshop",
+      "partner": "Løpeshop",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-maxa",
+      "partner": "MAXA",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-makeupmekka",
+      "partner": "Makeup Mekka",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-match",
+      "partner": "Match.com",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-minifinder",
+      "partner": "MiniFinder",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-moniker",
+      "partner": "Moniker",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-monikerman",
+      "partner": "Moniker Man",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-myprotein",
+      "partner": "Myprotein",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-nlyman",
+      "partner": "NLY MAN",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-norwaybussekspress",
+      "partner": "NOR-WAY Bussekspress",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-nazar",
+      "partner": "Nazar",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-newbalance",
+      "partner": "New Balance",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-newport",
+      "partner": "Newport",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-nextory",
+      "partner": "Nextory",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-nicebeauty",
+      "partner": "NiceBeauty",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-nordicprint",
+      "partner": "Nordic Print",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-northtrampoline",
+      "partner": "North Trampoline",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-nytelse",
+      "partner": "Nytelse",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-onyxcookware",
+      "partner": "ONYX Cookware",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-oakley",
+      "partner": "Oakley",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-omio",
+      "partner": "Omio",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-osloskinlab",
+      "partner": "Oslo Skin Lab",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-outnorth",
+      "partner": "Outnorth",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-plindberg",
+      "partner": "P.Lindberg",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-pergolux",
+      "partner": "Pergolux",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-petxl",
+      "partner": "PetXL",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-philipshomeappliances",
+      "partner": "Philips Home Appliances",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-philipshue",
+      "partner": "Philips Hue",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-pilgrim",
+      "partner": "Pilgrim",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-polarnopyret",
+      "partner": "Polarn O. Pyret",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-primevideo",
+      "partner": "Prime Video",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-proteinfabrikken",
+      "partner": "Proteinfabrikken",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-puma",
+      "partner": "Puma",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-pyretogsnackan",
+      "partner": "Pyret og Snäckan",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-qatarairways",
+      "partner": "Qatar Airways",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-racketspesialisten",
+      "partner": "Racketspesialisten",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-risskovbilferie",
+      "partner": "Risskov Bilferie",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-sackit",
+      "partner": "SACKit",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-sfanytime",
+      "partner": "SF Anytime",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-stigasports",
+      "partner": "STIGA Sports",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-swims",
+      "partner": "SWIMS",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-safira",
+      "partner": "Safira",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-sembo",
+      "partner": "Sembo",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-sephora",
+      "partner": "Sephora",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-sharkninja",
+      "partner": "SharkNinja",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-siemenshome",
+      "partner": "Siemens Home",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-sillysanta",
+      "partner": "SillySanta",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-skeidar",
+      "partner": "Skeidar",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-skogstadsport",
+      "partner": "Skogstad Sport",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-skruvat",
+      "partner": "Skruvat",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-skyshowtime",
+      "partner": "SkyShowtime",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-slikkepott",
+      "partner": "Slikkepott",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-smartasaker",
+      "partner": "SmartaSaker",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-smartphoto",
+      "partner": "Smartphoto",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-smaungene",
+      "partner": "Småungene",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-sofasandmore",
+      "partner": "Sofas and More",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-sportmann",
+      "partner": "Sportmann",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-staypro",
+      "partner": "Staypro",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-stille",
+      "partner": "Stille",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-stormberg",
+      "partner": "Stormberg",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-storytel",
+      "partner": "Storytel",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-strikkia",
+      "partner": "Strikkia",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-strim",
+      "partner": "Strim",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-superdry",
+      "partner": "Superdry",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-superkul",
+      "partner": "Superkul",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-teknikmagasinet",
+      "partner": "Teknikmagasinet",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-tempur",
+      "partner": "Tempur",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-tigerofsweden",
+      "partner": "Tiger of Sweden",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-tilbords",
+      "partner": "Tilbords",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-timarco",
+      "partner": "Timarco",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-tirendo",
+      "partner": "Tirendo",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-trendcarpet",
+      "partner": "Trendcarpet",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-treningspartner",
+      "partner": "Treningspartner",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-trip",
+      "partner": "Trip",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-tripx",
+      "partner": "TripX",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-tonnesen",
+      "partner": "Tønnesen",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-uppababy",
+      "partner": "Uppababy",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-urbanpioneers",
+      "partner": "Urban Pioneers",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-urbanpioneersconceptstore",
+      "partner": "Urban Pioneers Concept Store",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-urverket",
+      "partner": "Urverket",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-vpg",
+      "partner": "VPG",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-vakrevene",
+      "partner": "Vakre Vene",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-viator",
+      "partner": "Viator",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-vidaxl",
+      "partner": "VidaXL",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-vikingfootwear",
+      "partner": "Viking Footwear",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-vistaprint",
+      "partner": "Vistaprint",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-vivara",
+      "partner": "Vivara",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-vrbo",
+      "partner": "Vrbo",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-wakakuu",
+      "partner": "Wakakuu",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-watery",
+      "partner": "Watery",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-weekday",
+      "partner": "Weekday",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-youwish",
+      "partner": "YouWish",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-yoursurprise",
+      "partner": "YourSurprise",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-zoo",
+      "partner": "ZOO",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-dekkonline",
+      "partner": "dekkonline.com",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-ebay",
+      "partner": "eBay",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-estore",
+      "partner": "eStore",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-homeroom",
+      "partner": "homeroom",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-inkclub",
+      "partner": "inkClub.com",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-kinogavekort",
+      "partner": "kinogavekort",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-lastminute",
+      "partner": "lastminute.com",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-mimmis",
+      "partner": "mimmis",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-trumf-netthandel-weloveholidays",
+      "partner": "weloveholidays",
+      "channel": "trumf-netthandel",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-klarna-lindex",
+      "partner": "Lindex",
+      "channel": "klarna",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-klarna-miinto",
+      "partner": "Miinto",
+      "channel": "klarna",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-klarna-gameseal",
+      "partner": "GameSeal",
+      "channel": "klarna",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-klarna-lampegiganten",
+      "partner": "Lampegiganten",
+      "channel": "klarna",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-klarna-revolutionrace",
+      "partner": "RevolutionRace",
+      "channel": "klarna",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-klarna-karcher",
+      "partner": "Kärcher",
+      "channel": "klarna",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-klarna-vieve",
+      "partner": "Vieve",
+      "channel": "klarna",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-klarna-lampemesteren",
+      "partner": "Lampemesteren",
+      "channel": "klarna",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-klarna-steamery",
+      "partner": "Steamery",
+      "channel": "klarna",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-sas-online-kicks",
+      "partner": "KICKS",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-bakerenogkokken",
+      "partner": "Bakeren og Kokken",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-kitchn",
+      "partner": "Kitch’n",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-miinto",
+      "partner": "Miinto",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-tilbords",
+      "partner": "Tilbords",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-vita",
+      "partner": "VITA",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-ginatricot",
+      "partner": "Gina Tricot",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-nordicnest",
+      "partner": "Nordic Nest",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-fotoknudsen",
+      "partner": "FotoKnudsen",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-elektroimportoren",
+      "partner": "Elektroimportøren.no",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-zooplus",
+      "partner": "Zooplus",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-apotekhjem",
+      "partner": "Apotekhjem",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-vakrevene",
+      "partner": "Vakre Vene",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-lensway",
+      "partner": "Lensway",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-stormberg",
+      "partner": "Stormberg",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-fredriklouisa",
+      "partner": "Fredrik & Louisa",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-vetzoo",
+      "partner": "VetZoo",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-nelly",
+      "partner": "Nelly.com",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-gullfunn",
+      "partner": "Gullfunn",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-floyd",
+      "partner": "Floyd",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-framsport",
+      "partner": "Framsport",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-eurodel",
+      "partner": "Eurodel",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-lampegiganten",
+      "partner": "Lampegiganten",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-lopeshop",
+      "partner": "Løpeshop",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-elon",
+      "partner": "ELON",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-lenson",
+      "partner": "LensOn",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-vpg",
+      "partner": "VPG.no",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-dyson",
+      "partner": "Dyson",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-staypro",
+      "partner": "Staypro",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-lego",
+      "partner": "LEGO",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-babyshop",
+      "partner": "Babyshop",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-bubbleroom",
+      "partner": "Bubbleroom",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-lekmer",
+      "partner": "Lekmer",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-comforthscandinavia",
+      "partner": "Comforth Scandinavia",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-jotex",
+      "partner": "Jotex",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-hellyhansen",
+      "partner": "Helly Hansen",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-skruvat",
+      "partner": "Skruvat",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-sharkninja",
+      "partner": "SharkNinja",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-polarnopyret",
+      "partner": "Polarn O. Pyret",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-bodystore",
+      "partner": "Bodystore",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-idealofsweden",
+      "partner": "Ideal of Sweden",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-bad",
+      "partner": "Bad.no",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-siemenshome",
+      "partner": "Siemens Home",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-zoo",
+      "partner": "ZOO.no",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-kitchentime",
+      "partner": "KitchenTime",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-philipshue",
+      "partner": "Philips Hue",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-lunehjem",
+      "partner": "Lunehjem.no",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-philipshomeappliances",
+      "partner": "Philips Home Appliances",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-autodoc",
+      "partner": "Autodoc",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-kinogavekort",
+      "partner": "Kinogavekort",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-batteriexperten",
+      "partner": "batteriexperten.com",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-homeroom",
+      "partner": "Homeroom",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-newbalance",
+      "partner": "New Balance",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-bokia",
+      "partner": "Bokia",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-nlyman",
+      "partner": "NLY Man",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-timarco",
+      "partner": "Timarco",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-bladkongen",
+      "partner": "Bladkongen.no",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-bilxtra",
+      "partner": "Bilxtra",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-karcher",
+      "partner": "Kärcher",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-smartphoto",
+      "partner": "Smartphoto",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-weekday",
+      "partner": "WEEKDAY",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-skogstadsport",
+      "partner": "Skogstad Sport",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-urverket",
+      "partner": "Urverket.no",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-bjornborg",
+      "partner": "Björn Borg",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-jbl",
+      "partner": "JBL.com",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-slikkepott",
+      "partner": "Slikkepott",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-petxl",
+      "partner": "PetXL",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-trendcarpet",
+      "partner": "Trendcarpet",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-electrolux",
+      "partner": "Electrolux",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-dekkonline",
+      "partner": "dekkonline.com",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-lampemesteren",
+      "partner": "Lampemesteren",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-beautycos",
+      "partner": "Beautycos",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-newport",
+      "partner": "Newport",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-pilgrim",
+      "partner": "Pilgrim",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-ilovedogs",
+      "partner": "I love dogs",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-hunkemoller",
+      "partner": "Hunkemøller",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-vidaxl",
+      "partner": "VidaXL",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-youwish",
+      "partner": "YouWish",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-myprotein",
+      "partner": "MyProtein",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-brilleland",
+      "partner": "Brilleland",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-swims",
+      "partner": "SWIMS",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-watery",
+      "partner": "Watery",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-edblad",
+      "partner": "Edblad",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-kajakkogfritid",
+      "partner": "Kajakk og Fritid",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-lenovo",
+      "partner": "Lenovo",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-autodude",
+      "partner": "Autodude",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-stille",
+      "partner": "Stille",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-barbershop",
+      "partner": "Barbershop.no",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-nordicprint",
+      "partner": "Nordic Print",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-tigerofsweden",
+      "partner": "Tiger of Sweden",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-haglofs",
+      "partner": "Haglöfs",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-interoptik",
+      "partner": "Interoptik",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-tempur",
+      "partner": "Tempur",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-jlindeberg",
+      "partner": "J. Lindeberg",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-safira",
+      "partner": "Safira",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-aeg",
+      "partner": "AEG",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-stigasports",
+      "partner": "Stiga Sports",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-viator",
+      "partner": "Viator",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-acer",
+      "partner": "Acer",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-badstil",
+      "partner": "Bad & Stil",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-ewheels",
+      "partner": "E-Wheels",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-gstar",
+      "partner": "G-Star",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-glowid",
+      "partner": "GLOWiD",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-dentaworks",
+      "partner": "Dentaworks",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-onyxcookware",
+      "partner": "Onyx Cookware",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-hultens",
+      "partner": "Hulténs",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-puma",
+      "partner": "Puma",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-osloskinlab",
+      "partner": "Oslo Skin Lab",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-autodeler",
+      "partner": "Autodeler",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-harmankardon",
+      "partner": "Harman Kardon",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-inkmann",
+      "partner": "Inkmann",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-interhome",
+      "partner": "Interhome",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-tirendo",
+      "partner": "Tirendo",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-pergolux",
+      "partner": "Pergolux",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-expressvpn",
+      "partner": "ExpressVPN",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-boschhome",
+      "partner": "Bosch Home",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-holdit",
+      "partner": "Holdit",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-revolutionrace",
+      "partner": "Revolution Race",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-skinome",
+      "partner": "Skinome",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-agoda",
+      "partner": "Agoda",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-bymalenebirger",
+      "partner": "By Malene Birger",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-camillaphil",
+      "partner": "Camilla Phil",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-charlieshus",
+      "partner": "Charlies hus",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-christianiaglassmagasin",
+      "partner": "Christiania Glassmagasin",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-db",
+      "partner": "Db Journey",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-euroflorist",
+      "partner": "Euroflorist",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-festkompaniet",
+      "partner": "Festkompaniet",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-gents",
+      "partner": "Gents",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-iphonehuset",
+      "partner": "iPhonehuset",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-irobot",
+      "partner": "iRobot",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-kremmerhuset",
+      "partner": "Kremmerhuset",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-lyrdesign",
+      "partner": "LYR Design",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-mangotango",
+      "partner": "Mangotango",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-navnelapper",
+      "partner": "Navnelapper",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-nespresso",
+      "partner": "Nespresso",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-newchic",
+      "partner": "Newchic",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-nordhost",
+      "partner": "Nordhost",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-pace",
+      "partner": "Pace",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-rayban",
+      "partner": "Ray-Ban",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-rito",
+      "partner": "RITO",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-selected",
+      "partner": "Selected",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-shampoohuset",
+      "partner": "Shampoohuset",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-sistie",
+      "partner": "Sistie",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-sofasmore",
+      "partner": "Sofas & More",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-soma",
+      "partner": "Soma",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-thechef",
+      "partner": "TheChef",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-velosophy",
+      "partner": "Velosophy",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-vinlagringskompaniet",
+      "partner": "Vinlagringskompaniet",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-wonhundred",
+      "partner": "Won Hundred",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-aretrotale",
+      "partner": "A Retro Tale",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-footballtravel",
+      "partner": "Football Travel",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-kjellcompany",
+      "partner": "Kjell & Company",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-mytheresa",
+      "partner": "Mytheresa",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-samsung",
+      "partner": "SAMSUNG",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-sonos",
+      "partner": "Sonos",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-vybuss",
+      "partner": "Vy Buss",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-aktivvinter",
+      "partner": "Aktivvinter.no",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-authenticeurope",
+      "partner": "Authentic Europe",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-authenticscandinavia",
+      "partner": "Authentic Scandinavia",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-boohoo",
+      "partner": "Boohoo",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-camper",
+      "partner": "Camper",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-cellbes",
+      "partner": "Cellbes",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-clarins",
+      "partner": "Clarins",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-detailshop",
+      "partner": "Detailshop",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-electroluxsparesaccessories",
+      "partner": "Electrolux Spares & accessories",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-etsy",
+      "partner": "Etsy",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-eurotoys",
+      "partner": "Eurotoys",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-flowlife",
+      "partner": "Flowlife",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-footshopeu",
+      "partner": "Footshop.eu",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-greatlife",
+      "partner": "Greatlife",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-hairlust",
+      "partner": "HairLust",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-interflora",
+      "partner": "Interflora",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-jaktfriluft",
+      "partner": "Jakt & Friluft",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-kidsworld",
+      "partner": "Kids-World",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-kokkeglede",
+      "partner": "Kokkeglede",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-liffner",
+      "partner": "Liffner",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-lusini",
+      "partner": "Lusini",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-lysman",
+      "partner": "Lysman",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-lannamobler",
+      "partner": "Länna Møbler",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-marshall",
+      "partner": "Marshall",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-mulberry",
+      "partner": "Mulberry",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-nordiskagalleriet",
+      "partner": "Nordiska Galleriet",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-outdoorexperten",
+      "partner": "OutdoorExperten",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-partyking",
+      "partner": "partyking",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-patpat",
+      "partner": "PatPat",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-pinkorblue",
+      "partner": "pink or blue",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-prydligt",
+      "partner": "Prydligt",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-royaldesign",
+      "partner": "Royal Design",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-senzeofjoy",
+      "partner": "Senze of Joy",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-shopping4net",
+      "partner": "Shopping4net",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-sportgymbutikken",
+      "partner": "Sportgymbutikken",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-sportshopen",
+      "partner": "Sportshopen",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-sporttema",
+      "partner": "Sporttema",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-stayinplace",
+      "partner": "Stay In Place",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-steamery",
+      "partner": "Steamery",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-stellamccartney",
+      "partner": "Stella McCartney",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-trapessko",
+      "partner": "Trapessko",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-truestory",
+      "partner": "Truestory",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-ttline",
+      "partner": "TT-line",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-underarmour",
+      "partner": "Under Armour",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-understatement",
+      "partner": "Understatement",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-xlife",
+      "partner": "X-life",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-xlash",
+      "partner": "Xlash",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-aarke",
+      "partner": "Aarke",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-dustinbedrift",
+      "partner": "Dustin Bedrift",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-sharkgaming",
+      "partner": "Shark Gaming",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-farnell",
+      "partner": "Farnell",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-flixbus",
+      "partner": "Flixbus",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-skistart",
+      "partner": "Skistart.com",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-widforss",
+      "partner": "Widforss",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-cruisedirect",
+      "partner": "CruiseDirect",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-herschelsupplyco",
+      "partner": "Herschel Supply Co",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-racketspecialisten",
+      "partner": "Racketspecialisten",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-razer",
+      "partner": "Razer",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-stockx",
+      "partner": "StockX",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-ishavskraftstrom",
+      "partner": "Ishavskraft strøm",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-nitecaps",
+      "partner": "NiteCaps",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-trivelia",
+      "partner": "Trivelia",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-calstop",
+      "partner": "Calstop",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-fyndiq",
+      "partner": "Fyndiq",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-sas-online-liestudio",
+      "partner": "Lié Studio",
+      "channel": "sas-online",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-villoid",
+      "partner": "Villoid",
+      "channel": "spenn",
+      "verification": "app-required"
+    },
+    {
+      "id": "tilbud-nett-spenn-dyson",
+      "partner": "Dyson",
+      "channel": "spenn",
+      "verification": "app-required"
+    },
+    {
+      "id": "tilbud-nett-spenn-pierrerobert",
+      "partner": "Pierre Robert",
+      "channel": "spenn",
+      "verification": "app-required"
+    },
+    {
+      "id": "tilbud-nett-spenn-homely",
+      "partner": "Homely",
+      "channel": "spenn",
+      "verification": "app-required"
+    },
+    {
+      "id": "tilbud-nett-spenn-hurtigruten",
+      "partner": "Hurtigruten",
+      "channel": "spenn",
+      "verification": "app-required"
+    },
+    {
+      "id": "tilbud-nett-spenn-farmasiet",
+      "partner": "Farmasiet",
+      "channel": "spenn",
+      "verification": "app-required"
+    },
+    {
+      "id": "tilbud-nett-spenn-blivakker",
+      "partner": "BliVakker",
+      "channel": "spenn",
+      "verification": "app-required"
+    },
+    {
+      "id": "tilbud-nett-spenn-samsung",
+      "partner": "Samsung",
+      "channel": "spenn",
+      "verification": "app-required"
+    },
+    {
+      "id": "tilbud-nett-spenn-direct-lensway",
+      "partner": "Lensway",
+      "channel": "spenn-direct",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-spenn-autodude",
+      "partner": "Autodude",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-detailshop",
+      "partner": "Detailshop",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-autodeler",
+      "partner": "autodeler.no",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-bilxtra",
+      "partner": "BilXtra",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-eurodel",
+      "partner": "Eurodel",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-elskling",
+      "partner": "Elskling.no",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-nespresso",
+      "partner": "Nespresso",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-comforthscandinavia",
+      "partner": "Comforth Scandinavia",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-interoptik",
+      "partner": "Interoptik",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-brilleland",
+      "partner": "Brilleland",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-dentaworks",
+      "partner": "DentaWorks",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-sephora",
+      "partner": "Sephora",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-beautymall",
+      "partner": "Beauty Mall",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-loccitane",
+      "partner": "L'Occitane",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-libresse",
+      "partner": "Libresse",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-greatlife",
+      "partner": "Greatlife",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-glowid",
+      "partner": "GLOWiD",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-skinome",
+      "partner": "Skinome",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-kost1",
+      "partner": "Kost1",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-flowlife",
+      "partner": "Flowlife",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-kicks",
+      "partner": "Kicks",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-shopping4net",
+      "partner": "Shopping4net",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-makeupmekka",
+      "partner": "Makeup Mekka",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-beautycos",
+      "partner": "Beautycos",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-hudprodukter",
+      "partner": "Hudprodukter.no",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-chicastore",
+      "partner": "Chicastore",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-xlash",
+      "partner": "Xlash",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-apotekhjem",
+      "partner": "Apotekhjem.no",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-nicebeauty",
+      "partner": "NiceBeauty",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-barbershop",
+      "partner": "Barbershop",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-bodystore",
+      "partner": "Bodystore",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-proteinfabrikken",
+      "partner": "Proteinfabrikken",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-maxulin",
+      "partner": "Maxulin",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-osloskinlab",
+      "partner": "Oslo Skin Lab",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-racketspesialisten",
+      "partner": "Racketspesialisten",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-skistart",
+      "partner": "Skistart",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-sportgymbutikken",
+      "partner": "Sportgymbutikken.no",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-bokia",
+      "partner": "Bokia",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-albert",
+      "partner": "Albert",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-kinoklubb",
+      "partner": "Kinoklubb",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-stormberg",
+      "partner": "Stormberg",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-kayani",
+      "partner": "Kayani",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-aimn",
+      "partner": "aim'n",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-polarnopyret",
+      "partner": "Polarn O. Pyret",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-pilgrim",
+      "partner": "Pilgrim",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-suitable",
+      "partner": "Suitable",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-timarco",
+      "partner": "Timarco",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-prydligt",
+      "partner": "Prydligt.com",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-bjornborg",
+      "partner": "Björn Borg",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-lindex",
+      "partner": "Lindex",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-vikingfootwear",
+      "partner": "Viking Footwear",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-devold",
+      "partner": "Devold",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-safira",
+      "partner": "Safira",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-urbanpioneers",
+      "partner": "Urban Pioneers",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-swims",
+      "partner": "SWIMS",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-jlindeberg",
+      "partner": "J.Lindeberg",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-urverket",
+      "partner": "Urverket",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-smaungene",
+      "partner": "Småungene",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-skogstadsport",
+      "partner": "Skogstad Sport",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-floyd",
+      "partner": "Floyd",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-kouture",
+      "partner": "Kouture",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-didriksons",
+      "partner": "Didriksons",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-ellos",
+      "partner": "Ellos",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-nelly",
+      "partner": "Nelly",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-bubbleroom",
+      "partner": "Bubbleroom",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-ralphlauren",
+      "partner": "Ralph Lauren",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-skeidar",
+      "partner": "Skeidar",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-newport",
+      "partner": "Newport",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-lunehjem",
+      "partner": "Lunehjem",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-stille",
+      "partner": "Stille",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-lampegiganten",
+      "partner": "Lampegiganten",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-lampemesteren",
+      "partner": "Lampemesteren",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-sofasandmore",
+      "partner": "Sofas and More",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-slikkepott",
+      "partner": "Slikkepott",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-trendcarpet",
+      "partner": "Trendcarpet",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-christianiaglasmagasin",
+      "partner": "Christiania Glasmagasin",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-backeigrensen",
+      "partner": "Backe i Grensen",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-jotex",
+      "partner": "Jotex",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-royaldesign",
+      "partner": "Royal Design",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-badstil",
+      "partner": "Badstil",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-hultens",
+      "partner": "Hulténs",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-bad",
+      "partner": "Bad.no",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-bakerenogkokken",
+      "partner": "Bakeren og Kokken",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-kitchn",
+      "partner": "Kitch'n",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-karcher",
+      "partner": "Kärcher",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-northtrampoline",
+      "partner": "North Trampoline",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-vivara",
+      "partner": "Vivara",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-inkclub",
+      "partner": "inkClub",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-smartphoto",
+      "partner": "Smartphoto",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-cdon",
+      "partner": "CDON",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-lappeliten",
+      "partner": "Lappeliten",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-babysjarm",
+      "partner": "Babysjarm",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-zooplus",
+      "partner": "Zooplus",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-batteriexperten",
+      "partner": "Batteriexperten",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-electrolux",
+      "partner": "Electrolux",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-aeg",
+      "partner": "AEG",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-iphonehuset",
+      "partner": "iPhonehuset",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-xplora",
+      "partner": "Xplora",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-euroflorist",
+      "partner": "Euroflorist",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-partyking",
+      "partner": "Partyking",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-sharkninja",
+      "partner": "SharkNinja",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-petxl",
+      "partner": "PetXL.no",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-dyrekassen",
+      "partner": "Dyrekassen.no",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-babybanden",
+      "partner": "Babybanden",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-drommerom",
+      "partner": "Drømmerom",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-philipshue",
+      "partner": "Philips Hue",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-holdit",
+      "partner": "Holdit",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-bosch",
+      "partner": "Bosch",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-siemenshome",
+      "partner": "Siemens Home",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-minifinder",
+      "partner": "MiniFinder",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-uppababy",
+      "partner": "Uppababy",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-philipshomeappliances",
+      "partner": "Philips Home Appliances",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-foto",
+      "partner": "Foto.no",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-babyshop",
+      "partner": "Babyshop",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-sharkgaming",
+      "partner": "Shark Gaming",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-spenn-fyndiq",
+      "partner": "Fyndiq",
+      "channel": "spenn",
+      "verification": "needs-review"
+    },
+    {
+      "id": "tilbud-nett-eurobonus-shop-giftcard-zalando",
+      "partner": "Zalando",
+      "channel": "eurobonus-shop-giftcard",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-eurobonus-shop-giftcard-dressmann",
+      "partner": "Dressmann",
+      "channel": "eurobonus-shop-giftcard",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-eurobonus-shop-giftcard-dinsko",
+      "partner": "DinSko",
+      "channel": "eurobonus-shop-giftcard",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-eurobonus-shop-giftcard-rituals",
+      "partner": "Rituals",
+      "channel": "eurobonus-shop-giftcard",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-eurobonus-shop-giftcard-cervera",
+      "partner": "Cervera",
+      "channel": "eurobonus-shop-giftcard",
+      "verification": "verified"
+    },
+    {
+      "id": "tilbud-nett-eurobonus-shop-giftcard-plantasjen",
+      "partner": "Plantasjen",
+      "channel": "eurobonus-shop-giftcard",
+      "verification": "verified"
+    }
+  ],
+  "rateChanges": [
+    {
+      "partner": "Kicks",
+      "program": "klarna",
+      "before": "6 % cashback",
+      "after": "3 %"
+    },
+    {
+      "partner": "Farmasiet",
+      "program": "klarna",
+      "before": "4 % cashback",
+      "after": "2 %"
+    },
+    {
+      "partner": "Lyko",
+      "program": "klarna",
+      "before": "5,5 % cashback",
+      "after": "3 %"
+    },
+    {
+      "partner": "ginatricot.com",
+      "program": "klarna",
+      "before": "5,5 % cashback",
+      "after": "3 %"
+    },
+    {
+      "partner": "CS MEGASTORE",
+      "program": "klarna",
+      "before": "3 % cashback",
+      "after": "1,5 %"
+    },
+    {
+      "partner": "Zooplus",
+      "program": "klarna",
+      "before": "4 % cashback",
+      "after": "1–2 %"
+    },
+    {
+      "partner": "Autodoc",
+      "program": "klarna",
+      "before": "5,5 % cashback",
+      "after": "2,5–4 %"
+    },
+    {
+      "partner": "Floyd",
+      "program": "klarna",
+      "before": "5,5 % cashback",
+      "after": "3 %"
+    },
+    {
+      "partner": "Adidas",
+      "program": "klarna",
+      "before": "5 % cashback",
+      "after": "2,5 %"
+    },
+    {
+      "partner": "VetZoo",
+      "program": "klarna",
+      "before": "4 % cashback",
+      "after": "2 %"
+    },
+    {
+      "partner": "Nike",
+      "program": "klarna",
+      "before": "3,5 % cashback",
+      "after": "1–2 %"
+    },
+    {
+      "partner": "VidaXL",
+      "program": "klarna",
+      "before": "5 % cashback",
+      "after": "2,5 %"
+    },
+    {
+      "partner": "Samsung",
+      "program": "klarna",
+      "before": "5,5 % cashback",
+      "after": "1,5 %"
+    },
+    {
+      "partner": "Iherb",
+      "program": "klarna",
+      "before": "7 % cashback",
+      "after": "3,5 %"
+    },
+    {
+      "partner": "Dyson",
+      "program": "klarna",
+      "before": "3 % cashback",
+      "after": "1,5 %"
+    },
+    {
+      "partner": "Kjell & Company",
+      "program": "klarna",
+      "before": "3 % cashback",
+      "after": "1,5 %"
+    },
+    {
+      "partner": "Vero Moda",
+      "program": "klarna",
+      "before": "7 % cashback",
+      "after": "3,5 %"
+    },
+    {
+      "partner": "Outnorth",
+      "program": "klarna",
+      "before": "7 % cashback",
+      "after": "3,5 %"
+    },
+    {
+      "partner": "Elon",
+      "program": "klarna",
+      "before": "3,5 % cashback",
+      "after": "1,5–2 %"
+    },
+    {
+      "partner": "gullfunn.no",
+      "program": "klarna",
+      "before": "7 % cashback",
+      "after": "3,5 %"
+    },
+    {
+      "partner": "Sephora",
+      "program": "klarna",
+      "before": "12,5 % cashback",
+      "after": "2–6,5 %"
+    },
+    {
+      "partner": "Bubbleroom",
+      "program": "klarna",
+      "before": "5,5 % cashback",
+      "after": "3 %"
+    },
+    {
+      "partner": "Lensway",
+      "program": "klarna",
+      "before": "7 % cashback",
+      "after": "3,5 %"
+    },
+    {
+      "partner": "asos",
+      "program": "klarna",
+      "before": "3,5 % cashback",
+      "after": "1 %"
+    },
+    {
+      "partner": "Lego Shop",
+      "program": "klarna",
+      "before": "7 % cashback",
+      "after": "1–3,5 %"
+    },
+    {
+      "partner": "Only",
+      "program": "klarna",
+      "before": "7 % cashback",
+      "after": "3,5 %"
+    },
+    {
+      "partner": "EMP Shop",
+      "program": "klarna",
+      "before": "9 % cashback",
+      "after": "4,5 %"
+    },
+    {
+      "partner": "Makeup Mekka",
+      "program": "klarna",
+      "before": "5,5 % cashback",
+      "after": "3 %"
+    },
+    {
+      "partner": "Husqvarna",
+      "program": "klarna",
+      "before": "5 % cashback",
+      "after": "2 %"
+    },
+    {
+      "partner": "Db Journey",
+      "program": "klarna",
+      "before": "4 % cashback",
+      "after": "5 %"
+    },
+    {
+      "partner": "24mx",
+      "program": "klarna",
+      "before": "5 % cashback",
+      "after": "2,5 %"
+    },
+    {
+      "partner": "ARKET",
+      "program": "klarna",
+      "before": "7 % cashback",
+      "after": "1–3,5 %"
+    },
+    {
+      "partner": "Scandic Hotels",
+      "program": "klarna",
+      "before": "3 % cashback",
+      "after": "1,5 %"
+    },
+    {
+      "partner": "Disney+",
+      "program": "klarna",
+      "before": "10,5 % cashback",
+      "after": "5,5 %"
+    },
+    {
+      "partner": "Vila",
+      "program": "klarna",
+      "before": "7 % cashback",
+      "after": "3 %"
+    },
+    {
+      "partner": "Tiger of Sweden",
+      "program": "klarna",
+      "before": "8,5 % cashback",
+      "after": "4 %"
+    },
+    {
+      "partner": "Dekk",
+      "program": "klarna",
+      "before": "3 % cashback",
+      "after": "1,5 %"
+    },
+    {
+      "partner": "By Malene Birger",
+      "program": "klarna",
+      "before": "7 % cashback",
+      "after": "5,5 %"
+    },
+    {
+      "partner": "Ralph Lauren",
+      "program": "klarna",
+      "before": "3,5 % cashback",
+      "after": "1–3 %"
+    },
+    {
+      "partner": "Ecco",
+      "program": "klarna",
+      "before": "7 % cashback",
+      "after": "3,5 %"
+    },
+    {
+      "partner": "Lenson",
+      "program": "klarna",
+      "before": "5,5 % cashback",
+      "after": "3 %"
+    },
+    {
+      "partner": "Philips Hue",
+      "program": "klarna",
+      "before": "5 % cashback",
+      "after": "3,5 %"
+    },
+    {
+      "partner": "GetYourGuide",
+      "program": "klarna",
+      "before": "5 % cashback",
+      "after": "2,5 %"
+    },
+    {
+      "partner": "Name it",
+      "program": "klarna",
+      "before": "7 % cashback",
+      "after": "3 %"
+    },
+    {
+      "partner": "Puma",
+      "program": "klarna",
+      "before": "7 % cashback",
+      "after": "3,5 %"
+    },
+    {
+      "partner": "iDeal of Sweden",
+      "program": "klarna",
+      "before": "7 % cashback",
+      "after": "3,5 %"
+    },
+    {
+      "partner": "SkyShowtime",
+      "program": "klarna",
+      "before": "21 % cashback",
+      "after": "7–10,5 %"
+    },
+    {
+      "partner": "I Love Dogs",
+      "program": "klarna",
+      "before": "5,5 % cashback",
+      "after": "3 %"
+    },
+    {
+      "partner": "Urverket",
+      "program": "klarna",
+      "before": "3 % cashback",
+      "after": "1,5 %"
+    },
+    {
+      "partner": "WAKAKUU",
+      "program": "klarna",
+      "before": "10,5 % cashback",
+      "after": "4 %"
+    },
+    {
+      "partner": "Acer",
+      "program": "klarna",
+      "before": "3,5 % cashback",
+      "after": "3 %"
+    },
+    {
+      "partner": "Blue Tomato",
+      "program": "klarna",
+      "before": "5 % cashback",
+      "after": "2,5 %"
+    },
+    {
+      "partner": "Only & Sons",
+      "program": "klarna",
+      "before": "7 % cashback",
+      "after": "3,5 %"
+    },
+    {
+      "partner": "Y.A.S",
+      "program": "klarna",
+      "before": "7 % cashback",
+      "after": "4 %"
+    },
+    {
+      "partner": "Mytheresa",
+      "program": "klarna",
+      "before": "5,5 % cashback",
+      "after": "1–2,5 %"
+    },
+    {
+      "partner": "Selected",
+      "program": "klarna",
+      "before": "7 % cashback",
+      "after": "4 %"
+    },
+    {
+      "partner": "Interflora",
+      "program": "klarna",
+      "before": "5,5 % cashback",
+      "after": "3 %"
+    },
+    {
+      "partner": "Hunkemöller",
+      "program": "klarna",
+      "before": "7,5 % cashback",
+      "after": "4 %"
+    },
+    {
+      "partner": "Dolce & Gabbana",
+      "program": "klarna",
+      "before": "8,5 % cashback",
+      "after": "4 %"
+    },
+    {
+      "partner": "Meta",
+      "program": "klarna",
+      "before": "7 % cashback",
+      "after": "3,5 %"
+    },
+    {
+      "partner": "Sonos",
+      "program": "klarna",
+      "before": "2 % cashback",
+      "after": "2–3 %"
+    },
+    {
+      "partner": "FRANKBROS",
+      "program": "klarna",
+      "before": "5 % cashback",
+      "after": "2,5 %"
+    },
+    {
+      "partner": "MAMMUT",
+      "program": "klarna",
+      "before": "3 % cashback",
+      "after": "1,5 %"
+    },
+    {
+      "partner": "Object",
+      "program": "klarna",
+      "before": "7 % cashback",
+      "after": "3 %"
+    },
+    {
+      "partner": "Pieces",
+      "program": "klarna",
+      "before": "7 % cashback",
+      "after": "4 %"
+    },
+    {
+      "partner": "Roberto Cavalli",
+      "program": "klarna",
+      "before": "5 % cashback",
+      "after": "2,5 %"
+    },
+    {
+      "partner": "Layered",
+      "program": "klarna",
+      "before": "7 % cashback",
+      "after": "3,5 %"
+    },
+    {
+      "partner": "steelseries",
+      "program": "klarna",
+      "before": "7 % cashback",
+      "after": "3,5 %"
+    },
+    {
+      "partner": "vistaprint",
+      "program": "klarna",
+      "before": "5,5 % cashback",
+      "after": "1–3 %"
+    },
+    {
+      "partner": "Fever",
+      "program": "klarna",
+      "before": "10,5 % cashback",
+      "after": "2–5,5 %"
+    },
+    {
+      "partner": "Bemz",
+      "program": "klarna",
+      "before": "5,5 % cashback",
+      "after": "3 %"
+    },
+    {
+      "partner": "Off-White",
+      "program": "klarna",
+      "before": "5,5 % cashback",
+      "after": "3 %"
+    },
+    {
+      "partner": "Paul & Shark",
+      "program": "klarna",
+      "before": "7 % cashback",
+      "after": "3,5 %"
+    },
+    {
+      "partner": "ANTONIOLI",
+      "program": "klarna",
+      "before": "7 % cashback",
+      "after": "3,5 %"
+    },
+    {
+      "partner": "MiaMily",
+      "program": "klarna",
+      "before": "8,5 % cashback",
+      "after": "4 %"
+    },
+    {
+      "partner": "LN-CC",
+      "program": "klarna",
+      "before": "5,5 % cashback",
+      "after": "3 %"
+    },
+    {
+      "partner": "Fenty Beauty",
+      "program": "klarna",
+      "before": "4 % cashback",
+      "after": "2 %"
+    },
+    {
+      "partner": "Palm Angels",
+      "program": "klarna",
+      "before": "5,5 % cashback",
+      "after": "3 %"
+    },
+    {
+      "partner": "AGV",
+      "program": "klarna",
+      "before": "7 % cashback",
+      "after": "3,5 %"
+    },
+    {
+      "partner": "Olivieri 1882",
+      "program": "klarna",
+      "before": "5,5 % cashback",
+      "after": "3 %"
+    },
+    {
+      "partner": "Scarosso",
+      "program": "klarna",
+      "before": "5,5 % cashback",
+      "after": "3 %"
+    },
+    {
+      "partner": "Casadei",
+      "program": "klarna",
+      "before": "5,5 % cashback",
+      "after": "3 %"
+    },
+    {
+      "partner": "Eastpak",
+      "program": "klarna",
+      "before": "4 % cashback",
+      "after": "2 %"
+    },
+    {
+      "partner": "Mamalicious",
+      "program": "klarna",
+      "before": "7 % cashback",
+      "after": "3,5 %"
+    },
+    {
+      "partner": "ferryhopper",
+      "program": "klarna",
+      "before": "2 % cashback",
+      "after": "1 %"
+    },
+    {
+      "partner": "Omio",
+      "program": "klarna",
+      "before": "4 % cashback",
+      "after": "1–2 %"
+    },
+    {
+      "partner": "NORTVI",
+      "program": "klarna",
+      "before": "8,5 % cashback",
+      "after": "4 %"
+    },
+    {
+      "partner": "New Balance",
+      "program": "klarna",
+      "before": "3,5 % cashback",
+      "after": "2 %"
+    },
+    {
+      "partner": "XLMOTO",
+      "program": "klarna",
+      "before": "5 % cashback",
+      "after": "2,5 %"
+    },
+    {
+      "partner": "Roa Hiking",
+      "program": "klarna",
+      "before": "7 % cashback",
+      "after": "3,5 %"
+    },
+    {
+      "partner": "eStore",
+      "program": "klarna",
+      "before": "3,5 % cashback",
+      "after": "2 %"
+    },
+    {
+      "partner": "Click&Boat",
+      "program": "klarna",
+      "before": "4 % cashback",
+      "after": "1–2 %"
+    },
+    {
+      "partner": "weloveholidays",
+      "program": "klarna",
+      "before": "3 % cashback",
+      "after": "1,5 %"
+    },
+    {
+      "partner": "Maria Nila",
+      "program": "klarna",
+      "before": "7 % cashback",
+      "after": "3,5 %"
+    },
+    {
+      "partner": "AVIS",
+      "program": "trumf",
+      "before": "10,1 % Trumf-bonus",
+      "after": "7,8–9,3 %"
+    },
+    {
+      "partner": "Radisson Hotels",
+      "program": "trumf",
+      "before": "7,8 % Trumf-bonus",
+      "after": "6,2 %"
+    },
+    {
+      "partner": "Hotels.com",
+      "program": "trumf",
+      "before": "6,2 % hotell / 1,1 % leiebil",
+      "after": "1,1–4,6 %"
+    },
+    {
+      "partner": "KICKS",
+      "program": "trumf",
+      "before": "4,6 % Trumf-bonus",
+      "after": "5,4 %"
+    },
+    {
+      "partner": "Gymgrossisten",
+      "program": "trumf",
+      "before": "Opptil 4,6 % Trumf-bonus",
+      "after": "4,6–9,3 %"
+    },
+    {
+      "partner": "LYKO",
+      "program": "trumf",
+      "before": "3,9 % Trumf-bonus",
+      "after": "7 %"
+    },
+    {
+      "partner": "Blivakker",
+      "program": "trumf",
+      "before": "3,1 % Trumf-bonus",
+      "after": "4,6 %"
+    },
+    {
+      "partner": "Scandic Hotels",
+      "program": "trumf",
+      "before": "4,6 % Trumf-bonus",
+      "after": "3,1 %"
+    }
+  ],
+  "missing": [
+    {
+      "partner": "Stormberg",
+      "program": "klarna"
+    },
+    {
+      "partner": "SHEIN",
+      "program": "klarna"
+    },
+    {
+      "partner": "Byttdekk",
+      "program": "klarna"
+    },
+    {
+      "partner": "COS",
+      "program": "klarna"
+    },
+    {
+      "partner": "Polarn O. Pyret",
+      "program": "klarna"
+    },
+    {
+      "partner": "JBL",
+      "program": "klarna"
+    },
+    {
+      "partner": "Autodude",
+      "program": "klarna"
+    },
+    {
+      "partner": "Weekday",
+      "program": "klarna"
+    },
+    {
+      "partner": "inkClub",
+      "program": "klarna"
+    },
+    {
+      "partner": "FlixBus",
+      "program": "klarna"
+    },
+    {
+      "partner": "StockX",
+      "program": "klarna"
+    },
+    {
+      "partner": "LOT Polish Airlines",
+      "program": "klarna"
+    },
+    {
+      "partner": "Jeanerica",
+      "program": "klarna"
+    },
+    {
+      "partner": "Parfym.no",
+      "program": "klarna"
+    },
+    {
+      "partner": "Haglöfs",
+      "program": "klarna"
+    },
+    {
+      "partner": "Noisy May",
+      "program": "klarna"
+    },
+    {
+      "partner": "Kate Spade",
+      "program": "klarna"
+    },
+    {
+      "partner": "Mainline Menswear",
+      "program": "klarna"
+    },
+    {
+      "partner": "Stuart Weitzman",
+      "program": "klarna"
+    },
+    {
+      "partner": "Guzzini",
+      "program": "klarna"
+    },
+    {
+      "partner": "Ellos",
+      "program": "trumf"
+    },
+    {
+      "partner": "Apple Store",
+      "program": "trumf"
+    }
+  ]
+}

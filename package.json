@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "npx tsx --test src/lib/calculators/gjeldsbremsen.test.ts src/lib/calculators/lanets-reelle-verdi.test.ts src/lib/calculators/lane-kapasitet.test.ts src/lib/calculators/sifo.test.ts src/lib/tilbud.test.ts src/lib/calculators/bsu.test.ts src/lib/calculators/eie-leie.test.ts src/lib/calculators/feriepenger.test.ts src/lib/calculators/utleiebolig.test.ts"
+    "test": "node --import tsx --test src/lib/calculators/gjeldsbremsen.test.ts src/lib/calculators/lanets-reelle-verdi.test.ts src/lib/calculators/lane-kapasitet.test.ts src/lib/calculators/sifo.test.ts src/lib/tilbud.test.ts src/lib/calculators/bsu.test.ts src/lib/calculators/eie-leie.test.ts src/lib/calculators/feriepenger.test.ts src/lib/calculators/utleiebolig.test.ts src/lib/netthandel.test.ts",
+    "typecheck": "tsc --noEmit",
+    "tilbud:report": "node --import tsx scripts/tilbud/report.ts"
   },
   "dependencies": {
     "next": "16.2.9",
@@ -22,6 +24,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.9",
     "tailwindcss": "^4",
+    "tsx": "^4.23.15",
     "typescript": "^5"
   }
 }

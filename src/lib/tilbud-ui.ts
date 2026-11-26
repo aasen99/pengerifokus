@@ -37,7 +37,7 @@ export type TilbudSortOption =
 
 export const TILBUD_SORT_OPTIONS: { value: TilbudSortOption; label: string }[] = [
   { value: "name-asc", label: "Navn A–Å" },
-  { value: "rate-desc", label: "Høyest rabatt" },
+  { value: "rate-desc", label: "Høyest beregnet verdi" },
   { value: "programs-desc", label: "Flest medlemskap" },
   { value: "category-asc", label: "Kategori" },
 ];
@@ -49,6 +49,16 @@ export interface TilbudFilterParams {
   student?: boolean;
   sortering?: TilbudSortOption;
   side?: number;
+  netthandel?: boolean;
+  flere?: boolean;
+  kontrollert?: boolean;
+  eb?: number;
+  spenn?: number;
+  trumf?: string;
+  belop?: number;
+  frakt?: number;
+  mva?: number;
+  kunde?: string;
 }
 
 /** Bygger /tilbud-URL med filter og paginering. */
@@ -63,6 +73,11 @@ export function buildTilbudHref(params: TilbudFilterParams): string {
     search.set("sortering", params.sortering);
   }
   if (params.side && params.side > 1) search.set("side", String(params.side));
+  for (const key of ["netthandel", "flere", "kontrollert"] as const) if (params[key]) search.set(key, "1");
+  const defaults = { eb: 10, spenn: 10, trumf: "cash", belop: 1000, frakt: 0, mva: 25, kunde: "existing" };
+  for (const key of Object.keys(defaults) as (keyof typeof defaults)[]) {
+    if (params[key] !== undefined && params[key] !== defaults[key]) search.set(key, String(params[key]));
+  }
   const qs = search.toString();
   return qs ? `/tilbud?${qs}` : "/tilbud";
 }

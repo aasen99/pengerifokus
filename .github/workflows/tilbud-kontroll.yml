@@ -1,0 +1,39 @@
+name: Kontroller offentlige netthandelsbonuser
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 7 * * *'
+permissions:
+  contents: read
+concurrency:
+  group: tilbud-kontroll
+  cancel-in-progress: true
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Hent komplett offentlig Trumf-katalog
+        run: python scripts/tilbud/collect-trumf.py --output /tmp/trumf-candidate.json
+      - name: Hent komplett offentlig Klarna-katalog
+        run: python scripts/tilbud/collect-klarna.py /tmp/klarna-candidate.json
+      - name: Normaliser og identifiser endringer
+        run: |
+          python scripts/tilbud/normalize.py trumf /tmp/trumf-candidate.json /tmp/trumf-normalized.json
+          python scripts/tilbud/normalize.py klarna /tmp/klarna-candidate.json /tmp/klarna-normalized.json
+          python scripts/tilbud/review.py src/data/netthandel/catalogue.json /tmp/trumf-normalized.json /tmp/klarna-normalized.json
+          cat /tmp/tilbud-review.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: tilbud-til-manuell-kontroll
+          path: |
+            /tmp/*candidate.json
+            /tmp/*normalized.json
+            /tmp/tilbud-changes.json
+            /tmp/tilbud-review.md
+          retention-days: 30

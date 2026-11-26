@@ -92,5 +92,34 @@ export interface Tilbud extends BaseContent {
   searchTags?: string[];
   /** ISO-dato (YYYY-MM-DD). Tilbudet skjules automatisk etter denne datoen. */
   expiresAt?: string;
+  shopping?: ShoppingDetails;
+}
+
+export interface ShoppingRate {
+  label: string;
+  value: number;
+  unit: "percent" | "points-per-100" | "fixed-points" | "fixed-kr";
+  audience?: "all" | "new" | "existing";
+  kind: "listed" | "ordinary" | "campaign";
+  regularValue?: number;
+  endsAt?: string;
+}
+
+export interface ShoppingDetails {
+  channel: "sas-online" | "trumf-netthandel" | "klarna" | "spenn" | "spenn-direct" | "eurobonus-shop" | "eurobonus-shop-giftcard";
+  verification: "verified" | "needs-review" | "app-required" | "not-listed";
+  checkedAt?: string;
+  attemptedAt: string;
+  sourceKind: "official" | "discovery";
+  rates: ShoppingRate[];
+  basis: "ex-vat" | "incl-vat" | "unknown";
+  basisNote?: string;
+  previousLabel?: string;
+  discoveryUrl?: string;
+  amex?: {
+    status: "yes" | "reported" | "conditional" | "no" | "unknown";
+    note: string;
+    sources: { label: string; url?: string; checkedOn: string }[];
+  };
 }
 

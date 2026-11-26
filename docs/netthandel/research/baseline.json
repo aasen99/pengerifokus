@@ -1,0 +1,3061 @@
+[
+  {
+    "id": "tilbud-klarna-1",
+    "slug": "klarna-kicks",
+    "partner": "Kicks",
+    "fordelSlug": "klarna",
+    "offerLabel": "6 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-2",
+    "slug": "klarna-farmasiet",
+    "partner": "Farmasiet",
+    "fordelSlug": "klarna",
+    "offerLabel": "4 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-3",
+    "slug": "klarna-lyko",
+    "partner": "Lyko",
+    "fordelSlug": "klarna",
+    "offerLabel": "5,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-4",
+    "slug": "klarna-ginatricot-com",
+    "partner": "ginatricot.com",
+    "fordelSlug": "klarna",
+    "offerLabel": "5,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-5",
+    "slug": "klarna-cs-megastore",
+    "partner": "CS MEGASTORE",
+    "fordelSlug": "klarna",
+    "offerLabel": "3 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-6",
+    "slug": "klarna-zooplus",
+    "partner": "Zooplus",
+    "fordelSlug": "klarna",
+    "offerLabel": "4 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-7",
+    "slug": "klarna-autodoc",
+    "partner": "Autodoc",
+    "fordelSlug": "klarna",
+    "offerLabel": "5,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-8",
+    "slug": "klarna-floyd",
+    "partner": "Floyd",
+    "fordelSlug": "klarna",
+    "offerLabel": "5,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-9",
+    "slug": "klarna-adidas",
+    "partner": "Adidas",
+    "fordelSlug": "klarna",
+    "offerLabel": "5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-10",
+    "slug": "klarna-vetzoo",
+    "partner": "VetZoo",
+    "fordelSlug": "klarna",
+    "offerLabel": "4 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-11",
+    "slug": "klarna-stormberg",
+    "partner": "Stormberg",
+    "fordelSlug": "klarna",
+    "offerLabel": "6 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-12",
+    "slug": "klarna-nike",
+    "partner": "Nike",
+    "fordelSlug": "klarna",
+    "offerLabel": "3,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-13",
+    "slug": "klarna-vidaxl",
+    "partner": "VidaXL",
+    "fordelSlug": "klarna",
+    "offerLabel": "5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-14",
+    "slug": "klarna-samsung",
+    "partner": "Samsung",
+    "fordelSlug": "klarna",
+    "offerLabel": "5,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-15",
+    "slug": "klarna-iherb",
+    "partner": "Iherb",
+    "fordelSlug": "klarna",
+    "offerLabel": "7 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-16",
+    "slug": "klarna-dyson",
+    "partner": "Dyson",
+    "fordelSlug": "klarna",
+    "offerLabel": "3 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-17",
+    "slug": "klarna-kjell-company",
+    "partner": "Kjell & Company",
+    "fordelSlug": "klarna",
+    "offerLabel": "3 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-18",
+    "slug": "klarna-vero-moda",
+    "partner": "Vero Moda",
+    "fordelSlug": "klarna",
+    "offerLabel": "7 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-19",
+    "slug": "klarna-outnorth",
+    "partner": "Outnorth",
+    "fordelSlug": "klarna",
+    "offerLabel": "7 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-20",
+    "slug": "klarna-elon",
+    "partner": "Elon",
+    "fordelSlug": "klarna",
+    "offerLabel": "3,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-21",
+    "slug": "klarna-gullfunn-no",
+    "partner": "gullfunn.no",
+    "fordelSlug": "klarna",
+    "offerLabel": "7 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-22",
+    "slug": "klarna-ebay",
+    "partner": "eBay",
+    "fordelSlug": "klarna",
+    "offerLabel": "3,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-23",
+    "slug": "klarna-sephora",
+    "partner": "Sephora",
+    "fordelSlug": "klarna",
+    "offerLabel": "12,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-24",
+    "slug": "klarna-bubbleroom",
+    "partner": "Bubbleroom",
+    "fordelSlug": "klarna",
+    "offerLabel": "5,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-25",
+    "slug": "klarna-lensway",
+    "partner": "Lensway",
+    "fordelSlug": "klarna",
+    "offerLabel": "7 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-26",
+    "slug": "klarna-asos",
+    "partner": "asos",
+    "fordelSlug": "klarna",
+    "offerLabel": "3,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-27",
+    "slug": "klarna-lego-shop",
+    "partner": "Lego Shop",
+    "fordelSlug": "klarna",
+    "offerLabel": "7 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-28",
+    "slug": "klarna-shein",
+    "partner": "SHEIN",
+    "fordelSlug": "klarna",
+    "offerLabel": "11 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-29",
+    "slug": "klarna-only",
+    "partner": "Only",
+    "fordelSlug": "klarna",
+    "offerLabel": "7 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-30",
+    "slug": "klarna-emirates-airlines",
+    "partner": "Emirates Airlines",
+    "fordelSlug": "klarna",
+    "offerLabel": "1 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-31",
+    "slug": "klarna-emp-shop",
+    "partner": "EMP Shop",
+    "fordelSlug": "klarna",
+    "offerLabel": "9 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-32",
+    "slug": "klarna-byttdekk",
+    "partner": "Byttdekk",
+    "fordelSlug": "klarna",
+    "offerLabel": "3,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-33",
+    "slug": "klarna-makeup-mekka",
+    "partner": "Makeup Mekka",
+    "fordelSlug": "klarna",
+    "offerLabel": "5,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-34",
+    "slug": "klarna-cos",
+    "partner": "COS",
+    "fordelSlug": "klarna",
+    "offerLabel": "4 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-35",
+    "slug": "klarna-husqvarna",
+    "partner": "Husqvarna",
+    "fordelSlug": "klarna",
+    "offerLabel": "5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-36",
+    "slug": "klarna-db-journey",
+    "partner": "Db Journey",
+    "fordelSlug": "klarna",
+    "offerLabel": "4 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-37",
+    "slug": "klarna-24mx",
+    "partner": "24mx",
+    "fordelSlug": "klarna",
+    "offerLabel": "5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-38",
+    "slug": "klarna-polarn-o-pyret",
+    "partner": "Polarn O. Pyret",
+    "fordelSlug": "klarna",
+    "offerLabel": "5,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-39",
+    "slug": "klarna-arket",
+    "partner": "ARKET",
+    "fordelSlug": "klarna",
+    "offerLabel": "7 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-40",
+    "slug": "klarna-scandic-hotels",
+    "partner": "Scandic Hotels",
+    "fordelSlug": "klarna",
+    "offerLabel": "3 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-41",
+    "slug": "klarna-disney",
+    "partner": "Disney+",
+    "fordelSlug": "klarna",
+    "offerLabel": "10,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-42",
+    "slug": "klarna-vila",
+    "partner": "Vila",
+    "fordelSlug": "klarna",
+    "offerLabel": "7 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-43",
+    "slug": "klarna-tiger-of-sweden",
+    "partner": "Tiger of Sweden",
+    "fordelSlug": "klarna",
+    "offerLabel": "8,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-44",
+    "slug": "klarna-other-stories",
+    "partner": "& Other Stories",
+    "fordelSlug": "klarna",
+    "offerLabel": "3,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-45",
+    "slug": "klarna-jbl",
+    "partner": "JBL",
+    "fordelSlug": "klarna",
+    "offerLabel": "5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-46",
+    "slug": "klarna-autodude",
+    "partner": "Autodude",
+    "fordelSlug": "klarna",
+    "offerLabel": "6,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-47",
+    "slug": "klarna-dekk",
+    "partner": "Dekk",
+    "fordelSlug": "klarna",
+    "offerLabel": "3 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-48",
+    "slug": "klarna-by-malene-birger",
+    "partner": "By Malene Birger",
+    "fordelSlug": "klarna",
+    "offerLabel": "7 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-49",
+    "slug": "klarna-ralph-lauren",
+    "partner": "Ralph Lauren",
+    "fordelSlug": "klarna",
+    "offerLabel": "3,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-50",
+    "slug": "klarna-weekday",
+    "partner": "Weekday",
+    "fordelSlug": "klarna",
+    "offerLabel": "7 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-51",
+    "slug": "klarna-ecco",
+    "partner": "Ecco",
+    "fordelSlug": "klarna",
+    "offerLabel": "7 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-52",
+    "slug": "klarna-inkclub",
+    "partner": "inkClub",
+    "fordelSlug": "klarna",
+    "offerLabel": "10,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-53",
+    "slug": "klarna-lenson",
+    "partner": "Lenson",
+    "fordelSlug": "klarna",
+    "offerLabel": "5,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-54",
+    "slug": "klarna-philips-hue",
+    "partner": "Philips Hue",
+    "fordelSlug": "klarna",
+    "offerLabel": "5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-55",
+    "slug": "klarna-getyourguide",
+    "partner": "GetYourGuide",
+    "fordelSlug": "klarna",
+    "offerLabel": "5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-56",
+    "slug": "klarna-name-it",
+    "partner": "Name it",
+    "fordelSlug": "klarna",
+    "offerLabel": "7 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-57",
+    "slug": "klarna-puma",
+    "partner": "Puma",
+    "fordelSlug": "klarna",
+    "offerLabel": "7 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-58",
+    "slug": "klarna-ideal-of-sweden",
+    "partner": "iDeal of Sweden",
+    "fordelSlug": "klarna",
+    "offerLabel": "7 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-59",
+    "slug": "klarna-skyshowtime",
+    "partner": "SkyShowtime",
+    "fordelSlug": "klarna",
+    "offerLabel": "21 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-60",
+    "slug": "klarna-i-love-dogs",
+    "partner": "I Love Dogs",
+    "fordelSlug": "klarna",
+    "offerLabel": "5,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-61",
+    "slug": "klarna-urverket",
+    "partner": "Urverket",
+    "fordelSlug": "klarna",
+    "offerLabel": "3 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-62",
+    "slug": "klarna-wakakuu",
+    "partner": "WAKAKUU",
+    "fordelSlug": "klarna",
+    "offerLabel": "10,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-63",
+    "slug": "klarna-acer",
+    "partner": "Acer",
+    "fordelSlug": "klarna",
+    "offerLabel": "3,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-64",
+    "slug": "klarna-blue-tomato",
+    "partner": "Blue Tomato",
+    "fordelSlug": "klarna",
+    "offerLabel": "5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-65",
+    "slug": "klarna-only-sons",
+    "partner": "Only & Sons",
+    "fordelSlug": "klarna",
+    "offerLabel": "7 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-66",
+    "slug": "klarna-y-a-s",
+    "partner": "Y.A.S",
+    "fordelSlug": "klarna",
+    "offerLabel": "7 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-67",
+    "slug": "klarna-mytheresa",
+    "partner": "Mytheresa",
+    "fordelSlug": "klarna",
+    "offerLabel": "5,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-68",
+    "slug": "klarna-flixbus",
+    "partner": "FlixBus",
+    "fordelSlug": "klarna",
+    "offerLabel": "3,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-69",
+    "slug": "klarna-selected",
+    "partner": "Selected",
+    "fordelSlug": "klarna",
+    "offerLabel": "7 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-70",
+    "slug": "klarna-interflora",
+    "partner": "Interflora",
+    "fordelSlug": "klarna",
+    "offerLabel": "5,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-71",
+    "slug": "klarna-hunkemoller",
+    "partner": "Hunkemöller",
+    "fordelSlug": "klarna",
+    "offerLabel": "7,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-72",
+    "slug": "klarna-dolce-gabbana",
+    "partner": "Dolce & Gabbana",
+    "fordelSlug": "klarna",
+    "offerLabel": "8,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-73",
+    "slug": "klarna-meta",
+    "partner": "Meta",
+    "fordelSlug": "klarna",
+    "offerLabel": "7 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-74",
+    "slug": "klarna-sonos",
+    "partner": "Sonos",
+    "fordelSlug": "klarna",
+    "offerLabel": "2 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-75",
+    "slug": "klarna-frankbros",
+    "partner": "FRANKBROS",
+    "fordelSlug": "klarna",
+    "offerLabel": "5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-76",
+    "slug": "klarna-stockx",
+    "partner": "StockX",
+    "fordelSlug": "klarna",
+    "offerLabel": "1,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-77",
+    "slug": "klarna-mammut",
+    "partner": "MAMMUT",
+    "fordelSlug": "klarna",
+    "offerLabel": "3 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-78",
+    "slug": "klarna-object",
+    "partner": "Object",
+    "fordelSlug": "klarna",
+    "offerLabel": "7 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-79",
+    "slug": "klarna-pieces",
+    "partner": "Pieces",
+    "fordelSlug": "klarna",
+    "offerLabel": "7 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-80",
+    "slug": "klarna-lot-polish-airlines",
+    "partner": "LOT Polish Airlines",
+    "fordelSlug": "klarna",
+    "offerLabel": "1 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-81",
+    "slug": "klarna-jeanerica",
+    "partner": "Jeanerica",
+    "fordelSlug": "klarna",
+    "offerLabel": "7 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-82",
+    "slug": "klarna-roberto-cavalli",
+    "partner": "Roberto Cavalli",
+    "fordelSlug": "klarna",
+    "offerLabel": "5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-83",
+    "slug": "klarna-layered",
+    "partner": "Layered",
+    "fordelSlug": "klarna",
+    "offerLabel": "7 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-84",
+    "slug": "klarna-steelseries",
+    "partner": "steelseries",
+    "fordelSlug": "klarna",
+    "offerLabel": "7 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-85",
+    "slug": "klarna-vistaprint",
+    "partner": "vistaprint",
+    "fordelSlug": "klarna",
+    "offerLabel": "5,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-86",
+    "slug": "klarna-fever",
+    "partner": "Fever",
+    "fordelSlug": "klarna",
+    "offerLabel": "10,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-87",
+    "slug": "klarna-parfym-no",
+    "partner": "Parfym.no",
+    "fordelSlug": "klarna",
+    "offerLabel": "7 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-88",
+    "slug": "klarna-haglofs",
+    "partner": "Haglöfs",
+    "fordelSlug": "klarna",
+    "offerLabel": "5,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-89",
+    "slug": "klarna-bemz",
+    "partner": "Bemz",
+    "fordelSlug": "klarna",
+    "offerLabel": "5,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-90",
+    "slug": "klarna-noisy-may",
+    "partner": "Noisy May",
+    "fordelSlug": "klarna",
+    "offerLabel": "7 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-91",
+    "slug": "klarna-off-white",
+    "partner": "Off-White",
+    "fordelSlug": "klarna",
+    "offerLabel": "5,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-92",
+    "slug": "klarna-paul-shark",
+    "partner": "Paul & Shark",
+    "fordelSlug": "klarna",
+    "offerLabel": "7 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-93",
+    "slug": "klarna-antonioli",
+    "partner": "ANTONIOLI",
+    "fordelSlug": "klarna",
+    "offerLabel": "7 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-94",
+    "slug": "klarna-miamily",
+    "partner": "MiaMily",
+    "fordelSlug": "klarna",
+    "offerLabel": "8,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-95",
+    "slug": "klarna-kate-spade",
+    "partner": "Kate Spade",
+    "fordelSlug": "klarna",
+    "offerLabel": "4 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-96",
+    "slug": "klarna-ln-cc",
+    "partner": "LN-CC",
+    "fordelSlug": "klarna",
+    "offerLabel": "5,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-97",
+    "slug": "klarna-fenty-beauty",
+    "partner": "Fenty Beauty",
+    "fordelSlug": "klarna",
+    "offerLabel": "4 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-98",
+    "slug": "klarna-palm-angels",
+    "partner": "Palm Angels",
+    "fordelSlug": "klarna",
+    "offerLabel": "5,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-99",
+    "slug": "klarna-agv",
+    "partner": "AGV",
+    "fordelSlug": "klarna",
+    "offerLabel": "7 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-100",
+    "slug": "klarna-mainline-menswear",
+    "partner": "Mainline Menswear",
+    "fordelSlug": "klarna",
+    "offerLabel": "3,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-101",
+    "slug": "klarna-stuart-weitzman",
+    "partner": "Stuart Weitzman",
+    "fordelSlug": "klarna",
+    "offerLabel": "5,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-102",
+    "slug": "klarna-olivieri-1882",
+    "partner": "Olivieri 1882",
+    "fordelSlug": "klarna",
+    "offerLabel": "5,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-103",
+    "slug": "klarna-scarosso",
+    "partner": "Scarosso",
+    "fordelSlug": "klarna",
+    "offerLabel": "5,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-104",
+    "slug": "klarna-casadei",
+    "partner": "Casadei",
+    "fordelSlug": "klarna",
+    "offerLabel": "5,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-105",
+    "slug": "klarna-guzzini",
+    "partner": "Guzzini",
+    "fordelSlug": "klarna",
+    "offerLabel": "4 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-106",
+    "slug": "klarna-eastpak",
+    "partner": "Eastpak",
+    "fordelSlug": "klarna",
+    "offerLabel": "4 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-107",
+    "slug": "klarna-mamalicious",
+    "partner": "Mamalicious",
+    "fordelSlug": "klarna",
+    "offerLabel": "7 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-108",
+    "slug": "klarna-ferryhopper",
+    "partner": "ferryhopper",
+    "fordelSlug": "klarna",
+    "offerLabel": "2 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-109",
+    "slug": "klarna-omio",
+    "partner": "Omio",
+    "fordelSlug": "klarna",
+    "offerLabel": "4 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-110",
+    "slug": "klarna-nortvi",
+    "partner": "NORTVI",
+    "fordelSlug": "klarna",
+    "offerLabel": "8,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-111",
+    "slug": "klarna-new-balance",
+    "partner": "New Balance",
+    "fordelSlug": "klarna",
+    "offerLabel": "3,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-112",
+    "slug": "klarna-xlmoto",
+    "partner": "XLMOTO",
+    "fordelSlug": "klarna",
+    "offerLabel": "5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-113",
+    "slug": "klarna-roa-hiking",
+    "partner": "Roa Hiking",
+    "fordelSlug": "klarna",
+    "offerLabel": "7 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-114",
+    "slug": "klarna-estore",
+    "partner": "eStore",
+    "fordelSlug": "klarna",
+    "offerLabel": "3,5 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-115",
+    "slug": "klarna-click-boat",
+    "partner": "Click&Boat",
+    "fordelSlug": "klarna",
+    "offerLabel": "4 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-116",
+    "slug": "klarna-weloveholidays",
+    "partner": "weloveholidays",
+    "fordelSlug": "klarna",
+    "offerLabel": "3 % cashback"
+  },
+  {
+    "id": "tilbud-klarna-117",
+    "slug": "klarna-maria-nila",
+    "partner": "Maria Nila",
+    "fordelSlug": "klarna",
+    "offerLabel": "7 % cashback"
+  },
+  {
+    "id": "tilbud-obos-1",
+    "slug": "kid-interior",
+    "partner": "Kid Interiør",
+    "fordelSlug": "obos",
+    "offerLabel": "30 % rabatt"
+  },
+  {
+    "id": "tilbud-obos-2",
+    "slug": "samsung",
+    "partner": "Samsung",
+    "fordelSlug": "obos",
+    "offerLabel": "Opptil 30 %"
+  },
+  {
+    "id": "tilbud-obos-3",
+    "slug": "farmasiet",
+    "partner": "Farmasiet",
+    "fordelSlug": "obos",
+    "offerLabel": "20 % rabatt"
+  },
+  {
+    "id": "tilbud-obos-4",
+    "slug": "anton-sport",
+    "partner": "Anton Sport",
+    "fordelSlug": "obos",
+    "offerLabel": "20 % bonus"
+  },
+  {
+    "id": "tilbud-obos-5",
+    "slug": "talkmore",
+    "partner": "Talkmore",
+    "fordelSlug": "obos",
+    "offerLabel": "Opptil 20 %"
+  },
+  {
+    "id": "tilbud-obos-6",
+    "slug": "tryg",
+    "partner": "Tryg",
+    "fordelSlug": "obos",
+    "offerLabel": "Opptil 23 %"
+  },
+  {
+    "id": "tilbud-obos-7",
+    "slug": "flugger",
+    "partner": "Flügger",
+    "fordelSlug": "obos",
+    "offerLabel": "20 % rabatt"
+  },
+  {
+    "id": "tilbud-obos-8",
+    "slug": "vianor",
+    "partner": "Vianor",
+    "fordelSlug": "obos",
+    "offerLabel": "Opptil 20 %"
+  },
+  {
+    "id": "tilbud-obos-9",
+    "slug": "bohus",
+    "partner": "Bohus",
+    "fordelSlug": "obos",
+    "offerLabel": "15 % rabatt"
+  },
+  {
+    "id": "tilbud-obos-10",
+    "slug": "elon",
+    "partner": "Elon",
+    "fordelSlug": "obos",
+    "offerLabel": "15 % rabatt"
+  },
+  {
+    "id": "tilbud-obos-11",
+    "slug": "maxbo",
+    "partner": "Maxbo",
+    "fordelSlug": "obos",
+    "offerLabel": "Fra 15 % bonus"
+  },
+  {
+    "id": "tilbud-obos-12",
+    "slug": "odeon-kino",
+    "partner": "ODEON Kino",
+    "fordelSlug": "obos",
+    "offerLabel": "15 % rabatt"
+  },
+  {
+    "id": "tilbud-obos-13",
+    "slug": "avis",
+    "partner": "Avis",
+    "fordelSlug": "obos",
+    "offerLabel": "Opptil 30 %"
+  },
+  {
+    "id": "tilbud-obos-14",
+    "slug": "oslo-bysykkel",
+    "partner": "Oslo Bysykkel",
+    "fordelSlug": "obos",
+    "offerLabel": "25 % rabatt"
+  },
+  {
+    "id": "tilbud-obos-15",
+    "slug": "strawberry",
+    "partner": "Strawberry",
+    "fordelSlug": "obos",
+    "offerLabel": "15–20 % rabatt"
+  },
+  {
+    "id": "tilbud-obos-16",
+    "slug": "liseberg-grand-curiosa-hotel",
+    "partner": "Liseberg Grand Curiosa Hotel",
+    "fordelSlug": "obos",
+    "offerLabel": "Opptil 20 %"
+  },
+  {
+    "id": "tilbud-obos-17",
+    "slug": "hotel-hasselbacken",
+    "partner": "Hotel Hasselbacken",
+    "fordelSlug": "obos",
+    "offerLabel": "20 % rabatt"
+  },
+  {
+    "id": "tilbud-obos-18",
+    "slug": "go-nordic-cruiseline",
+    "partner": "Go Nordic Cruiseline",
+    "fordelSlug": "obos",
+    "offerLabel": "10–15 % rabatt"
+  },
+  {
+    "id": "tilbud-obos-19",
+    "slug": "oslo-taxi",
+    "partner": "Oslo Taxi",
+    "fordelSlug": "obos",
+    "offerLabel": "10 % rabatt"
+  },
+  {
+    "id": "tilbud-obos-20",
+    "slug": "legoland",
+    "partner": "LEGOLAND",
+    "fordelSlug": "obos",
+    "offerLabel": "2 for 1 / opptil 50 %"
+  },
+  {
+    "id": "tilbud-obos-21",
+    "slug": "tusenfryd",
+    "partner": "TusenFryd",
+    "fordelSlug": "obos",
+    "offerLabel": "Opptil 30 %"
+  },
+  {
+    "id": "tilbud-obos-22",
+    "slug": "bo-sommarland",
+    "partner": "Bø Sommarland",
+    "fordelSlug": "obos",
+    "offerLabel": "15–30 % rabatt"
+  },
+  {
+    "id": "tilbud-obos-23",
+    "slug": "kongeparken",
+    "partner": "Kongeparken",
+    "fordelSlug": "obos",
+    "offerLabel": "25 % rabatt"
+  },
+  {
+    "id": "tilbud-obos-24",
+    "slug": "hoyt-lavt",
+    "partner": "Høyt & Lavt",
+    "fordelSlug": "obos",
+    "offerLabel": "20 % rabatt"
+  },
+  {
+    "id": "tilbud-obos-25",
+    "slug": "sno",
+    "partner": "SNØ",
+    "fordelSlug": "obos",
+    "offerLabel": "20 % rabatt"
+  },
+  {
+    "id": "tilbud-obos-26",
+    "slug": "hoyt-under-taket",
+    "partner": "Høyt Under Taket",
+    "fordelSlug": "obos",
+    "offerLabel": "20 % rabatt"
+  },
+  {
+    "id": "tilbud-obos-27",
+    "slug": "nobels-fredssenter",
+    "partner": "Nobels Fredssenter",
+    "fordelSlug": "obos",
+    "offerLabel": "25 % rabatt"
+  },
+  {
+    "id": "tilbud-obos-28",
+    "slug": "nationaltheatret",
+    "partner": "Nationaltheatret",
+    "fordelSlug": "obos",
+    "offerLabel": "20 % rabatt"
+  },
+  {
+    "id": "tilbud-obos-29",
+    "slug": "sparta-sarpsborg",
+    "partner": "Sparta Sarpsborg",
+    "fordelSlug": "obos",
+    "offerLabel": "50 % rabatt"
+  },
+  {
+    "id": "tilbud-obos-30",
+    "slug": "valerenga-ishockey",
+    "partner": "Vålerenga Ishockey",
+    "fordelSlug": "obos",
+    "offerLabel": "50 % rabatt"
+  },
+  {
+    "id": "tilbud-obos-31",
+    "slug": "storhamar-ishockey",
+    "partner": "Storhamar Ishockey",
+    "fordelSlug": "obos",
+    "offerLabel": "50 % rabatt"
+  },
+  {
+    "id": "tilbud-obos-32",
+    "slug": "storhamar-handball",
+    "partner": "Storhamar Håndball",
+    "fordelSlug": "obos",
+    "offerLabel": "50 % rabatt"
+  },
+  {
+    "id": "tilbud-obos-33",
+    "slug": "kfum-oslo",
+    "partner": "KFUM Oslo",
+    "fordelSlug": "obos",
+    "offerLabel": "50 % rabatt"
+  },
+  {
+    "id": "tilbud-obos-34",
+    "slug": "sk-brann",
+    "partner": "SK Brann",
+    "fordelSlug": "obos",
+    "offerLabel": "50 % rabatt"
+  },
+  {
+    "id": "tilbud-obos-35",
+    "slug": "lambertseter-bad",
+    "partner": "Lambertseter Bad",
+    "fordelSlug": "obos",
+    "offerLabel": "50 % i helgene"
+  },
+  {
+    "id": "tilbud-obos-36",
+    "slug": "kolstad-handball",
+    "partner": "Kolstad Håndball",
+    "fordelSlug": "obos",
+    "offerLabel": "30–50 % rabatt"
+  },
+  {
+    "id": "tilbud-obos-37",
+    "slug": "holmenkollen-skifestival",
+    "partner": "Holmenkollen Skifestival",
+    "fordelSlug": "obos",
+    "offerLabel": "25–50 % rabatt"
+  },
+  {
+    "id": "tilbud-trumf-1",
+    "slug": "trumf-sportsmagasinet",
+    "partner": "Sportsmagasinet",
+    "fordelSlug": "trumf",
+    "offerLabel": "9,3 % Trumf-bonus"
+  },
+  {
+    "id": "tilbud-trumf-2",
+    "slug": "trumf-avis",
+    "partner": "AVIS",
+    "fordelSlug": "trumf",
+    "offerLabel": "10,1 % Trumf-bonus"
+  },
+  {
+    "id": "tilbud-trumf-3",
+    "slug": "trumf-lensway",
+    "partner": "Lensway",
+    "fordelSlug": "trumf",
+    "offerLabel": "8,5 % Trumf-bonus"
+  },
+  {
+    "id": "tilbud-trumf-4",
+    "slug": "trumf-ellos",
+    "partner": "Ellos",
+    "fordelSlug": "trumf",
+    "offerLabel": "6,2 % Trumf-bonus"
+  },
+  {
+    "id": "tilbud-trumf-5",
+    "slug": "trumf-lindex",
+    "partner": "Lindex",
+    "fordelSlug": "trumf",
+    "offerLabel": "6,2 % Trumf-bonus"
+  },
+  {
+    "id": "tilbud-trumf-6",
+    "slug": "trumf-radisson-hotels",
+    "partner": "Radisson Hotels",
+    "fordelSlug": "trumf",
+    "offerLabel": "7,8 % Trumf-bonus"
+  },
+  {
+    "id": "tilbud-trumf-7",
+    "slug": "trumf-miinto",
+    "partner": "Miinto",
+    "fordelSlug": "trumf",
+    "offerLabel": "10,1 % Trumf-bonus"
+  },
+  {
+    "id": "tilbud-trumf-8",
+    "slug": "trumf-zooplus",
+    "partner": "Zooplus",
+    "fordelSlug": "trumf",
+    "offerLabel": "Opptil 6,2 % Trumf-bonus"
+  },
+  {
+    "id": "tilbud-trumf-9",
+    "slug": "trumf-getyourguide",
+    "partner": "GetYourGuide",
+    "fordelSlug": "trumf",
+    "offerLabel": "6,2 % Trumf-bonus"
+  },
+  {
+    "id": "tilbud-trumf-10",
+    "slug": "trumf-strawberry",
+    "partner": "Strawberry",
+    "fordelSlug": "trumf",
+    "offerLabel": "3,9 % Trumf-bonus"
+  },
+  {
+    "id": "tilbud-trumf-11",
+    "slug": "trumf-apotekhjem",
+    "partner": "Apotekhjem",
+    "fordelSlug": "trumf",
+    "offerLabel": "5,4 % Trumf-bonus"
+  },
+  {
+    "id": "tilbud-trumf-12",
+    "slug": "trumf-hotels-com",
+    "partner": "Hotels.com",
+    "fordelSlug": "trumf",
+    "offerLabel": "6,2 % hotell / 1,1 % leiebil"
+  },
+  {
+    "id": "tilbud-trumf-13",
+    "slug": "trumf-nordicfeel",
+    "partner": "NordicFeel",
+    "fordelSlug": "trumf",
+    "offerLabel": "4,6 % Trumf-bonus"
+  },
+  {
+    "id": "tilbud-trumf-14",
+    "slug": "trumf-gina-tricot",
+    "partner": "Gina Tricot",
+    "fordelSlug": "trumf",
+    "offerLabel": "4,6 % Trumf-bonus"
+  },
+  {
+    "id": "tilbud-trumf-15",
+    "slug": "trumf-kicks",
+    "partner": "KICKS",
+    "fordelSlug": "trumf",
+    "offerLabel": "4,6 % Trumf-bonus"
+  },
+  {
+    "id": "tilbud-trumf-16",
+    "slug": "trumf-vetzoo",
+    "partner": "VetZoo",
+    "fordelSlug": "trumf",
+    "offerLabel": "4,6 % Trumf-bonus"
+  },
+  {
+    "id": "tilbud-trumf-17",
+    "slug": "trumf-gymgrossisten",
+    "partner": "Gymgrossisten",
+    "fordelSlug": "trumf",
+    "offerLabel": "Opptil 4,6 % Trumf-bonus"
+  },
+  {
+    "id": "tilbud-trumf-18",
+    "slug": "trumf-vita",
+    "partner": "VITA",
+    "fordelSlug": "trumf",
+    "offerLabel": "4 % Trumf-bonus"
+  },
+  {
+    "id": "tilbud-trumf-19",
+    "slug": "trumf-lyko",
+    "partner": "LYKO",
+    "fordelSlug": "trumf",
+    "offerLabel": "3,9 % Trumf-bonus"
+  },
+  {
+    "id": "tilbud-trumf-20",
+    "slug": "trumf-eurodel",
+    "partner": "Eurodel",
+    "fordelSlug": "trumf",
+    "offerLabel": "3,9 % Trumf-bonus"
+  },
+  {
+    "id": "tilbud-trumf-21",
+    "slug": "trumf-proshop",
+    "partner": "Proshop",
+    "fordelSlug": "trumf",
+    "offerLabel": "Opptil 3,7 % Trumf-bonus"
+  },
+  {
+    "id": "tilbud-trumf-22",
+    "slug": "trumf-blivakker",
+    "partner": "Blivakker",
+    "fordelSlug": "trumf",
+    "offerLabel": "3,1 % Trumf-bonus"
+  },
+  {
+    "id": "tilbud-trumf-23",
+    "slug": "trumf-scandic-hotels",
+    "partner": "Scandic Hotels",
+    "fordelSlug": "trumf",
+    "offerLabel": "4,6 % Trumf-bonus"
+  },
+  {
+    "id": "tilbud-trumf-24",
+    "slug": "trumf-kitch-n",
+    "partner": "Kitch'n",
+    "fordelSlug": "trumf",
+    "offerLabel": "3,1 % Trumf-bonus"
+  },
+  {
+    "id": "tilbud-trumf-25",
+    "slug": "trumf-bakeren-og-kokken",
+    "partner": "Bakeren og Kokken",
+    "fordelSlug": "trumf",
+    "offerLabel": "3,1 % Trumf-bonus"
+  },
+  {
+    "id": "tilbud-trumf-26",
+    "slug": "trumf-apple-store",
+    "partner": "Apple Store",
+    "fordelSlug": "trumf",
+    "offerLabel": "2,7 % Trumf-bonus"
+  },
+  {
+    "id": "tilbud-trumf-27",
+    "slug": "trumf-vy",
+    "partner": "Vy Express",
+    "fordelSlug": "trumf",
+    "offerLabel": "2,7 % Trumf-bonus"
+  },
+  {
+    "id": "tilbud-trumf-28",
+    "slug": "trumf-fredrik-louisa",
+    "partner": "Fredrik & Louisa",
+    "fordelSlug": "trumf",
+    "offerLabel": "2,3 % Trumf-bonus"
+  },
+  {
+    "id": "tilbud-trumf-29",
+    "slug": "trumf-nordic-nest",
+    "partner": "Nordic Nest",
+    "fordelSlug": "trumf",
+    "offerLabel": "1,5 % Trumf-bonus"
+  },
+  {
+    "id": "tilbud-trumf-30",
+    "slug": "trumf-nelly",
+    "partner": "Nelly",
+    "fordelSlug": "trumf",
+    "offerLabel": "2,3 % Trumf-bonus"
+  },
+  {
+    "id": "tilbud-trumf-31",
+    "slug": "trumf-viaplay",
+    "partner": "Viaplay",
+    "fordelSlug": "trumf",
+    "offerLabel": "Opptil 295 kr Trumf-bonus"
+  },
+  {
+    "id": "tilbud-trumf-32",
+    "slug": "trumf-xplora",
+    "partner": "Xplora",
+    "fordelSlug": "trumf",
+    "offerLabel": "7,8 % / 195 kr Trumf-bonus"
+  },
+  {
+    "id": "tilbud-trumf-33",
+    "slug": "trumf-lampegiganten",
+    "partner": "Lampegiganten",
+    "fordelSlug": "trumf",
+    "offerLabel": "7,8 % Trumf-bonus"
+  },
+  {
+    "id": "tilbud-trumf-34",
+    "slug": "trumf-elektroimportoren",
+    "partner": "Elektroimportøren",
+    "fordelSlug": "trumf",
+    "offerLabel": "3,9 % Trumf-bonus"
+  },
+  {
+    "id": "tilbud-trumf-35",
+    "slug": "trumf-esso",
+    "partner": "Esso",
+    "fordelSlug": "trumf",
+    "offerLabel": "40 / 20 øre/l"
+  },
+  {
+    "id": "tilbud-coop-1",
+    "slug": "coop-riksteatret-voksen",
+    "partner": "Riksteatret",
+    "fordelSlug": "coop",
+    "offerLabel": "100 kr rabatt"
+  },
+  {
+    "id": "tilbud-coop-2",
+    "slug": "coop-riksteatret-barn",
+    "partner": "Riksteatret",
+    "fordelSlug": "coop",
+    "offerLabel": "50 kr rabatt"
+  },
+  {
+    "id": "tilbud-coop-3",
+    "slug": "coop-eliteserien",
+    "partner": "Eliteserien",
+    "fordelSlug": "coop",
+    "offerLabel": "Maks 100 kr / 50 kr"
+  },
+  {
+    "id": "tilbud-coop-4",
+    "slug": "coop-toppserien",
+    "partner": "Toppserien",
+    "fordelSlug": "coop",
+    "offerLabel": "Maks 100 kr / 50 kr"
+  },
+  {
+    "id": "tilbud-coop-5",
+    "slug": "coop-drivstoff-circle-k",
+    "partner": "Circle K",
+    "fordelSlug": "coop",
+    "offerLabel": "45 / 25 øre/l bonus"
+  },
+  {
+    "id": "tilbud-coop-6",
+    "slug": "coop-drivstoff-yx",
+    "partner": "YX",
+    "fordelSlug": "coop",
+    "offerLabel": "45 øre/l bonus"
+  },
+  {
+    "id": "tilbud-naf-1",
+    "slug": "naf-talkmore-enkelt",
+    "partner": "Talkmore",
+    "fordelSlug": "naf",
+    "offerLabel": "20 % rabatt"
+  },
+  {
+    "id": "tilbud-naf-2",
+    "slug": "naf-talkmore-familie",
+    "partner": "Talkmore",
+    "fordelSlug": "naf",
+    "offerLabel": "10 % rabatt"
+  },
+  {
+    "id": "tilbud-naf-3",
+    "slug": "naf-brilleland-komplett",
+    "partner": "Brilleland",
+    "fordelSlug": "naf",
+    "offerLabel": "20 % rabatt"
+  },
+  {
+    "id": "tilbud-naf-4",
+    "slug": "naf-brilleland-andre-brille",
+    "partner": "Brilleland",
+    "fordelSlug": "naf",
+    "offerLabel": "50 % rabatt"
+  },
+  {
+    "id": "tilbud-naf-5",
+    "slug": "naf-brilleland-synsundersokelse",
+    "partner": "Brilleland",
+    "fordelSlug": "naf",
+    "offerLabel": "460 kr"
+  },
+  {
+    "id": "tilbud-naf-6",
+    "slug": "naf-citybox-hotels",
+    "partner": "Citybox Hotels",
+    "fordelSlug": "naf",
+    "offerLabel": "20 % rabatt"
+  },
+  {
+    "id": "tilbud-naf-7",
+    "slug": "naf-strawberry",
+    "partner": "Strawberry",
+    "fordelSlug": "naf",
+    "offerLabel": "10–15 % rabatt"
+  },
+  {
+    "id": "tilbud-naf-8",
+    "slug": "naf-de-historiske",
+    "partner": "De Historiske",
+    "fordelSlug": "naf",
+    "offerLabel": "10 % rabatt"
+  },
+  {
+    "id": "tilbud-naf-9",
+    "slug": "naf-go-nordic-oslo-kobenhavn",
+    "partner": "Go Nordic Cruiseline",
+    "fordelSlug": "naf",
+    "offerLabel": "15 % rabatt"
+  },
+  {
+    "id": "tilbud-naf-10",
+    "slug": "naf-go-nordic-minicruise",
+    "partner": "Go Nordic Cruiseline",
+    "fordelSlug": "naf",
+    "offerLabel": "10 % rabatt"
+  },
+  {
+    "id": "tilbud-naf-11",
+    "slug": "naf-leiebil",
+    "partner": "Leiebil",
+    "fordelSlug": "naf",
+    "offerLabel": "Opptil 20 % rabatt"
+  },
+  {
+    "id": "tilbud-naf-12",
+    "slug": "naf-bestdrive-dekkhotell",
+    "partner": "BestDrive",
+    "fordelSlug": "naf",
+    "offerLabel": "25 % rabatt"
+  },
+  {
+    "id": "tilbud-naf-13",
+    "slug": "naf-bestdrive-dekk",
+    "partner": "BestDrive",
+    "fordelSlug": "naf",
+    "offerLabel": "Minst 5 % rabatt"
+  },
+  {
+    "id": "tilbud-naf-14",
+    "slug": "naf-bestdrive-garanti",
+    "partner": "BestDrive",
+    "fordelSlug": "naf",
+    "offerLabel": "2 års skadegaranti"
+  },
+  {
+    "id": "tilbud-naf-15",
+    "slug": "naf-senter",
+    "partner": "NAF-senter",
+    "fordelSlug": "naf",
+    "offerLabel": "10 % rabatt"
+  },
+  {
+    "id": "tilbud-naf-16",
+    "slug": "naf-noddi",
+    "partner": "Noddi",
+    "fordelSlug": "naf",
+    "offerLabel": "10 % rabatt"
+  },
+  {
+    "id": "tilbud-naf-17",
+    "slug": "naf-camp-campingplass",
+    "partner": "NAF Camp",
+    "fordelSlug": "naf",
+    "offerLabel": "10 % rabatt"
+  },
+  {
+    "id": "tilbud-naf-18",
+    "slug": "naf-camp-hytter",
+    "partner": "NAF Camp",
+    "fordelSlug": "naf",
+    "offerLabel": "5 % rabatt"
+  },
+  {
+    "id": "tilbud-eurobonus-wolt",
+    "slug": "eurobonus-wolt",
+    "partner": "Wolt",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "10 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-egon",
+    "slug": "eurobonus-egon",
+    "partner": "EGON",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "50 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-johnny-rockets",
+    "slug": "eurobonus-johnny-rockets",
+    "partner": "Johnny Rockets",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "50 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-escalon",
+    "slug": "eurobonus-escalon",
+    "partner": "Escalon",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "100 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-fish-and-cow",
+    "slug": "eurobonus-fish-and-cow",
+    "partner": "Fish & Cow",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "60 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-brasilia",
+    "slug": "eurobonus-brasilia",
+    "partner": "Brasilia",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "50–60 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-fiskeriet",
+    "slug": "eurobonus-fiskeriet",
+    "partner": "Fiskeriet",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "50 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-fish-me",
+    "slug": "eurobonus-fish-me",
+    "partner": "Fish Me",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "50 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-glod",
+    "slug": "eurobonus-glod",
+    "partner": "Glød",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "30 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-mellom",
+    "slug": "eurobonus-mellom",
+    "partner": "Mellom",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "30 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-fjellskal-fisketorget",
+    "slug": "eurobonus-fjellskal-fisketorget",
+    "partner": "Fjellskål Fisketorget",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "50 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-tiger-sushi-bar",
+    "slug": "eurobonus-tiger-sushi-bar",
+    "partner": "Tiger Sushi Bar",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "50 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-taxifix",
+    "slug": "eurobonus-taxifix",
+    "partner": "Taxifix",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "Opptil 50 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-rituals",
+    "slug": "eurobonus-rituals",
+    "partner": "Rituals",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "50 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-smarthotel",
+    "slug": "eurobonus-smarthotel",
+    "partner": "Smarthotel",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "50 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-by-benson",
+    "slug": "eurobonus-by-benson",
+    "partner": "By Benson",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "100 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-bonner-i-byen",
+    "slug": "eurobonus-bonner-i-byen",
+    "partner": "Bønner i Byen",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "50 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-banken-hotel",
+    "slug": "eurobonus-banken-hotel",
+    "partner": "Banken Hotel",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "50 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-ac-perchs-thehandel",
+    "slug": "eurobonus-ac-perchs-thehandel",
+    "partner": "A.C. Perchs Thehandel",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "75 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-cruiseaway",
+    "slug": "eurobonus-cruiseaway",
+    "partner": "CruiseAway",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "50 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-ditec",
+    "slug": "eurobonus-ditec",
+    "partner": "Ditec-lokasjoner",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "50 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-escape-hunt-bergen",
+    "slug": "eurobonus-escape-hunt-bergen",
+    "partner": "Escape Hunt Bergen",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "50 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-fangene-pa-fortet-bergen",
+    "slug": "eurobonus-fangene-pa-fortet-bergen",
+    "partner": "Fangene på Fortet Bergen",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "50 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-norfloor-lillehammer",
+    "slug": "eurobonus-norfloor-lillehammer",
+    "partner": "Norfloor Lillehammer",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "100 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-hurtigruta-carglass-stjordal",
+    "slug": "eurobonus-hurtigruta-carglass-stjordal",
+    "partner": "Hurtigruta Carglass Stjørdal",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "50 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-shop",
+    "slug": "eurobonus-shop",
+    "partner": "SAS EuroBonus Shop",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "Ca. 100 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-adidas",
+    "slug": "eurobonus-os-adidas",
+    "partner": "Adidas",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "25 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-albert",
+    "slug": "eurobonus-os-albert",
+    "partner": "Albert",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "500 poeng"
+  },
+  {
+    "id": "tilbud-eurobonus-os-babybanden",
+    "slug": "eurobonus-os-babybanden",
+    "partner": "Babybanden",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "25 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-bookbeat",
+    "slug": "eurobonus-os-bookbeat",
+    "partner": "Bookbeat",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "250 poeng"
+  },
+  {
+    "id": "tilbud-eurobonus-os-baerum-energi",
+    "slug": "eurobonus-os-baerum-energi",
+    "partner": "Bærum Energi",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "1 500 poeng"
+  },
+  {
+    "id": "tilbud-eurobonus-os-caia-cosmetics",
+    "slug": "eurobonus-os-caia-cosmetics",
+    "partner": "CAIA Cosmetics",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "25 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-cdon-com",
+    "slug": "eurobonus-os-cdon-com",
+    "partner": "CDON.COM",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "100 poeng"
+  },
+  {
+    "id": "tilbud-eurobonus-os-cos",
+    "slug": "eurobonus-os-cos",
+    "partner": "COS",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "25 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-cs-megastore",
+    "slug": "eurobonus-os-cs-megastore",
+    "partner": "CS Megastore",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "10 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-cyberghost-vpn",
+    "slug": "eurobonus-os-cyberghost-vpn",
+    "partner": "CyberGhost VPN",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "100 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-daniel-wellington",
+    "slug": "eurobonus-os-daniel-wellington",
+    "partner": "Daniel Wellington",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "50 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-dentway",
+    "slug": "eurobonus-os-dentway",
+    "partner": "Dentway",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "180 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-disney",
+    "slug": "eurobonus-os-disney",
+    "partner": "Disney+",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "500 poeng"
+  },
+  {
+    "id": "tilbud-eurobonus-os-dressmann",
+    "slug": "eurobonus-os-dressmann",
+    "partner": "Dressmann",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "25 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-dyrekassen",
+    "slug": "eurobonus-os-dyrekassen",
+    "partner": "Dyrekassen",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "25 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-ellos",
+    "slug": "eurobonus-os-ellos",
+    "partner": "Ellos",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "25 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-elskling",
+    "slug": "eurobonus-os-elskling",
+    "partner": "ELSKLING",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "500 poeng"
+  },
+  {
+    "id": "tilbud-eurobonus-os-fabel",
+    "slug": "eurobonus-os-fabel",
+    "partner": "Fabel",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "250 poeng"
+  },
+  {
+    "id": "tilbud-eurobonus-os-farmasiet",
+    "slug": "eurobonus-os-farmasiet",
+    "partner": "Farmasiet",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "25 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-fjordline",
+    "slug": "eurobonus-os-fjordline",
+    "partner": "Fjordline",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "15 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-fortum-strom",
+    "slug": "eurobonus-os-fortum-strom",
+    "partner": "Fortum Strøm",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "3 000 poeng"
+  },
+  {
+    "id": "tilbud-eurobonus-os-foto-no",
+    "slug": "eurobonus-os-foto-no",
+    "partner": "Foto.no",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "10 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-go-nordic-cruiseline",
+    "slug": "eurobonus-os-go-nordic-cruiseline",
+    "partner": "Go Nordic Cruiseline",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "15 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-guttelus",
+    "slug": "eurobonus-os-guttelus",
+    "partner": "Guttelus",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "25 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-gymgrossisten",
+    "slug": "eurobonus-os-gymgrossisten",
+    "partner": "Gymgrossisten",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "25 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-hellofresh",
+    "slug": "eurobonus-os-hellofresh",
+    "partner": "HelloFresh",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "500 poeng"
+  },
+  {
+    "id": "tilbud-eurobonus-os-husqvarna",
+    "slug": "eurobonus-os-husqvarna",
+    "partner": "Husqvarna",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "25 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-ice",
+    "slug": "eurobonus-os-ice",
+    "partner": "ICE",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "2 000 poeng"
+  },
+  {
+    "id": "tilbud-eurobonus-os-inkclub",
+    "slug": "eurobonus-os-inkclub",
+    "partner": "InkClub",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "50 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-kinoklubb",
+    "slug": "eurobonus-os-kinoklubb",
+    "partner": "Kinoklubb",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "250 poeng"
+  },
+  {
+    "id": "tilbud-eurobonus-os-komplett",
+    "slug": "eurobonus-os-komplett",
+    "partner": "Komplett",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "15 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-kost1",
+    "slug": "eurobonus-os-kost1",
+    "partner": "Kost1",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "25 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-l-occitane",
+    "slug": "eurobonus-os-l-occitane",
+    "partner": "L'Occitane",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "50 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-lindex",
+    "slug": "eurobonus-os-lindex",
+    "partner": "Lindex",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "25 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-logitech",
+    "slug": "eurobonus-os-logitech",
+    "partner": "Logitech",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "10 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-lux-case",
+    "slug": "eurobonus-os-lux-case",
+    "partner": "Lux-case",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "80 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-lyko",
+    "slug": "eurobonus-os-lyko",
+    "partner": "LYKO",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "25 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-makeup-mekka",
+    "slug": "eurobonus-os-makeup-mekka",
+    "partner": "Makeup Mekka",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "25 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-maxulin",
+    "slug": "eurobonus-os-maxulin",
+    "partner": "Maxulin",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "1 000 poeng"
+  },
+  {
+    "id": "tilbud-eurobonus-os-memira",
+    "slug": "eurobonus-os-memira",
+    "partner": "Memira",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "1 000 poeng"
+  },
+  {
+    "id": "tilbud-eurobonus-os-nextory",
+    "slug": "eurobonus-os-nextory",
+    "partner": "Nextory",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "250 poeng"
+  },
+  {
+    "id": "tilbud-eurobonus-os-nicebeauty",
+    "slug": "eurobonus-os-nicebeauty",
+    "partner": "NiceBeauty",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "25 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-nordvpn",
+    "slug": "eurobonus-os-nordvpn",
+    "partner": "NordVPN",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "100 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-norli",
+    "slug": "eurobonus-os-norli",
+    "partner": "Norli",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "25 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-norton-by-symantec",
+    "slug": "eurobonus-os-norton-by-symantec",
+    "partner": "Norton by Symantec",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "100 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-oakley",
+    "slug": "eurobonus-os-oakley",
+    "partner": "Oakley",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "25 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-outnorth",
+    "slug": "eurobonus-os-outnorth",
+    "partner": "Outnorth",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "25 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-parfymonline",
+    "slug": "eurobonus-os-parfymonline",
+    "partner": "Parfymonline",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "50 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-plussmobil",
+    "slug": "eurobonus-os-plussmobil",
+    "partner": "PlussMobil",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "1 000 poeng"
+  },
+  {
+    "id": "tilbud-eurobonus-os-proteinfabrikken",
+    "slug": "eurobonus-os-proteinfabrikken",
+    "partner": "Proteinfabrikken",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "25 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-rains",
+    "slug": "eurobonus-os-rains",
+    "partner": "Rains",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "25 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-readly",
+    "slug": "eurobonus-os-readly",
+    "partner": "Readly",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "250 poeng"
+  },
+  {
+    "id": "tilbud-eurobonus-os-sail-racing",
+    "slug": "eurobonus-os-sail-racing",
+    "partner": "Sail Racing",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "50 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-skeidar",
+    "slug": "eurobonus-os-skeidar",
+    "partner": "Skeidar",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "25 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-sky-showtime",
+    "slug": "eurobonus-os-sky-showtime",
+    "partner": "Sky Showtime",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "500 poeng"
+  },
+  {
+    "id": "tilbud-eurobonus-os-smartbuyglasses",
+    "slug": "eurobonus-os-smartbuyglasses",
+    "partner": "SmartBuyGlasses",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "50 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-steelseries",
+    "slug": "eurobonus-os-steelseries",
+    "partner": "Steelseries",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "25 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-storytel",
+    "slug": "eurobonus-os-storytel",
+    "partner": "Storytel",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "250 poeng"
+  },
+  {
+    "id": "tilbud-eurobonus-os-strim",
+    "slug": "eurobonus-os-strim",
+    "partner": "Strim",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "500 poeng"
+  },
+  {
+    "id": "tilbud-eurobonus-os-suitable",
+    "slug": "eurobonus-os-suitable",
+    "partner": "Suitable",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "25 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-telia",
+    "slug": "eurobonus-os-telia",
+    "partner": "Telia",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "2 000 poeng"
+  },
+  {
+    "id": "tilbud-eurobonus-os-tibber",
+    "slug": "eurobonus-os-tibber",
+    "partner": "Tibber",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "1 000 poeng"
+  },
+  {
+    "id": "tilbud-eurobonus-os-trondermobil",
+    "slug": "eurobonus-os-trondermobil",
+    "partner": "Trøndermobil",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "2 500 poeng"
+  },
+  {
+    "id": "tilbud-eurobonus-os-volt",
+    "slug": "eurobonus-os-volt",
+    "partner": "VOLT",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "25 poeng / 100 kr"
+  },
+  {
+    "id": "tilbud-eurobonus-os-xplora",
+    "slug": "eurobonus-os-xplora",
+    "partner": "Xplora",
+    "fordelSlug": "eurobonus",
+    "offerLabel": "1 000 poeng"
+  },
+  {
+    "id": "tilbud-spenn-uno-x-drivstoff",
+    "slug": "spenn-uno-x-drivstoff",
+    "partner": "Uno-X",
+    "fordelSlug": "spenn",
+    "offerLabel": "2–4 Spenn per liter"
+  },
+  {
+    "id": "tilbud-spenn-wolt",
+    "slug": "spenn-wolt",
+    "partner": "Wolt",
+    "fordelSlug": "spenn",
+    "offerLabel": "Sjekk sats i appen"
+  },
+  {
+    "id": "tilbud-spenn-kinogavekort",
+    "slug": "spenn-kinogavekort",
+    "partner": "Kinogavekort",
+    "fordelSlug": "spenn",
+    "offerLabel": "Sjekk sats i appen"
+  },
+  {
+    "id": "tilbud-spenn-vitaepro",
+    "slug": "spenn-vitaepro",
+    "partner": "VitaePro",
+    "fordelSlug": "spenn",
+    "offerLabel": "Sjekk sats i appen"
+  },
+  {
+    "id": "tilbud-spenn-nly-man",
+    "slug": "spenn-nly-man",
+    "partner": "NLY Man",
+    "fordelSlug": "spenn",
+    "offerLabel": "Sjekk sats i appen"
+  },
+  {
+    "id": "tilbud-spenn-haglofs",
+    "slug": "spenn-haglofs",
+    "partner": "Haglöfs",
+    "fordelSlug": "spenn",
+    "offerLabel": "Sjekk sats i appen"
+  },
+  {
+    "id": "tilbud-spenn-weekday",
+    "slug": "spenn-weekday",
+    "partner": "Weekday",
+    "fordelSlug": "spenn",
+    "offerLabel": "Sjekk sats i appen"
+  },
+  {
+    "id": "tilbud-spenn-db-journey",
+    "slug": "spenn-db-journey",
+    "partner": "Db Journey",
+    "fordelSlug": "spenn",
+    "offerLabel": "Sjekk sats i appen"
+  },
+  {
+    "id": "tilbud-spenn-gina-tricot",
+    "slug": "spenn-gina-tricot",
+    "partner": "Gina Tricot",
+    "fordelSlug": "spenn",
+    "offerLabel": "Sjekk sats i appen"
+  },
+  {
+    "id": "tilbud-spenn-acer",
+    "slug": "spenn-acer",
+    "partner": "Acer",
+    "fordelSlug": "spenn",
+    "offerLabel": "Sjekk sats i appen"
+  },
+  {
+    "id": "tilbud-spenn-sparkfix",
+    "slug": "spenn-sparkfix",
+    "partner": "Sparkfix",
+    "fordelSlug": "spenn",
+    "offerLabel": "Sjekk sats i appen"
+  },
+  {
+    "id": "tilbud-spenn-elon",
+    "slug": "spenn-elon",
+    "partner": "Elon",
+    "fordelSlug": "spenn",
+    "offerLabel": "Sjekk sats i appen"
+  },
+  {
+    "id": "tilbud-spenn-fotoknudsen",
+    "slug": "spenn-fotoknudsen",
+    "partner": "Fotoknudsen",
+    "fordelSlug": "spenn",
+    "offerLabel": "Sjekk sats i appen"
+  },
+  {
+    "id": "tilbud-spenn-bladkongen",
+    "slug": "spenn-bladkongen",
+    "partner": "Bladkongen",
+    "fordelSlug": "spenn",
+    "offerLabel": "Sjekk sats i appen"
+  },
+  {
+    "id": "tilbud-spenn-sky-showtime",
+    "slug": "spenn-sky-showtime",
+    "partner": "Sky Showtime",
+    "fordelSlug": "spenn",
+    "offerLabel": "Sjekk sats i appen"
+  },
+  {
+    "id": "tilbud-spenn-interflora",
+    "slug": "spenn-interflora",
+    "partner": "Interflora",
+    "fordelSlug": "spenn",
+    "offerLabel": "Sjekk sats i appen"
+  },
+  {
+    "id": "tilbud-spenn-homeroom",
+    "slug": "spenn-homeroom",
+    "partner": "Homeroom",
+    "fordelSlug": "spenn",
+    "offerLabel": "Sjekk sats i appen"
+  },
+  {
+    "id": "tilbud-spenn-tilbords",
+    "slug": "spenn-tilbords",
+    "partner": "Tilbords",
+    "fordelSlug": "spenn",
+    "offerLabel": "Sjekk sats i appen"
+  },
+  {
+    "id": "tilbud-spenn-adidas",
+    "slug": "spenn-adidas",
+    "partner": "Adidas",
+    "fordelSlug": "spenn",
+    "offerLabel": "Sjekk sats i appen"
+  },
+  {
+    "id": "tilbud-spenn-skistar",
+    "slug": "spenn-skistar",
+    "partner": "Skistar",
+    "fordelSlug": "spenn",
+    "offerLabel": "Sjekk sats i appen"
+  },
+  {
+    "id": "tilbud-spenn-outnorth",
+    "slug": "spenn-outnorth",
+    "partner": "Outnorth",
+    "fordelSlug": "spenn",
+    "offerLabel": "Sjekk sats i appen"
+  },
+  {
+    "id": "tilbud-spenn-gymgrossisten",
+    "slug": "spenn-gymgrossisten",
+    "partner": "Gymgrossisten",
+    "fordelSlug": "spenn",
+    "offerLabel": "Sjekk sats i appen"
+  },
+  {
+    "id": "tilbud-spenn-helly-hansen",
+    "slug": "spenn-helly-hansen",
+    "partner": "Helly Hansen",
+    "fordelSlug": "spenn",
+    "offerLabel": "Sjekk sats i appen"
+  },
+  {
+    "id": "tilbud-spenn-woome",
+    "slug": "spenn-woome",
+    "partner": "Woome",
+    "fordelSlug": "spenn",
+    "offerLabel": "Sjekk sats i appen"
+  },
+  {
+    "id": "tilbud-spenn-askeladden-navnelapper",
+    "slug": "spenn-askeladden-navnelapper",
+    "partner": "Askeladden Navnelapper",
+    "fordelSlug": "spenn",
+    "offerLabel": "Sjekk sats i appen"
+  },
+  {
+    "id": "tilbud-spenn-zoo-no",
+    "slug": "spenn-zoo-no",
+    "partner": "ZOO.no",
+    "fordelSlug": "spenn",
+    "offerLabel": "Sjekk sats i appen"
+  },
+  {
+    "id": "tilbud-spenn-vetzoo",
+    "slug": "spenn-vetzoo",
+    "partner": "VetZoo",
+    "fordelSlug": "spenn",
+    "offerLabel": "Sjekk sats i appen"
+  },
+  {
+    "id": "tilbud-spenn-autodoc",
+    "slug": "spenn-autodoc",
+    "partner": "Autodoc",
+    "fordelSlug": "spenn",
+    "offerLabel": "Sjekk sats i appen"
+  },
+  {
+    "id": "tilbud-spenn-skruvat",
+    "slug": "spenn-skruvat",
+    "partner": "Skruvat",
+    "fordelSlug": "spenn",
+    "offerLabel": "Sjekk sats i appen"
+  },
+  {
+    "id": "tilbud-spenn-dekk-og-felg",
+    "slug": "spenn-dekk-og-felg",
+    "partner": "Dekk og felg",
+    "fordelSlug": "spenn",
+    "offerLabel": "Sjekk sats i appen"
+  },
+  {
+    "id": "tilbud-spenn-framsport",
+    "slug": "spenn-framsport",
+    "partner": "Framsport",
+    "fordelSlug": "spenn",
+    "offerLabel": "Sjekk sats i appen"
+  },
+  {
+    "id": "tilbud-usbl-heder-bank",
+    "slug": "usbl-heder-bank",
+    "partner": "Heder Bank",
+    "fordelSlug": "usbl",
+    "offerLabel": "Gratis tinglysningsgebyr (545 kr)"
+  },
+  {
+    "id": "tilbud-usbl-if",
+    "slug": "usbl-if",
+    "partner": "If",
+    "fordelSlug": "usbl",
+    "offerLabel": "15 % rabatt"
+  },
+  {
+    "id": "tilbud-usbl-polar-kraft",
+    "slug": "usbl-polar-kraft",
+    "partner": "Polar Kraft",
+    "fordelSlug": "usbl",
+    "offerLabel": "2 % bonus"
+  },
+  {
+    "id": "tilbud-usbl-monter",
+    "slug": "usbl-monter",
+    "partner": "Montér",
+    "fordelSlug": "usbl",
+    "offerLabel": "5 % bonus + 5 % rabatt"
+  },
+  {
+    "id": "tilbud-usbl-skousen",
+    "slug": "usbl-skousen",
+    "partner": "Skousen",
+    "fordelSlug": "usbl",
+    "offerLabel": "15 % rabatt + 5 % bonus"
+  },
+  {
+    "id": "tilbud-usbl-bohus",
+    "slug": "usbl-bohus",
+    "partner": "Bohus",
+    "fordelSlug": "usbl",
+    "offerLabel": "3–5 % bonus + 5–10 % rabatt"
+  },
+  {
+    "id": "tilbud-usbl-apotekhjem",
+    "slug": "usbl-apotekhjem",
+    "partner": "Apotekhjem.no",
+    "fordelSlug": "usbl",
+    "offerLabel": "7 % bonus"
+  },
+  {
+    "id": "tilbud-usbl-oris-dental",
+    "slug": "usbl-oris-dental",
+    "partner": "Oris Dental",
+    "fordelSlug": "usbl",
+    "offerLabel": "8 % rabatt + 5 % bonus"
+  },
+  {
+    "id": "tilbud-usbl-bestdrive",
+    "slug": "usbl-bestdrive",
+    "partner": "BestDrive",
+    "fordelSlug": "usbl",
+    "offerLabel": "5 % bonus + 10 % verksted"
+  },
+  {
+    "id": "tilbud-usbl-ragn-sells",
+    "slug": "usbl-ragn-sells",
+    "partner": "Ragn-Sells",
+    "fordelSlug": "usbl",
+    "offerLabel": "12 % rabatt"
+  },
+  {
+    "id": "tilbud-usbl-lagerboks",
+    "slug": "usbl-lagerboks",
+    "partner": "Lagerboks",
+    "fordelSlug": "usbl",
+    "offerLabel": "10 % rabatt"
+  },
+  {
+    "id": "tilbud-usbl-thon-hotels",
+    "slug": "usbl-thon-hotels",
+    "partner": "Thon Hotels",
+    "fordelSlug": "usbl",
+    "offerLabel": "12 % rabatt"
+  },
+  {
+    "id": "tilbud-usbl-nextory",
+    "slug": "usbl-nextory",
+    "partner": "Nextory",
+    "fordelSlug": "usbl",
+    "offerLabel": "6 uker gratis + 5 % bonus"
+  },
+  {
+    "id": "tilbud-usbl-nki",
+    "slug": "usbl-nki",
+    "partner": "NKI Nettstudier",
+    "fordelSlug": "usbl",
+    "offerLabel": "22 % rabatt"
+  },
+  {
+    "id": "tilbud-usbl-tusenfryd",
+    "slug": "usbl-tusenfryd",
+    "partner": "TusenFryd",
+    "fordelSlug": "usbl",
+    "offerLabel": "Opptil 25 % rabatt"
+  },
+  {
+    "id": "tilbud-usbl-bo-sommarland",
+    "slug": "usbl-bo-sommarland",
+    "partner": "Bø Sommarland",
+    "fordelSlug": "usbl",
+    "offerLabel": "20–30 % rabatt"
+  },
+  {
+    "id": "tilbud-usbl-the-well",
+    "slug": "usbl-the-well",
+    "partner": "The Well",
+    "fordelSlug": "usbl",
+    "offerLabel": "15–20 % rabatt"
+  },
+  {
+    "id": "tilbud-usbl-hadeland-glassverk",
+    "slug": "usbl-hadeland-glassverk",
+    "partner": "Hadeland Glassverk",
+    "fordelSlug": "usbl",
+    "offerLabel": "10 % rabatt + 5 % bonus"
+  },
+  {
+    "id": "tilbud-usbl-telia",
+    "slug": "usbl-telia",
+    "partner": "Telia",
+    "fordelSlug": "usbl",
+    "offerLabel": "Apple TV til 499 kr"
+  },
+  {
+    "id": "tilbud-usbl-skiguard",
+    "slug": "usbl-skiguard",
+    "partner": "Skiguard",
+    "fordelSlug": "usbl",
+    "offerLabel": "10–20 % rabatt"
+  },
+  {
+    "id": "tilbud-usbl-fjordfesten",
+    "slug": "usbl-fjordfesten",
+    "partner": "Fjordfesten",
+    "fordelSlug": "usbl",
+    "offerLabel": "15 % rabatt"
+  },
+  {
+    "id": "tilbud-usbl-piknik-i-parken",
+    "slug": "usbl-piknik-i-parken",
+    "partner": "Piknik i Parken",
+    "fordelSlug": "usbl",
+    "offerLabel": "20 % rabatt"
+  },
+  {
+    "id": "tilbud-usbl-kistefos",
+    "slug": "usbl-kistefos",
+    "partner": "Kistefos",
+    "fordelSlug": "usbl",
+    "offerLabel": "20 % rabatt"
+  },
+  {
+    "id": "tilbud-usbl-maihaugen",
+    "slug": "usbl-maihaugen",
+    "partner": "Maihaugen",
+    "fordelSlug": "usbl",
+    "offerLabel": "15 % rabatt"
+  },
+  {
+    "id": "tilbud-usbl-kinoklubben",
+    "slug": "usbl-kinoklubben",
+    "partner": "Kinoklubb",
+    "fordelSlug": "usbl",
+    "offerLabel": "99 kr første år · halv pris på utvalgte filmer"
+  },
+  {
+    "id": "tilbud-usbl-alpinco",
+    "slug": "usbl-alpinco",
+    "partner": "Alpinco",
+    "fordelSlug": "usbl",
+    "offerLabel": "10 % rabatt"
+  },
+  {
+    "id": "tilbud-usbl-frisk-asker",
+    "slug": "usbl-frisk-asker",
+    "partner": "Frisk Asker Ishockey",
+    "fordelSlug": "usbl",
+    "offerLabel": "30 % rabatt"
+  },
+  {
+    "id": "tilbud-usbl-padel-tonsberg",
+    "slug": "usbl-padel-tonsberg",
+    "partner": "Padel Tønsberg",
+    "fordelSlug": "usbl",
+    "offerLabel": "30 % rabatt"
+  },
+  {
+    "id": "tilbud-usbl-larvik-golf",
+    "slug": "usbl-larvik-golf",
+    "partner": "Larvik Golfklubb",
+    "fordelSlug": "usbl",
+    "offerLabel": "300 kr rabatt"
+  },
+  {
+    "id": "tilbud-usbl-sankthanshaugen-5000",
+    "slug": "usbl-sankthanshaugen-5000",
+    "partner": "Sankthanshaugen 5000",
+    "fordelSlug": "usbl",
+    "offerLabel": "Opptil 35 % rabatt"
+  },
+  {
+    "id": "tilbud-usbl-lyreco",
+    "slug": "usbl-lyreco",
+    "partner": "Lyreco",
+    "fordelSlug": "usbl",
+    "offerLabel": "5 % bonus"
+  },
+  {
+    "id": "tilbud-usbl-byggmakker-sandefjord",
+    "slug": "usbl-byggmakker-sandefjord",
+    "partner": "Byggmakker Sandefjord",
+    "fordelSlug": "usbl",
+    "offerLabel": "5 % bonus"
+  },
+  {
+    "id": "tilbud-usbl-hurtigruta-carglass",
+    "slug": "usbl-hurtigruta-carglass",
+    "partner": "Hurtigruta Carglass",
+    "fordelSlug": "usbl",
+    "offerLabel": "5 % bonus + rabatt"
+  },
+  {
+    "id": "tilbud-usbl-interflora",
+    "slug": "usbl-interflora",
+    "partner": "Interflora",
+    "fordelSlug": "usbl",
+    "offerLabel": "5 % bonus"
+  },
+  {
+    "id": "tilbud-usbl-wright-trafikkskole",
+    "slug": "usbl-wright-trafikkskole",
+    "partner": "Wright Trafikkskole",
+    "fordelSlug": "usbl",
+    "offerLabel": "5 % bonus"
+  },
+  {
+    "id": "tilbud-usbl-lillehammer-trafikkskole",
+    "slug": "usbl-lillehammer-trafikkskole",
+    "partner": "Lillehammer Trafikkskole",
+    "fordelSlug": "usbl",
+    "offerLabel": "5 % bonus"
+  },
+  {
+    "id": "tilbud-usbl-fargerike-bjorvik",
+    "slug": "usbl-fargerike-bjorvik",
+    "partner": "Fargerike Bjørvik",
+    "fordelSlug": "usbl",
+    "offerLabel": "5 % bonus"
+  },
+  {
+    "id": "tilbud-usbl-fargerike-colibri",
+    "slug": "usbl-fargerike-colibri",
+    "partner": "Fargerike Colibri",
+    "fordelSlug": "usbl",
+    "offerLabel": "Opptil 15 % rabatt"
+  },
+  {
+    "id": "tilbud-usbl-modena-fliser",
+    "slug": "usbl-modena-fliser",
+    "partner": "Modena Fliser",
+    "fordelSlug": "usbl",
+    "offerLabel": "5 % bonus"
+  },
+  {
+    "id": "tilbud-usbl-bake-me-up",
+    "slug": "usbl-bake-me-up",
+    "partner": "Bake Me Up",
+    "fordelSlug": "usbl",
+    "offerLabel": "10 % bonus"
+  },
+  {
+    "id": "tilbud-usbl-jakt-og-friluft",
+    "slug": "usbl-jakt-og-friluft",
+    "partner": "Jakt & Friluft",
+    "fordelSlug": "usbl",
+    "offerLabel": "5 % bonus"
+  },
+  {
+    "id": "tilbud-usbl-bubbleroom",
+    "slug": "usbl-bubbleroom",
+    "partner": "Bubbleroom",
+    "fordelSlug": "usbl",
+    "offerLabel": "4 % bonus"
+  },
+  {
+    "id": "tilbud-usbl-skruvat",
+    "slug": "usbl-skruvat",
+    "partner": "Skruvat.no",
+    "fordelSlug": "usbl",
+    "offerLabel": "5 % bonus"
+  },
+  {
+    "id": "tilbud-usbl-munk-store",
+    "slug": "usbl-munk-store",
+    "partner": "Munk Store",
+    "fordelSlug": "usbl",
+    "offerLabel": "5 % bonus"
+  },
+  {
+    "id": "tilbud-usbl-skogstad-sport",
+    "slug": "usbl-skogstad-sport",
+    "partner": "Skogstad Sport",
+    "fordelSlug": "usbl",
+    "offerLabel": "5 % bonus"
+  },
+  {
+    "id": "tilbud-student-ruter",
+    "slug": "student-ruter",
+    "partner": "Ruter",
+    "fordelSlug": "student",
+    "offerLabel": "40 % rabatt"
+  },
+  {
+    "id": "tilbud-student-vy-tog",
+    "slug": "student-vy-tog",
+    "partner": "Vy Tog",
+    "fordelSlug": "student",
+    "offerLabel": "10–50 % rabatt"
+  },
+  {
+    "id": "tilbud-student-vy-buss",
+    "slug": "student-vy-buss",
+    "partner": "Vy Buss",
+    "fordelSlug": "student",
+    "offerLabel": "Studentpris"
+  },
+  {
+    "id": "tilbud-student-flytoget",
+    "slug": "student-flytoget",
+    "partner": "Flytoget",
+    "fordelSlug": "student",
+    "offerLabel": "50 % rabatt"
+  },
+  {
+    "id": "tilbud-student-sj-norge",
+    "slug": "student-sj-norge",
+    "partner": "SJ Norge",
+    "fordelSlug": "student",
+    "offerLabel": "50 % rabatt"
+  },
+  {
+    "id": "tilbud-student-go-ahead",
+    "slug": "student-go-ahead",
+    "partner": "Go-Ahead Nordic",
+    "fordelSlug": "student",
+    "offerLabel": "Studentbillett"
+  },
+  {
+    "id": "tilbud-student-skyss",
+    "slug": "student-skyss",
+    "partner": "Skyss",
+    "fordelSlug": "student",
+    "offerLabel": "Ca. 40 % rabatt"
+  },
+  {
+    "id": "tilbud-student-atb",
+    "slug": "student-atb",
+    "partner": "AtB",
+    "fordelSlug": "student",
+    "offerLabel": "40 % rabatt"
+  },
+  {
+    "id": "tilbud-student-kolumbus",
+    "slug": "student-kolumbus",
+    "partner": "Kolumbus",
+    "fordelSlug": "student",
+    "offerLabel": "50 % rabatt"
+  },
+  {
+    "id": "tilbud-student-emirates",
+    "slug": "student-emirates",
+    "partner": "Emirates",
+    "fordelSlug": "student",
+    "offerLabel": "Studentpris"
+  },
+  {
+    "id": "tilbud-student-wideroe",
+    "slug": "student-wideroe",
+    "partner": "Widerøe",
+    "fordelSlug": "student",
+    "offerLabel": "Student-/ungdomspris"
+  },
+  {
+    "id": "tilbud-student-kilroy",
+    "slug": "student-kilroy",
+    "partner": "KILROY",
+    "fordelSlug": "student",
+    "offerLabel": "Student-/ungdomspris"
+  },
+  {
+    "id": "tilbud-student-ark",
+    "slug": "student-ark",
+    "partner": "ARK",
+    "fordelSlug": "student",
+    "offerLabel": "20 % på norske bøker"
+  },
+  {
+    "id": "tilbud-student-onecall",
+    "slug": "student-onecall",
+    "partner": "OneCall",
+    "fordelSlug": "student",
+    "offerLabel": "30 GB for 279 kr"
+  },
+  {
+    "id": "tilbud-student-apple",
+    "slug": "student-apple",
+    "partner": "Apple",
+    "fordelSlug": "student",
+    "offerLabel": "5–10 % utdanningsrabatt"
+  },
+  {
+    "id": "tilbud-student-apple-music",
+    "slug": "student-apple-music",
+    "partner": "Apple Music",
+    "fordelSlug": "student",
+    "offerLabel": "Studentabonnement"
+  },
+  {
+    "id": "tilbud-student-samsung",
+    "slug": "student-samsung",
+    "partner": "Samsung",
+    "fordelSlug": "student",
+    "offerLabel": "Fra 15 % rabatt"
+  },
+  {
+    "id": "tilbud-student-dell",
+    "slug": "student-dell",
+    "partner": "Dell",
+    "fordelSlug": "student",
+    "offerLabel": "Opptil 10 % rabatt"
+  },
+  {
+    "id": "tilbud-student-eplehuset",
+    "slug": "student-eplehuset",
+    "partner": "Eplehuset",
+    "fordelSlug": "student",
+    "offerLabel": "Studentpris på Mac og iPad"
+  },
+  {
+    "id": "tilbud-student-adobe",
+    "slug": "student-adobe",
+    "partner": "Adobe Creative Cloud",
+    "fordelSlug": "student",
+    "offerLabel": "Studentpris"
+  },
+  {
+    "id": "tilbud-student-microsoft-365",
+    "slug": "student-microsoft-365",
+    "partner": "Microsoft 365 Education",
+    "fordelSlug": "student",
+    "offerLabel": "Gratis via studiested"
+  },
+  {
+    "id": "tilbud-student-github",
+    "slug": "student-github",
+    "partner": "GitHub",
+    "fordelSlug": "student",
+    "offerLabel": "Student Developer Pack · gratis"
+  },
+  {
+    "id": "tilbud-student-notion",
+    "slug": "student-notion",
+    "partner": "Notion",
+    "fordelSlug": "student",
+    "offerLabel": "Education Plan · gratis"
+  },
+  {
+    "id": "tilbud-student-figma",
+    "slug": "student-figma",
+    "partner": "Figma",
+    "fordelSlug": "student",
+    "offerLabel": "Education Plan · gratis"
+  },
+  {
+    "id": "tilbud-student-jetbrains",
+    "slug": "student-jetbrains",
+    "partner": "JetBrains",
+    "fordelSlug": "student",
+    "offerLabel": "Student Pack · gratis"
+  },
+  {
+    "id": "tilbud-student-autodesk",
+    "slug": "student-autodesk",
+    "partner": "Autodesk",
+    "fordelSlug": "student",
+    "offerLabel": "Education · gratis i ett år"
+  },
+  {
+    "id": "tilbud-student-spotify",
+    "slug": "student-spotify",
+    "partner": "Spotify Premium Student",
+    "fordelSlug": "student",
+    "offerLabel": "Studentpris"
+  },
+  {
+    "id": "tilbud-student-youtube-premium",
+    "slug": "student-youtube-premium",
+    "partner": "YouTube Premium Student",
+    "fordelSlug": "student",
+    "offerLabel": "Studentpris"
+  },
+  {
+    "id": "tilbud-student-egon",
+    "slug": "student-egon",
+    "partner": "EGON",
+    "fordelSlug": "student",
+    "offerLabel": "Buffet fra 147 kr"
+  },
+  {
+    "id": "tilbud-student-peppes",
+    "slug": "student-peppes",
+    "partner": "Peppes Pizza",
+    "fordelSlug": "student",
+    "offerLabel": "20 % rabatt"
+  },
+  {
+    "id": "tilbud-student-dominos",
+    "slug": "student-dominos",
+    "partner": "Domino's",
+    "fordelSlug": "student",
+    "offerLabel": "20 % rabatt"
+  },
+  {
+    "id": "tilbud-student-pizzabakeren",
+    "slug": "student-pizzabakeren",
+    "partner": "Pizzabakeren",
+    "fordelSlug": "student",
+    "offerLabel": "20 % på pizza"
+  },
+  {
+    "id": "tilbud-student-sabrura",
+    "slug": "student-sabrura",
+    "partner": "Sabrura",
+    "fordelSlug": "student",
+    "offerLabel": "Buffet og 10 % takeaway"
+  },
+  {
+    "id": "tilbud-student-jordbaerpikene",
+    "slug": "student-jordbaerpikene",
+    "partner": "Jordbærpikene",
+    "fordelSlug": "student",
+    "offerLabel": "15 % rabatt"
+  },
+  {
+    "id": "tilbud-student-isushi",
+    "slug": "student-isushi",
+    "partner": "iSushi",
+    "fordelSlug": "student",
+    "offerLabel": "15 % rabatt"
+  },
+  {
+    "id": "tilbud-student-sats",
+    "slug": "student-sats",
+    "partner": "SATS",
+    "fordelSlug": "student",
+    "offerLabel": "20 % fast rabatt"
+  },
+  {
+    "id": "tilbud-student-sats-kampanje",
+    "slug": "student-sats-kampanje",
+    "partner": "SATS",
+    "fordelSlug": "student",
+    "offerLabel": "40 % for nye medlemmer"
+  },
+  {
+    "id": "tilbud-student-dr-dropin",
+    "slug": "student-dr-dropin",
+    "partner": "Dr.Dropin",
+    "fordelSlug": "student",
+    "offerLabel": "15 % rabatt"
+  },
+  {
+    "id": "tilbud-student-nito",
+    "slug": "student-nito",
+    "partner": "NITO",
+    "fordelSlug": "student",
+    "offerLabel": "350 kr for studietiden"
+  },
+  {
+    "id": "tilbud-student-tekna",
+    "slug": "student-tekna",
+    "partner": "Tekna",
+    "fordelSlug": "student",
+    "offerLabel": "150 kr per semester"
+  },
+  {
+    "id": "tilbud-student-nordea",
+    "slug": "student-nordea",
+    "partner": "Nordea",
+    "fordelSlug": "student",
+    "offerLabel": "Gratis dagligbank"
+  },
+  {
+    "id": "tilbud-student-studentkortet",
+    "slug": "student-studentkortet",
+    "partner": "Studentkortet",
+    "fordelSlug": "student",
+    "offerLabel": "Over 250 rabatter · gratis"
+  },
+  {
+    "id": "tilbud-student-unidays",
+    "slug": "student-unidays",
+    "partner": "UNiDAYS",
+    "fordelSlug": "student",
+    "offerLabel": "Rabatter fra ulike merker"
+  },
+  {
+    "id": "tilbud-student-interflora",
+    "slug": "student-interflora",
+    "partner": "Interflora",
+    "fordelSlug": "student",
+    "offerLabel": "10 % rabatt"
+  },
+  {
+    "id": "tilbud-student-odeon",
+    "slug": "student-odeon",
+    "partner": "ODEON Kino",
+    "fordelSlug": "student",
+    "offerLabel": "Studentkino 99 kr"
+  },
+  {
+    "id": "tilbud-student-lucky-bowl",
+    "slug": "student-lucky-bowl",
+    "partner": "Lucky Bowl",
+    "fordelSlug": "student",
+    "offerLabel": "2 for 1"
+  },
+  {
+    "id": "tilbud-student-dnt",
+    "slug": "student-dnt",
+    "partner": "Den Norske Turistforening",
+    "fordelSlug": "student",
+    "offerLabel": "Ungdoms-/medlemspris"
+  },
+  {
+    "id": "tilbud-student-cutters",
+    "slug": "student-cutters",
+    "partner": "Cutters",
+    "fordelSlug": "student",
+    "offerLabel": "20 % rabatt"
+  },
+  {
+    "id": "tilbud-student-los-tacos",
+    "slug": "student-los-tacos",
+    "partner": "Los Tacos",
+    "fordelSlug": "student",
+    "offerLabel": "20 % rabatt"
+  },
+  {
+    "id": "tilbud-student-schibsted",
+    "slug": "student-schibsted",
+    "partner": "Schibsted-aviser",
+    "fordelSlug": "student",
+    "offerLabel": "Opptil 50 % rabatt"
+  },
+  {
+    "id": "tilbud-lofavor-legoland",
+    "slug": "lofavor-legoland",
+    "partner": "LEGOLAND",
+    "fordelSlug": "lofavor",
+    "offerLabel": "20 % rabatt"
+  },
+  {
+    "id": "tilbud-lofavor-scandic",
+    "slug": "lofavor-scandic",
+    "partner": "Scandic Hotels",
+    "fordelSlug": "lofavor",
+    "offerLabel": "Opptil 14 %"
+  },
+  {
+    "id": "tilbud-lofavor-tusenfryd",
+    "slug": "lofavor-tusenfryd",
+    "partner": "TusenFryd",
+    "fordelSlug": "lofavor",
+    "offerLabel": "30 % rabatt"
+  },
+  {
+    "id": "tilbud-lofavor-strawberry",
+    "slug": "lofavor-strawberry",
+    "partner": "Strawberry",
+    "fordelSlug": "lofavor",
+    "offerLabel": "15–20 % rabatt"
+  },
+  {
+    "id": "tilbud-lofavor-hurtigruten",
+    "slug": "lofavor-hurtigruten",
+    "partner": "Hurtigruten",
+    "fordelSlug": "lofavor",
+    "offerLabel": "10 % rabatt"
+  },
+  {
+    "id": "tilbud-lofavor-det-norske-teatret",
+    "slug": "lofavor-det-norske-teatret",
+    "partner": "Det Norske Teatret",
+    "fordelSlug": "lofavor",
+    "offerLabel": "30 % rabatt"
+  },
+  {
+    "id": "tilbud-circle-k-extra-1",
+    "slug": "circle-k-extra-drivstoff",
+    "partner": "Circle K",
+    "fordelSlug": "circle-k-extra",
+    "offerLabel": "30–45 øre/l"
+  }
+]

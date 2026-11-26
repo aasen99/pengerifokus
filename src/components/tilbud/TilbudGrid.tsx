@@ -2,12 +2,16 @@ import Link from "next/link";
 import { Tag } from "@/components/ui/Tag";
 import type { GruppertTilbud } from "@/lib/tilbud";
 import { getTilbudSourceLinkLabel, isTilbudOptInProgram } from "@/lib/tilbud-ui";
+import { ShoppingOffer } from "./ShoppingOffer";
+import { calculateShoppingBonus, type BonusSettings } from "@/lib/netthandel";
 
 interface TilbudGridProps {
   groups: GruppertTilbud[];
   activeProgram: string | null;
   includeStudent: boolean;
   categoryGroup: string | null;
+  settings: BonusSettings;
+  checkedNow: string;
 }
 
 function programHref(slug: string, includeStudent: boolean): string {
@@ -27,6 +31,8 @@ export function TilbudGrid({
   activeProgram,
   includeStudent,
   categoryGroup,
+  settings,
+  checkedNow,
 }: TilbudGridProps) {
   if (groups.length === 0) {
     return (
@@ -48,21 +54,27 @@ export function TilbudGrid({
   return (
     <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
       {groups.map((group) => {
+        const shopping = group.offers.filter(o => o.shopping);
+        const ordinary = group.offers.filter(o => !o.shopping);
+        const values = shopping.map(o => ({ id: o.tilbudId, value: calculateShoppingBonus(o.shopping!, settings, checkedNow) })).filter(x => x.value !== null);
+        const best = values.length >= 2 ? values.find(x => values.every(y => y.id === x.id || x.value!.minPct > y.value!.maxPct))?.id : undefined;
+        const amex = shopping.find(o => o.shopping?.amex)?.shopping?.amex;
+        const amexLabels = { yes: "Bekreftet ja", reported: "Rapportert ja", conditional: "Med forbehold", no: "Nei", unknown: "Uavklart" };
         const uniqueTerms = [
           ...new Set(
-            group.offers
+            ordinary
               .map((offer) => offer.terms?.trim())
               .filter((terms): terms is string => Boolean(terms)),
           ),
         ];
         const sourceLinks = [
           ...new Map(
-            group.offers
+            ordinary
               .filter((offer) => offer.sourceUrl)
               .map((offer) => [`${offer.fordelSlug}|${offer.sourceUrl}`, offer]),
           ).values(),
         ];
-        const warnings = group.offers.filter((offer) => offer.warning);
+        const warnings = ordinary.filter((offer) => offer.warning);
 
         return (
           <article
@@ -74,7 +86,7 @@ export function TilbudGrid({
             </h2>
 
             <div className="mt-2 flex flex-wrap items-center gap-1.5">
-              {group.offers.map((offer) => (
+              {ordinary.map((offer) => (
                 <Link
                   key={offer.tilbudId}
                   href={programHref(offer.fordelSlug, includeStudent)}
@@ -93,6 +105,19 @@ export function TilbudGrid({
                 </Link>
               ))}
             </div>
+
+            {shopping.length > 0 && <div className="mt-2 space-y-2">{shopping.map(offer => <ShoppingOffer key={offer.tilbudId} offer={offer} settings={settings} now={checkedNow} best={best === offer.tilbudId} />)}</div>}
+
+            {shopping.length > 0 && <details className="mt-3 text-sm text-stone-600">
+              <summary className="cursor-pointer font-medium">Amex på nett: {amex ? amexLabels[amex.status] : "Uavklart"}</summary>
+              <div className="mt-2 space-y-2 leading-relaxed"><p>{amex?.note ?? "Ingen dokumentert nettaksept i Amex-registeret. Sjekk betalingsvalgene hos butikken."}</p>
+                {amex?.sources.map((s, i) => <p key={i}>{s.url ? <a className="underline" href={s.url} target="_blank" rel="noopener noreferrer">{s.label}</a> : s.label} · kontrollert {s.checkedOn}</p>)}
+                <p>SAS Amex Premium gir 15 EuroBonus-poeng per 100 kr på kvalifiserende kortkjøp. Det tilsvarer {(15 * settings.euroOre / 100).toLocaleString("nb-NO")} % med din poengverdi. Kortbonus vises separat og krever at både kort- og programvilkår er oppfylt.</p>
+                {shopping.some(o => o.shopping!.channel === "klarna") && <p>Klarna krever betaling med Klarna. Kombinasjon med Amex er ikke dokumentert.</p>}
+                {shopping.some(o => o.shopping!.channel.startsWith("spenn")) && <p>Spenn: sjekk tilbudets kombinasjonsvilkår. Lensways kontokobling kan ikke kombineres med andre tilbud.</p>}
+                <Link href="/verktoy/amex-brukersteder" className="inline-block text-orange-700 underline">Åpne Amex-registeret</Link>
+              </div>
+            </details>}
 
             {!categoryGroup && group.categories.length > 0 && (
               <p className="mt-1.5 text-xs text-stone-500">

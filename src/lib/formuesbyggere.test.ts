@@ -6,7 +6,7 @@ import {
   getRelatedFormuesbyggerReason,
   getRelatedFormuesbyggere,
 } from "./formuesbyggere";
-import type { Formuesbygger } from "@/types/formuesbygger";
+import type { Formuesbygger, FormuesbyggerStory } from "@/types/formuesbygger";
 import { kapitalEstimate } from "./wealth-estimate";
 
 function profile(
@@ -93,13 +93,13 @@ describe("filterFormuesbyggere", () => {
 });
 
 describe("filterFormuesbyggerStories", () => {
-  const story = {
+  const story: FormuesbyggerStory = {
     id: "story-kygo-jo",
     href: "/formuesbyggere/erling-haaland/kygo-jo",
     title: "Kygo Jo",
     description: "Historien om Kygo Jo",
     region: "norsk" as const,
-    industries: ["musikk", "sport"] as const,
+    industries: ["musikk", "sport"],
     buildType: "idrett-underholdning" as const,
     searchText: "Kygo Jo Flow Kingz Lyng Erling Haaland",
   };
