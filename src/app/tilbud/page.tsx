@@ -197,6 +197,8 @@ export default async function TilbudPage({ searchParams }: TilbudPageProps) {
             Ved siste gjennomgang ble satsene kontrollert hos {catalogue.filter(t => t.shopping?.channel === "trumf-netthandel" && t.shopping.verification === "verified").length} Trumf-butikker
             {" "}og {catalogue.filter(t => t.shopping?.channel === "klarna" && t.shopping.verification === "verified").length} Klarna-butikker.
             For SAS og Spenn er dekningen ufullstendig. Under avanserte filtre kan du også se ubekreftede partnerskap og tidligere registrerte satser.
+            {" "}Spenn viser også butikkens sats i nettleserutvidelsen{" "}
+            <a href="https://spenn.refunder.com/no/extension" className="underline">Tjen Spenn på nett</a> når du besøker en støttet nettbutikk på PC eller Mac.
           </p>
         </TilbudDisclaimer>
       </div>

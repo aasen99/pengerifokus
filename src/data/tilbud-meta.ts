@@ -14,7 +14,7 @@ export const tilbudListMeta = {
     "Klarna cashback (hele den offentlige katalogen kontrollert 26. november 2026)",
     "SAS EuroBonus restaurant- og partnerprogram",
     "SAS Online Shopping (butikkildene var utilgjengelige ved kontroll 26. november 2026)",
-    "Spenn, offisielle nettsider (full katalog og satser krever app)",
+    "Spenn, offisielle nettsider og nettleserutvidelsen Tjen Spenn på nett",
     "Rabo og Perks (kun kartleggingsfunn uten publiserte satser)",
     "Uno-X Spenn, drivstoffsatser og kortregistrering (unox.no/spenn/)",
     "Usbl medlemsfordeler",

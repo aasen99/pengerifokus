@@ -6,7 +6,7 @@ export const spenn: FordelArticleContent = {
   intro:
     "Spenn er en felles poengvaluta som kobles til eksisterende fordelsprogrammer hos blant annet Norwegian, Strawberry og REMA 1000. Poeng samles i Spenn-appen og kan tjenes og brukes på tvers av flere merkevarer, men verdien er ikke fast i kroner som Trumf eller Coop.",
   lastVerified: "18. august 2026",
-  lastModifiedIso: "2026-11-11",
+  lastModifiedIso: "2026-11-27",
   seoTitle: "Spenn: opptjening, bruk og verdi hos Norwegian og REMA 1000",
   seoDescription:
     "Forstå Spenn: hvordan du tjener poeng hos Norwegian, Strawberry, REMA 1000 og Spenn Shopping, hva de kan brukes til, og hvorfor verdien varierer.",
@@ -75,14 +75,15 @@ export const spenn: FordelArticleContent = {
       heading: "Spenn Shopping og tilbudsoversikten vår",
       paragraphs: [
         "Du finner aktuelle netthandelspartnere og opptjening i Spenn-appen. Opptjening kan variere per butikk, kampanjeperiode og kundetype (for eksempel ny vs. eksisterende kunde).",
-        "I tilbudsoversikten kan du filtrere på partner og kategori. Tidligere innhentede Spenn-satser er merket som ikke verifisert og må kontrolleres i Spenn-appen før kjøp.",
+        "På datamaskin kan du bruke den gratis nettleserutvidelsen Tjen Spenn på nett i Chrome, Firefox eller Edge. Spenn oppgir at over 200 nettbutikker deltar. Logg inn med SpennID fra appen. Når utvidelsen vises i en butikk, kan du lese butikkens sats og trykke «Tjen Spenn» før kjøpet.",
+        "For at handelen skal registreres, ber Spenn deg godta butikkens informasjonskapsler, slå av annonseblokkering og fullføre kjøpet i samme fane. Rabattkoder fra andre enn Spenn gir ikke poeng.",
       ],
       bullets: [
         "Satser og partnere i appen kan endres uten varsel",
         "«Opptil»-satser gjelder ikke nødvendigvis hele handlekurven",
         "Faste poengkampanjer er vanskeligere å sammenligne direkte med prosent",
       ],
-      tip: "Bruk alltid satsen og vilkårene i Spenn-appen i kjøpsøyeblikket som fasit.",
+      tip: "Sjekk sats og vilkår der du aktiverer tilbudet. Enkelte nettbutikker tillater ikke nettleserutvidelsen.",
     },
     {
       heading: "Slik bruker du Spenn",
@@ -171,6 +172,7 @@ export const spenn: FordelArticleContent = {
     },
   ],
   sources: [
+    { label: "Tjen Spenn på nett – nettleserutvidelse og vilkår", url: "https://spenn.refunder.com/no/extension" },
     {
       label: "Uno-X, tjen Spenn på drivstoff og bilvask (kontrollert 11. november 2026)",
       url: "https://unox.no/spenn/",
