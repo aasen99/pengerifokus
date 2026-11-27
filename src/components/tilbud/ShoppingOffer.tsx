@@ -5,6 +5,7 @@ import { formatTilbudDate } from "@/lib/tilbud-ui";
 import type { ShoppingDetails } from "@/types/content";
 
 const names: Record<ShoppingDetails["channel"], string> = {
+  sobbl: "SOBBL",
   "sas-online": "EuroBonus", "trumf-netthandel": "Trumf", klarna: "Klarna",
   spenn: "Spenn", "spenn-direct": "Spenn", "eurobonus-shop": "EuroBonus Shop",
   "eurobonus-shop-giftcard": "EuroBonus gavekort",
@@ -34,7 +35,7 @@ function rateSummary({ offer, settings, now }: Props): string {
     const suffix = shoppingRateLabel({ ...tier[0], value: 0 }, d.channel).slice(2);
     return formatBonusRange(low, high, suffix);
   });
-  const label = labels.join(" / ");
+  const label = labels.join(" / ") + (d.channel === "sobbl" ? (rates[0].label === "Medlemsrabatt" ? " rabatt" : " bonus") : "");
   if (!hasCurrentVerifiedRate(d, settings, now)) return `Tidligere ${label} · ikke nylig kontrollert`;
   return rates.some(r => r.kind === "campaign") ? `${label} · kampanje` : label;
 }

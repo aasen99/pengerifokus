@@ -23,6 +23,7 @@ export function getTilbudProgramSourceUrl(fordelSlug: string): string | undefine
     eurobonus: "https://onlineshopping.flysas.com/nb-NO/",
     spenn: "https://spenngroup.com/nb-NO/home",
     usbl: "https://www.usbl.no/medlemskap/medlemsfordeler",
+    sobbl: "https://sobbl.fordelerformedlemmer.no/",
     lofavor: "https://www.lofavor.no/ferie-og-fritid",
     "circle-k-extra": "https://www.circlek.no/extra",
   };

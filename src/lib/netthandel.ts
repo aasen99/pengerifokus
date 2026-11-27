@@ -14,6 +14,7 @@ export const DEFAULT_BONUS_SETTINGS: BonusSettings = {
 };
 export const TRUMF_EB = { once: 10, auto: 13.5 } as const;
 export const CHANNEL_NAMES: Record<ShoppingDetails["channel"], string> = {
+  sobbl: "SOBBL medlemsfordeler",
   "sas-online": "SAS Online Shopping", "trumf-netthandel": "Trumf Netthandel",
   klarna: "Klarna Cashback", spenn: "Spenn Netthandel", "eurobonus-shop": "SAS EuroBonus Shop (egen butikk)",
   "spenn-direct": "Spenn hos partner (kontokobling)",

@@ -3,7 +3,7 @@
  * Oppdateres når tilbud verifiseres eller endres hos partner.
  */
 export const tilbudListMeta = {
-  lastUpdated: "2026-11-26",
+  lastUpdated: "2026-11-27",
   sources: [
     "OBOS medlemsfordeler",
     "offisielle Trumf Netthandel-sider",
@@ -18,6 +18,7 @@ export const tilbudListMeta = {
     "Rabo og Perks (kun kartleggingsfunn uten publiserte satser)",
     "Uno-X Spenn, drivstoffsatser og kortregistrering (unox.no/spenn/)",
     "Usbl medlemsfordeler",
+    "SOBBLs offentlige fordelskatalog",
     "offisielle studentrabatter hos partnere",
     "LOfavør medlemsfordeler",
   ],

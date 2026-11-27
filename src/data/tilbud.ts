@@ -5,6 +5,7 @@ import { nafTilbud } from "@/data/tilbud-naf";
 import { klarnaTilbud } from "@/data/tilbud-klarna";
 import { eurobonusTilbud } from "@/data/tilbud-eurobonus";
 import { spennTilbud } from "@/data/tilbud-spenn";
+import { sobblTilbud } from "@/data/tilbud-sobbl";
 import { usblTilbud } from "@/data/tilbud-usbl";
 import { studentTilbud } from "@/data/tilbud-student";
 import { lofavorTilbud } from "@/data/tilbud-lofavor";
@@ -553,6 +554,7 @@ export const tilbud: Tilbud[] = reconcileNetthandel([
   ...eurobonusTilbud,
   ...spennTilbud,
   ...usblTilbud,
+  ...sobblTilbud,
   ...studentTilbud,
   ...lofavorTilbud,
   ...circleKExtraTilbud,

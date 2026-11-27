@@ -92,3 +92,19 @@ describe("catalogue preservation and normalization", () => {
     for (const [k,v] of Object.entries({q:"inkclub",netthandel:"1",flere:"1",eb:"15",spenn:"8",trumf:"auto",belop:"1500",frakt:"50",mva:"15",kunde:"new",side:"2"})) assert.equal(params.get(k),v);
   });
 });
+
+describe("SOBBL membership agreements", () => {
+  const entries = tilbud.filter(t => t.fordelSlug === "sobbl");
+  it("keeps store-only, online and unresolved benefits distinct", () => {
+    assert.equal(entries.length, 31);
+    assert.equal(entries.find(t => t.partner === "Lyreco")?.shopping, undefined);
+    const online = entries.find(t => t.partner === "Interflora")!.shopping!;
+    assert.equal(calculateShoppingBonus(online, defaults, "2026-11-27")?.maxPct, 5);
+    const norli = entries.find(t => t.partner === "Norli")!;
+    assert.equal(norli.offerLabel, "Sats uavklart");
+    assert.equal(calculateShoppingBonus(norli.shopping!, defaults, "2026-11-27"), null);
+    const sportmann = entries.find(t => t.partner === "Sportmann")!;
+    assert.equal(sportmann.expiresAt, "2026-11-30");
+    assert.equal(calculateShoppingBonus(sportmann.shopping!, defaults, "2026-12-01"), null);
+  });
+});

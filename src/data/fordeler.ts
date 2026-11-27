@@ -43,6 +43,17 @@ export const fordeler: Fordel[] = [
     updatedAt: "2026-07-02",
   },
   {
+    id: "fordel-sobbl",
+    slug: "sobbl",
+    status: "published",
+    name: "SOBBL",
+    description: "Sarpsborg og Omegns Boligbyggelag gir medlemmer bonus og rabatter i butikk, på nett og på utvalgte tjenester.",
+    type: "Medlemsfordel",
+    useCase: "Bolig, handel og medlemsrabatter",
+    createdAt: "2026-11-27",
+    updatedAt: "2026-11-27",
+  },
+  {
     id: "fordel-13",
     slug: "usbl",
     status: "published",

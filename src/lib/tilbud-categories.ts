@@ -8,7 +8,7 @@ export const TILBUD_CATEGORY_GROUPS = {
   "Helse og velvære": ["Helse", "Optikk"],
   "Bolig": ["Interiør", "Bolig", "Byggevare", "Strøm"],
   "Elektronikk": ["Elektronikk", "Programvare"],
-  "Shopping": ["Mote", "Netthandel"],
+  "Shopping": ["Mote", "Netthandel", "Kontorutstyr"],
   "Fritid og opplevelser": [
     "Fritid",
     "Underholdning",
